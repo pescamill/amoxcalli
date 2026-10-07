@@ -1,0 +1,2605 @@
+{
+  "records": [
+    {
+      "aliases": [],
+      "definition": "ala oreja.",
+      "id": "sense-gdn-m2-148529",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "ala oreja.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "inacaztitlan",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 148529. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-148529",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Inacaztitlan",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-148529",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "148529",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/148529",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Inacaztitlan"
+    },
+    {
+      "aliases": [],
+      "definition": "al principio, antes, o primero. aduerb.",
+      "id": "sense-gdn-m2-148533",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "al principio, antes, o primero. aduerb.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "inachto",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 148533. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-148533",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Inachto",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-148533",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "148533",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/148533",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Inachto"
+    },
+    {
+      "aliases": [],
+      "definition": "apar del, o junto a el, o con el.",
+      "id": "sense-gdn-m2-148536",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "apar del, o junto a el, o con el.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "inahuac",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 148536. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-148536",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Inauac",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-148536",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "148536",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/148536",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Inauac"
+    },
+    {
+      "aliases": [],
+      "definition": "todas q[ua]tro cosas, o q[ua]tro pares.",
+      "id": "sense-gdn-m2-148537",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "todas q[ua]tro cosas, o q[ua]tro pares.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "inauhtlamanixti",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 148537. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-148537",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Inauhtlamanixti",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-148537",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "148537",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/148537",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Inauhtlamanixti"
+    },
+    {
+      "aliases": [],
+      "definition": "agora, o al presente. aduerbio.",
+      "id": "sense-gdn-m2-148538",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "agora, o al presente. aduerbio.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "inaxcan",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 148538. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-148538",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Inaxcan",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-148538",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "148538",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/148538",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Inaxcan"
+    },
+    {
+      "aliases": [],
+      "definition": "antesque. aduerbio.",
+      "id": "sense-gdn-m2-148546",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "antesque. aduerbio.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "inaya",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 148546. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-148546",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Inaya",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-148546",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "148546",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/148546",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Inaya"
+    },
+    {
+      "aliases": [],
+      "definition": "antesque.",
+      "id": "sense-gdn-m2-148549",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "antesque.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "inayamo",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 148549. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-148549",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Inayamo",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-148549",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "148549",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/148549",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Inayamo"
+    },
+    {
+      "aliases": [],
+      "definition": "antes que anochezca.",
+      "id": "sense-gdn-m2-148550",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "antes que anochezca.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "inayamoyoaz",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 148550. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-148550",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Inayamoyoaz",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-148550",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "148550",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/148550",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Inayamoyoaz"
+    },
+    {
+      "aliases": [],
+      "definition": "antes que tuuiesemos ser, o antes que fuesemos",
+      "id": "sense-gdn-m2-148551",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "antes que tuuiesemos ser, o antes que fuesemos",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "inayatitleme",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 148551. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-148551",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Inayatitleme",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-148551",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "148551",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/148551",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Inayatitleme"
+    },
+    {
+      "aliases": [],
+      "definition": "antes que tuuiesen ser, o antes que fuessen.",
+      "id": "sense-gdn-m2-148552",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "antes que tuuiesen ser, o antes que fuessen.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "inayayaque",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 148552. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-148552",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Inayayaque",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-148552",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "148552",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/148552",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Inayayaque"
+    },
+    {
+      "aliases": [],
+      "definition": "todos quinze.",
+      "id": "sense-gdn-m2-148553",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "todos quinze.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "incaxtolixtin",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 148553. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-148553",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Incaxtulixtin",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-148553",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "148553",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/148553",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Incaxtulixtin"
+    },
+    {
+      "aliases": [],
+      "definition": "cosa para oler, o digna de ser olida.",
+      "id": "sense-gdn-m2-148559",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "cosa para oler, o digna de ser olida.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "ineconi",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 148559. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-148559",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Ineconi",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-148559",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "148559",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/148559",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Ineconi"
+    },
+    {
+      "aliases": [],
+      "definition": "ala rayz, o enla rayz del arbol, o de cosa semejante.",
+      "id": "sense-gdn-m2-148573",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "ala rayz, o enla rayz del arbol, o de cosa semejante.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "inelhuayoc",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 148573. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-148573",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Inelhuayoc",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-148573",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "148573",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/148573",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Inelhuayoc"
+    },
+    {
+      "aliases": [],
+      "definition": "sensual y vicioso.",
+      "id": "sense-gdn-m2-148656",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "sensual y vicioso.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "inicanemi",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 148656. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-148656",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Inicanemi",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-148656",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "148656",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/148656",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Inicanemi"
+    },
+    {
+      "aliases": [],
+      "definition": "assi como. aduerbio.",
+      "id": "sense-gdn-m2-148671",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "assi como. aduerbio.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "iniuh",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 148671. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-148671",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Iniuh",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-148671",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "148671",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/148671",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Iniuh"
+    },
+    {
+      "aliases": [],
+      "definition": "segun es. aduerbio.",
+      "id": "sense-gdn-m2-148672",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "segun es. aduerbio.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "iniuhca",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 148672. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-148672",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Iniuhca",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-148672",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "148672",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/148672",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Iniuhca"
+    },
+    {
+      "aliases": [],
+      "definition": "assi como. aduerbio.",
+      "id": "sense-gdn-m2-148675",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "assi como. aduerbio.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "iniuhqui",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 148675. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-148675",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Iniuhqui",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-148675",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "148675",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/148675",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Iniuhqui"
+    },
+    {
+      "aliases": [],
+      "definition": "todo lo que, o todo quanto.",
+      "id": "sense-gdn-m2-148678",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "todo lo que, o todo quanto.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "inixquich",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 148678. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-148678",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Inixquich",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-148678",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "148678",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/148678",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Inixquich"
+    },
+    {
+      "aliases": [],
+      "definition": "mientras, o mientrasque, o entre tanto.",
+      "id": "sense-gdn-m2-148679",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "mientras, o mientrasque, o entre tanto.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "inixquichcauh",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 148679. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-148679",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Inixquichcauh",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-148679",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "148679",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/148679",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Inixquichcauh"
+    },
+    {
+      "aliases": [],
+      "definition": "ambas ados personas.",
+      "id": "sense-gdn-m2-148684",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "ambas ados personas.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "innehuan",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 148684. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-148684",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Inneuan",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-148684",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "148684",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/148684",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Inneuan"
+    },
+    {
+      "aliases": [],
+      "definition": "mientras que, o en tanto que. aduer.",
+      "id": "sense-gdn-m2-148689",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "mientras que, o en tanto que. aduer.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "inoc",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 148689. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-148689",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Inoc",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-148689",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "148689",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/148689",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Inoc"
+    },
+    {
+      "aliases": [],
+      "definition": "lo que fue y tuuo ser.",
+      "id": "sense-gdn-m2-148698",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "lo que fue y tuuo ser.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "inocatca",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 148698. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-148698",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Inocatca",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-148698",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "148698",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/148698",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Inocatca"
+    },
+    {
+      "aliases": [],
+      "definition": "adelante, enel tiempo venidero.",
+      "id": "sense-gdn-m2-148701",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "adelante, enel tiempo venidero.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "inocompatitztihui",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 148701. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-148701",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Inocompatitztiui",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-148701",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "148701",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/148701",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Inocompatitztiui"
+    },
+    {
+      "aliases": [],
+      "definition": "mientras es de dia.",
+      "id": "sense-gdn-m2-148702",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "mientras es de dia.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "inoctlaca",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 148702. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-148702",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Inoctlaca",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-148702",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "148702",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/148702",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Inoctlaca"
+    },
+    {
+      "aliases": [],
+      "definition": "el mesmo.",
+      "id": "sense-gdn-m2-148707",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "el mesmo.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "inoma",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 148707. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-148707",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Inoma",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-148707",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "148707",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/148707",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Inoma"
+    },
+    {
+      "aliases": [],
+      "definition": "sus mismas palabras.",
+      "id": "sense-gdn-m2-148710",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "sus mismas palabras.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "inomatlatoltzin",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 148710. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-148710",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Inomatlatoltzin",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-148710",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "148710",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/148710",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Inomatlatoltzin"
+    },
+    {
+      "aliases": [],
+      "definition": "lo que fue y tuuo ser, o lo q[ue] ya passo.",
+      "id": "sense-gdn-m2-148711",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "lo que fue y tuuo ser, o lo q[ue] ya passo.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "inonemico",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 148711. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-148711",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Inonemico",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-148711",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "148711",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/148711",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Inonemico"
+    },
+    {
+      "aliases": [],
+      "definition": "mientrasque, o entretanto.",
+      "id": "sense-gdn-m2-148715",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "mientrasque, o entretanto.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "inoquic",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 148715. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-148715",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Inoquic",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-148715",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "148715",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/148715",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Inoquic"
+    },
+    {
+      "aliases": [],
+      "definition": "mientras es tiempo oportuno.",
+      "id": "sense-gdn-m2-148716",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "mientras es tiempo oportuno.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "inoquimonequian",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 148716. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-148716",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Inoquimonequian",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-148716",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "148716",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/148716",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Inoquimonequian"
+    },
+    {
+      "aliases": [],
+      "definition": "hasta. preposicion.",
+      "id": "sense-gdn-m2-148720",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "hasta. preposicion.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "inoquixquichcauh",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 148720. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-148720",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Inoquixquichcauh",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-148720",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "148720",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/148720",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Inoquixquichcauh"
+    },
+    {
+      "aliases": [],
+      "definition": "entretanto, o mientrasque.",
+      "id": "sense-gdn-m2-148721",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "entretanto, o mientrasque.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "inoquixquichica",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 148721. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-148721",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Inoquixquichica",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-148721",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "148721",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/148721",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Inoquixquichica"
+    },
+    {
+      "aliases": [],
+      "definition": "y venido y cumplido el termino o el tiempo.",
+      "id": "sense-gdn-m2-148724",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "y venido y cumplido el termino o el tiempo.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "inotlaimmantic",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 148724. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-148724",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Inotlaimmantic",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-148724",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "148724",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/148724",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Inotlaimmantic"
+    },
+    {
+      "aliases": [],
+      "definition": "lo que fue o tuuo ser, o loque ya passo.",
+      "id": "sense-gdn-m2-148725",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "lo que fue o tuuo ser, o loque ya passo.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "inoyeco",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 148725. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-148725",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Inoyeco",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-148725",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "148725",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/148725",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Inoyeco"
+    },
+    {
+      "aliases": [],
+      "definition": "el que enseña. participio.",
+      "id": "sense-gdn-m2-148736",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "el que enseña. participio.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "intemachtia",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 148736. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-148736",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Intemachtia",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-148736",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "148736",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/148736",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Intemachtia"
+    },
+    {
+      "aliases": [],
+      "definition": "sien ninguna parte. s. os oluidaredes de dios. et sic de alijs.",
+      "id": "sense-gdn-m2-148743",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "sien ninguna parte. s. os oluidaredes de dios. et sic de alijs.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "intlacacan",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 148743. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-148743",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Intlacacan",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-148743",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "148743",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/148743",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Intlacacan"
+    },
+    {
+      "aliases": [],
+      "definition": "si en ningun tiempo, y si nunca. s. pecaredes. &c.",
+      "id": "sense-gdn-m2-148744",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "si en ningun tiempo, y si nunca. s. pecaredes. &c.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "intlacaic",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 148744. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-148744",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Intlacaic",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-148744",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "148744",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/148744",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Intlacaic"
+    },
+    {
+      "aliases": [],
+      "definition": "y si en alguna parte.",
+      "id": "sense-gdn-m2-148746",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "y si en alguna parte.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "intlacan",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 148746. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-148746",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Intlacan",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-148746",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "148746",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/148746",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Intlacan"
+    },
+    {
+      "aliases": [],
+      "definition": "y. con[j]unction.",
+      "id": "sense-gdn-m2-35719",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "y. con[j]unction.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "auhye",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 35719. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-35719",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Auhye",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-35719",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "35719",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=au&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "2be8895ced38c1404d305fcafa65e33b85e66837d8e8d13d7119d84fc8fd10bb"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/35719",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Auhye"
+    },
+    {
+      "aliases": [],
+      "definition": "ciertamente, o cierto.",
+      "id": "sense-gdn-m2-169678",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "ciertamente, o cierto.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "yenelli",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 169678. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-169678",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Yenelli",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-169678",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "169678",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=ye&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "c89871b0bcaa035b20492e627168bb630b1d99c65f23e7dcc5ae1d7f5004d413"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/169678",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Yenelli"
+    },
+    {
+      "aliases": [],
+      "definition": "aessotra vanda, o a essotra parte, o mas alla vn poco.",
+      "id": "sense-gdn-m2-169679",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "aessotra vanda, o a essotra parte, o mas alla vn poco.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "yenepa",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 169679. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-169679",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Yenepa",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-169679",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "169679",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=ye&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "c89871b0bcaa035b20492e627168bb630b1d99c65f23e7dcc5ae1d7f5004d413"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/169679",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Yenepa"
+    },
+    {
+      "aliases": [],
+      "definition": "cosa pesada.",
+      "id": "sense-gdn-m2-169764",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "cosa pesada.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "yetic",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 169764. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-169764",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Yetic",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-169764",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "169764",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=ye&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "c89871b0bcaa035b20492e627168bb630b1d99c65f23e7dcc5ae1d7f5004d413"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/169764",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Yetic"
+    },
+    {
+      "aliases": [],
+      "definition": "tres cosas, partes, o pares.",
+      "id": "sense-gdn-m2-169768",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "tres cosas, partes, o pares.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "yetlamantli",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 169768. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-169768",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Yetlamantli",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-169768",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "169768",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=ye&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "c89871b0bcaa035b20492e627168bb630b1d99c65f23e7dcc5ae1d7f5004d413"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/169768",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Yetlamantli"
+    },
+    {
+      "aliases": [],
+      "definition": "al tercero año, o despues d[e] tres años",
+      "id": "sense-gdn-m2-169830",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "al tercero año, o despues d[e] tres años",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "yexiuhtica",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 169830. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-169830",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Yexiuhtica",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-169830",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "169830",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=ye&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "c89871b0bcaa035b20492e627168bb630b1d99c65f23e7dcc5ae1d7f5004d413"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/169830",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Yexiuhtica"
+    },
+    {
+      "aliases": [],
+      "definition": "tres vezes.",
+      "id": "sense-gdn-m2-169831",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "tres vezes.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "yexpa",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 169831. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-169831",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Yexpa",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-169831",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "169831",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=ye&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "c89871b0bcaa035b20492e627168bb630b1d99c65f23e7dcc5ae1d7f5004d413"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/169831",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Yexpa"
+    },
+    {
+      "aliases": [],
+      "definition": "el que se ensaya, o el que esgrime.",
+      "id": "sense-gdn-m2-152480",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "el que se ensaya, o el que esgrime.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "yeyecoa",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 152480. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-152480",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Moyeyecoa",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-152480",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "152480",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=ye&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "c89871b0bcaa035b20492e627168bb630b1d99c65f23e7dcc5ae1d7f5004d413"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/152480",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Moyeyecoa"
+    },
+    {
+      "aliases": [],
+      "definition": "empeyne, o sarna, o lizo para vrdir tela y texerla.",
+      "id": "sense-gdn-m2-168696",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "empeyne, o sarna, o lizo para vrdir tela y texerla.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "xiotl",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 168696. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-168696",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Xiotl",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-168696",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "168696",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=xi&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "e4a8d92a3a870d3683861190031534d4e4affdd01fbfaf2930840ddcd8056f64"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/168696",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Xiotl"
+    },
+    {
+      "aliases": [],
+      "definition": "tomates grandes colorados, amarillos y blancos.",
+      "id": "sense-gdn-m2-168729",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "tomates grandes colorados, amarillos y blancos.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "xitomatl",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 168729. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-168729",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Xitomatl",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-168729",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "168729",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=xi&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "e4a8d92a3a870d3683861190031534d4e4affdd01fbfaf2930840ddcd8056f64"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/168729",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Xitomatl"
+    },
+    {
+      "aliases": [],
+      "definition": "exe, para oxear perros.",
+      "id": "sense-gdn-m2-168744",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "exe, para oxear perros.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "xiuh",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 168744. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-168744",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Xiuh",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-168744",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "168744",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=xi&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "e4a8d92a3a870d3683861190031534d4e4affdd01fbfaf2930840ddcd8056f64"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/168744",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Xiuh"
+    },
+    {
+      "aliases": [],
+      "definition": "caerse, o deshazerse la pared o cosa semejá[n]te, o desbaratarse la gente, o desparramarse, o diuidirse y despartirse los que estan juntos, o despoblarse el pueblo, o ciudad. preterito: oxixin.",
+      "id": "sense-gdn-m2-168791",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "caerse, o deshazerse la pared o cosa semejá[n]te, o desbaratarse la gente, o desparramarse, o diuidirse y despartirse los que estan juntos, o despoblarse el pueblo, o ciudad. preterito: oxixin.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "xixini",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 168791. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-168791",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Xixini",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-168791",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "168791",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=xi&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "e4a8d92a3a870d3683861190031534d4e4affdd01fbfaf2930840ddcd8056f64"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/168791",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Xixini"
+    },
+    {
+      "aliases": [],
+      "definition": "mi nombradia, o mi honra.",
+      "id": "sense-gdn-m2-154365",
+      "import_status": "automatic_transcription",
+      "kind": "sense",
+      "label": "mi nombradia, o mi honra.",
+      "notes": "Traducción histórica de la fuente, sin modernizar ni separar acepciones automáticamente.",
+      "pos": "other",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "verification": "catalog_checked"
+    },
+    {
+      "catalog_normalized": "nitauhca",
+      "evidence": [
+        {
+          "locator": "Molina 2 (1571); entrada GDN 154365. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "id": "lex-gdn-m2-154365",
+      "import_status": "automatic_transcription",
+      "kind": "form",
+      "label": "Nitauhca",
+      "notes": "Extraído por parser determinista del catálogo. Sin cotejo primario, revisión lingüística ni asociación glífica automática.",
+      "orthography": "Paleografía de la entrada GDN/Molina 2, conservada. La grafía normalizada del catálogo se guarda por separado.",
+      "period": "historical",
+      "rights": {
+        "note": "Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-154365",
+      "source_entry": {
+        "collection": "Molina_2",
+        "id": "154365",
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=ni&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+        "sha256": "3c4fb22c3bdf3de2889799789e2b31d074edb44ee61c48d6e1944327531e2aef"
+      },
+      "url": "https://gdn.iib.unam.mx/contexto/154365",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "variation_kind": "historical",
+      "verification": "catalog_checked",
+      "written": "Nitauhca"
+    }
+  ],
+  "schema_version": 1
+}

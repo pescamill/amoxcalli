@@ -1,0 +1,5 @@
+PASS: profile, recognition, uncertainty and equal points without training permission
+PASS: real WAV file passes the UI upload and text submission pipeline
+PASS: private audio retrieval, contribution list and escaped text
+PASS: withdrawal removes the active audio and updates progress
+PASS: no application JavaScript errors

@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "records": [
+    {
+      "id": "src-osuna",
+      "kind": "source",
+      "label": "Códice Osuna",
+      "source_type": "primary",
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Referencia bibliográfica para consulta. Las imágenes se consultan en el catálogo enlazado; sus derechos y los del comentario se revisan por separado."
+      },
+      "url": "https://www.loc.gov/resource/gdcwdl.wdl_07324/",
+      "institution": "Biblioteca Nacional de España; reproducción en Library of Congress",
+      "author": "Autores y colaboradores indígenas y coloniales",
+      "date": "1551–1565 (datación del catálogo VLA)",
+      "language": "pictografía / náhuatl / es",
+      "description": "Pintura del Gobernador, Alcaldes y Regidores de México. Obra identificada mediante el catálogo VLA; cotejo directo pendiente."
+    },
+    {
+      "id": "glyph-cuahuitl-mdz7v",
+      "kind": "glyph",
+      "label": "Referencia glífica: cuahuitl",
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Referencia bibliográfica para consulta. Las imágenes se consultan en el catálogo enlazado; sus derechos y los del comentario se revisan por separado."
+      },
+      "sense_id": "sense-cuahuitl",
+      "reading": "cuahuitl",
+      "glyph_status": "proposed",
+      "context": "Elemento de árbol separado del compuesto Cuauhnahuac.",
+      "url": "https://aztecglyphs.wired-humanities.org/content/cuahuitl-mdz7v",
+      "evidence": [
+        {
+          "source_id": "src-mendoza",
+          "via_source_id": "src-vla",
+          "locator": "Códice Mendoza, f. 7v; VLA cuahuitl (Mdz7v)",
+          "status": "catalog_checked"
+        }
+      ],
+      "notes": "Ficha VLA consultada el 2026-09-28; descripción y análisis de Stephanie Wood. Relación con esta acepción por revisar mediante cotejo primario. Imagen disponible en el catálogo externo."
+    },
+    {
+      "id": "glyph-tonatiuh-mdz34r",
+      "kind": "glyph",
+      "label": "Referencia glífica: tonatiuh",
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Referencia bibliográfica para consulta. Las imágenes se consultan en el catálogo enlazado; sus derechos y los del comentario se revisan por separado."
+      },
+      "sense_id": "sense-tonatiuh",
+      "reading": "tonatiuh",
+      "glyph_status": "proposed",
+      "context": "Disco solar; el catálogo registra también su uso en el nombre Tonatiuhco.",
+      "url": "https://aztecglyphs.wired-humanities.org/node/1858",
+      "evidence": [
+        {
+          "source_id": "src-mendoza",
+          "via_source_id": "src-vla",
+          "locator": "Códice Mendoza, f. 34r; VLA tonatiuh (Mdz34r)",
+          "status": "catalog_checked"
+        }
+      ],
+      "notes": "Ficha VLA consultada el 2026-09-28; descripción y análisis de Stephanie Wood. Relación con esta acepción por revisar mediante cotejo primario. Imagen disponible en el catálogo externo."
+    },
+    {
+      "id": "glyph-metztli-fcbk11f214v",
+      "kind": "glyph",
+      "label": "Referencia glífica: metztli",
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Referencia bibliográfica para consulta. Las imágenes se consultan en el catálogo enlazado; sus derechos y los del comentario se revisan por separado."
+      },
+      "sense_id": "sense-metztli",
+      "reading": "metztli",
+      "glyph_status": "proposed",
+      "context": "Elemento lunar separado del compuesto Temetztli; no se extrapola su lectura a todas las acepciones.",
+      "url": "https://aztecglyphs.wired-humanities.org/content/metztli-fcbk11f214v",
+      "evidence": [
+        {
+          "source_id": "src-florentino",
+          "via_source_id": "src-vla",
+          "locator": "Códice Florentino, libro 11, f. 214v; VLA metztli (FCbk11f214v)",
+          "status": "catalog_checked"
+        }
+      ],
+      "notes": "Ficha VLA consultada el 2026-09-28; descripción y análisis de Stephanie Wood. Relación con esta acepción por revisar mediante cotejo primario. Imagen disponible en el catálogo externo."
+    },
+    {
+      "id": "glyph-metztli-osu14v",
+      "kind": "glyph",
+      "label": "Referencia glífica: metztli",
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Referencia bibliográfica para consulta. Las imágenes se consultan en el catálogo enlazado; sus derechos y los del comentario se revisan por separado."
+      },
+      "sense_id": "sense-mes",
+      "reading": "metztli",
+      "glyph_status": "proposed",
+      "context": "Glifo de mes en el Códice Osuna. Se vincula a la acepción temporal, separada de luna.",
+      "url": "https://aztecglyphs.wired-humanities.org/content/metztli-osu14v",
+      "evidence": [
+        {
+          "source_id": "src-osuna",
+          "via_source_id": "src-vla",
+          "locator": "Códice Osuna, f. 14v (imagen 31); VLA metztli (Osu14v)",
+          "status": "catalog_checked"
+        }
+      ],
+      "notes": "Ficha VLA consultada el 2026-09-28; descripción y análisis de Stephanie Wood. Relación con esta acepción por revisar mediante cotejo primario. Imagen disponible en el catálogo externo."
+    }
+  ]
+}

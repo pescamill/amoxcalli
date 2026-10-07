@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "decisions": {
+    "entry-candidate-cuicatl": {
+      "fingerprint": "0d19cb642be85177565dda7547b4d18cbbb89af1011901bd3da19322632b6b50",
+      "status": "resolved",
+      "reviewer": "Codex · revisión editorial y técnica; sin certificación lingüística",
+      "date": "2026-09-30",
+      "evidence": [
+        "corpus/flor-lexicon-v8.json",
+        "reports/FLOR_CICLO_2026-09-30.md"
+      ],
+      "resolution": "Añadida entrada exacta Cuicatl / cuicatl, canto o canción, con paleografía y glosa GDN conservadas. Cotejo del impreso primario pendiente; la resolución cubre el vacío de catálogo, no certificación lingüística.",
+      "finding_snapshot": {
+        "id": "entry-candidate-cuicatl",
+        "priority": "P1",
+        "lesson_id": null,
+        "title": "Preparar la entrada de cuicatl con fuente léxica",
+        "evidence": {
+          "written": "cuicatl",
+          "examples": [
+            {
+              "archive_id": "axolotl-06231",
+              "nah": "Tenonotzaliztli itechpa in xochitl, in cuicatl",
+              "es": "Diálogo de la poesía: flor y canto"
+            },
+            {
+              "archive_id": "axolotl-13493",
+              "nah": "¿Can niccuiz in yectli xochitli,     in yectli yan cuicatl?",
+              "es": "¿Dónde tomaré bellas flores,     bellos cantos?"
+            }
+          ],
+          "exact_form_record_found": false
+        },
+        "acceptance": "Encontrar y registrar una entrada lexicográfica y su acepción; revisar los ejemplos de flor y canto. No convertir la traducción poética del pasaje en una definición automática.",
+        "fingerprint": "0d19cb642be85177565dda7547b4d18cbbb89af1011901bd3da19322632b6b50"
+      }
+    },
+    "form-axolotl-10445-sense-xochitl": {
+      "fingerprint": "4d8485408b69c5ba5b94b9f51a3058e1c2385973c1e7add84f64479fffb40acb",
+      "status": "resolved",
+      "reviewer": "Codex · revisión editorial y técnica; sin certificación lingüística",
+      "date": "2026-09-30",
+      "evidence": [
+        "corpus/flor-lexicon-v8.json",
+        "reports/FLOR_CICLO_2026-09-30.md"
+      ],
+      "resolution": "Cacahuaxochitl tiene entrada propia y la anotación completa apunta a esa acepción. Se conserva la traducción Axolotl y se aclara el alcance floral/nominal; no se atribuye la imagen al poema ni se identifica especie.",
+      "finding_snapshot": {
+        "id": "form-axolotl-10445-sense-xochitl",
+        "priority": "P1",
+        "lesson_id": "flor",
+        "title": "Revisar forma sin ficha: Cacahuaxochitl",
+        "evidence": {
+          "written": "Cacahuaxochitl",
+          "archive_id": "axolotl-10445",
+          "linked_sense_id": "sense-xochitl",
+          "note": "La palabra completa es Cacahuaxochitl y el registro la traduce como flores de cacao. Se enlaza al tema flor; no se reduce el compuesto a xochitl."
+        },
+        "acceptance": "Determinar con evidencia si corresponde crear entrada del compuesto, añadir una forma a una acepción o conservar solo una comparación temática. Registrar fuente/localizador; no deducir morfología ni una acepción nueva automáticamente.",
+        "fingerprint": "4d8485408b69c5ba5b94b9f51a3058e1c2385973c1e7add84f64479fffb40acb"
+      }
+    },
+    "lesson-flor-source-review": {
+      "fingerprint": "4dc5fd16ef577a76300b60fd87fbf63aa1798da420046f02b5d9d1ac7beddc90",
+      "status": "blocked",
+      "reviewer": "Codex · revisión editorial y técnica; sin certificación lingüística",
+      "date": "2026-09-30",
+      "evidence": [
+        "reports/FLOR_CICLO_2026-09-30.md",
+        "editorial/flor-source-extract.json"
+      ],
+      "resolution": "Comparación de registros y catálogos realizada. Falta edición/página primaria de los cuatro pasajes y cotejo lingüístico competente; no se marca revisión primaria por consultar catálogos."
+    },
+    "lesson-flor-exercises": {
+      "fingerprint": "4b462a7cb288d5c6d5ffe9ca7bb6006719ce290d23582628056601ed5964e123",
+      "status": "resolved",
+      "reviewer": "Codex · revisión editorial y técnica; sin certificación lingüística",
+      "date": "2026-09-30",
+      "evidence": [
+        "corpus/learning-v1.json",
+        "reports/platform-ui-flor-2026-09-30.txt",
+        "reports/FLOR_CICLO_2026-09-30.md"
+      ],
+      "resolution": "Claves cotejadas contra los cuatro registros: comprensión, xochitl exacto, palabra completa Cacahuaxochitl y grafía xochitli. Distractores distinguen esas formas; validación rechaza cloze con clave distinta al original. Revisión editorial/técnica realizada; eficacia con principiantes no medida."
+    },
+    "lesson-flor-learner-trial": {
+      "fingerprint": "30efd7fdb2faddbd9f951247d31d844a489456f0148fc5e847089fe563147498",
+      "status": "blocked",
+      "reviewer": "Codex · revisión editorial y técnica; sin certificación lingüística",
+      "date": "2026-09-30",
+      "evidence": [
+        "editorial/flor-beginner-trial.md"
+      ],
+      "resolution": "Protocolo preparado. No se han observado principiantes reales; completar la hoja con participantes y resultados antes de declarar ensayo realizado."
+    },
+    "form-axolotl-05338-sense-itta": {
+      "fingerprint": "3a3b22ef04d66333d155e0969bfdbb63ea9a4cfbe23183d603dea79a46bbb139",
+      "status": "blocked",
+      "reviewer": "Codex · revisión editorial y técnica; sin certificación lingüística",
+      "date": "2026-09-30",
+      "evidence": [
+        "corpus/learning-v1.json",
+        "reports/FLOR_CICLO_2026-09-30.md"
+      ],
+      "resolution": "La forma original se conserva y el vínculo se identifica como ayuda editorial pendiente. No se crea ficha ni se deduce morfología hasta cotejar la fuente y revisar la relación lingüística."
+    },
+    "form-axolotl-13493-sense-xochitl": {
+      "fingerprint": "0f2a4738af168c92c1d6406e5bb77a748c7e8cccf5457ab666dd90a4b0b34fb0",
+      "status": "blocked",
+      "reviewer": "Codex · revisión editorial y técnica; sin certificación lingüística",
+      "date": "2026-09-30",
+      "evidence": [
+        "corpus/learning-v1.json",
+        "reports/FLOR_CICLO_2026-09-30.md"
+      ],
+      "resolution": "La forma original se conserva y el vínculo se identifica como ayuda editorial pendiente. No se crea ficha ni se deduce morfología hasta cotejar la fuente y revisar la relación lingüística."
+    }
+  }
+}

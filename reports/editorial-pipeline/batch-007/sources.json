@@ -1,0 +1,81 @@
+{
+  "extraction": {
+    "deferred_by_batch_limit": 324,
+    "eligible_before_batch_limit": 374,
+    "entries": 50,
+    "llm_calls": 0,
+    "rejected": {
+      "compound_or_generated_entry": 885,
+      "cross_reference": 32,
+      "entry_with_prefix_or_punctuation": 141
+    },
+    "source_records": 1432
+  },
+  "pages": [
+    {
+      "possibly_capped": false,
+      "prefix": "yn",
+      "records": 0,
+      "sha256": "31d70d0245c7b90341145cee3a315eb324d33d230cea4e9dd97e21365a90b2e3",
+      "state": "cached",
+      "url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=yn&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500"
+    },
+    {
+      "possibly_capped": false,
+      "prefix": "in",
+      "records": 453,
+      "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033",
+      "state": "cached",
+      "url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500"
+    },
+    {
+      "possibly_capped": false,
+      "prefix": "au",
+      "records": 19,
+      "sha256": "2be8895ced38c1404d305fcafa65e33b85e66837d8e8d13d7119d84fc8fd10bb",
+      "state": "cached",
+      "url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=au&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500"
+    },
+    {
+      "possibly_capped": false,
+      "prefix": "ye",
+      "records": 371,
+      "sha256": "c89871b0bcaa035b20492e627168bb630b1d99c65f23e7dcc5ae1d7f5004d413",
+      "state": "cached",
+      "url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=ye&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500"
+    },
+    {
+      "possibly_capped": false,
+      "prefix": "yh",
+      "records": 1,
+      "sha256": "5831cfee918c96a224bd0b7ff7dfddea47832c3e3892ea147159ca9a92506e9b",
+      "state": "cached",
+      "url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=yh&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500"
+    },
+    {
+      "possibly_capped": false,
+      "prefix": "on",
+      "records": 217,
+      "sha256": "05b20e6b8038a75f1bad1eadf211b18e8449c79fe4cad177b61b82081e71c75a",
+      "state": "cached",
+      "url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=on&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500"
+    },
+    {
+      "possibly_capped": false,
+      "prefix": "xi",
+      "records": 213,
+      "sha256": "e4a8d92a3a870d3683861190031534d4e4affdd01fbfaf2930840ddcd8056f64",
+      "state": "cached",
+      "url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=xi&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500"
+    },
+    {
+      "possibly_capped": false,
+      "prefix": "ni",
+      "records": 158,
+      "sha256": "3c4fb22c3bdf3de2889799789e2b31d074edb44ee61c48d6e1944327531e2aef",
+      "state": "cached",
+      "url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=ni&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500"
+    }
+  ],
+  "schema_version": 1
+}

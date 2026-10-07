@@ -1,0 +1,1092 @@
+{
+  "batch_manifest_sha256": "a248267d71dc921fcfd2dfc67246ba56aa19f5b97e4204d3f0739b42e70cb185",
+  "checks": [
+    {
+      "errors": [],
+      "fingerprint": "6d5c7455290c15a47104379ca7fa74e315b1543cddff1bec39ff7d77701efdf6",
+      "item_id": "lexical-sense-gdn-m2-148529",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033",
+          "source_entry": "148529"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "41f88096fceb5094b30153a8af84b412ca501d722f42269bf1c7b3f0765f3963",
+      "item_id": "lexical-sense-gdn-m2-148533",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033",
+          "source_entry": "148533"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "f07b41be6602b51c588332ffff5a119a342d0f9a0f851c7b199e05c8a4425e0d",
+      "item_id": "lexical-sense-gdn-m2-148536",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033",
+          "source_entry": "148536"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "6ede40f9bf26a61bd4a34595d185c4703d116b63686e7e67d5679fc52821e492",
+      "item_id": "lexical-sense-gdn-m2-148537",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033",
+          "source_entry": "148537"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "17adf510b060430ee8b6e423e2c0c8fabb5ab08b9d142103e1fa6f9044429509",
+      "item_id": "lexical-sense-gdn-m2-148538",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033",
+          "source_entry": "148538"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "fe59ec4cb0729206f7eb92092cc2a2b961236521cd43cb48c597f51442d57746",
+      "item_id": "lexical-sense-gdn-m2-148546",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033",
+          "source_entry": "148546"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "0c11220480161d3594bfcea9f5a1d62ccd24b3e7aea9394dce0adea895094da6",
+      "item_id": "lexical-sense-gdn-m2-148549",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033",
+          "source_entry": "148549"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "e2495be90fceb521e21a3f5ceec915d8393572e022e728073e01e4637e4245f4",
+      "item_id": "lexical-sense-gdn-m2-148550",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033",
+          "source_entry": "148550"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "9a375c3807f1958faab779456fc339e5656ef2fd6f7196352f5b132a8dc028c7",
+      "item_id": "lexical-sense-gdn-m2-148551",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033",
+          "source_entry": "148551"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "b183a03fadd7578ab83b31bdb1db70926da9a4295c3fab401bb8dd174de8e85a",
+      "item_id": "lexical-sense-gdn-m2-148552",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033",
+          "source_entry": "148552"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "bc576f13b264aea070932df610c03a8ba938e45a443676ea3aba3252ced9d946",
+      "item_id": "lexical-sense-gdn-m2-148553",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033",
+          "source_entry": "148553"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "bc55e11b744076264242263a1e1912b2f704fb92f0853d91b71b819e74ae1ccb",
+      "item_id": "lexical-sense-gdn-m2-148559",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033",
+          "source_entry": "148559"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "9557c05bbc245fa61cef0da90ea58adad0cbeddc506a1eb8a2c8d8e6d54094b6",
+      "item_id": "lexical-sense-gdn-m2-148573",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033",
+          "source_entry": "148573"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "3aec2248500e8323ee4b0df3118933d87a8102525a07903d53e1afe5f61383cb",
+      "item_id": "lexical-sense-gdn-m2-148656",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033",
+          "source_entry": "148656"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "6a0720d97fff1c82599f494fff15e2718673b672f0a36920d885520e52fd5466",
+      "item_id": "lexical-sense-gdn-m2-148671",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033",
+          "source_entry": "148671"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "72a6a12092f7dfe41cf35e3025f8383cb1bfaaf0511aeeb48d8f67898c8aa8f4",
+      "item_id": "lexical-sense-gdn-m2-148672",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033",
+          "source_entry": "148672"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "0d6f18a3a3450a569998c2f87b0be30de669fed8c71ebf2c3482b8ad15816121",
+      "item_id": "lexical-sense-gdn-m2-148675",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033",
+          "source_entry": "148675"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "a2cd849cce9ca8a3f474e3f02ff157e8a38c506c81ceb5800c15f99de65aba2d",
+      "item_id": "lexical-sense-gdn-m2-148678",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033",
+          "source_entry": "148678"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "957be436b0a0a2c43b4ab15badfaac6f71b76f5a154fcb223c069b637cea32b3",
+      "item_id": "lexical-sense-gdn-m2-148679",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033",
+          "source_entry": "148679"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "90825a28d2bbfdef82a075edee88f410a0441d0455bd4f946cd3cc1e5224cb8f",
+      "item_id": "lexical-sense-gdn-m2-148684",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033",
+          "source_entry": "148684"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "e7929d4b1c19c1fbf999c5082f031b655da3717d96b53b4817e979b4d21ec4a6",
+      "item_id": "lexical-sense-gdn-m2-148689",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033",
+          "source_entry": "148689"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "4a1705767ec532bd341022f44d1b8b70a191bfc6a39948f09b9bb055e5469044",
+      "item_id": "lexical-sense-gdn-m2-148698",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033",
+          "source_entry": "148698"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "86d5e241f01d12ad558d918dff727c2d71caafefd32372f53558cc9e1e7c12e5",
+      "item_id": "lexical-sense-gdn-m2-148701",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033",
+          "source_entry": "148701"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "61ca5b40fcf570fe6c14cad0dd296299de4eb00122f2f208bf4f5639dd7a1f3c",
+      "item_id": "lexical-sense-gdn-m2-148702",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033",
+          "source_entry": "148702"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "0ac315b8f67f295c9a21be188c4ea2fb9e9d2062edcfcfc8e9ac54938a0b9374",
+      "item_id": "lexical-sense-gdn-m2-148707",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033",
+          "source_entry": "148707"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "eb3803225b71c1e14a690a36e2dbf06a6462eb8e93b9f0ae8559ef37ae276428",
+      "item_id": "lexical-sense-gdn-m2-148710",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033",
+          "source_entry": "148710"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "102c18d544ae6e87a1d18c8404a2aa2bc81050e3ad1ecb9abab849b48541fa3d",
+      "item_id": "lexical-sense-gdn-m2-148711",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033",
+          "source_entry": "148711"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "5e1a0945f6114c70b63d85af79c3a229f65f5fe1a72e17bf135e2342988851e0",
+      "item_id": "lexical-sense-gdn-m2-148715",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033",
+          "source_entry": "148715"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "da821c9d02f3d055ecee98e855bfff16ad4886d53acb56487066987d0d1cdbc8",
+      "item_id": "lexical-sense-gdn-m2-148716",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033",
+          "source_entry": "148716"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "91d47eedbfeee619c1c22b5a36ab95d46fd2c46a2c8b613bbcbc3874bd9e7fd7",
+      "item_id": "lexical-sense-gdn-m2-148720",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033",
+          "source_entry": "148720"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "56d6c2a57d273aa64f24e6170aa5fb74ff231380ca2438c4016ecb04c91bdd3b",
+      "item_id": "lexical-sense-gdn-m2-148721",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033",
+          "source_entry": "148721"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "9dcd0b47babee1468b8f7591a5713c9cbe4b81e5367d9bdacabe5b352d10bc5a",
+      "item_id": "lexical-sense-gdn-m2-148724",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033",
+          "source_entry": "148724"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "bdb759f87a2658c699e20529098041298b472967d7387ec8b191d98d7734e6d8",
+      "item_id": "lexical-sense-gdn-m2-148725",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033",
+          "source_entry": "148725"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "e6c4fd6aa9c07c75fc5cc6a1fbc0a745b1df4948f474b1ecee4f3d6cda79291b",
+      "item_id": "lexical-sense-gdn-m2-148736",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033",
+          "source_entry": "148736"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "c926d23f3de6c364e59c51d66e2b8b42ab2d9b0df78c21b8897793cd2c231468",
+      "item_id": "lexical-sense-gdn-m2-148743",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033",
+          "source_entry": "148743"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "1ceb22bdc319557aa62d8becf9564f3661fe681578a424d80291220dac9b84d7",
+      "item_id": "lexical-sense-gdn-m2-148744",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033",
+          "source_entry": "148744"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "a1e7b949d13d2f0177bf0d2aa05aba1d7c7535dc3e9db6280f534c369fe4dd7e",
+      "item_id": "lexical-sense-gdn-m2-148746",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=in&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "c950438d0a317a1490ba371bf9c3a9facf00d7170b158a87208d20509befd033",
+          "source_entry": "148746"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "6764c00dbbb148ff8819fcee2b16b192db249c70a78120046b2019e9a32d9219",
+      "item_id": "lexical-sense-gdn-m2-35719",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=au&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "2be8895ced38c1404d305fcafa65e33b85e66837d8e8d13d7119d84fc8fd10bb",
+          "source_entry": "35719"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "682fb075b90f9cffbb36b27c64be141159ca18f7169bcc196798806ef768a51a",
+      "item_id": "lexical-sense-gdn-m2-169678",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=ye&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "c89871b0bcaa035b20492e627168bb630b1d99c65f23e7dcc5ae1d7f5004d413",
+          "source_entry": "169678"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "76820b524c79413f0cc337f0e735ad78c31c67675d6d19a4bb791e3dcb202a1a",
+      "item_id": "lexical-sense-gdn-m2-169679",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=ye&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "c89871b0bcaa035b20492e627168bb630b1d99c65f23e7dcc5ae1d7f5004d413",
+          "source_entry": "169679"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "e17da05b4e53b357c28d9727021a02bf67aab05d58bc8c7671900019d309fd8e",
+      "item_id": "lexical-sense-gdn-m2-169764",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=ye&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "c89871b0bcaa035b20492e627168bb630b1d99c65f23e7dcc5ae1d7f5004d413",
+          "source_entry": "169764"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "3b0d27f3cb5219e0d64c7952164964aa6bfc9c5210723b74b3a2096c27ecf57c",
+      "item_id": "lexical-sense-gdn-m2-169768",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=ye&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "c89871b0bcaa035b20492e627168bb630b1d99c65f23e7dcc5ae1d7f5004d413",
+          "source_entry": "169768"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "1731e62d73be439abb0b566f8c3fcac5ab49405a4f7d86a15bd5fe67be8a015d",
+      "item_id": "lexical-sense-gdn-m2-169830",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=ye&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "c89871b0bcaa035b20492e627168bb630b1d99c65f23e7dcc5ae1d7f5004d413",
+          "source_entry": "169830"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "7912abf20db07ac5ee25687696fe9de181bf2a9e75cabdacb8f06516a4c4df58",
+      "item_id": "lexical-sense-gdn-m2-169831",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=ye&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "c89871b0bcaa035b20492e627168bb630b1d99c65f23e7dcc5ae1d7f5004d413",
+          "source_entry": "169831"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "3ae83f8c3343cc5f45cd052f1d8a90a92caf701992b4ec598bee9abb261dff9c",
+      "item_id": "lexical-sense-gdn-m2-152480",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=ye&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "c89871b0bcaa035b20492e627168bb630b1d99c65f23e7dcc5ae1d7f5004d413",
+          "source_entry": "152480"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "f12c1e605817969b29047cadfeed96bab56a22cda9683625b25730f1d945ea2b",
+      "item_id": "lexical-sense-gdn-m2-168696",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=xi&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "e4a8d92a3a870d3683861190031534d4e4affdd01fbfaf2930840ddcd8056f64",
+          "source_entry": "168696"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "4b4a5f0e59e043ec0cb4e52803f1441e2a5f9bc99b5b4da177eb3d661703e7d9",
+      "item_id": "lexical-sense-gdn-m2-168729",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=xi&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "e4a8d92a3a870d3683861190031534d4e4affdd01fbfaf2930840ddcd8056f64",
+          "source_entry": "168729"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "1cc6f871b54e9348aa5c10277865a46e0987b3d3b474f905af9f7e32928e9730",
+      "item_id": "lexical-sense-gdn-m2-168744",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=xi&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "e4a8d92a3a870d3683861190031534d4e4affdd01fbfaf2930840ddcd8056f64",
+          "source_entry": "168744"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "edb82f92abaedab8ea12131d4b48a8cf61cc78a599ffe78d31c62e381e7d6723",
+      "item_id": "lexical-sense-gdn-m2-168791",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=xi&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "e4a8d92a3a870d3683861190031534d4e4affdd01fbfaf2930840ddcd8056f64",
+          "source_entry": "168791"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "2f01f855e961ce6470446b375659ed8df1a215d9f63349f5388f56483d214b8f",
+      "item_id": "lexical-sense-gdn-m2-154365",
+      "proof": [
+        {
+          "checks": [
+            "written",
+            "catalog_normalized",
+            "historical_gloss",
+            "sense_id"
+          ],
+          "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=ni&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=500",
+          "sha256": "3c4fb22c3bdf3de2889799789e2b31d074edb44ee61c48d6e1944327531e2aef",
+          "source_entry": "154365"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "f68b99746df6dd593f49976a60e714f4c6ad596b32d193c0451028e9f77451fb",
+      "item_id": "visual-glyph-link-v7-sense-gdn-m2-148573",
+      "proof": [
+        {
+          "checks": [
+            "original_definition",
+            "referent_token",
+            "lexical_source_url"
+          ],
+          "form_id": "lex-gdn-m2-148573"
+        },
+        {
+          "checks": [
+            "same_image",
+            "same_reading",
+            "same_credit",
+            "contextual_scope"
+          ],
+          "reference_glyph_id": "glyph-cuahuitl-mdz7v"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "0117ea35d12b33b07ba4e52ffd935712502f753ea584e31848088bb817d9d0c3",
+      "item_id": "visual-glyph-link-v7-sense-gdn-m2-168744",
+      "proof": [
+        {
+          "checks": [
+            "original_definition",
+            "referent_token",
+            "lexical_source_url"
+          ],
+          "form_id": "lex-gdn-m2-168744"
+        },
+        {
+          "checks": [
+            "same_image",
+            "same_reading",
+            "same_credit",
+            "contextual_scope"
+          ],
+          "reference_glyph_id": "glyph-itzcuintli-mdz16r"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "fa1f4cf0bd37d947fe7ab5c9638f76525c8c7c9a89c36e746ad14824a371bded",
+      "item_id": "visual-glyph-link-v7-sense-gdn-m2-169679",
+      "proof": [
+        {
+          "archive_id": "axolotl-09261",
+          "checks": [
+            "original_pair",
+            "exact_form_token",
+            "reference_reading_token",
+            "spanish_referent"
+          ],
+          "source_hash": "7e9b5595f0b92d65c992fb75405857e593322a5a18d812778676194f4ab3c069"
+        },
+        {
+          "checks": [
+            "same_image",
+            "same_reading",
+            "same_credit",
+            "contextual_scope"
+          ],
+          "reference_glyph_id": "glyph-tepetl-mdz32r"
+        }
+      ],
+      "status": "accepted"
+    },
+    {
+      "errors": [],
+      "fingerprint": "96f215b04748670cb3bfec0adc9ffdbbc5c753c6e18a526c23d895612360ddf0",
+      "item_id": "visual-glyph-link-v7-sense-gdn-m2-169831",
+      "proof": [
+        {
+          "archive_id": "axolotl-02424",
+          "checks": [
+            "original_pair",
+            "exact_form_token",
+            "reference_reading_token",
+            "spanish_referent"
+          ],
+          "source_hash": "c76c61bb3698db40d8dd96c0535dc0265d7cadb4a6c4fa764d0e465f91fe4015"
+        },
+        {
+          "checks": [
+            "same_image",
+            "same_reading",
+            "same_credit",
+            "contextual_scope"
+          ],
+          "reference_glyph_id": "glyph-xochitl"
+        }
+      ],
+      "status": "accepted"
+    }
+  ],
+  "groups": {
+    "group-catalog_transcription": {
+      "date": "2026-09-30",
+      "evidence": [
+        "/Users/pescamil/Downloads/nahuatl-local/reports/editorial-pipeline/batch-009-v11/sources.json",
+        "/Users/pescamil/Downloads/nahuatl-local/editorial/batch-009-v11-source-check.json#checks"
+      ],
+      "fingerprint": "c1e37d839582ae720271bf20c6c7c6f470c8219df0ad1b7174d9102a6a74c2f0",
+      "resolution": "Aceptación limitada a transcripción histórica literal o apoyo contextual verificado por tokens y referencias; cotejo primario y análisis lingüístico pendientes.",
+      "review_method": "automated_source_comparison",
+      "reviewer": "Script de cotejo literal · editorial_release v1",
+      "status": "accepted"
+    },
+    "group-contextual_visual": {
+      "date": "2026-09-30",
+      "evidence": [
+        "/Users/pescamil/Downloads/nahuatl-local/reports/editorial-pipeline/batch-009-v11/sources.json",
+        "/Users/pescamil/Downloads/nahuatl-local/editorial/batch-009-v11-source-check.json#checks"
+      ],
+      "fingerprint": "a7723ada85acf00ac98fc42b86dccb5739de8bfad0443fb68c6e09a2f18c7772",
+      "resolution": "Aceptación limitada a transcripción histórica literal o apoyo contextual verificado por tokens y referencias; cotejo primario y análisis lingüístico pendientes.",
+      "review_method": "automated_source_comparison",
+      "reviewer": "Script de cotejo literal · editorial_release v1",
+      "status": "accepted"
+    }
+  },
+  "items": {},
+  "linguistic_certification": false,
+  "llm_calls": 0,
+  "network_requests": 0,
+  "primary_review": false,
+  "review_method": "automated_source_comparison",
+  "schema_version": 1
+}

@@ -1,0 +1,32 @@
+{
+  "adapter": "/workspace/scratch/731d23e52e7f/nahuatl-local/outputs/automatic/run/best",
+  "rag": false,
+  "split": "validation",
+  "examples": 12,
+  "ids": [
+    "axolotl-04483",
+    "axolotl-05301",
+    "axolotl-13998",
+    "axolotl-11083",
+    "axolotl-05431",
+    "axolotl-10826",
+    "axolotl-04945",
+    "axolotl-06082",
+    "axolotl-00695",
+    "axolotl-08905",
+    "axolotl-01219",
+    "axolotl-15944"
+  ],
+  "dataset_sha256": "efa8b34744c2fbf1c4ca24ad8e377fa3720af1efcc0e9f8fb8746ced93bff3fe",
+  "chrF_plus_plus": 16.56267499567288,
+  "unflagged_examples": 12,
+  "unflagged_chrF_plus_plus": 16.56267499567288,
+  "retrieved_passage_chrF_plus_plus": 19.70404147495491,
+  "truncated": 3,
+  "repeated_trigram_fraction": 0.2591691995947315,
+  "mean_seconds": 7.479833333333333,
+  "network_connections_blocked": true,
+  "metric_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.5.1",
+  "selection": "Seed2026; 2–15 normalized Spanish words, <=25 Nahuatl words; overlap heuristic >=0.65 token sequence similarity on either language.",
+  "limitations": "Small exploratory sample; no linguistic review. Unflagged does not mean independent. chrF is not accuracy."
+}

@@ -1,0 +1,18 @@
+test_glyph_requires_primary_context_and_secondary_is_not_primary (test_corpus.CorpusTests.test_glyph_requires_primary_context_and_secondary_is_not_primary) ... ok
+test_glyph_update_preserves_edits_and_adds_missing_links (test_corpus.CorpusTests.test_glyph_update_preserves_edits_and_adds_missing_links) ... ok
+test_http_shared_origin_session_and_no_admin_route (test_corpus.CorpusTests.test_http_shared_origin_session_and_no_admin_route) ... ok
+test_import_after_withdrawal_and_private_source_hides_dependents (test_corpus.CorpusTests.test_import_after_withdrawal_and_private_source_hides_dependents) ... ok
+test_import_atomic_refs_and_optimistic_edits (test_corpus.CorpusTests.test_import_atomic_refs_and_optimistic_edits) ... ok
+test_migration_preserves_voices_and_all_legacy_ids (test_corpus.CorpusTests.test_migration_preserves_voices_and_all_legacy_ids) ... ok
+test_pending_private_training_permissions_and_retraction (test_corpus.CorpusTests.test_pending_private_training_permissions_and_retraction) ... ok
+test_profile_snapshot_duplicate_and_no_unprivileged_withdrawal (test_corpus.CorpusTests.test_profile_snapshot_duplicate_and_no_unprivileged_withdrawal) ... ok
+test_publication_and_training_are_independent (test_corpus.CorpusTests.test_publication_and_training_are_independent) ... ok
+test_rules_ported_without_faking_general_translation (test_corpus.CorpusTests.test_rules_ported_without_faking_general_translation) ... ok
+test_senses_spelling_and_missing_modern_coverage (test_corpus.CorpusTests.test_senses_spelling_and_missing_modern_coverage) ... ok
+test_training_requires_source_permission_and_historical_check (test_corpus.CorpusTests.test_training_requires_source_permission_and_historical_check) ... ok
+test_urls_and_required_rights_review (test_corpus.CorpusTests.test_urls_and_required_rights_review) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 2.265s
+
+OK

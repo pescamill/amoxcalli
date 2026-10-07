@@ -1,0 +1,336 @@
+{
+  "origin": "Nahuatl Scriptorium",
+  "project_id": "appgprj_6aa737d8e10481918bc2820eaf622972",
+  "commit": "3e8a7a67f995f92858519c6cffe15e74d0e7c794",
+  "corpus": [
+    {
+      "id": "lex-xochitl",
+      "kind": "lexicon",
+      "lemma": "xochitl",
+      "title": "xochitl · flower",
+      "summary": "Flower; this record uses Molina's botanical sense. The same headword can also occur as a personal name or calendar sign.",
+      "url": "https://nahuatl.wired-humanities.org/content/xochitl",
+      "citation": "Molina, Vocabulario (1571), part 2, f. 160r, col. 2. Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+      "period": "1571",
+      "aliases": [
+        "flower",
+        "flowers",
+        "flor",
+        "flores",
+        "xochitl",
+        "xōchitl"
+      ],
+      "related": [
+        "glyph-xochitl"
+      ]
+    },
+    {
+      "id": "lex-cuahuitl",
+      "kind": "lexicon",
+      "lemma": "cuahuitl",
+      "title": "cuahuitl · tree / wood",
+      "summary": "Molina records quauitl for a tree, timber, or a stick. This record selects the tree sense; other contexts require disambiguation.",
+      "url": "https://nahuatl.wired-humanities.org/content/cuahuitl-1",
+      "citation": "Molina (1571), part 2, f. 88r, col. 1. Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+      "period": "1571",
+      "aliases": [
+        "tree",
+        "trees",
+        "wood",
+        "arbol",
+        "arboles",
+        "madera",
+        "cuahuitl",
+        "quauitl"
+      ]
+    },
+    {
+      "id": "lex-xochicuahuitl",
+      "kind": "lexicon",
+      "lemma": "xochicuahuitl",
+      "title": "xochicuahuitl · flowering tree",
+      "summary": "A flowering tree. The entry points to a description and illustration in the Florentine Codex, Book 11, f. 187v.",
+      "url": "https://nahuatl.wired-humanities.org/content/xochicuahuitl",
+      "citation": "Florentine Codex (1577), Book 11, f. 187v, referenced by the Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+      "period": "1577",
+      "aliases": [
+        "flowering tree",
+        "flower tree",
+        "arbol florido",
+        "arbol con flores",
+        "xochicuahuitl"
+      ],
+      "caveat": "Botanical identifications differ across sources. Do not treat liquidambar, black sage, and any flowering tree as interchangeable species. Modern ceremonial examples on the dictionary page are excluded.",
+      "related": [
+        "glyph-xochicuahuitl",
+        "passage-tree"
+      ]
+    },
+    {
+      "id": "lex-atl",
+      "kind": "lexicon",
+      "lemma": "atl",
+      "title": "atl · water",
+      "summary": "Water is the selected sense. Molina also lists other senses; a modern sentence must be interpreted in context.",
+      "url": "https://nahuatl.wired-humanities.org/content/atl",
+      "citation": "Molina (1571), part 2, f. 8r; Carochi (1645), Lockhart edition (2001), p. 498. Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+      "period": "1571 / 1645",
+      "aliases": [
+        "water",
+        "agua",
+        "atl",
+        "ātl"
+      ],
+      "related": [
+        "glyph-atl",
+        "passage-water"
+      ]
+    },
+    {
+      "id": "lex-calli",
+      "kind": "lexicon",
+      "lemma": "calli",
+      "title": "calli · house",
+      "summary": "A house or building. Lockhart also gives nominal-predicate readings: it is a house, or they are houses. Context determines the reading.",
+      "url": "https://nahuatl.wired-humanities.org/content/calli",
+      "citation": "Lockhart, Nahuatl as Written (2001), p. 212. Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+      "period": "Scholarly analysis of older written Nahuatl",
+      "aliases": [
+        "house",
+        "home",
+        "building",
+        "casa",
+        "edificio",
+        "calli"
+      ],
+      "related": [
+        "glyph-calli"
+      ]
+    },
+    {
+      "id": "lex-tonatiuh",
+      "kind": "lexicon",
+      "lemma": "tonatiuh",
+      "title": "tonatiuh · sun",
+      "summary": "The sun, as recorded by Molina. Other attestations may concern a day or a named divine force; those senses are not automatically implied.",
+      "url": "https://nahuatl.wired-humanities.org/content/tonatiuh",
+      "citation": "Molina (1571), part 2, f. 149v, col. 1. Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+      "period": "1571",
+      "aliases": [
+        "sun",
+        "sol",
+        "tonatiuh",
+        "tōnatiuh"
+      ]
+    },
+    {
+      "id": "lex-metztli",
+      "kind": "lexicon",
+      "lemma": "metztli",
+      "title": "metztli · moon",
+      "summary": "Moon or month. Vowel length distinguishes this from the word for leg in scholarly analysis; unmarked historical spelling can obscure that distinction.",
+      "url": "https://nahuatl.wired-humanities.org/content/metztli",
+      "citation": "Molina (1571), part 2, f. 55v, col. 1; Karttunen (1992), p. 144. Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+      "period": "1571",
+      "aliases": [
+        "moon",
+        "month",
+        "luna",
+        "mes",
+        "metztli",
+        "mētztli"
+      ],
+      "related": [
+        "passage-moon"
+      ]
+    },
+    {
+      "id": "lex-itta",
+      "kind": "lexicon",
+      "lemma": "itta",
+      "title": "itta · to see",
+      "summary": "To see or inspect. The transitive form needs appropriate subject and object marking. Modern Huastecan examples elsewhere on the source page are excluded.",
+      "url": "https://nahuatl.wired-humanities.org/content/itta",
+      "citation": "Molina (1571), part 2, f. 43r, col. 2; Lockhart (2001), p. 221. Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+      "period": "1571",
+      "aliases": [
+        "see",
+        "sees",
+        "seeing",
+        "look",
+        "ver",
+        "veo",
+        "mirar",
+        "miro",
+        "itta",
+        "niquitta"
+      ],
+      "related": [
+        "grammar-niquitta"
+      ]
+    },
+    {
+      "id": "lex-ihuan",
+      "kind": "lexicon",
+      "lemma": "ihuan",
+      "title": "ihuan · and / with",
+      "summary": "Molina records iuan as a conjunction meaning and or also. The normalized headword is ihuan. This record excludes modern shortened forms.",
+      "url": "https://nahuatl.wired-humanities.org/content/ihuan",
+      "citation": "Molina (1571), part 2, f. 43v, col. 1. Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+      "period": "1571",
+      "aliases": [
+        "and",
+        "with",
+        "y",
+        "con",
+        "ihuan",
+        "iuan"
+      ]
+    },
+    {
+      "id": "grammar-niquitta",
+      "kind": "grammar",
+      "lemma": "niquitta",
+      "title": "niquitta · first-person transitive form",
+      "summary": "Molina lists itta with niqu.; Lockhart also records (i)tta, niqu. This supports niquitta for I see it. Combining that form with a new noun phrase is an application, not a quotation of a historical sentence.",
+      "url": "https://nahuatl.wired-humanities.org/content/itta",
+      "citation": "Molina (1571), part 2, f. 43r, col. 2; Lockhart, Nahuatl as Written (2001), p. 221. Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+      "period": "1571 / scholarly analysis",
+      "aliases": [
+        "i see",
+        "veo",
+        "yo veo",
+        "i look",
+        "miro",
+        "niquitta"
+      ],
+      "caveat": "Only the first-person singular subject and a singular third-person object are covered by the built-in composition rule."
+    },
+    {
+      "id": "passage-water",
+      "kind": "passage",
+      "lemma": "atl",
+      "title": "Water as the heart of the sky",
+      "summary": "An attested comparison involving water and the sky, recorded in Mexico City around 1582. Transcription and Spanish translation are accessed through the dictionary, not independently checked against the manuscript.",
+      "quote": "in atl ca yuhquima yollo yn ilhuicatl",
+      "translation": "El agua es como el corazón del cielo.",
+      "url": "https://nahuatl.wired-humanities.org/content/atl",
+      "citation": "Anales de Juan Bautista, ca. 1582; Luis Reyes García edition (2001), pp. 170–171, cited in the Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+      "period": "ca. 1582",
+      "aliases": [
+        "water",
+        "agua",
+        "sky",
+        "cielo",
+        "heart",
+        "corazon",
+        "atl"
+      ]
+    },
+    {
+      "id": "passage-moon",
+      "kind": "passage",
+      "lemma": "metztli",
+      "title": "The disappearing moon",
+      "summary": "A passage in Book 7 describes the moon's disappearance using the expression below. The English gloss here is a short explanatory rendering, not a claim about astronomical causation.",
+      "quote": "ommic in metzli",
+      "translation": "The moon has died.",
+      "url": "https://nahuatl.wired-humanities.org/content/metztli",
+      "citation": "Florentine Codex, Book 7; Anderson and Dibble edition (1961), p. 3, quoted in the Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+      "period": "Sixteenth century",
+      "aliases": [
+        "moon",
+        "luna",
+        "disappear",
+        "desaparecer",
+        "metztli"
+      ]
+    },
+    {
+      "id": "passage-tree",
+      "kind": "passage",
+      "lemma": "xochicuahuitl",
+      "title": "Florentine Codex · Book 11, f. 187v",
+      "summary": "The dictionary identifies a flowering-tree description and image at this manuscript location. This is a contextual manuscript pointer, not a sentence-level parallel translation.",
+      "url": "https://florentinecodex.getty.edu/en/book/11/folio/187v",
+      "citation": "Florentine Codex (1577), Book 11, f. 187v. Digital edition: Getty Research Institute (2023). Locator documented in the Oregon xochicuahuitl entry.",
+      "period": "1577",
+      "aliases": [
+        "flowering tree",
+        "arbol florido",
+        "xochicuahuitl"
+      ],
+      "caveat": "The locator is corroborated through the dictionary. Direct manuscript text was not independently transcribed for this corpus."
+    },
+    {
+      "id": "glyph-xochitl",
+      "kind": "glyph",
+      "lemma": "xochitl",
+      "title": "Flower element · Codex Mendoza 10r",
+      "summary": "Flower element extracted from the place-name compound Xochiacan. Its use here is a related historical visual, not a complete glyph translation of a new sentence.",
+      "url": "https://aztecglyphs.wired-humanities.org/content/xochitl-mdz10r",
+      "citation": "Codex Mendoza, f. 10r. Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed.",
+      "period": "ca. 1541–1553",
+      "aliases": [
+        "flower",
+        "flor",
+        "xochitl"
+      ],
+      "image": "https://aztecglyphs.wired-humanities.org/sites/default/files/styles/large/public/xochitl10rflowerFromXochiacan.jpg?itok=v8jxI2UJ",
+      "rights": "Bodleian Libraries, University of Oxford, MS. Arch. Selden. A. 1. Via Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed. CC BY-NC-SA 3.0 UK."
+    },
+    {
+      "id": "glyph-atl",
+      "kind": "glyph",
+      "lemma": "atl",
+      "title": "Water element · Codex Mendoza 51r",
+      "summary": "Water element extracted from the place-name compound Ayotochco. The original name and manuscript context remain essential to its interpretation.",
+      "url": "https://aztecglyphs.wired-humanities.org/content/atl-mdz51r-0",
+      "citation": "Codex Mendoza, f. 51r. Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed.",
+      "period": "ca. 1541–1553",
+      "aliases": [
+        "water",
+        "agua",
+        "atl"
+      ],
+      "image": "https://aztecglyphs.wired-humanities.org/sites/default/files/styles/large/public/atl51rwaterFromAyotochco.png?itok=8iKf5JJs",
+      "rights": "Bodleian Libraries, University of Oxford, MS. Arch. Selden. A. 1. Via Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed. CC BY-NC-SA 3.0 UK."
+    },
+    {
+      "id": "glyph-calli",
+      "kind": "glyph",
+      "lemma": "calli",
+      "title": "House element · Codex Mendoza 13r",
+      "summary": "Building element extracted from the place-name compound Apancalecan. The entrance faces left in this particular example.",
+      "url": "https://aztecglyphs.wired-humanities.org/content/calli-mdz13r",
+      "citation": "Codex Mendoza, f. 13r. Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed.",
+      "period": "ca. 1541–1553",
+      "aliases": [
+        "house",
+        "casa",
+        "building",
+        "calli"
+      ],
+      "image": "https://aztecglyphs.wired-humanities.org/sites/default/files/styles/large/public/calli13rhouse%2CbuildingFromApancalecan%20%281%29.jpg?itok=vJYDNZ5V",
+      "rights": "Bodleian Libraries, University of Oxford, MS. Arch. Selden. A. 1. Via Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed. CC BY-NC-SA 3.0 UK."
+    },
+    {
+      "id": "glyph-xochicuahuitl",
+      "kind": "glyph",
+      "lemma": "xochicuahuitl",
+      "title": "Flowering tree · Codex Mendoza 50r",
+      "summary": "Tree element extracted from Xochicuauhtitlan, interpreted in the lexicon as Near the Liquidambar Trees. This place-name reading does not establish a universal botanical identification.",
+      "url": "https://aztecglyphs.wired-humanities.org/content/xochicuahuitl-mdz50r",
+      "citation": "Codex Mendoza, f. 50r. Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed.",
+      "period": "ca. 1541–1553",
+      "aliases": [
+        "flowering tree",
+        "arbol florido",
+        "xochicuahuitl"
+      ],
+      "image": "https://aztecglyphs.wired-humanities.org/sites/default/files/styles/large/public/xochiquahuitl50rfloweringtreeFromXochicuauhtitlan.jpg?itok=2NpF06b-",
+      "rights": "Bodleian Libraries, University of Oxford, MS. Arch. Selden. A. 1. Via Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed. CC BY-NC-SA 3.0 UK."
+    }
+  ],
+  "corpusVersion": "2026-09-13.1"
+}

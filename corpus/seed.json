@@ -1,0 +1,1186 @@
+{
+  "schema_version": 1,
+  "records": [
+    {
+      "kind": "source",
+      "id": "src-molina",
+      "label": "Vocabulario de Molina",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado."
+      },
+      "source_type": "primary",
+      "url": "https://gdn.iib.unam.mx/",
+      "institution": "Registro de obra histórica; consulta mediada por diccionarios",
+      "author": "Alonso de Molina",
+      "date": "1571",
+      "language": "es / náhuatl",
+      "description": "Obra primaria. Los folios de esta colección inicial se heredaron de fichas lexicográficas; no se cotejó el facsímil."
+    },
+    {
+      "kind": "source",
+      "id": "src-florentino",
+      "label": "Códice Florentino",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado."
+      },
+      "source_type": "primary",
+      "url": "https://florentinecodex.getty.edu/en/book/11/folio/187v",
+      "institution": "Biblioteca Medicea Laurenziana; edición digital Getty",
+      "author": "Autores y colaboradores nahuas; Bernardino de Sahagún",
+      "date": "1577",
+      "language": "náhuatl / es",
+      "description": "Fuente primaria; referencia inicial al libro 11, folio 187v. Distinguir la obra de su edición digital."
+    },
+    {
+      "kind": "source",
+      "id": "src-mendoza",
+      "label": "Códice Mendoza",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado."
+      },
+      "source_type": "primary",
+      "url": "https://todo.cultura.gob.mx/detalle/codice-mendoza",
+      "institution": "Bodleian Libraries; portal de consulta INAH",
+      "author": "Tlacuilos y colaboradores del siglo XVI",
+      "date": "siglo XVI",
+      "language": "pictografía / es",
+      "description": "La referencia identifica el códice; cada propuesta glífica conserva su folio y su contexto."
+    },
+    {
+      "kind": "source",
+      "id": "src-bautista",
+      "label": "Anales de Juan Bautista",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado."
+      },
+      "source_type": "primary",
+      "url": "https://nahuatl.wired-humanities.org/content/atl",
+      "institution": "Referencia histórica mediada por el diccionario de Oregon",
+      "author": "Juan Bautista; edición de Luis Reyes García",
+      "date": "ca. 1582; edición 2001",
+      "language": "náhuatl / es",
+      "description": "Pasaje enlazado a pp. 170–171 de la edición citada por Oregon. No se cotejó el manuscrito."
+    },
+    {
+      "kind": "source",
+      "id": "src-lockhart",
+      "label": "Nahuatl as Written",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado."
+      },
+      "source_type": "research",
+      "url": "https://nahuatl.wired-humanities.org/content/calli",
+      "institution": "Stanford University Press; cita recuperada en Oregon",
+      "author": "James Lockhart",
+      "date": "2001",
+      "language": "en",
+      "description": "Estudio lingüístico; no es una fuente primaria colonial."
+    },
+    {
+      "kind": "source",
+      "id": "src-oregon",
+      "label": "Online Nahuatl Dictionary",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado."
+      },
+      "source_type": "catalog",
+      "url": "https://nahuatl.wired-humanities.org/",
+      "institution": "University of Oregon",
+      "author": "Stephanie Wood, editora",
+      "date": "consulta heredada 2026-09-13",
+      "language": "en / es / náhuatl",
+      "description": "Diccionario secundario. Sus páginas pueden mezclar épocas y variedades; se conservan las citas seleccionadas en Scriptorium."
+    },
+    {
+      "kind": "source",
+      "id": "src-vla",
+      "label": "Visual Lexicon of Aztec Hieroglyphs",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado."
+      },
+      "source_type": "catalog",
+      "url": "https://aztecglyphs.wired-humanities.org/",
+      "institution": "University of Oregon",
+      "author": "Stephanie Wood, editora",
+      "date": "consulta heredada 2026-09-13",
+      "language": "en",
+      "description": "Análisis glífico secundario. Se enlazan las fichas; no se redistribuyen sus imágenes."
+    },
+    {
+      "kind": "source",
+      "id": "src-gdn",
+      "label": "Gran Diccionario Náhuatl",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado."
+      },
+      "source_type": "catalog",
+      "url": "https://gdn.iib.unam.mx/",
+      "institution": "UNAM · Instituto de Investigaciones Bibliográficas",
+      "author": "Equipo del Gran Diccionario Náhuatl",
+      "date": "recurso digital",
+      "language": "es / náhuatl",
+      "description": "Consulta de registros y contextos lexicográficos; conservar la fuente original detrás de cada entrada."
+    },
+    {
+      "kind": "source",
+      "id": "src-tlachia",
+      "label": "Tlachia · análisis de la escritura náhuatl",
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado."
+      },
+      "source_type": "catalog",
+      "url": "https://tlachia.iib.unam.mx/xolotl/X.020",
+      "institution": "UNAM · Instituto de Investigaciones Bibliográficas",
+      "author": "Equipo Tlachia",
+      "date": "recurso digital",
+      "language": "es / náhuatl",
+      "description": "Se comprobó la ficha X.020 el 2026-09-27. Separa elemento visual, lectura del compuesto y valores fonéticos."
+    },
+    {
+      "kind": "source",
+      "id": "src-thouvenot",
+      "label": "Diccionario náhuatl-español basado en Molina",
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado."
+      },
+      "source_type": "edition",
+      "url": "https://historicas.unam.mx/publicaciones/publicadigital/libros/diccionario/nahuatl.html",
+      "institution": "UNAM · Instituto de Investigaciones Históricas",
+      "author": "Marc Thouvenot; Javier Manríquez, colaborador; prólogo de Miguel León-Portilla",
+      "date": "2014",
+      "language": "es / náhuatl",
+      "description": "Edición con náhuatl normalizado y español modernizado; no sustituye la grafía del testimonio original.",
+      "primary_source_id": "src-molina"
+    },
+    {
+      "kind": "source",
+      "id": "src-ecn",
+      "label": "Estudios de Cultura Náhuatl",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado."
+      },
+      "source_type": "research",
+      "url": "https://nahuatl.historicas.unam.mx/",
+      "institution": "UNAM · Instituto de Investigaciones Históricas",
+      "author": "Autores de cada artículo",
+      "date": "publicación periódica",
+      "language": "es / náhuatl y otros",
+      "description": "Registrar cada artículo como fuente individual al incorporarlo. El catálogo no reproduce la revista."
+    },
+    {
+      "kind": "source",
+      "id": "src-inali",
+      "label": "Catálogo de las lenguas indígenas nacionales",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado."
+      },
+      "source_type": "catalog",
+      "url": "https://www.inali.gob.mx/sitios/clin-inali/html/l_nahuatl.html",
+      "institution": "INALI",
+      "author": "Instituto Nacional de Lenguas Indígenas",
+      "date": "catálogo de referencia",
+      "language": "es",
+      "description": "Nombres de referencia para 30 variantes; se admiten autodenominaciones. Los códigos inali-XX del proyecto son internos."
+    },
+    {
+      "kind": "source",
+      "id": "src-community",
+      "label": "Testimonio comunitario",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": true,
+        "note": "El contenido requiere el permiso individual de su autor; este registro solo agrupa testimonios.",
+        "basis": "El exportador exige además el consentimiento individual y la revisión de cada registro."
+      },
+      "source_type": "community",
+      "url": "",
+      "institution": "Proyecto Voces",
+      "author": "Persona participante, identificada por seudónimo",
+      "date": "fecha de cada aportación",
+      "language": "náhuatl / es",
+      "description": "Fuente oral o escrita contemporánea. La variante se toma del perfil y se conserva por aportación."
+    },
+    {
+      "kind": "sense",
+      "id": "sense-xochitl",
+      "label": "flor",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": true,
+        "note": "Descripción editorial original del proyecto, MIT.",
+        "basis": "Texto original del proyecto, licencia MIT."
+      },
+      "definition": "Órgano floral; acepción botánica, separada de nombres propios y signos calendáricos.",
+      "aliases": [
+        "flor",
+        "flores",
+        "flower"
+      ],
+      "pos": "noun"
+    },
+    {
+      "kind": "form",
+      "id": "lex-xochitl",
+      "label": "xochitl",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado."
+      },
+      "sense_id": "sense-xochitl",
+      "written": "xochitl",
+      "period": "historical",
+      "variant": "nci",
+      "variant_label": "Náhuatl histórico (tradición escrita)",
+      "orthography": "Lema editorial heredado de Scriptorium; no transcripción diplomática",
+      "variation_kind": "historical",
+      "url": "https://nahuatl.wired-humanities.org/content/xochitl",
+      "citation": "Molina, Vocabulario (1571), part 2, f. 160r, col. 2. Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+      "evidence": [
+        {
+          "source_id": "src-molina",
+          "via_source_id": "src-oregon",
+          "locator": "Molina, Vocabulario (1571), part 2, f. 160r, col. 2. Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+          "status": "inherited"
+        }
+      ],
+      "legacy_id": "lex-xochitl",
+      "notes": "Referencia heredada; falta cotejo filológico propio."
+    },
+    {
+      "kind": "sense",
+      "id": "sense-cuahuitl",
+      "label": "árbol",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": true,
+        "note": "Descripción editorial original del proyecto, MIT.",
+        "basis": "Texto original del proyecto, licencia MIT."
+      },
+      "definition": "Planta leñosa. Se distingue de la acepción «madera» aunque comparta forma.",
+      "aliases": [
+        "árbol",
+        "árboles",
+        "tree"
+      ],
+      "pos": "noun"
+    },
+    {
+      "kind": "form",
+      "id": "lex-cuahuitl",
+      "label": "cuahuitl",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado."
+      },
+      "sense_id": "sense-cuahuitl",
+      "written": "cuahuitl",
+      "period": "historical",
+      "variant": "nci",
+      "variant_label": "Náhuatl histórico (tradición escrita)",
+      "orthography": "Lema editorial heredado de Scriptorium; no transcripción diplomática",
+      "variation_kind": "historical",
+      "url": "https://nahuatl.wired-humanities.org/content/cuahuitl-1",
+      "citation": "Molina (1571), part 2, f. 88r, col. 1. Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+      "evidence": [
+        {
+          "source_id": "src-molina",
+          "via_source_id": "src-oregon",
+          "locator": "Molina (1571), part 2, f. 88r, col. 1. Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+          "status": "inherited"
+        }
+      ],
+      "legacy_id": "lex-cuahuitl",
+      "notes": "Referencia heredada; falta cotejo filológico propio."
+    },
+    {
+      "kind": "form",
+      "id": "form-quauitl",
+      "label": "quauitl",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado."
+      },
+      "sense_id": "sense-cuahuitl",
+      "written": "quauitl",
+      "period": "historical",
+      "variant": "nci",
+      "variant_label": "Náhuatl histórico (Molina)",
+      "orthography": "Grafía citada de Molina por el diccionario secundario",
+      "variation_kind": "orthographic",
+      "url": "https://nahuatl.wired-humanities.org/content/cuahuitl-1",
+      "evidence": [
+        {
+          "source_id": "src-molina",
+          "via_source_id": "src-oregon",
+          "locator": "Molina (1571), part 2, f. 88r, col. 1. Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+          "status": "inherited"
+        }
+      ],
+      "notes": "Relación ortográfica; no se presenta como variante dialectal moderna."
+    },
+    {
+      "kind": "sense",
+      "id": "sense-xochicuahuitl",
+      "label": "árbol florido",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": true,
+        "note": "Descripción editorial original del proyecto, MIT.",
+        "basis": "Texto original del proyecto, licencia MIT."
+      },
+      "definition": "Árbol con flores; la identificación botánica depende de la fuente.",
+      "aliases": [
+        "árbol florido",
+        "flowering tree"
+      ],
+      "pos": "noun"
+    },
+    {
+      "kind": "form",
+      "id": "lex-xochicuahuitl",
+      "label": "xochicuahuitl",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado."
+      },
+      "sense_id": "sense-xochicuahuitl",
+      "written": "xochicuahuitl",
+      "period": "historical",
+      "variant": "nci",
+      "variant_label": "Náhuatl histórico (tradición escrita)",
+      "orthography": "Lema editorial heredado de Scriptorium; no transcripción diplomática",
+      "variation_kind": "historical",
+      "url": "https://nahuatl.wired-humanities.org/content/xochicuahuitl",
+      "citation": "Florentine Codex (1577), Book 11, f. 187v, referenced by the Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+      "evidence": [
+        {
+          "source_id": "src-florentino",
+          "via_source_id": "src-oregon",
+          "locator": "Florentine Codex (1577), Book 11, f. 187v, referenced by the Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+          "status": "inherited"
+        }
+      ],
+      "legacy_id": "lex-xochicuahuitl",
+      "notes": "Referencia heredada; falta cotejo filológico propio."
+    },
+    {
+      "kind": "sense",
+      "id": "sense-atl",
+      "label": "agua",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": true,
+        "note": "Descripción editorial original del proyecto, MIT.",
+        "basis": "Texto original del proyecto, licencia MIT."
+      },
+      "definition": "Agua, en la acepción seleccionada; otras acepciones requieren registros distintos.",
+      "aliases": [
+        "agua",
+        "water"
+      ],
+      "pos": "noun"
+    },
+    {
+      "kind": "form",
+      "id": "lex-atl",
+      "label": "atl",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado."
+      },
+      "sense_id": "sense-atl",
+      "written": "atl",
+      "period": "historical",
+      "variant": "nci",
+      "variant_label": "Náhuatl histórico (tradición escrita)",
+      "orthography": "Lema editorial heredado de Scriptorium; no transcripción diplomática",
+      "variation_kind": "historical",
+      "url": "https://nahuatl.wired-humanities.org/content/atl",
+      "citation": "Molina (1571), part 2, f. 8r; Carochi (1645), Lockhart edition (2001), p. 498. Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+      "evidence": [
+        {
+          "source_id": "src-molina",
+          "via_source_id": "src-oregon",
+          "locator": "Molina (1571), part 2, f. 8r; Carochi (1645), Lockhart edition (2001), p. 498. Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+          "status": "inherited"
+        }
+      ],
+      "legacy_id": "lex-atl",
+      "notes": "Referencia heredada; falta cotejo filológico propio."
+    },
+    {
+      "kind": "sense",
+      "id": "sense-calli",
+      "label": "casa",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": true,
+        "note": "Descripción editorial original del proyecto, MIT.",
+        "basis": "Texto original del proyecto, licencia MIT."
+      },
+      "definition": "Construcción o vivienda; la función predicativa se estudia en su contexto.",
+      "aliases": [
+        "casa",
+        "edificio",
+        "house",
+        "home"
+      ],
+      "pos": "noun"
+    },
+    {
+      "kind": "form",
+      "id": "lex-calli",
+      "label": "calli",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado."
+      },
+      "sense_id": "sense-calli",
+      "written": "calli",
+      "period": "historical",
+      "variant": "nci",
+      "variant_label": "Náhuatl histórico (tradición escrita)",
+      "orthography": "Lema editorial heredado de Scriptorium; no transcripción diplomática",
+      "variation_kind": "historical",
+      "url": "https://nahuatl.wired-humanities.org/content/calli",
+      "citation": "Lockhart, Nahuatl as Written (2001), p. 212. Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+      "evidence": [
+        {
+          "source_id": "src-lockhart",
+          "via_source_id": "src-oregon",
+          "locator": "Lockhart, Nahuatl as Written (2001), p. 212. Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+          "status": "inherited"
+        }
+      ],
+      "legacy_id": "lex-calli",
+      "notes": "Referencia heredada; falta cotejo filológico propio."
+    },
+    {
+      "kind": "sense",
+      "id": "sense-tonatiuh",
+      "label": "sol",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": true,
+        "note": "Descripción editorial original del proyecto, MIT.",
+        "basis": "Texto original del proyecto, licencia MIT."
+      },
+      "definition": "El Sol; no se infieren automáticamente otras acepciones del mismo término.",
+      "aliases": [
+        "sol",
+        "sun"
+      ],
+      "pos": "noun"
+    },
+    {
+      "kind": "form",
+      "id": "lex-tonatiuh",
+      "label": "tonatiuh",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado."
+      },
+      "sense_id": "sense-tonatiuh",
+      "written": "tonatiuh",
+      "period": "historical",
+      "variant": "nci",
+      "variant_label": "Náhuatl histórico (tradición escrita)",
+      "orthography": "Lema editorial heredado de Scriptorium; no transcripción diplomática",
+      "variation_kind": "historical",
+      "url": "https://nahuatl.wired-humanities.org/content/tonatiuh",
+      "citation": "Molina (1571), part 2, f. 149v, col. 1. Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+      "evidence": [
+        {
+          "source_id": "src-molina",
+          "via_source_id": "src-oregon",
+          "locator": "Molina (1571), part 2, f. 149v, col. 1. Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+          "status": "inherited"
+        }
+      ],
+      "legacy_id": "lex-tonatiuh",
+      "notes": "Referencia heredada; falta cotejo filológico propio."
+    },
+    {
+      "kind": "sense",
+      "id": "sense-metztli",
+      "label": "luna",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": true,
+        "note": "Descripción editorial original del proyecto, MIT.",
+        "basis": "Texto original del proyecto, licencia MIT."
+      },
+      "definition": "La Luna, separada de «mes» y de formas gráficamente semejantes.",
+      "aliases": [
+        "luna",
+        "moon"
+      ],
+      "pos": "noun"
+    },
+    {
+      "kind": "form",
+      "id": "lex-metztli",
+      "label": "metztli",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado."
+      },
+      "sense_id": "sense-metztli",
+      "written": "metztli",
+      "period": "historical",
+      "variant": "nci",
+      "variant_label": "Náhuatl histórico (tradición escrita)",
+      "orthography": "Lema editorial heredado de Scriptorium; no transcripción diplomática",
+      "variation_kind": "historical",
+      "url": "https://nahuatl.wired-humanities.org/content/metztli",
+      "citation": "Molina (1571), part 2, f. 55v, col. 1; Karttunen (1992), p. 144. Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+      "evidence": [
+        {
+          "source_id": "src-molina",
+          "via_source_id": "src-oregon",
+          "locator": "Molina (1571), part 2, f. 55v, col. 1; Karttunen (1992), p. 144. Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+          "status": "inherited"
+        }
+      ],
+      "legacy_id": "lex-metztli",
+      "notes": "Referencia heredada; falta cotejo filológico propio."
+    },
+    {
+      "kind": "sense",
+      "id": "sense-itta",
+      "label": "ver",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": true,
+        "note": "Descripción editorial original del proyecto, MIT.",
+        "basis": "Texto original del proyecto, licencia MIT."
+      },
+      "definition": "Percepción visual; la construcción verbal necesita marcas de persona y objeto.",
+      "aliases": [
+        "ver",
+        "veo",
+        "see"
+      ],
+      "pos": "verb"
+    },
+    {
+      "kind": "form",
+      "id": "lex-itta",
+      "label": "itta",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado."
+      },
+      "sense_id": "sense-itta",
+      "written": "itta",
+      "period": "historical",
+      "variant": "nci",
+      "variant_label": "Náhuatl histórico (tradición escrita)",
+      "orthography": "Lema editorial heredado de Scriptorium; no transcripción diplomática",
+      "variation_kind": "historical",
+      "url": "https://nahuatl.wired-humanities.org/content/itta",
+      "citation": "Molina (1571), part 2, f. 43r, col. 2; Lockhart (2001), p. 221. Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+      "evidence": [
+        {
+          "source_id": "src-molina",
+          "via_source_id": "src-oregon",
+          "locator": "Molina (1571), part 2, f. 43r, col. 2; Lockhart (2001), p. 221. Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+          "status": "inherited"
+        }
+      ],
+      "legacy_id": "lex-itta",
+      "notes": "Referencia heredada; falta cotejo filológico propio."
+    },
+    {
+      "kind": "sense",
+      "id": "sense-ihuan",
+      "label": "y / con",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": true,
+        "note": "Descripción editorial original del proyecto, MIT.",
+        "basis": "Texto original del proyecto, licencia MIT."
+      },
+      "definition": "Coordinación o compañía según la construcción.",
+      "aliases": [
+        "y",
+        "con",
+        "and",
+        "with"
+      ],
+      "pos": "other"
+    },
+    {
+      "kind": "form",
+      "id": "lex-ihuan",
+      "label": "ihuan",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado."
+      },
+      "sense_id": "sense-ihuan",
+      "written": "ihuan",
+      "period": "historical",
+      "variant": "nci",
+      "variant_label": "Náhuatl histórico (tradición escrita)",
+      "orthography": "Lema editorial heredado de Scriptorium; no transcripción diplomática",
+      "variation_kind": "historical",
+      "url": "https://nahuatl.wired-humanities.org/content/ihuan",
+      "citation": "Molina (1571), part 2, f. 43v, col. 1. Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+      "evidence": [
+        {
+          "source_id": "src-molina",
+          "via_source_id": "src-oregon",
+          "locator": "Molina (1571), part 2, f. 43v, col. 1. Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+          "status": "inherited"
+        }
+      ],
+      "legacy_id": "lex-ihuan",
+      "notes": "Referencia heredada; falta cotejo filológico propio."
+    },
+    {
+      "kind": "form",
+      "id": "form-iuan",
+      "label": "iuan",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado."
+      },
+      "sense_id": "sense-ihuan",
+      "written": "iuan",
+      "period": "historical",
+      "variant": "nci",
+      "variant_label": "Náhuatl histórico (Molina)",
+      "orthography": "Grafía citada de Molina por el diccionario secundario",
+      "variation_kind": "orthographic",
+      "url": "https://nahuatl.wired-humanities.org/content/ihuan",
+      "evidence": [
+        {
+          "source_id": "src-molina",
+          "via_source_id": "src-oregon",
+          "locator": "Molina (1571), part 2, f. 43v, col. 1. Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+          "status": "inherited"
+        }
+      ],
+      "notes": "Relación ortográfica; no se presenta como variante dialectal moderna."
+    },
+    {
+      "kind": "sense",
+      "id": "sense-madera",
+      "label": "madera",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado."
+      },
+      "definition": "Material leñoso, separado de árbol vivo.",
+      "aliases": [
+        "madera",
+        "wood"
+      ],
+      "pos": "noun"
+    },
+    {
+      "kind": "form",
+      "id": "form-madera",
+      "label": "cuahuitl",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado."
+      },
+      "sense_id": "sense-madera",
+      "written": "cuahuitl",
+      "period": "historical",
+      "variant": "nci",
+      "variant_label": "Náhuatl histórico",
+      "orthography": "Lema editorial heredado",
+      "variation_kind": "historical",
+      "url": "https://nahuatl.wired-humanities.org/content/cuahuitl-1",
+      "evidence": [
+        {
+          "source_id": "src-molina",
+          "via_source_id": "src-oregon",
+          "locator": "Molina (1571), part 2, f. 88r, col. 1. Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+          "status": "inherited"
+        }
+      ],
+      "notes": "Acepción separada; revisar en la entrada y su contexto."
+    },
+    {
+      "kind": "sense",
+      "id": "sense-mes",
+      "label": "mes",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado."
+      },
+      "definition": "Unidad temporal, separada del cuerpo celeste Luna.",
+      "aliases": [
+        "mes",
+        "month"
+      ],
+      "pos": "noun"
+    },
+    {
+      "kind": "form",
+      "id": "form-mes",
+      "label": "metztli",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado."
+      },
+      "sense_id": "sense-mes",
+      "written": "metztli",
+      "period": "historical",
+      "variant": "nci",
+      "variant_label": "Náhuatl histórico",
+      "orthography": "Lema editorial heredado",
+      "variation_kind": "historical",
+      "url": "https://nahuatl.wired-humanities.org/content/metztli",
+      "evidence": [
+        {
+          "source_id": "src-molina",
+          "via_source_id": "src-oregon",
+          "locator": "Molina (1571), part 2, f. 55v, col. 1; Karttunen (1992), p. 144. Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+          "status": "inherited"
+        }
+      ],
+      "notes": "Acepción separada; revisar en la entrada y su contexto."
+    },
+    {
+      "kind": "note",
+      "id": "grammar-niquitta",
+      "label": "niquitta · construcción verbal",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado."
+      },
+      "description": "La forma verbal sirve de apoyo a la regla limitada «veo + objeto singular». Una oración nueva sigue siendo una composición por revisar.",
+      "url": "https://nahuatl.wired-humanities.org/content/itta",
+      "evidence": [
+        {
+          "source_id": "src-molina",
+          "via_source_id": "src-oregon",
+          "locator": "Molina (1571), part 2, f. 43r, col. 2; Lockhart, Nahuatl as Written (2001), p. 221. Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+          "status": "inherited"
+        }
+      ]
+    },
+    {
+      "kind": "text",
+      "id": "passage-water",
+      "label": "El agua y el corazón del cielo",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado."
+      },
+      "nah": "in atl ca yuhquima yollo yn ilhuicatl",
+      "es": "El agua es como el corazón del cielo.",
+      "translation_en": "",
+      "text_status": "transcribed",
+      "sense_ids": [
+        "sense-atl"
+      ],
+      "period": "historical",
+      "variant": "nci",
+      "variant_label": "Náhuatl histórico",
+      "orthography": "Transcripción heredada; no normalizada por el proyecto",
+      "url": "https://nahuatl.wired-humanities.org/content/atl",
+      "evidence": [
+        {
+          "source_id": "src-bautista",
+          "via_source_id": "src-oregon",
+          "locator": "Anales de Juan Bautista, ca. 1582; Luis Reyes García edition (2001), pp. 170–171, cited in the Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+          "status": "inherited"
+        }
+      ],
+      "notes": "Cita o referencia heredada; edición y alineación pendientes de cotejo. No convertir una referencia de folio sin texto en un par de traducción."
+    },
+    {
+      "kind": "text",
+      "id": "passage-moon",
+      "label": "La desaparición de la Luna",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado."
+      },
+      "nah": "ommic in metzli",
+      "es": "",
+      "translation_en": "The moon has died.",
+      "text_status": "transcribed",
+      "sense_ids": [
+        "sense-metztli"
+      ],
+      "period": "historical",
+      "variant": "nci",
+      "variant_label": "Náhuatl histórico",
+      "orthography": "Transcripción heredada; no normalizada por el proyecto",
+      "url": "https://nahuatl.wired-humanities.org/content/metztli",
+      "evidence": [
+        {
+          "source_id": "src-florentino",
+          "via_source_id": "src-oregon",
+          "locator": "Florentine Codex, Book 7; Anderson and Dibble edition (1961), p. 3, quoted in the Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+          "status": "inherited"
+        }
+      ],
+      "notes": "Cita o referencia heredada; edición y alineación pendientes de cotejo. No convertir una referencia de folio sin texto en un par de traducción."
+    },
+    {
+      "kind": "text",
+      "id": "passage-tree",
+      "label": "Árbol florido · libro 11, folio 187v",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado."
+      },
+      "nah": "",
+      "es": "",
+      "translation_en": "",
+      "text_status": "pointer",
+      "sense_ids": [
+        "sense-xochicuahuitl"
+      ],
+      "period": "historical",
+      "variant": "nci",
+      "variant_label": "Náhuatl histórico",
+      "orthography": "Transcripción heredada; no normalizada por el proyecto",
+      "url": "https://florentinecodex.getty.edu/en/book/11/folio/187v",
+      "evidence": [
+        {
+          "source_id": "src-florentino",
+          "via_source_id": "src-oregon",
+          "locator": "Florentine Codex (1577), Book 11, f. 187v. Digital edition: Getty Research Institute (2023). Locator documented in the Oregon xochicuahuitl entry.",
+          "status": "inherited"
+        }
+      ],
+      "notes": "Cita o referencia heredada; edición y alineación pendientes de cotejo. No convertir una referencia de folio sin texto en un par de traducción."
+    },
+    {
+      "kind": "glyph",
+      "id": "glyph-xochitl",
+      "label": "Propuesta relacionada: flor",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado."
+      },
+      "sense_id": "sense-xochitl",
+      "reading": "xochitl",
+      "glyph_status": "proposed",
+      "context": "Elemento floral en el topónimo Xochiacan.",
+      "url": "https://aztecglyphs.wired-humanities.org/content/xochitl-mdz10r",
+      "evidence": [
+        {
+          "source_id": "src-mendoza",
+          "via_source_id": "src-vla",
+          "locator": "Codex Mendoza, f. 10r. Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed.",
+          "status": "inherited"
+        }
+      ],
+      "notes": "Propuesta heredada por catálogo secundario; no es escritura de una oración ni equivalencia para todas las variantes. Imagen disponible en la ficha externa, no incluida en el corpus."
+    },
+    {
+      "kind": "glyph",
+      "id": "glyph-atl",
+      "label": "Propuesta relacionada: agua",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado."
+      },
+      "sense_id": "sense-atl",
+      "reading": "atl",
+      "glyph_status": "proposed",
+      "context": "Elemento de agua en Ayotochco.",
+      "url": "https://aztecglyphs.wired-humanities.org/content/atl-mdz51r-0",
+      "evidence": [
+        {
+          "source_id": "src-mendoza",
+          "via_source_id": "src-vla",
+          "locator": "Codex Mendoza, f. 51r. Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed.",
+          "status": "inherited"
+        }
+      ],
+      "notes": "Propuesta heredada por catálogo secundario; no es escritura de una oración ni equivalencia para todas las variantes. Imagen disponible en la ficha externa, no incluida en el corpus."
+    },
+    {
+      "kind": "glyph",
+      "id": "glyph-calli",
+      "label": "Propuesta relacionada: casa",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado."
+      },
+      "sense_id": "sense-calli",
+      "reading": "calli",
+      "glyph_status": "proposed",
+      "context": "Elemento de edificio en Apancalecan.",
+      "url": "https://aztecglyphs.wired-humanities.org/content/calli-mdz13r",
+      "evidence": [
+        {
+          "source_id": "src-mendoza",
+          "via_source_id": "src-vla",
+          "locator": "Codex Mendoza, f. 13r. Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed.",
+          "status": "inherited"
+        }
+      ],
+      "notes": "Propuesta heredada por catálogo secundario; no es escritura de una oración ni equivalencia para todas las variantes. Imagen disponible en la ficha externa, no incluida en el corpus."
+    },
+    {
+      "kind": "glyph",
+      "id": "glyph-xochicuahuitl",
+      "label": "Propuesta relacionada: árbol florido",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado."
+      },
+      "sense_id": "sense-xochicuahuitl",
+      "reading": "xochicuahuitl",
+      "glyph_status": "proposed",
+      "context": "Árbol en Xochicuauhtitlan; no establece una identificación botánica universal.",
+      "url": "https://aztecglyphs.wired-humanities.org/content/xochicuahuitl-mdz50r",
+      "evidence": [
+        {
+          "source_id": "src-mendoza",
+          "via_source_id": "src-vla",
+          "locator": "Codex Mendoza, f. 50r. Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed.",
+          "status": "inherited"
+        }
+      ],
+      "notes": "Propuesta heredada por catálogo secundario; no es escritura de una oración ni equivalencia para todas las variantes. Imagen disponible en la ficha externa, no incluida en el corpus."
+    },
+    {
+      "kind": "source",
+      "id": "src-arenas",
+      "label": "Vocabulario manual de las lenguas castellana y mexicana",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado."
+      },
+      "source_type": "primary",
+      "url": "https://tlachia.iib.unam.mx/xolotl/X.020",
+      "institution": "Referencia de obra primaria, consultada a través de Tlachia / GDN",
+      "author": "Pedro de Arenas",
+      "date": "1611",
+      "language": "es / náhuatl",
+      "description": "Los ejemplos se consultaron en Tlachia; el impreso original no se cotejó aquí."
+    },
+    {
+      "kind": "source",
+      "id": "src-xolotl",
+      "label": "Códice Xólotl",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado."
+      },
+      "source_type": "primary",
+      "url": "https://tlachia.iib.unam.mx/xolotl/X.020",
+      "institution": "Fuente primaria, consultada a través de Tlachia · UNAM",
+      "author": "Autores nahuas; manuscrito pictográfico",
+      "date": "siglo XVI",
+      "language": "pictografía",
+      "description": "Referencia a la lámina X.020 y sus elementos analizados por Tlachia."
+    },
+    {
+      "kind": "sense",
+      "id": "sense-tetl",
+      "label": "piedra",
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado."
+      },
+      "definition": "Material pétreo, en la acepción indicada por la fuente.",
+      "aliases": [
+        "piedra",
+        "stone"
+      ],
+      "pos": "noun"
+    },
+    {
+      "kind": "form",
+      "id": "form-tetl",
+      "label": "tetl",
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado."
+      },
+      "sense_id": "sense-tetl",
+      "written": "tetl",
+      "period": "historical",
+      "variant": "nci",
+      "variant_label": "Náhuatl histórico (Arenas)",
+      "orthography": "Grafía mostrada por Tlachia / GDN",
+      "variation_kind": "historical",
+      "verification_note": "Ficha consultada el 2026-09-27; cotejo del impreso pendiente.",
+      "evidence": [
+        {
+          "source_id": "src-arenas",
+          "via_source_id": "src-tlachia",
+          "locator": "Palabras que comúnmente se suelen decir nombrando diversas cosas: 2, 132; entrada tetl en X.020",
+          "status": "catalog_checked"
+        }
+      ]
+    },
+    {
+      "kind": "glyph",
+      "id": "glyph-tetl",
+      "label": "Propuesta relacionada: piedra",
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado."
+      },
+      "sense_id": "sense-tetl",
+      "reading": "tetl (elemento); te / nam (valores indicados en la ficha)",
+      "glyph_status": "proposed",
+      "context": "Elemento tetl dentro de tenamitec, X.020.A.01. La lectura del compuesto se conserva separada del nombre del elemento.",
+      "url": "https://tlachia.iib.unam.mx/elementos/tetl",
+      "evidence": [
+        {
+          "source_id": "src-xolotl",
+          "via_source_id": "src-tlachia",
+          "locator": "X.020.A.01; elemento 04_04_01",
+          "status": "catalog_checked"
+        }
+      ],
+      "notes": "Relación propuesta en el corpus a partir del análisis de Tlachia, sin cotejo propio del manuscrito."
+    },
+    {
+      "id": "src-apuntes-2021",
+      "kind": "source",
+      "label": "Apuntes de los sucesos de la nación mexicana: segunda parte",
+      "source_type": "edition",
+      "url": "https://nahuatl.historicas.unam.mx/index.php/ecn/article/view/78073",
+      "institution": "UNAM · Instituto de Investigaciones Históricas",
+      "author": "Librado Silva Galeana; Ignacio Silva Cruz",
+      "date": "2021",
+      "language": "es / náhuatl",
+      "description": "Edición y traducción al español de anales nahuas. Estudios de Cultura Náhuatl 62, pp. 333–358. Se incorpora la ficha y el enlace; el texto completo no está transcrito aquí.",
+      "verification": "catalog_checked",
+      "checked_at": "2026-09-27",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "La página del artículo declara CC BY-NC-ND 4.0; no se presupone permiso de entrenamiento."
+      }
+    },
+    {
+      "id": "src-herramientas-2023",
+      "kind": "source",
+      "label": "Herramientas digitales para estudiar la cultura náhuatl",
+      "source_type": "research",
+      "url": "https://historicas.unam.mx/index.php/comunicacion-publica/debates-y-herramientas/herramientas-digitales-para-estudiar-la-cultura-nahuatl",
+      "institution": "UNAM · Instituto de Investigaciones Históricas",
+      "author": "Marc Thouvenot; colaboración de Ónix Acevedo Frómeta",
+      "date": "2023",
+      "language": "es / náhuatl",
+      "description": "Guía metodológica de recursos documentales digitales. Primera edición UNAM, ISBN 978-607-30-7256-4.",
+      "verification": "catalog_checked",
+      "checked_at": "2026-09-27",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Ficha bibliográfica y enlace; consultar los derechos del libro."
+      }
+    }
+  ]
+}

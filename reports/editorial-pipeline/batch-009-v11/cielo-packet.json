@@ -1,0 +1,156 @@
+{
+  "annotation_example_counts": {
+    "sense-ihuan": 1,
+    "sense-metztli": 1,
+    "sense-tonatiuh": 4
+  },
+  "examples": [
+    {
+      "annotations": [
+        {
+          "end": 11,
+          "note": "El registro traduce Tonatiuh como Sol.",
+          "quote": "Tonatiuh",
+          "sense_id": "sense-tonatiuh",
+          "start": 3
+        },
+        {
+          "end": 17,
+          "note": "En este fragmento enlaza Sol y Luna; el español utiliza «y».",
+          "quote": "ihuan",
+          "sense_id": "sense-ihuan",
+          "start": 12
+        },
+        {
+          "end": 28,
+          "note": "Aquí el sentido es Luna. La acepción mes se mantiene en otra ficha.",
+          "quote": "Metztli",
+          "sense_id": "sense-metztli",
+          "start": 21
+        }
+      ],
+      "archive_id": "axolotl-11087",
+      "document": "La tinta negra y roja (antología de poesía náhuatl)",
+      "es": "al Sol y a la Luna.",
+      "exercise": {
+        "answer": 0,
+        "blank": "",
+        "explanation": "La traducción dice «al Sol y a la Luna». Aquí metztli corresponde a luna.",
+        "kind": "meaning",
+        "options": [
+          "Sol y luna",
+          "Agua y piedra",
+          "Casa y árbol"
+        ],
+        "question": "¿Qué dos referentes aparecen?"
+      },
+      "iso": "nci",
+      "locator": "Axolotl, registro CSV 11087; página de la edición primaria pendiente",
+      "nah": "in Tonatiuh ihuan in Metztli.",
+      "source_hash": "effbf81987d7a97c126b4a8330d625aa2540026428a4b34a6bc51bbb7c664c6a",
+      "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv"
+    },
+    {
+      "annotations": [
+        {
+          "end": 11,
+          "note": "Reconoce Sol dentro de la expresión completa; no presupongas que cada palabra española tiene una palabra náhuatl separada.",
+          "quote": "tonatiuh",
+          "sense_id": "sense-tonatiuh",
+          "start": 3
+        }
+      ],
+      "archive_id": "axolotl-00455",
+      "document": "La tinta negra y roja (antología de poesía náhuatl)",
+      "es": "se dirigieron hacia el rumbo del rostro del Sol.",
+      "exercise": {
+        "answer": 1,
+        "blank": "tonatiuh",
+        "explanation": "El registro contiene tonatiuh. El resto de la expresión se conserva sin análisis automático.",
+        "kind": "cloze",
+        "options": [
+          "metztli",
+          "tonatiuh",
+          "tlalli"
+        ],
+        "question": "Completa con la forma exacta de la fuente: in ___ ixcopa itztiaque,"
+      },
+      "iso": "nci",
+      "locator": "Axolotl, registro CSV 455; página de la edición primaria pendiente",
+      "nah": "in tonatiuh ixcopa itztiaque,",
+      "source_hash": "795e3e07e6408d11c748272f63a260d09db333debb29b32626691ffba71412c3",
+      "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv"
+    },
+    {
+      "annotations": [
+        {
+          "end": 17,
+          "note": "Aquí tonatiuh aparece en el contexto de un relato cosmológico, según la traducción del registro.",
+          "quote": "tonatiuh",
+          "sense_id": "sense-tonatiuh",
+          "start": 9
+        }
+      ],
+      "archive_id": "axolotl-05922",
+      "document": "La tinta negra y roja (antología de poesía náhuatl)",
+      "es": "Se cimentó luego el Segundo Sol.Su signo era 4-Jaguar.",
+      "exercise": {
+        "answer": 2,
+        "blank": "",
+        "explanation": "El registro español dice «Segundo Sol» y añade su signo. La pregunta comprueba la comprensión de este fragmento.",
+        "kind": "meaning",
+        "options": [
+          "Al Primero",
+          "Al Quinto",
+          "Al Segundo"
+        ],
+        "question": "¿A qué Sol se refiere la traducción?"
+      },
+      "iso": "nci",
+      "locator": "Axolotl, registro CSV 5922; página de la edición primaria pendiente",
+      "nah": "Inic ome tonatiuh onmanca nahui ocelotl in itonal catca.",
+      "source_hash": "7589adeaa8ec0b06df15bbe3e96a916884a34955ad5d7555b7c7d1dc5215ddf4",
+      "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv"
+    },
+    {
+      "annotations": [
+        {
+          "end": 36,
+          "note": "La traducción del título conserva Sol. Reconoce la palabra aunque el contexto sea distinto.",
+          "quote": "Tonatiuh",
+          "sense_id": "sense-tonatiuh",
+          "start": 28
+        }
+      ],
+      "archive_id": "axolotl-11885",
+      "document": "La tinta negra y roja (antología de poesía náhuatl)",
+      "es": "Cómo Servían al Sol a diversas horas del día y de la noche",
+      "exercise": {
+        "answer": 0,
+        "blank": "",
+        "explanation": "La traducción presenta cómo servían al Sol a diversas horas del día y de la noche.",
+        "kind": "meaning",
+        "options": [
+          "De servir al Sol en distintos momentos",
+          "De construir una casa",
+          "De buscar piedras"
+        ],
+        "question": "¿De qué trata este título?"
+      },
+      "iso": "nci",
+      "locator": "Axolotl, registro CSV 11885; página de la edición primaria pendiente",
+      "nah": "In quenin tlayecoltiloya in Tonatiuh in cemilhuitl, in ceyohual",
+      "source_hash": "6f43aac6b55ba5f70cdba21a78ad94f9309fef9386f848e5d2138f1478e44ec9",
+      "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv"
+    }
+  ],
+  "id": "cielo",
+  "objective": "Reconocer tonatiuh en distintos contextos y compararlo con Metztli en el fragmento que reúne ambos.",
+  "review_status": "editorial_draft",
+  "target_sense_ids": [
+    "sense-tonatiuh",
+    "sense-metztli",
+    "sense-ihuan"
+  ],
+  "title": "El Sol y un encuentro con la Luna"
+}

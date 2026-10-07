@@ -1,0 +1,8 @@
+test_complete_archive_and_pagination (test_research.ResearchTests.test_complete_archive_and_pagination) ... ok
+test_real_tasks_and_correction_keep_original_variant (test_research.ResearchTests.test_real_tasks_and_correction_keep_original_variant) ... ok
+test_search_and_context_preserve_provenance (test_research.ResearchTests.test_search_and_context_preserve_provenance) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 2.459s
+
+OK

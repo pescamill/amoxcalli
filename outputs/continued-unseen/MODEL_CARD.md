@@ -1,0 +1,9 @@
+# Adaptador local experimental: continuación sin repetir pares
+
+Qwen3-0.6B + LoRA, 1.146.880 parámetros entrenables. Pesos iniciales del piloto de 400 pasos BF16. Se heredaron el orden y cursor de los datos del piloto y se entrenaron 250 pasos adicionales en CPU float32 con optimizador nuevo: el cursor llega a 650 pares distintos de 1.759 admisibles. El checkpoint `run/last` permite seguir la misma ejecución con su optimizador, semilla y configuración guardados; `run/best` contiene los mejores pesos por NLL de validación.
+
+Validación: 128 pares fijos, NLL inicial 3,5783 y mejor 3,5302. Generación: en 12 frases de validación chrF++ pasó de 22,58 a 27,96; en 20 frases de prueba exploratorias de 16,03 a 20,34, con 1 salida truncada en lugar de 2 y repetición media de trigramas 0,091. El control de recuperación de pasaje cercano alcanzó 27,20 chrF++ en los 18 ejemplos de prueba sin alerta de solapamiento. Estas métricas **no certifican traducción correcta**; persisten repeticiones, pérdida de contenido y posibles errores en nombres/fechas. Las 20 frases ya habían sido inspeccionadas en pruebas anteriores: evaluación exploratoria, no prueba ciega.
+
+Usa `python -m nahuatl_local.serve --adapter outputs/continued-unseen/run/best` para experimentar y `python -m nahuatl_local.autotrain --output outputs/continued-unseen --budget-minutes 60` para continuar localmente. La base y corpus se descargan por primera vez con revisiones fijadas; después no hay dependencia de API. Entrada entrenada: español. Inglés, fidelidad histórica y referencias por folio requieren trabajo posterior. El formulario JEV es una exportación opcional; esta ejecución no usó ni entrenó JEV.
+
+Base Apache-2.0; código original MIT. Los derechos de cada texto/edición y de pesos derivados requieren revisión antes de redistribuir con licencia. Consulta `THIRD_PARTY_NOTICES.md`, `docs/FUENTES.md` y `reports/RESULTADOS_2026-09-23.md`.

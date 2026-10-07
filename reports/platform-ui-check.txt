@@ -1,0 +1,5 @@
+PASS: accent-insensitive search, separate senses and explicit absent glyph/variant
+PASS: one Voces session submits a sourced lexical proposal with independent permissions
+PASS: pending contribution remains outside corpus and can be withdrawn
+PASS: inherited composition rules and local human-review export without a model
+PASS: sources and texts render with no application JavaScript errors

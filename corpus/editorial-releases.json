@@ -1,0 +1,12 @@
+{
+  "releases": [
+    {
+      "bundle": "editorial-batch-007-v9.json",
+      "id": "batch-007-v9",
+      "reason": "Transcripciones históricas y apoyos contextuales aceptados con alcance explícito; sin certificación lingüística ni entrenamiento.",
+      "reviewer": "Publicación de lote editorial",
+      "sha256": "a4d19f31da76c471a0ad4a6f53aa1693b0516680fe9338a83ffd0561cd072dbf"
+    }
+  ],
+  "schema_version": 1
+}

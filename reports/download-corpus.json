@@ -1,0 +1,14 @@
+[
+  {
+    "path": "data/raw/axolotl.csv",
+    "sha256": "ed8e85f560e78c43385f91ac99d08dee071183749bc1f1aa1b88f1b3a2530878",
+    "url": "https://raw.githubusercontent.com/ElotlMX/py-elotl/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv",
+    "bytes": 5460578
+  },
+  {
+    "path": "data/raw/UPSTREAM-LICENSE",
+    "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5",
+    "url": "https://raw.githubusercontent.com/ElotlMX/py-elotl/157f34300f4ca92c3d75b74ec14142916d75c30b/LICENSE",
+    "bytes": 16725
+  }
+]

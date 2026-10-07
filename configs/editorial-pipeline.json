@@ -1,0 +1,16 @@
+{
+  "concordance_limit": 100,
+  "gdn_prefixes": [
+    "yn",
+    "in",
+    "au",
+    "ye",
+    "yh",
+    "on",
+    "xi",
+    "ni"
+  ],
+  "lexical_limit": 50,
+  "per_prefix": 500,
+  "schema_version": 1
+}

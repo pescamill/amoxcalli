@@ -1,0 +1,786 @@
+{
+  "id": "lectura-clasica-v1",
+  "lessons": [
+    {
+      "cover_glyph": "glyph-xochitl",
+      "examples": [
+        {
+          "annotations": [
+            {
+              "glyph_id": "glyph-related-itta-mh716r",
+              "note": "El registro traduce NIQUITTA como «contemplo». Se consulta itta como ayuda editorial; el análisis de esta forma sigue pendiente. La imagen de Tlachia es una comparación de significado, no la escritura de NIQUITTA ni de itta.",
+              "quote": "NIQUITTA",
+              "relation": "observed_form",
+              "sense_id": "sense-itta"
+            },
+            {
+              "glyph_id": "glyph-xochitl",
+              "note": "La traducción del registro permite reconocer la flor en esta frase.",
+              "quote": "XOCHITL",
+              "relation": "full_word",
+              "sense_id": "sense-xochitl"
+            }
+          ],
+          "archive_id": "axolotl-05338",
+          "context": "El registro contiene un título de la antología. Un título también sirve para comenzar a reconocer palabras.",
+          "exercise": {
+            "answer": 1,
+            "blank": "",
+            "explanation": "La traducción de este registro dice «CONTEMPLO UNA FLOR». Relaciona XOCHITL con la entrada flor.",
+            "kind": "meaning",
+            "options": [
+              "Una casa",
+              "Una flor",
+              "La luna"
+            ],
+            "question": "¿Qué se contempla en el título?"
+          },
+          "source_hash": "f1c36531ccb1fe098d6d746850f275e68184c6958aec66fc7257e701850aa6a0"
+        },
+        {
+          "annotations": [
+            {
+              "glyph_id": "glyph-xochitl",
+              "note": "Aquí aparece junto a cuicatl. Conserva el contexto poético; una definición aislada no explica todo el título.",
+              "quote": "xochitl",
+              "relation": "full_word",
+              "sense_id": "sense-xochitl"
+            },
+            {
+              "note": "Molina registra cuicatl como canto o canción. En este título aparece junto a xochitl; el español presenta el conjunto como poesía. La consulta léxica no reemplaza ese contexto.",
+              "quote": "cuicatl",
+              "relation": "full_word",
+              "sense_id": "sense-cuicatl"
+            }
+          ],
+          "archive_id": "axolotl-06231",
+          "context": "Un título donde aparecen flor y canto. El título español los presenta dentro del tema de la poesía.",
+          "exercise": {
+            "answer": 2,
+            "blank": "xochitl",
+            "explanation": "El texto original contiene xochitl. El ejercicio recupera esa forma de la fuente.",
+            "kind": "cloze",
+            "options": [
+              "metztli",
+              "calli",
+              "xochitl"
+            ],
+            "question": "Completa con la palabra que aparece en la fuente: Tenonotzaliztli itechpa in ___, in cuicatl"
+          },
+          "source_hash": "2a489a884db3830fb815a27b3541d5c7fb4b20d8fe60abf6690242185f86cb84"
+        },
+        {
+          "annotations": [
+            {
+              "glyph_id": "glyph-cacahuaxochitl-mh885v",
+              "note": "Consulta la entrada de Cacahuaxochitl completa. La referencia visual procede de un nombre personal en otro documento, no de este poema. El nombre tradicional «flor de cacao» no acredita una identificación botánica.",
+              "quote": "Cacahuaxochitl",
+              "relation": "full_word",
+              "sense_id": "sense-cacahuaxochitl"
+            }
+          ],
+          "archive_id": "axolotl-10445",
+          "context": "Un nombre floral conservado como palabra completa. La traducción heredada dice «Las flores de cacao»; ese nombre no basta para identificar la especie de la planta ni para deducir el número gramatical.",
+          "exercise": {
+            "answer": 0,
+            "blank": "",
+            "explanation": "La fuente escribe Cacahuaxochitl. Se consulta su entrada propia: no se reemplaza el nombre completo por xochitl, aunque comparta el tema de las flores.",
+            "kind": "meaning",
+            "options": [
+              "Cacahuaxochitl",
+              "xochitl",
+              "cuicatl"
+            ],
+            "question": "¿Qué palabra completa conserva este registro?"
+          },
+          "source_hash": "3a0a95bde0f3de104ec7524820cc393c71a7e7903de3dc5b30b10a2e76e07a11"
+        },
+        {
+          "annotations": [
+            {
+              "glyph_id": "glyph-xochitl",
+              "note": "La fuente escribe xochitli en este fragmento. Se conserva esa grafía; el enlace al lema xochitl es una ayuda editorial pendiente de cotejo.",
+              "quote": "xochitli",
+              "relation": "source_variant",
+              "sense_id": "sense-xochitl"
+            },
+            {
+              "note": "Aquí el registro traduce «cantos». La forma cuicatl se conserva intacta; no se infiere el número gramatical a partir de la traducción española.",
+              "quote": "cuicatl",
+              "relation": "full_word",
+              "sense_id": "sense-cuicatl"
+            }
+          ],
+          "archive_id": "axolotl-13493",
+          "context": "Reconoce flor y canto y presta atención a la grafía exacta: este fragmento escribe xochitli.",
+          "exercise": {
+            "answer": 2,
+            "blank": "xochitli",
+            "explanation": "El pasaje escribe xochitli. No se corrige automáticamente a xochitl: la relación con esa entrada sigue siendo una ayuda editorial pendiente de cotejo.",
+            "kind": "cloze",
+            "options": [
+              "xochitl",
+              "cuicatl",
+              "xochitli"
+            ],
+            "question": "¿Qué forma escribe este pasaje para las flores? Conserva su grafía exacta."
+          },
+          "source_hash": "912969456978af58aaac6779b3146967239d44e28332e82a7816d6205ebd5b22"
+        }
+      ],
+      "id": "flor",
+      "minutes": 7,
+      "objective": "Reconocer xochitl y cuicatl, distinguir una palabra completa y conservar la grafía del pasaje.",
+      "sense_ids": [
+        "sense-xochitl",
+        "sense-itta",
+        "sense-cuicatl",
+        "sense-cacahuaxochitl"
+      ],
+      "title": "Reconocer una flor",
+      "version": 2
+    },
+    {
+      "cover_glyph": "glyph-tonatiuh-mdz34r",
+      "examples": [
+        {
+          "annotations": [
+            {
+              "note": "El registro traduce Tonatiuh como Sol.",
+              "quote": "Tonatiuh",
+              "sense_id": "sense-tonatiuh"
+            },
+            {
+              "note": "En este fragmento enlaza Sol y Luna; el español utiliza «y».",
+              "quote": "ihuan",
+              "sense_id": "sense-ihuan"
+            },
+            {
+              "note": "Aquí el sentido es Luna. La acepción mes se mantiene en otra ficha.",
+              "quote": "Metztli",
+              "sense_id": "sense-metztli"
+            }
+          ],
+          "archive_id": "axolotl-11087",
+          "context": "Un fragmento que enumera dos referentes del cielo.",
+          "exercise": {
+            "answer": 0,
+            "blank": "",
+            "explanation": "La traducción dice «al Sol y a la Luna». Aquí metztli corresponde a luna.",
+            "kind": "meaning",
+            "options": [
+              "Sol y luna",
+              "Agua y piedra",
+              "Casa y árbol"
+            ],
+            "question": "¿Qué dos referentes aparecen?"
+          },
+          "source_hash": "effbf81987d7a97c126b4a8330d625aa2540026428a4b34a6bc51bbb7c664c6a"
+        },
+        {
+          "annotations": [
+            {
+              "note": "Reconoce Sol dentro de la expresión completa; no presupongas que cada palabra española tiene una palabra náhuatl separada.",
+              "quote": "tonatiuh",
+              "sense_id": "sense-tonatiuh"
+            }
+          ],
+          "archive_id": "axolotl-00455",
+          "context": "La traducción conserva una expresión de orientación con el rostro del Sol. Lee el fragmento completo.",
+          "exercise": {
+            "answer": 1,
+            "blank": "tonatiuh",
+            "explanation": "El registro contiene tonatiuh. El resto de la expresión se conserva sin análisis automático.",
+            "kind": "cloze",
+            "options": [
+              "metztli",
+              "tonatiuh",
+              "tlalli"
+            ],
+            "question": "Completa con la forma exacta de la fuente: in ___ ixcopa itztiaque,"
+          },
+          "source_hash": "795e3e07e6408d11c748272f63a260d09db333debb29b32626691ffba71412c3"
+        },
+        {
+          "annotations": [
+            {
+              "note": "Aquí tonatiuh aparece en el contexto de un relato cosmológico, según la traducción del registro.",
+              "quote": "tonatiuh",
+              "sense_id": "sense-tonatiuh"
+            }
+          ],
+          "archive_id": "axolotl-05922",
+          "context": "El fragmento pertenece a un relato sobre los soles. «Segundo Sol» es una referencia de ese relato.",
+          "exercise": {
+            "answer": 2,
+            "blank": "",
+            "explanation": "El registro español dice «Segundo Sol» y añade su signo. La pregunta comprueba la comprensión de este fragmento.",
+            "kind": "meaning",
+            "options": [
+              "Al Primero",
+              "Al Quinto",
+              "Al Segundo"
+            ],
+            "question": "¿A qué Sol se refiere la traducción?"
+          },
+          "source_hash": "7589adeaa8ec0b06df15bbe3e96a916884a34955ad5d7555b7c7d1dc5215ddf4"
+        },
+        {
+          "annotations": [
+            {
+              "note": "La traducción del título conserva Sol. Reconoce la palabra aunque el contexto sea distinto.",
+              "quote": "Tonatiuh",
+              "sense_id": "sense-tonatiuh"
+            }
+          ],
+          "archive_id": "axolotl-11885",
+          "context": "Ejemplo nuevo: un título sobre la atención al Sol durante el día y la noche.",
+          "exercise": {
+            "answer": 0,
+            "blank": "",
+            "explanation": "La traducción presenta cómo servían al Sol a diversas horas del día y de la noche.",
+            "kind": "meaning",
+            "options": [
+              "De servir al Sol en distintos momentos",
+              "De construir una casa",
+              "De buscar piedras"
+            ],
+            "question": "¿De qué trata este título?"
+          },
+          "source_hash": "6f43aac6b55ba5f70cdba21a78ad94f9309fef9386f848e5d2138f1478e44ec9"
+        }
+      ],
+      "id": "cielo",
+      "minutes": 7,
+      "objective": "Reconocer tonatiuh en distintos contextos y compararlo con Metztli en el fragmento que reúne ambos.",
+      "practice_version": 1,
+      "reading_tips": [
+        "Esta selección contiene cuatro pasajes del Sol y uno de ellos también menciona la Luna; no son cuatro ejemplos de metztli.",
+        "En el fragmento destacado, metztli se consulta como luna. La acepción mes tiene otra ficha y no se aplica aquí."
+      ],
+      "sense_ids": [
+        "sense-tonatiuh",
+        "sense-metztli",
+        "sense-ihuan"
+      ],
+      "title": "El Sol y un encuentro con la Luna",
+      "version": 2
+    },
+    {
+      "cover_glyph": "glyph-tepetl-mdz32r",
+      "examples": [
+        {
+          "annotations": [
+            {
+              "note": "En este fragmento, la traducción utiliza tierra. La ficha reúne también terreno y parcela.",
+              "quote": "tlalli",
+              "sense_id": "sense-tlalli"
+            }
+          ],
+          "archive_id": "axolotl-03471",
+          "context": "Un fragmento que menciona la tierra recibida. El sujeto y la acción se leen en la traducción completa.",
+          "exercise": {
+            "answer": 1,
+            "blank": "",
+            "explanation": "El español del registro comienza «en esta tierra que os da…». Reconoce tlalli en el contexto.",
+            "kind": "meaning",
+            "options": [
+              "Una estrella",
+              "La tierra",
+              "Un conejo"
+            ],
+            "question": "¿Qué se da en este fragmento?"
+          },
+          "source_hash": "92dc85996497376bb59f2327a1d9d6a3a8dec1802207dacb427882888a889a76"
+        },
+        {
+          "annotations": [
+            {
+              "note": "La fuente escribe tlacuilolcalli y traduce «En la casa de las pinturas». Calli es una consulta temática sobre casa; la imagen de calli no escribe el compuesto completo. Su análisis específico sigue pendiente.",
+              "quote": "tlacuilolcalli",
+              "relation": "thematic",
+              "sense_id": "sense-calli"
+            }
+          ],
+          "archive_id": "axolotl-12969",
+          "context": "Título o fragmento con una palabra compuesta. El corpus da la traducción completa.",
+          "exercise": {
+            "answer": 2,
+            "blank": "",
+            "explanation": "El registro traduce «En la casa de las pinturas». La palabra compuesta se conserva entera.",
+            "kind": "meaning",
+            "options": [
+              "La casa del viento",
+              "La casa del agua",
+              "La casa de las pinturas"
+            ],
+            "question": "¿Qué casa presenta la traducción?"
+          },
+          "source_hash": "a10e122963fc25aaf113776ec4e232da7778efb09ec55d4dc4bb9220fb2fea0a"
+        },
+        {
+          "annotations": [
+            {
+              "note": "La traducción usa montes. Consulta cerro o montaña como acepción de referencia.",
+              "quote": "tepetl",
+              "sense_id": "sense-tepetl"
+            }
+          ],
+          "archive_id": "axolotl-14900",
+          "context": "Un fragmento sobre búsqueda de montes.",
+          "exercise": {
+            "answer": 0,
+            "blank": "tepetl",
+            "explanation": "La fuente escribe tepetl. Su traducción utiliza montes.",
+            "kind": "cloze",
+            "options": [
+              "tepetl",
+              "xochitl",
+              "atl"
+            ],
+            "question": "Completa la forma del texto: quitztihui in ___,"
+          },
+          "source_hash": "30597c16adf72203499273683c8c5e74fda47aa769106bcbf624b8097b3f687c"
+        },
+        {
+          "annotations": [
+            {
+              "note": "La traducción utiliza tierra.",
+              "quote": "tlalli",
+              "sense_id": "sense-tlalli"
+            },
+            {
+              "note": "Este registro traduce el conjunto como «la tierra, la ciudad». Se consulta la ficha de cerro como referencia léxica contextual; este enlace no convierte ciudad en una equivalencia aislada de tepetl.",
+              "quote": "tepetl",
+              "relation": "thematic",
+              "sense_id": "sense-tepetl"
+            }
+          ],
+          "archive_id": "axolotl-16052",
+          "context": "Ejemplo nuevo que muestra por qué hay que leer la traducción en contexto, además de consultar el diccionario.",
+          "exercise": {
+            "answer": 1,
+            "blank": "",
+            "explanation": "El corpus traduce «la tierra, la ciudad». Una equivalencia de diccionario por sí sola no basta para explicar toda expresión.",
+            "kind": "meaning",
+            "options": [
+              "Flor y canto",
+              "Tierra y ciudad",
+              "Sol y luna"
+            ],
+            "question": "¿Qué dos referentes presenta el español de este registro?"
+          },
+          "source_hash": "c6bf6abd34a08589ad26560a82e5343a9138182509b31ea42d7cac7ad6cd22bc"
+        }
+      ],
+      "id": "lugares",
+      "minutes": 8,
+      "objective": "Reconocer palabras de lugares y observar cuándo la traducción necesita contexto.",
+      "practice_version": 1,
+      "reading_tips": [
+        "La palabra completa tlacuilolcalli se conserva: consultar calli como tema no equivale a traducir todo el compuesto como casa.",
+        "El español de un registro puede necesitar contexto. No conviertas ciudad en una traducción universal de tepetl."
+      ],
+      "sense_ids": [
+        "sense-tlalli",
+        "sense-calli",
+        "sense-tepetl"
+      ],
+      "title": "Reconocer tierra, casa y cerro",
+      "version": 2
+    },
+    {
+      "cover_glyph": "glyph-atl",
+      "examples": [
+        {
+          "annotations": [
+            {
+              "glyph_id": "glyph-atl",
+              "note": "El registro menciona agua. Conserva la frase completa para saber qué se dice de ella. La imagen viene de otro documento.",
+              "quote": "atl",
+              "relation": "full_word",
+              "sense_id": "sense-atl"
+            }
+          ],
+          "archive_id": "axolotl-04153",
+          "context": "El relato menciona la adoración del Agua. Lee ese contexto religioso sin sustituir la frase por una lista de palabras.",
+          "exercise": {
+            "answer": 0,
+            "blank": "atl",
+            "explanation": "El registro escribe «atl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+            "kind": "cloze",
+            "options": [
+              "atl",
+              "tlalli",
+              "xochitl"
+            ],
+            "question": "Recupera la forma que aparece en el fragmento original."
+          },
+          "source_hash": "c3a35c61f2345b8c993c602f093a37ca789fa0ff16db6afbf3babfcf8689000c"
+        },
+        {
+          "annotations": [
+            {
+              "glyph_id": "glyph-atl",
+              "note": "El registro menciona agua. Conserva la frase completa para saber qué se dice de ella. La imagen viene de otro documento.",
+              "quote": "atl",
+              "relation": "full_word",
+              "sense_id": "sense-atl"
+            }
+          ],
+          "archive_id": "axolotl-01923",
+          "context": "La voz poética habla al señor Cuauhtencoztli y menciona hacer correr el agua. Conserva el nombre propio y la traducción de origen.",
+          "exercise": {
+            "answer": 1,
+            "blank": "atl",
+            "explanation": "El registro escribe «atl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+            "kind": "cloze",
+            "options": [
+              "tepetl",
+              "atl",
+              "cuicatl"
+            ],
+            "question": "Recupera la forma que aparece en el fragmento original."
+          },
+          "source_hash": "0a72c9b463f333296b23942e074f827dd3e1384242daeb44efc888bb1c8b4daf"
+        },
+        {
+          "annotations": [
+            {
+              "glyph_id": "glyph-tlalli-mdz32r",
+              "note": "La ficha ofrece tierra como referencia. La traducción española de este pasaje conserva su propio contexto y número.",
+              "quote": "tlalli",
+              "relation": "full_word",
+              "sense_id": "sense-tlalli"
+            }
+          ],
+          "archive_id": "axolotl-00833",
+          "context": "Una exclamación poética sobre la permanencia de la tierra. Reconoce la palabra sin inferir cómo se construye toda la oración.",
+          "exercise": {
+            "answer": 2,
+            "blank": "tlalli",
+            "explanation": "El registro escribe «tlalli». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+            "kind": "cloze",
+            "options": [
+              "atl",
+              "tototl",
+              "tlalli"
+            ],
+            "question": "Recupera la forma que aparece en el fragmento original."
+          },
+          "source_hash": "b445800c2d2d440ac1302e8342a185b0e084e934c2805b500ac5c8b45011bdf7"
+        },
+        {
+          "annotations": [
+            {
+              "glyph_id": "glyph-tlalli-mdz32r",
+              "note": "La ficha ofrece tierra como referencia. La traducción española de este pasaje conserva su propio contexto y número.",
+              "quote": "tlalli",
+              "relation": "full_word",
+              "sense_id": "sense-tlalli"
+            }
+          ],
+          "archive_id": "axolotl-01325",
+          "context": "El relato sitúa a sus hablantes en tierras que fueron de Mexico Tenochtitlan. La traducción utiliza el plural tierras; conserva esa información en su contexto.",
+          "exercise": {
+            "answer": 0,
+            "blank": "tlalli",
+            "explanation": "El registro escribe «tlalli». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+            "kind": "cloze",
+            "options": [
+              "tlalli",
+              "metztli",
+              "xochitl"
+            ],
+            "question": "Recupera la forma que aparece en el fragmento original."
+          },
+          "source_hash": "977519a9155c1db3051f8c1acc423dad7586d8ba950e5e8982069e7ba49b25f7"
+        }
+      ],
+      "id": "agua-tierra",
+      "minutes": 7,
+      "objective": "Reconocer atl y tlalli en poesía y relatos, conservando el sentido de cada fragmento.",
+      "reading_tips": [
+        "Una palabra conocida ayuda a orientarte; la traducción completa cuenta qué sucede.",
+        "El glifo mostrado procede de su propio documento. No es la ilustración original de estos relatos."
+      ],
+      "sense_ids": [
+        "sense-atl",
+        "sense-tlalli"
+      ],
+      "title": "Agua y tierra en sus contextos",
+      "version": 1
+    },
+    {
+      "cover_glyph": "glyph-xochitl",
+      "examples": [
+        {
+          "annotations": [
+            {
+              "glyph_id": "glyph-xochitl",
+              "note": "Consulta flor como referencia léxica. Lee también la traducción del fragmento; el plural español no se convierte automáticamente en una regla gramatical.",
+              "quote": "xochitl",
+              "relation": "full_word",
+              "sense_id": "sense-xochitl"
+            },
+            {
+              "glyph_id": "glyph-link-v7-sense-cuicatl",
+              "note": "Molina registra canto o canción. La imagen de xochitl ilustra un ejemplo que reúne flores y cantos; no escribe cuicatl.",
+              "quote": "cuicatl",
+              "relation": "full_word",
+              "sense_id": "sense-cuicatl"
+            }
+          ],
+          "archive_id": "axolotl-13428",
+          "context": "El registro reúne flores y cantos. La traducción mantiene ambos referentes; no los reemplazamos por una definición universal de poesía.",
+          "exercise": {
+            "answer": 0,
+            "blank": "cuicatl",
+            "explanation": "El registro escribe «cuicatl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+            "kind": "cloze",
+            "options": [
+              "cuicatl",
+              "xochitl",
+              "atl"
+            ],
+            "question": "Recupera la forma que aparece en el fragmento original."
+          },
+          "source_hash": "5c17a4312de2b191c7294882953f6cb4f6ab868a665c0f44bf1a13ef6aff95d8"
+        },
+        {
+          "annotations": [
+            {
+              "glyph_id": "glyph-xochitl",
+              "note": "Consulta flor como referencia léxica. Lee también la traducción del fragmento; el plural español no se convierte automáticamente en una regla gramatical.",
+              "quote": "xochitl",
+              "relation": "full_word",
+              "sense_id": "sense-xochitl"
+            },
+            {
+              "glyph_id": "glyph-link-v7-sense-cuicatl",
+              "note": "Molina registra canto o canción. La imagen de xochitl ilustra un ejemplo que reúne flores y cantos; no escribe cuicatl.",
+              "quote": "cuicatl",
+              "relation": "full_word",
+              "sense_id": "sense-cuicatl"
+            }
+          ],
+          "archive_id": "axolotl-05366",
+          "context": "La exclamación poética vuelve a reunir flores y cantos. Atiende a la puntuación y a la traducción conservadas.",
+          "exercise": {
+            "answer": 1,
+            "blank": "xochitl",
+            "explanation": "El registro escribe «xochitl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+            "kind": "cloze",
+            "options": [
+              "cuicatl",
+              "xochitl",
+              "tototl"
+            ],
+            "question": "Recupera la forma que aparece en el fragmento original."
+          },
+          "source_hash": "c2e2d786332031ff1c0445d1b4253c8bbfafda6dcbe0d4187143210577a3565d"
+        },
+        {
+          "annotations": [
+            {
+              "glyph_id": "glyph-xochitl",
+              "note": "Consulta flor como referencia léxica. Lee también la traducción del fragmento; el plural español no se convierte automáticamente en una regla gramatical.",
+              "quote": "xochitl",
+              "relation": "full_word",
+              "sense_id": "sense-xochitl"
+            },
+            {
+              "glyph_id": "glyph-link-v7-sense-cuicatl",
+              "note": "Molina registra canto o canción. La imagen de xochitl ilustra un ejemplo que reúne flores y cantos; no escribe cuicatl.",
+              "quote": "cuicatl",
+              "relation": "full_word",
+              "sense_id": "sense-cuicatl"
+            }
+          ],
+          "archive_id": "axolotl-02623",
+          "context": "El verso dice derrama flores, alegra el canto. La ayuda identifica los referentes; no analiza automáticamente los verbos.",
+          "exercise": {
+            "answer": 2,
+            "blank": "cuicatl",
+            "explanation": "El registro escribe «cuicatl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+            "kind": "cloze",
+            "options": [
+              "tlalli",
+              "xochitl",
+              "cuicatl"
+            ],
+            "question": "Recupera la forma que aparece en el fragmento original."
+          },
+          "source_hash": "a6b882c63f3952c2a665f0ac9f612b2048627477803632cc273a67d508557be2"
+        },
+        {
+          "annotations": [
+            {
+              "glyph_id": "glyph-xochitl",
+              "note": "Consulta flor como referencia léxica. Lee también la traducción del fragmento; el plural español no se convierte automáticamente en una regla gramatical.",
+              "quote": "xochitl",
+              "relation": "full_word",
+              "sense_id": "sense-xochitl"
+            }
+          ],
+          "archive_id": "axolotl-09215",
+          "context": "Un fragmento de Nican Mopohua traducido como de variadas flores. Es un fragmento breve, no una oración completa ni una traducción palabra por palabra.",
+          "exercise": {
+            "answer": 0,
+            "blank": "xochitl",
+            "explanation": "El registro escribe «xochitl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+            "kind": "cloze",
+            "options": [
+              "xochitl",
+              "cuicatl",
+              "atl"
+            ],
+            "question": "Recupera la forma que aparece en el fragmento original."
+          },
+          "source_hash": "4bafa89d7af43d28a32cb5ed0cfea29f3396b0e281e071bbcac48c9d1f3db8f6"
+        }
+      ],
+      "id": "flores-cantos",
+      "minutes": 6,
+      "objective": "Reconocer xochitl y cuicatl en nuevos versos y distinguir el texto poético de una glosa de diccionario.",
+      "reading_tips": [
+        "Lee flores y cantos dentro del verso. Una glosa aislada no explica todo su sentido poético.",
+        "La forma escrita y el número de la traducción española son datos distintos."
+      ],
+      "sense_ids": [
+        "sense-xochitl",
+        "sense-cuicatl"
+      ],
+      "title": "Flores y cantos más allá del título",
+      "version": 1
+    },
+    {
+      "cover_glyph": "glyph-tototl-mdz46r",
+      "examples": [
+        {
+          "annotations": [
+            {
+              "glyph_id": "glyph-tototl-mdz46r",
+              "note": "Consulta ave como referencia léxica; observa si el español de este registro habla de un ave o de aves. No deduzcas una regla de número solo con esta comparación.",
+              "quote": "tototl",
+              "relation": "full_word",
+              "sense_id": "sense-tototl"
+            }
+          ],
+          "archive_id": "axolotl-14546",
+          "context": "El ave anda, parlotea y canta en el poema, según la traducción. No se identifica una especie a partir del glifo de referencia.",
+          "exercise": {
+            "answer": 0,
+            "blank": "tototl",
+            "explanation": "El registro escribe «tototl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+            "kind": "cloze",
+            "options": [
+              "tototl",
+              "xochitl",
+              "atl"
+            ],
+            "question": "Recupera la forma que aparece en el fragmento original."
+          },
+          "source_hash": "2c93ffac76b923ab5d31dad8640725f453866880ac9a79326b9012394bd8f43d"
+        },
+        {
+          "annotations": [
+            {
+              "glyph_id": "glyph-tototl-mdz46r",
+              "note": "Consulta ave como referencia léxica; observa si el español de este registro habla de un ave o de aves. No deduzcas una regla de número solo con esta comparación.",
+              "quote": "tototl",
+              "relation": "full_word",
+              "sense_id": "sense-tototl"
+            }
+          ],
+          "archive_id": "axolotl-14253",
+          "context": "El relato enumera aves, pescados y ranas llevados por tenochcas y tlatelolcas. La lectura destaca únicamente tototl.",
+          "exercise": {
+            "answer": 1,
+            "blank": "tototl",
+            "explanation": "El registro escribe «tototl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+            "kind": "cloze",
+            "options": [
+              "cuicatl",
+              "tototl",
+              "tlalli"
+            ],
+            "question": "Recupera la forma que aparece en el fragmento original."
+          },
+          "source_hash": "fac136e3a0457c008c312b42641cd4622684ed4dbe5477b8515b3ed1b388a49e"
+        },
+        {
+          "annotations": [
+            {
+              "glyph_id": "glyph-tototl-mdz46r",
+              "note": "Consulta ave como referencia léxica; observa si el español de este registro habla de un ave o de aves. No deduzcas una regla de número solo con esta comparación.",
+              "quote": "tototl",
+              "relation": "full_word",
+              "sense_id": "sense-tototl"
+            }
+          ],
+          "archive_id": "axolotl-08856",
+          "context": "El relato incluye una lista de animales y materiales, dentro de acciones realizadas en Azcapotzalco. Los nombres propios y el resto de la lista mantienen su escritura original.",
+          "exercise": {
+            "answer": 2,
+            "blank": "tototl",
+            "explanation": "El registro escribe «tototl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+            "kind": "cloze",
+            "options": [
+              "atl",
+              "xochitl",
+              "tototl"
+            ],
+            "question": "Recupera la forma que aparece en el fragmento original."
+          },
+          "source_hash": "ff72fa785c95318cf04dddf607259f2c16866c8702f9457edbfc7618d9aca789"
+        },
+        {
+          "annotations": [
+            {
+              "glyph_id": "glyph-tototl-mdz46r",
+              "note": "Consulta ave como referencia léxica; observa si el español de este registro habla de un ave o de aves. No deduzcas una regla de número solo con esta comparación.",
+              "quote": "tototl",
+              "relation": "full_word",
+              "sense_id": "sense-tototl"
+            }
+          ],
+          "archive_id": "axolotl-00751",
+          "context": "El relato describe el sustento y la caza de los chichimecas totolimpanecas. Reconoce tototl como palabra separada; las letras del nombre propio no se tratan como otra aparición de la palabra.",
+          "exercise": {
+            "answer": 0,
+            "blank": "tototl",
+            "explanation": "El registro escribe «tototl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+            "kind": "cloze",
+            "options": [
+              "tototl",
+              "tlalli",
+              "cuicatl"
+            ],
+            "question": "Recupera la forma que aparece en el fragmento original."
+          },
+          "source_hash": "3542b019692cbcac4ccdc9ac5cba0f50e69e5c7766e8051e06520ee09079b237"
+        }
+      ],
+      "id": "aves",
+      "minutes": 8,
+      "objective": "Reconocer tototl y comparar el contexto del ave poética con las aves de los relatos.",
+      "reading_tips": [
+        "El mismo término aparece en poesía y en relatos históricos; lee qué papel tiene en cada fragmento.",
+        "Las formas michi y cohuatl que aparecen en los relatos se conservan sin convertirlas automáticamente en otras entradas."
+      ],
+      "sense_ids": [
+        "sense-tototl"
+      ],
+      "title": "Un ave en poesía, aves en relatos",
+      "version": 1
+    }
+  ],
+  "note": "Piloto editorial local. Traducciones heredadas de Axolotl y ayudas redactadas para la lectura; revisión lingüística y cotejo de páginas primarias pendientes.",
+  "review_status": "editorial_draft",
+  "schema_version": 1,
+  "source_id": "src-axolotl",
+  "variant": "nci",
+  "variant_label": "Náhuatl clásico",
+  "version": 1
+}

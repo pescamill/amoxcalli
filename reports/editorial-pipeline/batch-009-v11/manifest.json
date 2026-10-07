@@ -1,0 +1,60 @@
+{
+  "files": {
+    "README.md": "200aa74d8a2465dfa8c0193f6bad31747ec9c2c3b1dead87af77b38709ddbdf5",
+    "agua-tierra-packet.json": "f1fae27494acf8c1f4bc1639eb4b5bfaa4725ffdb718d8f7b4df66ee0a863b0c",
+    "annotation-candidates.json": "7126c3ebb56fa2ab167a103f986f7de6acafa9cbda72f3ded258d6bba55d7d7e",
+    "aves-packet.json": "073d64329ec91b272cab738fe8b8986f2cc3fbf2a6f45c89531578bdfddc2a02",
+    "catalog-baseline.json": "651ba275b33f435cacabbe1552486df03078c86c081554f2d3ffa64c7f7e0666",
+    "cielo-packet.json": "61aabc325ad8ff233a76f77337e11021d2cef3e34668f90e4e83822c62894abf",
+    "concordances.json": "3d4e901613fd0fd28e1fdece102fcbec524c43ce32ad12ae619d299f30ab121e",
+    "dictionary-candidates.json": "dc4279c54738d735768beb51b610c3a2609c1372a6c8dc29bf06eebf74b7b028",
+    "draft-bundle.json": "2680244efa3d320e7345ea7c36f71489a54f0879b170fc2227b62a28cb9a6111",
+    "flor-packet.json": "86d35ae4ee32697f51bb153e7ac542795631f2d0e5f1272a82e80faac99969c9",
+    "flores-cantos-packet.json": "56430cb4f3820f42ddaa94f9ee78438b9c15e84b499434c6c324c587b0abb042",
+    "lesson-inventory.json": "cdba333e373511b3bc9a590978458c0ca8d2536a5f5bdad664ac329f101b94a5",
+    "lesson-inventory.md": "1aff62fd231862ac3e41c696947a059732036a2d38e928b37c3ba47fdd4f10e6",
+    "lesson-queue.json": "62a5ba6dc2df09a938a17f3c6b3a474d09632bab8c1cfdc01669126605580b8a",
+    "lexical-priorities.json": "a4c19b08bc2c5874433c013fa9fa14106ba51dbedc7b88bdb6ae9b085884d22e",
+    "lugares-packet.json": "184a9954a721383b985821c1606fc38fecb6334f2c2434e0184b33b8e9517bc4",
+    "next-source-config.json": "226d0db9e2c92efc4d8082cc3537d539930f88a758c584691819e681aceb4d15",
+    "review-groups.json": "2356fa1e30ad72526ce467dc6df72df9e45d0a542d89374a501c516608c3573b",
+    "review-items.json": "5deced80b885ea393dfb440a6f2a22d6a1183f8a4ad70ad932559d79f420b45f",
+    "sources.json": "d067ceea6732ea1cee05328b58cccdaca2d37c2e1542aee4f650e7aa38568e5b",
+    "visual-candidates.json": "a6e60d55cfd85ce97247d408efa3fdeee77772b6a656d245095c0f2feb8a9eca",
+    "visual-inventory.json": "aa542e58b4765e6a30de6086893a0aaa5d5b6104298772fe50330a52506dca6b"
+  },
+  "first_run": {
+    "llm_calls": 0,
+    "network_requests": 0
+  },
+  "inputs": {
+    "catalog_sha256": "d498d0c06ac0fdbcb6df5866ba30933ea83e068545f2053e95652eb7f8ff2a46",
+    "config_sha256": "226d0db9e2c92efc4d8082cc3537d539930f88a758c584691819e681aceb4d15",
+    "corpus_sha256": "ed8e85f560e78c43385f91ac99d08dee071183749bc1f1aa1b88f1b3a2530878",
+    "decisions_sha256": "354f609f64b64aad9c7f365eecefa45a4aff46c3b9cc2166b02d4859f2c2fbd5",
+    "glyph_rules_sha256": "bcd7a0684e16863a3a4fc6bc679768295dd6df8886b89b2def55c5075efcc324",
+    "lessons_sha256": "92854d250e0dc15bd5e7b6de8cb9664c3b399d50f7ba044b89b6eec326106ae8"
+  },
+  "pipeline_version": 2,
+  "schema_version": 1,
+  "summary": {
+    "cached_pages": 8,
+    "catalog_records": 1317,
+    "concordance_candidates": 100,
+    "examples": 24,
+    "lesson_task_states": {
+      "blocked": 4,
+      "open": 31,
+      "resolved": 1
+    },
+    "lesson_tasks": 36,
+    "lessons": 6,
+    "lexical_entries": 50,
+    "llm_calls": 0,
+    "missing_cache": 0,
+    "possibly_capped_pages": 0,
+    "review_items": 54,
+    "source_pages": 8,
+    "visual_candidates": 4
+  }
+}

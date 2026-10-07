@@ -1,0 +1,14 @@
+{
+  "before_records": 1094,
+  "after_records": 1173,
+  "existing_records_unchanged": true,
+  "added": 79,
+  "private_tables_preserved": {
+    "people": true,
+    "contributions": true,
+    "reviews": true,
+    "corpus_proposals": true,
+    "training_pair_proposals": true
+  },
+  "backup_mode": "0o600"
+}

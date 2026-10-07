@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Voces · Scriptorium</title>
+  <meta name="description" content="Comparte cómo lees, escribes y hablas tu lengua. Aportaciones de texto y voz para un proyecto local de náhuatl.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body class="contributor">
+<header class="topbar"><a class="brand" href="/#investigar">scriptorium<small>náhuatl</small></a><nav class="role-nav" aria-label="Espacio de trabajo"><a href="/#investigar">Investigar</a><a href="/aportar" aria-current="page">Aportar</a></nav></header><nav class="ecosystem-nav" aria-label="Herramientas de aportación"><a href="/#extraer">Texto propio / Fuente / Glifo</a><div class="top-actions"><button id="mine-button" class="quiet">Mis aportaciones</button><button id="profile-button" class="profile-pill"><span class="avatar" id="avatar">+</span><span id="profile-label">Elegir mi variante</span></button></div><span data-app-tools></span></nav>
+<main class="layout">
+  <aside class="navigation">
+    <p class="eyebrow">ESPACIO DE COLABORACIÓN</p>
+    <h1>Comparte tu<br>forma de hablar.</h1>
+    <p class="intro">Una palabra, una idea o tu voz. Tú decides cómo participar.</p>
+    <nav class="missions" aria-label="Misiones">
+      <button class="mission active" data-mode="recognize" aria-current="page"><span class="mission-symbol">Aa</span><span><strong>Reconocer</strong><small>¿Entiendes este texto?</small></span></button>
+      <button class="mission" data-mode="translate"><span class="mission-symbol">✎</span><span><strong>Escribir o hablar</strong><small>Así lo digo yo</small></span></button>
+      <button class="mission" data-mode="listen"><span class="mission-symbol">◖</span><span><strong>Escuchar</strong><small>Otras voces de tu variante</small></span></button>
+      <button class="mission" data-mode="review"><span class="mission-symbol">✓</span><span><strong>Revisar</strong><small>Comparte otra mirada</small></span></button>
+    </nav>
+    <div class="principle"><span class="small-mark" aria-hidden="true">↔</span><p>Las diferencias entre variantes se conservan. <strong>Decir «no sé» también ayuda.</strong></p></div>
+    <button id="about-button" class="text-button">Cómo se usan las aportaciones ↗</button>
+  </aside>
+
+  <section class="workspace" aria-label="Misión actual">
+    <div class="workspace-heading"><span class="eyebrow" id="mode-label">LECTURA Y COMPRENSIÓN</span><span class="reward" id="reward">+10 puntos por aportar</span></div>
+    <article class="task-card" id="task-card" aria-busy="true">
+      <div id="task-content"><div class="loading" role="status">Preparando las misiones…</div></div>
+    </article>
+    <div class="under-card"><span class="privacy-mark" aria-hidden="true">◇</span><p>Tu aportación queda pendiente de revisión. Tú eliges si puede usarse para entrenar.</p></div>
+  </section>
+
+  <details class="progress-panel"><summary>Mi participación y logros</summary>
+    <section class="progress-card"><p class="eyebrow">TU RITMO</p><h2>Un poco cada vez.</h2>
+      <div class="goal-line"><strong id="daily-count">0 de 5</strong><span>aportaciones de hoy</span></div>
+      <progress id="daily-progress" max="5" value="0" aria-label="Meta personal del día"></progress>
+      <p class="subtle">Meta opcional. Sin límite de tiempo ni rachas que perder.</p>
+      <div class="score"><strong id="points">0</strong><span>puntos de participación</span></div>
+      <dl class="stats"><div><dt>Aportaciones</dt><dd id="count-contributions">0</dd></div><div><dt>Revisiones</dt><dd id="count-reviews">0</dd></div><div><dt>Aprobadas</dt><dd id="count-accepted">0</dd></div></dl>
+    </section>
+    <section class="badge-card"><span class="badge-emblem" aria-hidden="true">✦</span><p class="eyebrow">TU PRÓXIMO LOGRO</p><h3 id="badge-title">Primera aportación</h3><p id="badge-description">Comparte una respuesta para comenzar tu recorrido.</p></section>
+    <p class="community-note"><strong id="community-count">0</strong> aportaciones en este proyecto.<br>Los puntos reconocen participación, no autoridad lingüística.</p>
+  </details>
+</main>
+<footer><span>Voces · Un proyecto abierto para aprender de las comunidades.</span><button id="footer-about" class="text-button">Tus datos y permisos</button></footer>
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+<dialog id="profile-dialog" aria-labelledby="profile-title">
+  <button class="dialog-close" data-close="profile-dialog" aria-label="Cerrar">×</button>
+  <p class="eyebrow">TU LENGUA, TU NOMBRE</p><h2 id="profile-title">¿Cómo hablas tú?</h2><p>Los nombres del catálogo son una referencia. Puedes escribir el que utiliza tu comunidad.</p>
+  <form id="profile-form">
+    <label>Seudónimo<input name="alias" maxlength="40" autocomplete="nickname" required placeholder="Cómo quieres aparecer"></label>
+    <label>Variante de referencia<select name="variant_id" id="variant-select" required><option value="">Elige una opción</option></select></label>
+    <label>¿Cómo llamas a tu lengua? <span class="optional">Opcional, salvo «otra denominación»</span><input name="own_name" maxlength="100" placeholder="El nombre que usas tú"></label>
+    <label>Comunidad o región <span class="optional">Opcional</span><input name="community" maxlength="120" placeholder="Sin domicilio ni ubicación exacta"></label>
+    <div class="form-pair"><label>Tu experiencia<select name="experience" required><option value="childhood">La hablo desde mi infancia</option><option value="learned">La aprendí después</option><option value="learning">Estoy aprendiendo</option></select></label>
+    <label>Textos históricos<select name="historical" required><option value="none">No los conozco</option><option value="some">He leído algunos</option><option value="study">Los estudio o investigo</option></select></label></div>
+    <label class="check"><input name="participation_consent" type="checkbox" required><span>Soy mayor de edad y acepto que este proyecto guarde mi perfil y mis aportaciones para revisarlas. No se publicarán automáticamente.</span></label>
+    <p class="subtle">Tu permiso para entrenar se elige en cada aportación. No necesitas un correo ni tu nombre real.</p>
+    <p class="form-error" id="profile-error" role="alert"></p><button class="primary wide" type="submit">Guardar mi perfil <span aria-hidden="true">→</span></button>
+    <a class="source-link" id="variant-source" target="_blank" rel="noopener noreferrer">Ver catálogo del INALI ↗</a>
+  </form>
+</dialog>
+
+<dialog id="mine-dialog" class="wide-dialog" aria-labelledby="mine-title"><button class="dialog-close" data-close="mine-dialog" aria-label="Cerrar">×</button><p class="eyebrow">TU PARTICIPACIÓN</p><h2 id="mine-title">Mis aportaciones</h2><p>Puedes descargar una copia o retirar tus textos, grabaciones y revisiones.</p><button id="download-mine" class="secondary">Descargar mis respuestas</button><div id="mine-list" class="mine-list"></div></dialog>
+<dialog id="withdraw-dialog" aria-labelledby="withdraw-title"><h2 id="withdraw-title">¿Retirar esta aportación?</h2><p>Se eliminarán su contenido y grabación del proyecto y se excluirá de futuras exportaciones. Las copias ya exportadas y los modelos ya entrenados requieren que el responsable del proyecto los gestione por separado.</p><div class="dialog-actions"><button class="secondary" data-close="withdraw-dialog">Conservar</button><button class="danger" id="confirm-withdraw">Retirar aportación</button></div></dialog>
+<dialog id="about-dialog" aria-labelledby="about-title"><button class="dialog-close" data-close="about-dialog" aria-label="Cerrar">×</button><p class="eyebrow">ACUERDO DE PARTICIPACIÓN</p><h2 id="about-title">Tú decides qué compartir.</h2>
+  <p>Este proyecto guarda tus aportaciones en el equipo que ejecuta la app. Quien lo administra puede revisar los datos. Otras personas de tu variante pueden escuchar o revisar las traducciones que envíes.</p>
+  <ul class="about-list"><li><strong>Texto y voz, por separado.</strong> Puedes participar sin autorizar entrenamiento. Recibes los mismos puntos.</li><li><strong>Tu impresión cuenta como impresión.</strong> Reconocer algo como histórico no lo convierte en náhuatl clásico verificado.</li><li><strong>La voz es personal.</strong> Graba solo tu voz, evita nombres o datos de otras personas y escucha la grabación antes de enviarla.</li><li><strong>Puedes retirar lo aportado.</strong> Las retiradas impiden futuras exportaciones. Las copias ya entregadas a terceros y los modelos anteriores no se borran desde esta app.</li><li><strong>Sin publicación automática.</strong> El permiso de entrenamiento se limita a este proyecto. Publicar un corpus abierto requiere otro acuerdo.</li></ul>
+  <p>Los puntos se obtienen una vez por misión: 10 al aportar, 5 al revisar y 10 adicionales cuando el responsable aprueba una traducción. Saltar no penaliza. No hay clasificación pública de personas.</p>
+  <p class="subtle">La sesión permanece en este navegador. Si borras sus datos, conserva tus identificadores de aportación y contacta con quien administra el proyecto.</p>
+</dialog>
+</body></html>

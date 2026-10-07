@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "records": [
+    {
+      "kind": "glyph",
+      "id": "glyph-xochitl",
+      "label": "Propuesta relacionada: flor",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado."
+      },
+      "sense_id": "sense-xochitl",
+      "reading": "xochitl",
+      "glyph_status": "proposed",
+      "context": "Elemento floral en el topónimo Xochiacan.",
+      "url": "https://aztecglyphs.wired-humanities.org/content/xochitl-mdz10r",
+      "evidence": [
+        {
+          "source_id": "src-mendoza",
+          "via_source_id": "src-vla",
+          "locator": "Codex Mendoza, f. 10r. Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed.",
+          "status": "inherited"
+        }
+      ],
+      "notes": "Propuesta heredada por catálogo secundario; no es escritura de una oración ni equivalencia para todas las variantes. Imagen enlazada desde su ficha externa; derechos de imagen según su licencia.",
+      "image": "https://aztecglyphs.wired-humanities.org/sites/default/files/styles/large/public/xochitl10rflowerFromXochiacan.jpg?itok=v8jxI2UJ",
+      "image_credit": "Bodleian Libraries, University of Oxford, MS. Arch. Selden. A. 1. Via Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed. CC BY-NC-SA 3.0 UK."
+    },
+    {
+      "kind": "glyph",
+      "id": "glyph-atl",
+      "label": "Propuesta relacionada: agua",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado."
+      },
+      "sense_id": "sense-atl",
+      "reading": "atl",
+      "glyph_status": "proposed",
+      "context": "Elemento de agua en Ayotochco.",
+      "url": "https://aztecglyphs.wired-humanities.org/content/atl-mdz51r-0",
+      "evidence": [
+        {
+          "source_id": "src-mendoza",
+          "via_source_id": "src-vla",
+          "locator": "Codex Mendoza, f. 51r. Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed.",
+          "status": "inherited"
+        }
+      ],
+      "notes": "Propuesta heredada por catálogo secundario; no es escritura de una oración ni equivalencia para todas las variantes. Imagen enlazada desde su ficha externa; derechos de imagen según su licencia.",
+      "image": "https://aztecglyphs.wired-humanities.org/sites/default/files/styles/large/public/atl51rwaterFromAyotochco.png?itok=8iKf5JJs",
+      "image_credit": "Bodleian Libraries, University of Oxford, MS. Arch. Selden. A. 1. Via Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed. CC BY-NC-SA 3.0 UK."
+    },
+    {
+      "kind": "glyph",
+      "id": "glyph-calli",
+      "label": "Propuesta relacionada: casa",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado."
+      },
+      "sense_id": "sense-calli",
+      "reading": "calli",
+      "glyph_status": "proposed",
+      "context": "Elemento de edificio en Apancalecan.",
+      "url": "https://aztecglyphs.wired-humanities.org/content/calli-mdz13r",
+      "evidence": [
+        {
+          "source_id": "src-mendoza",
+          "via_source_id": "src-vla",
+          "locator": "Codex Mendoza, f. 13r. Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed.",
+          "status": "inherited"
+        }
+      ],
+      "notes": "Propuesta heredada por catálogo secundario; no es escritura de una oración ni equivalencia para todas las variantes. Imagen enlazada desde su ficha externa; derechos de imagen según su licencia.",
+      "image": "https://aztecglyphs.wired-humanities.org/sites/default/files/styles/large/public/calli13rhouse%2CbuildingFromApancalecan%20%281%29.jpg?itok=vJYDNZ5V",
+      "image_credit": "Bodleian Libraries, University of Oxford, MS. Arch. Selden. A. 1. Via Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed. CC BY-NC-SA 3.0 UK."
+    },
+    {
+      "kind": "glyph",
+      "id": "glyph-xochicuahuitl",
+      "label": "Propuesta relacionada: árbol florido",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado."
+      },
+      "sense_id": "sense-xochicuahuitl",
+      "reading": "xochicuahuitl",
+      "glyph_status": "proposed",
+      "context": "Árbol en Xochicuauhtitlan; no establece una identificación botánica universal.",
+      "url": "https://aztecglyphs.wired-humanities.org/content/xochicuahuitl-mdz50r",
+      "evidence": [
+        {
+          "source_id": "src-mendoza",
+          "via_source_id": "src-vla",
+          "locator": "Codex Mendoza, f. 50r. Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed.",
+          "status": "inherited"
+        }
+      ],
+      "notes": "Propuesta heredada por catálogo secundario; no es escritura de una oración ni equivalencia para todas las variantes. Imagen enlazada desde su ficha externa; derechos de imagen según su licencia.",
+      "image": "https://aztecglyphs.wired-humanities.org/sites/default/files/styles/large/public/xochiquahuitl50rfloweringtreeFromXochicuauhtitlan.jpg?itok=2NpF06b-",
+      "image_credit": "Bodleian Libraries, University of Oxford, MS. Arch. Selden. A. 1. Via Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed. CC BY-NC-SA 3.0 UK."
+    }
+  ]
+}

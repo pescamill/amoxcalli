@@ -1,0 +1,17 @@
+{
+  "base_model": "models/base",
+  "data": "data/prepared",
+  "output": "outputs/classical-v2",
+  "seed": 42,
+  "steps": 240,
+  "max_length": 192,
+  "learning_rate": 0.0002,
+  "rank": 8,
+  "alpha": 16,
+  "gradient_accumulation": 1,
+  "device": "auto",
+  "threads": 4,
+  "validation_examples": 24,
+  "dtype": "float32",
+  "eval_every": 40
+}

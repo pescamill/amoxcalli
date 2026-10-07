@@ -1,0 +1,8 @@
+# Python 3.11/3.12. En Linux sin GPU, instalar torch desde el índice CPU primero.
+torch==2.9.0
+transformers==4.51.3
+peft==0.15.2
+accelerate==1.6.0
+safetensors==0.5.3
+sacrebleu==2.5.1
+certifi==2026.7.22

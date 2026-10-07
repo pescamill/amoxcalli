@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "method": "legacy-preparation-reconstruction-hash-verified",
+  "dataset_sha256": {
+    "train": "9d2b8c80fefb50b1056dfc9b48f8eb1ca98be2190766bd05b01c6a3e24a86f68",
+    "validation": "efa8b34744c2fbf1c4ca24ad8e377fa3720af1efcc0e9f8fb8746ced93bff3fe",
+    "test": "c02edc9f30f68bc1447504c08edcfb08a88207eca27bda32751bf43746053833"
+  },
+  "raw_sha256": "ed8e85f560e78c43385f91ac99d08dee071183749bc1f1aa1b88f1b3a2530878",
+  "adapter": "outputs/continued-unseen/run/best",
+  "seen_pairs": 650,
+  "usable_pairs": 1759,
+  "prepared_train": 2248,
+  "notes": "Reconstrucción exacta de JSONL verificada por hashes. IDs vistos recuperados del orden y cursor del checkpoint local; solo lectura.",
+  "checkpoint_sha256": "66dc3e1695eff7410bd6a8ffe3853e65e0f3ff85b323ed269b573f2363566089",
+  "seen_sha256": "6c51cb1d19390bd1bf236feb85459a288b558429f3b55fbfc0f30d1f15c2acd5"
+}

@@ -1,0 +1,148 @@
+{
+  "annotation_example_counts": {
+    "sense-atl": 2,
+    "sense-tlalli": 2
+  },
+  "examples": [
+    {
+      "annotations": [
+        {
+          "end": 9,
+          "glyph_id": "glyph-atl",
+          "note": "El registro menciona agua. Conserva la frase completa para saber qué se dice de ella. La imagen viene de otro documento.",
+          "quote": "atl",
+          "relation": "full_word",
+          "sense_id": "sense-atl",
+          "start": 6
+        }
+      ],
+      "archive_id": "axolotl-04153",
+      "document": "Tercera Relación (Libro las ocho relaciones)",
+      "es": "Y también adoraban al Agua.",
+      "exercise": {
+        "answer": 0,
+        "blank": "atl",
+        "explanation": "El registro escribe «atl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+        "kind": "cloze",
+        "options": [
+          "atl",
+          "tlalli",
+          "xochitl"
+        ],
+        "question": "Recupera la forma que aparece en el fragmento original."
+      },
+      "iso": "nci",
+      "locator": "Axolotl, registro CSV 4153; página de la edición primaria pendiente",
+      "nah": "Yhuan atl yn quimoteotiaya.",
+      "source_hash": "c3a35c61f2345b8c993c602f093a37ca789fa0ff16db6afbf3babfcf8689000c",
+      "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv"
+    },
+    {
+      "annotations": [
+        {
+          "end": 14,
+          "glyph_id": "glyph-atl",
+          "note": "El registro menciona agua. Conserva la frase completa para saber qué se dice de ella. La imagen viene de otro documento.",
+          "quote": "atl",
+          "relation": "full_word",
+          "sense_id": "sense-atl",
+          "start": 11
+        }
+      ],
+      "archive_id": "axolotl-01923",
+      "document": "Trece Poetas del Mundo Azteca",
+      "es": "Hago correr el agua, señor Cuauhtencoztli,",
+      "exercise": {
+        "answer": 1,
+        "blank": "atl",
+        "explanation": "El registro escribe «atl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+        "kind": "cloze",
+        "options": [
+          "tepetl",
+          "atl",
+          "cuicatl"
+        ],
+        "question": "Recupera la forma que aparece en el fragmento original."
+      },
+      "iso": "nci",
+      "locator": "Axolotl, registro CSV 1923; página de la edición primaria pendiente",
+      "nah": "Nicteca yn atl, Quauhtencoztli in teuctli,",
+      "source_hash": "0a72c9b463f333296b23942e074f827dd3e1384242daeb44efc888bb1c8b4daf",
+      "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv"
+    },
+    {
+      "annotations": [
+        {
+          "end": 21,
+          "glyph_id": "glyph-tlalli-mdz32r",
+          "note": "La ficha ofrece tierra como referencia. La traducción española de este pasaje conserva su propio contexto y número.",
+          "quote": "tlalli",
+          "relation": "full_word",
+          "sense_id": "sense-tlalli",
+          "start": 15
+        }
+      ],
+      "archive_id": "axolotl-00833",
+      "document": "Trece Poetas del Mundo Azteca",
+      "es": "¡Que permanezca la tierra!",
+      "exercise": {
+        "answer": 2,
+        "blank": "tlalli",
+        "explanation": "El registro escribe «tlalli». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+        "kind": "cloze",
+        "options": [
+          "atl",
+          "tototl",
+          "tlalli"
+        ],
+        "question": "Recupera la forma que aparece en el fragmento original."
+      },
+      "iso": "nci",
+      "locator": "Axolotl, registro CSV 833; página de la edición primaria pendiente",
+      "nah": "¡Ma huel manin tlalli!",
+      "source_hash": "b445800c2d2d440ac1302e8342a185b0e084e934c2805b500ac5c8b45011bdf7",
+      "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv"
+    },
+    {
+      "annotations": [
+        {
+          "end": 44,
+          "glyph_id": "glyph-tlalli-mdz32r",
+          "note": "La ficha ofrece tierra como referencia. La traducción española de este pasaje conserva su propio contexto y número.",
+          "quote": "tlalli",
+          "relation": "full_word",
+          "sense_id": "sense-tlalli",
+          "start": 38
+        }
+      ],
+      "archive_id": "axolotl-01325",
+      "document": "Tercera Relación (Libro las ocho relaciones)",
+      "es": "Ahora nosotros vivimos en las tierras que fueron de Mexico Tenochtitlan.",
+      "exercise": {
+        "answer": 0,
+        "blank": "tlalli",
+        "explanation": "El registro escribe «tlalli». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+        "kind": "cloze",
+        "options": [
+          "tlalli",
+          "metztli",
+          "xochitl"
+        ],
+        "question": "Recupera la forma que aparece en el fragmento original."
+      },
+      "iso": "nci",
+      "locator": "Axolotl, registro CSV 1325; página de la edición primaria pendiente",
+      "nah": "Auh yn axcan yn tictomacehuiticate yn tlalli yn Mexico Tenochtitlan.",
+      "source_hash": "977519a9155c1db3051f8c1acc423dad7586d8ba950e5e8982069e7ba49b25f7",
+      "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv"
+    }
+  ],
+  "id": "agua-tierra",
+  "objective": "Reconocer atl y tlalli en poesía y relatos, conservando el sentido de cada fragmento.",
+  "review_status": "editorial_draft",
+  "target_sense_ids": [
+    "sense-atl",
+    "sense-tlalli"
+  ],
+  "title": "Agua y tierra en sus contextos"
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "decisions": {
+    "TASK_ID_FROM_REVIEW_QUEUE": {
+      "fingerprint": "COPY_EXACT_FINGERPRINT_FROM_REVIEW_QUEUE",
+      "status": "in_progress",
+      "reviewer": "",
+      "date": "",
+      "evidence": [],
+      "resolution": "",
+      "notes": "Record a real decision; leave evidence and resolution empty until reviewed."
+    }
+  }
+}

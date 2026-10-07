@@ -1,0 +1,12 @@
+test_changed_cache_is_deferred_and_never_accepted_as_exact (tests.test_editorial_release.EditorialReleaseTests.test_changed_cache_is_deferred_and_never_accepted_as_exact) ... ok
+test_interrupted_registration_resumes_from_private_backup (tests.test_editorial_release.EditorialReleaseTests.test_interrupted_registration_resumes_from_private_backup) ... ok
+test_literal_source_check_accepts_only_limited_scope_and_repeats (tests.test_editorial_release.EditorialReleaseTests.test_literal_source_check_accepts_only_limited_scope_and_repeats) ... ok
+test_modified_bundle_dependency_and_source_rules_stop_before_backup (tests.test_editorial_release.EditorialReleaseTests.test_modified_bundle_dependency_and_source_rules_stop_before_backup) ... ok
+test_one_command_cycle_is_bounded_resumable_and_requires_apply (tests.test_editorial_release.EditorialReleaseTests.test_one_command_cycle_is_bounded_resumable_and_requires_apply) ... ok
+test_publication_preserves_private_data_edits_and_repeats_without_duplicates (tests.test_editorial_release.EditorialReleaseTests.test_publication_preserves_private_data_edits_and_repeats_without_duplicates) ... ok
+test_registry_detects_changed_release_file (tests.test_editorial_release.EditorialReleaseTests.test_registry_detects_changed_release_file) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 8.280s
+
+OK

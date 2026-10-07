@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "records": [
+    {
+      "id": "glyph-cuahuitl-mdz7v",
+      "image": "https://aztecglyphs.wired-humanities.org/sites/default/files/styles/large/public/cuahuitl07vAtomicFromCuauhnahuac.png?itok=vgvh-yrm",
+      "image_credit": "Bodleian Libraries, University of Oxford, MS. Arch. Selden. A. 1. Vía Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed. CC BY-NC-SA 3.0 UK.",
+      "glyph_type": "element",
+      "manuscript_url": "https://digital.bodleian.ox.ac.uk/objects/2fea788e-2aa2-4f08-b6d9-648c00486220/surfaces/8ed30f47-5928-426d-930b-bcfbddabbc48/"
+    },
+    {
+      "id": "glyph-tonatiuh-mdz34r",
+      "image": "https://aztecglyphs.wired-humanities.org/sites/default/files/styles/large/public/tonatiuh34rSIMPLEXsunFromTonatiuhco_0.png?itok=3w0uXbDY",
+      "image_credit": "Bodleian Libraries, University of Oxford, MS. Arch. Selden. A. 1. Vía Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed. CC BY-NC-SA 3.0 UK.",
+      "glyph_type": "simplex",
+      "manuscript_url": "https://digital.bodleian.ox.ac.uk/objects/2fea788e-2aa2-4f08-b6d9-648c00486220/surfaces/f5eda129-0e1f-4597-96e4-0ceba1d7cfab/"
+    },
+    {
+      "id": "glyph-metztli-fcbk11f214v",
+      "image": "https://aztecglyphs.wired-humanities.org/sites/default/files/styles/large/public/metztli%20%28FCbk11f214v%29.png?itok=IarokVz1",
+      "image_credit": "Códice Florentino, Biblioteca Medicea Laurenziana. Vía Library of Congress / World Digital Library y VLA, Stephanie Wood, ed. LOC declara no conocer restricciones en esta colección; revisar la información del original.",
+      "glyph_type": "element",
+      "manuscript_url": "https://www.loc.gov/resource/gdcwdl.wdl_10622/?sp=430"
+    },
+    {
+      "id": "glyph-metztli-osu14v",
+      "image": "https://aztecglyphs.wired-humanities.org/sites/default/files/styles/large/public/metztliOsu14vSmplxNoun.png?itok=oPa7HbHa",
+      "image_credit": "Códice Osuna, Biblioteca Nacional de España. Vía Library of Congress / World Digital Library y VLA, Stephanie Wood, ed. LOC declara no conocer restricciones en esta colección; conservar atribuciones.",
+      "glyph_type": "simplex",
+      "manuscript_url": "https://www.loc.gov/resource/gdcwdl.wdl_07324/"
+    }
+  ]
+}

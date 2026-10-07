@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "config": {
+    "base_model": "models/base",
+    "data": "data/prepared",
+    "output": "outputs/automatic/run",
+    "seed": 42,
+    "steps": 5277,
+    "max_length": 192,
+    "learning_rate": 0.0002,
+    "rank": 8,
+    "alpha": 16,
+    "gradient_accumulation": 1,
+    "device": "cpu",
+    "threads": 4,
+    "validation_examples": 128,
+    "dtype": "float32",
+    "eval_every": 100
+  },
+  "config_sha256": "9c6fef5d87c7174e039120d3749d0bbb6694714ed8e19ff33a4306c9dbf2cb2c",
+  "dataset_sha256": {
+    "train": "9d2b8c80fefb50b1056dfc9b48f8eb1ca98be2190766bd05b01c6a3e24a86f68",
+    "validation": "efa8b34744c2fbf1c4ca24ad8e377fa3720af1efcc0e9f8fb8746ced93bff3fe",
+    "test": "c02edc9f30f68bc1447504c08edcfb08a88207eca27bda32751bf43746053833"
+  },
+  "initial_adapter": "outputs/classical-v2/best",
+  "initial_adapter_sha256": "0e52ef2867f906571b2545e0e50ee3e1149efb7abbf987569a083eed06af298d",
+  "usable_training_rows": 1759,
+  "max_steps": 5277,
+  "stage_steps": 250,
+  "patience": 3,
+  "min_delta": 0.01,
+  "generation_examples": 12,
+  "next_target": 500,
+  "policy": {
+    "best": 3.5173216639472527,
+    "stale_stages": 0
+  },
+  "history": [
+    {
+      "step": 250,
+      "loss": 3.5173216639472527,
+      "best": 3.5173216639472527,
+      "stale_stages": 0
+    }
+  ],
+  "status": "paused_budget",
+  "generation_best_step": 250,
+  "created_at": "2026-09-20T04:14:14Z",
+  "generation_guard_passed": false,
+  "suggested_adapter": "outputs/classical-v2/best"
+}

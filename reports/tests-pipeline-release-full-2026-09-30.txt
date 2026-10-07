@@ -1,0 +1,219 @@
+test_partial_stage_resume_does_not_count_as_plateau (test_autotrain.AutomationTests.test_partial_stage_resume_does_not_count_as_plateau) ... Reanudación: se conserva la configuración original; solo cambia el presupuesto de tiempo.
+Reanudación: se conserva la configuración original; solo cambia el presupuesto de tiempo.
+Etapa completada: {'step': 10, 'loss': 4.1, 'best': 4.0, 'stale_stages': 1}
+ok
+test_plateau_and_nonfinite (test_autotrain.AutomationTests.test_plateau_and_nonfinite) ... ok
+test_regression_guard_blocks_lower_loss_when_generation_degrades (test_autotrain.AutomationTests.test_regression_guard_blocks_lower_loss_when_generation_degrades) ... ok
+test_single_writer_lock (test_autotrain.AutomationTests.test_single_writer_lock) ... ok
+test_terminal_run_finishes_pending_generation (test_autotrain.AutomationTests.test_terminal_run_finishes_pending_generation) ... Resultado: /var/folders/3x/y_gg7xzs6rd5h6_k5tjwxkqm0000gn/T/tmpa7ccqjto/SUMMARY.md
+ok
+test_bounds_order (test_benchmark.BootstrapTests.test_bounds_order) ... ok
+test_cluster_reporting (test_benchmark.BootstrapTests.test_cluster_reporting) ... ok
+test_constant_zero_width (test_benchmark.BootstrapTests.test_constant_zero_width) ... ok
+test_deterministic (test_benchmark.BootstrapTests.test_deterministic) ... ok
+test_empty (test_benchmark.BootstrapTests.test_empty) ... ok
+test_iid_equals_self_clusters (test_benchmark.BootstrapTests.test_iid_equals_self_clusters) ... ok
+test_records_n_and_estimate (test_benchmark.BootstrapTests.test_records_n_and_estimate) ... ok
+test_single_cluster_degenerate (test_benchmark.BootstrapTests.test_single_cluster_degenerate) ... ok
+test_passage_group_distinguishes_works_and_locators (test_benchmark.GroupingTests.test_passage_group_distinguishes_works_and_locators) ... ok
+test_passage_group_uses_chimalpahin_collapse (test_benchmark.GroupingTests.test_passage_group_uses_chimalpahin_collapse) ... ok
+test_work_group_collapses_chimalpahin (test_benchmark.GroupingTests.test_work_group_collapses_chimalpahin) ... ok
+test_network_blocked_inside (test_benchmark.HermeticTests.test_network_blocked_inside) ... ok
+test_network_restored_after (test_benchmark.HermeticTests.test_network_restored_after) ... ok
+test_cached_corpus_chrf_equals_direct_score_including_resampled_duplicates (test_benchmark.RetrievalBenchmarkTests.test_cached_corpus_chrf_equals_direct_score_including_resampled_duplicates) ... ok
+test_hashes_rules_and_retrieval_settings (test_benchmark.RetrievalBenchmarkTests.test_hashes_rules_and_retrieval_settings) ... ok
+test_model_cli_keeps_test_default (test_benchmark.RetrievalBenchmarkTests.test_model_cli_keeps_test_default) ... ok
+test_only_train_index_and_all_predictions_with_both_overlap_fields (test_benchmark.RetrievalBenchmarkTests.test_only_train_index_and_all_predictions_with_both_overlap_fields) ... ok
+test_retrieval_cli_needs_no_model_or_torch_and_writes_full_summary_review (test_benchmark.RetrievalBenchmarkTests.test_retrieval_cli_needs_no_model_or_torch_and_writes_full_summary_review) ... ok
+test_train_cannot_be_held_out_split (test_benchmark.RetrievalBenchmarkTests.test_train_cannot_be_held_out_split) ... ok
+test_header_matches_template (test_benchmark.ReviewSheetTests.test_header_matches_template) ... ok
+test_rows_and_candidate (test_benchmark.ReviewSheetTests.test_rows_and_candidate) ... ok
+test_deterministic_full_selection (test_benchmark.SelectionTests.test_deterministic_full_selection) ... ok
+test_eligibility_filter (test_benchmark.SelectionTests.test_eligibility_filter) ... ok
+test_heldout_selection_is_reproducible_and_larger (test_benchmark.SelectionTests.test_heldout_selection_is_reproducible_and_larger) ... ok
+test_limit_interleaves_groups (test_benchmark.SelectionTests.test_limit_interleaves_groups) ... ok
+test_selection_does_not_mutate_input_order (test_benchmark.SelectionTests.test_selection_does_not_mutate_input_order) ... ok
+test_audio_export_needs_separate_permission_and_transcript (test_community.CommunityTests.test_audio_export_needs_separate_permission_and_transcript) ... ok
+test_audio_header_owner_and_cross_variant_access (test_community.CommunityTests.test_audio_header_owner_and_cross_variant_access) ... ok
+test_consent_required_and_training_optional_with_equal_points (test_community.CommunityTests.test_consent_required_and_training_optional_with_equal_points) ... ok
+test_export_requires_approval_text_consent_and_classical_evidence (test_community.CommunityTests.test_export_requires_approval_text_consent_and_classical_evidence) ... ok
+test_historical_impression_cannot_be_exported_as_translation (test_community.CommunityTests.test_historical_impression_cannot_be_exported_as_translation) ... ok
+test_http_session_and_origin_protection (test_community.CommunityTests.test_http_session_and_origin_protection) ... /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/tempfile.py:484: ResourceWarning: Implicitly cleaning up <HTTPError 403: 'Forbidden'>
+  _warnings.warn(self.warn_message, ResourceWarning)
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/tempfile.py:484: ResourceWarning: Implicitly cleaning up <HTTPError 401: 'Unauthorized'>
+  _warnings.warn(self.warn_message, ResourceWarning)
+ok
+test_import_rejects_reserved_evaluation_transactionally (test_community.CommunityTests.test_import_rejects_reserved_evaluation_transactionally) ... ok
+test_observations_preserve_uncertainty_and_require_both_permissions (test_community.CommunityTests.test_observations_preserve_uncertainty_and_require_both_permissions) ... ok
+test_profile_edits_preserve_original_variant_snapshot (test_community.CommunityTests.test_profile_edits_preserve_original_variant_snapshot) ... ok
+test_review_withdrawal_returns_curated_record_to_pending (test_community.CommunityTests.test_review_withdrawal_returns_curated_record_to_pending) ... ok
+test_reviews_are_independent_same_variant_and_not_auto_approval (test_community.CommunityTests.test_reviews_are_independent_same_variant_and_not_auto_approval) ... ok
+test_same_mission_awarded_once_even_with_parallel_retries (test_community.CommunityTests.test_same_mission_awarded_once_even_with_parallel_retries) ... ok
+test_withdrawal_deletes_audio_and_excludes_future_exports (test_community.CommunityTests.test_withdrawal_deletes_audio_and_excludes_future_exports) ... ok
+test_glyph_image_backfill_and_validation (test_corpus.CorpusTests.test_glyph_image_backfill_and_validation) ... ok
+test_glyph_requires_primary_context_and_secondary_is_not_primary (test_corpus.CorpusTests.test_glyph_requires_primary_context_and_secondary_is_not_primary) ... ok
+test_glyph_update_preserves_edits_and_adds_missing_links (test_corpus.CorpusTests.test_glyph_update_preserves_edits_and_adds_missing_links) ... ok
+test_http_shared_origin_session_and_no_admin_route (test_corpus.CorpusTests.test_http_shared_origin_session_and_no_admin_route) ... ok
+test_import_after_withdrawal_and_private_source_hides_dependents (test_corpus.CorpusTests.test_import_after_withdrawal_and_private_source_hides_dependents) ... ok
+test_import_atomic_refs_and_optimistic_edits (test_corpus.CorpusTests.test_import_atomic_refs_and_optimistic_edits) ... ok
+test_migration_preserves_voices_and_all_legacy_ids (test_corpus.CorpusTests.test_migration_preserves_voices_and_all_legacy_ids) ... ok
+test_pending_private_training_permissions_and_retraction (test_corpus.CorpusTests.test_pending_private_training_permissions_and_retraction) ... ok
+test_profile_snapshot_duplicate_and_no_unprivileged_withdrawal (test_corpus.CorpusTests.test_profile_snapshot_duplicate_and_no_unprivileged_withdrawal) ... ok
+test_publication_and_training_are_independent (test_corpus.CorpusTests.test_publication_and_training_are_independent) ... ok
+test_rules_ported_without_faking_general_translation (test_corpus.CorpusTests.test_rules_ported_without_faking_general_translation) ... ok
+test_senses_spelling_and_missing_modern_coverage (test_corpus.CorpusTests.test_senses_spelling_and_missing_modern_coverage) ... ok
+test_training_requires_source_permission_and_historical_check (test_corpus.CorpusTests.test_training_requires_source_permission_and_historical_check) ... ok
+test_urls_and_required_rights_review (test_corpus.CorpusTests.test_urls_and_required_rights_review) ... ok
+test_import_is_additive_and_preserves_local_edits (test_dictionary_import.DictionaryImportTests.test_import_is_additive_and_preserves_local_edits) ... ok
+test_preserves_unicode_and_separates_catalog_normalization (test_dictionary_import.DictionaryImportTests.test_preserves_unicode_and_separates_catalog_normalization) ... ok
+test_skips_generated_entries_and_duplicate_curated_words (test_dictionary_import.DictionaryImportTests.test_skips_generated_entries_and_duplicate_curated_words) ... ok
+test_unknown_format_or_executable_content_fails_closed (test_dictionary_import.DictionaryImportTests.test_unknown_format_or_executable_content_fails_closed) ... ok
+test_batch_group_dependencies_and_fetch_receipt_do_not_break_repeatability (test_editorial_pipeline.EditorialPipelineTests.test_batch_group_dependencies_and_fetch_receipt_do_not_break_repeatability) ... ok
+test_catalog_normalized_head_does_not_replace_written_form_for_priority (test_editorial_pipeline.EditorialPipelineTests.test_catalog_normalized_head_does_not_replace_written_form_for_priority) ... ok
+test_edited_batch_or_changed_catalogue_is_rejected (test_editorial_pipeline.EditorialPipelineTests.test_edited_batch_or_changed_catalogue_is_rejected) ... ok
+test_existing_output_and_protected_paths_are_never_overwritten (test_editorial_pipeline.EditorialPipelineTests.test_existing_output_and_protected_paths_are_never_overwritten) ... ok
+test_group_acceptance_assembles_without_import_or_training (test_editorial_pipeline.EditorialPipelineTests.test_group_acceptance_assembles_without_import_or_training) ... ok
+test_missing_cache_empty_results_and_changed_source_format_are_distinct (test_editorial_pipeline.EditorialPipelineTests.test_missing_cache_empty_results_and_changed_source_format_are_distinct) ... ok
+test_repeat_is_identical_and_does_not_touch_sources_or_live_catalogue (test_editorial_pipeline.EditorialPipelineTests.test_repeat_is_identical_and_does_not_touch_sources_or_live_catalogue) ... ok
+test_stale_or_incomplete_acceptance_and_item_exceptions_fail_closed (test_editorial_pipeline.EditorialPipelineTests.test_stale_or_incomplete_acceptance_and_item_exceptions_fail_closed) ... ok
+test_changed_cache_is_deferred_and_never_accepted_as_exact (test_editorial_release.EditorialReleaseTests.test_changed_cache_is_deferred_and_never_accepted_as_exact) ... ok
+test_interrupted_registration_resumes_from_private_backup (test_editorial_release.EditorialReleaseTests.test_interrupted_registration_resumes_from_private_backup) ... ok
+test_literal_source_check_accepts_only_limited_scope_and_repeats (test_editorial_release.EditorialReleaseTests.test_literal_source_check_accepts_only_limited_scope_and_repeats) ... ok
+test_modified_bundle_dependency_and_source_rules_stop_before_backup (test_editorial_release.EditorialReleaseTests.test_modified_bundle_dependency_and_source_rules_stop_before_backup) ... ok
+test_one_command_cycle_is_bounded_resumable_and_requires_apply (test_editorial_release.EditorialReleaseTests.test_one_command_cycle_is_bounded_resumable_and_requires_apply) ... ok
+test_publication_preserves_private_data_edits_and_repeats_without_duplicates (test_editorial_release.EditorialReleaseTests.test_publication_preserves_private_data_edits_and_repeats_without_duplicates) ... ok
+test_registry_detects_changed_release_file (test_editorial_release.EditorialReleaseTests.test_registry_detects_changed_release_file) ... ok
+test_every_featured_word_has_a_persisted_image_and_source (test_glyph_linker.GlyphLinkerTests.test_every_featured_word_has_a_persisted_image_and_source) ... ok
+test_invalid_dependencies_fail_and_private_source_hides_related_images (test_glyph_linker.GlyphLinkerTests.test_invalid_dependencies_fail_and_private_source_hides_related_images) ... ok
+test_passages_match_the_written_form_not_a_trimmed_catalog_headword (test_glyph_linker.GlyphLinkerTests.test_passages_match_the_written_form_not_a_trimmed_catalog_headword) ... ok
+test_repeat_is_identical_and_never_changes_original_records (test_glyph_linker.GlyphLinkerTests.test_repeat_is_identical_and_never_changes_original_records) ... ok
+test_changed_evaluation_sample_or_format_is_not_comparable (test_laboratory.LaboratoryTests.test_changed_evaluation_sample_or_format_is_not_comparable) ... ok
+test_corrupt_report_is_unavailable (test_laboratory.LaboratoryTests.test_corrupt_report_is_unavailable) ... ok
+test_hashes_distinguish_archived_training_and_current_retrieval (test_laboratory.LaboratoryTests.test_hashes_distinguish_archived_training_and_current_retrieval) ... ok
+test_missing_reports_do_not_claim_progress (test_laboratory.LaboratoryTests.test_missing_reports_do_not_claim_progress) ... ok
+test_changed_source_mixed_variant_bad_span_and_answer_fail_closed (test_learning.LearningTests.test_changed_source_mixed_variant_bad_span_and_answer_fail_closed) ... ok
+test_cloze_rejects_wrong_source_form_and_glyph_rejects_wrong_meaning (test_learning.LearningTests.test_cloze_rejects_wrong_source_form_and_glyph_rejects_wrong_meaning) ... ok
+test_dictionary_expands_with_cited_images_without_training_grants (test_learning.LearningTests.test_dictionary_expands_with_cited_images_without_training_grants) ... ok
+test_flor_update_is_append_only_preserves_passages_and_other_lessons (test_learning.LearningTests.test_flor_update_is_append_only_preserves_passages_and_other_lessons) ... ok
+test_image_migration_preserves_local_image_credit_and_context (test_learning.LearningTests.test_image_migration_preserves_local_image_credit_and_context) ... ok
+test_private_or_withdrawn_dependency_hides_lesson (test_learning.LearningTests.test_private_or_withdrawn_dependency_hides_lesson) ... ok
+test_provenance_link_and_glyph_type_validation (test_learning.LearningTests.test_provenance_link_and_glyph_type_validation) ... ok
+test_selected_passages_preserve_original_and_only_classical (test_learning.LearningTests.test_selected_passages_preserve_original_and_only_classical) ... ok
+test_cli_rerun_preserves_human_decision_file_and_original_lessons (test_lesson_audit.LessonAuditTests.test_cli_rerun_preserves_human_decision_file_and_original_lessons) ... ok
+test_custom_lesson_and_missing_dependency_are_audited_not_hidden (test_lesson_audit.LessonAuditTests.test_custom_lesson_and_missing_dependency_are_audited_not_hidden) ... ok
+test_inventory_distinguishes_images_from_recorded_primary_review (test_lesson_audit.LessonAuditTests.test_inventory_distinguishes_images_from_recorded_primary_review) ... ok
+test_resolution_requires_evidence_and_reopens_when_evidence_changes (test_lesson_audit.LessonAuditTests.test_resolution_requires_evidence_and_reopens_when_evidence_changes) ... ok
+test_snapshot_input_is_validated_and_does_not_change_catalog (test_lesson_audit.LessonAuditTests.test_snapshot_input_is_validated_and_does_not_change_catalog) ... ok
+test_evidence_preserves_raw_text_logical_record_ids_and_distinct_works (test_lexicon_candidates.LexiconCandidateTests.test_evidence_preserves_raw_text_logical_record_ids_and_distinct_works) ... ok
+test_one_work_cannot_be_marked_train_and_heldout (test_lexicon_candidates.LexiconCandidateTests.test_one_work_cannot_be_marked_train_and_heldout) ... ok
+test_original_labels_work_groups_and_frequency_are_required (test_lexicon_candidates.LexiconCandidateTests.test_original_labels_work_groups_and_frequency_are_required) ... ok
+test_prepared_membership_protects_rejected_rows_in_heldout_works (test_lexicon_candidates.LexiconCandidateTests.test_prepared_membership_protects_rejected_rows_in_heldout_works) ... ok
+test_rank_is_stable_and_output_cannot_overwrite_input (test_lexicon_candidates.LexiconCandidateTests.test_rank_is_stable_and_output_cannot_overwrite_input) ... ok
+test_seed_exclusion_does_not_invent_lemmas_or_strip_prefixes (test_lexicon_candidates.LexiconCandidateTests.test_seed_exclusion_does_not_invent_lemmas_or_strip_prefixes) ... ok
+test_stale_prepared_hash_or_text_cannot_assign_membership (test_lexicon_candidates.LexiconCandidateTests.test_stale_prepared_hash_or_text_cannot_assign_membership) ... ok
+test_word_extraction_does_not_create_hyphen_or_digit_fragments (test_lexicon_candidates.LexiconCandidateTests.test_word_extraction_does_not_create_hyphen_or_digit_fragments) ... ok
+test_huel_collapses_to_uel_when_glottal_h_enabled (test_orthography.GatedRuleDisabledTests.test_huel_collapses_to_uel_when_glottal_h_enabled) ... expected failure
+test_audit_aggregates_changes (test_orthography.OrthographyTests.test_audit_aggregates_changes) ... ok
+test_c1_repair_maps_curly_quotes_and_drops_controls (test_orthography.OrthographyTests.test_c1_repair_maps_curly_quotes_and_drops_controls) ... ok
+test_comparison_collapses_variants (test_orthography.OrthographyTests.test_comparison_collapses_variants) ... ok
+test_comparison_idempotent (test_orthography.OrthographyTests.test_comparison_idempotent) ... ok
+test_comparison_v_to_u (test_orthography.OrthographyTests.test_comparison_v_to_u) ... ok
+test_explain_records_changes (test_orthography.OrthographyTests.test_explain_records_changes) ... ok
+test_nfc_composition (test_orthography.OrthographyTests.test_nfc_composition) ... ok
+test_storage_idempotent (test_orthography.OrthographyTests.test_storage_idempotent) ... ok
+test_storage_preserves_diacritics_cedilla_tilde_case (test_orthography.OrthographyTests.test_storage_preserves_diacritics_cedilla_tilde_case) ... ok
+test_bytelevel_ascii_is_not_fallback (test_pipeline.PipelineTests.test_bytelevel_ascii_is_not_fallback) ... ok
+test_canonical_delegates_to_comparison (test_pipeline.PipelineTests.test_canonical_delegates_to_comparison) ... ok
+test_dedup_uses_comparison (test_pipeline.PipelineTests.test_dedup_uses_comparison) ... ok
+test_label_mask_and_no_truncation (test_pipeline.PipelineTests.test_label_mask_and_no_truncation) ... ok
+test_length_ratio_reject (test_pipeline.PipelineTests.test_length_ratio_reject) ... ok
+test_literal_byte_representation_is_not_fallback_when_disabled (test_pipeline.PipelineTests.test_literal_byte_representation_is_not_fallback_when_disabled) ... ok
+test_manifest_records_normalization (test_pipeline.PipelineTests.test_manifest_records_normalization) ... ok
+test_path_fallback (test_pipeline.PipelineTests.test_path_fallback) ... ok
+test_preserves_diacritics_storage (test_pipeline.PipelineTests.test_preserves_diacritics_storage) ... ok
+test_split_and_variant_isolation (test_pipeline.PipelineTests.test_split_and_variant_isolation) ... ok
+test_tokenizer_audit_fake (test_pipeline.PipelineTests.test_tokenizer_audit_fake) ... ok
+test_tokenizer_settings_read_local_json_without_vocab (test_pipeline.PipelineTests.test_tokenizer_settings_read_local_json_without_vocab) ... ok
+test_unknown_tokens_and_roundtrip_warn (test_pipeline.PipelineTests.test_unknown_tokens_and_roundtrip_warn) ... ok
+test_bilingual_bm25_ranking_and_pagination (test_research.ResearchTests.test_bilingual_bm25_ranking_and_pagination) ... ok
+test_complete_archive_and_pagination (test_research.ResearchTests.test_complete_archive_and_pagination) ... ok
+test_context_uses_same_ranking_and_skips_long_or_nonclassical_passages (test_research.ResearchTests.test_context_uses_same_ranking_and_skips_long_or_nonclassical_passages) ... ok
+test_lazy_full_archive_index_and_empty_query_browsing (test_research.ResearchTests.test_lazy_full_archive_index_and_empty_query_browsing) ... ok
+test_ranked_filters_keep_unknown_document_period_and_variant (test_research.ResearchTests.test_ranked_filters_keep_unknown_document_period_and_variant) ... ok
+test_real_tasks_and_correction_keep_original_variant (test_research.ResearchTests.test_real_tasks_and_correction_keep_original_variant) ... ok
+test_safe_historical_equivalences_and_original_passage (test_research.ResearchTests.test_safe_historical_equivalences_and_original_passage) ... ok
+test_search_and_context_preserve_provenance (test_research.ResearchTests.test_search_and_context_preserve_provenance) ... ok
+test_interrupted_save_recovers_previous (test_resume.ResumeTests.test_interrupted_save_recovers_previous) ... ok
+test_new_optimizer_inherits_cursor_after_best_checkpoint (test_resume.ResumeTests.test_new_optimizer_inherits_cursor_after_best_checkpoint) ... Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+Baseline 2.815121650695801
+/Users/pescamil/Downloads/nahuatl-local/.venv/lib/python3.14/site-packages/peft/utils/save_and_load.py:236: UserWarning: Could not find a config file in  - will assume that the vocabulary was not modified.
+  warnings.warn(
+{"initial_adapter": null, "config": {"base_model": "unused", "data": "/var/folders/3x/y_gg7xzs6rd5h6_k5tjwxkqm0000gn/T/tmp22mo5g_m/data", "seed": 42, "steps": 3, "max_length": 16, "learning_rate": 0.001, "rank": 2, "alpha": 4, "gradient_accumulation": 1, "device": "cpu", "threads": 1, "validation_examples": 2, "eval_every": 3, "dtype": "float32", "output": "/var/folders/3x/y_gg7xzs6rd5h6_k5tjwxkqm0000gn/T/tmp22mo5g_m/original"}, "device": "cpu", "torch": "2.9.0", "base_revision": "c1899de289a04d12100db370d81485cdf75e47ca", "trainable_parameters": 112, "usable_training_rows": 6, "validation_rows": 2, "dataset_sha256": {"train": "90cb818a3cdaf168fb9b3025f131b44349d09bb557fba7502f0090721a96b62b", "validation": "90cb818a3cdaf168fb9b3025f131b44349d09bb557fba7502f0090721a96b62b"}, "quality_status": "experimental_not_linguistically_validated", "validation_loss_before": 2.815121650695801, "best_step": 0, "completed_steps": 0, "best_validation_loss": 2.815121650695801, "elapsed_seconds": 0.03, "equivalent_training_passes": 0.0}
+{"step": 1, "loss": 2.815121650695801, "elapsed_seconds": 0.13}
+Validation 3 2.8122100830078125
+Baseline 2.8122100830078125
+/Users/pescamil/Downloads/nahuatl-local/.venv/lib/python3.14/site-packages/peft/utils/save_and_load.py:250: UserWarning: Setting `save_embedding_layers` to `True` as the embedding layer has been resized during finetuning.
+  warnings.warn(
+{"initial_adapter": "/var/folders/3x/y_gg7xzs6rd5h6_k5tjwxkqm0000gn/T/tmp22mo5g_m/original/best", "config": {"base_model": "unused", "data": "/var/folders/3x/y_gg7xzs6rd5h6_k5tjwxkqm0000gn/T/tmp22mo5g_m/data", "seed": 42, "steps": 1, "max_length": 16, "learning_rate": 0.001, "rank": 2, "alpha": 4, "gradient_accumulation": 1, "device": "cpu", "threads": 1, "validation_examples": 2, "eval_every": 3, "dtype": "float32", "output": "/var/folders/3x/y_gg7xzs6rd5h6_k5tjwxkqm0000gn/T/tmp22mo5g_m/new"}, "device": "cpu", "torch": "2.9.0", "base_revision": "c1899de289a04d12100db370d81485cdf75e47ca", "trainable_parameters": 112, "usable_training_rows": 6, "validation_rows": 2, "dataset_sha256": {"train": "90cb818a3cdaf168fb9b3025f131b44349d09bb557fba7502f0090721a96b62b", "validation": "90cb818a3cdaf168fb9b3025f131b44349d09bb557fba7502f0090721a96b62b"}, "quality_status": "experimental_not_linguistically_validated", "inherited_order_from": "/private/var/folders/3x/y_gg7xzs6rd5h6_k5tjwxkqm0000gn/T/tmp22mo5g_m/original/last", "inherited_prior_steps": 3, "inherited_cursor": 3, "validation_loss_before": 2.8122100830078125, "best_step": 0, "completed_steps": 0, "best_validation_loss": 2.8122100830078125, "elapsed_seconds": 0.01, "equivalent_training_passes": 0.0}
+{"step": 1, "loss": 2.812102794647217, "elapsed_seconds": 0.01}
+Validation 1 2.811161518096924
+ok
+test_resumption_same_weights_and_reject_data_change (test_resume.ResumeTests.test_resumption_same_weights_and_reject_data_change) ... Baseline 2.815121650695801
+{"initial_adapter": null, "config": {"base_model": "unused", "data": "/var/folders/3x/y_gg7xzs6rd5h6_k5tjwxkqm0000gn/T/tmpwtzogujy/data", "seed": 42, "steps": 4, "max_length": 16, "learning_rate": 0.001, "rank": 2, "alpha": 4, "gradient_accumulation": 1, "device": "cpu", "threads": 1, "validation_examples": 2, "eval_every": 2, "dtype": "float32", "output": "/var/folders/3x/y_gg7xzs6rd5h6_k5tjwxkqm0000gn/T/tmpwtzogujy/full"}, "device": "cpu", "torch": "2.9.0", "base_revision": "c1899de289a04d12100db370d81485cdf75e47ca", "trainable_parameters": 112, "usable_training_rows": 6, "validation_rows": 2, "dataset_sha256": {"train": "90cb818a3cdaf168fb9b3025f131b44349d09bb557fba7502f0090721a96b62b", "validation": "90cb818a3cdaf168fb9b3025f131b44349d09bb557fba7502f0090721a96b62b"}, "quality_status": "experimental_not_linguistically_validated", "validation_loss_before": 2.815121650695801, "best_step": 0, "completed_steps": 0, "best_validation_loss": 2.815121650695801, "elapsed_seconds": 0.01, "equivalent_training_passes": 0.0}
+{"step": 1, "loss": 2.815121650695801, "elapsed_seconds": 0.01}
+Validation 2 2.8131942749023438
+Validation 4 2.8111934661865234
+Baseline 2.815121650695801
+{"initial_adapter": null, "config": {"base_model": "unused", "data": "/var/folders/3x/y_gg7xzs6rd5h6_k5tjwxkqm0000gn/T/tmpwtzogujy/data", "seed": 42, "steps": 2, "max_length": 16, "learning_rate": 0.001, "rank": 2, "alpha": 4, "gradient_accumulation": 1, "device": "cpu", "threads": 1, "validation_examples": 2, "eval_every": 2, "dtype": "float32", "output": "/var/folders/3x/y_gg7xzs6rd5h6_k5tjwxkqm0000gn/T/tmpwtzogujy/partial"}, "device": "cpu", "torch": "2.9.0", "base_revision": "c1899de289a04d12100db370d81485cdf75e47ca", "trainable_parameters": 112, "usable_training_rows": 6, "validation_rows": 2, "dataset_sha256": {"train": "90cb818a3cdaf168fb9b3025f131b44349d09bb557fba7502f0090721a96b62b", "validation": "90cb818a3cdaf168fb9b3025f131b44349d09bb557fba7502f0090721a96b62b"}, "quality_status": "experimental_not_linguistically_validated", "validation_loss_before": 2.815121650695801, "best_step": 0, "completed_steps": 0, "best_validation_loss": 2.815121650695801, "elapsed_seconds": 0.01, "equivalent_training_passes": 0.0}
+{"step": 1, "loss": 2.815121650695801, "elapsed_seconds": 0.01}
+Validation 2 2.8131942749023438
+{"initial_adapter": null, "config": {"base_model": "unused", "data": "/var/folders/3x/y_gg7xzs6rd5h6_k5tjwxkqm0000gn/T/tmpwtzogujy/data", "seed": 42, "steps": 4, "max_length": 16, "learning_rate": 0.001, "rank": 2, "alpha": 4, "gradient_accumulation": 1, "device": "cpu", "threads": 1, "validation_examples": 2, "eval_every": 2, "dtype": "float32", "output": "/var/folders/3x/y_gg7xzs6rd5h6_k5tjwxkqm0000gn/T/tmpwtzogujy/partial"}, "device": "cpu", "torch": "2.9.0", "base_revision": "c1899de289a04d12100db370d81485cdf75e47ca", "trainable_parameters": 112, "usable_training_rows": 6, "validation_rows": 2, "dataset_sha256": {"train": "90cb818a3cdaf168fb9b3025f131b44349d09bb557fba7502f0090721a96b62b", "validation": "90cb818a3cdaf168fb9b3025f131b44349d09bb557fba7502f0090721a96b62b"}, "quality_status": "experimental_not_linguistically_validated", "validation_loss_before": 2.815121650695801, "best_step": 2, "completed_steps": 2, "best_validation_loss": 2.8131942749023438, "elapsed_seconds": 0.02, "equivalent_training_passes": 0.3333333333333333}
+Validation 4 2.8111934661865234
+ok
+test_time_budget_keeps_initial_checkpoint_and_can_resume (test_resume.ResumeTests.test_time_budget_keeps_initial_checkpoint_and_can_resume) ... Baseline 2.815121650695801
+{"initial_adapter": null, "config": {"base_model": "unused", "data": "/var/folders/3x/y_gg7xzs6rd5h6_k5tjwxkqm0000gn/T/tmprs7qfjvo/data", "output": "/var/folders/3x/y_gg7xzs6rd5h6_k5tjwxkqm0000gn/T/tmprs7qfjvo/run", "seed": 42, "steps": 2, "max_length": 16, "learning_rate": 0.001, "rank": 2, "alpha": 4, "gradient_accumulation": 1, "device": "cpu", "threads": 1, "validation_examples": 1, "eval_every": 1, "dtype": "float32"}, "device": "cpu", "torch": "2.9.0", "base_revision": "c1899de289a04d12100db370d81485cdf75e47ca", "trainable_parameters": 112, "usable_training_rows": 1, "validation_rows": 1, "dataset_sha256": {"train": "11a47f5ce15bb6b0d4147030e68c37af717513570da4fdf88470adb61f61cb67", "validation": "11a47f5ce15bb6b0d4147030e68c37af717513570da4fdf88470adb61f61cb67"}, "quality_status": "experimental_not_linguistically_validated", "validation_loss_before": 2.815121650695801, "best_step": 0, "completed_steps": 0, "best_validation_loss": 2.815121650695801, "elapsed_seconds": 0.01, "equivalent_training_passes": 0.0}
+Presupuesto agotado; checkpoint completo conservado.
+{"initial_adapter": null, "config": {"base_model": "unused", "data": "/var/folders/3x/y_gg7xzs6rd5h6_k5tjwxkqm0000gn/T/tmprs7qfjvo/data", "output": "/var/folders/3x/y_gg7xzs6rd5h6_k5tjwxkqm0000gn/T/tmprs7qfjvo/run", "seed": 42, "steps": 2, "max_length": 16, "learning_rate": 0.001, "rank": 2, "alpha": 4, "gradient_accumulation": 1, "device": "cpu", "threads": 1, "validation_examples": 1, "eval_every": 1, "dtype": "float32"}, "device": "cpu", "torch": "2.9.0", "base_revision": "c1899de289a04d12100db370d81485cdf75e47ca", "trainable_parameters": 112, "usable_training_rows": 1, "validation_rows": 1, "dataset_sha256": {"train": "11a47f5ce15bb6b0d4147030e68c37af717513570da4fdf88470adb61f61cb67", "validation": "11a47f5ce15bb6b0d4147030e68c37af717513570da4fdf88470adb61f61cb67"}, "quality_status": "experimental_not_linguistically_validated", "validation_loss_before": 2.815121650695801, "best_step": 0, "completed_steps": 0, "best_validation_loss": 2.815121650695801, "elapsed_seconds": 0.01, "equivalent_training_passes": 0.0}
+{"step": 1, "loss": 2.815121650695801, "elapsed_seconds": 0.01}
+Validation 1 2.8141555786132812
+Validation 2 2.8131942749023438
+ok
+test_aggressive_nahuatl_equivalences_stay_disabled (test_retrieval.RetrievalTests.test_aggressive_nahuatl_equivalences_stay_disabled) ... ok
+test_benchmark_clean_separation (test_retrieval.RetrievalTests.test_benchmark_clean_separation) ... ok
+test_both_languages_indexed (test_retrieval.RetrievalTests.test_both_languages_indexed) ... ok
+test_full_index_covers_corpus_and_variants (test_retrieval.RetrievalTests.test_full_index_covers_corpus_and_variants) ... ok
+test_nahuatl_normalization_preserves_original_text_and_provenance (test_retrieval.RetrievalTests.test_nahuatl_normalization_preserves_original_text_and_provenance) ... ok
+test_path_indexes_only_that_file (test_retrieval.RetrievalTests.test_path_indexes_only_that_file) ... ok
+test_safe_nahuatl_equivalents_match_in_both_directions (test_retrieval.RetrievalTests.test_safe_nahuatl_equivalents_match_in_both_directions) ... ok
+test_score_and_provenance_preserved (test_retrieval.RetrievalTests.test_score_and_provenance_preserved) ... ok
+test_search_argument_validation (test_retrieval.RetrievalTests.test_search_argument_validation) ... ok
+test_spanish_keeps_its_original_tokenization (test_retrieval.RetrievalTests.test_spanish_keeps_its_original_tokenization) ... ok
+test_variant_filter (test_retrieval.RetrievalTests.test_variant_filter) ... ok
+test_variant_filter_with_historical_equivalence (test_retrieval.RetrievalTests.test_variant_filter_with_historical_equivalence) ... ok
+test_exact_pair_not_certified (test_review.ReviewTests.test_exact_pair_not_certified) ... ok
+test_export_offline (test_review.ReviewTests.test_export_offline) ... ok
+test_no_fake_probabilities_or_acceptance (test_review.ReviewTests.test_no_fake_probabilities_or_acceptance) ... ok
+test_local_lookup_and_origin (test_server.ServerTest.test_local_lookup_and_origin) ... ok
+test_consent_license_iso_source_and_heldout_guards (test_training_data.PairProposalTests.test_consent_license_iso_source_and_heldout_guards) ... ok
+test_pending_pair_is_private_and_not_exported_or_added_to_data (test_training_data.PairProposalTests.test_pending_pair_is_private_and_not_exported_or_added_to_data) ... ok
+test_reviewed_export_and_withdrawal (test_training_data.PairProposalTests.test_reviewed_export_and_withdrawal) ... ok
+test_invalid_dataset_and_pagination (test_training_data.TrainingDataTests.test_invalid_dataset_and_pagination) ... ok
+test_reference_matches_training_hashes_and_seen_cursor (test_training_data.TrainingDataTests.test_reference_matches_training_hashes_and_seen_cursor) ... ok
+test_tampered_reference_is_not_presented_as_training (test_training_data.TrainingDataTests.test_tampered_reference_is_not_presented_as_training) ... ok
+test_apply_changes_only_approved_empty_labels_and_preserves_original (test_variant_audit.VariantAuditTests.test_apply_changes_only_approved_empty_labels_and_preserves_original) ... ok
+test_audit_counts_records_not_physical_lines_and_changes_nothing (test_variant_audit.VariantAuditTests.test_audit_counts_records_not_physical_lines_and_changes_nothing) ... ok
+test_cannot_approve_mixed_source (test_variant_audit.VariantAuditTests.test_cannot_approve_mixed_source) ... ok
+test_cannot_change_candidate_label_without_new_evidence (test_variant_audit.VariantAuditTests.test_cannot_change_candidate_label_without_new_evidence) ... ok
+test_cannot_overwrite_output (test_variant_audit.VariantAuditTests.test_cannot_overwrite_output) ... ok
+test_corpus_fixture_matches_known_total (test_variant_audit.VariantAuditTests.test_corpus_fixture_matches_known_total) ... ok
+test_fingerprint_and_complete_coverage_validated (test_variant_audit.VariantAuditTests.test_fingerprint_and_complete_coverage_validated) ... ok
+test_global_proposal_rejected_for_existing_conflicting_labels (test_variant_audit.VariantAuditTests.test_global_proposal_rejected_for_existing_conflicting_labels) ... ok
+test_mismatched_id_cannot_enter_change_manifest (test_variant_audit.VariantAuditTests.test_mismatched_id_cannot_enter_change_manifest) ... ok
+test_pending_review_creates_no_derived_file (test_variant_audit.VariantAuditTests.test_pending_review_creates_no_derived_file) ... ok
+test_reject_stale_corpus_before_writing (test_variant_audit.VariantAuditTests.test_reject_stale_corpus_before_writing) ... ok
+test_reviewer_required (test_variant_audit.VariantAuditTests.test_reviewer_required) ... ok
+
+----------------------------------------------------------------------
+Ran 175 tests in 49.450s
+
+OK (expected failures=1)

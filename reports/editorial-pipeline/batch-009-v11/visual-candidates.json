@@ -1,0 +1,205 @@
+{
+  "records": [
+    {
+      "association": {
+        "definition_quote": "ala rayz, o enla rayz del arbol, o de cosa semejante.",
+        "evidence_url": "https://gdn.iib.unam.mx/contexto/148573",
+        "matched_term": "arbol",
+        "note": "La definición histórica menciona «arbol». La imagen permite consultar ese referente; no escribe la palabra Inelhuayoc completa ni demuestra su segmentación.",
+        "reference_form_id": "lex-gdn-m2-148573",
+        "reference_glyph_id": "glyph-cuahuitl-mdz7v",
+        "type": "definition_reference"
+      },
+      "context": "Elemento de árbol separado del compuesto Cuauhnahuac.",
+      "evidence": [
+        {
+          "locator": "Códice Mendoza, f. 7v; VLA cuahuitl (Mdz7v)",
+          "source_id": "src-mendoza",
+          "status": "catalog_checked",
+          "via_source_id": "src-vla"
+        },
+        {
+          "locator": "Molina 2 (1571); entrada GDN 148573. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "glyph_status": "proposed",
+      "glyph_type": "element",
+      "id": "glyph-link-v7-sense-gdn-m2-148573",
+      "image": "https://aztecglyphs.wired-humanities.org/sites/default/files/styles/large/public/cuahuitl07vAtomicFromCuauhnahuac.png?itok=vgvh-yrm",
+      "image_credit": "Bodleian Libraries, University of Oxford, MS. Arch. Selden. A. 1. Vía Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed. CC BY-NC-SA 3.0 UK.",
+      "kind": "glyph",
+      "label": "Referencia relacionada: cuahuitl",
+      "manuscript_url": "https://digital.bodleian.ox.ac.uk/objects/2fea788e-2aa2-4f08-b6d9-648c00486220/surfaces/8ed30f47-5928-426d-930b-bcfbddabbc48/",
+      "notes": "Enlace contextual por script determinista. No es una atribución de lectura completa ni una revisión lingüística.",
+      "reading": "cuahuitl",
+      "rights": {
+        "note": "Referencia bibliográfica para consulta. Las imágenes se consultan en el catálogo enlazado; sus derechos y los del comentario se revisan por separado.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-148573",
+      "url": "https://aztecglyphs.wired-humanities.org/content/cuahuitl-mdz7v",
+      "verification": "inherited"
+    },
+    {
+      "association": {
+        "definition_quote": "exe, para oxear perros.",
+        "evidence_url": "https://gdn.iib.unam.mx/contexto/168744",
+        "matched_term": "perros",
+        "note": "La definición histórica menciona «perros». La imagen permite consultar ese referente; no escribe la palabra Xiuh completa ni demuestra su segmentación.",
+        "reference_form_id": "lex-gdn-m2-168744",
+        "reference_glyph_id": "glyph-itzcuintli-mdz16r",
+        "type": "definition_reference"
+      },
+      "context": "Elemento de perro extraído del topónimo Itzcuintepec, Códice Mendoza, f. 16r.",
+      "evidence": [
+        {
+          "locator": "Códice Mendoza, f. 16r; VLA itzcuintli (Mdz16r)",
+          "source_id": "src-mendoza",
+          "status": "catalog_checked",
+          "via_source_id": "src-vla"
+        },
+        {
+          "locator": "Molina 2 (1571); entrada GDN 168744. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        }
+      ],
+      "glyph_status": "proposed",
+      "glyph_type": "element",
+      "id": "glyph-link-v7-sense-gdn-m2-168744",
+      "image": "https://aztecglyphs.wired-humanities.org/sites/default/files/styles/large/public/izcuintli16rdogFromIzcuintepec.jpeg?itok=3n-BVVEb",
+      "image_credit": "Bodleian Libraries, University of Oxford, MS. Arch. Selden. A. 1. Vía Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed. CC BY-NC-SA 3.0 UK.",
+      "kind": "glyph",
+      "label": "Referencia relacionada: itzcuintli",
+      "manuscript_url": "https://digital.bodleian.ox.ac.uk/objects/2fea788e-2aa2-4f08-b6d9-648c00486220/surfaces/bce39198-aa34-41a7-bba6-dee660dcad6d/",
+      "notes": "Enlace contextual por script determinista. No es una atribución de lectura completa ni una revisión lingüística.",
+      "reading": "itzcuintli",
+      "rights": {
+        "note": "Definición breve redactada para este índice y referencia de catálogo. Imagen enlazada bajo CC BY-NC-SA 3.0 UK con atribución; entrenamiento no autorizado en esta ficha.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-168744",
+      "url": "https://aztecglyphs.wired-humanities.org/node/694",
+      "verification": "inherited"
+    },
+    {
+      "association": {
+        "evidence_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv#L9261",
+        "matched_term": "cerro",
+        "note": "Referencia visual de «tepetl» en un ejemplo que contiene esta forma. No representa Yenepa ni es un componente suyo. El glifo y el pasaje proceden de documentos distintos.",
+        "passage": {
+          "document": "Nican Mopohua",
+          "es": "Inmediatamente rodeó el cerro, subió por la cañada a la otra parte, del lado donde sale el sol, va a salir prontamente para llegar a México, que no lo detenga la Señora del Cielo, pensando que por allí donde rodeó no es posible que lo vea, quien está mirando bien a todas partes.",
+          "id": "axolotl-09261",
+          "iso": "nci",
+          "line": 9261,
+          "nah": "Niman ic contlacolhuih in tepetl itzallan ontleccoc yenepa, zentlapal tónnatiuh iquizayampa, quizato inic iziuhca ahzitiuh Méxicco inic ahmo quimotzicalhuiz in ilhuicac zihuapilli, in momati ca in ompa in otlacoloh, ca ahuel quimottiliz, in huel nohuiampa motztilitica.",
+          "sha256": "7e9b5595f0b92d65c992fb75405857e593322a5a18d812778676194f4ab3c069"
+        },
+        "reference_form_id": "lex-gdn-m2-169679",
+        "reference_glyph_id": "glyph-tepetl-mdz32r",
+        "type": "passage_reference"
+      },
+      "context": "Cerro extraído del topónimo Ocotepec, Códice Mendoza, f. 32r.",
+      "evidence": [
+        {
+          "locator": "Códice Mendoza, f. 32r; VLA tepetl (Mdz32r)",
+          "source_id": "src-mendoza",
+          "status": "catalog_checked",
+          "via_source_id": "src-vla"
+        },
+        {
+          "locator": "Molina 2 (1571); entrada GDN 169679. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        },
+        {
+          "locator": "Axolotl, registro CSV 9261",
+          "source_id": "src-axolotl",
+          "status": "inherited"
+        }
+      ],
+      "glyph_status": "proposed",
+      "glyph_type": "element",
+      "id": "glyph-link-v7-sense-gdn-m2-169679",
+      "image": "https://aztecglyphs.wired-humanities.org/sites/default/files/styles/large/public/tepetl32rhill%2CmountainFromOcotepec.png?itok=TZO864x-",
+      "image_credit": "Bodleian Libraries, University of Oxford, MS. Arch. Selden. A. 1. Vía Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed. CC BY-NC-SA 3.0 UK.",
+      "kind": "glyph",
+      "label": "Referencia relacionada: tepetl",
+      "manuscript_url": "https://digital.bodleian.ox.ac.uk/objects/2fea788e-2aa2-4f08-b6d9-648c00486220/surfaces/e2163356-838d-4322-8b8b-c21316332e03/",
+      "notes": "Enlace contextual por script determinista. No es una atribución de lectura completa ni una revisión lingüística.",
+      "reading": "tepetl",
+      "rights": {
+        "note": "Definición breve redactada para este índice y referencia de catálogo. Imagen enlazada bajo CC BY-NC-SA 3.0 UK con atribución; entrenamiento no autorizado en esta ficha.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-169679",
+      "url": "https://aztecglyphs.wired-humanities.org/content/tepetl-mdz32r",
+      "verification": "inherited"
+    },
+    {
+      "association": {
+        "evidence_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv#L2424",
+        "matched_term": "flores",
+        "note": "Referencia visual de «xochitl» en un ejemplo que contiene esta forma. No representa Yexpa ni es un componente suyo. El glifo y el pasaje proceden de documentos distintos.",
+        "passage": {
+          "document": "Nican Mopohua",
+          "es": "Y así como vieron que eran muchas y diversas flores de Castilla, y que no era tiempo en que se dieran, muchísimo se admiraron, y que estuvieran sumamente frescas, tan abiertas, tan olorosas, tan maravillosas. Y quisieron tomar unas cuantas, sacarlas; y por tres veces hicieron el intento de cogerlas, no lo lograron porque cuando las van a tomar, ya no eran flores lo que veían, solamente como si estuvieran pintadas, o bordadas, o cosidas, era lo que veían en la manta.",
+          "id": "axolotl-02424",
+          "iso": "nci",
+          "line": 2424,
+          "nah": "Auh in iuh quittacqueh ca moch caxtillan nepapan xochitl, ihuan in cahmo imochiuhyan in icuac, huel zenca quimahuizohqueh ihuan in quenin huel zenca zeltic, inic cueponqui, inic ahuiayac, inic mahuiztic. Auh quelehuihqueh inic quezquitetl conanazqueh, quiquixtilizqueh, auh yexpa mochiuhqueh inic motlapalohqueh concuizquiah; niman ahuel mochiuhqueh, yehica in icuac quitzitzquiah, ayocmo huel xóchitl in quittayah, iuhquin ma tlahcuilolli, noze tlamachtli, noze tlatzontli in itech quittayah tilmahtli.",
+          "sha256": "c76c61bb3698db40d8dd96c0535dc0265d7cadb4a6c4fa764d0e465f91fe4015"
+        },
+        "reference_form_id": "lex-gdn-m2-169831",
+        "reference_glyph_id": "glyph-xochitl",
+        "type": "passage_reference"
+      },
+      "context": "Elemento floral en el topónimo Xochiacan.",
+      "evidence": [
+        {
+          "locator": "Codex Mendoza, f. 10r. Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed.",
+          "source_id": "src-mendoza",
+          "status": "inherited",
+          "via_source_id": "src-vla"
+        },
+        {
+          "locator": "Molina 2 (1571); entrada GDN 169831. Folio primario pendiente de cotejo.",
+          "source_id": "src-molina",
+          "status": "catalog_checked",
+          "via_source_id": "src-gdn"
+        },
+        {
+          "locator": "Axolotl, registro CSV 2424",
+          "source_id": "src-axolotl",
+          "status": "inherited"
+        }
+      ],
+      "glyph_status": "proposed",
+      "id": "glyph-link-v7-sense-gdn-m2-169831",
+      "image": "https://aztecglyphs.wired-humanities.org/sites/default/files/styles/large/public/xochitl10rflowerFromXochiacan.jpg?itok=v8jxI2UJ",
+      "image_credit": "Bodleian Libraries, University of Oxford, MS. Arch. Selden. A. 1. Via Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed. CC BY-NC-SA 3.0 UK.",
+      "kind": "glyph",
+      "label": "Referencia relacionada: xochitl",
+      "notes": "Enlace contextual por script determinista. No es una atribución de lectura completa ni una revisión lingüística.",
+      "reading": "xochitl",
+      "rights": {
+        "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado.",
+        "public": true,
+        "training": false
+      },
+      "sense_id": "sense-gdn-m2-169831",
+      "url": "https://aztecglyphs.wired-humanities.org/content/xochitl-mdz10r",
+      "verification": "inherited"
+    }
+  ],
+  "schema_version": 1
+}

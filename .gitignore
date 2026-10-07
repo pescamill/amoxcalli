@@ -1,0 +1,44 @@
+.venv/
+__pycache__/
+*.py[cod]
+node_modules/
+.pytest_cache/
+.DS_Store
+.env
+.env.*
+!.env.example
+models/
+
+# Local contributions, audio, downloaded pages, prepared data and backups.
+data/*
+!data/training-reference/
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+*.db
+*.db-wal
+*.db-shm
+
+# Keep reports and best adapters; exclude optimizer/resume state.
+outputs/**/last/
+outputs/**/*.pt
+outputs/**/*.log
+outputs/**/*-writing
+outputs/**/*-previous
+
+*.html
+!nahuatl_local/community_web/*.html
+!nahuatl_local/platform_web/*.html
+*.tmp
+*.lock
+*-writing
+*-previous
+*.zip
+
+# Redundant prototypes; batch-007 remains as an integration fixture.
+reports/editorial-pipeline/batch-001/
+reports/editorial-pipeline/batch-002/
+reports/editorial-pipeline/batch-003/
+reports/editorial-pipeline/batch-004/
+reports/editorial-pipeline/batch-005/
+reports/editorial-pipeline/batch-006/

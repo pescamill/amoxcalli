@@ -1,0 +1,115 @@
+{
+  "rows": 5993,
+  "chars": 993212,
+  "tokens": 392900,
+  "tokens_per_char": 0.3956,
+  "tokens_per_word": 2.8851,
+  "tokenizer_settings": {
+    "model": {
+      "type": "BPE",
+      "dropout": null,
+      "unk_token": null,
+      "continuing_subword_prefix": "",
+      "end_of_word_suffix": "",
+      "fuse_unk": false,
+      "byte_fallback": false,
+      "ignore_merges": false
+    },
+    "pre_tokenizer": {
+      "type": "Sequence",
+      "pretokenizers": [
+        {
+          "type": "Split",
+          "pattern": {
+            "Regex": "(?i:'s|'t|'re|'ve|'m|'ll|'d)|[^\\r\\n\\p{L}\\p{N}]?\\p{L}+|\\p{N}| ?[^\\s\\p{L}\\p{N}]+[\\r\\n]*|\\s*[\\r\\n]+|\\s+(?!\\S)|\\s+"
+          },
+          "behavior": "Isolated",
+          "invert": false
+        },
+        {
+          "type": "ByteLevel",
+          "add_prefix_space": false,
+          "trim_offsets": false,
+          "use_regex": false
+        }
+      ]
+    },
+    "decoder": {
+      "type": "ByteLevel",
+      "add_prefix_space": false,
+      "trim_offsets": false,
+      "use_regex": false
+    },
+    "normalizer": {
+      "type": "NFC"
+    }
+  },
+  "single_character_tokens": 60126,
+  "single_character_token_fraction": 0.153,
+  "explicit_byte_tokens": 0,
+  "byte_fallback_enabled": false,
+  "byte_fallback_tokens": 0,
+  "byte_fallback_fraction": 0.0,
+  "split_character_inventory": [
+    {
+      "char": "",
+      "codepoint": "U+0094",
+      "count": 34
+    },
+    {
+      "char": "",
+      "codepoint": "U+0097",
+      "count": 16
+    },
+    {
+      "char": "",
+      "codepoint": "U+0093",
+      "count": 2
+    },
+    {
+      "char": "",
+      "codepoint": "U+0091",
+      "count": 2
+    }
+  ],
+  "unknown_token_tokens": 0,
+  "roundtrip_failures": 0,
+  "non_ascii_inventory": {
+    "ç": 1493,
+    "ñ": 608,
+    "¿": 292,
+    "é": 229,
+    "”": 145,
+    "“": 144,
+    "ó": 118,
+    "í": 84,
+    "¡": 79,
+    "á": 74,
+    "Ç": 48,
+    "": 34,
+    "ü": 32,
+    "ú": 23,
+    "‘": 16,
+    "": 16,
+    "’": 15,
+    "—": 9,
+    "ë": 4,
+    "": 2,
+    "ô": 2,
+    "": 2,
+    "î": 1,
+    "ò": 1,
+    "": 1,
+    "Í": 1,
+    "ê": 1,
+    "…": 1,
+    "ĭ": 1,
+    "â": 1,
+    "è": 1,
+    "﻿": 1,
+    "à": 1
+  },
+  "diagnostic_note": "Los tokens de un solo carácter y los caracteres divididos en varios tokens describen fragmentación; no demuestran falta de cobertura. El fallback sólo se identifica por tokens <0xHH> con byte_fallback habilitado. Sin configuración, ese dato queda indeterminado.",
+  "warning_reasons": [],
+  "verdict": "ok"
+}

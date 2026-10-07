@@ -1,0 +1,175 @@
+{
+  "id": "flores-cantos",
+  "title": "Flores y cantos más allá del título",
+  "objective": "Reconocer xochitl y cuicatl en nuevos versos y distinguir el texto poético de una glosa de diccionario.",
+  "review_status": "editorial_draft",
+  "target_sense_ids": [
+    "sense-xochitl",
+    "sense-cuicatl"
+  ],
+  "annotation_example_counts": {
+    "sense-cuicatl": 3,
+    "sense-xochitl": 4
+  },
+  "examples": [
+    {
+      "archive_id": "axolotl-13428",
+      "nah": "In xochitl, in cuicatl",
+      "es": "Las flores y los cantos",
+      "document": "Trece Poetas del Mundo Azteca",
+      "locator": "Axolotl, registro CSV 13428; página de la edición primaria pendiente",
+      "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv",
+      "iso": "nci",
+      "source_hash": "5c17a4312de2b191c7294882953f6cb4f6ab868a665c0f44bf1a13ef6aff95d8",
+      "annotations": [
+        {
+          "glyph_id": "glyph-xochitl",
+          "note": "Consulta flor como referencia léxica. Lee también la traducción del fragmento; el plural español no se convierte automáticamente en una regla gramatical.",
+          "quote": "xochitl",
+          "relation": "full_word",
+          "sense_id": "sense-xochitl",
+          "start": 3,
+          "end": 10
+        },
+        {
+          "glyph_id": "glyph-link-v7-sense-cuicatl",
+          "note": "Molina registra canto o canción. La imagen de xochitl ilustra un ejemplo que reúne flores y cantos; no escribe cuicatl.",
+          "quote": "cuicatl",
+          "relation": "full_word",
+          "sense_id": "sense-cuicatl",
+          "start": 15,
+          "end": 22
+        }
+      ],
+      "exercise": {
+        "answer": 0,
+        "blank": "cuicatl",
+        "explanation": "El registro escribe «cuicatl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+        "kind": "cloze",
+        "options": [
+          "cuicatl",
+          "xochitl",
+          "atl"
+        ],
+        "question": "Recupera la forma que aparece en el fragmento original."
+      }
+    },
+    {
+      "archive_id": "axolotl-05366",
+      "nah": "¡ Manel xochitl, manel cuicatl!",
+      "es": "¡ Al menos flores, al menos cantos!",
+      "document": "Trece Poetas del Mundo Azteca",
+      "locator": "Axolotl, registro CSV 5366; página de la edición primaria pendiente",
+      "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv",
+      "iso": "nci",
+      "source_hash": "c2e2d786332031ff1c0445d1b4253c8bbfafda6dcbe0d4187143210577a3565d",
+      "annotations": [
+        {
+          "glyph_id": "glyph-xochitl",
+          "note": "Consulta flor como referencia léxica. Lee también la traducción del fragmento; el plural español no se convierte automáticamente en una regla gramatical.",
+          "quote": "xochitl",
+          "relation": "full_word",
+          "sense_id": "sense-xochitl",
+          "start": 8,
+          "end": 15
+        },
+        {
+          "glyph_id": "glyph-link-v7-sense-cuicatl",
+          "note": "Molina registra canto o canción. La imagen de xochitl ilustra un ejemplo que reúne flores y cantos; no escribe cuicatl.",
+          "quote": "cuicatl",
+          "relation": "full_word",
+          "sense_id": "sense-cuicatl",
+          "start": 23,
+          "end": 30
+        }
+      ],
+      "exercise": {
+        "answer": 1,
+        "blank": "xochitl",
+        "explanation": "El registro escribe «xochitl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+        "kind": "cloze",
+        "options": [
+          "cuicatl",
+          "xochitl",
+          "tototl"
+        ],
+        "question": "Recupera la forma que aparece en el fragmento original."
+      }
+    },
+    {
+      "archive_id": "axolotl-02623",
+      "nah": "Quimoyahua xochitl,on ahuia cuicatl.",
+      "es": "Derrama flores, alegra el canto.",
+      "document": "Trece Poetas del Mundo Azteca",
+      "locator": "Axolotl, registro CSV 2623; página de la edición primaria pendiente",
+      "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv",
+      "iso": "nci",
+      "source_hash": "a6b882c63f3952c2a665f0ac9f612b2048627477803632cc273a67d508557be2",
+      "annotations": [
+        {
+          "glyph_id": "glyph-xochitl",
+          "note": "Consulta flor como referencia léxica. Lee también la traducción del fragmento; el plural español no se convierte automáticamente en una regla gramatical.",
+          "quote": "xochitl",
+          "relation": "full_word",
+          "sense_id": "sense-xochitl",
+          "start": 11,
+          "end": 18
+        },
+        {
+          "glyph_id": "glyph-link-v7-sense-cuicatl",
+          "note": "Molina registra canto o canción. La imagen de xochitl ilustra un ejemplo que reúne flores y cantos; no escribe cuicatl.",
+          "quote": "cuicatl",
+          "relation": "full_word",
+          "sense_id": "sense-cuicatl",
+          "start": 28,
+          "end": 35
+        }
+      ],
+      "exercise": {
+        "answer": 2,
+        "blank": "cuicatl",
+        "explanation": "El registro escribe «cuicatl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+        "kind": "cloze",
+        "options": [
+          "tlalli",
+          "xochitl",
+          "cuicatl"
+        ],
+        "question": "Recupera la forma que aparece en el fragmento original."
+      }
+    },
+    {
+      "archive_id": "axolotl-09215",
+      "nah": "nepapan xochitl",
+      "es": "de variadas flores:",
+      "document": "Nican Mopohua",
+      "locator": "Axolotl, registro CSV 9215; página de la edición primaria pendiente",
+      "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv",
+      "iso": "nci",
+      "source_hash": "4bafa89d7af43d28a32cb5ed0cfea29f3396b0e281e071bbcac48c9d1f3db8f6",
+      "annotations": [
+        {
+          "glyph_id": "glyph-xochitl",
+          "note": "Consulta flor como referencia léxica. Lee también la traducción del fragmento; el plural español no se convierte automáticamente en una regla gramatical.",
+          "quote": "xochitl",
+          "relation": "full_word",
+          "sense_id": "sense-xochitl",
+          "start": 8,
+          "end": 15
+        }
+      ],
+      "exercise": {
+        "answer": 0,
+        "blank": "xochitl",
+        "explanation": "El registro escribe «xochitl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+        "kind": "cloze",
+        "options": [
+          "xochitl",
+          "cuicatl",
+          "atl"
+        ],
+        "question": "Recupera la forma que aparece en el fragmento original."
+      }
+    }
+  ]
+}

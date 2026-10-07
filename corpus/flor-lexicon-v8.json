@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "records": [
+    {
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Definición editorial y referencia de catálogo para consulta; no se concede permiso de entrenamiento. Cotejo primario pendiente."
+      },
+      "id": "sense-cuicatl",
+      "kind": "sense",
+      "label": "canto / canción",
+      "definition": "Canto o canción. En las lecturas se conserva su contexto junto a xochitl; no se sustituye la traducción de poesía por una glosa literal palabra por palabra.",
+      "pos": "noun",
+      "aliases": [
+        "canto",
+        "canción"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-molina",
+          "via_source_id": "src-gdn",
+          "locator": "Molina (1571), parte 2; GDN entrada 38566, Cuicatl",
+          "status": "catalog_checked"
+        },
+        {
+          "source_id": "src-molina",
+          "via_source_id": "src-oregon",
+          "locator": "Molina (1571), parte 2, f. 26v, col. 1, cuicatl; localizador según Oregon",
+          "status": "catalog_checked"
+        }
+      ]
+    },
+    {
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Definición editorial y referencia de catálogo para consulta; no se concede permiso de entrenamiento. Cotejo primario pendiente."
+      },
+      "id": "lex-cuicatl",
+      "kind": "form",
+      "label": "Cuicatl",
+      "written": "Cuicatl",
+      "sense_id": "sense-cuicatl",
+      "period": "historical",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "orthography": "Paleografía de GDN/Molina conservada; la grafía normalizada se registra por separado.",
+      "variation_kind": "historical",
+      "url": "https://gdn.iib.unam.mx/contexto/38566",
+      "evidence": [
+        {
+          "source_id": "src-molina",
+          "via_source_id": "src-gdn",
+          "locator": "Molina (1571), parte 2; GDN entrada 38566, Cuicatl",
+          "status": "catalog_checked"
+        },
+        {
+          "source_id": "src-molina",
+          "via_source_id": "src-oregon",
+          "locator": "Molina (1571), parte 2, f. 26v, col. 1, cuicatl; localizador según Oregon",
+          "status": "catalog_checked"
+        }
+      ],
+      "notes": "Selección exacta del catálogo GDN, 2026-09-30. No se importan las otras entradas devueltas por la búsqueda de prefijo.",
+      "catalog_normalized": "cuicatl",
+      "historical_gloss": "canto, o cancion.",
+      "extraction": {
+        "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=cuicatl&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=50",
+        "sha256": "bfe70cd904ec701c67800cfcc50fa19d9ff4a13530b23d7165319b9ba2f0d6c9",
+        "entry_id": "38566"
+      }
+    },
+    {
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Definición editorial y referencia de catálogo para consulta; no se concede permiso de entrenamiento. Cotejo primario pendiente."
+      },
+      "id": "sense-cacahuaxochitl",
+      "kind": "sense",
+      "label": "flor llamada cacahuaxochitl",
+      "definition": "Nombre floral registrado como «flor de cacao» en el catálogo Oregon. La denominación no identifica por sí sola una especie botánica ni demuestra que sea la flor del árbol del cacao. La traducción heredada «Las flores de cacao» se conserva en el pasaje.",
+      "pos": "noun",
+      "aliases": [
+        "flor de cacao"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-florentino",
+          "via_source_id": "src-oregon",
+          "locator": "Libro 11, f. 188v; entrada cacahuaxochitl del diccionario Oregon",
+          "status": "catalog_checked"
+        },
+        {
+          "source_id": "src-axolotl",
+          "locator": "La tinta negra y roja; registro axolotl-10445",
+          "status": "inherited"
+        }
+      ]
+    },
+    {
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Definición editorial y referencia de catálogo para consulta; no se concede permiso de entrenamiento. Cotejo primario pendiente."
+      },
+      "id": "lex-cacahuaxochitl",
+      "kind": "form",
+      "label": "Cacahuaxochitl",
+      "written": "Cacahuaxochitl",
+      "sense_id": "sense-cacahuaxochitl",
+      "period": "historical",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "orthography": "Forma del registro axolotl-10445; lema cacahuaxochitl en el catálogo Oregon. Se conserva la mayúscula del pasaje.",
+      "variation_kind": "historical",
+      "url": "https://nahuatl.wired-humanities.org/content/cacahuaxochitl",
+      "evidence": [
+        {
+          "source_id": "src-florentino",
+          "via_source_id": "src-oregon",
+          "locator": "Libro 11, f. 188v; entrada cacahuaxochitl del diccionario Oregon",
+          "status": "catalog_checked"
+        },
+        {
+          "source_id": "src-axolotl",
+          "locator": "La tinta negra y roja; registro axolotl-10445",
+          "status": "inherited"
+        }
+      ],
+      "notes": "Entrada propia para la palabra completa. Consulta de catálogo, no identificación botánica ni análisis morfológico certificado."
+    },
+    {
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Imagen enlazada con crédito Library of Congress / WDL y VLA; CC BY-NC-SA 3.0 declarada por VLA. Consulta de catálogo; no se autoriza entrenamiento."
+      },
+      "id": "glyph-cacahuaxochitl-mh885v",
+      "kind": "glyph",
+      "label": "Referencia nominal: Cacahuaxochitl",
+      "sense_id": "sense-cacahuaxochitl",
+      "reading": "Cacahuaxochitl",
+      "glyph_status": "proposed",
+      "glyph_type": "unspecified",
+      "context": "Glifo de un nombre personal: Ágata Cacahuaxochitl, Matrícula de Huexotzinco, f. 885v. El catálogo relaciona la flor y dos granos de cacao con ese nombre. Sirve para comparar el nombre floral; no es la imagen del poema ni acredita la especie de la planta.",
+      "url": "https://aztecglyphs.wired-humanities.org/content/cacahuaxochitl-mh885v",
+      "image": "https://aztecglyphs.wired-humanities.org/sites/default/files/styles/large/public/CacahuaxochitlMH885vSmplxPNFemale.png?itok=2sKl-Dmq",
+      "image_credit": "Library of Congress / World Digital Library. Vía Visual Lexicon of Aztec Hieroglyphs; descripción de Stephanie Wood. CC BY-NC-SA 3.0 según la ficha VLA.",
+      "manuscript_url": "https://www.loc.gov/resource/gdcwdl.wdl_15282/?sp=843&st=image",
+      "evidence": [
+        {
+          "source_id": "src-huexotzinco",
+          "via_source_id": "src-vla",
+          "locator": "Matrícula de Huexotzinco, f. 885v; VLA Cacahuaxochitl (MH885v)",
+          "status": "catalog_checked"
+        }
+      ],
+      "association": {
+        "type": "related_meaning",
+        "note": "Glifo de un nombre personal: Ágata Cacahuaxochitl, Matrícula de Huexotzinco, f. 885v. El catálogo relaciona la flor y dos granos de cacao con ese nombre. Sirve para comparar el nombre floral; no es la imagen del poema ni acredita la especie de la planta.",
+        "evidence_url": "https://aztecglyphs.wired-humanities.org/content/cacahuaxochitl-mh885v",
+        "reference_form_id": "lex-cacahuaxochitl"
+      },
+      "notes": "Catálogo consultado 2026-09-30. La ficha utiliza etiquetas simplex/compound diferentes; se mantiene tipo unspecified hasta cotejo. El vínculo nominal y el uso floral del poema tienen contextos separados."
+    }
+  ]
+}

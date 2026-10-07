@@ -1,0 +1,2987 @@
+{
+  "schema_version": 1,
+  "senses": 523,
+  "with_image": 99,
+  "pending": 424,
+  "unresolved": [
+    {
+      "sense_id": "sense-gdn-m2-147139",
+      "written": "Ecacoatl",
+      "definition": "manga tal.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/147139"
+    },
+    {
+      "sense_id": "sense-gdn-m2-147143",
+      "written": "Ecamecatl",
+      "definition": "platica larga y prolixa de diuersas materias.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/147143"
+    },
+    {
+      "sense_id": "sense-gdn-m2-147144",
+      "written": "Ecamecayutl",
+      "definition": "platica larga.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/147144"
+    },
+    {
+      "sense_id": "sense-gdn-m2-147145",
+      "written": "Ecapaquauhtla",
+      "definition": "monte de laureles.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/147145"
+    },
+    {
+      "sense_id": "sense-gdn-m2-147146",
+      "written": "Ecapatli",
+      "definition": "laurel.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/147146"
+    },
+    {
+      "sense_id": "sense-gdn-m2-147149",
+      "written": "Ecapeyactli",
+      "definition": "ay[]re delgado fresco, y manso.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/147149"
+    },
+    {
+      "sense_id": "sense-gdn-m2-147150",
+      "written": "Ecapitzactli",
+      "definition": "ayre sotil y delgado.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/147150"
+    },
+    {
+      "sense_id": "sense-gdn-m2-147152",
+      "written": "Ecaticpac",
+      "definition": "encima del ayre.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/147152"
+    },
+    {
+      "sense_id": "sense-gdn-m2-147159",
+      "written": "Ecauaztli",
+      "definition": "escalera de palo para alcançar algo.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/147159"
+    },
+    {
+      "sense_id": "sense-gdn-m2-147160",
+      "written": "Ecauhyo",
+      "definition": "cosa que haze sombra.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/147160"
+    },
+    {
+      "sense_id": "sense-gdn-m2-147162",
+      "written": "Ecauhyotl",
+      "definition": "sombra.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/147162"
+    },
+    {
+      "sense_id": "sense-gdn-m2-147164",
+      "written": "Ecauillotitlan",
+      "definition": "ala sombra, o debaxo delasombra",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/147164"
+    },
+    {
+      "sense_id": "sense-gdn-m2-147165",
+      "written": "Ecauillotl",
+      "definition": "sombra.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/147165"
+    },
+    {
+      "sense_id": "sense-gdn-m2-147166",
+      "written": "Ecaxoctli",
+      "definition": "ayre sotil y delgado.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/147166"
+    },
+    {
+      "sense_id": "sense-gdn-m2-147167",
+      "written": "Ece",
+      "definition": "empero, conjunction aduersatiua.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/147167"
+    },
+    {
+      "sense_id": "sense-gdn-m2-147170",
+      "written": "Ecuxoliztli",
+      "definition": "estornudo.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/147170"
+    },
+    {
+      "sense_id": "sense-gdn-m2-147173",
+      "written": "Eecapeyactli",
+      "definition": "ayre delgado y sotil.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/147173"
+    },
+    {
+      "sense_id": "sense-gdn-m2-147176",
+      "written": "Eecatica",
+      "definition": "con ayre.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/147176"
+    },
+    {
+      "sense_id": "sense-gdn-m2-147185",
+      "written": "Eecaxoctli",
+      "definition": "ayre delgado y sotil.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/147185"
+    },
+    {
+      "sense_id": "sense-gdn-m2-147189",
+      "written": "Eecayotica",
+      "definition": "resollando.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/147189"
+    },
+    {
+      "sense_id": "sense-gdn-m2-147190",
+      "written": "Eecayxnamiquiliztli",
+      "definition": "picauiento.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/147190"
+    },
+    {
+      "sense_id": "sense-gdn-m2-147193",
+      "written": "Eexcan",
+      "definition": "é[n] cada tres partes, o atada tres raciones.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/147193"
+    },
+    {
+      "sense_id": "sense-gdn-m2-147194",
+      "written": "Eexpa",
+      "definition": "cada tres vezes.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/147194"
+    },
+    {
+      "sense_id": "sense-gdn-m2-147195",
+      "written": "Eeço",
+      "definition": "cosa llena de sangre.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/147195"
+    },
+    {
+      "sense_id": "sense-gdn-m2-147454",
+      "written": "He",
+      "definition": "o. interjection del que sequexa con dolor.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/147454"
+    },
+    {
+      "sense_id": "sense-gdn-m2-150574",
+      "written": "Maanqui",
+      "definition": "desperezado.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/150574"
+    },
+    {
+      "sense_id": "sense-gdn-m2-150575",
+      "written": "Maatilia",
+      "definition": "cosa correosa.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/150575"
+    },
+    {
+      "sense_id": "sense-gdn-m2-150576",
+      "written": "Maauiltia",
+      "definition": "ramera.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/150576"
+    },
+    {
+      "sense_id": "sense-gdn-m2-150577",
+      "written": "Maauiltiani",
+      "definition": "puta honesta.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/150577"
+    },
+    {
+      "sense_id": "sense-gdn-m2-150584",
+      "written": "Macalomo",
+      "definition": "no sea.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/150584"
+    },
+    {
+      "sense_id": "sense-gdn-m2-150592",
+      "written": "Macaocac",
+      "definition": "ninguno ya. s. se atreua. &c.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/150592"
+    },
+    {
+      "sense_id": "sense-gdn-m2-150593",
+      "written": "Macapactli",
+      "definition": "castañeta.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/150593"
+    },
+    {
+      "sense_id": "sense-gdn-m2-150598",
+      "written": "Macauhqui",
+      "definition": "hendida pared, o cosa semejante.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/150598"
+    },
+    {
+      "sense_id": "sense-gdn-m2-150600",
+      "written": "Macaxoc",
+      "definition": "cosa espantosa, o escandalosa, o delicto grauissimo.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/150600"
+    },
+    {
+      "sense_id": "sense-gdn-m2-150604",
+      "written": "Macaçotlein",
+      "definition": "nosea nada.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/150604"
+    },
+    {
+      "sense_id": "sense-gdn-m2-150606",
+      "written": "Macel",
+      "definition": "siquiera, o alomenos. aduerbio.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/150606"
+    },
+    {
+      "sense_id": "sense-gdn-m2-150611",
+      "written": "Maceuale",
+      "definition": "merecedor de mercedes.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/150611"
+    },
+    {
+      "sense_id": "sense-gdn-m2-150612",
+      "written": "Maceualiztli",
+      "definition": "dança o baile.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/150612"
+    },
+    {
+      "sense_id": "sense-gdn-m2-150614",
+      "written": "Maceuallatoani",
+      "definition": "hablador tal.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/150614"
+    },
+    {
+      "sense_id": "sense-gdn-m2-150615",
+      "written": "Maceuallatoliztli",
+      "definition": "habla desta manera.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/150615"
+    },
+    {
+      "sense_id": "sense-gdn-m2-150616",
+      "written": "Maceualli",
+      "definition": "vasallo.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/150616"
+    },
+    {
+      "sense_id": "sense-gdn-m2-150617",
+      "written": "Maceuallotl",
+      "definition": "vasallaje, o cosa de maceuales.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/150617"
+    },
+    {
+      "sense_id": "sense-gdn-m2-150619",
+      "written": "Maceualquizqui",
+      "definition": "aceuilado assi.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/150619"
+    },
+    {
+      "sense_id": "sense-gdn-m2-150624",
+      "written": "Maceualtic",
+      "definition": "auillanado.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/150624"
+    },
+    {
+      "sense_id": "sense-gdn-m2-150625",
+      "written": "Maceualtiliztli",
+      "definition": "merecimiento o dicha.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/150625"
+    },
+    {
+      "sense_id": "sense-gdn-m2-150627",
+      "written": "Maceualtin",
+      "definition": "vasallos, o pueblo menudo.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/150627"
+    },
+    {
+      "sense_id": "sense-gdn-m2-150629",
+      "written": "Maceuani",
+      "definition": "baylador o dançador.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/150629"
+    },
+    {
+      "sense_id": "sense-gdn-m2-150633",
+      "written": "Machacayolin",
+      "definition": "callos delas manos.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/150633"
+    },
+    {
+      "sense_id": "sense-gdn-m2-150636",
+      "written": "Machachacaliuini",
+      "definition": "el q[ue] tiene callos enlas manos.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/150636"
+    },
+    {
+      "sense_id": "sense-gdn-m2-150637",
+      "written": "Machamo",
+      "definition": "dizqueno, o dizen que no.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/150637"
+    },
+    {
+      "sense_id": "sense-gdn-m2-150639",
+      "written": "Machanqui",
+      "definition": "cosa entretexida desta manera.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/150639"
+    },
+    {
+      "sense_id": "sense-gdn-m2-150640",
+      "written": "Machice",
+      "definition": "elsabidor, o el q[ue] tiene noticia de algo, o persona que de officio le pertenece algo.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/150640"
+    },
+    {
+      "sense_id": "sense-gdn-m2-150641",
+      "written": "Machiceque",
+      "definition": "sabidores tales.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/150641"
+    },
+    {
+      "sense_id": "sense-gdn-m2-150648",
+      "written": "Machiotica",
+      "definition": "figuratiuamente.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/150648"
+    },
+    {
+      "sense_id": "sense-gdn-m2-150654",
+      "written": "Machitla",
+      "definition": "no nada, o ninguna cosa. respondiendo a otro.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/150654"
+    },
+    {
+      "sense_id": "sense-gdn-m2-150657",
+      "written": "Machiueli",
+      "definition": "todo poderoso.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/150657"
+    },
+    {
+      "sense_id": "sense-gdn-m2-151481",
+      "written": "Meeleuia",
+      "definition": "hombre tirano.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/151481"
+    },
+    {
+      "sense_id": "sense-gdn-m2-151905",
+      "written": "Moca",
+      "definition": "de ti.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/151905"
+    },
+    {
+      "sense_id": "sense-gdn-m2-151920",
+      "written": "Mocacaua",
+      "definition": "pausa o interualo delos que cantan, o dan golpes.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/151920"
+    },
+    {
+      "sense_id": "sense-gdn-m2-152224",
+      "written": "Moquechnaua",
+      "definition": "abraçarse dos echando los braços sobre los cuellos.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/152224"
+    },
+    {
+      "sense_id": "sense-gdn-m2-152431",
+      "written": "Moxalneloa",
+      "definition": "henchirse algo de arena. preterito: omoxalnelo.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/152431"
+    },
+    {
+      "sense_id": "sense-gdn-m2-152432",
+      "written": "Moxaua",
+      "definition": "afeitarse al modo antiguo, o pintar la fruta. prete: omoxauh.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/152432"
+    },
+    {
+      "sense_id": "sense-gdn-m2-152526",
+      "written": "Moçaloa",
+      "definition": "pegarse vna cosa con otra. prete: omoçalo.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/152526"
+    },
+    {
+      "sense_id": "sense-gdn-m2-152612",
+      "written": "NAcaayotl",
+      "definition": "caldo o cozina de carne.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/152612"
+    },
+    {
+      "sense_id": "sense-gdn-m2-152624",
+      "written": "Nacacelicazotl",
+      "definition": "el picobaxo d[e]la oreja.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/152624"
+    },
+    {
+      "sense_id": "sense-gdn-m2-152629",
+      "written": "Nacacicninoteca",
+      "definition": "echarse delado.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/152629"
+    },
+    {
+      "sense_id": "sense-gdn-m2-152633",
+      "written": "Nacaetzalli",
+      "definition": "mayz cozido desta manera.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/152633"
+    },
+    {
+      "sense_id": "sense-gdn-m2-152635",
+      "written": "Nacamulli",
+      "definition": "guisado, o potaje de carne.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/152635"
+    },
+    {
+      "sense_id": "sense-gdn-m2-152636",
+      "written": "Nacanamacac",
+      "definition": "carnicero que pesa y vende carne.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/152636"
+    },
+    {
+      "sense_id": "sense-gdn-m2-152638",
+      "written": "Nacanamacoyan",
+      "definition": "carniceria, o lugar donde se vé[n]de carne cozida o cruda.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/152638"
+    },
+    {
+      "sense_id": "sense-gdn-m2-152639",
+      "written": "Nacanauatilizpan",
+      "definition": "carnes tollendas, o antruejo.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/152639"
+    },
+    {
+      "sense_id": "sense-gdn-m2-152640",
+      "written": "Nacapauaxoni",
+      "definition": "olla para cozer carne.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/152640"
+    },
+    {
+      "sense_id": "sense-gdn-m2-152641",
+      "written": "Nacaqualizpan",
+      "definition": "tiempo carnal. s. que sepuede comer carne.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/152641"
+    },
+    {
+      "sense_id": "sense-gdn-m2-152642",
+      "written": "Nacaquimilli",
+      "definition": "empanada grá[n]de, de aue entera, o de cosa semejante.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/152642"
+    },
+    {
+      "sense_id": "sense-gdn-m2-152643",
+      "written": "Nacaquixtiloni",
+      "definition": "garauato para sacar carne dela olla.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/152643"
+    },
+    {
+      "sense_id": "sense-gdn-m2-152644",
+      "written": "Nacatamalli",
+      "definition": "e[m]panada decarne o cosa semejante.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/152644"
+    },
+    {
+      "sense_id": "sense-gdn-m2-152645",
+      "written": "Nacatemi",
+      "definition": "mejorar, encarnar o henchirse de carne la llaga. preterit: onacaten.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/152645"
+    },
+    {
+      "sense_id": "sense-gdn-m2-152646",
+      "written": "Nacatetecqui",
+      "definition": "trinchante.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/152646"
+    },
+    {
+      "sense_id": "sense-gdn-m2-152647",
+      "written": "Nacatl",
+      "definition": "carne.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/152647"
+    },
+    {
+      "sense_id": "sense-gdn-m2-152652",
+      "written": "Nacatlamatqui",
+      "definition": "trinchante.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/152652"
+    },
+    {
+      "sense_id": "sense-gdn-m2-152653",
+      "written": "Nacatlaoyo",
+      "definition": "empanada o pastel de carne.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/152653"
+    },
+    {
+      "sense_id": "sense-gdn-m2-152654",
+      "written": "Nacatlapalollotl",
+      "definition": "salsa para carne.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/152654"
+    },
+    {
+      "sense_id": "sense-gdn-m2-152657",
+      "written": "Nacatlaulli",
+      "definition": "mayz cozido con carne.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/152657"
+    },
+    {
+      "sense_id": "sense-gdn-m2-152658",
+      "written": "Nacatzatza",
+      "definition": "sordo.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/152658"
+    },
+    {
+      "sense_id": "sense-gdn-m2-152660",
+      "written": "Nacatzatzaiuiliztli",
+      "definition": "sordedad.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/152660"
+    },
+    {
+      "sense_id": "sense-gdn-m2-152666",
+      "written": "Nacatzatzatl",
+      "definition": "sordo.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/152666"
+    },
+    {
+      "sense_id": "sense-gdn-m2-152667",
+      "written": "Nacatzatzayotl",
+      "definition": "sordedad.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/152667"
+    },
+    {
+      "sense_id": "sense-gdn-m2-152668",
+      "written": "Nacatzommamalacachiuhcayotl",
+      "definition": "remolinos de cabellos tras las orejas.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/152668"
+    },
+    {
+      "sense_id": "sense-gdn-m2-152669",
+      "written": "Nacatzontetl",
+      "definition": "proteruo e inobediente.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/152669"
+    },
+    {
+      "sense_id": "sense-gdn-m2-152672",
+      "written": "Nacaxaqualoliztli",
+      "definition": "magulladura de carne.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/152672"
+    },
+    {
+      "sense_id": "sense-gdn-m2-152674",
+      "written": "Nacaxaqualtililiztli",
+      "definition": "magulladura tal.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/152674"
+    },
+    {
+      "sense_id": "sense-gdn-m2-152675",
+      "written": "Nacaxua",
+      "definition": "encarnar la llaga. pre: onacaxuac.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/152675"
+    },
+    {
+      "sense_id": "sense-gdn-m2-152676",
+      "written": "Nacayauhyo",
+      "definition": "carne magra.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/152676"
+    },
+    {
+      "sense_id": "sense-gdn-m2-152677",
+      "written": "Nacayo",
+      "definition": "cosa carnuda y gorda.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/152677"
+    },
+    {
+      "sense_id": "sense-gdn-m2-152689",
+      "written": "Nacayotl",
+      "definition": "cosa que pertenece ala carne.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/152689"
+    },
+    {
+      "sense_id": "sense-gdn-m2-152702",
+      "written": "Nacazcolotl",
+      "definition": "agallas para hazer tinta.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/152702"
+    },
+    {
+      "sense_id": "sense-gdn-m2-152703",
+      "written": "Nacazcolotlilli",
+      "definition": "tinta de agallas.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/152703"
+    },
+    {
+      "sense_id": "sense-gdn-m2-152706",
+      "written": "Nacazcuicuitlatl",
+      "definition": "cera delos oydos.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/152706"
+    },
+    {
+      "sense_id": "sense-gdn-m2-152715",
+      "written": "Nacazpatlac",
+      "definition": "orejudo.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/152715"
+    },
+    {
+      "sense_id": "sense-gdn-m2-152717",
+      "written": "Nacazqualoliztli",
+      "definition": "enfermedad tal.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/152717"
+    },
+    {
+      "sense_id": "sense-gdn-m2-152719",
+      "written": "Nacazquauhyotl",
+      "definition": "las ternillas delas orejas.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/152719"
+    },
+    {
+      "sense_id": "sense-gdn-m2-152721",
+      "written": "Nacaztapal",
+      "definition": "sordo.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/152721"
+    },
+    {
+      "sense_id": "sense-gdn-m2-152744",
+      "written": "Nacazveyac",
+      "definition": "orejudo.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/152744"
+    },
+    {
+      "sense_id": "sense-gdn-m2-153060",
+      "written": "Nechca",
+      "definition": "alli. aduerbio.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/153060"
+    },
+    {
+      "sense_id": "sense-gdn-m2-153233",
+      "written": "Necuxoa",
+      "definition": "estornudar. pre: onecuxo",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/153233"
+    },
+    {
+      "sense_id": "sense-gdn-m2-153257",
+      "written": "Neel",
+      "definition": "ser diligente y solicito.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/153257"
+    },
+    {
+      "sense_id": "sense-gdn-m2-154061",
+      "written": "Neua",
+      "definition": "partirme para alguna parte. prete: oneuac.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/154061"
+    },
+    {
+      "sense_id": "sense-gdn-m2-154248",
+      "written": "Nicca",
+      "definition": "ola, hao, oys, para llamar a alguno.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/154248"
+    },
+    {
+      "sense_id": "sense-gdn-m2-154351",
+      "written": "Ninuça",
+      "definition": "embixarse, o embadurnarse. preterito: oninuçac.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/154351"
+    },
+    {
+      "sense_id": "sense-gdn-m2-154475",
+      "written": "Noma",
+      "definition": "mi mano.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/154475"
+    },
+    {
+      "sense_id": "sense-gdn-m2-154476",
+      "written": "Noma",
+      "definition": "aun todauia. aduerbio.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/154476"
+    },
+    {
+      "sense_id": "sense-gdn-m2-154814",
+      "written": "Ocachi",
+      "definition": "otro poco mas.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/154814"
+    },
+    {
+      "sense_id": "sense-gdn-m2-154828",
+      "written": "Ocachic",
+      "definition": "de aqui aun poco.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/154828"
+    },
+    {
+      "sense_id": "sense-gdn-m2-154832",
+      "written": "Ocachitonca",
+      "definition": "de aqui avn poco, o vn breue espacio de tiempo.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/154832"
+    },
+    {
+      "sense_id": "sense-gdn-m2-154839",
+      "written": "Ocayehuatly",
+      "definition": "mirad pues, que esto es. s. lo queyo dezia. &c.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/154839"
+    },
+    {
+      "sense_id": "sense-gdn-m2-154840",
+      "written": "Occacaxtulpa",
+      "definition": "otras cada quinze vezes.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/154840"
+    },
+    {
+      "sense_id": "sense-gdn-m2-154841",
+      "written": "Occammacauhqui",
+      "definition": "cosa hendida en dos partes.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/154841"
+    },
+    {
+      "sense_id": "sense-gdn-m2-154857",
+      "written": "Occaxtulcan",
+      "definition": "en otras quinze partes, o otras qui[n]ze partes, o otras quinze raciones mas.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/154857"
+    },
+    {
+      "sense_id": "sense-gdn-m2-154858",
+      "written": "Occaxtulli",
+      "definition": "otros quinze mas.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/154858"
+    },
+    {
+      "sense_id": "sense-gdn-m2-154859",
+      "written": "Occaxtulpa",
+      "definition": "otras quinze vezes mas.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/154859"
+    },
+    {
+      "sense_id": "sense-gdn-m2-154860",
+      "written": "Occaxtultetl",
+      "definition": "otros quinze.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/154860"
+    },
+    {
+      "sense_id": "sense-gdn-m2-154868",
+      "written": "Occeccan",
+      "definition": "en otra parte o lugar, o otra ració[n] mas",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/154868"
+    },
+    {
+      "sense_id": "sense-gdn-m2-154869",
+      "written": "Occecempoalpa",
+      "definition": "otras cada veinte vezes mas.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/154869"
+    },
+    {
+      "sense_id": "sense-gdn-m2-154874",
+      "written": "Occeceppa",
+      "definition": "otras sendas vezes mas.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/154874"
+    },
+    {
+      "sense_id": "sense-gdn-m2-154877",
+      "written": "Occempoalcan",
+      "definition": "en otras veinte partes.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/154877"
+    },
+    {
+      "sense_id": "sense-gdn-m2-154921",
+      "written": "Occencaye",
+      "definition": "mayormente, o especialmente. aduerbio.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/154921"
+    },
+    {
+      "sense_id": "sense-gdn-m2-155711",
+      "written": "PA",
+      "definition": "es preposicion, la qual siempre se pospone alos nombres, en esta legua y quiere dezir, en.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/155711"
+    },
+    {
+      "sense_id": "sense-gdn-m2-155717",
+      "written": "Pac",
+      "definition": "es preposicion como la de arriba. y quiere dezir, en, o encima.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/155717"
+    },
+    {
+      "sense_id": "sense-gdn-m2-155719",
+      "written": "Pacalli",
+      "definition": "botica, o tienda de medicinas.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/155719"
+    },
+    {
+      "sense_id": "sense-gdn-m2-155728",
+      "written": "Paccaneceuiliztli",
+      "definition": "descanso, o reposo alegre y con contentamiento.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/155728"
+    },
+    {
+      "sense_id": "sense-gdn-m2-155730",
+      "written": "Paccanemiliztli",
+      "definition": "vida alegre y con contentamiento.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/155730"
+    },
+    {
+      "sense_id": "sense-gdn-m2-155733",
+      "written": "Pacha",
+      "definition": "cosa lanuda, o que tienemucho pelo.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/155733"
+    },
+    {
+      "sense_id": "sense-gdn-m2-155736",
+      "written": "Pachichiuhqui",
+      "definition": "boticario.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/155736"
+    },
+    {
+      "sense_id": "sense-gdn-m2-155738",
+      "written": "Pachiuhqui",
+      "definition": "harto de manjares, o satisfecho.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/155738"
+    },
+    {
+      "sense_id": "sense-gdn-m2-155742",
+      "written": "Pachiui",
+      "definition": "hazer assiento el edificio.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/155742"
+    },
+    {
+      "sense_id": "sense-gdn-m2-155753",
+      "written": "Pacholoni",
+      "definition": "subdito, o vasallo.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/155753"
+    },
+    {
+      "sense_id": "sense-gdn-m2-155755",
+      "written": "Pacqui",
+      "definition": "plazentero y alegre.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/155755"
+    },
+    {
+      "sense_id": "sense-gdn-m2-155763",
+      "written": "Pactinemiliztli",
+      "definition": "contentamiento assi.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/155763"
+    },
+    {
+      "sense_id": "sense-gdn-m2-155770",
+      "written": "Palancapuçaualiztli",
+      "definition": "hinchazon de postema.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/155770"
+    },
+    {
+      "sense_id": "sense-gdn-m2-155773",
+      "written": "Palanini",
+      "definition": "cosaque se pudre, o podrece.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/155773"
+    },
+    {
+      "sense_id": "sense-gdn-m2-155774",
+      "written": "Palanqui",
+      "definition": "cosa podrida.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/155774"
+    },
+    {
+      "sense_id": "sense-gdn-m2-155777",
+      "written": "Palaxyoyopeui",
+      "definition": "el que tiene postillas de sarna.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/155777"
+    },
+    {
+      "sense_id": "sense-gdn-m2-155781",
+      "written": "Paleuiloni",
+      "definition": "cosa digna deser fauorecida y ayudada.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/155781"
+    },
+    {
+      "sense_id": "sense-gdn-m2-155782",
+      "written": "Palli",
+      "definition": "barro negro para teñir ropa.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/155782"
+    },
+    {
+      "sense_id": "sense-gdn-m2-155786",
+      "written": "Paltic",
+      "definition": "cosa mojada.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/155786"
+    },
+    {
+      "sense_id": "sense-gdn-m2-155974",
+      "written": "Pauatl",
+      "definition": "fruta.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/155974"
+    },
+    {
+      "sense_id": "sense-gdn-m2-155982",
+      "written": "Paynaliztli",
+      "definition": "el acto decorrer suelta y ligeramente",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/155982"
+    },
+    {
+      "sense_id": "sense-gdn-m2-155984",
+      "written": "Paynani",
+      "definition": "el que corre ligeramente.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/155984"
+    },
+    {
+      "sense_id": "sense-gdn-m2-156482",
+      "written": "QN",
+      "definition": "per abreuiationem. quiere dezir. quitoznequi i. vultdicere.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/156482"
+    },
+    {
+      "sense_id": "sense-gdn-m2-156487",
+      "written": "Qauhtemalacatl",
+      "definition": "rueda d[e] carreta, o carretó[n]cillo",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/156487"
+    },
+    {
+      "sense_id": "sense-gdn-m2-156489",
+      "written": "Qauhtexticatotonti",
+      "definition": "arista, o cosa semejante.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/156489"
+    },
+    {
+      "sense_id": "sense-gdn-m2-156490",
+      "written": "Qauhtlapanani",
+      "definition": "rajador de madero.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/156490"
+    },
+    {
+      "sense_id": "sense-gdn-m2-156491",
+      "written": "Qauhtlapipilhuaztli",
+      "definition": "percha.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/156491"
+    },
+    {
+      "sense_id": "sense-gdn-m2-156492",
+      "written": "Qauhçaloani",
+      "definition": "enxertador.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/156492"
+    },
+    {
+      "sense_id": "sense-gdn-m2-156499",
+      "written": "Qimmochiuaz",
+      "definition": "despues se hara.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/156499"
+    },
+    {
+      "sense_id": "sense-gdn-m2-156500",
+      "written": "Qimotlaneuiani",
+      "definition": "el que se escusa, o echa laculpa de su descuido a otra cosa.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/156500"
+    },
+    {
+      "sense_id": "sense-gdn-m2-156501",
+      "written": "Qimotlatquitiani",
+      "definition": "proprietario, que da a entender que es propria cosa suya alguna hazienda",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/156501"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157228",
+      "written": "Queceuatl",
+      "definition": "cincho de cuero crudio conque juegan ala pelota conlas nalgas, o conlas caderas",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157228"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157241",
+      "written": "Quechacqui",
+      "definition": "deceruigado, o é[n]uarado del pescueço.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157241"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157245",
+      "written": "Quechcotonqui",
+      "definition": "degollado, o descabeçado.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157245"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157249",
+      "written": "Quechilacatztic",
+      "definition": "deceruigado.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157249"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157257",
+      "written": "Quechnacayutl",
+      "definition": "papo de persona papuda.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157257"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157259",
+      "written": "Quechnecuil",
+      "definition": "deceruigado, que trae tuerta la cabeça, y tiene encarado el pescueço.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157259"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157262",
+      "written": "Quechpan",
+      "definition": "to. enlos hombros, o los hombros.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157262"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157267",
+      "written": "Quechpoçaualiztli",
+      "definition": "papera, enfermedad.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157267"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157268",
+      "written": "Quechquemitl",
+      "definition": "papahigo.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157268"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157269",
+      "written": "Quechteltic",
+      "definition": "deceruigado, que tiene enuarado el pescueço.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157269"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157270",
+      "written": "Quechtepulli",
+      "definition": "la ceruiz.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157270"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157272",
+      "written": "Quechtlamachtli",
+      "definition": "cabeçon de camisa labrado.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157272"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157273",
+      "written": "Quechtlantli",
+      "definition": "cuello o pescueço.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157273"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157275",
+      "written": "Quechtli",
+      "definition": "cuello o pescueco.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157275"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157276",
+      "written": "Quechtzatic",
+      "definition": "deceruigado, o enuarado.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157276"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157280",
+      "written": "Quelochachqui",
+      "definition": "cosa marchita.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157280"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157282",
+      "written": "Queloni",
+      "definition": "desencasarse o descó[n]certarse algú[n] huesso. prete: oquelon.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157282"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157283",
+      "written": "Queloniliztli",
+      "definition": "desconcierto de huesso.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157283"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157284",
+      "written": "Quelonqui",
+      "definition": "desencasarse assi algun huesso.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157284"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157292",
+      "written": "Quemachami",
+      "definition": "o dichoso y bienauenturado. s. el que es sancto.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157292"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157293",
+      "written": "Quemachamique",
+      "definition": "odichosos y bie[n]auenturados s. los justos, o aquellos.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157293"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157321",
+      "written": "Quemman",
+      "definition": "algunas vezes, atiempos, o a ratos. vel. aque hora?. preguntando. aduer.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157321"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157620",
+      "written": "TAcayo",
+      "definition": "el caño d[e]la bexiga.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157620"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157628",
+      "written": "Tacatl",
+      "definition": "mata de albahaca, o de cosa semejante.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157628"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157632",
+      "written": "Tacel",
+      "definition": "las liendres.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157632"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157633",
+      "written": "Tachcauh",
+      "definition": "cosa mayor, principal, o primera.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157633"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157634",
+      "written": "Tacol",
+      "definition": "el hombro.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157634"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157635",
+      "written": "Tacolchimal",
+      "definition": "el huesso dela espalda.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157635"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157636",
+      "written": "Tacolnacayo",
+      "definition": "pulpejo del braço.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157636"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157637",
+      "written": "Tacolpan",
+      "definition": "enlos hombros.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157637"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157638",
+      "written": "Tacoltzonyo",
+      "definition": "los pelos de encima delos hó[m]bros.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157638"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157640",
+      "written": "Tamalayutli",
+      "definition": "cierto genero de calabaças comestibles y muy buenas.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157640"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157642",
+      "written": "Tamalli",
+      "definition": "pan de mayz embuelto en hojas y cozido en olla.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157642"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157645",
+      "written": "Tamaçolin",
+      "definition": "sapo.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157645"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157647",
+      "written": "Tanatli",
+      "definition": "espuerta hecha de palmas.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157647"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157648",
+      "written": "Tanatontli",
+      "definition": "esportilla destas palmas.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157648"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157649",
+      "written": "Tanima",
+      "definition": "el alma, o nuestra anima.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157649"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157651",
+      "written": "Tapachtli",
+      "definition": "coral, concha o venera.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157651"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157654",
+      "written": "Tapalcacopichiualoyan",
+      "definition": "lugar dó[n]de hazé[n] tejas.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157654"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157655",
+      "written": "Tapalcacopichiuhqui",
+      "definition": "tejero que haze tejas.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157655"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157656",
+      "written": "Tapalcacopichtli",
+      "definition": "teja de barro.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157656"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157658",
+      "written": "Tapalcatemalacatl",
+      "definition": "tejo para jugar.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157658"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157660",
+      "written": "Tapalcayoa",
+      "definition": "estar algun lugar lleno de tejas quebradas, o de caxcos de vasijas quebradas. pre: otapalcayoac.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157660"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157663",
+      "written": "Tapayaxin",
+      "definition": "cierta sauandija como salamá[n]quesa.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157663"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157666",
+      "written": "Tapayollalaçaliztli",
+      "definition": "juego tal.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157666"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157667",
+      "written": "Tapayollalaçani",
+      "definition": "jugador assi.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157667"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157670",
+      "written": "Tapayoltic",
+      "definition": "cosa redonda como pelota, o bola.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157670"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157674",
+      "written": "Tapaçulli",
+      "definition": "nido de aues.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157674"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157676",
+      "written": "Tata",
+      "definition": "por tayta, padre (dize el niño).",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157676"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157684",
+      "written": "Tatapaliuiliztli",
+      "definition": "ronchas.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157684"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157685",
+      "written": "Tatapatli",
+      "definition": "manta gruessa, traida y remendada.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157685"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157686",
+      "written": "Tatapaua",
+      "definition": "vestido desta manta.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157686"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157688",
+      "written": "Taten",
+      "definition": "los piojos dela cabeça.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157688"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157691",
+      "written": "Tatlia",
+      "definition": "bigotes dela barba.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157691"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157692",
+      "written": "Tauh",
+      "definition": "la mollera dela cabeça.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157692"
+    },
+    {
+      "sense_id": "sense-gdn-m2-157694",
+      "written": "Taxixtecon",
+      "definition": "bexiga dela orina.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/157694"
+    },
+    {
+      "sense_id": "sense-gdn-m2-161535",
+      "written": "Titi",
+      "definition": "el vientre o la barriga.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/161535"
+    },
+    {
+      "sense_id": "sense-gdn-m2-161567",
+      "written": "Titocacamanalhuia",
+      "definition": "echarse pullas, o dezir gracias y donayres los vnos alos otros.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/161567"
+    },
+    {
+      "sense_id": "sense-gdn-m2-161572",
+      "written": "Titomacaua",
+      "definition": "despartirse los que riñen, o apartarse y diuidirse vnos de otros. p: otitomacauhq[ue].",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/161572"
+    },
+    {
+      "sense_id": "sense-gdn-m2-166797",
+      "written": "Tocacamanalhuia",
+      "definition": "echarse pullas los vnos alos otros passando tiempo. pr: otocacamanalhuique",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/166797"
+    },
+    {
+      "sense_id": "sense-gdn-m2-166919",
+      "written": "Toma",
+      "definition": "lamano o los braços.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/166919"
+    },
+    {
+      "sense_id": "sense-gdn-m2-167828",
+      "written": "Vacaliuhqui",
+      "definition": "encogido de neruios, o tullido",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/167828"
+    },
+    {
+      "sense_id": "sense-gdn-m2-167830",
+      "written": "Vacaliuiliztli",
+      "definition": "encogimiento tal.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/167830"
+    },
+    {
+      "sense_id": "sense-gdn-m2-167831",
+      "written": "Vacalli",
+      "definition": "angarillas para lleuar carga en las espaldas.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/167831"
+    },
+    {
+      "sense_id": "sense-gdn-m2-167834",
+      "written": "Vacaltic",
+      "definition": "cosa acanalada.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/167834"
+    },
+    {
+      "sense_id": "sense-gdn-m2-167839",
+      "written": "Vacqui",
+      "definition": "cosa seca, enxuta, o emmagrecida.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/167839"
+    },
+    {
+      "sense_id": "sense-gdn-m2-167844",
+      "written": "Valcholo",
+      "definition": "huidizo.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/167844"
+    },
+    {
+      "sense_id": "sense-gdn-m2-167849",
+      "written": "Valchololiztli",
+      "definition": "huyda de alguna parte.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/167849"
+    },
+    {
+      "sense_id": "sense-gdn-m2-167856",
+      "written": "Vallalaztli",
+      "definition": "cosa desechada, despedida o menospreciada.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/167856"
+    },
+    {
+      "sense_id": "sense-gdn-m2-167857",
+      "written": "Vallaliztli",
+      "definition": "aduenimiento o venida.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/167857"
+    },
+    {
+      "sense_id": "sense-gdn-m2-167867",
+      "written": "Valmopiloa",
+      "definition": "colgarse algo hazia nosotros. p: oualmopilo.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/167867"
+    },
+    {
+      "sense_id": "sense-gdn-m2-167870",
+      "written": "Valmouica",
+      "definition": "venir alguna persona honrada. p: oualmouicac. es reuerencial.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/167870"
+    },
+    {
+      "sense_id": "sense-gdn-m2-167871",
+      "written": "Valmoyelti",
+      "definition": "fugitiuo o huidizo.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/167871"
+    },
+    {
+      "sense_id": "sense-gdn-m2-167884",
+      "written": "Valquiçaliztli",
+      "definition": "salida tal.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/167884"
+    },
+    {
+      "sense_id": "sense-gdn-m2-167886",
+      "written": "Valtecalaquiani",
+      "definition": "conquistador tal.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/167886"
+    },
+    {
+      "sense_id": "sense-gdn-m2-167887",
+      "written": "Valtecalaquiliztli",
+      "definition": "conquista assi.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/167887"
+    },
+    {
+      "sense_id": "sense-gdn-m2-167889",
+      "written": "Valtemoliztli",
+      "definition": "descendimiento assi.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/167889"
+    },
+    {
+      "sense_id": "sense-gdn-m2-167891",
+      "written": "Valueuetzi",
+      "definition": "nones.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/167891"
+    },
+    {
+      "sense_id": "sense-gdn-m2-167892",
+      "written": "Vapactia",
+      "definition": "endurecerse, empedernirse o pararse aspera e yerta alguna cosa. prete: ouapactiac.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/167892"
+    },
+    {
+      "sense_id": "sense-gdn-m2-167893",
+      "written": "Vapactic",
+      "definition": "cosa endurecida assi, o cosa dura desta manera.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/167893"
+    },
+    {
+      "sense_id": "sense-gdn-m2-167894",
+      "written": "Vapactiliztli",
+      "definition": "endurecimiento tal.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/167894"
+    },
+    {
+      "sense_id": "sense-gdn-m2-167896",
+      "written": "Vapalcalquatl",
+      "definition": "techo de çaquiçami.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/167896"
+    },
+    {
+      "sense_id": "sense-gdn-m2-167897",
+      "written": "Vapalitl",
+      "definition": "tabla o viga pequeña.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/167897"
+    },
+    {
+      "sense_id": "sense-gdn-m2-167898",
+      "written": "Vapallacuilolli",
+      "definition": "cosa pintada en tabla.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/167898"
+    },
+    {
+      "sense_id": "sense-gdn-m2-167899",
+      "written": "Vapalli",
+      "definition": "tabla o viga pequeña.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/167899"
+    },
+    {
+      "sense_id": "sense-gdn-m2-167900",
+      "written": "Vapalpan",
+      "definition": "encima o sobre la tabla.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/167900"
+    },
+    {
+      "sense_id": "sense-gdn-m2-167901",
+      "written": "Vapaltontli",
+      "definition": "tablilla.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/167901"
+    },
+    {
+      "sense_id": "sense-gdn-m2-167904",
+      "written": "Vapaua",
+      "definition": "endurecerse o pararse aspera o yerta alguna cosa. prete: ouapauac.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/167904"
+    },
+    {
+      "sense_id": "sense-gdn-m2-167909",
+      "written": "Vapauac",
+      "definition": "cosa aspera y crudia, o cosa enuarada y é[n]cogida de neruios, o cosa fuerte y firme.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/167909"
+    },
+    {
+      "sense_id": "sense-gdn-m2-167910",
+      "written": "Vapauaca",
+      "definition": "fuertemente.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/167910"
+    },
+    {
+      "sense_id": "sense-gdn-m2-167911",
+      "written": "Vapaualiztli",
+      "definition": "fortaleza, aspereza, calambre, enuaramiento, encogimiento de neruios, o dolor de hijada.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/167911"
+    },
+    {
+      "sense_id": "sense-gdn-m2-167912",
+      "written": "Vapauiztli",
+      "definition": "pasmo, enuaramiento, o calambre.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/167912"
+    },
+    {
+      "sense_id": "sense-gdn-m2-167914",
+      "written": "Vaquiliztli",
+      "definition": "el acto de secarse desta manera. &c.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/167914"
+    },
+    {
+      "sense_id": "sense-gdn-m2-167920",
+      "written": "Vaualca",
+      "definition": "hazer gorgoritas la redoma, o cosa semejante. preteri: ouaualcac.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/167920"
+    },
+    {
+      "sense_id": "sense-gdn-m2-167926",
+      "written": "Vauapaua",
+      "definition": "gafo, o tollido.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/167926"
+    },
+    {
+      "sense_id": "sense-gdn-m2-167939",
+      "written": "Vccan",
+      "definition": "en dos lugares, o endos partes.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/167939"
+    },
+    {
+      "sense_id": "sense-gdn-m2-167940",
+      "written": "Vccauitiani",
+      "definition": "cosa aneja o que dura mucho tiempo.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/167940"
+    },
+    {
+      "sense_id": "sense-gdn-m2-168547",
+      "written": "Xacaltontli",
+      "definition": "choçuela o bohio pequeño.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/168547"
+    },
+    {
+      "sense_id": "sense-gdn-m2-168549",
+      "written": "Xalla",
+      "definition": "arenal.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/168549"
+    },
+    {
+      "sense_id": "sense-gdn-m2-168551",
+      "written": "Xallo",
+      "definition": "cosa llena de arena.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/168551"
+    },
+    {
+      "sense_id": "sense-gdn-m2-168552",
+      "written": "Xalloa",
+      "definition": "henchirse algo de arena. p: oxalloac.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/168552"
+    },
+    {
+      "sense_id": "sense-gdn-m2-168553",
+      "written": "Xalpan",
+      "definition": "arenal.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/168553"
+    },
+    {
+      "sense_id": "sense-gdn-m2-168554",
+      "written": "Xalpicilli",
+      "definition": "arena menuda.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/168554"
+    },
+    {
+      "sense_id": "sense-gdn-m2-168558",
+      "written": "Xaltetla",
+      "definition": "lugar donde  [h]ay muchas chinas o pedrezuelas.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/168558"
+    },
+    {
+      "sense_id": "sense-gdn-m2-168559",
+      "written": "Xaltomatl",
+      "definition": "[c]ierta fruta como tomates.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/168559"
+    },
+    {
+      "sense_id": "sense-gdn-m2-168560",
+      "written": "Xaltoçan",
+      "definition": "cierta rata o raton.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/168560"
+    },
+    {
+      "sense_id": "sense-gdn-m2-168561",
+      "written": "Xamacalli",
+      "definition": "molde para hazer adobes.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/168561"
+    },
+    {
+      "sense_id": "sense-gdn-m2-168565",
+      "written": "Xamantiuetzi",
+      "definition": "caxcarse o quebrarse el vaso de xical que cae de alto. p: oxamantiuetz.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/168565"
+    },
+    {
+      "sense_id": "sense-gdn-m2-168567",
+      "written": "Xamixcalchiualoyan",
+      "definition": "lugar donde hazen ladrillos.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/168567"
+    },
+    {
+      "sense_id": "sense-gdn-m2-168571",
+      "written": "Xamixcaltepantli",
+      "definition": "pared de ladrillos.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/168571"
+    },
+    {
+      "sense_id": "sense-gdn-m2-168572",
+      "written": "Xamixcaltexcalli",
+      "definition": "horno de ladrillos.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/168572"
+    },
+    {
+      "sense_id": "sense-gdn-m2-168573",
+      "written": "Xamixcoyan",
+      "definition": "lugar donde cuezen ladrillos.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/168573"
+    },
+    {
+      "sense_id": "sense-gdn-m2-168578",
+      "written": "Xapottimotlalia",
+      "definition": "abrirse o romperse algo assi.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/168578"
+    },
+    {
+      "sense_id": "sense-gdn-m2-168584",
+      "written": "Xaualli",
+      "definition": "afeite tal.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/168584"
+    },
+    {
+      "sense_id": "sense-gdn-m2-168585",
+      "written": "Xaualquilitl",
+      "definition": "yerua comestible que se cria en lagunas.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/168585"
+    },
+    {
+      "sense_id": "sense-gdn-m2-168587",
+      "written": "Xauhqui",
+      "definition": "yndia afeitada a su modo antiguo.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/168587"
+    },
+    {
+      "sense_id": "sense-gdn-m2-168589",
+      "written": "Xaxaltic",
+      "definition": "cosa rala, assi como manta, estera o cosa semejante.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/168589"
+    },
+    {
+      "sense_id": "sense-gdn-m2-168590",
+      "written": "Xaxamacaliztli",
+      "definition": "estruendo de cosas quebradas.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/168590"
+    },
+    {
+      "sense_id": "sense-gdn-m2-168591",
+      "written": "Xaxamacatimani",
+      "definition": "batir las olas, o quebrar en las rocas. p: oxaxamacatimanca.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/168591"
+    },
+    {
+      "sense_id": "sense-gdn-m2-168595",
+      "written": "Xaxamaquiliztli",
+      "definition": "estruendo o ruydo de vasos quebrados.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/168595"
+    },
+    {
+      "sense_id": "sense-gdn-m2-168599",
+      "written": "Xaxaqualtic",
+      "definition": "carne o fruta magullada, o cosa semejante.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/168599"
+    },
+    {
+      "sense_id": "sense-gdn-m2-168603",
+      "written": "Xayacatl",
+      "definition": "cara o rostro, caratula o maxcara.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/168603"
+    },
+    {
+      "sense_id": "sense-gdn-m2-168604",
+      "written": "Xayacatlachichiualli",
+      "definition": "caratula o maxcara.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/168604"
+    },
+    {
+      "sense_id": "sense-gdn-m2-168607",
+      "written": "Xayocuitlatl",
+      "definition": "hezes o assiento de cosas liquidas.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/168607"
+    },
+    {
+      "sense_id": "sense-gdn-m2-168609",
+      "written": "Xayotl",
+      "definition": "hezes.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/168609"
+    },
+    {
+      "sense_id": "sense-gdn-m2-168612",
+      "written": "Xeliuhca",
+      "definition": "distinctamente. aduer. o apartadamé[n]te.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/168612"
+    },
+    {
+      "sense_id": "sense-gdn-m2-168614",
+      "written": "Xeliuhqui",
+      "definition": "cosa partida o hendida por medio.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/168614"
+    },
+    {
+      "sense_id": "sense-gdn-m2-168615",
+      "written": "Xeliui",
+      "definition": "partirse o henderse por medio. pre: oxeliuh.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/168615"
+    },
+    {
+      "sense_id": "sense-gdn-m2-168616",
+      "written": "Xeliuini",
+      "definition": "cosa partible assi.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/168616"
+    },
+    {
+      "sense_id": "sense-gdn-m2-168618",
+      "written": "Xeloloni",
+      "definition": "cosa que se puede partir desta manera.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/168618"
+    },
+    {
+      "sense_id": "sense-gdn-m2-168621",
+      "written": "Xexeliui",
+      "definition": "diuidirse o desparramarse alguna cosa. p: oxexeliuh.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/168621"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169190",
+      "written": "Yacacelicayotl",
+      "definition": "el freno de las narizes.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169190"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169191",
+      "written": "Yacacentli",
+      "definition": "cierto pato, o anade.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169191"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169195",
+      "written": "Yacachto",
+      "definition": "primero, o primeramente. aduerbio.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169195"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169196",
+      "written": "Yacacocotoctic",
+      "definition": "desnarigado.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169196"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169199",
+      "written": "Yacacuicuitla",
+      "definition": "mocoso.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169199"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169202",
+      "written": "Yacacuitlapol",
+      "definition": "mocoso.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169202"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169205",
+      "written": "Yacacuitlatl",
+      "definition": "mocos.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169205"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169207",
+      "written": "Yacacuitle",
+      "definition": "mocoso.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169207"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169209",
+      "written": "Yacaiyayaliztli",
+      "definition": "hedor de narizes.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169209"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169211",
+      "written": "Yacametlapil",
+      "definition": "narigudo de largas narizes.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169211"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169215",
+      "written": "Yacaocuilin",
+      "definition": "vnas puntillas como demateria que sobre la punta de la nariz apretandolas parecé[n]",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169215"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169216",
+      "written": "Yacaololtic",
+      "definition": "nariz rom[a].",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169216"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169217",
+      "written": "Yacapantli",
+      "definition": "primogenito, o primogenita.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169217"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169218",
+      "written": "Yacapiaztic",
+      "definition": "hombre de nariz derecha y larga.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169218"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169220",
+      "written": "Yacapitzauac",
+      "definition": "cosa ahusada.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169220"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169223",
+      "written": "Yacapotoniliztli",
+      "definition": "hedor de narizes.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169223"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169224",
+      "written": "Yacapuztecqui",
+      "definition": "desnarigado.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169224"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169227",
+      "written": "Yacaquatic",
+      "definition": "desnarigado.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169227"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169228",
+      "written": "Yacaquauhyotl",
+      "definition": "lo largo dela nariz.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169228"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169230",
+      "written": "Yacaquiquin",
+      "definition": "gangoso.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169230"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169233",
+      "written": "Yacaquiquintic",
+      "definition": "gangoso.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169233"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169234",
+      "written": "Yacatapayultic",
+      "definition": "narizromo.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169234"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169235",
+      "written": "Yacatecuinauiliztli",
+      "definition": "embotadura de punta.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169235"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169236",
+      "written": "Yacatecuintic",
+      "definition": "punta embotada.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169236"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169237",
+      "written": "Yacatemimiltic",
+      "definition": "persona de nariz fornida y bien hecha.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169237"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169238",
+      "written": "Yacateponauiliztli",
+      "definition": "embotadura de punta.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169238"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169239",
+      "written": "Yacatepontic",
+      "definition": "embotada punta.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169239"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169242",
+      "written": "Yacatetepunauiliztli",
+      "definition": "embotamiento de punta.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169242"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169244",
+      "written": "Yacatetepuntic",
+      "definition": "embotada punta.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169244"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169250",
+      "written": "Yacatl",
+      "definition": "nariz, o punta de algo.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169250"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169252",
+      "written": "Yacatolli",
+      "definition": "mocos.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169252"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169253",
+      "written": "Yacatomauac",
+      "definition": "hombre narigudo, o de gordas narizes.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169253"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169254",
+      "written": "Yacatomoliuhcayotl",
+      "definition": "lo alto delas ventanas dela nariz, o la xeta dellas.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169254"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169255",
+      "written": "Yacatotona",
+      "definition": "gorgojo.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169255"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169256",
+      "written": "Yacatotontli",
+      "definition": "gorgojuelo.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169256"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169257",
+      "written": "Yacatototl",
+      "definition": "gorgojo.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169257"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169258",
+      "written": "Yacattializtli",
+      "definition": "adelantamié[n]to del que va en la delantera.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169258"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169261",
+      "written": "Yacatto",
+      "definition": "primero o primeramente. aduerbio.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169261"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169263",
+      "written": "Yacatzaptic",
+      "definition": "agudo de punta.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169263"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169264",
+      "written": "Yacatzapticayutl",
+      "definition": "agudeza de punta.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169264"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169265",
+      "written": "Yacatzotecuicuitlapul",
+      "definition": "mocoso.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169265"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169266",
+      "written": "Yacatzuntli",
+      "definition": "pelos delas narizes.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169266"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169267",
+      "written": "Yacauictic",
+      "definition": "narigudo de largas yanchas narizes.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169267"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169269",
+      "written": "Yacauitzauhcayotl",
+      "definition": "agudeza de punta.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169269"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169270",
+      "written": "Yacauitzauhqui",
+      "definition": "cosa que tiene aguda la punta.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169270"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169272",
+      "written": "Yacauitztic",
+      "definition": "cosa aguda de pú[n]ta, o puntiaguda, o hombre narigudo de agudas narizes.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169272"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169275",
+      "written": "Yacauitzticayutl",
+      "definition": "agudeza de punta.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169275"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169424",
+      "written": "Yaualiuhcayotl",
+      "definition": "redondez de algo.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169424"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169426",
+      "written": "Yaualiui",
+      "definition": "hazerse redonda la mata de mayz antes que haga caña. pr: oyaualiuh.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169426"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169427",
+      "written": "Yaualli",
+      "definition": "assentadero de olla, o de tinaja hecho desparto o de cosa semejante.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169427"
+    },
+    {
+      "sense_id": "sense-gdn-m2-170791",
+      "written": "çacachi",
+      "definition": "echa vn poco mas, o dame otro poco.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/170791"
+    },
+    {
+      "sense_id": "sense-gdn-m2-170792",
+      "written": "çacachimalli",
+      "definition": "ramada para sombra.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/170792"
+    },
+    {
+      "sense_id": "sense-gdn-m2-170793",
+      "written": "çacachiquilichtli",
+      "definition": "cigarra.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/170793"
+    },
+    {
+      "sense_id": "sense-gdn-m2-170795",
+      "written": "çacamecatl",
+      "definition": "soga desparto, ode cosa semejante.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/170795"
+    },
+    {
+      "sense_id": "sense-gdn-m2-170801",
+      "written": "çacanoualli",
+      "definition": "grama, yerua conocida.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/170801"
+    },
+    {
+      "sense_id": "sense-gdn-m2-170802",
+      "written": "çacanouallo",
+      "definition": "lugar lleno de grama.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/170802"
+    },
+    {
+      "sense_id": "sense-gdn-m2-170804",
+      "written": "çacapic",
+      "definition": "roçador o segador de yerua.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/170804"
+    },
+    {
+      "sense_id": "sense-gdn-m2-170805",
+      "written": "çacapiliztli",
+      "definition": "roça o segadura de yerua.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/170805"
+    },
+    {
+      "sense_id": "sense-gdn-m2-170806",
+      "written": "çacapilli",
+      "definition": "la carnaza del medio dela natura dela muger.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/170806"
+    },
+    {
+      "sense_id": "sense-gdn-m2-170807",
+      "written": "çacapini",
+      "definition": "roçador, o segador de yerua.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/170807"
+    },
+    {
+      "sense_id": "sense-gdn-m2-170809",
+      "written": "çacatanatli",
+      "definition": "espuerta de esparto.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/170809"
+    },
+    {
+      "sense_id": "sense-gdn-m2-170810",
+      "written": "çacatextli",
+      "definition": "paja de trigo para bestias.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/170810"
+    },
+    {
+      "sense_id": "sense-gdn-m2-170812",
+      "written": "çacatla",
+      "definition": "yeruaçal, o prado.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/170812"
+    },
+    {
+      "sense_id": "sense-gdn-m2-170813",
+      "written": "çacatzontetl",
+      "definition": "cesped.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/170813"
+    },
+    {
+      "sense_id": "sense-gdn-m2-170815",
+      "written": "çacauitzo",
+      "definition": "lugar lleno de grama.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/170815"
+    },
+    {
+      "sense_id": "sense-gdn-m2-170816",
+      "written": "çacayaman",
+      "definition": "heno.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/170816"
+    },
+    {
+      "sense_id": "sense-gdn-m2-170818",
+      "written": "çaciquin",
+      "definition": "sea quandoquiera. s. que algo acaeciere. aduerbio.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/170818"
+    },
+    {
+      "sense_id": "sense-gdn-m2-170819",
+      "written": "çaizquiy",
+      "definition": "poco despues, o de alli apoco. aduer.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/170819"
+    },
+    {
+      "sense_id": "sense-gdn-m2-170820",
+      "written": "çaliuhyantli",
+      "definition": "coyunturas delos miembros del cuerpo.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/170820"
+    },
+    {
+      "sense_id": "sense-gdn-m2-170821",
+      "written": "çaliui",
+      "definition": "pegarse vna cosa a otra. prete: oçaliuh.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/170821"
+    },
+    {
+      "sense_id": "sense-gdn-m2-170830",
+      "written": "çammatca",
+      "definition": "mansamente, poco apoco, o contié[n]to",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/170830"
+    },
+    {
+      "sense_id": "sense-gdn-m2-170831",
+      "written": "çammitoa",
+      "definition": "cosas de poco credito que se dizen por ay.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/170831"
+    },
+    {
+      "sense_id": "sense-gdn-m2-170839",
+      "written": "çampani",
+      "definition": "disimuladamente.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/170839"
+    },
+    {
+      "sense_id": "sense-gdn-m2-170840",
+      "written": "çampinauizcopa",
+      "definition": "por sola verguença, o de verguença.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/170840"
+    },
+    {
+      "sense_id": "sense-gdn-m2-171067",
+      "written": "çaualli",
+      "definition": "telaraña.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/171067"
+    },
+    {
+      "sense_id": "sense-gdn-m2-34257",
+      "written": "Acacalotl",
+      "definition": "cueruo marino.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/34257"
+    },
+    {
+      "sense_id": "sense-gdn-m2-34259",
+      "written": "Acachapulin",
+      "definition": "cierto genero de langostas.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/34259"
+    },
+    {
+      "sense_id": "sense-gdn-m2-34260",
+      "written": "Acachatl",
+      "definition": "otro genero de lá[n]gostas.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/34260"
+    },
+    {
+      "sense_id": "sense-gdn-m2-34261",
+      "written": "Acachiquiuitl",
+      "definition": "canasto hecho de cañas.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/34261"
+    },
+    {
+      "sense_id": "sense-gdn-m2-34262",
+      "written": "Acachto",
+      "definition": "primero, o primeramente. aduerbio.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/34262"
+    },
+    {
+      "sense_id": "sense-gdn-m2-34265",
+      "written": "Acacuextli",
+      "definition": "cañal depescado.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/34265"
+    },
+    {
+      "sense_id": "sense-gdn-m2-34266",
+      "written": "Acacueyatl",
+      "definition": "cierta rana.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/34266"
+    },
+    {
+      "sense_id": "sense-gdn-m2-34267",
+      "written": "Acacuiyatl",
+      "definition": "cierta rana",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/34267"
+    },
+    {
+      "sense_id": "sense-gdn-m2-34268",
+      "written": "Acaixtli",
+      "definition": "ñudo de caña.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/34268"
+    },
+    {
+      "sense_id": "sense-gdn-m2-34293",
+      "written": "Acalcuexcochtli",
+      "definition": "popa de nauio.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/34293"
+    },
+    {
+      "sense_id": "sense-gdn-m2-34296",
+      "written": "Acalimachoni",
+      "definition": "gouernalle o timon.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/34296"
+    },
+    {
+      "sense_id": "sense-gdn-m2-34297",
+      "written": "Acaliyayaliztli",
+      "definition": "sentina de nauio.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/34297"
+    },
+    {
+      "sense_id": "sense-gdn-m2-34300",
+      "written": "Acallachiani",
+      "definition": "piloto.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/34300"
+    },
+    {
+      "sense_id": "sense-gdn-m2-34305",
+      "written": "Acallanelo",
+      "definition": "remador o grumete.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/34305"
+    },
+    {
+      "sense_id": "sense-gdn-m2-34306",
+      "written": "Acallaneoani",
+      "definition": "flete o passaje de nao.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/34306"
+    },
+    {
+      "sense_id": "sense-gdn-m2-34307",
+      "written": "Acallaneui",
+      "definition": "el que fleta naue.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/34307"
+    },
+    {
+      "sense_id": "sense-gdn-m2-34310",
+      "written": "Acallapanaliztli",
+      "definition": "naufragio, adonde se quiebra la nao.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/34310"
+    },
+    {
+      "sense_id": "sense-gdn-m2-34312",
+      "written": "Acallaxtlauilli",
+      "definition": "flete.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/34312"
+    },
+    {
+      "sense_id": "sense-gdn-m2-34328",
+      "written": "Acalmocuitlaui",
+      "definition": "marinero o grumete.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/34328"
+    },
+    {
+      "sense_id": "sense-gdn-m2-34331",
+      "written": "Acalnemachili",
+      "definition": "el que gouierna la nao con el timon, o leme.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/34331"
+    },
+    {
+      "sense_id": "sense-gdn-m2-34332",
+      "written": "Acalnemachiliani",
+      "definition": "el que gouierna la nao conel gouernalle.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/34332"
+    },
+    {
+      "sense_id": "sense-gdn-m2-34336",
+      "written": "Acalpatiotl",
+      "definition": "flete que paga el passajero.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/34336"
+    },
+    {
+      "sense_id": "sense-gdn-m2-34337",
+      "written": "Acalquachpanitl",
+      "definition": "vela de nao.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/34337"
+    },
+    {
+      "sense_id": "sense-gdn-m2-34338",
+      "written": "Acalquachpanquauitl",
+      "definition": "mastel de nao.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/34338"
+    },
+    {
+      "sense_id": "sense-gdn-m2-34339",
+      "written": "Acalquachpantli",
+      "definition": "vela de nao.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/34339"
+    },
+    {
+      "sense_id": "sense-gdn-m2-34340",
+      "written": "Acalquauhyollotl",
+      "definition": "mastel de nao.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/34340"
+    },
+    {
+      "sense_id": "sense-gdn-m2-34341",
+      "written": "Acalquixoayan",
+      "definition": "puerto de mar.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/34341"
+    },
+    {
+      "sense_id": "sense-gdn-m2-34343",
+      "written": "Acaltecoyan",
+      "definition": "puerto de mar, o embarcadero.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/34343"
+    },
+    {
+      "sense_id": "sense-gdn-m2-34363",
+      "written": "Acalueltecac",
+      "definition": "el q[ue] gouierna desta manera la nao.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/34363"
+    },
+    {
+      "sense_id": "sense-gdn-m2-34365",
+      "written": "Acaluelteconi",
+      "definition": "gouernalle, timon o leme.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/34365"
+    },
+    {
+      "sense_id": "sense-gdn-m2-34395",
+      "written": "Acaualla",
+      "definition": "yeruaçal crecido.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/34395"
+    },
+    {
+      "sense_id": "sense-gdn-m2-34396",
+      "written": "Acaualli",
+      "definition": "yeruas secas y grandes para encender hornos.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/34396"
+    },
+    {
+      "sense_id": "sense-gdn-m2-35066",
+      "written": "Anitepaleuia",
+      "definition": "desfauorecer o no ayudar a otro. prete: aonitepaleui.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/35066"
+    },
+    {
+      "sense_id": "sense-gdn-m2-36060",
+      "written": "Caamo",
+      "definition": "no, o no es assi. aduerbio.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/36060"
+    },
+    {
+      "sense_id": "sense-gdn-m2-36061",
+      "written": "Cacalaca",
+      "definition": "sonar el caxcauel, o la vasija de barro que tiene dentro pedrezuelas, o el cacao dañado quando lo cuentan, o echan enel suelo, o cosa semejante. prete: ocacalacac.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/36061"
+    },
+    {
+      "sense_id": "sense-gdn-m2-36062",
+      "written": "Cacalacaliztli",
+      "definition": "estruendo o sonido de cosas quebradas.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/36062"
+    },
+    {
+      "sense_id": "sense-gdn-m2-36063",
+      "written": "Cacalachtli",
+      "definition": "caxcauel de barro,",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/36063"
+    },
+    {
+      "sense_id": "sense-gdn-m2-36069",
+      "written": "Cacalli",
+      "definition": "cueruo.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/36069"
+    },
+    {
+      "sense_id": "sense-gdn-m2-36070",
+      "written": "Cacallotl",
+      "definition": "caxcara de nuez, o de cosa assi.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/36070"
+    },
+    {
+      "sense_id": "sense-gdn-m2-36071",
+      "written": "Cacalotl",
+      "definition": "cueruo, o tenazuela de palo para despauilar candelas, o para comer granos de mayz tostado enel rescoldo.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/36071"
+    },
+    {
+      "sense_id": "sense-gdn-m2-36073",
+      "written": "Cacamatl",
+      "definition": "maçorcas pequeñas de mayz, que nacen cabe la maçorca mayor.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/36073"
+    },
+    {
+      "sense_id": "sense-gdn-m2-36075",
+      "written": "Cacamoliuhqui",
+      "definition": "colcha para cubrir la cama, o cosa semejante.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/36075"
+    },
+    {
+      "sense_id": "sense-gdn-m2-36076",
+      "written": "Cacamoliuiliztli",
+      "definition": "ronchas.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/36076"
+    },
+    {
+      "sense_id": "sense-gdn-m2-36077",
+      "written": "Cacamotic",
+      "definition": "cosa blanda como batatas bien cozidas.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/36077"
+    },
+    {
+      "sense_id": "sense-gdn-m2-36078",
+      "written": "Cacane",
+      "definition": "carrilludo.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/36078"
+    },
+    {
+      "sense_id": "sense-gdn-m2-36083",
+      "written": "Cacaque",
+      "definition": "persona calçada, o que trae çapatos.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/36083"
+    },
+    {
+      "sense_id": "sense-gdn-m2-36084",
+      "written": "Cacaqueque",
+      "definition": "personas casadas assi.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/36084"
+    },
+    {
+      "sense_id": "sense-gdn-m2-36087",
+      "written": "Cacatzac",
+      "definition": "hombre negro, o negra.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/36087"
+    },
+    {
+      "sense_id": "sense-gdn-m2-36092",
+      "written": "Cacauaatl",
+      "definition": "beuida de cacao.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/36092"
+    },
+    {
+      "sense_id": "sense-gdn-m2-36094",
+      "written": "Cacauacentli",
+      "definition": "maçorca o piña de cacao.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/36094"
+    },
+    {
+      "sense_id": "sense-gdn-m2-36096",
+      "written": "Cacauaniliztli",
+      "definition": "fama o rumor de nueuas.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/36096"
+    },
+    {
+      "sense_id": "sense-gdn-m2-36097",
+      "written": "Cacauapinolli",
+      "definition": "beuida de cacao, o la harina del.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/36097"
+    },
+    {
+      "sense_id": "sense-gdn-m2-36098",
+      "written": "Cacauapoçonallotl",
+      "definition": "espuma de cacao.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/36098"
+    },
+    {
+      "sense_id": "sense-gdn-m2-36099",
+      "written": "Cacauaquiliztli",
+      "definition": "destemplança del cuerpo o calentura.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/36099"
+    },
+    {
+      "sense_id": "sense-gdn-m2-36101",
+      "written": "Cacaxactic",
+      "definition": "mantarala y mal texida, o cosa semejante, o cosa floxa y mal atada.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/36101"
+    },
+    {
+      "sense_id": "sense-gdn-m2-36102",
+      "written": "Cacaxalli",
+      "definition": "cosa mal atada y floxa, o mal apretada.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/36102"
+    },
+    {
+      "sense_id": "sense-gdn-m2-36103",
+      "written": "Cacaxaltic",
+      "definition": "manta rala y mal texida.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/36103"
+    },
+    {
+      "sense_id": "sense-gdn-m2-36128",
+      "written": "Cacaxtulpa",
+      "definition": "cada quinze vezes.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/36128"
+    },
+    {
+      "sense_id": "sense-gdn-m2-36131",
+      "written": "Cacayaca",
+      "definition": "desboronarse algo. preterito: ocacayacac",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/36131"
+    },
+    {
+      "sense_id": "sense-gdn-m2-36132",
+      "written": "Cacayacatimani",
+      "definition": "estar ralas las cañas enel cañaueral, o cosas semejantes. preterito: ocacayacatimanca.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/36132"
+    },
+    {
+      "sense_id": "sense-gdn-m2-36134",
+      "written": "Cacayactic",
+      "definition": "cosa rala, como manta, o arboleda. &c.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/36134"
+    }
+  ],
+  "added_records": 79,
+  "association_types": {
+    "related_meaning": 2,
+    "definition_reference": 39,
+    "passage_reference": 37
+  },
+  "llm_calls": 0,
+  "network_requests": 0,
+  "policy": "Solo referencias existentes, relaciones explícitas de significado y coocurrencia exacta en pasajes clásicos. Sin inferencia morfológica ni valores fonéticos por semejanza de letras.",
+  "elapsed_seconds": 0.349,
+  "bundle_sha256": "a8a377fa70fdb2a2ae6af2b27d555830bf9dad0b746e021579fd1116bf285fe3"
+}

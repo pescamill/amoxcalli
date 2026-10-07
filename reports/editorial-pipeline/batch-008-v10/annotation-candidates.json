@@ -1,0 +1,523 @@
+{
+  "candidates": [
+    {
+      "archive_id": "axolotl-05338",
+      "candidate_sense_ids": [
+        "sense-gdn-m2-147479"
+      ],
+      "end": 11,
+      "index_units": "unicode_code_points",
+      "lesson_id": "flor",
+      "source_hash": "f1c36531ccb1fe098d6d746850f275e68184c6958aec66fc7257e701850aa6a0",
+      "start": 9,
+      "status": "exact_form_candidate",
+      "written": "IN"
+    },
+    {
+      "archive_id": "axolotl-06231",
+      "candidate_sense_ids": [],
+      "end": 15,
+      "index_units": "unicode_code_points",
+      "lesson_id": "flor",
+      "source_hash": "2a489a884db3830fb815a27b3541d5c7fb4b20d8fe60abf6690242185f86cb84",
+      "start": 0,
+      "status": "unmatched_source_form",
+      "written": "Tenonotzaliztli"
+    },
+    {
+      "archive_id": "axolotl-06231",
+      "candidate_sense_ids": [],
+      "end": 23,
+      "index_units": "unicode_code_points",
+      "lesson_id": "flor",
+      "source_hash": "2a489a884db3830fb815a27b3541d5c7fb4b20d8fe60abf6690242185f86cb84",
+      "start": 16,
+      "status": "unmatched_source_form",
+      "written": "itechpa"
+    },
+    {
+      "archive_id": "axolotl-06231",
+      "candidate_sense_ids": [
+        "sense-gdn-m2-147479"
+      ],
+      "end": 26,
+      "index_units": "unicode_code_points",
+      "lesson_id": "flor",
+      "source_hash": "2a489a884db3830fb815a27b3541d5c7fb4b20d8fe60abf6690242185f86cb84",
+      "start": 24,
+      "status": "exact_form_candidate",
+      "written": "in"
+    },
+    {
+      "archive_id": "axolotl-06231",
+      "candidate_sense_ids": [
+        "sense-gdn-m2-147479"
+      ],
+      "end": 38,
+      "index_units": "unicode_code_points",
+      "lesson_id": "flor",
+      "source_hash": "2a489a884db3830fb815a27b3541d5c7fb4b20d8fe60abf6690242185f86cb84",
+      "start": 36,
+      "status": "exact_form_candidate",
+      "written": "in"
+    },
+    {
+      "archive_id": "axolotl-13493",
+      "candidate_sense_ids": [
+        "sense-gdn-m2-170841",
+        "sense-gdn-m2-170842"
+      ],
+      "end": 4,
+      "index_units": "unicode_code_points",
+      "lesson_id": "flor",
+      "source_hash": "912969456978af58aaac6779b3146967239d44e28332e82a7816d6205ebd5b22",
+      "start": 1,
+      "status": "ambiguous_match",
+      "written": "Can"
+    },
+    {
+      "archive_id": "axolotl-13493",
+      "candidate_sense_ids": [],
+      "end": 12,
+      "index_units": "unicode_code_points",
+      "lesson_id": "flor",
+      "source_hash": "912969456978af58aaac6779b3146967239d44e28332e82a7816d6205ebd5b22",
+      "start": 5,
+      "status": "unmatched_source_form",
+      "written": "niccuiz"
+    },
+    {
+      "archive_id": "axolotl-13493",
+      "candidate_sense_ids": [
+        "sense-gdn-m2-147479"
+      ],
+      "end": 15,
+      "index_units": "unicode_code_points",
+      "lesson_id": "flor",
+      "source_hash": "912969456978af58aaac6779b3146967239d44e28332e82a7816d6205ebd5b22",
+      "start": 13,
+      "status": "exact_form_candidate",
+      "written": "in"
+    },
+    {
+      "archive_id": "axolotl-13493",
+      "candidate_sense_ids": [
+        "sense-gdn-m2-169584"
+      ],
+      "end": 22,
+      "index_units": "unicode_code_points",
+      "lesson_id": "flor",
+      "source_hash": "912969456978af58aaac6779b3146967239d44e28332e82a7816d6205ebd5b22",
+      "start": 16,
+      "status": "exact_form_candidate",
+      "written": "yectli"
+    },
+    {
+      "archive_id": "axolotl-13493",
+      "candidate_sense_ids": [
+        "sense-gdn-m2-147479"
+      ],
+      "end": 39,
+      "index_units": "unicode_code_points",
+      "lesson_id": "flor",
+      "source_hash": "912969456978af58aaac6779b3146967239d44e28332e82a7816d6205ebd5b22",
+      "start": 37,
+      "status": "exact_form_candidate",
+      "written": "in"
+    },
+    {
+      "archive_id": "axolotl-13493",
+      "candidate_sense_ids": [
+        "sense-gdn-m2-169584"
+      ],
+      "end": 46,
+      "index_units": "unicode_code_points",
+      "lesson_id": "flor",
+      "source_hash": "912969456978af58aaac6779b3146967239d44e28332e82a7816d6205ebd5b22",
+      "start": 40,
+      "status": "exact_form_candidate",
+      "written": "yectli"
+    },
+    {
+      "archive_id": "axolotl-13493",
+      "candidate_sense_ids": [],
+      "end": 50,
+      "index_units": "unicode_code_points",
+      "lesson_id": "flor",
+      "source_hash": "912969456978af58aaac6779b3146967239d44e28332e82a7816d6205ebd5b22",
+      "start": 47,
+      "status": "unmatched_source_form",
+      "written": "yan"
+    },
+    {
+      "archive_id": "axolotl-11087",
+      "candidate_sense_ids": [
+        "sense-gdn-m2-147479"
+      ],
+      "end": 2,
+      "index_units": "unicode_code_points",
+      "lesson_id": "cielo",
+      "source_hash": "effbf81987d7a97c126b4a8330d625aa2540026428a4b34a6bc51bbb7c664c6a",
+      "start": 0,
+      "status": "exact_form_candidate",
+      "written": "in"
+    },
+    {
+      "archive_id": "axolotl-11087",
+      "candidate_sense_ids": [
+        "sense-gdn-m2-147479"
+      ],
+      "end": 20,
+      "index_units": "unicode_code_points",
+      "lesson_id": "cielo",
+      "source_hash": "effbf81987d7a97c126b4a8330d625aa2540026428a4b34a6bc51bbb7c664c6a",
+      "start": 18,
+      "status": "exact_form_candidate",
+      "written": "in"
+    },
+    {
+      "archive_id": "axolotl-00455",
+      "candidate_sense_ids": [
+        "sense-gdn-m2-147479"
+      ],
+      "end": 2,
+      "index_units": "unicode_code_points",
+      "lesson_id": "cielo",
+      "source_hash": "795e3e07e6408d11c748272f63a260d09db333debb29b32626691ffba71412c3",
+      "start": 0,
+      "status": "exact_form_candidate",
+      "written": "in"
+    },
+    {
+      "archive_id": "axolotl-00455",
+      "candidate_sense_ids": [],
+      "end": 18,
+      "index_units": "unicode_code_points",
+      "lesson_id": "cielo",
+      "source_hash": "795e3e07e6408d11c748272f63a260d09db333debb29b32626691ffba71412c3",
+      "start": 12,
+      "status": "unmatched_source_form",
+      "written": "ixcopa"
+    },
+    {
+      "archive_id": "axolotl-00455",
+      "candidate_sense_ids": [],
+      "end": 28,
+      "index_units": "unicode_code_points",
+      "lesson_id": "cielo",
+      "source_hash": "795e3e07e6408d11c748272f63a260d09db333debb29b32626691ffba71412c3",
+      "start": 19,
+      "status": "unmatched_source_form",
+      "written": "itztiaque"
+    },
+    {
+      "archive_id": "axolotl-05922",
+      "candidate_sense_ids": [
+        "sense-gdn-m2-148590"
+      ],
+      "end": 4,
+      "index_units": "unicode_code_points",
+      "lesson_id": "cielo",
+      "source_hash": "7589adeaa8ec0b06df15bbe3e96a916884a34955ad5d7555b7c7d1dc5215ddf4",
+      "start": 0,
+      "status": "exact_form_candidate",
+      "written": "Inic"
+    },
+    {
+      "archive_id": "axolotl-05922",
+      "candidate_sense_ids": [],
+      "end": 8,
+      "index_units": "unicode_code_points",
+      "lesson_id": "cielo",
+      "source_hash": "7589adeaa8ec0b06df15bbe3e96a916884a34955ad5d7555b7c7d1dc5215ddf4",
+      "start": 5,
+      "status": "unmatched_source_form",
+      "written": "ome"
+    },
+    {
+      "archive_id": "axolotl-05922",
+      "candidate_sense_ids": [],
+      "end": 25,
+      "index_units": "unicode_code_points",
+      "lesson_id": "cielo",
+      "source_hash": "7589adeaa8ec0b06df15bbe3e96a916884a34955ad5d7555b7c7d1dc5215ddf4",
+      "start": 18,
+      "status": "unmatched_source_form",
+      "written": "onmanca"
+    },
+    {
+      "archive_id": "axolotl-05922",
+      "candidate_sense_ids": [],
+      "end": 31,
+      "index_units": "unicode_code_points",
+      "lesson_id": "cielo",
+      "source_hash": "7589adeaa8ec0b06df15bbe3e96a916884a34955ad5d7555b7c7d1dc5215ddf4",
+      "start": 26,
+      "status": "unmatched_source_form",
+      "written": "nahui"
+    },
+    {
+      "archive_id": "axolotl-05922",
+      "candidate_sense_ids": [],
+      "end": 39,
+      "index_units": "unicode_code_points",
+      "lesson_id": "cielo",
+      "source_hash": "7589adeaa8ec0b06df15bbe3e96a916884a34955ad5d7555b7c7d1dc5215ddf4",
+      "start": 32,
+      "status": "unmatched_source_form",
+      "written": "ocelotl"
+    },
+    {
+      "archive_id": "axolotl-05922",
+      "candidate_sense_ids": [
+        "sense-gdn-m2-147479"
+      ],
+      "end": 42,
+      "index_units": "unicode_code_points",
+      "lesson_id": "cielo",
+      "source_hash": "7589adeaa8ec0b06df15bbe3e96a916884a34955ad5d7555b7c7d1dc5215ddf4",
+      "start": 40,
+      "status": "exact_form_candidate",
+      "written": "in"
+    },
+    {
+      "archive_id": "axolotl-05922",
+      "candidate_sense_ids": [],
+      "end": 49,
+      "index_units": "unicode_code_points",
+      "lesson_id": "cielo",
+      "source_hash": "7589adeaa8ec0b06df15bbe3e96a916884a34955ad5d7555b7c7d1dc5215ddf4",
+      "start": 43,
+      "status": "unmatched_source_form",
+      "written": "itonal"
+    },
+    {
+      "archive_id": "axolotl-05922",
+      "candidate_sense_ids": [],
+      "end": 55,
+      "index_units": "unicode_code_points",
+      "lesson_id": "cielo",
+      "source_hash": "7589adeaa8ec0b06df15bbe3e96a916884a34955ad5d7555b7c7d1dc5215ddf4",
+      "start": 50,
+      "status": "unmatched_source_form",
+      "written": "catca"
+    },
+    {
+      "archive_id": "axolotl-11885",
+      "candidate_sense_ids": [
+        "sense-gdn-m2-147479"
+      ],
+      "end": 2,
+      "index_units": "unicode_code_points",
+      "lesson_id": "cielo",
+      "source_hash": "6f43aac6b55ba5f70cdba21a78ad94f9309fef9386f848e5d2138f1478e44ec9",
+      "start": 0,
+      "status": "exact_form_candidate",
+      "written": "In"
+    },
+    {
+      "archive_id": "axolotl-11885",
+      "candidate_sense_ids": [],
+      "end": 9,
+      "index_units": "unicode_code_points",
+      "lesson_id": "cielo",
+      "source_hash": "6f43aac6b55ba5f70cdba21a78ad94f9309fef9386f848e5d2138f1478e44ec9",
+      "start": 3,
+      "status": "unmatched_source_form",
+      "written": "quenin"
+    },
+    {
+      "archive_id": "axolotl-11885",
+      "candidate_sense_ids": [],
+      "end": 24,
+      "index_units": "unicode_code_points",
+      "lesson_id": "cielo",
+      "source_hash": "6f43aac6b55ba5f70cdba21a78ad94f9309fef9386f848e5d2138f1478e44ec9",
+      "start": 10,
+      "status": "unmatched_source_form",
+      "written": "tlayecoltiloya"
+    },
+    {
+      "archive_id": "axolotl-11885",
+      "candidate_sense_ids": [
+        "sense-gdn-m2-147479"
+      ],
+      "end": 27,
+      "index_units": "unicode_code_points",
+      "lesson_id": "cielo",
+      "source_hash": "6f43aac6b55ba5f70cdba21a78ad94f9309fef9386f848e5d2138f1478e44ec9",
+      "start": 25,
+      "status": "exact_form_candidate",
+      "written": "in"
+    },
+    {
+      "archive_id": "axolotl-11885",
+      "candidate_sense_ids": [
+        "sense-gdn-m2-147479"
+      ],
+      "end": 39,
+      "index_units": "unicode_code_points",
+      "lesson_id": "cielo",
+      "source_hash": "6f43aac6b55ba5f70cdba21a78ad94f9309fef9386f848e5d2138f1478e44ec9",
+      "start": 37,
+      "status": "exact_form_candidate",
+      "written": "in"
+    },
+    {
+      "archive_id": "axolotl-11885",
+      "candidate_sense_ids": [],
+      "end": 50,
+      "index_units": "unicode_code_points",
+      "lesson_id": "cielo",
+      "source_hash": "6f43aac6b55ba5f70cdba21a78ad94f9309fef9386f848e5d2138f1478e44ec9",
+      "start": 40,
+      "status": "unmatched_source_form",
+      "written": "cemilhuitl"
+    },
+    {
+      "archive_id": "axolotl-11885",
+      "candidate_sense_ids": [
+        "sense-gdn-m2-147479"
+      ],
+      "end": 54,
+      "index_units": "unicode_code_points",
+      "lesson_id": "cielo",
+      "source_hash": "6f43aac6b55ba5f70cdba21a78ad94f9309fef9386f848e5d2138f1478e44ec9",
+      "start": 52,
+      "status": "exact_form_candidate",
+      "written": "in"
+    },
+    {
+      "archive_id": "axolotl-11885",
+      "candidate_sense_ids": [],
+      "end": 63,
+      "index_units": "unicode_code_points",
+      "lesson_id": "cielo",
+      "source_hash": "6f43aac6b55ba5f70cdba21a78ad94f9309fef9386f848e5d2138f1478e44ec9",
+      "start": 55,
+      "status": "unmatched_source_form",
+      "written": "ceyohual"
+    },
+    {
+      "archive_id": "axolotl-03471",
+      "candidate_sense_ids": [
+        "sense-gdn-m2-148657"
+      ],
+      "end": 4,
+      "index_units": "unicode_code_points",
+      "lesson_id": "lugares",
+      "source_hash": "92dc85996497376bb59f2327a1d9d6a3a8dec1802207dacb427882888a889a76",
+      "start": 0,
+      "status": "exact_form_candidate",
+      "written": "inin"
+    },
+    {
+      "archive_id": "axolotl-03471",
+      "candidate_sense_ids": [],
+      "end": 27,
+      "index_units": "unicode_code_points",
+      "lesson_id": "lugares",
+      "source_hash": "92dc85996497376bb59f2327a1d9d6a3a8dec1802207dacb427882888a889a76",
+      "start": 12,
+      "status": "unmatched_source_form",
+      "written": "amechmomaquilia"
+    },
+    {
+      "archive_id": "axolotl-03471",
+      "candidate_sense_ids": [
+        "sense-gdn-m2-147479"
+      ],
+      "end": 30,
+      "index_units": "unicode_code_points",
+      "lesson_id": "lugares",
+      "source_hash": "92dc85996497376bb59f2327a1d9d6a3a8dec1802207dacb427882888a889a76",
+      "start": 28,
+      "status": "exact_form_candidate",
+      "written": "in"
+    },
+    {
+      "archive_id": "axolotl-03471",
+      "candidate_sense_ids": [],
+      "end": 39,
+      "index_units": "unicode_code_points",
+      "lesson_id": "lugares",
+      "source_hash": "92dc85996497376bb59f2327a1d9d6a3a8dec1802207dacb427882888a889a76",
+      "start": 31,
+      "status": "unmatched_source_form",
+      "written": "Totecuyo"
+    },
+    {
+      "archive_id": "axolotl-12969",
+      "candidate_sense_ids": [
+        "sense-gdn-m2-147479"
+      ],
+      "end": 2,
+      "index_units": "unicode_code_points",
+      "lesson_id": "lugares",
+      "source_hash": "a10e122963fc25aaf113776ec4e232da7778efb09ec55d4dc4bb9220fb2fea0a",
+      "start": 0,
+      "status": "exact_form_candidate",
+      "written": "In"
+    },
+    {
+      "archive_id": "axolotl-14900",
+      "candidate_sense_ids": [],
+      "end": 10,
+      "index_units": "unicode_code_points",
+      "lesson_id": "lugares",
+      "source_hash": "30597c16adf72203499273683c8c5e74fda47aa769106bcbf624b8097b3f687c",
+      "start": 0,
+      "status": "unmatched_source_form",
+      "written": "quitztihui"
+    },
+    {
+      "archive_id": "axolotl-14900",
+      "candidate_sense_ids": [
+        "sense-gdn-m2-147479"
+      ],
+      "end": 13,
+      "index_units": "unicode_code_points",
+      "lesson_id": "lugares",
+      "source_hash": "30597c16adf72203499273683c8c5e74fda47aa769106bcbf624b8097b3f687c",
+      "start": 11,
+      "status": "exact_form_candidate",
+      "written": "in"
+    },
+    {
+      "archive_id": "axolotl-16052",
+      "candidate_sense_ids": [],
+      "end": 5,
+      "index_units": "unicode_code_points",
+      "lesson_id": "lugares",
+      "source_hash": "c6bf6abd34a08589ad26560a82e5343a9138182509b31ea42d7cac7ad6cd22bc",
+      "start": 1,
+      "status": "unmatched_source_form",
+      "written": "Quen"
+    },
+    {
+      "archive_id": "axolotl-16052",
+      "candidate_sense_ids": [],
+      "end": 11,
+      "index_units": "unicode_code_points",
+      "lesson_id": "lugares",
+      "source_hash": "c6bf6abd34a08589ad26560a82e5343a9138182509b31ea42d7cac7ad6cd22bc",
+      "start": 6,
+      "status": "unmatched_source_form",
+      "written": "maniz"
+    },
+    {
+      "archive_id": "axolotl-16052",
+      "candidate_sense_ids": [
+        "sense-gdn-m2-147479"
+      ],
+      "end": 14,
+      "index_units": "unicode_code_points",
+      "lesson_id": "lugares",
+      "source_hash": "c6bf6abd34a08589ad26560a82e5343a9138182509b31ea42d7cac7ad6cd22bc",
+      "start": 12,
+      "status": "exact_form_candidate",
+      "written": "in"
+    }
+  ],
+  "schema_version": 1
+}

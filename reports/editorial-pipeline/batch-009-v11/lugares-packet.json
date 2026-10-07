@@ -1,0 +1,151 @@
+{
+  "annotation_example_counts": {
+    "sense-calli": 1,
+    "sense-tepetl": 2,
+    "sense-tlalli": 2
+  },
+  "examples": [
+    {
+      "annotations": [
+        {
+          "end": 11,
+          "note": "En este fragmento, la traducción utiliza tierra. La ficha reúne también terreno y parcela.",
+          "quote": "tlalli",
+          "sense_id": "sense-tlalli",
+          "start": 5
+        }
+      ],
+      "archive_id": "axolotl-03471",
+      "document": "La tinta negra y roja (antología de poesía náhuatl)",
+      "es": "en esta tierra que os da el Señor Nuestro,",
+      "exercise": {
+        "answer": 1,
+        "blank": "",
+        "explanation": "El español del registro comienza «en esta tierra que os da…». Reconoce tlalli en el contexto.",
+        "kind": "meaning",
+        "options": [
+          "Una estrella",
+          "La tierra",
+          "Un conejo"
+        ],
+        "question": "¿Qué se da en este fragmento?"
+      },
+      "iso": "nci",
+      "locator": "Axolotl, registro CSV 3471; página de la edición primaria pendiente",
+      "nah": "inin tlalli amechmomaquilia in Totecuyo,",
+      "source_hash": "92dc85996497376bb59f2327a1d9d6a3a8dec1802207dacb427882888a889a76",
+      "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv"
+    },
+    {
+      "annotations": [
+        {
+          "end": 17,
+          "note": "La fuente escribe tlacuilolcalli y traduce «En la casa de las pinturas». Calli es una consulta temática sobre casa; la imagen de calli no escribe el compuesto completo. Su análisis específico sigue pendiente.",
+          "quote": "tlacuilolcalli",
+          "relation": "thematic",
+          "sense_id": "sense-calli",
+          "start": 3
+        }
+      ],
+      "archive_id": "axolotl-12969",
+      "document": "La tinta negra y roja (antología de poesía náhuatl)",
+      "es": "En la casa de las pinturas",
+      "exercise": {
+        "answer": 2,
+        "blank": "",
+        "explanation": "El registro traduce «En la casa de las pinturas». La palabra compuesta se conserva entera.",
+        "kind": "meaning",
+        "options": [
+          "La casa del viento",
+          "La casa del agua",
+          "La casa de las pinturas"
+        ],
+        "question": "¿Qué casa presenta la traducción?"
+      },
+      "iso": "nci",
+      "locator": "Axolotl, registro CSV 12969; página de la edición primaria pendiente",
+      "nah": "In tlacuilolcalli",
+      "source_hash": "a10e122963fc25aaf113776ec4e232da7778efb09ec55d4dc4bb9220fb2fea0a",
+      "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv"
+    },
+    {
+      "annotations": [
+        {
+          "end": 20,
+          "note": "La traducción usa montes. Consulta cerro o montaña como acepción de referencia.",
+          "quote": "tepetl",
+          "sense_id": "sense-tepetl",
+          "start": 14
+        }
+      ],
+      "archive_id": "axolotl-14900",
+      "document": "La tinta negra y roja (antología de poesía náhuatl)",
+      "es": "iban buscando los montes,",
+      "exercise": {
+        "answer": 0,
+        "blank": "tepetl",
+        "explanation": "La fuente escribe tepetl. Su traducción utiliza montes.",
+        "kind": "cloze",
+        "options": [
+          "tepetl",
+          "xochitl",
+          "atl"
+        ],
+        "question": "Completa la forma del texto: quitztihui in ___,"
+      },
+      "iso": "nci",
+      "locator": "Axolotl, registro CSV 14900; página de la edición primaria pendiente",
+      "nah": "quitztihui in tepetl,",
+      "source_hash": "30597c16adf72203499273683c8c5e74fda47aa769106bcbf624b8097b3f687c",
+      "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv"
+    },
+    {
+      "annotations": [
+        {
+          "end": 21,
+          "note": "La traducción utiliza tierra.",
+          "quote": "tlalli",
+          "sense_id": "sense-tlalli",
+          "start": 15
+        },
+        {
+          "end": 29,
+          "note": "Este registro traduce el conjunto como «la tierra, la ciudad». Se consulta la ficha de cerro como referencia léxica contextual; este enlace no convierte ciudad en una equivalencia aislada de tepetl.",
+          "quote": "tepetl",
+          "relation": "thematic",
+          "sense_id": "sense-tepetl",
+          "start": 23
+        }
+      ],
+      "archive_id": "axolotl-16052",
+      "document": "La tinta negra y roja (antología de poesía náhuatl)",
+      "es": "¿Cómo permanecerá la tierra, la ciudad?",
+      "exercise": {
+        "answer": 1,
+        "blank": "",
+        "explanation": "El corpus traduce «la tierra, la ciudad». Una equivalencia de diccionario por sí sola no basta para explicar toda expresión.",
+        "kind": "meaning",
+        "options": [
+          "Flor y canto",
+          "Tierra y ciudad",
+          "Sol y luna"
+        ],
+        "question": "¿Qué dos referentes presenta el español de este registro?"
+      },
+      "iso": "nci",
+      "locator": "Axolotl, registro CSV 16052; página de la edición primaria pendiente",
+      "nah": "¿Quen maniz in tlalli, tepetl?",
+      "source_hash": "c6bf6abd34a08589ad26560a82e5343a9138182509b31ea42d7cac7ad6cd22bc",
+      "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv"
+    }
+  ],
+  "id": "lugares",
+  "objective": "Reconocer palabras de lugares y observar cuándo la traducción necesita contexto.",
+  "review_status": "editorial_draft",
+  "target_sense_ids": [
+    "sense-tlalli",
+    "sense-calli",
+    "sense-tepetl"
+  ],
+  "title": "Reconocer tierra, casa y cerro"
+}

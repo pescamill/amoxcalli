@@ -1,0 +1,129 @@
+{
+  "input": "La casa y la flor.",
+  "elapsed_seconds": 37.0,
+  "model": {
+    "name": "Qwen3-0.6B + LoRA",
+    "ready": true,
+    "base_ready": true,
+    "adapter_ready": true,
+    "missing_dependencies": [],
+    "disabled": false,
+    "setup_command": "bash scripts/iniciar.sh",
+    "note": "Generador experimental; requiere revisión lingüística."
+  },
+  "result": {
+    "status": "proposal",
+    "method": "local_model",
+    "segments": [
+      {
+        "text": "Ach in iuhqui xochitl zan quetzaltia quemexcatl. In ic on pialo in teotl aya tepetl. Xochimiletehuatoc, mochalchiuhcancal noteocuitlaamoxcacal, in teotl. Auh in teotl, in teotl, in teotl, in teotl, in teotl, in teotl, in teotl, in teotl, in teotl, in teotl, in teotl, in teot",
+        "record_ids": []
+      }
+    ],
+    "note": "Borrador pendiente de revisión lingüística. Los pasajes recuperados aportan contexto, no certifican la traducción.",
+    "model": "Qwen3-0.6B + LoRA",
+    "seconds": 20.329,
+    "truncated": true,
+    "context_passages": [
+      {
+        "id": "axolotl-01209",
+        "line": 1209,
+        "es": "Como si fueran flores, allí se despliegan los mantos de quetzal en la casa de las pinturas. Así se venera en la tierra y el monte, así se venera a nuestro dios. Como dardos floridos e ígneos se levantan tus casas preciosas. Mi casa dorada de las pinturas, ¡también es tu casa, Dios Nuestro!",
+        "nah": "Ach in iuhqui xochitl zan quetzallia quemitl huilantoc amoxcalitec. In ic on pialo in teotl aya tepetl. Xochimitletlehuatoc, mochalchiuhcancal noteocuitlaamoxcacal, ance ye mochan, in teotl.",
+        "variant": "Classical Nahuatl",
+        "iso": "nci",
+        "document": "La tinta negra y roja (antología de poesía náhuatl)",
+        "variant_label": "Náhuatl clásico",
+        "period": "historical",
+        "locator": "Axolotl, registro CSV 1209; página de la edición primaria pendiente",
+        "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv",
+        "verification": "Alineación de origen; sin cotejo propio",
+        "rights_note": "MPL-2.0 es la licencia declarada por el repositorio distribuidor. No equivale a una auditoría de derechos de cada libro o traducción subyacente. Conservar atribuciones; auditar antes de redistribuir corpus o pesos entrenados."
+      },
+      {
+        "id": "axolotl-01623",
+        "line": 1623,
+        "es": "Fue preguntado como está enterado en relación a la demanda de Ana Papan, María Susana y Mencia Marta. ¿Acaso es verdad que le quitan su casa y su tlalmantli? dijo: sé que Chimaltzin era el morador, y era el que proporcionaba flores a Moteuczomatzin, no habia sido bautizado.",
+        "nah": "Tlatlaniloc quen quimati yn iyollo yn itechpan ynic moteylhuia Ana Papan yhuan Marina Susana yhuan Mencia Marta cuix nelli yn quicuiliyan yn incal yhuan yn itlalman quito ca ynic nicmati ca yehuatl chane catca ytoca Chimaltzin yxochimacauh catca yn Moteoczomatzin ayamo moquatequitiya.",
+        "variant": "Classical Nahuatl",
+        "iso": "nci",
+        "document": "Documentos nauas de la Ciudad de México del siglo XVI",
+        "variant_label": "Náhuatl clásico",
+        "period": "historical",
+        "locator": "Axolotl, registro CSV 1623; página de la edición primaria pendiente",
+        "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv",
+        "verification": "Alineación de origen; sin cotejo propio",
+        "rights_note": "MPL-2.0 es la licencia declarada por el repositorio distribuidor. No equivale a una auditoría de derechos de cada libro o traducción subyacente. Conservar atribuciones; auditar antes de redistribuir corpus o pesos entrenados."
+      }
+    ],
+    "review_request": {
+      "schema_version": 1,
+      "source_text": "La casa y la flor.",
+      "candidate": "Ach in iuhqui xochitl zan quetzaltia quemexcatl. In ic on pialo in teotl aya tepetl. Xochimiletehuatoc, mochalchiuhcancal noteocuitlaamoxcacal, in teotl. Auh in teotl, in teotl, in teotl, in teotl, in teotl, in teotl, in teotl, in teotl, in teotl, in teotl, in teotl, in teot",
+      "supporting_evidence": [
+        {
+          "id": "axolotl-01209",
+          "line": 1209,
+          "es": "Como si fueran flores, allí se despliegan los mantos de quetzal en la casa de las pinturas. Así se venera en la tierra y el monte, así se venera a nuestro dios. Como dardos floridos e ígneos se levantan tus casas preciosas. Mi casa dorada de las pinturas, ¡también es tu casa, Dios Nuestro!",
+          "nah": "Ach in iuhqui xochitl zan quetzallia quemitl huilantoc amoxcalitec. In ic on pialo in teotl aya tepetl. Xochimitletlehuatoc, mochalchiuhcancal noteocuitlaamoxcacal, ance ye mochan, in teotl.",
+          "variant": "Classical Nahuatl",
+          "iso": "nci",
+          "document": "La tinta negra y roja (antología de poesía náhuatl)",
+          "variant_label": "Náhuatl clásico",
+          "period": "historical",
+          "locator": "Axolotl, registro CSV 1209; página de la edición primaria pendiente",
+          "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv",
+          "verification": "Alineación de origen; sin cotejo propio",
+          "rights_note": "MPL-2.0 es la licencia declarada por el repositorio distribuidor. No equivale a una auditoría de derechos de cada libro o traducción subyacente. Conservar atribuciones; auditar antes de redistribuir corpus o pesos entrenados."
+        },
+        {
+          "id": "axolotl-01623",
+          "line": 1623,
+          "es": "Fue preguntado como está enterado en relación a la demanda de Ana Papan, María Susana y Mencia Marta. ¿Acaso es verdad que le quitan su casa y su tlalmantli? dijo: sé que Chimaltzin era el morador, y era el que proporcionaba flores a Moteuczomatzin, no habia sido bautizado.",
+          "nah": "Tlatlaniloc quen quimati yn iyollo yn itechpan ynic moteylhuia Ana Papan yhuan Marina Susana yhuan Mencia Marta cuix nelli yn quicuiliyan yn incal yhuan yn itlalman quito ca ynic nicmati ca yehuatl chane catca ytoca Chimaltzin yxochimacauh catca yn Moteoczomatzin ayamo moquatequitiya.",
+          "variant": "Classical Nahuatl",
+          "iso": "nci",
+          "document": "Documentos nauas de la Ciudad de México del siglo XVI",
+          "variant_label": "Náhuatl clásico",
+          "period": "historical",
+          "locator": "Axolotl, registro CSV 1623; página de la edición primaria pendiente",
+          "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv",
+          "verification": "Alineación de origen; sin cotejo propio",
+          "rights_note": "MPL-2.0 es la licencia declarada por el repositorio distribuidor. No equivale a una auditoría de derechos de cada libro o traducción subyacente. Conservar atribuciones; auditar antes de redistribuir corpus o pesos entrenados."
+        }
+      ],
+      "glyph_evidence": [],
+      "review": {
+        "provider": "local_rules",
+        "calibrated": false,
+        "exact_aligned_pair_ids": [],
+        "semantic_fidelity": null,
+        "classical_nahuatl_fit": null,
+        "modernization_risk": null,
+        "decision": "human_review",
+        "reason": "No hay prueba local suficiente para certificar esta traducción.",
+        "automatic_acceptance": false
+      },
+      "human_review": {
+        "reviewer": "",
+        "variant": "",
+        "source_locator": "",
+        "fidelity": null,
+        "historical_fit": null,
+        "notes": ""
+      }
+    },
+    "review": {
+      "provider": "local_rules",
+      "calibrated": false,
+      "exact_aligned_pair_ids": [],
+      "semantic_fidelity": null,
+      "classical_nahuatl_fit": null,
+      "modernization_risk": null,
+      "decision": "human_review",
+      "reason": "No hay prueba local suficiente para certificar esta traducción.",
+      "automatic_acceptance": false
+    }
+  },
+  "note": "Comprobación de integración; no es validación lingüística."
+}

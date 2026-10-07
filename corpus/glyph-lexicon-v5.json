@@ -1,0 +1,927 @@
+{
+  "schema_version": 1,
+  "records": [
+    {
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Definición breve redactada para este índice y referencia de catálogo. Imagen enlazada bajo CC BY-NC-SA 3.0 UK con atribución; entrenamiento no autorizado en esta ficha."
+      },
+      "id": "sense-tochtli",
+      "kind": "sense",
+      "label": "conejo",
+      "definition": "Conejo; aquí se registra la acepción del animal, separada de sus usos como fecha y nombre personal.",
+      "pos": "noun",
+      "aliases": []
+    },
+    {
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Definición breve redactada para este índice y referencia de catálogo. Imagen enlazada bajo CC BY-NC-SA 3.0 UK con atribución; entrenamiento no autorizado en esta ficha."
+      },
+      "id": "lex-tochtli",
+      "kind": "form",
+      "label": "tochtli",
+      "written": "tochtli",
+      "sense_id": "sense-tochtli",
+      "period": "historical",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "orthography": "Lema de la ficha consultada; sin marcar longitud vocálica. No es transcripción diplomática del códice.",
+      "variation_kind": "historical",
+      "url": "https://nahuatl.wired-humanities.org/content/tochtli",
+      "evidence": [
+        {
+          "source_id": "src-molina",
+          "locator": "Molina (1571), parte 2, f. 148r, col. 2; entrada tochtli",
+          "status": "catalog_checked",
+          "via_source_id": "src-oregon"
+        }
+      ],
+      "notes": "Ficha secundaria consultada el 2026-09-29; cotejo de la edición primaria pendiente."
+    },
+    {
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Definición breve redactada para este índice y referencia de catálogo. Imagen enlazada bajo CC BY-NC-SA 3.0 UK con atribución; entrenamiento no autorizado en esta ficha."
+      },
+      "id": "glyph-tochtli-mdz46r",
+      "kind": "glyph",
+      "label": "Referencia de fuente: tochtli",
+      "sense_id": "sense-tochtli",
+      "reading": "tochtli",
+      "glyph_status": "proposed",
+      "glyph_type": "element",
+      "context": "Elemento de conejo extraído del topónimo Tochtepec, Códice Mendoza, f. 46r.",
+      "url": "https://aztecglyphs.wired-humanities.org/content/tochtli-mdz46r",
+      "image": "https://aztecglyphs.wired-humanities.org/sites/default/files/styles/large/public/tochtli46rrabbitFromTochtepec.jpg?itok=B8-3tDQe",
+      "image_credit": "Bodleian Libraries, University of Oxford, MS. Arch. Selden. A. 1. Vía Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed. CC BY-NC-SA 3.0 UK.",
+      "manuscript_url": "https://digital.bodleian.ox.ac.uk/objects/2fea788e-2aa2-4f08-b6d9-648c00486220/surfaces/58731f65-c0a1-4e40-87c7-837cc94f1c64/",
+      "evidence": [
+        {
+          "source_id": "src-mendoza",
+          "via_source_id": "src-vla",
+          "locator": "Códice Mendoza, f. 46r; VLA tochtli (Mdz46r)",
+          "status": "catalog_checked"
+        }
+      ],
+      "notes": "Asociación tomada de la ficha VLA, consultada el 2026-09-29. Descripción y análisis de Stephanie Wood. Cotejo primario pendiente; la lectura se limita al contexto indicado."
+    },
+    {
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Definición breve redactada para este índice y referencia de catálogo. Imagen enlazada bajo CC BY-NC-SA 3.0 UK con atribución; entrenamiento no autorizado en esta ficha."
+      },
+      "id": "sense-mazatl",
+      "kind": "sense",
+      "label": "venado",
+      "definition": "Venado. La acepción del animal no presupone que todos sus usos históricos se refieran a la misma especie.",
+      "pos": "noun",
+      "aliases": []
+    },
+    {
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Definición breve redactada para este índice y referencia de catálogo. Imagen enlazada bajo CC BY-NC-SA 3.0 UK con atribución; entrenamiento no autorizado en esta ficha."
+      },
+      "id": "lex-mazatl",
+      "kind": "form",
+      "label": "mazatl",
+      "written": "mazatl",
+      "sense_id": "sense-mazatl",
+      "period": "historical",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "orthography": "Lema de la ficha consultada; sin marcar longitud vocálica. No es transcripción diplomática del códice.",
+      "variation_kind": "historical",
+      "url": "https://nahuatl.wired-humanities.org/content/mazatl",
+      "evidence": [
+        {
+          "source_id": "src-molina",
+          "locator": "Molina (1571), parte 2, f. 50r, col. 2; entrada mazatl",
+          "status": "catalog_checked",
+          "via_source_id": "src-oregon"
+        }
+      ],
+      "notes": "Ficha secundaria consultada el 2026-09-29; cotejo de la edición primaria pendiente."
+    },
+    {
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Definición breve redactada para este índice y referencia de catálogo. Imagen enlazada bajo CC BY-NC-SA 3.0 UK con atribución; entrenamiento no autorizado en esta ficha."
+      },
+      "id": "glyph-mazatl-mdz13v",
+      "kind": "glyph",
+      "label": "Referencia de fuente: mazatl",
+      "sense_id": "sense-mazatl",
+      "reading": "mazatl",
+      "glyph_status": "proposed",
+      "glyph_type": "element",
+      "context": "Cabeza de venado en el topónimo Mazatlan, Códice Mendoza, f. 13v.",
+      "url": "https://aztecglyphs.wired-humanities.org/content/mazatl-mdz13v",
+      "image": "https://aztecglyphs.wired-humanities.org/sites/default/files/styles/large/public/mazatl13vdeerFromMazatlan.jpg?itok=vnzpTG9d",
+      "image_credit": "Bodleian Libraries, University of Oxford, MS. Arch. Selden. A. 1. Vía Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed. CC BY-NC-SA 3.0 UK.",
+      "manuscript_url": "https://digital.bodleian.ox.ac.uk/objects/2fea788e-2aa2-4f08-b6d9-648c00486220/surfaces/5afd2e47-8926-4a26-add0-07fb9ce2176f/",
+      "evidence": [
+        {
+          "source_id": "src-mendoza",
+          "via_source_id": "src-vla",
+          "locator": "Códice Mendoza, f. 13v; VLA mazatl (Mdz13v)",
+          "status": "catalog_checked"
+        }
+      ],
+      "notes": "Asociación tomada de la ficha VLA, consultada el 2026-09-29. Descripción y análisis de Stephanie Wood. Cotejo primario pendiente; la lectura se limita al contexto indicado."
+    },
+    {
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Definición breve redactada para este índice y referencia de catálogo. Imagen enlazada bajo CC BY-NC-SA 3.0 UK con atribución; entrenamiento no autorizado en esta ficha."
+      },
+      "id": "sense-itzcuintli",
+      "kind": "sense",
+      "label": "perro",
+      "definition": "Perro. Se conserva el lema histórico; la imagen no identifica por sí sola una raza actual.",
+      "pos": "noun",
+      "aliases": []
+    },
+    {
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Definición breve redactada para este índice y referencia de catálogo. Imagen enlazada bajo CC BY-NC-SA 3.0 UK con atribución; entrenamiento no autorizado en esta ficha."
+      },
+      "id": "lex-itzcuintli",
+      "kind": "form",
+      "label": "itzcuintli",
+      "written": "itzcuintli",
+      "sense_id": "sense-itzcuintli",
+      "period": "historical",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "orthography": "Lema de la ficha consultada; sin marcar longitud vocálica. No es transcripción diplomática del códice.",
+      "variation_kind": "historical",
+      "url": "https://nahuatl.wired-humanities.org/content/itzcuintli",
+      "evidence": [
+        {
+          "source_id": "src-oregon",
+          "locator": "Entrada itzcuintli del Online Nahuatl Dictionary; lema y acepción principal",
+          "status": "catalog_checked"
+        }
+      ],
+      "notes": "Ficha secundaria consultada el 2026-09-29; cotejo de la edición primaria pendiente."
+    },
+    {
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Definición breve redactada para este índice y referencia de catálogo. Imagen enlazada bajo CC BY-NC-SA 3.0 UK con atribución; entrenamiento no autorizado en esta ficha."
+      },
+      "id": "glyph-itzcuintli-mdz16r",
+      "kind": "glyph",
+      "label": "Referencia de fuente: itzcuintli",
+      "sense_id": "sense-itzcuintli",
+      "reading": "itzcuintli",
+      "glyph_status": "proposed",
+      "glyph_type": "element",
+      "context": "Elemento de perro extraído del topónimo Itzcuintepec, Códice Mendoza, f. 16r.",
+      "url": "https://aztecglyphs.wired-humanities.org/node/694",
+      "image": "https://aztecglyphs.wired-humanities.org/sites/default/files/styles/large/public/izcuintli16rdogFromIzcuintepec.jpeg?itok=3n-BVVEb",
+      "image_credit": "Bodleian Libraries, University of Oxford, MS. Arch. Selden. A. 1. Vía Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed. CC BY-NC-SA 3.0 UK.",
+      "manuscript_url": "https://digital.bodleian.ox.ac.uk/objects/2fea788e-2aa2-4f08-b6d9-648c00486220/surfaces/bce39198-aa34-41a7-bba6-dee660dcad6d/",
+      "evidence": [
+        {
+          "source_id": "src-mendoza",
+          "via_source_id": "src-vla",
+          "locator": "Códice Mendoza, f. 16r; VLA itzcuintli (Mdz16r)",
+          "status": "catalog_checked"
+        }
+      ],
+      "notes": "Asociación tomada de la ficha VLA, consultada el 2026-09-29. Descripción y análisis de Stephanie Wood. Cotejo primario pendiente; la lectura se limita al contexto indicado."
+    },
+    {
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Definición breve redactada para este índice y referencia de catálogo. Imagen enlazada bajo CC BY-NC-SA 3.0 UK con atribución; entrenamiento no autorizado en esta ficha."
+      },
+      "id": "sense-tototl",
+      "kind": "sense",
+      "label": "ave",
+      "definition": "Ave o pájaro, como categoría general.",
+      "pos": "noun",
+      "aliases": [
+        "pájaro"
+      ]
+    },
+    {
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Definición breve redactada para este índice y referencia de catálogo. Imagen enlazada bajo CC BY-NC-SA 3.0 UK con atribución; entrenamiento no autorizado en esta ficha."
+      },
+      "id": "lex-tototl",
+      "kind": "form",
+      "label": "tototl",
+      "written": "tototl",
+      "sense_id": "sense-tototl",
+      "period": "historical",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "orthography": "Lema de la ficha consultada; sin marcar longitud vocálica. No es transcripción diplomática del códice.",
+      "variation_kind": "historical",
+      "url": "https://nahuatl.wired-humanities.org/content/tototl",
+      "evidence": [
+        {
+          "source_id": "src-molina",
+          "locator": "Molina (1571), parte 2, f. 151r, col. 1; entrada tototl",
+          "status": "catalog_checked",
+          "via_source_id": "src-oregon"
+        }
+      ],
+      "notes": "Ficha secundaria consultada el 2026-09-29; cotejo de la edición primaria pendiente."
+    },
+    {
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Definición breve redactada para este índice y referencia de catálogo. Imagen enlazada bajo CC BY-NC-SA 3.0 UK con atribución; entrenamiento no autorizado en esta ficha."
+      },
+      "id": "glyph-tototl-mdz46r",
+      "kind": "glyph",
+      "label": "Referencia de fuente: tototl",
+      "sense_id": "sense-tototl",
+      "reading": "tototl",
+      "glyph_status": "proposed",
+      "glyph_type": "element",
+      "context": "Ave extraída del topónimo Tototepec, Códice Mendoza, f. 46r.",
+      "url": "https://aztecglyphs.wired-humanities.org/content/tototl-mdz46r",
+      "image": "https://aztecglyphs.wired-humanities.org/sites/default/files/styles/large/public/tototl46rbirdFromTototepec.jpg?itok=5LgDaQXF",
+      "image_credit": "Bodleian Libraries, University of Oxford, MS. Arch. Selden. A. 1. Vía Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed. CC BY-NC-SA 3.0 UK.",
+      "manuscript_url": "https://digital.bodleian.ox.ac.uk/objects/2fea788e-2aa2-4f08-b6d9-648c00486220/surfaces/58731f65-c0a1-4e40-87c7-837cc94f1c64/",
+      "evidence": [
+        {
+          "source_id": "src-mendoza",
+          "via_source_id": "src-vla",
+          "locator": "Códice Mendoza, f. 46r; VLA tototl (Mdz46r)",
+          "status": "catalog_checked"
+        }
+      ],
+      "notes": "Asociación tomada de la ficha VLA, consultada el 2026-09-29. Descripción y análisis de Stephanie Wood. Cotejo primario pendiente; la lectura se limita al contexto indicado."
+    },
+    {
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Definición breve redactada para este índice y referencia de catálogo. Imagen enlazada bajo CC BY-NC-SA 3.0 UK con atribución; entrenamiento no autorizado en esta ficha."
+      },
+      "id": "sense-michin",
+      "kind": "sense",
+      "label": "pez",
+      "definition": "Pez; el lema no determina una especie particular.",
+      "pos": "noun",
+      "aliases": [
+        "pescado"
+      ]
+    },
+    {
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Definición breve redactada para este índice y referencia de catálogo. Imagen enlazada bajo CC BY-NC-SA 3.0 UK con atribución; entrenamiento no autorizado en esta ficha."
+      },
+      "id": "lex-michin",
+      "kind": "form",
+      "label": "michin",
+      "written": "michin",
+      "sense_id": "sense-michin",
+      "period": "historical",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "orthography": "Lema de la ficha consultada; sin marcar longitud vocálica. No es transcripción diplomática del códice.",
+      "variation_kind": "historical",
+      "url": "https://nahuatl.wired-humanities.org/content/michin",
+      "evidence": [
+        {
+          "source_id": "src-molina",
+          "locator": "Molina (1571), parte 2, f. 56r, col. 1; entrada michin",
+          "status": "catalog_checked",
+          "via_source_id": "src-oregon"
+        }
+      ],
+      "notes": "Ficha secundaria consultada el 2026-09-29; cotejo de la edición primaria pendiente."
+    },
+    {
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Definición breve redactada para este índice y referencia de catálogo. Imagen enlazada bajo CC BY-NC-SA 3.0 UK con atribución; entrenamiento no autorizado en esta ficha."
+      },
+      "id": "glyph-michin-mdz46r",
+      "kind": "glyph",
+      "label": "Referencia de fuente: michin",
+      "sense_id": "sense-michin",
+      "reading": "michin",
+      "glyph_status": "proposed",
+      "glyph_type": "element",
+      "context": "Pez extraído del topónimo Michapan, Códice Mendoza, f. 46r.",
+      "url": "https://aztecglyphs.wired-humanities.org/content/michin-mdz46r",
+      "image": "https://aztecglyphs.wired-humanities.org/sites/default/files/styles/large/public/michin46rfishFromMichapan.jpeg?itok=UHWTBIoS",
+      "image_credit": "Bodleian Libraries, University of Oxford, MS. Arch. Selden. A. 1. Vía Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed. CC BY-NC-SA 3.0 UK.",
+      "manuscript_url": "https://digital.bodleian.ox.ac.uk/objects/2fea788e-2aa2-4f08-b6d9-648c00486220/surfaces/58731f65-c0a1-4e40-87c7-837cc94f1c64/",
+      "evidence": [
+        {
+          "source_id": "src-mendoza",
+          "via_source_id": "src-vla",
+          "locator": "Códice Mendoza, f. 46r; VLA michin (Mdz46r)",
+          "status": "catalog_checked"
+        }
+      ],
+      "notes": "Asociación tomada de la ficha VLA, consultada el 2026-09-29. Descripción y análisis de Stephanie Wood. Cotejo primario pendiente; la lectura se limita al contexto indicado."
+    },
+    {
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Definición breve redactada para este índice y referencia de catálogo. Imagen enlazada bajo CC BY-NC-SA 3.0 UK con atribución; entrenamiento no autorizado en esta ficha."
+      },
+      "id": "sense-coatl",
+      "kind": "sense",
+      "label": "serpiente",
+      "definition": "Serpiente o culebra. Otros sentidos del mismo lema requieren una ficha distinta.",
+      "pos": "noun",
+      "aliases": [
+        "culebra"
+      ]
+    },
+    {
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Definición breve redactada para este índice y referencia de catálogo. Imagen enlazada bajo CC BY-NC-SA 3.0 UK con atribución; entrenamiento no autorizado en esta ficha."
+      },
+      "id": "lex-coatl",
+      "kind": "form",
+      "label": "coatl",
+      "written": "coatl",
+      "sense_id": "sense-coatl",
+      "period": "historical",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "orthography": "Lema de la ficha consultada; sin marcar longitud vocálica. No es transcripción diplomática del códice.",
+      "variation_kind": "historical",
+      "url": "https://nahuatl.wired-humanities.org/content/coatl",
+      "evidence": [
+        {
+          "source_id": "src-molina",
+          "locator": "Molina (1571), parte 2, f. 23r, col. 1; entrada coatl",
+          "status": "catalog_checked",
+          "via_source_id": "src-oregon"
+        }
+      ],
+      "notes": "Ficha secundaria consultada el 2026-09-29; cotejo de la edición primaria pendiente."
+    },
+    {
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Definición breve redactada para este índice y referencia de catálogo. Imagen enlazada bajo CC BY-NC-SA 3.0 UK con atribución; entrenamiento no autorizado en esta ficha."
+      },
+      "id": "glyph-coatl-mdz7v",
+      "kind": "glyph",
+      "label": "Referencia de fuente: coatl",
+      "sense_id": "sense-coatl",
+      "reading": "coatl",
+      "glyph_status": "proposed",
+      "glyph_type": "element",
+      "context": "Serpiente extraída del topónimo Coaixtlahuacan, Códice Mendoza, f. 7v.",
+      "url": "https://aztecglyphs.wired-humanities.org/content/coatl-mdz7v",
+      "image": "https://aztecglyphs.wired-humanities.org/sites/default/files/styles/large/public/coatl07vserpent%2CsnakeFromCoaixtlahuacan.jpeg?itok=L3K5rfOk",
+      "image_credit": "Bodleian Libraries, University of Oxford, MS. Arch. Selden. A. 1. Vía Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed. CC BY-NC-SA 3.0 UK.",
+      "manuscript_url": "https://digital.bodleian.ox.ac.uk/objects/2fea788e-2aa2-4f08-b6d9-648c00486220/surfaces/8ed30f47-5928-426d-930b-bcfbddabbc48/",
+      "evidence": [
+        {
+          "source_id": "src-mendoza",
+          "via_source_id": "src-vla",
+          "locator": "Códice Mendoza, f. 7v; VLA coatl (Mdz7v)",
+          "status": "catalog_checked"
+        }
+      ],
+      "notes": "Asociación tomada de la ficha VLA, consultada el 2026-09-29. Descripción y análisis de Stephanie Wood. Cotejo primario pendiente; la lectura se limita al contexto indicado."
+    },
+    {
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Definición breve redactada para este índice y referencia de catálogo. Imagen enlazada bajo CC BY-NC-SA 3.0 UK con atribución; entrenamiento no autorizado en esta ficha."
+      },
+      "id": "sense-tlalli",
+      "kind": "sense",
+      "label": "tierra",
+      "definition": "Tierra, terreno o parcela; el contexto determina el sentido.",
+      "pos": "noun",
+      "aliases": [
+        "terreno",
+        "parcela"
+      ]
+    },
+    {
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Definición breve redactada para este índice y referencia de catálogo. Imagen enlazada bajo CC BY-NC-SA 3.0 UK con atribución; entrenamiento no autorizado en esta ficha."
+      },
+      "id": "lex-tlalli",
+      "kind": "form",
+      "label": "tlalli",
+      "written": "tlalli",
+      "sense_id": "sense-tlalli",
+      "period": "historical",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "orthography": "Lema de la ficha consultada; sin marcar longitud vocálica. No es transcripción diplomática del códice.",
+      "variation_kind": "historical",
+      "url": "https://nahuatl.wired-humanities.org/content/tlalli",
+      "evidence": [
+        {
+          "source_id": "src-molina",
+          "locator": "Molina (1571), parte 2, f. 124r, col. 1; entrada tlalli",
+          "status": "catalog_checked",
+          "via_source_id": "src-oregon"
+        }
+      ],
+      "notes": "Ficha secundaria consultada el 2026-09-29; cotejo de la edición primaria pendiente."
+    },
+    {
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Definición breve redactada para este índice y referencia de catálogo. Imagen enlazada bajo CC BY-NC-SA 3.0 UK con atribución; entrenamiento no autorizado en esta ficha."
+      },
+      "id": "glyph-tlalli-mdz32r",
+      "kind": "glyph",
+      "label": "Referencia de fuente: tlalli",
+      "sense_id": "sense-tlalli",
+      "reading": "tlalli",
+      "glyph_status": "proposed",
+      "glyph_type": "element",
+      "context": "Parcela representada en el topónimo Tlalatlauhco, Códice Mendoza, f. 32r.",
+      "url": "https://aztecglyphs.wired-humanities.org/content/tlalli-mdz32r",
+      "image": "https://aztecglyphs.wired-humanities.org/sites/default/files/styles/large/public/tlalli32rlandFromTlalatlauhco.png?itok=8FeAw2_U",
+      "image_credit": "Bodleian Libraries, University of Oxford, MS. Arch. Selden. A. 1. Vía Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed. CC BY-NC-SA 3.0 UK.",
+      "manuscript_url": "https://digital.bodleian.ox.ac.uk/objects/2fea788e-2aa2-4f08-b6d9-648c00486220/surfaces/e2163356-838d-4322-8b8b-c21316332e03/",
+      "evidence": [
+        {
+          "source_id": "src-mendoza",
+          "via_source_id": "src-vla",
+          "locator": "Códice Mendoza, f. 32r; VLA tlalli (Mdz32r)",
+          "status": "catalog_checked"
+        }
+      ],
+      "notes": "Asociación tomada de la ficha VLA, consultada el 2026-09-29. Descripción y análisis de Stephanie Wood. Cotejo primario pendiente; la lectura se limita al contexto indicado."
+    },
+    {
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Definición breve redactada para este índice y referencia de catálogo. Imagen enlazada bajo CC BY-NC-SA 3.0 UK con atribución; entrenamiento no autorizado en esta ficha."
+      },
+      "id": "sense-tletl",
+      "kind": "sense",
+      "label": "fuego",
+      "definition": "Fuego o llama.",
+      "pos": "noun",
+      "aliases": []
+    },
+    {
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Definición breve redactada para este índice y referencia de catálogo. Imagen enlazada bajo CC BY-NC-SA 3.0 UK con atribución; entrenamiento no autorizado en esta ficha."
+      },
+      "id": "lex-tletl",
+      "kind": "form",
+      "label": "tletl",
+      "written": "tletl",
+      "sense_id": "sense-tletl",
+      "period": "historical",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "orthography": "Lema de la ficha consultada; sin marcar longitud vocálica. No es transcripción diplomática del códice.",
+      "variation_kind": "historical",
+      "url": "https://nahuatl.wired-humanities.org/content/tletl",
+      "evidence": [
+        {
+          "source_id": "src-molina",
+          "locator": "Molina (1571), parte 2, f. 147v, col. 1; entrada tletl",
+          "status": "catalog_checked",
+          "via_source_id": "src-oregon"
+        }
+      ],
+      "notes": "Ficha secundaria consultada el 2026-09-29; cotejo de la edición primaria pendiente."
+    },
+    {
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Definición breve redactada para este índice y referencia de catálogo. Imagen enlazada bajo CC BY-NC-SA 3.0 UK con atribución; entrenamiento no autorizado en esta ficha."
+      },
+      "id": "glyph-tletl-mdz13r",
+      "kind": "glyph",
+      "label": "Referencia de fuente: tletl",
+      "sense_id": "sense-tletl",
+      "reading": "tletl",
+      "glyph_status": "proposed",
+      "glyph_type": "iconography",
+      "context": "Llama de un edificio en una escena de conquista, Códice Mendoza, f. 13r. El catálogo la clasifica como iconografía.",
+      "url": "https://aztecglyphs.wired-humanities.org/content/tletl-mdz13r",
+      "image": "https://aztecglyphs.wired-humanities.org/sites/default/files/styles/large/public/tletl%28icon%2913rFromTepechiapanConquestSymbols.png?itok=kGbu_Ctz",
+      "image_credit": "Bodleian Libraries, University of Oxford, MS. Arch. Selden. A. 1. Vía Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed. CC BY-NC-SA 3.0 UK.",
+      "manuscript_url": "https://digital.bodleian.ox.ac.uk/objects/2fea788e-2aa2-4f08-b6d9-648c00486220/surfaces/e622087f-0879-46be-bf8d-207419d382a7/",
+      "evidence": [
+        {
+          "source_id": "src-mendoza",
+          "via_source_id": "src-vla",
+          "locator": "Códice Mendoza, f. 13r; VLA tletl (Mdz13r)",
+          "status": "catalog_checked"
+        }
+      ],
+      "notes": "Asociación tomada de la ficha VLA, consultada el 2026-09-29. Descripción y análisis de Stephanie Wood. Cotejo primario pendiente; la lectura se limita al contexto indicado."
+    },
+    {
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Definición breve redactada para este índice y referencia de catálogo. Imagen enlazada bajo CC BY-NC-SA 3.0 UK con atribución; entrenamiento no autorizado en esta ficha."
+      },
+      "id": "sense-ehecatl",
+      "kind": "sense",
+      "label": "viento",
+      "definition": "Viento. En contextos religiosos, el nombre Ehecatl también designa la fuerza o divinidad asociada al viento.",
+      "pos": "noun",
+      "aliases": [
+        "aire"
+      ]
+    },
+    {
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Definición breve redactada para este índice y referencia de catálogo. Imagen enlazada bajo CC BY-NC-SA 3.0 UK con atribución; entrenamiento no autorizado en esta ficha."
+      },
+      "id": "lex-ehecatl",
+      "kind": "form",
+      "label": "ehecatl",
+      "written": "ehecatl",
+      "sense_id": "sense-ehecatl",
+      "period": "historical",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "orthography": "Lema de la ficha consultada; sin marcar longitud vocálica. No es transcripción diplomática del códice.",
+      "variation_kind": "historical",
+      "url": "https://nahuatl.wired-humanities.org/content/ehecatl",
+      "evidence": [
+        {
+          "source_id": "src-oregon",
+          "locator": "Entrada ehecatl del Online Nahuatl Dictionary; lema y acepción principal",
+          "status": "catalog_checked"
+        }
+      ],
+      "notes": "Ficha secundaria consultada el 2026-09-29; cotejo de la edición primaria pendiente."
+    },
+    {
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Definición breve redactada para este índice y referencia de catálogo. Imagen enlazada bajo CC BY-NC-SA 3.0 UK con atribución; entrenamiento no autorizado en esta ficha."
+      },
+      "id": "glyph-ehecatl-mdz12r",
+      "kind": "glyph",
+      "label": "Referencia de fuente: ehecatl",
+      "sense_id": "sense-ehecatl",
+      "reading": "ehecatl",
+      "glyph_status": "proposed",
+      "glyph_type": "element",
+      "context": "Cabeza asociada a Ehecatl en Ecatepec, Códice Mendoza, f. 12r. La ficha se titula Ecatl y discute la relación con Ehecatl.",
+      "url": "https://aztecglyphs.wired-humanities.org/content/ecatl-mdz12r",
+      "image": "https://aztecglyphs.wired-humanities.org/sites/default/files/styles/large/public/Ehecatl12rdeitynameFromEhecatepec.jpeg?itok=LfKQ_VpG",
+      "image_credit": "Bodleian Libraries, University of Oxford, MS. Arch. Selden. A. 1. Vía Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed. CC BY-NC-SA 3.0 UK.",
+      "manuscript_url": "https://digital.bodleian.ox.ac.uk/objects/2fea788e-2aa2-4f08-b6d9-648c00486220/surfaces/64976018-04a7-4c15-a883-a01e94517b08/",
+      "evidence": [
+        {
+          "source_id": "src-mendoza",
+          "via_source_id": "src-vla",
+          "locator": "Códice Mendoza, f. 12r; VLA ehecatl (Mdz12r)",
+          "status": "catalog_checked"
+        }
+      ],
+      "notes": "Asociación tomada de la ficha VLA, consultada el 2026-09-29. Descripción y análisis de Stephanie Wood. Cotejo primario pendiente; la lectura se limita al contexto indicado."
+    },
+    {
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Definición breve redactada para este índice y referencia de catálogo. Imagen enlazada bajo CC BY-NC-SA 3.0 UK con atribución; entrenamiento no autorizado en esta ficha."
+      },
+      "id": "sense-citlalin",
+      "kind": "sense",
+      "label": "estrella",
+      "definition": "Estrella. La imagen seleccionada representa varias estrellas como componente de un topónimo.",
+      "pos": "noun",
+      "aliases": []
+    },
+    {
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Definición breve redactada para este índice y referencia de catálogo. Imagen enlazada bajo CC BY-NC-SA 3.0 UK con atribución; entrenamiento no autorizado en esta ficha."
+      },
+      "id": "lex-citlalin",
+      "kind": "form",
+      "label": "citlalin",
+      "written": "citlalin",
+      "sense_id": "sense-citlalin",
+      "period": "historical",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "orthography": "Lema de la ficha consultada; sin marcar longitud vocálica. No es transcripción diplomática del códice.",
+      "variation_kind": "historical",
+      "url": "https://nahuatl.wired-humanities.org/content/citlalin",
+      "evidence": [
+        {
+          "source_id": "src-molina",
+          "locator": "Molina (1571), parte 2, f. 22v, col. 1; entrada citlalin",
+          "status": "catalog_checked",
+          "via_source_id": "src-oregon"
+        }
+      ],
+      "notes": "Ficha secundaria consultada el 2026-09-29; cotejo de la edición primaria pendiente."
+    },
+    {
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Definición breve redactada para este índice y referencia de catálogo. Imagen enlazada bajo CC BY-NC-SA 3.0 UK con atribución; entrenamiento no autorizado en esta ficha."
+      },
+      "id": "glyph-citlalin-mdz17v",
+      "kind": "glyph",
+      "label": "Referencia de fuente: citlalin",
+      "sense_id": "sense-citlalin",
+      "reading": "citlalin",
+      "glyph_status": "proposed",
+      "glyph_type": "element",
+      "context": "Cielo con estrellas extraído del topónimo Citlaltepec, Códice Mendoza, f. 17v.",
+      "url": "https://aztecglyphs.wired-humanities.org/content/citlalin-mdz17v",
+      "image": "https://aztecglyphs.wired-humanities.org/sites/default/files/styles/large/public/citlalli17vstarsFromCitlaltepec.jpg?itok=P60n6tzT",
+      "image_credit": "Bodleian Libraries, University of Oxford, MS. Arch. Selden. A. 1. Vía Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed. CC BY-NC-SA 3.0 UK.",
+      "manuscript_url": "https://digital.bodleian.ox.ac.uk/objects/2fea788e-2aa2-4f08-b6d9-648c00486220/surfaces/0743a812-049a-4183-8cae-505bcf76a7ad/",
+      "evidence": [
+        {
+          "source_id": "src-mendoza",
+          "via_source_id": "src-vla",
+          "locator": "Códice Mendoza, f. 17v; VLA citlalin (Mdz17v)",
+          "status": "catalog_checked"
+        }
+      ],
+      "notes": "Asociación tomada de la ficha VLA, consultada el 2026-09-29. Descripción y análisis de Stephanie Wood. Cotejo primario pendiente; la lectura se limita al contexto indicado."
+    },
+    {
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Definición breve redactada para este índice y referencia de catálogo. Imagen enlazada bajo CC BY-NC-SA 3.0 UK con atribución; entrenamiento no autorizado en esta ficha."
+      },
+      "id": "sense-tepetl",
+      "kind": "sense",
+      "label": "cerro",
+      "definition": "Cerro o montaña. En compuestos puede aportar una función locativa que debe interpretarse en contexto.",
+      "pos": "noun",
+      "aliases": [
+        "montaña"
+      ]
+    },
+    {
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Definición breve redactada para este índice y referencia de catálogo. Imagen enlazada bajo CC BY-NC-SA 3.0 UK con atribución; entrenamiento no autorizado en esta ficha."
+      },
+      "id": "lex-tepetl",
+      "kind": "form",
+      "label": "tepetl",
+      "written": "tepetl",
+      "sense_id": "sense-tepetl",
+      "period": "historical",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "orthography": "Lema de la ficha consultada; sin marcar longitud vocálica. No es transcripción diplomática del códice.",
+      "variation_kind": "historical",
+      "url": "https://nahuatl.wired-humanities.org/content/tepetl",
+      "evidence": [
+        {
+          "source_id": "src-molina",
+          "locator": "Molina (1571), parte 2, f. 102v, col. 1; entrada tepetl",
+          "status": "catalog_checked",
+          "via_source_id": "src-oregon"
+        }
+      ],
+      "notes": "Ficha secundaria consultada el 2026-09-29; cotejo de la edición primaria pendiente."
+    },
+    {
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Definición breve redactada para este índice y referencia de catálogo. Imagen enlazada bajo CC BY-NC-SA 3.0 UK con atribución; entrenamiento no autorizado en esta ficha."
+      },
+      "id": "glyph-tepetl-mdz32r",
+      "kind": "glyph",
+      "label": "Referencia de fuente: tepetl",
+      "sense_id": "sense-tepetl",
+      "reading": "tepetl",
+      "glyph_status": "proposed",
+      "glyph_type": "element",
+      "context": "Cerro extraído del topónimo Ocotepec, Códice Mendoza, f. 32r.",
+      "url": "https://aztecglyphs.wired-humanities.org/content/tepetl-mdz32r",
+      "image": "https://aztecglyphs.wired-humanities.org/sites/default/files/styles/large/public/tepetl32rhill%2CmountainFromOcotepec.png?itok=TZO864x-",
+      "image_credit": "Bodleian Libraries, University of Oxford, MS. Arch. Selden. A. 1. Vía Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed. CC BY-NC-SA 3.0 UK.",
+      "manuscript_url": "https://digital.bodleian.ox.ac.uk/objects/2fea788e-2aa2-4f08-b6d9-648c00486220/surfaces/e2163356-838d-4322-8b8b-c21316332e03/",
+      "evidence": [
+        {
+          "source_id": "src-mendoza",
+          "via_source_id": "src-vla",
+          "locator": "Códice Mendoza, f. 32r; VLA tepetl (Mdz32r)",
+          "status": "catalog_checked"
+        }
+      ],
+      "notes": "Asociación tomada de la ficha VLA, consultada el 2026-09-29. Descripción y análisis de Stephanie Wood. Cotejo primario pendiente; la lectura se limita al contexto indicado."
+    },
+    {
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Definición breve redactada para este índice y referencia de catálogo. Imagen enlazada bajo CC BY-NC-SA 3.0 UK con atribución; entrenamiento no autorizado en esta ficha."
+      },
+      "id": "sense-metl",
+      "kind": "sense",
+      "label": "maguey",
+      "definition": "Maguey o agave; la ficha no identifica una especie botánica única.",
+      "pos": "noun",
+      "aliases": [
+        "agave"
+      ]
+    },
+    {
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Definición breve redactada para este índice y referencia de catálogo. Imagen enlazada bajo CC BY-NC-SA 3.0 UK con atribución; entrenamiento no autorizado en esta ficha."
+      },
+      "id": "lex-metl",
+      "kind": "form",
+      "label": "metl",
+      "written": "metl",
+      "sense_id": "sense-metl",
+      "period": "historical",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "orthography": "Lema de la ficha consultada; sin marcar longitud vocálica. No es transcripción diplomática del códice.",
+      "variation_kind": "historical",
+      "url": "https://nahuatl.wired-humanities.org/content/metl",
+      "evidence": [
+        {
+          "source_id": "src-molina",
+          "locator": "Molina (1571), parte 2, f. 55v, col. 1; entrada metl",
+          "status": "catalog_checked",
+          "via_source_id": "src-oregon"
+        }
+      ],
+      "notes": "Ficha secundaria consultada el 2026-09-29; cotejo de la edición primaria pendiente."
+    },
+    {
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Definición breve redactada para este índice y referencia de catálogo. Imagen enlazada bajo CC BY-NC-SA 3.0 UK con atribución; entrenamiento no autorizado en esta ficha."
+      },
+      "id": "glyph-metl-mdz10r",
+      "kind": "glyph",
+      "label": "Referencia de fuente: metl",
+      "sense_id": "sense-metl",
+      "reading": "metl",
+      "glyph_status": "proposed",
+      "glyph_type": "element",
+      "context": "Maguey extraído del topónimo Metepec, Códice Mendoza, f. 10r.",
+      "url": "https://aztecglyphs.wired-humanities.org/content/metl-Mdz10r",
+      "image": "https://aztecglyphs.wired-humanities.org/sites/default/files/styles/large/public/metl10ragave.jpg?itok=kszAhPmA",
+      "image_credit": "Bodleian Libraries, University of Oxford, MS. Arch. Selden. A. 1. Vía Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed. CC BY-NC-SA 3.0 UK.",
+      "manuscript_url": "https://digital.bodleian.ox.ac.uk/objects/2fea788e-2aa2-4f08-b6d9-648c00486220/surfaces/e7327aac-03be-45dc-9c3a-66613ea83901/",
+      "evidence": [
+        {
+          "source_id": "src-mendoza",
+          "via_source_id": "src-vla",
+          "locator": "Códice Mendoza, f. 10r; VLA metl (Mdz10r)",
+          "status": "catalog_checked"
+        }
+      ],
+      "notes": "Asociación tomada de la ficha VLA, consultada el 2026-09-29. Descripción y análisis de Stephanie Wood. Cotejo primario pendiente; la lectura se limita al contexto indicado."
+    },
+    {
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Definición breve redactada para este índice y referencia de catálogo. Imagen enlazada bajo CC BY-NC-SA 3.0 UK con atribución; entrenamiento no autorizado en esta ficha."
+      },
+      "id": "form-eecatl-molina",
+      "kind": "form",
+      "label": "eecatl · grafía de Molina",
+      "written": "eecatl",
+      "sense_id": "sense-ehecatl",
+      "period": "historical",
+      "variant": "nci",
+      "variant_label": "Náhuatl clásico",
+      "orthography": "Grafía citada de Molina en el Online Nahuatl Dictionary",
+      "variation_kind": "orthographic",
+      "url": "https://nahuatl.wired-humanities.org/content/ehecatl",
+      "evidence": [
+        {
+          "source_id": "src-molina",
+          "via_source_id": "src-oregon",
+          "locator": "Molina (1571), parte 2, f. 28r, col. 2; eecatl",
+          "status": "catalog_checked"
+        }
+      ],
+      "notes": "La ficha reúne eecatl y ehecatl; se conservan como grafías enlazadas, sin aplicar una sustitución automática al corpus."
+    },
+    {
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Definición breve redactada para este índice y referencia de catálogo. Imagen enlazada bajo CC BY-NC-SA 3.0 UK con atribución; entrenamiento no autorizado en esta ficha."
+      },
+      "id": "glyph-tetl-mdz48r",
+      "kind": "glyph",
+      "label": "Referencia de fuente: tetl",
+      "sense_id": "sense-tetl",
+      "reading": "tetl",
+      "glyph_status": "proposed",
+      "glyph_type": "element",
+      "context": "Elemento de piedra extraído de un topónimo del Códice Mendoza, f. 48r, según la ficha VLA.",
+      "url": "https://aztecglyphs.wired-humanities.org/content/tetl-mdz48r",
+      "image": "https://aztecglyphs.wired-humanities.org/sites/default/files/styles/large/public/tetl48rstone%2CrockFromTeuhcoltzapotlan.png?itok=T_LIDHs2",
+      "image_credit": "Bodleian Libraries, University of Oxford, MS. Arch. Selden. A. 1. Vía Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed. CC BY-NC-SA 3.0 UK.",
+      "manuscript_url": "https://digital.bodleian.ox.ac.uk/objects/2fea788e-2aa2-4f08-b6d9-648c00486220/surfaces/3b90fa6c-d8f1-434d-b5c2-24b2dd57d766/",
+      "evidence": [
+        {
+          "source_id": "src-mendoza",
+          "via_source_id": "src-vla",
+          "locator": "Códice Mendoza, f. 48r; VLA tetl (Mdz48r)",
+          "status": "catalog_checked"
+        }
+      ],
+      "notes": "Ficha secundaria consultada el 2026-09-29; cotejo primario pendiente. Se conserva aparte de la referencia tetl del Códice Xólotl."
+    }
+  ]
+}

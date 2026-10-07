@@ -1,0 +1,264 @@
+{
+  "variant_source": {
+    "label": "Catálogo INALI · nombres de referencia; puedes usar tu propia denominación.",
+    "url": "https://www.inali.gob.mx/sitios/clin-inali/html/l_nahuatl.html",
+    "accessed": "2026-09-23",
+    "ids_note": "Identificadores internos; no son códigos ISO."
+  },
+  "variants": [
+    {
+      "id": "inali-00",
+      "label": "náhuatl de la Sierra, noreste de Puebla"
+    },
+    {
+      "id": "inali-01",
+      "label": "náhuatl del noroeste central"
+    },
+    {
+      "id": "inali-02",
+      "label": "náhuatl del Istmo"
+    },
+    {
+      "id": "inali-03",
+      "label": "náhuatl de la Huasteca veracruzana"
+    },
+    {
+      "id": "inali-04",
+      "label": "náhuatl de la Huasteca potosina"
+    },
+    {
+      "id": "inali-05",
+      "label": "náhuatl de Oaxaca"
+    },
+    {
+      "id": "inali-06",
+      "label": "náhuatl de la Sierra negra, sur"
+    },
+    {
+      "id": "inali-07",
+      "label": "náhuatl de la Sierra negra, norte"
+    },
+    {
+      "id": "inali-08",
+      "label": "náhuatl central de Veracruz"
+    },
+    {
+      "id": "inali-09",
+      "label": "náhuatl de la Sierra oeste de Puebla"
+    },
+    {
+      "id": "inali-10",
+      "label": "náhuatl alto del norte de Puebla"
+    },
+    {
+      "id": "inali-11",
+      "label": "náhuatl del Istmo bajo"
+    },
+    {
+      "id": "inali-12",
+      "label": "náhuatl del centro de Puebla"
+    },
+    {
+      "id": "inali-13",
+      "label": "mexicano bajo de occidente"
+    },
+    {
+      "id": "inali-14",
+      "label": "mexicano del noroeste"
+    },
+    {
+      "id": "inali-15",
+      "label": "mexicano de Guerrero"
+    },
+    {
+      "id": "inali-16",
+      "label": "mexicano de occidente"
+    },
+    {
+      "id": "inali-17",
+      "label": "mexicano central de occidente"
+    },
+    {
+      "id": "inali-18",
+      "label": "mexicano central bajo"
+    },
+    {
+      "id": "inali-19",
+      "label": "mexicano de Temixco"
+    },
+    {
+      "id": "inali-20",
+      "label": "mexicano de Puente de Ixtla"
+    },
+    {
+      "id": "inali-21",
+      "label": "mexicano de Tetela del Volcán"
+    },
+    {
+      "id": "inali-22",
+      "label": "mexicano alto de occidente"
+    },
+    {
+      "id": "inali-23",
+      "label": "mexicano del oriente"
+    },
+    {
+      "id": "inali-24",
+      "label": "mexicano del oriente central"
+    },
+    {
+      "id": "inali-25",
+      "label": "mexicano del centro bajo"
+    },
+    {
+      "id": "inali-26",
+      "label": "mexicano del centro alto"
+    },
+    {
+      "id": "inali-27",
+      "label": "mexicano del centro"
+    },
+    {
+      "id": "inali-28",
+      "label": "mexicano del oriente de Puebla"
+    },
+    {
+      "id": "inali-29",
+      "label": "mexicano de la Huasteca hidalguense"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "read-001",
+      "kind": "recognize",
+      "text": "atl",
+      "source": {
+        "label": "Entrada léxica · Visual Lexicon of Aztec Hieroglyphs",
+        "url": "https://aztecglyphs.wired-humanities.org/content/atl-mdz51r-0",
+        "rights": "Palabra aislada; sin reproducir imágenes o explicaciones del catálogo.",
+        "split": "collection"
+      }
+    },
+    {
+      "id": "read-002",
+      "kind": "recognize",
+      "text": "calli",
+      "source": {
+        "label": "Entrada léxica · Visual Lexicon of Aztec Hieroglyphs",
+        "url": "https://aztecglyphs.wired-humanities.org/content/calli-mdz13r",
+        "rights": "Palabra aislada; sin reproducir imágenes o explicaciones del catálogo.",
+        "split": "collection"
+      }
+    },
+    {
+      "id": "read-003",
+      "kind": "recognize",
+      "text": "xochitl",
+      "source": {
+        "label": "Entrada léxica · Visual Lexicon of Aztec Hieroglyphs",
+        "url": "https://aztecglyphs.wired-humanities.org/content/xochitl-mdz10r",
+        "rights": "Palabra aislada; sin reproducir imágenes o explicaciones del catálogo.",
+        "split": "collection"
+      }
+    },
+    {
+      "id": "read-004",
+      "kind": "recognize",
+      "text": "Niquitta in xochitl.",
+      "source": {
+        "label": "Frase de práctica compuesta para esta app; sin validación lingüística.",
+        "url": "",
+        "rights": "Composición del proyecto; no es cita de un manuscrito.",
+        "split": "collection"
+      }
+    },
+    {
+      "id": "write-001",
+      "kind": "translate",
+      "text": "Veo una flor.",
+      "source": {
+        "label": "Estímulo original del proyecto · español",
+        "url": "",
+        "rights": "Texto original del proyecto, MIT.",
+        "split": "collection"
+      }
+    },
+    {
+      "id": "write-002",
+      "kind": "translate",
+      "text": "El agua está fría.",
+      "source": {
+        "label": "Estímulo original del proyecto · español",
+        "url": "",
+        "rights": "Texto original del proyecto, MIT.",
+        "split": "collection"
+      }
+    },
+    {
+      "id": "write-003",
+      "kind": "translate",
+      "text": "Esta es mi casa.",
+      "source": {
+        "label": "Estímulo original del proyecto · español",
+        "url": "",
+        "rights": "Texto original del proyecto, MIT.",
+        "split": "collection"
+      }
+    },
+    {
+      "id": "write-004",
+      "kind": "translate",
+      "text": "Mañana iremos al campo.",
+      "source": {
+        "label": "Estímulo original del proyecto · español",
+        "url": "",
+        "rights": "Texto original del proyecto, MIT.",
+        "split": "collection"
+      }
+    },
+    {
+      "id": "write-005",
+      "kind": "translate",
+      "text": "¿Cómo te llamas?",
+      "source": {
+        "label": "Estímulo original del proyecto · español",
+        "url": "",
+        "rights": "Texto original del proyecto, MIT.",
+        "split": "collection"
+      }
+    },
+    {
+      "id": "write-006",
+      "kind": "translate",
+      "text": "La niña escucha a su abuela.",
+      "source": {
+        "label": "Estímulo original del proyecto · español",
+        "url": "",
+        "rights": "Texto original del proyecto, MIT.",
+        "split": "collection"
+      }
+    },
+    {
+      "id": "write-007",
+      "kind": "translate",
+      "text": "Hoy no voy a trabajar.",
+      "source": {
+        "label": "Estímulo original del proyecto · español",
+        "url": "",
+        "rights": "Texto original del proyecto, MIT.",
+        "split": "collection"
+      }
+    },
+    {
+      "id": "write-008",
+      "kind": "translate",
+      "text": "Hay dos árboles junto al camino.",
+      "source": {
+        "label": "Estímulo original del proyecto · español",
+        "url": "",
+        "rights": "Texto original del proyecto, MIT.",
+        "split": "collection"
+      }
+    }
+  ]
+}

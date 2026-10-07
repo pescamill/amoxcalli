@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "existing_records_preserved": 1173,
+  "added_records": [
+    "glyph-cacahuaxochitl-mh885v",
+    "lex-cacahuaxochitl",
+    "lex-cuicatl",
+    "sense-cacahuaxochitl",
+    "sense-cuicatl"
+  ],
+  "tables_preserved": {
+    "people": true,
+    "tasks": true,
+    "audio": true,
+    "contributions": true,
+    "reviews": true,
+    "audit": true,
+    "corpus_records": true,
+    "corpus_links": true,
+    "corpus_proposals": true,
+    "corpus_history": true,
+    "corpus_meta": true,
+    "training_pair_proposals": true
+  },
+  "counts": {
+    "form": 528,
+    "glyph": 101,
+    "note": 1,
+    "text": 3,
+    "sense": 525,
+    "source": 20
+  },
+  "backup": "data/backups/voces-before-flor-v8.sqlite3",
+  "rights_training_granted": false
+}

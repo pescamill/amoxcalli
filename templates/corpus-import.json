@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "records": [
+    {
+      "id": "src-espejos-unam",
+      "kind": "source",
+      "label": "Espejos de príncipes para nobles nahuas",
+      "source_type": "research",
+      "institution": "UNAM · Instituto de Investigaciones Históricas",
+      "author": "Equipo del proyecto; consultar los créditos completos en el sitio",
+      "date": "Proyecto digital; fecha inicial por precisar",
+      "language": "es / náhuatl",
+      "description": "Proyecto de estudio de obras nahuas vinculadas a la formación de nobles indígenas. Ficha bibliográfica y enlace; no se incorpora el texto de las obras.",
+      "url": "https://espejosennahuatl.historicas.unam.mx/proyecto/",
+      "verification": "catalog_checked",
+      "checked_at": "2026-09-27",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Referencia al proyecto. Consultar los derechos de cada obra y edición antes de reproducir textos."
+      }
+    }
+  ]
+}

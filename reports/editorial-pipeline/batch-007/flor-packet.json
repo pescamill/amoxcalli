@@ -1,0 +1,177 @@
+{
+  "annotation_example_counts": {
+    "sense-cacahuaxochitl": 1,
+    "sense-cuicatl": 2,
+    "sense-itta": 1,
+    "sense-xochitl": 3
+  },
+  "examples": [
+    {
+      "annotations": [
+        {
+          "end": 8,
+          "glyph_id": "glyph-related-itta-mh716r",
+          "note": "El registro traduce NIQUITTA como «contemplo». Se consulta itta como ayuda editorial; el análisis de esta forma sigue pendiente. La imagen de Tlachia es una comparación de significado, no la escritura de NIQUITTA ni de itta.",
+          "quote": "NIQUITTA",
+          "relation": "observed_form",
+          "sense_id": "sense-itta",
+          "start": 0
+        },
+        {
+          "end": 19,
+          "glyph_id": "glyph-xochitl",
+          "note": "La traducción del registro permite reconocer la flor en esta frase.",
+          "quote": "XOCHITL",
+          "relation": "full_word",
+          "sense_id": "sense-xochitl",
+          "start": 12
+        }
+      ],
+      "archive_id": "axolotl-05338",
+      "document": "La tinta negra y roja (antología de poesía náhuatl)",
+      "es": "CONTEMPLO UNA FLOR",
+      "exercise": {
+        "answer": 1,
+        "blank": "",
+        "explanation": "La traducción de este registro dice «CONTEMPLO UNA FLOR». Relaciona XOCHITL con la entrada flor.",
+        "kind": "meaning",
+        "options": [
+          "Una casa",
+          "Una flor",
+          "La luna"
+        ],
+        "question": "¿Qué se contempla en el título?"
+      },
+      "iso": "nci",
+      "locator": "Axolotl, registro CSV 5338; página de la edición primaria pendiente",
+      "nah": "NIQUITTA IN XOCHITL",
+      "source_hash": "f1c36531ccb1fe098d6d746850f275e68184c6958aec66fc7257e701850aa6a0",
+      "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv"
+    },
+    {
+      "annotations": [
+        {
+          "end": 34,
+          "glyph_id": "glyph-xochitl",
+          "note": "Aquí aparece junto a cuicatl. Conserva el contexto poético; una definición aislada no explica todo el título.",
+          "quote": "xochitl",
+          "relation": "full_word",
+          "sense_id": "sense-xochitl",
+          "start": 27
+        },
+        {
+          "end": 46,
+          "note": "Molina registra cuicatl como canto o canción. En este título aparece junto a xochitl; el español presenta el conjunto como poesía. La consulta léxica no reemplaza ese contexto.",
+          "quote": "cuicatl",
+          "relation": "full_word",
+          "sense_id": "sense-cuicatl",
+          "start": 39
+        }
+      ],
+      "archive_id": "axolotl-06231",
+      "document": "La tinta negra y roja (antología de poesía náhuatl)",
+      "es": "Diálogo de la poesía: flor y canto",
+      "exercise": {
+        "answer": 2,
+        "blank": "xochitl",
+        "explanation": "El texto original contiene xochitl. El ejercicio recupera esa forma de la fuente.",
+        "kind": "cloze",
+        "options": [
+          "metztli",
+          "calli",
+          "xochitl"
+        ],
+        "question": "Completa con la palabra que aparece en la fuente: Tenonotzaliztli itechpa in ___, in cuicatl"
+      },
+      "iso": "nci",
+      "locator": "Axolotl, registro CSV 6231; página de la edición primaria pendiente",
+      "nah": "Tenonotzaliztli itechpa in xochitl, in cuicatl",
+      "source_hash": "2a489a884db3830fb815a27b3541d5c7fb4b20d8fe60abf6690242185f86cb84",
+      "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv"
+    },
+    {
+      "annotations": [
+        {
+          "end": 14,
+          "glyph_id": "glyph-cacahuaxochitl-mh885v",
+          "note": "Consulta la entrada de Cacahuaxochitl completa. La referencia visual procede de un nombre personal en otro documento, no de este poema. El nombre tradicional «flor de cacao» no acredita una identificación botánica.",
+          "quote": "Cacahuaxochitl",
+          "relation": "full_word",
+          "sense_id": "sense-cacahuaxochitl",
+          "start": 0
+        }
+      ],
+      "archive_id": "axolotl-10445",
+      "document": "La tinta negra y roja (antología de poesía náhuatl)",
+      "es": "Las flores de cacao",
+      "exercise": {
+        "answer": 0,
+        "blank": "",
+        "explanation": "La fuente escribe Cacahuaxochitl. Se consulta su entrada propia: no se reemplaza el nombre completo por xochitl, aunque comparta el tema de las flores.",
+        "kind": "meaning",
+        "options": [
+          "Cacahuaxochitl",
+          "xochitl",
+          "cuicatl"
+        ],
+        "question": "¿Qué palabra completa conserva este registro?"
+      },
+      "iso": "nci",
+      "locator": "Axolotl, registro CSV 10445; página de la edición primaria pendiente",
+      "nah": "Cacahuaxochitl",
+      "source_hash": "3a0a95bde0f3de104ec7524820cc393c71a7e7903de3dc5b30b10a2e76e07a11",
+      "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv"
+    },
+    {
+      "annotations": [
+        {
+          "end": 31,
+          "glyph_id": "glyph-xochitl",
+          "note": "La fuente escribe xochitli en este fragmento. Se conserva esa grafía; el enlace al lema xochitl es una ayuda editorial pendiente de cotejo.",
+          "quote": "xochitli",
+          "relation": "source_variant",
+          "sense_id": "sense-xochitl",
+          "start": 23
+        },
+        {
+          "end": 58,
+          "note": "Aquí el registro traduce «cantos». La forma cuicatl se conserva intacta; no se infiere el número gramatical a partir de la traducción española.",
+          "quote": "cuicatl",
+          "relation": "full_word",
+          "sense_id": "sense-cuicatl",
+          "start": 51
+        }
+      ],
+      "archive_id": "axolotl-13493",
+      "document": "La tinta negra y roja (antología de poesía náhuatl)",
+      "es": "¿Dónde tomaré bellas flores,     bellos cantos?",
+      "exercise": {
+        "answer": 2,
+        "blank": "xochitli",
+        "explanation": "El pasaje escribe xochitli. No se corrige automáticamente a xochitl: la relación con esa entrada sigue siendo una ayuda editorial pendiente de cotejo.",
+        "kind": "cloze",
+        "options": [
+          "xochitl",
+          "cuicatl",
+          "xochitli"
+        ],
+        "question": "¿Qué forma escribe este pasaje para las flores? Conserva su grafía exacta."
+      },
+      "iso": "nci",
+      "locator": "Axolotl, registro CSV 13493; página de la edición primaria pendiente",
+      "nah": "¿Can niccuiz in yectli xochitli,     in yectli yan cuicatl?",
+      "source_hash": "912969456978af58aaac6779b3146967239d44e28332e82a7816d6205ebd5b22",
+      "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv"
+    }
+  ],
+  "id": "flor",
+  "objective": "Reconocer xochitl y cuicatl, distinguir una palabra completa y conservar la grafía del pasaje.",
+  "review_status": "editorial_draft",
+  "target_sense_ids": [
+    "sense-xochitl",
+    "sense-itta",
+    "sense-cuicatl",
+    "sense-cacahuaxochitl"
+  ],
+  "title": "Reconocer una flor"
+}

@@ -1,0 +1,1778 @@
+{
+  "schema_version": 1,
+  "tasks": [
+    {
+      "acceptance": "Registrar edición primaria, página/folio y cotejo por pasaje; revisar traducción, forma→acepción y explicación con responsable y fecha. No sustituir el original ni marcar revisión por pasar validación técnica.",
+      "decision": {
+        "date": "2026-09-30",
+        "evidence": [
+          "reports/FLOR_CICLO_2026-09-30.md",
+          "editorial/flor-source-extract.json"
+        ],
+        "fingerprint": "4dc5fd16ef577a76300b60fd87fbf63aa1798da420046f02b5d9d1ac7beddc90",
+        "resolution": "Comparación de registros y catálogos realizada. Falta edición/página primaria de los cuatro pasajes y cotejo lingüístico competente; no se marca revisión primaria por consultar catálogos.",
+        "reviewer": "Codex · revisión editorial y técnica; sin certificación lingüística",
+        "status": "blocked"
+      },
+      "evidence": {
+        "examples": [
+          {
+            "annotations": [
+              {
+                "end": 8,
+                "glyph_id": "glyph-related-itta-mh716r",
+                "note": "El registro traduce NIQUITTA como «contemplo». Se consulta itta como ayuda editorial; el análisis de esta forma sigue pendiente. La imagen de Tlachia es una comparación de significado, no la escritura de NIQUITTA ni de itta.",
+                "quote": "NIQUITTA",
+                "relation": "observed_form",
+                "sense_id": "sense-itta",
+                "start": 0
+              },
+              {
+                "end": 19,
+                "glyph_id": "glyph-xochitl",
+                "note": "La traducción del registro permite reconocer la flor en esta frase.",
+                "quote": "XOCHITL",
+                "relation": "full_word",
+                "sense_id": "sense-xochitl",
+                "start": 12
+              }
+            ],
+            "archive_id": "axolotl-05338",
+            "document": "La tinta negra y roja (antología de poesía náhuatl)",
+            "es": "CONTEMPLO UNA FLOR",
+            "exercise": {
+              "answer": 1,
+              "blank": "",
+              "explanation": "La traducción de este registro dice «CONTEMPLO UNA FLOR». Relaciona XOCHITL con la entrada flor.",
+              "kind": "meaning",
+              "options": [
+                "Una casa",
+                "Una flor",
+                "La luna"
+              ],
+              "question": "¿Qué se contempla en el título?"
+            },
+            "iso": "nci",
+            "locator": "Axolotl, registro CSV 5338; página de la edición primaria pendiente",
+            "nah": "NIQUITTA IN XOCHITL",
+            "source_hash": "f1c36531ccb1fe098d6d746850f275e68184c6958aec66fc7257e701850aa6a0",
+            "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv"
+          },
+          {
+            "annotations": [
+              {
+                "end": 34,
+                "glyph_id": "glyph-xochitl",
+                "note": "Aquí aparece junto a cuicatl. Conserva el contexto poético; una definición aislada no explica todo el título.",
+                "quote": "xochitl",
+                "relation": "full_word",
+                "sense_id": "sense-xochitl",
+                "start": 27
+              },
+              {
+                "end": 46,
+                "note": "Molina registra cuicatl como canto o canción. En este título aparece junto a xochitl; el español presenta el conjunto como poesía. La consulta léxica no reemplaza ese contexto.",
+                "quote": "cuicatl",
+                "relation": "full_word",
+                "sense_id": "sense-cuicatl",
+                "start": 39
+              }
+            ],
+            "archive_id": "axolotl-06231",
+            "document": "La tinta negra y roja (antología de poesía náhuatl)",
+            "es": "Diálogo de la poesía: flor y canto",
+            "exercise": {
+              "answer": 2,
+              "blank": "xochitl",
+              "explanation": "El texto original contiene xochitl. El ejercicio recupera esa forma de la fuente.",
+              "kind": "cloze",
+              "options": [
+                "metztli",
+                "calli",
+                "xochitl"
+              ],
+              "question": "Completa con la palabra que aparece en la fuente: Tenonotzaliztli itechpa in ___, in cuicatl"
+            },
+            "iso": "nci",
+            "locator": "Axolotl, registro CSV 6231; página de la edición primaria pendiente",
+            "nah": "Tenonotzaliztli itechpa in xochitl, in cuicatl",
+            "source_hash": "2a489a884db3830fb815a27b3541d5c7fb4b20d8fe60abf6690242185f86cb84",
+            "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv"
+          },
+          {
+            "annotations": [
+              {
+                "end": 14,
+                "glyph_id": "glyph-cacahuaxochitl-mh885v",
+                "note": "Consulta la entrada de Cacahuaxochitl completa. La referencia visual procede de un nombre personal en otro documento, no de este poema. El nombre tradicional «flor de cacao» no acredita una identificación botánica.",
+                "quote": "Cacahuaxochitl",
+                "relation": "full_word",
+                "sense_id": "sense-cacahuaxochitl",
+                "start": 0
+              }
+            ],
+            "archive_id": "axolotl-10445",
+            "document": "La tinta negra y roja (antología de poesía náhuatl)",
+            "es": "Las flores de cacao",
+            "exercise": {
+              "answer": 0,
+              "blank": "",
+              "explanation": "La fuente escribe Cacahuaxochitl. Se consulta su entrada propia: no se reemplaza el nombre completo por xochitl, aunque comparta el tema de las flores.",
+              "kind": "meaning",
+              "options": [
+                "Cacahuaxochitl",
+                "xochitl",
+                "cuicatl"
+              ],
+              "question": "¿Qué palabra completa conserva este registro?"
+            },
+            "iso": "nci",
+            "locator": "Axolotl, registro CSV 10445; página de la edición primaria pendiente",
+            "nah": "Cacahuaxochitl",
+            "source_hash": "3a0a95bde0f3de104ec7524820cc393c71a7e7903de3dc5b30b10a2e76e07a11",
+            "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv"
+          },
+          {
+            "annotations": [
+              {
+                "end": 31,
+                "glyph_id": "glyph-xochitl",
+                "note": "La fuente escribe xochitli en este fragmento. Se conserva esa grafía; el enlace al lema xochitl es una ayuda editorial pendiente de cotejo.",
+                "quote": "xochitli",
+                "relation": "source_variant",
+                "sense_id": "sense-xochitl",
+                "start": 23
+              },
+              {
+                "end": 58,
+                "note": "Aquí el registro traduce «cantos». La forma cuicatl se conserva intacta; no se infiere el número gramatical a partir de la traducción española.",
+                "quote": "cuicatl",
+                "relation": "full_word",
+                "sense_id": "sense-cuicatl",
+                "start": 51
+              }
+            ],
+            "archive_id": "axolotl-13493",
+            "document": "La tinta negra y roja (antología de poesía náhuatl)",
+            "es": "¿Dónde tomaré bellas flores,     bellos cantos?",
+            "exercise": {
+              "answer": 2,
+              "blank": "xochitli",
+              "explanation": "El pasaje escribe xochitli. No se corrige automáticamente a xochitl: la relación con esa entrada sigue siendo una ayuda editorial pendiente de cotejo.",
+              "kind": "cloze",
+              "options": [
+                "xochitl",
+                "cuicatl",
+                "xochitli"
+              ],
+              "question": "¿Qué forma escribe este pasaje para las flores? Conserva su grafía exacta."
+            },
+            "iso": "nci",
+            "locator": "Axolotl, registro CSV 13493; página de la edición primaria pendiente",
+            "nah": "¿Can niccuiz in yectli xochitli,     in yectli yan cuicatl?",
+            "source_hash": "912969456978af58aaac6779b3146967239d44e28332e82a7816d6205ebd5b22",
+            "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv"
+          }
+        ],
+        "review_status": "editorial_draft",
+        "source_id": "src-axolotl"
+      },
+      "fingerprint": "4dc5fd16ef577a76300b60fd87fbf63aa1798da420046f02b5d9d1ac7beddc90",
+      "id": "lesson-flor-source-review",
+      "lesson_id": "flor",
+      "priority": "P1",
+      "review_stale": false,
+      "status": "blocked",
+      "title": "Cotejar los cuatro pasajes y sus ayudas lingüísticas"
+    },
+    {
+      "acceptance": "Justificar cada clave en el pasaje; revisar distractores y explicación; incluir una comprobación del objetivo que no dependa únicamente de leer el español.",
+      "decision": {
+        "date": "2026-09-30",
+        "evidence": [
+          "corpus/learning-v1.json",
+          "reports/platform-ui-flor-2026-09-30.txt",
+          "reports/FLOR_CICLO_2026-09-30.md"
+        ],
+        "fingerprint": "4b462a7cb288d5c6d5ffe9ca7bb6006719ce290d23582628056601ed5964e123",
+        "resolution": "Claves cotejadas contra los cuatro registros: comprensión, xochitl exacto, palabra completa Cacahuaxochitl y grafía xochitli. Distractores distinguen esas formas; validación rechaza cloze con clave distinta al original. Revisión editorial/técnica realizada; eficacia con principiantes no medida.",
+        "reviewer": "Codex · revisión editorial y técnica; sin certificación lingüística",
+        "status": "resolved"
+      },
+      "evidence": {
+        "exercises": [
+          {
+            "archive_id": "axolotl-05338",
+            "exercise": {
+              "answer": 1,
+              "blank": "",
+              "explanation": "La traducción de este registro dice «CONTEMPLO UNA FLOR». Relaciona XOCHITL con la entrada flor.",
+              "kind": "meaning",
+              "options": [
+                "Una casa",
+                "Una flor",
+                "La luna"
+              ],
+              "question": "¿Qué se contempla en el título?"
+            }
+          },
+          {
+            "archive_id": "axolotl-06231",
+            "exercise": {
+              "answer": 2,
+              "blank": "xochitl",
+              "explanation": "El texto original contiene xochitl. El ejercicio recupera esa forma de la fuente.",
+              "kind": "cloze",
+              "options": [
+                "metztli",
+                "calli",
+                "xochitl"
+              ],
+              "question": "Completa con la palabra que aparece en la fuente: Tenonotzaliztli itechpa in ___, in cuicatl"
+            }
+          },
+          {
+            "archive_id": "axolotl-10445",
+            "exercise": {
+              "answer": 0,
+              "blank": "",
+              "explanation": "La fuente escribe Cacahuaxochitl. Se consulta su entrada propia: no se reemplaza el nombre completo por xochitl, aunque comparta el tema de las flores.",
+              "kind": "meaning",
+              "options": [
+                "Cacahuaxochitl",
+                "xochitl",
+                "cuicatl"
+              ],
+              "question": "¿Qué palabra completa conserva este registro?"
+            }
+          },
+          {
+            "archive_id": "axolotl-13493",
+            "exercise": {
+              "answer": 2,
+              "blank": "xochitli",
+              "explanation": "El pasaje escribe xochitli. No se corrige automáticamente a xochitl: la relación con esa entrada sigue siendo una ayuda editorial pendiente de cotejo.",
+              "kind": "cloze",
+              "options": [
+                "xochitl",
+                "cuicatl",
+                "xochitli"
+              ],
+              "question": "¿Qué forma escribe este pasaje para las flores? Conserva su grafía exacta."
+            }
+          }
+        ],
+        "objective": "Reconocer xochitl y cuicatl, distinguir una palabra completa y conservar la grafía del pasaje."
+      },
+      "fingerprint": "4b462a7cb288d5c6d5ffe9ca7bb6006719ce290d23582628056601ed5964e123",
+      "id": "lesson-flor-exercises",
+      "lesson_id": "flor",
+      "priority": "P2",
+      "review_stale": false,
+      "status": "resolved",
+      "title": "Revisar ejercicios y el objetivo de aprendizaje"
+    },
+    {
+      "acceptance": "Registrar las tareas propuestas, resultados observados, dificultades y cambios; distinguir propuesta de prueba y prueba realizada. Evitar datos personales innecesarios.",
+      "decision": {
+        "date": "2026-09-30",
+        "evidence": [
+          "editorial/flor-beginner-trial.md"
+        ],
+        "fingerprint": "30efd7fdb2faddbd9f951247d31d844a489456f0148fc5e847089fe563147498",
+        "resolution": "Protocolo preparado. No se han observado principiantes reales; completar la hoja con participantes y resultados antes de declarar ensayo realizado.",
+        "reviewer": "Codex · revisión editorial y técnica; sin certificación lingüística",
+        "status": "blocked"
+      },
+      "evidence": {
+        "has_recorded_trial": false,
+        "lesson_id": "flor"
+      },
+      "fingerprint": "30efd7fdb2faddbd9f951247d31d844a489456f0148fc5e847089fe563147498",
+      "id": "lesson-flor-learner-trial",
+      "lesson_id": "flor",
+      "priority": "P2",
+      "review_stale": false,
+      "status": "blocked",
+      "title": "Probar la lectura con principiantes"
+    },
+    {
+      "acceptance": "Registrar edición primaria, página/folio y cotejo por pasaje; revisar traducción, forma→acepción y explicación con responsable y fecha. No sustituir el original ni marcar revisión por pasar validación técnica.",
+      "decision": {},
+      "evidence": {
+        "examples": [
+          {
+            "annotations": [
+              {
+                "end": 11,
+                "note": "El registro traduce Tonatiuh como Sol.",
+                "quote": "Tonatiuh",
+                "sense_id": "sense-tonatiuh",
+                "start": 3
+              },
+              {
+                "end": 17,
+                "note": "En este fragmento enlaza Sol y Luna; el español utiliza «y».",
+                "quote": "ihuan",
+                "sense_id": "sense-ihuan",
+                "start": 12
+              },
+              {
+                "end": 28,
+                "note": "Aquí el sentido es Luna. La acepción mes se mantiene en otra ficha.",
+                "quote": "Metztli",
+                "sense_id": "sense-metztli",
+                "start": 21
+              }
+            ],
+            "archive_id": "axolotl-11087",
+            "document": "La tinta negra y roja (antología de poesía náhuatl)",
+            "es": "al Sol y a la Luna.",
+            "exercise": {
+              "answer": 0,
+              "blank": "",
+              "explanation": "La traducción dice «al Sol y a la Luna». Aquí metztli corresponde a luna.",
+              "kind": "meaning",
+              "options": [
+                "Sol y luna",
+                "Agua y piedra",
+                "Casa y árbol"
+              ],
+              "question": "¿Qué dos referentes aparecen?"
+            },
+            "iso": "nci",
+            "locator": "Axolotl, registro CSV 11087; página de la edición primaria pendiente",
+            "nah": "in Tonatiuh ihuan in Metztli.",
+            "source_hash": "effbf81987d7a97c126b4a8330d625aa2540026428a4b34a6bc51bbb7c664c6a",
+            "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv"
+          },
+          {
+            "annotations": [
+              {
+                "end": 11,
+                "note": "Reconoce Sol dentro de la expresión completa; no presupongas que cada palabra española tiene una palabra náhuatl separada.",
+                "quote": "tonatiuh",
+                "sense_id": "sense-tonatiuh",
+                "start": 3
+              }
+            ],
+            "archive_id": "axolotl-00455",
+            "document": "La tinta negra y roja (antología de poesía náhuatl)",
+            "es": "se dirigieron hacia el rumbo del rostro del Sol.",
+            "exercise": {
+              "answer": 1,
+              "blank": "tonatiuh",
+              "explanation": "El registro contiene tonatiuh. El resto de la expresión se conserva sin análisis automático.",
+              "kind": "cloze",
+              "options": [
+                "metztli",
+                "tonatiuh",
+                "tlalli"
+              ],
+              "question": "Completa con la forma exacta de la fuente: in ___ ixcopa itztiaque,"
+            },
+            "iso": "nci",
+            "locator": "Axolotl, registro CSV 455; página de la edición primaria pendiente",
+            "nah": "in tonatiuh ixcopa itztiaque,",
+            "source_hash": "795e3e07e6408d11c748272f63a260d09db333debb29b32626691ffba71412c3",
+            "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv"
+          },
+          {
+            "annotations": [
+              {
+                "end": 17,
+                "note": "Aquí tonatiuh aparece en el contexto de un relato cosmológico, según la traducción del registro.",
+                "quote": "tonatiuh",
+                "sense_id": "sense-tonatiuh",
+                "start": 9
+              }
+            ],
+            "archive_id": "axolotl-05922",
+            "document": "La tinta negra y roja (antología de poesía náhuatl)",
+            "es": "Se cimentó luego el Segundo Sol.Su signo era 4-Jaguar.",
+            "exercise": {
+              "answer": 2,
+              "blank": "",
+              "explanation": "El registro español dice «Segundo Sol» y añade su signo. La pregunta comprueba la comprensión de este fragmento.",
+              "kind": "meaning",
+              "options": [
+                "Al Primero",
+                "Al Quinto",
+                "Al Segundo"
+              ],
+              "question": "¿A qué Sol se refiere la traducción?"
+            },
+            "iso": "nci",
+            "locator": "Axolotl, registro CSV 5922; página de la edición primaria pendiente",
+            "nah": "Inic ome tonatiuh onmanca nahui ocelotl in itonal catca.",
+            "source_hash": "7589adeaa8ec0b06df15bbe3e96a916884a34955ad5d7555b7c7d1dc5215ddf4",
+            "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv"
+          },
+          {
+            "annotations": [
+              {
+                "end": 36,
+                "note": "La traducción del título conserva Sol. Reconoce la palabra aunque el contexto sea distinto.",
+                "quote": "Tonatiuh",
+                "sense_id": "sense-tonatiuh",
+                "start": 28
+              }
+            ],
+            "archive_id": "axolotl-11885",
+            "document": "La tinta negra y roja (antología de poesía náhuatl)",
+            "es": "Cómo Servían al Sol a diversas horas del día y de la noche",
+            "exercise": {
+              "answer": 0,
+              "blank": "",
+              "explanation": "La traducción presenta cómo servían al Sol a diversas horas del día y de la noche.",
+              "kind": "meaning",
+              "options": [
+                "De servir al Sol en distintos momentos",
+                "De construir una casa",
+                "De buscar piedras"
+              ],
+              "question": "¿De qué trata este título?"
+            },
+            "iso": "nci",
+            "locator": "Axolotl, registro CSV 11885; página de la edición primaria pendiente",
+            "nah": "In quenin tlayecoltiloya in Tonatiuh in cemilhuitl, in ceyohual",
+            "source_hash": "6f43aac6b55ba5f70cdba21a78ad94f9309fef9386f848e5d2138f1478e44ec9",
+            "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv"
+          }
+        ],
+        "review_status": "editorial_draft",
+        "source_id": "src-axolotl"
+      },
+      "fingerprint": "9f0425aaee782d60a860b2ed57a18057d5fd1c7aebcd47f499f812cd1721bee2",
+      "id": "lesson-cielo-source-review",
+      "lesson_id": "cielo",
+      "priority": "P1",
+      "review_stale": false,
+      "status": "open",
+      "title": "Cotejar los cuatro pasajes y sus ayudas lingüísticas"
+    },
+    {
+      "acceptance": "Justificar cada clave en el pasaje; revisar distractores y explicación; incluir una comprobación del objetivo que no dependa únicamente de leer el español.",
+      "decision": {},
+      "evidence": {
+        "exercises": [
+          {
+            "archive_id": "axolotl-11087",
+            "exercise": {
+              "answer": 0,
+              "blank": "",
+              "explanation": "La traducción dice «al Sol y a la Luna». Aquí metztli corresponde a luna.",
+              "kind": "meaning",
+              "options": [
+                "Sol y luna",
+                "Agua y piedra",
+                "Casa y árbol"
+              ],
+              "question": "¿Qué dos referentes aparecen?"
+            }
+          },
+          {
+            "archive_id": "axolotl-00455",
+            "exercise": {
+              "answer": 1,
+              "blank": "tonatiuh",
+              "explanation": "El registro contiene tonatiuh. El resto de la expresión se conserva sin análisis automático.",
+              "kind": "cloze",
+              "options": [
+                "metztli",
+                "tonatiuh",
+                "tlalli"
+              ],
+              "question": "Completa con la forma exacta de la fuente: in ___ ixcopa itztiaque,"
+            }
+          },
+          {
+            "archive_id": "axolotl-05922",
+            "exercise": {
+              "answer": 2,
+              "blank": "",
+              "explanation": "El registro español dice «Segundo Sol» y añade su signo. La pregunta comprueba la comprensión de este fragmento.",
+              "kind": "meaning",
+              "options": [
+                "Al Primero",
+                "Al Quinto",
+                "Al Segundo"
+              ],
+              "question": "¿A qué Sol se refiere la traducción?"
+            }
+          },
+          {
+            "archive_id": "axolotl-11885",
+            "exercise": {
+              "answer": 0,
+              "blank": "",
+              "explanation": "La traducción presenta cómo servían al Sol a diversas horas del día y de la noche.",
+              "kind": "meaning",
+              "options": [
+                "De servir al Sol en distintos momentos",
+                "De construir una casa",
+                "De buscar piedras"
+              ],
+              "question": "¿De qué trata este título?"
+            }
+          }
+        ],
+        "objective": "Reconocer tonatiuh y metztli y situarlos en el contexto del fragmento."
+      },
+      "fingerprint": "706f0456a4fc727bc02230fcb41c0b55baa2b30f032831724862cb9ee47bf978",
+      "id": "lesson-cielo-exercises",
+      "lesson_id": "cielo",
+      "priority": "P2",
+      "review_stale": false,
+      "status": "open",
+      "title": "Revisar ejercicios y el objetivo de aprendizaje"
+    },
+    {
+      "acceptance": "Registrar las tareas propuestas, resultados observados, dificultades y cambios; distinguir propuesta de prueba y prueba realizada. Evitar datos personales innecesarios.",
+      "decision": {},
+      "evidence": {
+        "has_recorded_trial": false,
+        "lesson_id": "cielo"
+      },
+      "fingerprint": "c6fdb2958fa1029a3e06f00e27065c475ad07dbe424fdd144611b553e80acf7a",
+      "id": "lesson-cielo-learner-trial",
+      "lesson_id": "cielo",
+      "priority": "P2",
+      "review_stale": false,
+      "status": "open",
+      "title": "Probar la lectura con principiantes"
+    },
+    {
+      "acceptance": "Registrar edición primaria, página/folio y cotejo por pasaje; revisar traducción, forma→acepción y explicación con responsable y fecha. No sustituir el original ni marcar revisión por pasar validación técnica.",
+      "decision": {},
+      "evidence": {
+        "examples": [
+          {
+            "annotations": [
+              {
+                "end": 11,
+                "note": "En este fragmento, la traducción utiliza tierra. La ficha reúne también terreno y parcela.",
+                "quote": "tlalli",
+                "sense_id": "sense-tlalli",
+                "start": 5
+              }
+            ],
+            "archive_id": "axolotl-03471",
+            "document": "La tinta negra y roja (antología de poesía náhuatl)",
+            "es": "en esta tierra que os da el Señor Nuestro,",
+            "exercise": {
+              "answer": 1,
+              "blank": "",
+              "explanation": "El español del registro comienza «en esta tierra que os da…». Reconoce tlalli en el contexto.",
+              "kind": "meaning",
+              "options": [
+                "Una estrella",
+                "La tierra",
+                "Un conejo"
+              ],
+              "question": "¿Qué se da en este fragmento?"
+            },
+            "iso": "nci",
+            "locator": "Axolotl, registro CSV 3471; página de la edición primaria pendiente",
+            "nah": "inin tlalli amechmomaquilia in Totecuyo,",
+            "source_hash": "92dc85996497376bb59f2327a1d9d6a3a8dec1802207dacb427882888a889a76",
+            "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv"
+          },
+          {
+            "annotations": [
+              {
+                "end": 17,
+                "note": "La traducción es casa de las pinturas. El enlace a calli sirve para reconocer el tema casa; no reemplaza el análisis del compuesto.",
+                "quote": "tlacuilolcalli",
+                "sense_id": "sense-calli",
+                "start": 3
+              }
+            ],
+            "archive_id": "axolotl-12969",
+            "document": "La tinta negra y roja (antología de poesía náhuatl)",
+            "es": "En la casa de las pinturas",
+            "exercise": {
+              "answer": 2,
+              "blank": "",
+              "explanation": "El registro traduce «En la casa de las pinturas». La palabra compuesta se conserva entera.",
+              "kind": "meaning",
+              "options": [
+                "La casa del viento",
+                "La casa del agua",
+                "La casa de las pinturas"
+              ],
+              "question": "¿Qué casa presenta la traducción?"
+            },
+            "iso": "nci",
+            "locator": "Axolotl, registro CSV 12969; página de la edición primaria pendiente",
+            "nah": "In tlacuilolcalli",
+            "source_hash": "a10e122963fc25aaf113776ec4e232da7778efb09ec55d4dc4bb9220fb2fea0a",
+            "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv"
+          },
+          {
+            "annotations": [
+              {
+                "end": 20,
+                "note": "La traducción usa montes. Consulta cerro o montaña como acepción de referencia.",
+                "quote": "tepetl",
+                "sense_id": "sense-tepetl",
+                "start": 14
+              }
+            ],
+            "archive_id": "axolotl-14900",
+            "document": "La tinta negra y roja (antología de poesía náhuatl)",
+            "es": "iban buscando los montes,",
+            "exercise": {
+              "answer": 0,
+              "blank": "tepetl",
+              "explanation": "La fuente escribe tepetl. Su traducción utiliza montes.",
+              "kind": "cloze",
+              "options": [
+                "tepetl",
+                "xochitl",
+                "atl"
+              ],
+              "question": "Completa la forma del texto: quitztihui in ___,"
+            },
+            "iso": "nci",
+            "locator": "Axolotl, registro CSV 14900; página de la edición primaria pendiente",
+            "nah": "quitztihui in tepetl,",
+            "source_hash": "30597c16adf72203499273683c8c5e74fda47aa769106bcbf624b8097b3f687c",
+            "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv"
+          },
+          {
+            "annotations": [
+              {
+                "end": 21,
+                "note": "La traducción utiliza tierra.",
+                "quote": "tlalli",
+                "sense_id": "sense-tlalli",
+                "start": 15
+              },
+              {
+                "end": 29,
+                "note": "Este registro traduce el segundo referente como ciudad. Conservamos esa traducción sin extenderla como equivalencia universal de tepetl.",
+                "quote": "tepetl",
+                "sense_id": "sense-tepetl",
+                "start": 23
+              }
+            ],
+            "archive_id": "axolotl-16052",
+            "document": "La tinta negra y roja (antología de poesía náhuatl)",
+            "es": "¿Cómo permanecerá la tierra, la ciudad?",
+            "exercise": {
+              "answer": 1,
+              "blank": "",
+              "explanation": "El corpus traduce «la tierra, la ciudad». Una equivalencia de diccionario por sí sola no basta para explicar toda expresión.",
+              "kind": "meaning",
+              "options": [
+                "Flor y canto",
+                "Tierra y ciudad",
+                "Sol y luna"
+              ],
+              "question": "¿Qué dos referentes presenta el español de este registro?"
+            },
+            "iso": "nci",
+            "locator": "Axolotl, registro CSV 16052; página de la edición primaria pendiente",
+            "nah": "¿Quen maniz in tlalli, tepetl?",
+            "source_hash": "c6bf6abd34a08589ad26560a82e5343a9138182509b31ea42d7cac7ad6cd22bc",
+            "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv"
+          }
+        ],
+        "review_status": "editorial_draft",
+        "source_id": "src-axolotl"
+      },
+      "fingerprint": "3027b47f928188aca6ffca4a2f4a763975b55b6cc89a41a7ceea8b4139ad0d6e",
+      "id": "lesson-lugares-source-review",
+      "lesson_id": "lugares",
+      "priority": "P1",
+      "review_stale": false,
+      "status": "open",
+      "title": "Cotejar los cuatro pasajes y sus ayudas lingüísticas"
+    },
+    {
+      "acceptance": "Justificar cada clave en el pasaje; revisar distractores y explicación; incluir una comprobación del objetivo que no dependa únicamente de leer el español.",
+      "decision": {},
+      "evidence": {
+        "exercises": [
+          {
+            "archive_id": "axolotl-03471",
+            "exercise": {
+              "answer": 1,
+              "blank": "",
+              "explanation": "El español del registro comienza «en esta tierra que os da…». Reconoce tlalli en el contexto.",
+              "kind": "meaning",
+              "options": [
+                "Una estrella",
+                "La tierra",
+                "Un conejo"
+              ],
+              "question": "¿Qué se da en este fragmento?"
+            }
+          },
+          {
+            "archive_id": "axolotl-12969",
+            "exercise": {
+              "answer": 2,
+              "blank": "",
+              "explanation": "El registro traduce «En la casa de las pinturas». La palabra compuesta se conserva entera.",
+              "kind": "meaning",
+              "options": [
+                "La casa del viento",
+                "La casa del agua",
+                "La casa de las pinturas"
+              ],
+              "question": "¿Qué casa presenta la traducción?"
+            }
+          },
+          {
+            "archive_id": "axolotl-14900",
+            "exercise": {
+              "answer": 0,
+              "blank": "tepetl",
+              "explanation": "La fuente escribe tepetl. Su traducción utiliza montes.",
+              "kind": "cloze",
+              "options": [
+                "tepetl",
+                "xochitl",
+                "atl"
+              ],
+              "question": "Completa la forma del texto: quitztihui in ___,"
+            }
+          },
+          {
+            "archive_id": "axolotl-16052",
+            "exercise": {
+              "answer": 1,
+              "blank": "",
+              "explanation": "El corpus traduce «la tierra, la ciudad». Una equivalencia de diccionario por sí sola no basta para explicar toda expresión.",
+              "kind": "meaning",
+              "options": [
+                "Flor y canto",
+                "Tierra y ciudad",
+                "Sol y luna"
+              ],
+              "question": "¿Qué dos referentes presenta el español de este registro?"
+            }
+          }
+        ],
+        "objective": "Reconocer palabras de lugares y observar cuándo la traducción necesita contexto."
+      },
+      "fingerprint": "91326ffddfe68f0e37496740a8a15577fe39eb268f657bc1ee0023151a7f2d93",
+      "id": "lesson-lugares-exercises",
+      "lesson_id": "lugares",
+      "priority": "P2",
+      "review_stale": false,
+      "status": "open",
+      "title": "Revisar ejercicios y el objetivo de aprendizaje"
+    },
+    {
+      "acceptance": "Registrar las tareas propuestas, resultados observados, dificultades y cambios; distinguir propuesta de prueba y prueba realizada. Evitar datos personales innecesarios.",
+      "decision": {},
+      "evidence": {
+        "has_recorded_trial": false,
+        "lesson_id": "lugares"
+      },
+      "fingerprint": "767d2f8030d027688a19dacdc1e465b3fe71b1872ebcc4a3deba67007f1455af",
+      "id": "lesson-lugares-learner-trial",
+      "lesson_id": "lugares",
+      "priority": "P2",
+      "review_stale": false,
+      "status": "open",
+      "title": "Probar la lectura con principiantes"
+    },
+    {
+      "acceptance": "Elegir la referencia adecuada para cada uso de la lección y registrar si documenta una lectura, un componente, una comparación semántica o únicamente el contexto. Una imagen en un ejemplo no cuenta como glifo de esta palabra.",
+      "decision": {},
+      "evidence": {
+        "forms": [
+          {
+            "evidence": [
+              {
+                "locator": "Libro 11, f. 188v; entrada cacahuaxochitl del diccionario Oregon",
+                "source_id": "src-florentino",
+                "status": "catalog_checked",
+                "via_source_id": "src-oregon"
+              },
+              {
+                "locator": "La tinta negra y roja; registro axolotl-10445",
+                "source_id": "src-axolotl",
+                "status": "inherited"
+              }
+            ],
+            "id": "lex-cacahuaxochitl",
+            "kind": "form",
+            "label": "Cacahuaxochitl",
+            "notes": "Entrada propia para la palabra completa. Consulta de catálogo, no identificación botánica ni análisis morfológico certificado.",
+            "orthography": "Forma del registro axolotl-10445; lema cacahuaxochitl en el catálogo Oregon. Se conserva la mayúscula del pasaje.",
+            "period": "historical",
+            "rights": {
+              "note": "Definición editorial y referencia de catálogo para consulta; no se concede permiso de entrenamiento. Cotejo primario pendiente.",
+              "public": true,
+              "training": false
+            },
+            "sense_id": "sense-cacahuaxochitl",
+            "url": "https://nahuatl.wired-humanities.org/content/cacahuaxochitl",
+            "variant": "nci",
+            "variant_label": "Náhuatl clásico",
+            "variation_kind": "historical",
+            "verification": "catalog_checked",
+            "version": 1,
+            "written": "Cacahuaxochitl"
+          }
+        ],
+        "glyphs": [
+          {
+            "association": {
+              "evidence_url": "https://aztecglyphs.wired-humanities.org/content/cacahuaxochitl-mh885v",
+              "note": "Glifo de un nombre personal: Ágata Cacahuaxochitl, Matrícula de Huexotzinco, f. 885v. El catálogo relaciona la flor y dos granos de cacao con ese nombre. Sirve para comparar el nombre floral; no es la imagen del poema ni acredita la especie de la planta.",
+              "reference_form_id": "lex-cacahuaxochitl",
+              "type": "related_meaning"
+            },
+            "context": "Glifo de un nombre personal: Ágata Cacahuaxochitl, Matrícula de Huexotzinco, f. 885v. El catálogo relaciona la flor y dos granos de cacao con ese nombre. Sirve para comparar el nombre floral; no es la imagen del poema ni acredita la especie de la planta.",
+            "evidence": [
+              {
+                "locator": "Matrícula de Huexotzinco, f. 885v; VLA Cacahuaxochitl (MH885v)",
+                "source_id": "src-huexotzinco",
+                "status": "catalog_checked",
+                "via_source_id": "src-vla"
+              }
+            ],
+            "glyph_status": "proposed",
+            "glyph_type": "unspecified",
+            "id": "glyph-cacahuaxochitl-mh885v",
+            "image": "https://aztecglyphs.wired-humanities.org/sites/default/files/styles/large/public/CacahuaxochitlMH885vSmplxPNFemale.png?itok=2sKl-Dmq",
+            "image_credit": "Library of Congress / World Digital Library. Vía Visual Lexicon of Aztec Hieroglyphs; descripción de Stephanie Wood. CC BY-NC-SA 3.0 según la ficha VLA.",
+            "kind": "glyph",
+            "label": "Referencia nominal: Cacahuaxochitl",
+            "manuscript_url": "https://www.loc.gov/resource/gdcwdl.wdl_15282/?sp=843&st=image",
+            "notes": "Catálogo consultado 2026-09-30. La ficha utiliza etiquetas simplex/compound diferentes; se mantiene tipo unspecified hasta cotejo. El vínculo nominal y el uso floral del poema tienen contextos separados.",
+            "reading": "Cacahuaxochitl",
+            "rights": {
+              "note": "Imagen enlazada con crédito Library of Congress / WDL y VLA; CC BY-NC-SA 3.0 declarada por VLA. Consulta de catálogo; no se autoriza entrenamiento.",
+              "public": true,
+              "training": false
+            },
+            "sense_id": "sense-cacahuaxochitl",
+            "url": "https://aztecglyphs.wired-humanities.org/content/cacahuaxochitl-mh885v",
+            "verification": "catalog_checked",
+            "version": 1
+          }
+        ],
+        "meaning": "flor llamada cacahuaxochitl",
+        "sense_id": "sense-cacahuaxochitl"
+      },
+      "fingerprint": "c018a9b90602c2b0b6e5312252ebeff5be82eed46b0eaaafc2eb35367e762d5a",
+      "id": "word-sense-cacahuaxochitl-glyph-scope",
+      "lesson_id": null,
+      "priority": "P1",
+      "review_stale": false,
+      "status": "open",
+      "title": "Revisar el alcance visual de Cacahuaxochitl"
+    },
+    {
+      "acceptance": "Elegir la referencia adecuada para cada uso de la lección y registrar si documenta una lectura, un componente, una comparación semántica o únicamente el contexto. Una imagen en un ejemplo no cuenta como glifo de esta palabra.",
+      "decision": {},
+      "evidence": {
+        "forms": [
+          {
+            "citation": "Lockhart, Nahuatl as Written (2001), p. 212. Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+            "evidence": [
+              {
+                "locator": "Lockhart, Nahuatl as Written (2001), p. 212. Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+                "source_id": "src-lockhart",
+                "status": "inherited",
+                "via_source_id": "src-oregon"
+              }
+            ],
+            "id": "lex-calli",
+            "kind": "form",
+            "label": "calli",
+            "legacy_id": "lex-calli",
+            "notes": "Referencia heredada; falta cotejo filológico propio.",
+            "orthography": "Lema editorial heredado de Scriptorium; no transcripción diplomática",
+            "period": "historical",
+            "rights": {
+              "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado.",
+              "public": true,
+              "training": false
+            },
+            "sense_id": "sense-calli",
+            "url": "https://nahuatl.wired-humanities.org/content/calli",
+            "variant": "nci",
+            "variant_label": "Náhuatl histórico (tradición escrita)",
+            "variation_kind": "historical",
+            "verification": "inherited",
+            "version": 1,
+            "written": "calli"
+          }
+        ],
+        "glyphs": [
+          {
+            "context": "Elemento de edificio en Apancalecan.",
+            "evidence": [
+              {
+                "locator": "Codex Mendoza, f. 13r. Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed.",
+                "source_id": "src-mendoza",
+                "status": "inherited",
+                "via_source_id": "src-vla"
+              }
+            ],
+            "glyph_status": "proposed",
+            "id": "glyph-calli",
+            "image": "https://aztecglyphs.wired-humanities.org/sites/default/files/styles/large/public/calli13rhouse%2CbuildingFromApancalecan%20%281%29.jpg?itok=vJYDNZ5V",
+            "image_credit": "Bodleian Libraries, University of Oxford, MS. Arch. Selden. A. 1. Via Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed. CC BY-NC-SA 3.0 UK.",
+            "kind": "glyph",
+            "label": "Propuesta relacionada: casa",
+            "notes": "Propuesta heredada por catálogo secundario; no es escritura de una oración ni equivalencia para todas las variantes. Imagen disponible en la ficha externa, no incluida en el corpus.",
+            "reading": "calli",
+            "rights": {
+              "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado.",
+              "public": true,
+              "training": false
+            },
+            "sense_id": "sense-calli",
+            "url": "https://aztecglyphs.wired-humanities.org/content/calli-mdz13r",
+            "verification": "inherited",
+            "version": 2
+          }
+        ],
+        "meaning": "casa",
+        "sense_id": "sense-calli"
+      },
+      "fingerprint": "fda309cb861a1d1574b4d63d19d957ca916ba76f88efe3b757c958ee453dedef",
+      "id": "word-sense-calli-glyph-scope",
+      "lesson_id": null,
+      "priority": "P2",
+      "review_stale": false,
+      "status": "open",
+      "title": "Revisar el alcance visual de calli"
+    },
+    {
+      "acceptance": "Elegir la referencia adecuada para cada uso de la lección y registrar si documenta una lectura, un componente, una comparación semántica o únicamente el contexto. Una imagen en un ejemplo no cuenta como glifo de esta palabra.",
+      "decision": {},
+      "evidence": {
+        "forms": [
+          {
+            "catalog_normalized": "cuicatl",
+            "evidence": [
+              {
+                "locator": "Molina (1571), parte 2; GDN entrada 38566, Cuicatl",
+                "source_id": "src-molina",
+                "status": "catalog_checked",
+                "via_source_id": "src-gdn"
+              },
+              {
+                "locator": "Molina (1571), parte 2, f. 26v, col. 1, cuicatl; localizador según Oregon",
+                "source_id": "src-molina",
+                "status": "catalog_checked",
+                "via_source_id": "src-oregon"
+              }
+            ],
+            "extraction": {
+              "entry_id": "38566",
+              "query_url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=cuicatl&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=50",
+              "sha256": "bfe70cd904ec701c67800cfcc50fa19d9ff4a13530b23d7165319b9ba2f0d6c9"
+            },
+            "historical_gloss": "canto, o cancion.",
+            "id": "lex-cuicatl",
+            "kind": "form",
+            "label": "Cuicatl",
+            "notes": "Selección exacta del catálogo GDN, 2026-09-30. No se importan las otras entradas devueltas por la búsqueda de prefijo.",
+            "orthography": "Paleografía de GDN/Molina conservada; la grafía normalizada se registra por separado.",
+            "period": "historical",
+            "rights": {
+              "note": "Definición editorial y referencia de catálogo para consulta; no se concede permiso de entrenamiento. Cotejo primario pendiente.",
+              "public": true,
+              "training": false
+            },
+            "sense_id": "sense-cuicatl",
+            "url": "https://gdn.iib.unam.mx/contexto/38566",
+            "variant": "nci",
+            "variant_label": "Náhuatl clásico",
+            "variation_kind": "historical",
+            "verification": "catalog_checked",
+            "version": 1,
+            "written": "Cuicatl"
+          }
+        ],
+        "glyphs": [],
+        "meaning": "canto / canción",
+        "sense_id": "sense-cuicatl"
+      },
+      "fingerprint": "c686b6e0e8b8a2d7c63e5efb47102248372ca41c430f5d670955d54cd790617d",
+      "id": "word-sense-cuicatl-glyph-scope",
+      "lesson_id": null,
+      "priority": "P2",
+      "review_stale": false,
+      "status": "open",
+      "title": "Revisar el alcance visual de Cuicatl"
+    },
+    {
+      "acceptance": "Elegir la referencia adecuada para cada uso de la lección y registrar si documenta una lectura, un componente, una comparación semántica o únicamente el contexto. Una imagen en un ejemplo no cuenta como glifo de esta palabra.",
+      "decision": {},
+      "evidence": {
+        "forms": [
+          {
+            "evidence": [
+              {
+                "locator": "Molina (1571), part 2, f. 43v, col. 1. Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+                "source_id": "src-molina",
+                "status": "inherited",
+                "via_source_id": "src-oregon"
+              }
+            ],
+            "id": "form-iuan",
+            "kind": "form",
+            "label": "iuan",
+            "notes": "Relación ortográfica; no se presenta como variante dialectal moderna.",
+            "orthography": "Grafía citada de Molina por el diccionario secundario",
+            "period": "historical",
+            "rights": {
+              "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado.",
+              "public": true,
+              "training": false
+            },
+            "sense_id": "sense-ihuan",
+            "url": "https://nahuatl.wired-humanities.org/content/ihuan",
+            "variant": "nci",
+            "variant_label": "Náhuatl histórico (Molina)",
+            "variation_kind": "orthographic",
+            "verification": "inherited",
+            "version": 1,
+            "written": "iuan"
+          },
+          {
+            "citation": "Molina (1571), part 2, f. 43v, col. 1. Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+            "evidence": [
+              {
+                "locator": "Molina (1571), part 2, f. 43v, col. 1. Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+                "source_id": "src-molina",
+                "status": "inherited",
+                "via_source_id": "src-oregon"
+              }
+            ],
+            "id": "lex-ihuan",
+            "kind": "form",
+            "label": "ihuan",
+            "legacy_id": "lex-ihuan",
+            "notes": "Referencia heredada; falta cotejo filológico propio.",
+            "orthography": "Lema editorial heredado de Scriptorium; no transcripción diplomática",
+            "period": "historical",
+            "rights": {
+              "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado.",
+              "public": true,
+              "training": false
+            },
+            "sense_id": "sense-ihuan",
+            "url": "https://nahuatl.wired-humanities.org/content/ihuan",
+            "variant": "nci",
+            "variant_label": "Náhuatl histórico (tradición escrita)",
+            "variation_kind": "historical",
+            "verification": "inherited",
+            "version": 1,
+            "written": "ihuan"
+          }
+        ],
+        "glyphs": [
+          {
+            "association": {
+              "evidence_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv#L11087",
+              "matched_term": "luna",
+              "note": "Referencia visual de «metztli» en un ejemplo que contiene esta forma. No representa ihuan ni es un componente suyo. El glifo y el pasaje proceden de documentos distintos.",
+              "passage": {
+                "document": "La tinta negra y roja (antología de poesía náhuatl)",
+                "es": "al Sol y a la Luna.",
+                "id": "axolotl-11087",
+                "iso": "nci",
+                "line": 11087,
+                "nah": "in Tonatiuh ihuan in Metztli.",
+                "sha256": "459cd92b83a6621382100b79976630c27fd03329f092d95532f88664ba41af42"
+              },
+              "reference_form_id": "lex-ihuan",
+              "reference_glyph_id": "glyph-metztli-fcbk11f214v",
+              "type": "passage_reference"
+            },
+            "context": "Elemento lunar separado del compuesto Temetztli; no se extrapola su lectura a todas las acepciones.",
+            "evidence": [
+              {
+                "locator": "Códice Florentino, libro 11, f. 214v; VLA metztli (FCbk11f214v)",
+                "source_id": "src-florentino",
+                "status": "catalog_checked",
+                "via_source_id": "src-vla"
+              },
+              {
+                "locator": "Molina (1571), part 2, f. 43v, col. 1. Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+                "source_id": "src-molina",
+                "status": "inherited",
+                "via_source_id": "src-oregon"
+              },
+              {
+                "locator": "Axolotl, registro CSV 11087",
+                "source_id": "src-axolotl",
+                "status": "inherited"
+              }
+            ],
+            "glyph_status": "proposed",
+            "glyph_type": "element",
+            "id": "glyph-link-v7-sense-ihuan",
+            "image": "https://aztecglyphs.wired-humanities.org/sites/default/files/styles/large/public/metztli%20%28FCbk11f214v%29.png?itok=IarokVz1",
+            "image_credit": "Códice Florentino, Biblioteca Medicea Laurenziana. Vía Library of Congress / World Digital Library y VLA, Stephanie Wood, ed. LOC declara no conocer restricciones en esta colección; revisar la información del original.",
+            "kind": "glyph",
+            "label": "Referencia relacionada: metztli",
+            "manuscript_url": "https://www.loc.gov/resource/gdcwdl.wdl_10622/?sp=430",
+            "notes": "Enlace contextual por script determinista. No es una atribución de lectura completa ni una revisión lingüística.",
+            "reading": "metztli",
+            "rights": {
+              "note": "Referencia bibliográfica para consulta. Las imágenes se consultan en el catálogo enlazado; sus derechos y los del comentario se revisan por separado.",
+              "public": true,
+              "training": false
+            },
+            "sense_id": "sense-ihuan",
+            "url": "https://aztecglyphs.wired-humanities.org/content/metztli-fcbk11f214v",
+            "verification": "inherited",
+            "version": 1
+          }
+        ],
+        "meaning": "y / con",
+        "sense_id": "sense-ihuan"
+      },
+      "fingerprint": "9c13d85592d569f51530acdd4da29bab249eee096d55fb4f554cf6691b0365d5",
+      "id": "word-sense-ihuan-glyph-scope",
+      "lesson_id": null,
+      "priority": "P1",
+      "review_stale": false,
+      "status": "open",
+      "title": "Revisar el alcance visual de ihuan"
+    },
+    {
+      "acceptance": "Elegir la referencia adecuada para cada uso de la lección y registrar si documenta una lectura, un componente, una comparación semántica o únicamente el contexto. Una imagen en un ejemplo no cuenta como glifo de esta palabra.",
+      "decision": {},
+      "evidence": {
+        "forms": [
+          {
+            "citation": "Molina (1571), part 2, f. 43r, col. 2; Lockhart (2001), p. 221. Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+            "evidence": [
+              {
+                "locator": "Molina (1571), part 2, f. 43r, col. 2; Lockhart (2001), p. 221. Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+                "source_id": "src-molina",
+                "status": "inherited",
+                "via_source_id": "src-oregon"
+              }
+            ],
+            "id": "lex-itta",
+            "kind": "form",
+            "label": "itta",
+            "legacy_id": "lex-itta",
+            "notes": "Referencia heredada; falta cotejo filológico propio.",
+            "orthography": "Lema editorial heredado de Scriptorium; no transcripción diplomática",
+            "period": "historical",
+            "rights": {
+              "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado.",
+              "public": true,
+              "training": false
+            },
+            "sense_id": "sense-itta",
+            "url": "https://nahuatl.wired-humanities.org/content/itta",
+            "variant": "nci",
+            "variant_label": "Náhuatl histórico (tradición escrita)",
+            "variation_kind": "historical",
+            "verification": "inherited",
+            "version": 1,
+            "written": "itta"
+          }
+        ],
+        "glyphs": [
+          {
+            "association": {
+              "evidence_url": "https://aztecglyphs.wired-humanities.org/content/tlachia-mh716r",
+              "note": "El catálogo interpreta el ojo como indicador del verbo de ver en el nombre Tlachia. Se relaciona por significado con itta; este glifo no documenta la lectura itta.",
+              "reference_form_id": "lex-itta",
+              "type": "related_meaning"
+            },
+            "context": "El catálogo interpreta el ojo como indicador del verbo de ver en el nombre Tlachia. Se relaciona por significado con itta; este glifo no documenta la lectura itta.",
+            "evidence": [
+              {
+                "locator": "Matrícula de Huexotzinco, f. 716r; VLA Tlachia",
+                "source_id": "src-huexotzinco",
+                "status": "catalog_checked",
+                "via_source_id": "src-vla"
+              }
+            ],
+            "glyph_status": "proposed",
+            "glyph_type": "simplex",
+            "id": "glyph-related-itta-mh716r",
+            "image": "https://aztecglyphs.wired-humanities.org/sites/default/files/styles/large/public/TlachiaMH716rSmplxPNM.png?itok=ZU9T2R2p",
+            "image_credit": "Library of Congress / World Digital Library. Vía Visual Lexicon of Aztec Hieroglyphs; descripción de Stephanie Wood. CC BY-NC-SA 3.0 según la ficha VLA.",
+            "kind": "glyph",
+            "label": "Referencia relacionada: Tlachia",
+            "manuscript_url": "https://www.loc.gov/resource/gdcwdl.wdl_15282/?sp=510&st=image",
+            "notes": "Referencia de catálogo consultada el 2026-09-30; asociación de significado para comparación educativa, no equivalencia de lectura completa.",
+            "reading": "Tlachia",
+            "rights": {
+              "note": "Referencia de catálogo e imagen enlazada, atribuida a Library of Congress / World Digital Library y VLA; CC BY-NC-SA 3.0 declarada por VLA. No se autoriza entrenamiento.",
+              "public": true,
+              "training": false
+            },
+            "sense_id": "sense-itta",
+            "url": "https://aztecglyphs.wired-humanities.org/content/tlachia-mh716r",
+            "verification": "catalog_checked",
+            "version": 1
+          }
+        ],
+        "meaning": "ver",
+        "sense_id": "sense-itta"
+      },
+      "fingerprint": "c2bf23bf405918d082bf9730805512ccca1cd45907f0e993db6029bf854599af",
+      "id": "word-sense-itta-glyph-scope",
+      "lesson_id": null,
+      "priority": "P1",
+      "review_stale": false,
+      "status": "open",
+      "title": "Revisar el alcance visual de itta"
+    },
+    {
+      "acceptance": "Elegir la referencia adecuada para cada uso de la lección y registrar si documenta una lectura, un componente, una comparación semántica o únicamente el contexto. Una imagen en un ejemplo no cuenta como glifo de esta palabra.",
+      "decision": {},
+      "evidence": {
+        "forms": [
+          {
+            "citation": "Molina (1571), part 2, f. 55v, col. 1; Karttunen (1992), p. 144. Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+            "evidence": [
+              {
+                "locator": "Molina (1571), part 2, f. 55v, col. 1; Karttunen (1992), p. 144. Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+                "source_id": "src-molina",
+                "status": "inherited",
+                "via_source_id": "src-oregon"
+              }
+            ],
+            "id": "lex-metztli",
+            "kind": "form",
+            "label": "metztli",
+            "legacy_id": "lex-metztli",
+            "notes": "Referencia heredada; falta cotejo filológico propio.",
+            "orthography": "Lema editorial heredado de Scriptorium; no transcripción diplomática",
+            "period": "historical",
+            "rights": {
+              "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado.",
+              "public": true,
+              "training": false
+            },
+            "sense_id": "sense-metztli",
+            "url": "https://nahuatl.wired-humanities.org/content/metztli",
+            "variant": "nci",
+            "variant_label": "Náhuatl histórico (tradición escrita)",
+            "variation_kind": "historical",
+            "verification": "inherited",
+            "version": 1,
+            "written": "metztli"
+          }
+        ],
+        "glyphs": [
+          {
+            "context": "Elemento lunar separado del compuesto Temetztli; no se extrapola su lectura a todas las acepciones.",
+            "evidence": [
+              {
+                "locator": "Códice Florentino, libro 11, f. 214v; VLA metztli (FCbk11f214v)",
+                "source_id": "src-florentino",
+                "status": "catalog_checked",
+                "via_source_id": "src-vla"
+              }
+            ],
+            "glyph_status": "proposed",
+            "glyph_type": "element",
+            "id": "glyph-metztli-fcbk11f214v",
+            "image": "https://aztecglyphs.wired-humanities.org/sites/default/files/styles/large/public/metztli%20%28FCbk11f214v%29.png?itok=IarokVz1",
+            "image_credit": "Códice Florentino, Biblioteca Medicea Laurenziana. Vía Library of Congress / World Digital Library y VLA, Stephanie Wood, ed. LOC declara no conocer restricciones en esta colección; revisar la información del original.",
+            "kind": "glyph",
+            "label": "Referencia glífica: metztli",
+            "manuscript_url": "https://www.loc.gov/resource/gdcwdl.wdl_10622/?sp=430",
+            "notes": "Ficha VLA consultada el 2026-09-28; descripción y análisis de Stephanie Wood. Relación con esta acepción por revisar mediante cotejo primario. Imagen disponible en el catálogo externo.",
+            "reading": "metztli",
+            "rights": {
+              "note": "Referencia bibliográfica para consulta. Las imágenes se consultan en el catálogo enlazado; sus derechos y los del comentario se revisan por separado.",
+              "public": true,
+              "training": false
+            },
+            "sense_id": "sense-metztli",
+            "url": "https://aztecglyphs.wired-humanities.org/content/metztli-fcbk11f214v",
+            "verification": "catalog_checked",
+            "version": 2
+          }
+        ],
+        "meaning": "luna",
+        "sense_id": "sense-metztli"
+      },
+      "fingerprint": "48e1e1e51fb6684d06e0fbf9f58caa35cb61c99bb51496c4294edc8262675e3e",
+      "id": "word-sense-metztli-glyph-scope",
+      "lesson_id": null,
+      "priority": "P2",
+      "review_stale": false,
+      "status": "open",
+      "title": "Revisar el alcance visual de metztli"
+    },
+    {
+      "acceptance": "Elegir la referencia adecuada para cada uso de la lección y registrar si documenta una lectura, un componente, una comparación semántica o únicamente el contexto. Una imagen en un ejemplo no cuenta como glifo de esta palabra.",
+      "decision": {},
+      "evidence": {
+        "forms": [
+          {
+            "evidence": [
+              {
+                "locator": "Molina (1571), parte 2, f. 102v, col. 1; entrada tepetl",
+                "source_id": "src-molina",
+                "status": "catalog_checked",
+                "via_source_id": "src-oregon"
+              }
+            ],
+            "id": "lex-tepetl",
+            "kind": "form",
+            "label": "tepetl",
+            "notes": "Ficha secundaria consultada el 2026-09-29; cotejo de la edición primaria pendiente.",
+            "orthography": "Lema de la ficha consultada; sin marcar longitud vocálica. No es transcripción diplomática del códice.",
+            "period": "historical",
+            "rights": {
+              "note": "Definición breve redactada para este índice y referencia de catálogo. Imagen enlazada bajo CC BY-NC-SA 3.0 UK con atribución; entrenamiento no autorizado en esta ficha.",
+              "public": true,
+              "training": false
+            },
+            "sense_id": "sense-tepetl",
+            "url": "https://nahuatl.wired-humanities.org/content/tepetl",
+            "variant": "nci",
+            "variant_label": "Náhuatl clásico",
+            "variation_kind": "historical",
+            "verification": "catalog_checked",
+            "version": 1,
+            "written": "tepetl"
+          }
+        ],
+        "glyphs": [
+          {
+            "context": "Cerro extraído del topónimo Ocotepec, Códice Mendoza, f. 32r.",
+            "evidence": [
+              {
+                "locator": "Códice Mendoza, f. 32r; VLA tepetl (Mdz32r)",
+                "source_id": "src-mendoza",
+                "status": "catalog_checked",
+                "via_source_id": "src-vla"
+              }
+            ],
+            "glyph_status": "proposed",
+            "glyph_type": "element",
+            "id": "glyph-tepetl-mdz32r",
+            "image": "https://aztecglyphs.wired-humanities.org/sites/default/files/styles/large/public/tepetl32rhill%2CmountainFromOcotepec.png?itok=TZO864x-",
+            "image_credit": "Bodleian Libraries, University of Oxford, MS. Arch. Selden. A. 1. Vía Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed. CC BY-NC-SA 3.0 UK.",
+            "kind": "glyph",
+            "label": "Referencia de fuente: tepetl",
+            "manuscript_url": "https://digital.bodleian.ox.ac.uk/objects/2fea788e-2aa2-4f08-b6d9-648c00486220/surfaces/e2163356-838d-4322-8b8b-c21316332e03/",
+            "notes": "Asociación tomada de la ficha VLA, consultada el 2026-09-29. Descripción y análisis de Stephanie Wood. Cotejo primario pendiente; la lectura se limita al contexto indicado.",
+            "reading": "tepetl",
+            "rights": {
+              "note": "Definición breve redactada para este índice y referencia de catálogo. Imagen enlazada bajo CC BY-NC-SA 3.0 UK con atribución; entrenamiento no autorizado en esta ficha.",
+              "public": true,
+              "training": false
+            },
+            "sense_id": "sense-tepetl",
+            "url": "https://aztecglyphs.wired-humanities.org/content/tepetl-mdz32r",
+            "verification": "catalog_checked",
+            "version": 1
+          }
+        ],
+        "meaning": "cerro",
+        "sense_id": "sense-tepetl"
+      },
+      "fingerprint": "47dae19fbaf9e37c272c4a5afd86720ac80357074114ec0ad0827269d18cc6cf",
+      "id": "word-sense-tepetl-glyph-scope",
+      "lesson_id": null,
+      "priority": "P2",
+      "review_stale": false,
+      "status": "open",
+      "title": "Revisar el alcance visual de tepetl"
+    },
+    {
+      "acceptance": "Elegir la referencia adecuada para cada uso de la lección y registrar si documenta una lectura, un componente, una comparación semántica o únicamente el contexto. Una imagen en un ejemplo no cuenta como glifo de esta palabra.",
+      "decision": {},
+      "evidence": {
+        "forms": [
+          {
+            "evidence": [
+              {
+                "locator": "Molina (1571), parte 2, f. 124r, col. 1; entrada tlalli",
+                "source_id": "src-molina",
+                "status": "catalog_checked",
+                "via_source_id": "src-oregon"
+              }
+            ],
+            "id": "lex-tlalli",
+            "kind": "form",
+            "label": "tlalli",
+            "notes": "Ficha secundaria consultada el 2026-09-29; cotejo de la edición primaria pendiente.",
+            "orthography": "Lema de la ficha consultada; sin marcar longitud vocálica. No es transcripción diplomática del códice.",
+            "period": "historical",
+            "rights": {
+              "note": "Definición breve redactada para este índice y referencia de catálogo. Imagen enlazada bajo CC BY-NC-SA 3.0 UK con atribución; entrenamiento no autorizado en esta ficha.",
+              "public": true,
+              "training": false
+            },
+            "sense_id": "sense-tlalli",
+            "url": "https://nahuatl.wired-humanities.org/content/tlalli",
+            "variant": "nci",
+            "variant_label": "Náhuatl clásico",
+            "variation_kind": "historical",
+            "verification": "catalog_checked",
+            "version": 1,
+            "written": "tlalli"
+          }
+        ],
+        "glyphs": [
+          {
+            "context": "Parcela representada en el topónimo Tlalatlauhco, Códice Mendoza, f. 32r.",
+            "evidence": [
+              {
+                "locator": "Códice Mendoza, f. 32r; VLA tlalli (Mdz32r)",
+                "source_id": "src-mendoza",
+                "status": "catalog_checked",
+                "via_source_id": "src-vla"
+              }
+            ],
+            "glyph_status": "proposed",
+            "glyph_type": "element",
+            "id": "glyph-tlalli-mdz32r",
+            "image": "https://aztecglyphs.wired-humanities.org/sites/default/files/styles/large/public/tlalli32rlandFromTlalatlauhco.png?itok=8FeAw2_U",
+            "image_credit": "Bodleian Libraries, University of Oxford, MS. Arch. Selden. A. 1. Vía Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed. CC BY-NC-SA 3.0 UK.",
+            "kind": "glyph",
+            "label": "Referencia de fuente: tlalli",
+            "manuscript_url": "https://digital.bodleian.ox.ac.uk/objects/2fea788e-2aa2-4f08-b6d9-648c00486220/surfaces/e2163356-838d-4322-8b8b-c21316332e03/",
+            "notes": "Asociación tomada de la ficha VLA, consultada el 2026-09-29. Descripción y análisis de Stephanie Wood. Cotejo primario pendiente; la lectura se limita al contexto indicado.",
+            "reading": "tlalli",
+            "rights": {
+              "note": "Definición breve redactada para este índice y referencia de catálogo. Imagen enlazada bajo CC BY-NC-SA 3.0 UK con atribución; entrenamiento no autorizado en esta ficha.",
+              "public": true,
+              "training": false
+            },
+            "sense_id": "sense-tlalli",
+            "url": "https://aztecglyphs.wired-humanities.org/content/tlalli-mdz32r",
+            "verification": "catalog_checked",
+            "version": 1
+          }
+        ],
+        "meaning": "tierra",
+        "sense_id": "sense-tlalli"
+      },
+      "fingerprint": "df0f2d22a4932b0cb9290733496268f6e51320a8432a1cd25bb8f6c106ecbc00",
+      "id": "word-sense-tlalli-glyph-scope",
+      "lesson_id": null,
+      "priority": "P2",
+      "review_stale": false,
+      "status": "open",
+      "title": "Revisar el alcance visual de tlalli"
+    },
+    {
+      "acceptance": "Elegir la referencia adecuada para cada uso de la lección y registrar si documenta una lectura, un componente, una comparación semántica o únicamente el contexto. Una imagen en un ejemplo no cuenta como glifo de esta palabra.",
+      "decision": {},
+      "evidence": {
+        "forms": [
+          {
+            "citation": "Molina (1571), part 2, f. 149v, col. 1. Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+            "evidence": [
+              {
+                "locator": "Molina (1571), part 2, f. 149v, col. 1. Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+                "source_id": "src-molina",
+                "status": "inherited",
+                "via_source_id": "src-oregon"
+              }
+            ],
+            "id": "lex-tonatiuh",
+            "kind": "form",
+            "label": "tonatiuh",
+            "legacy_id": "lex-tonatiuh",
+            "notes": "Referencia heredada; falta cotejo filológico propio.",
+            "orthography": "Lema editorial heredado de Scriptorium; no transcripción diplomática",
+            "period": "historical",
+            "rights": {
+              "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado.",
+              "public": true,
+              "training": false
+            },
+            "sense_id": "sense-tonatiuh",
+            "url": "https://nahuatl.wired-humanities.org/content/tonatiuh",
+            "variant": "nci",
+            "variant_label": "Náhuatl histórico (tradición escrita)",
+            "variation_kind": "historical",
+            "verification": "inherited",
+            "version": 1,
+            "written": "tonatiuh"
+          }
+        ],
+        "glyphs": [
+          {
+            "context": "Disco solar; el catálogo registra también su uso en el nombre Tonatiuhco.",
+            "evidence": [
+              {
+                "locator": "Códice Mendoza, f. 34r; VLA tonatiuh (Mdz34r)",
+                "source_id": "src-mendoza",
+                "status": "catalog_checked",
+                "via_source_id": "src-vla"
+              }
+            ],
+            "glyph_status": "proposed",
+            "glyph_type": "simplex",
+            "id": "glyph-tonatiuh-mdz34r",
+            "image": "https://aztecglyphs.wired-humanities.org/sites/default/files/styles/large/public/tonatiuh34rSIMPLEXsunFromTonatiuhco_0.png?itok=3w0uXbDY",
+            "image_credit": "Bodleian Libraries, University of Oxford, MS. Arch. Selden. A. 1. Vía Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed. CC BY-NC-SA 3.0 UK.",
+            "kind": "glyph",
+            "label": "Referencia glífica: tonatiuh",
+            "manuscript_url": "https://digital.bodleian.ox.ac.uk/objects/2fea788e-2aa2-4f08-b6d9-648c00486220/surfaces/f5eda129-0e1f-4597-96e4-0ceba1d7cfab/",
+            "notes": "Ficha VLA consultada el 2026-09-28; descripción y análisis de Stephanie Wood. Relación con esta acepción por revisar mediante cotejo primario. Imagen disponible en el catálogo externo.",
+            "reading": "tonatiuh",
+            "rights": {
+              "note": "Referencia bibliográfica para consulta. Las imágenes se consultan en el catálogo enlazado; sus derechos y los del comentario se revisan por separado.",
+              "public": true,
+              "training": false
+            },
+            "sense_id": "sense-tonatiuh",
+            "url": "https://aztecglyphs.wired-humanities.org/node/1858",
+            "verification": "catalog_checked",
+            "version": 2
+          }
+        ],
+        "meaning": "sol",
+        "sense_id": "sense-tonatiuh"
+      },
+      "fingerprint": "712cac388c411e6d370ac7d7c226f6c6822ed7b144123cf09481c95e089bf6e0",
+      "id": "word-sense-tonatiuh-glyph-scope",
+      "lesson_id": null,
+      "priority": "P2",
+      "review_stale": false,
+      "status": "open",
+      "title": "Revisar el alcance visual de tonatiuh"
+    },
+    {
+      "acceptance": "Elegir la referencia adecuada para cada uso de la lección y registrar si documenta una lectura, un componente, una comparación semántica o únicamente el contexto. Una imagen en un ejemplo no cuenta como glifo de esta palabra.",
+      "decision": {},
+      "evidence": {
+        "forms": [
+          {
+            "citation": "Molina, Vocabulario (1571), part 2, f. 160r, col. 2. Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+            "evidence": [
+              {
+                "locator": "Molina, Vocabulario (1571), part 2, f. 160r, col. 2. Online Nahuatl Dictionary, Stephanie Wood, ed., University of Oregon.",
+                "source_id": "src-molina",
+                "status": "inherited",
+                "via_source_id": "src-oregon"
+              }
+            ],
+            "id": "lex-xochitl",
+            "kind": "form",
+            "label": "xochitl",
+            "legacy_id": "lex-xochitl",
+            "notes": "Referencia heredada; falta cotejo filológico propio.",
+            "orthography": "Lema editorial heredado de Scriptorium; no transcripción diplomática",
+            "period": "historical",
+            "rights": {
+              "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado.",
+              "public": true,
+              "training": false
+            },
+            "sense_id": "sense-xochitl",
+            "url": "https://nahuatl.wired-humanities.org/content/xochitl",
+            "variant": "nci",
+            "variant_label": "Náhuatl histórico (tradición escrita)",
+            "variation_kind": "historical",
+            "verification": "inherited",
+            "version": 1,
+            "written": "xochitl"
+          }
+        ],
+        "glyphs": [
+          {
+            "context": "Elemento floral en el topónimo Xochiacan.",
+            "evidence": [
+              {
+                "locator": "Codex Mendoza, f. 10r. Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed.",
+                "source_id": "src-mendoza",
+                "status": "inherited",
+                "via_source_id": "src-vla"
+              }
+            ],
+            "glyph_status": "proposed",
+            "id": "glyph-xochitl",
+            "image": "https://aztecglyphs.wired-humanities.org/sites/default/files/styles/large/public/xochitl10rflowerFromXochiacan.jpg?itok=v8jxI2UJ",
+            "image_credit": "Bodleian Libraries, University of Oxford, MS. Arch. Selden. A. 1. Via Visual Lexicon of Aztec Hieroglyphs, Stephanie Wood, ed. CC BY-NC-SA 3.0 UK.",
+            "kind": "glyph",
+            "label": "Propuesta relacionada: flor",
+            "notes": "Propuesta heredada por catálogo secundario; no es escritura de una oración ni equivalencia para todas las variantes. Imagen disponible en la ficha externa, no incluida en el corpus.",
+            "reading": "xochitl",
+            "rights": {
+              "note": "Ficha bibliográfica y referencias breves para consulta; los derechos de la obra y sus imágenes se revisan por separado.",
+              "public": true,
+              "training": false
+            },
+            "sense_id": "sense-xochitl",
+            "url": "https://aztecglyphs.wired-humanities.org/content/xochitl-mdz10r",
+            "verification": "inherited",
+            "version": 2
+          }
+        ],
+        "meaning": "flor",
+        "sense_id": "sense-xochitl"
+      },
+      "fingerprint": "59a83f5a8a0a01f9e4db0db506eb50e346b7776d9de064b8c388edf7956aed2a",
+      "id": "word-sense-xochitl-glyph-scope",
+      "lesson_id": null,
+      "priority": "P2",
+      "review_stale": false,
+      "status": "open",
+      "title": "Revisar el alcance visual de xochitl"
+    },
+    {
+      "acceptance": "Determinar con evidencia si corresponde crear entrada del compuesto, añadir una forma a una acepción o conservar solo una comparación temática. Registrar fuente/localizador; no deducir morfología ni una acepción nueva automáticamente.",
+      "decision": {
+        "date": "2026-09-30",
+        "evidence": [
+          "corpus/learning-v1.json",
+          "reports/FLOR_CICLO_2026-09-30.md"
+        ],
+        "fingerprint": "3a3b22ef04d66333d155e0969bfdbb63ea9a4cfbe23183d603dea79a46bbb139",
+        "resolution": "La forma original se conserva y el vínculo se identifica como ayuda editorial pendiente. No se crea ficha ni se deduce morfología hasta cotejar la fuente y revisar la relación lingüística.",
+        "reviewer": "Codex · revisión editorial y técnica; sin certificación lingüística",
+        "status": "blocked"
+      },
+      "evidence": {
+        "archive_id": "axolotl-05338",
+        "linked_sense_id": "sense-itta",
+        "note": "El registro traduce NIQUITTA como «contemplo». Se consulta itta como ayuda editorial; el análisis de esta forma sigue pendiente. La imagen de Tlachia es una comparación de significado, no la escritura de NIQUITTA ni de itta.",
+        "written": "NIQUITTA"
+      },
+      "fingerprint": "3a3b22ef04d66333d155e0969bfdbb63ea9a4cfbe23183d603dea79a46bbb139",
+      "id": "form-axolotl-05338-sense-itta",
+      "lesson_id": "flor",
+      "priority": "P1",
+      "review_stale": false,
+      "status": "blocked",
+      "title": "Revisar forma sin ficha: NIQUITTA"
+    },
+    {
+      "acceptance": "Determinar con evidencia si corresponde crear entrada del compuesto, añadir una forma a una acepción o conservar solo una comparación temática. Registrar fuente/localizador; no deducir morfología ni una acepción nueva automáticamente.",
+      "decision": {
+        "date": "2026-09-30",
+        "evidence": [
+          "corpus/learning-v1.json",
+          "reports/FLOR_CICLO_2026-09-30.md"
+        ],
+        "fingerprint": "0f2a4738af168c92c1d6406e5bb77a748c7e8cccf5457ab666dd90a4b0b34fb0",
+        "resolution": "La forma original se conserva y el vínculo se identifica como ayuda editorial pendiente. No se crea ficha ni se deduce morfología hasta cotejar la fuente y revisar la relación lingüística.",
+        "reviewer": "Codex · revisión editorial y técnica; sin certificación lingüística",
+        "status": "blocked"
+      },
+      "evidence": {
+        "archive_id": "axolotl-13493",
+        "linked_sense_id": "sense-xochitl",
+        "note": "La fuente escribe xochitli en este fragmento. Se conserva esa grafía; el enlace al lema xochitl es una ayuda editorial pendiente de cotejo.",
+        "written": "xochitli"
+      },
+      "fingerprint": "0f2a4738af168c92c1d6406e5bb77a748c7e8cccf5457ab666dd90a4b0b34fb0",
+      "id": "form-axolotl-13493-sense-xochitl",
+      "lesson_id": "flor",
+      "priority": "P1",
+      "review_stale": false,
+      "status": "blocked",
+      "title": "Revisar forma sin ficha: xochitli"
+    },
+    {
+      "acceptance": "Determinar con evidencia si corresponde crear entrada del compuesto, añadir una forma a una acepción o conservar solo una comparación temática. Registrar fuente/localizador; no deducir morfología ni una acepción nueva automáticamente.",
+      "decision": {},
+      "evidence": {
+        "archive_id": "axolotl-12969",
+        "linked_sense_id": "sense-calli",
+        "note": "La traducción es casa de las pinturas. El enlace a calli sirve para reconocer el tema casa; no reemplaza el análisis del compuesto.",
+        "written": "tlacuilolcalli"
+      },
+      "fingerprint": "59fd423d8421b211816461daa70e5fc9b0469a649a76400088f28c957356d46e",
+      "id": "form-axolotl-12969-sense-calli",
+      "lesson_id": "lugares",
+      "priority": "P1",
+      "review_stale": false,
+      "status": "open",
+      "title": "Revisar forma sin ficha: tlacuilolcalli"
+    },
+    {
+      "acceptance": "Seleccionar al menos otro pasaje clásico breve con metztli en la acepción luna y revisarlo; documentar aparte mes cuando corresponda. No generar un ejemplo ni inventar su traducción.",
+      "decision": {},
+      "evidence": {
+        "annotation_example_counts": {
+          "sense-ihuan": 1,
+          "sense-metztli": 1,
+          "sense-tonatiuh": 4
+        },
+        "objective": "Reconocer tonatiuh y metztli y situarlos en el contexto del fragmento."
+      },
+      "fingerprint": "892ff637869b5e38cfc1b548ad5bcd058c37827d827829f298239539bd38050b",
+      "id": "lesson-cielo-moon-coverage",
+      "lesson_id": "cielo",
+      "priority": "P1",
+      "review_stale": false,
+      "status": "open",
+      "title": "Equilibrar la presencia de la luna con el objetivo"
+    },
+    {
+      "acceptance": "Preparar candidatos de otra obra con variedad, derechos y localizador explícitos. La diversidad bibliográfica no demuestra independencia de poemas o pasajes.",
+      "decision": {},
+      "evidence": {
+        "works": {
+          "La tinta negra y roja (antología de poesía náhuatl)": 12
+        }
+      },
+      "fingerprint": "2834bf66ebe8b53e695b8f553d522e36212ab5ffcb0fdb959922b08831f8d346",
+      "id": "batch-source-diversity",
+      "lesson_id": null,
+      "priority": "P2",
+      "review_stale": false,
+      "status": "open",
+      "title": "Ampliar fuentes con contextos comparables"
+    },
+    {
+      "acceptance": "Mantener dos métricas separadas: lecturas/componentes documentados y apoyos visuales contextuales. Revisar relaciones por uso, sin convertir coocurrencia en equivalencia.",
+      "decision": {},
+      "evidence": {
+        "contextual_types": [
+          "related_meaning",
+          "definition_reference",
+          "passage_reference"
+        ]
+      },
+      "fingerprint": "d6d02c870760b68f789fe3a2569ffbd03de9ec126184fdaf0766065bdc057b11",
+      "id": "batch-visual-policy",
+      "lesson_id": null,
+      "priority": "P1",
+      "review_stale": false,
+      "status": "open",
+      "title": "Definir qué cuenta como conexión correcta"
+    },
+    {
+      "acceptance": "Seleccionar cuatro pasajes originales y un solo objetivo; reutilizar entradas verificables. El borrador necesita cotejo y revisión antes de su incorporación al catálogo de lecciones.",
+      "decision": {},
+      "evidence": {
+        "candidate_sense_ids": [
+          "sense-atl",
+          "sense-tlalli",
+          "sense-tepetl",
+          "sense-tetl",
+          "sense-calli"
+        ],
+        "existing_lesson_ids": [
+          "flor",
+          "cielo",
+          "lugares"
+        ]
+      },
+      "fingerprint": "0457a9f1c0379f60403f93228b0ba79e442c2b57d4130bab35054391941367f0",
+      "id": "batch-water-land",
+      "lesson_id": null,
+      "priority": "P2",
+      "review_stale": false,
+      "status": "open",
+      "title": "Preparar una lectura breve de agua y tierra"
+    }
+  ]
+}

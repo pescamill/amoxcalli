@@ -1,0 +1,200 @@
+{
+  "schema_version": 1,
+  "queries": [
+    {
+      "query": "cuicatl",
+      "url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=cuicatl&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=50",
+      "sha256": "bfe70cd904ec701c67800cfcc50fa19d9ff4a13530b23d7165319b9ba2f0d6c9",
+      "entries": [
+        {
+          "pk": "38566",
+          "paleografia": "Cuicatl",
+          "grafiaNormalizada": "cuicatl",
+          "traduccion": "canto, o cancion.",
+          "fuente": "1571 Molina 2"
+        },
+        {
+          "pk": "151487",
+          "paleografia": "Melauac cuicatl",
+          "grafiaNormalizada": "cuicatl  +",
+          "traduccion": "canto llano.",
+          "fuente": "1571 Molina 2"
+        },
+        {
+          "pk": "152610",
+          "paleografia": "Mó[n]cauia cuicatl",
+          "grafiaNormalizada": "cuicatl  +",
+          "traduccion": "duo de canto de organo.",
+          "fuente": "1571 Molina 2"
+        },
+        {
+          "pk": "38567",
+          "paleografia": "Cuicatlali",
+          "grafiaNormalizada": "cuicatlali",
+          "traduccion": "componedor de canto.",
+          "fuente": "1571 Molina 2"
+        },
+        {
+          "pk": "38568",
+          "paleografia": "Cuicatlamatiliztli",
+          "grafiaNormalizada": "cuicatlamatiliztli",
+          "traduccion": "arte o sciencia de canto.",
+          "fuente": "1571 Molina 2"
+        },
+        {
+          "pk": "38569",
+          "paleografia": "Cuicatlamatini",
+          "grafiaNormalizada": "cuicatlamatini",
+          "traduccion": "componedor de canto.",
+          "fuente": "1571 Molina 2"
+        },
+        {
+          "pk": "38570",
+          "paleografia": "Cuicatlani, nite",
+          "grafiaNormalizada": "cuicatlani",
+          "traduccion": "mandar a otro que cante. prete: onitecuicatlan.",
+          "fuente": "1571 Molina 2"
+        },
+        {
+          "pk": "38572",
+          "paleografia": "Cuicatlaça, ni",
+          "grafiaNormalizada": "cuicatlaza",
+          "traduccion": "lo mesmo es que cuicaitoa prete: onicuicatlaz.",
+          "fuente": "1571 Molina 2"
+        },
+        {
+          "pk": "38573",
+          "paleografia": "Cuicatlaçaliztli",
+          "grafiaNormalizada": "cuicatlazaliztli",
+          "traduccion": "lo mesmo es que cuicaitoliztli.",
+          "fuente": "1571 Molina 2"
+        },
+        {
+          "pk": "38571",
+          "paleografia": "Cuicatlazqui",
+          "grafiaNormalizada": "cuicatlazqui",
+          "traduccion": "lo mesmo es que cuicaito.",
+          "fuente": "1571 Molina 2"
+        }
+      ]
+    },
+    {
+      "query": "cacahuaxochitl",
+      "url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=cacahuaxochitl&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=50",
+      "sha256": "98aefb3a61c4db06756f5d1608cc014815f8f8bda3cc3e3b2e1e5d5049010829",
+      "entries": []
+    },
+    {
+      "query": "cacauaxochitl",
+      "url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=cacauaxochitl&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=50",
+      "sha256": "ab0120079304faf4f817515ee6c1d4339870bb2678948155fbc6dfc6e2666e36",
+      "entries": []
+    },
+    {
+      "query": "itta",
+      "url": "https://gdn.iib.unam.mx/termino/search?action=search&queryBuscarEn=nahuatlGrafiaNormalizada&queryCreiterio=itta&queryEnDiccionarios%5B%5D=Molina_2&queryPartePalabra=inicio&queryLimiteRegistros=50",
+      "sha256": "1c749f1e8eb1099cc79ebe3a10c0fda21c063051fc09d8feac2ba4c4882968e9",
+      "entries": [
+        {
+          "pk": "149251",
+          "paleografia": "Itta, nino",
+          "grafiaNormalizada": "itta",
+          "traduccion": "mirar me. pret: oninottac.",
+          "fuente": "1571 Molina 2"
+        },
+        {
+          "pk": "149252",
+          "paleografia": "Itta, niqu",
+          "grafiaNormalizada": "itta",
+          "traduccion": "hallar lo q[ue] se auia perdido, o lo q[ue] se p[ro]cura y busca, o mirar a otro. pre: oniquittac.",
+          "fuente": "1571 Molina 2"
+        },
+        {
+          "pk": "149253",
+          "paleografia": "Itta, nonte",
+          "grafiaNormalizada": "itta",
+          "traduccion": "yr avisitar a otro, o mirar a otro. pre: ononteittac.",
+          "fuente": "1571 Molina 2"
+        },
+        {
+          "pk": "34541",
+          "paleografia": "Acouic nonteitta",
+          "grafiaNormalizada": "itta  +",
+          "traduccion": "mirar al que esta arriba. preterito: acouic ononteittac.",
+          "fuente": "1571 Molina 2"
+        },
+        {
+          "pk": "35041",
+          "paleografia": "Anel, niteitta",
+          "grafiaNormalizada": "itta  +",
+          "traduccion": "mirar a otro de mal ojo, o có[n] aborrecimiento. pre: anel oniteittac.",
+          "fuente": "1571 Molina 2"
+        },
+        {
+          "pk": "35477",
+          "paleografia": "Atlan niteitta",
+          "grafiaNormalizada": "itta  +",
+          "traduccion": "agorear en agua. preterito: atlan oniteittac.",
+          "fuente": "1571 Molina 2"
+        },
+        {
+          "pk": "35594",
+          "paleografia": "Atleipan niteitta",
+          "grafiaNormalizada": "itta  +",
+          "traduccion": "no estimar ni tener en nada a otro. prete: atle ipan oniteittac.",
+          "fuente": "1571 Molina 2"
+        },
+        {
+          "pk": "154708",
+          "paleografia": "Nouiampa, niteitta",
+          "grafiaNormalizada": "itta  +",
+          "traduccion": "mirar atodos enderredor. p: nouiampa oniteittac.",
+          "fuente": "1571 Molina 2"
+        },
+        {
+          "pk": "159355",
+          "paleografia": "Tepacca ittaliztli",
+          "grafiaNormalizada": "ittaliztli  +",
+          "traduccion": "el acto de mirar a otro alegremente.",
+          "fuente": "1571 Molina 2"
+        },
+        {
+          "pk": "161645",
+          "paleografia": "Tlaacica ittaliztli",
+          "grafiaNormalizada": "ittaliztli  +",
+          "traduccion": "perfecto y entero conocimiento de alguna cosa.",
+          "fuente": "1571 Molina 2"
+        },
+        {
+          "pk": "165051",
+          "paleografia": "Tlatlamelauhca ittaliztli",
+          "grafiaNormalizada": "ittaliztli  +",
+          "traduccion": "el acto de mirar recta y derechamente la cosa que se haze, o de nivelar algo con cartauon o plomada, paraque vaya derecho.",
+          "fuente": "1571 Molina 2"
+        },
+        {
+          "pk": "149254",
+          "paleografia": "Ittaloni",
+          "grafiaNormalizada": "ittaloni",
+          "traduccion": "cosa visible.",
+          "fuente": "1571 Molina 2"
+        },
+        {
+          "pk": "162660",
+          "paleografia": "Tlaixacica ittani",
+          "grafiaNormalizada": "ittani  +",
+          "traduccion": "el que enteramente alcança a saber con sabiduria alguna cosa.",
+          "fuente": "1571 Molina 2"
+        },
+        {
+          "pk": "165054",
+          "paleografia": "Tlatlamelauhca ittani",
+          "grafiaNormalizada": "ittani  +",
+          "traduccion": "el que mira assi derecho. &c",
+          "fuente": "1571 Molina 2"
+        }
+      ]
+    }
+  ],
+  "llm_calls": 0
+}

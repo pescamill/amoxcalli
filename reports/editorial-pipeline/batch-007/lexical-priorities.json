@@ -1,0 +1,457 @@
+{
+  "candidates": [
+    {
+      "catalog_head_differs": false,
+      "catalog_head_occurrences": 8325,
+      "exact_corpus_occurrences": 8325,
+      "in_current_lessons": true,
+      "normalized": "in",
+      "sense_id": "sense-gdn-m2-147479",
+      "written": "IN"
+    },
+    {
+      "catalog_head_differs": false,
+      "catalog_head_occurrences": 469,
+      "exact_corpus_occurrences": 469,
+      "in_current_lessons": true,
+      "normalized": "inic",
+      "sense_id": "sense-gdn-m2-148590",
+      "written": "Inic"
+    },
+    {
+      "catalog_head_differs": false,
+      "catalog_head_occurrences": 55,
+      "exact_corpus_occurrences": 55,
+      "in_current_lessons": true,
+      "normalized": "inin",
+      "sense_id": "sense-gdn-m2-148657",
+      "written": "Inin"
+    },
+    {
+      "catalog_head_differs": false,
+      "catalog_head_occurrences": 48,
+      "exact_corpus_occurrences": 48,
+      "in_current_lessons": true,
+      "normalized": "yectli",
+      "sense_id": "sense-gdn-m2-169584",
+      "written": "Yectli"
+    },
+    {
+      "catalog_head_differs": false,
+      "catalog_head_occurrences": 3184,
+      "exact_corpus_occurrences": 3184,
+      "in_current_lessons": false,
+      "normalized": "auh",
+      "sense_id": "sense-gdn-m2-35700",
+      "written": "Auh"
+    },
+    {
+      "catalog_head_differs": false,
+      "catalog_head_occurrences": 2392,
+      "exact_corpus_occurrences": 2392,
+      "in_current_lessons": false,
+      "normalized": "ye",
+      "sense_id": "sense-gdn-m2-169186",
+      "written": "YE"
+    },
+    {
+      "catalog_head_differs": false,
+      "catalog_head_occurrences": 2392,
+      "exact_corpus_occurrences": 2392,
+      "in_current_lessons": false,
+      "normalized": "ye",
+      "sense_id": "sense-gdn-m2-169463",
+      "written": "Ye"
+    },
+    {
+      "catalog_head_differs": false,
+      "catalog_head_occurrences": 2392,
+      "exact_corpus_occurrences": 2392,
+      "in_current_lessons": false,
+      "normalized": "ye",
+      "sense_id": "sense-gdn-m2-169464",
+      "written": "Ye"
+    },
+    {
+      "catalog_head_differs": false,
+      "catalog_head_occurrences": 2392,
+      "exact_corpus_occurrences": 2392,
+      "in_current_lessons": false,
+      "normalized": "ye",
+      "sense_id": "sense-gdn-m2-169465",
+      "written": "Ye"
+    },
+    {
+      "catalog_head_differs": false,
+      "catalog_head_occurrences": 1189,
+      "exact_corpus_occurrences": 1189,
+      "in_current_lessons": false,
+      "normalized": "oncan",
+      "sense_id": "sense-gdn-m2-155366",
+      "written": "Oncan"
+    },
+    {
+      "catalog_head_differs": false,
+      "catalog_head_occurrences": 960,
+      "exact_corpus_occurrences": 960,
+      "in_current_lessons": false,
+      "normalized": "niman",
+      "sense_id": "sense-gdn-m2-154290",
+      "written": "Niman"
+    },
+    {
+      "catalog_head_differs": false,
+      "catalog_head_occurrences": 800,
+      "exact_corpus_occurrences": 800,
+      "in_current_lessons": false,
+      "normalized": "nican",
+      "sense_id": "sense-gdn-m2-154231",
+      "written": "Nican"
+    },
+    {
+      "catalog_head_differs": false,
+      "catalog_head_occurrences": 325,
+      "exact_corpus_occurrences": 325,
+      "in_current_lessons": false,
+      "normalized": "on",
+      "sense_id": "sense-gdn-m2-154779",
+      "written": "ON"
+    },
+    {
+      "catalog_head_differs": true,
+      "catalog_head_occurrences": 979,
+      "exact_corpus_occurrences": 188,
+      "in_current_lessons": false,
+      "normalized": "xihuitl",
+      "sense_id": "sense-gdn-m2-168773",
+      "written": "Xiuitl"
+    },
+    {
+      "catalog_head_differs": false,
+      "catalog_head_occurrences": 140,
+      "exact_corpus_occurrences": 140,
+      "in_current_lessons": false,
+      "normalized": "intla",
+      "sense_id": "sense-gdn-m2-148739",
+      "written": "Intla"
+    },
+    {
+      "catalog_head_differs": false,
+      "catalog_head_occurrences": 125,
+      "exact_corpus_occurrences": 125,
+      "in_current_lessons": false,
+      "normalized": "xi",
+      "sense_id": "sense-gdn-m2-168541",
+      "written": "XI"
+    },
+    {
+      "catalog_head_differs": false,
+      "catalog_head_occurrences": 125,
+      "exact_corpus_occurrences": 125,
+      "in_current_lessons": false,
+      "normalized": "xi",
+      "sense_id": "sense-gdn-m2-168624",
+      "written": "Xi"
+    },
+    {
+      "catalog_head_differs": false,
+      "catalog_head_occurrences": 74,
+      "exact_corpus_occurrences": 74,
+      "in_current_lessons": false,
+      "normalized": "inamic",
+      "sense_id": "sense-gdn-m2-148535",
+      "written": "Inamic"
+    },
+    {
+      "catalog_head_differs": false,
+      "catalog_head_occurrences": 74,
+      "exact_corpus_occurrences": 74,
+      "in_current_lessons": false,
+      "normalized": "onca",
+      "sense_id": "sense-gdn-m2-155361",
+      "written": "Onca"
+    },
+    {
+      "catalog_head_differs": false,
+      "catalog_head_occurrences": 63,
+      "exact_corpus_occurrences": 63,
+      "in_current_lessons": false,
+      "normalized": "yehica",
+      "sense_id": "sense-gdn-m2-169607",
+      "written": "Yehica"
+    },
+    {
+      "catalog_head_differs": false,
+      "catalog_head_occurrences": 48,
+      "exact_corpus_occurrences": 48,
+      "in_current_lessons": false,
+      "normalized": "yece",
+      "sense_id": "sense-gdn-m2-169532",
+      "written": "Yece"
+    },
+    {
+      "catalog_head_differs": false,
+      "catalog_head_occurrences": 36,
+      "exact_corpus_occurrences": 36,
+      "in_current_lessons": false,
+      "normalized": "intech",
+      "sense_id": "sense-gdn-m2-148734",
+      "written": "Intech"
+    },
+    {
+      "catalog_head_differs": false,
+      "catalog_head_occurrences": 33,
+      "exact_corpus_occurrences": 33,
+      "in_current_lessons": false,
+      "normalized": "ontetl",
+      "sense_id": "sense-gdn-m2-155428",
+      "written": "Ontetl"
+    },
+    {
+      "catalog_head_differs": false,
+      "catalog_head_occurrences": 28,
+      "exact_corpus_occurrences": 28,
+      "in_current_lessons": false,
+      "normalized": "yehua",
+      "sense_id": "sense-gdn-m2-169609",
+      "written": "Yehua"
+    },
+    {
+      "catalog_head_differs": false,
+      "catalog_head_occurrences": 26,
+      "exact_corpus_occurrences": 26,
+      "in_current_lessons": false,
+      "normalized": "yequene",
+      "sense_id": "sense-gdn-m2-169737",
+      "written": "Yequene"
+    },
+    {
+      "catalog_head_differs": false,
+      "catalog_head_occurrences": 22,
+      "exact_corpus_occurrences": 22,
+      "in_current_lessons": false,
+      "normalized": "intlacamo",
+      "sense_id": "sense-gdn-m2-148745",
+      "written": "Intlacamo"
+    },
+    {
+      "catalog_head_differs": false,
+      "catalog_head_occurrences": 10,
+      "exact_corpus_occurrences": 10,
+      "in_current_lessons": false,
+      "normalized": "yeppa",
+      "sense_id": "sense-gdn-m2-169728",
+      "written": "Yeppa"
+    },
+    {
+      "catalog_head_differs": true,
+      "catalog_head_occurrences": 3184,
+      "exact_corpus_occurrences": 8,
+      "in_current_lessons": false,
+      "normalized": "auh",
+      "sense_id": "sense-gdn-m2-152614",
+      "written": "NIauh"
+    },
+    {
+      "catalog_head_differs": false,
+      "catalog_head_occurrences": 8,
+      "exact_corpus_occurrences": 8,
+      "in_current_lessons": false,
+      "normalized": "oncate",
+      "sense_id": "sense-gdn-m2-155396",
+      "written": "Oncate"
+    },
+    {
+      "catalog_head_differs": false,
+      "catalog_head_occurrences": 8,
+      "exact_corpus_occurrences": 8,
+      "in_current_lessons": false,
+      "normalized": "ontlamantli",
+      "sense_id": "sense-gdn-m2-155445",
+      "written": "Ontlamantli"
+    },
+    {
+      "catalog_head_differs": false,
+      "catalog_head_occurrences": 8,
+      "exact_corpus_occurrences": 8,
+      "in_current_lessons": false,
+      "normalized": "yei",
+      "sense_id": "sense-gdn-m2-169613",
+      "written": "Yei"
+    },
+    {
+      "catalog_head_differs": false,
+      "catalog_head_occurrences": 6,
+      "exact_corpus_occurrences": 6,
+      "in_current_lessons": false,
+      "normalized": "oncatca",
+      "sense_id": "sense-gdn-m2-155395",
+      "written": "Oncatca"
+    },
+    {
+      "catalog_head_differs": true,
+      "catalog_head_occurrences": 3184,
+      "exact_corpus_occurrences": 5,
+      "in_current_lessons": false,
+      "normalized": "auh",
+      "sense_id": "sense-gdn-m2-152936",
+      "written": "Nauh"
+    },
+    {
+      "catalog_head_differs": false,
+      "catalog_head_occurrences": 5,
+      "exact_corpus_occurrences": 5,
+      "in_current_lessons": false,
+      "normalized": "yeccan",
+      "sense_id": "sense-gdn-m2-169527",
+      "written": "Yeccan"
+    },
+    {
+      "catalog_head_differs": false,
+      "catalog_head_occurrences": 5,
+      "exact_corpus_occurrences": 5,
+      "in_current_lessons": false,
+      "normalized": "yeccan",
+      "sense_id": "sense-gdn-m2-169528",
+      "written": "Yeccan"
+    },
+    {
+      "catalog_head_differs": false,
+      "catalog_head_occurrences": 5,
+      "exact_corpus_occurrences": 5,
+      "in_current_lessons": false,
+      "normalized": "yehuatli",
+      "sense_id": "sense-gdn-m2-169611",
+      "written": "Yehuatli"
+    },
+    {
+      "catalog_head_differs": false,
+      "catalog_head_occurrences": 4,
+      "exact_corpus_occurrences": 4,
+      "in_current_lessons": false,
+      "normalized": "xinachtli",
+      "sense_id": "sense-gdn-m2-168688",
+      "written": "Xinachtli"
+    },
+    {
+      "catalog_head_differs": false,
+      "catalog_head_occurrences": 4,
+      "exact_corpus_occurrences": 4,
+      "in_current_lessons": false,
+      "normalized": "yetetl",
+      "sense_id": "sense-gdn-m2-169762",
+      "written": "Yetetl"
+    },
+    {
+      "catalog_head_differs": false,
+      "catalog_head_occurrences": 3,
+      "exact_corpus_occurrences": 3,
+      "in_current_lessons": false,
+      "normalized": "intlanel",
+      "sense_id": "sense-gdn-m2-148754",
+      "written": "Intlanel"
+    },
+    {
+      "catalog_head_differs": true,
+      "catalog_head_occurrences": 28,
+      "exact_corpus_occurrences": 3,
+      "in_current_lessons": false,
+      "normalized": "yehua",
+      "sense_id": "sense-gdn-m2-169782",
+      "written": "Yeua"
+    },
+    {
+      "catalog_head_differs": true,
+      "catalog_head_occurrences": 28,
+      "exact_corpus_occurrences": 3,
+      "in_current_lessons": false,
+      "normalized": "yehua",
+      "sense_id": "sense-gdn-m2-169783",
+      "written": "Yeua"
+    },
+    {
+      "catalog_head_differs": true,
+      "catalog_head_occurrences": 0,
+      "exact_corpus_occurrences": 2,
+      "in_current_lessons": false,
+      "normalized": "onehua",
+      "sense_id": "sense-gdn-m2-155401",
+      "written": "Oneua"
+    },
+    {
+      "catalog_head_differs": false,
+      "catalog_head_occurrences": 2,
+      "exact_corpus_occurrences": 2,
+      "in_current_lessons": false,
+      "normalized": "onyez",
+      "sense_id": "sense-gdn-m2-155458",
+      "written": "Onyez"
+    },
+    {
+      "catalog_head_differs": false,
+      "catalog_head_occurrences": 2,
+      "exact_corpus_occurrences": 2,
+      "in_current_lessons": false,
+      "normalized": "xilotl",
+      "sense_id": "sense-gdn-m2-168678",
+      "written": "Xilotl"
+    },
+    {
+      "catalog_head_differs": false,
+      "catalog_head_occurrences": 2,
+      "exact_corpus_occurrences": 2,
+      "in_current_lessons": false,
+      "normalized": "xiquipilli",
+      "sense_id": "sense-gdn-m2-168711",
+      "written": "Xiquipilli"
+    },
+    {
+      "catalog_head_differs": false,
+      "catalog_head_occurrences": 2,
+      "exact_corpus_occurrences": 2,
+      "in_current_lessons": false,
+      "normalized": "xixtli",
+      "sense_id": "sense-gdn-m2-168814",
+      "written": "Xixtli"
+    },
+    {
+      "catalog_head_differs": true,
+      "catalog_head_occurrences": 0,
+      "exact_corpus_occurrences": 1,
+      "in_current_lessons": false,
+      "normalized": "inicuac",
+      "sense_id": "sense-gdn-m2-148660",
+      "written": "Iniquac"
+    },
+    {
+      "catalog_head_differs": false,
+      "catalog_head_occurrences": 1,
+      "exact_corpus_occurrences": 1,
+      "in_current_lessons": false,
+      "normalized": "intechcopa",
+      "sense_id": "sense-gdn-m2-148735",
+      "written": "Intechcopa"
+    },
+    {
+      "catalog_head_differs": false,
+      "catalog_head_occurrences": 1,
+      "exact_corpus_occurrences": 1,
+      "in_current_lessons": false,
+      "normalized": "intlaca",
+      "sense_id": "sense-gdn-m2-148742",
+      "written": "Intlaca"
+    },
+    {
+      "catalog_head_differs": true,
+      "catalog_head_occurrences": 0,
+      "exact_corpus_occurrences": 1,
+      "in_current_lessons": false,
+      "normalized": "intlaza",
+      "sense_id": "sense-gdn-m2-148761",
+      "written": "Intlaça"
+    }
+  ],
+  "deferred": 324,
+  "schema_version": 1,
+  "scope": "Prioridad por grafías completas de las lecciones y frecuencia del corpus; no es una aprobación de acepción o morfología."
+}

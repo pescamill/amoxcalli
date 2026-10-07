@@ -1,0 +1,57 @@
+{
+  "files": {
+    "README.md": "5621a3ff734c68c658125ab721e50d6f0149831b52fb92029b55813e4a6a9140",
+    "annotation-candidates.json": "4cfd026ff598b07ea00d0b83210d40f12bd5cc836249521fcc392eaee4d6beb6",
+    "catalog-baseline.json": "e05c8bd3ac232aeb56444e8877d464d0c0aca98c00b339c2538d0f7fccce55f5",
+    "cielo-packet.json": "c103ee591547429478a74f3e6efb1f05edf030416bdc547e9d1d261a5d712eba",
+    "concordances.json": "07463821d8407a610c32030b18f39012557d9de13bf393a40c81038d3f021e27",
+    "dictionary-candidates.json": "858857f1647e47b0d8abab61f9881c3207cb925feb7bcec1642c5da0fcf4fdcc",
+    "draft-bundle.json": "6b66864cfa7316184627bc1d63b46a029acd428f9508fd05224119a31d79b858",
+    "flor-packet.json": "86d35ae4ee32697f51bb153e7ac542795631f2d0e5f1272a82e80faac99969c9",
+    "lesson-inventory.json": "f2416d57a65202c293124abc26e792dbb54afcba9389981a7bc8d2397d8cd1fd",
+    "lesson-inventory.md": "eea222b4e0f371b76dbaa71f21bd94c8c4d463d816726215e318c827e7ebb8d5",
+    "lesson-queue.json": "a311c6483f0b33798dcd5c3ae39a86e2eb3ee9d09e477c9b0e6b0d8202c98d8e",
+    "lexical-priorities.json": "23fc4975b97d92629fc2fca53bb6dd5f3f7a10a358fb85162ffd38383f77b801",
+    "lugares-packet.json": "57d6cb1deeff24b8fbd2e9d2494761e5022558dbd74a769baf52eb385b591b88",
+    "next-source-config.json": "226d0db9e2c92efc4d8082cc3537d539930f88a758c584691819e681aceb4d15",
+    "review-groups.json": "74ceadd90d666a9b624fd8aa82f5fe32c88d01feef7e1e3921463df4694fb17f",
+    "review-items.json": "d22bcf8ad615ce8b71416b36942a647c00720f80a9b044656f501a08d1fb7841",
+    "sources.json": "5e5b7a83943db8582dcec199a669eeca98bd84c95a7af856759d3f63f6c734f9",
+    "visual-candidates.json": "6146107bddba254041a02c490c5bea7091fe88eba83c7af06104a3e2a9a7f9a9",
+    "visual-inventory.json": "9424e82ea2968dba30d8d7520ae1fbf64cff62707d982db78cd854ca6f48a0f9"
+  },
+  "first_run": {
+    "llm_calls": 0,
+    "network_requests": 0
+  },
+  "inputs": {
+    "catalog_sha256": "0629531910d0d26e849866f2b97d45a3c1c62630b3de94673ed5a9dafd2a2ab9",
+    "config_sha256": "226d0db9e2c92efc4d8082cc3537d539930f88a758c584691819e681aceb4d15",
+    "corpus_sha256": "ed8e85f560e78c43385f91ac99d08dee071183749bc1f1aa1b88f1b3a2530878",
+    "decisions_sha256": "354f609f64b64aad9c7f365eecefa45a4aff46c3b9cc2166b02d4859f2c2fbd5",
+    "glyph_rules_sha256": "bcd7a0684e16863a3a4fc6bc679768295dd6df8886b89b2def55c5075efcc324",
+    "lessons_sha256": "044aa21601cb9d53577c0c1730a4f3f19ec140bff8b061cd00eb9c907853505c"
+  },
+  "pipeline_version": 2,
+  "schema_version": 1,
+  "summary": {
+    "cached_pages": 8,
+    "catalog_records": 1178,
+    "concordance_candidates": 100,
+    "examples": 12,
+    "lesson_task_states": {
+      "blocked": 4,
+      "open": 21,
+      "resolved": 1
+    },
+    "lesson_tasks": 26,
+    "lessons": 3,
+    "lexical_entries": 50,
+    "llm_calls": 0,
+    "missing_cache": 0,
+    "possibly_capped_pages": 0,
+    "review_items": 89,
+    "source_pages": 8,
+    "visual_candidates": 39
+  }
+}

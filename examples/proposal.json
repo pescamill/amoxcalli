@@ -1,0 +1,20 @@
+{
+  "input": "CONTEMPLO UNA FLOR",
+  "text": "NIQUITTA IN XOCHITL",
+  "related_passages": [
+    {
+      "id": "axolotl-05338",
+      "es": "CONTEMPLO UNA FLOR",
+      "nah": "NIQUITTA IN XOCHITL",
+      "variant": "Classical Nahuatl",
+      "iso": "nci",
+      "document": "La tinta negra y roja (antología de poesía náhuatl)",
+      "group": "La tinta negra y roja (antología de poesía náhuatl)",
+      "locator": "axolotl.csv, fila 5338 (sin página de edición disponible)",
+      "source_url": "https://www.axolotl-corpus.mx/",
+      "declared_license": "MPL-2.0 (repositorio distribuidor)",
+      "linguistic_review": "upstream_alignment_not_independently_reviewed"
+    }
+  ],
+  "candidate_origin": "short_corpus_example_not_model_output"
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "records": [
+    {
+      "id": "src-axolotl",
+      "kind": "source",
+      "label": "Axolotl · corpus paralelo español–náhuatl",
+      "source_type": "edition",
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Distribuidor: MPL-2.0. Derechos por obra y cotejo filológico pendientes."
+      },
+      "url": "https://github.com/ElotlMX/py-elotl/tree/157f34300f4ca92c3d75b74ec14142916d75c30b",
+      "institution": "UNAM; distribución Comunidad Elotl",
+      "author": "Ximena Gutiérrez-Vasques, Gerardo Sierra e Isaac Hernández Pompa",
+      "date": "2016",
+      "language": "es / náhuatl",
+      "description": "Corpus paralelo. Los localizadores CSV no sustituyen las páginas de las ediciones primarias."
+    }
+  ]
+}

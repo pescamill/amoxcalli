@@ -1,0 +1,17 @@
+# Componentes de terceros
+
+- Qwen3-0.6B: Qwen, Apache-2.0. La descarga conserva LICENSE y README de la revisión fijada.
+- Axolotl: Ximena Gutiérrez-Vasques, Gerardo Sierra, Isaac Hernández Pompa, UNAM, 2016. Distribuido por Comunidad Elotl / py-elotl, repositorio MPL-2.0. La distribución conserva el CSV original y su licencia en `corpus/axolotl/`. El permiso aplicable a cada edición/traducción requiere revisión independiente.
+- PyTorch, Transformers, PEFT, Accelerate, Safetensors y SacreBLEU: componentes externos instalados por pip, cada uno conserva sus licencias. No se redistribuyen en este ZIP.
+- Fuentes lexicográficas, textos académicos y catálogo de glifos: enlaces de referencia; sin cesión de derechos. Las imágenes de fuentes se ENLAZAN (no se copian) desde el Visual Lexicon of Aztec Hieroglyphs (VLA), Stephanie Wood, ed. Las imágenes del Códice Mendoza llevan atribución a Bodleian Libraries, University of Oxford (MS. Arch. Selden. A. 1), y licencia CC BY-NC-SA 3.0 UK; NoComercial y CompartirIgual aplican a esas imágenes. Las fichas de luna (Códice Florentino) y mes (Códice Osuna) citan Library of Congress / World Digital Library, donde LOC declara no conocer restricciones en la colección: esa declaración no es una cesión general. Se conservan la referencia al original, la atribución a Biblioteca Medicea Laurenziana o Biblioteca Nacional de España, el crédito al VLA y el enlace de origen. Las atribuciones específicas están en cada registro y en la interfaz.
+
+La licencia MIT del proyecto se aplica únicamente al código y documentación originales. No relicencia datos, libros, imágenes, base ni adaptadores derivados.
+
+
+El lote léxico v5 registra hechos breves y definiciones españolas redactadas para el índice, con enlaces al Online Nahuatl Dictionary y a la obra de Molina según cada ficha. No reproduce un diccionario completo. Las seis lecturas actuales seleccionan 24 fragmentos del Axolotl ya incluido; conservan la obra, la fila, la distribución fijada y la nota de derechos del corpus. Consulta local y preparación editorial no constituyen permiso para redistribuir las obras subyacentes ni para entrenar con las imágenes.
+
+
+El lote `corpus/gdn-lexicon-v6.json` incorpora 499 transcripciones breves de entradas de Alonso de Molina, *Vocabulario en lengua castellana y mexicana y mexicana y castellana* (1571), segunda parte, vía [Gran Diccionario Náhuatl, Instituto de Investigaciones Bibliográficas, UNAM](https://gdn.iib.unam.mx/). Conserva paleografía, traducción histórica, grafía normalizada separada e ID/enlace de cada ficha. No declara una licencia abierta de la edición digital ni permisos de entrenamiento: `rights.training=false`. Las páginas de extracción y sus hashes figuran en `reports/dictionary-import-v6.json`; la caché de consulta no se incluye en el ZIP.
+
+
+El lote glífico v7 conserva los créditos anteriores y enlaza dos imágenes adicionales de la Matrícula de Huexotzinco (1560), folios 487r y 716r, vía VLA: [Tlecuauh](https://aztecglyphs.wired-humanities.org/content/tlecuauh-mh487r) y [Tlachia](https://aztecglyphs.wired-humanities.org/content/tlachia-mh716r). Las fichas declaran CC BY-NC-SA 3.0 y atribuyen el original a Library of Congress / World Digital Library; descripción de Stephanie Wood. No se descargan ni redistribuyen las imágenes. Las referencias reutilizadas por el script conservan crédito, folio y URL; las ayudas contextuales citan también su entrada Molina/GDN o fila Axolotl. No habilitan entrenamiento.

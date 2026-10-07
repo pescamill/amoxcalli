@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "groups": {
+    "COPY_GROUP_ID": {
+      "status": "deferred",
+      "fingerprint": "COPY_GROUP_FINGERPRINT",
+      "reviewer": "",
+      "date": "",
+      "evidence": [],
+      "resolution": "Completar revisión real antes de cambiar a accepted."
+    }
+  },
+  "items": {
+    "COPY_EXCEPTION_ITEM_ID": {
+      "status": "rejected",
+      "fingerprint": "COPY_ITEM_FINGERPRINT",
+      "resolution": "Registrar el motivo de esta excepción al grupo."
+    }
+  }
+}

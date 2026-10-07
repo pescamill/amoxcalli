@@ -1,0 +1,277 @@
+{
+  "schema_version": 1,
+  "featured_sense_ids": [
+    "sense-atl",
+    "sense-cuahuitl",
+    "sense-xochicuahuitl",
+    "sense-tototl",
+    "sense-calli",
+    "sense-tepetl",
+    "sense-tochtli",
+    "sense-citlalin",
+    "sense-xochitl",
+    "sense-tletl",
+    "sense-metztli",
+    "sense-madera",
+    "sense-metl",
+    "sense-mes",
+    "sense-itzcuintli",
+    "sense-michin",
+    "sense-tetl",
+    "sense-coatl",
+    "sense-tonatiuh",
+    "sense-tlalli",
+    "sense-mazatl",
+    "sense-itta",
+    "sense-ehecatl",
+    "sense-ihuan"
+  ],
+  "records": [
+    {
+      "id": "src-huexotzinco",
+      "kind": "source",
+      "label": "Matrícula de Huexotzinco",
+      "source_type": "primary",
+      "institution": "Library of Congress / World Digital Library",
+      "author": "Autores indígenas de Huexotzinco",
+      "date": "1560",
+      "language": "náhuatl / español",
+      "description": "Matrícula con nombres personales y glifos. Referencias a los folios 487r y 716r consultadas vía VLA; cotejo primario pendiente.",
+      "url": "https://www.loc.gov/resource/gdcwdl.wdl_15282/",
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Referencia de catálogo e imagen enlazada, atribuida a Library of Congress / World Digital Library y VLA; CC BY-NC-SA 3.0 declarada por VLA. No se autoriza entrenamiento."
+      }
+    },
+    {
+      "id": "glyph-related-madera-mh487r",
+      "kind": "glyph",
+      "label": "Referencia relacionada: Tlecuauh",
+      "sense_id": "sense-madera",
+      "reading": "Tlecuauh",
+      "glyph_status": "proposed",
+      "glyph_type": "compound",
+      "context": "El catálogo identifica una tabla de madera (cuahuitl) dentro de Tlecuauh, compuesto de madera y fuego. Se muestra el compuesto completo: no equivale a escribir únicamente cuahuitl / madera.",
+      "url": "https://aztecglyphs.wired-humanities.org/content/tlecuauh-mh487r",
+      "image": "https://aztecglyphs.wired-humanities.org/sites/default/files/styles/large/public/Tlecuauh_M487rCompoundPersName.png?itok=8pbGAqsF",
+      "image_credit": "Library of Congress / World Digital Library. Vía Visual Lexicon of Aztec Hieroglyphs; descripción de Stephanie Wood. CC BY-NC-SA 3.0 según la ficha VLA.",
+      "manuscript_url": "https://www.loc.gov/resource/gdcwdl.wdl_15282/?sp=53&st=image",
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Referencia de catálogo e imagen enlazada, atribuida a Library of Congress / World Digital Library y VLA; CC BY-NC-SA 3.0 declarada por VLA. No se autoriza entrenamiento."
+      },
+      "evidence": [
+        {
+          "source_id": "src-huexotzinco",
+          "via_source_id": "src-vla",
+          "locator": "Matrícula de Huexotzinco, f. 487r; VLA Tlecuauh",
+          "status": "catalog_checked"
+        }
+      ],
+      "association": {
+        "type": "related_meaning",
+        "note": "El catálogo identifica una tabla de madera (cuahuitl) dentro de Tlecuauh, compuesto de madera y fuego. Se muestra el compuesto completo: no equivale a escribir únicamente cuahuitl / madera.",
+        "evidence_url": "https://aztecglyphs.wired-humanities.org/content/tlecuauh-mh487r",
+        "reference_form_id": "form-madera"
+      },
+      "notes": "Referencia de catálogo consultada el 2026-09-30; asociación de significado para comparación educativa, no equivalencia de lectura completa."
+    },
+    {
+      "id": "glyph-related-itta-mh716r",
+      "kind": "glyph",
+      "label": "Referencia relacionada: Tlachia",
+      "sense_id": "sense-itta",
+      "reading": "Tlachia",
+      "glyph_status": "proposed",
+      "glyph_type": "simplex",
+      "context": "El catálogo interpreta el ojo como indicador del verbo de ver en el nombre Tlachia. Se relaciona por significado con itta; este glifo no documenta la lectura itta.",
+      "url": "https://aztecglyphs.wired-humanities.org/content/tlachia-mh716r",
+      "image": "https://aztecglyphs.wired-humanities.org/sites/default/files/styles/large/public/TlachiaMH716rSmplxPNM.png?itok=ZU9T2R2p",
+      "image_credit": "Library of Congress / World Digital Library. Vía Visual Lexicon of Aztec Hieroglyphs; descripción de Stephanie Wood. CC BY-NC-SA 3.0 según la ficha VLA.",
+      "manuscript_url": "https://www.loc.gov/resource/gdcwdl.wdl_15282/?sp=510&st=image",
+      "verification": "catalog_checked",
+      "rights": {
+        "public": true,
+        "training": false,
+        "note": "Referencia de catálogo e imagen enlazada, atribuida a Library of Congress / World Digital Library y VLA; CC BY-NC-SA 3.0 declarada por VLA. No se autoriza entrenamiento."
+      },
+      "evidence": [
+        {
+          "source_id": "src-huexotzinco",
+          "via_source_id": "src-vla",
+          "locator": "Matrícula de Huexotzinco, f. 716r; VLA Tlachia",
+          "status": "catalog_checked"
+        }
+      ],
+      "association": {
+        "type": "related_meaning",
+        "note": "El catálogo interpreta el ojo como indicador del verbo de ver en el nombre Tlachia. Se relaciona por significado con itta; este glifo no documenta la lectura itta.",
+        "evidence_url": "https://aztecglyphs.wired-humanities.org/content/tlachia-mh716r",
+        "reference_form_id": "lex-itta"
+      },
+      "notes": "Referencia de catálogo consultada el 2026-09-30; asociación de significado para comparación educativa, no equivalencia de lectura completa."
+    }
+  ],
+  "anchors": [
+    {
+      "glyph_id": "glyph-atl",
+      "spanish_terms": [
+        "agua",
+        "aguas"
+      ]
+    },
+    {
+      "glyph_id": "glyph-calli",
+      "spanish_terms": [
+        "casa",
+        "casas"
+      ]
+    },
+    {
+      "glyph_id": "glyph-citlalin-mdz17v",
+      "spanish_terms": [
+        "estrella",
+        "estrellas"
+      ]
+    },
+    {
+      "glyph_id": "glyph-coatl-mdz7v",
+      "spanish_terms": [
+        "culebra",
+        "culebras",
+        "serpiente",
+        "serpientes"
+      ]
+    },
+    {
+      "glyph_id": "glyph-cuahuitl-mdz7v",
+      "spanish_terms": [
+        "arbol",
+        "arboles"
+      ]
+    },
+    {
+      "glyph_id": "glyph-ehecatl-mdz12r",
+      "spanish_terms": [
+        "viento",
+        "vientos"
+      ]
+    },
+    {
+      "glyph_id": "glyph-itzcuintli-mdz16r",
+      "spanish_terms": [
+        "perro",
+        "perros"
+      ]
+    },
+    {
+      "glyph_id": "glyph-mazatl-mdz13v",
+      "spanish_terms": [
+        "venado",
+        "venados"
+      ]
+    },
+    {
+      "glyph_id": "glyph-metl-mdz10r",
+      "spanish_terms": [
+        "maguey",
+        "magueyes"
+      ]
+    },
+    {
+      "glyph_id": "glyph-metztli-fcbk11f214v",
+      "spanish_terms": [
+        "luna"
+      ]
+    },
+    {
+      "glyph_id": "glyph-metztli-osu14v",
+      "spanish_terms": [
+        "mes",
+        "meses"
+      ]
+    },
+    {
+      "glyph_id": "glyph-michin-mdz46r",
+      "spanish_terms": [
+        "pez",
+        "peces",
+        "pescado",
+        "pescados"
+      ]
+    },
+    {
+      "glyph_id": "glyph-tepetl-mdz32r",
+      "spanish_terms": [
+        "cerro",
+        "cerros"
+      ]
+    },
+    {
+      "glyph_id": "glyph-tetl-mdz48r",
+      "spanish_terms": [
+        "piedra",
+        "piedras"
+      ]
+    },
+    {
+      "glyph_id": "glyph-tlalli-mdz32r",
+      "spanish_terms": [
+        "tierra",
+        "tierras"
+      ]
+    },
+    {
+      "glyph_id": "glyph-tletl-mdz13r",
+      "spanish_terms": [
+        "fuego"
+      ]
+    },
+    {
+      "glyph_id": "glyph-tochtli-mdz46r",
+      "spanish_terms": [
+        "conejo",
+        "conejos"
+      ]
+    },
+    {
+      "glyph_id": "glyph-tonatiuh-mdz34r",
+      "spanish_terms": [
+        "sol"
+      ]
+    },
+    {
+      "glyph_id": "glyph-tototl-mdz46r",
+      "spanish_terms": [
+        "ave",
+        "aves",
+        "paxaro",
+        "paxaros"
+      ]
+    },
+    {
+      "glyph_id": "glyph-xochitl",
+      "spanish_terms": [
+        "flor",
+        "flores"
+      ]
+    },
+    {
+      "glyph_id": "glyph-related-madera-mh487r",
+      "spanish_terms": [
+        "madera",
+        "maderas",
+        "leña"
+      ]
+    },
+    {
+      "glyph_id": "glyph-related-itta-mh716r",
+      "spanish_terms": []
+    }
+  ],
+  "policy": "Solo referencias existentes, relaciones explícitas de significado y coocurrencia exacta en pasajes clásicos. Sin inferencia morfológica ni valores fonéticos por semejanza de letras."
+}
