@@ -24,9 +24,9 @@ A small expedition: open **Flores y cantos**, hide the Spanish and click a famil
 
 | Space | Current use |
 | --- | --- |
-| **Aprender / Leer** | Guided readings, contextual word help, optional Spanish and exercises that preserve source spelling; browse the selected passages and notes. |
-| **Diccionario** | Look up senses and historical forms, inspect documented visual references and follow citations. The first page keeps 24 representative entries; the rest sorts alphabetically in Nahuatl. |
-| **Mis palabras** | Save words and practise at spaced intervals. Progress belongs to the current browser; no account is required. |
+| **Aprender / Leer** | Guided readings, contextual word help, optional Spanish and exercises that preserve source spelling; four source-based comprehension questions in Aves; browse the selected passages and notes. |
+| **Diccionario** | Look up senses and historical forms, inspect documented visual references and follow citations. The first page keeps 24 representative entries; the rest sorts alphabetically in Nahuatl. Queries rank exact matches first and can continue into the archive when an entry is missing. |
+| **Mis palabras** | Save words and practise at spaced intervals. Keep the source passage with a saved word and return to it during review. Progress belongs to the current browser; no account is required. |
 | **Archivo y herramientas** | Search Spanish or Nahuatl, filter by work, variety or period, inspect sources and prepare exports with rights notes. |
 | **Laboratorio** | Try example retrieval, limited lexical rules or experimental generation; inspect Spanish/Nahuatl training pairs and model reports. |
 | **Aportar · Voces** | Propose text, voice, translations, forms and connections; record variety and permissions, review or withdraw contributions. |
@@ -61,7 +61,7 @@ python3 -m nahuatl_local.editorial_release --help
 python3 -m nahuatl_local.lesson_builder --help
 ```
 
-`batch-007-v9` is incorporated. `batch-009-v11` is prepared and verified but unpublished; reproducing its source comparison requires the local source-page cache. The earlier `batch-008-v10` became stale when the readings changed.
+`batch-007-v9` is incorporated. `batch-009-v11` was prepared and verified but remains unpublished. The comprehension update on 7 October changed the reading hash; prepare a fresh batch ID using the local source-page cache before continuing. The earlier `batch-008-v10` became stale when the readings changed.
 
 The next useful growth is more good contexts and fewer mistaken connections: expand readings through repeatable recipes, resolve ambiguities against primary sources, add images where evidence exists, and test whether learners understand the activities. The [iteration plan](LEARNING_ITERATION_PLAN.md) and [progress record](PROGRESO_INTERNO.md) retain decisions and open work.
 
@@ -89,6 +89,14 @@ The application uses Python, SQLite and HTML/CSS/JavaScript. Optional generation
 
 ```bash
 python3 -m unittest discover -s tests
+```
+
+For interface checks (Node.js, development only):
+
+```bash
+npm ci --ignore-scripts
+npm run test:ui
+npm run test:offline
 ```
 
 Some training and editorial integration checks require extra dependencies, prepared data or cached source pages, as described in their guides.

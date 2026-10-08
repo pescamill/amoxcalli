@@ -668,6 +668,17 @@
             }
           ],
           "archive_id": "axolotl-14546",
+          "comprehension": {
+            "answer": 0,
+            "explanation": "La traducción del corpus dice «Por allí anda el ave, parlotea y canta». La respuesta corresponde a este fragmento, no a una glosa aislada.",
+            "kind": "meaning",
+            "options": [
+              "Por allí anda el ave, parlotea y canta",
+              "Lleva carrizos al palacio.",
+              "Construye una casa."
+            ],
+            "question": "Según la traducción del poema, ¿qué hace el ave?"
+          },
           "context": "El ave anda, parlotea y canta en el poema, según la traducción. No se identifica una especie a partir del glifo de referencia.",
           "exercise": {
             "answer": 0,
@@ -681,6 +692,10 @@
             ],
             "question": "Recupera la forma que aparece en el fragmento original."
           },
+          "explore_words": [
+            "chachalaca",
+            "tlatohua"
+          ],
           "source_hash": "2c93ffac76b923ab5d31dad8640725f453866880ac9a79326b9012394bd8f43d"
         },
         {
@@ -694,6 +709,17 @@
             }
           ],
           "archive_id": "axolotl-14253",
+          "comprehension": {
+            "answer": 1,
+            "explanation": "La traducción del corpus dice «aves, pescados y ranas». La respuesta corresponde a este fragmento, no a una glosa aislada.",
+            "kind": "meaning",
+            "options": [
+              "Flores y collares.",
+              "aves, pescados y ranas",
+              "Escudos y dardos."
+            ],
+            "question": "Según este relato, ¿qué llevaban tenochcas y tlatelolcas?"
+          },
           "context": "El relato enumera aves, pescados y ranas llevados por tenochcas y tlatelolcas. La lectura destaca únicamente tototl.",
           "exercise": {
             "answer": 1,
@@ -707,6 +733,10 @@
             ],
             "question": "Recupera la forma que aparece en el fragmento original."
           },
+          "explore_words": [
+            "michi",
+            "cuiatl"
+          ],
           "source_hash": "fac136e3a0457c008c312b42641cd4622684ed4dbe5477b8515b3ed1b388a49e"
         },
         {
@@ -720,6 +750,17 @@
             }
           ],
           "archive_id": "axolotl-08856",
+          "comprehension": {
+            "answer": 2,
+            "explanation": "La traducción del corpus dice «en Azcapotzalco». La respuesta corresponde a este fragmento, no a una glosa aislada.",
+            "kind": "meaning",
+            "options": [
+              "En la casa del dios.",
+              "En la región de los magueyes.",
+              "en Azcapotzalco"
+            ],
+            "question": "¿A qué lugar llevaban lo que enumera el fragmento?"
+          },
           "context": "El relato incluye una lista de animales y materiales, dentro de acciones realizadas en Azcapotzalco. Los nombres propios y el resto de la lista mantienen su escritura original.",
           "exercise": {
             "answer": 2,
@@ -733,6 +774,10 @@
             ],
             "question": "Recupera la forma que aparece en el fragmento original."
           },
+          "explore_words": [
+            "michi",
+            "tletlalito"
+          ],
           "source_hash": "ff72fa785c95318cf04dddf607259f2c16866c8702f9457edbfc7618d9aca789"
         },
         {
@@ -746,6 +791,17 @@
             }
           ],
           "archive_id": "axolotl-00751",
+          "comprehension": {
+            "answer": 0,
+            "explanation": "La traducción del corpus dice «con sus flechas y sus arcos». La respuesta corresponde a este fragmento, no a una glosa aislada.",
+            "kind": "meaning",
+            "options": [
+              "con sus flechas y sus arcos",
+              "Con escudos y dardos.",
+              "Con redes y canoas."
+            ],
+            "question": "Según la traducción, ¿con qué cazaban?"
+          },
           "context": "El relato describe el sustento y la caza de los chichimecas totolimpanecas. Reconoce tototl como palabra separada; las letras del nombre propio no se tratan como otra aparición de la palabra.",
           "exercise": {
             "answer": 0,
@@ -759,12 +815,16 @@
             ],
             "question": "Recupera la forma que aparece en el fragmento original."
           },
+          "explore_words": [
+            "cohuatl"
+          ],
           "source_hash": "3542b019692cbcac4ccdc9ac5cba0f50e69e5c7766e8051e06520ee09079b237"
         }
       ],
       "id": "aves",
       "minutes": 8,
       "objective": "Reconocer tototl y comparar el contexto del ave poética con las aves de los relatos.",
+      "practice_version": 1,
       "reading_tips": [
         "El mismo término aparece en poesía y en relatos históricos; lee qué papel tiene en cada fragmento.",
         "Las formas michi y cohuatl que aparecen en los relatos se conservan sin convertirlas automáticamente en otras entradas."
@@ -773,7 +833,7 @@
         "sense-tototl"
       ],
       "title": "Un ave en poesía, aves en relatos",
-      "version": 1
+      "version": 2
     }
   ],
   "note": "Piloto editorial local. Traducciones heredadas de Axolotl y ayudas redactadas para la lectura; revisión lingüística y cotejo de páginas primarias pendientes.",

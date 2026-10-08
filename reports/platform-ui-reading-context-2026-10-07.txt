@@ -1,0 +1,11 @@
+
+> test:ui
+> python3 scripts/test-platform-ui.py
+
+PASS: guided reading, contextual glyph help, incorrect-answer feedback, exact-form exercise, completion, saved words and review
+PASS: dictionary-to-archive continuation, exact-first lookup, saved passage context, source-backed comprehension and legacy progress preserved
+PASS: accent-insensitive search, separate senses, contextual references and explicit absent variant
+PASS: one Voces session submits a sourced lexical proposal with independent permissions
+PASS: pending contribution remains outside corpus and can be withdrawn
+PASS: laboratory tabs, separate corpus/rules, training pairs, pagination, CSV and private proposals
+PASS: sources and texts render with no application JavaScript errors

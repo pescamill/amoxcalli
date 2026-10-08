@@ -5,19 +5,48 @@ let studyStorageAvailable=true;
 function readStudy(){
  try{
   const value=JSON.parse(localStorage.getItem('scriptorium-study-v1')||'null');
-  if(value?.version===1)return {version:1,saved:Array.isArray(value.saved)?value.saved.filter(x=>typeof x==='string'):[],lessons:value.lessons&&typeof value.lessons==='object'?value.lessons:{},reviews:value.reviews&&typeof value.reviews==='object'?value.reviews:{}};
+  if(value?.version===1)return {version:1,saved:Array.isArray(value.saved)?value.saved.filter(x=>typeof x==='string'):[],lessons:value.lessons&&typeof value.lessons==='object'?value.lessons:{},reviews:value.reviews&&typeof value.reviews==='object'?value.reviews:{},contexts:value.contexts&&typeof value.contexts==='object'?value.contexts:{}};
  }catch{/* Un almacenamiento vacío o corrupto no impide estudiar. */}
- return {version:1,saved:[],lessons:{},reviews:{}};
+ return {version:1,saved:[],lessons:{},reviews:{},contexts:{}};
 }
 const study=readStudy();
 function writeStudy(){try{localStorage.setItem('scriptorium-study-v1',JSON.stringify(study));return true;}catch{studyStorageAvailable=false;toast('Tu navegador no permite guardar el progreso. Puedes seguir estudiando durante esta sesión.');return false;}}
 function isSaved(id){return study.saved.includes(id);}
-function toggleSaved(id){
+function toggleSaved(id,context){
  if(!state.byId[id]||state.byId[id].kind!=='sense')return;
- study.saved=isSaved(id)?study.saved.filter(x=>x!==id):[...study.saved,id];writeStudy();
+ const removing=isSaved(id);
+ study.saved=removing?study.saved.filter(x=>x!==id):[...study.saved,id];
+ if(removing)delete study.contexts[id];else if(context)study.contexts[id]=context;
+ writeStudy();
  document.querySelectorAll('[data-save-word]').forEach(b=>{b.textContent=isSaved(b.dataset.saveWord)?'Guardada ✓':'Guardar palabra';b.setAttribute('aria-pressed',String(isSaved(b.dataset.saveWord)));});
 }
-function bindSaved(container){container.querySelectorAll('[data-save-word]').forEach(b=>b.onclick=()=>toggleSaved(b.dataset.saveWord));appendSourceCredits();}
+function bindSaved(container){
+ container.querySelectorAll('[data-save-word]').forEach(b=>b.onclick=()=>{
+  toggleSaved(b.dataset.saveWord,savedContext(b));
+  document.querySelectorAll('[data-save-context]').forEach(x=>x.hidden=!isSaved(x.dataset.saveContext));
+ });
+ container.querySelectorAll('[data-save-context]').forEach(b=>b.onclick=()=>{
+  const context=savedContext(b);if(!context||!isSaved(b.dataset.saveContext))return;
+  study.contexts[b.dataset.saveContext]=context;writeStudy();b.textContent='Fragmento guardado ✓';
+ });
+ appendSourceCredits();
+}
+function savedContext(button){
+ const article=button.closest('[data-archive-id]')||button.closest('.lesson-layout')?.querySelector('[data-archive-id]');
+ if(!article)return;
+ const example=state.learning.lessons.flatMap(l=>l.examples).find(e=>e.archive_id===article.dataset.archiveId);
+ if(example?.annotations.some(a=>a.sense_id===(button.dataset.saveWord||button.dataset.saveContext)))return {archive_id:example.archive_id};
+}
+function savedPassage(id){
+ const rid=study.contexts[id]?.archive_id;
+ // Resolve only against current, source-checked readings; storage is not evidence.
+ return rid&&state.learning.lessons.flatMap(l=>l.examples.map(e=>({lesson:l,example:e}))).find(v=>v.example.archive_id===rid&&v.example.annotations.some(a=>a.sense_id===id));
+}
+function savedPassageHTML(id,review=false){
+ const context=savedPassage(id);if(!context)return '';
+ const {lesson,example}=context,p=example.passage;
+ return `<details class="saved-context"><summary>El fragmento donde la guardaste</summary><blockquote lang="nci">${esc(p.nah)}</blockquote>${review?'':`<p>${esc(p.es)}</p>`}<p class="meta">${esc(p.document)} · ${esc(p.locator)}</p><a href="#leer/${esc(lesson.id)}">Volver a esta lectura →</a></details>`;
+}
 function appendSourceCredits(){
  $('content').querySelector('.source-credit-summary')?.remove();
  const visible=new Set(Array.from($('content').querySelectorAll('img[data-source-image]')).map(i=>i.getAttribute('src'))),groups=new Map();
@@ -59,7 +88,7 @@ function glyphContext(g){
 function wordHelpHTML(annotation){
  const sense=state.byId[annotation.sense_id],g=annotation.glyph_id?state.byId[annotation.glyph_id]:representativeGlyph(annotation.sense_id);
  const relations={full_word:'Palabra completa',observed_form:'Forma del pasaje · análisis pendiente',source_variant:'Grafía de la fuente · relación pendiente de cotejo',thematic:'Comparación temática'};
- return `<div class="word-help"><div>${g?sourceImage(g,'help-image'):''}</div><div><p class="eyebrow">Ayuda de lectura${annotation.relation?' · '+esc(relations[annotation.relation]):''}</p><h3 lang="nci">${esc(annotation.quote)}</h3><p class="lookup-reference">Entrada de consulta: <a href="#lexico/${esc(annotation.sense_id)}"><span lang="nci">${esc(headword(annotation.sense_id))}</span> · ${esc(sense?.label)}</a></p><p>${esc(annotation.note)}</p><p class="meta">${g?esc(state.byId[g.evidence?.[0]?.source_id]?.label)+' · '+esc(g.evidence?.[0]?.locator):'Sin referencia glífica específica incorporada.'}</p>${g?'<p class="meta">La referencia visual y este pasaje pertenecen a documentos distintos. Consulta el alcance de la relación.</p>'+associationHTML(g):''}<div class="entry-actions">${saveWordButton(annotation.sense_id)}<a class="secondary" href="#lexico/${esc(annotation.sense_id)}">Ver palabra y fuentes</a></div></div></div>`;
+ return `<div class="word-help"><div>${g?sourceImage(g,'help-image'):''}</div><div><p class="eyebrow">Ayuda de lectura${annotation.relation?' · '+esc(relations[annotation.relation]):''}</p><h3 lang="nci">${esc(annotation.quote)}</h3><p class="lookup-reference">Entrada de consulta: <a href="#lexico/${esc(annotation.sense_id)}"><span lang="nci">${esc(headword(annotation.sense_id))}</span> · ${esc(sense?.label)}</a></p><p>${esc(annotation.note)}</p><p class="meta">${g?esc(state.byId[g.evidence?.[0]?.source_id]?.label)+' · '+esc(g.evidence?.[0]?.locator):'Sin referencia glífica específica incorporada.'}</p>${g?'<p class="meta">La referencia visual y este pasaje pertenecen a documentos distintos. Consulta el alcance de la relación.</p>'+associationHTML(g):''}<div class="entry-actions">${saveWordButton(annotation.sense_id)}<button class="secondary" data-save-context="${esc(annotation.sense_id)}" ${isSaved(annotation.sense_id)?'':'hidden'}>Guardar este fragmento para repaso</button><a class="secondary" href="#lexico/${esc(annotation.sense_id)}">Ver palabra y fuentes</a></div></div></div>`;
 }
 function annotatedPassage(example,cloze=false){
  const r=example.passage;let end=0,html='';
@@ -77,39 +106,57 @@ function bindReading(container,example){
  container.querySelectorAll('[data-annotation]').forEach(b=>b.onclick=()=>{container.querySelectorAll('[data-annotation]').forEach(x=>x.setAttribute('aria-expanded',String(x===b)));const help=container.querySelector('.reading-help');help.innerHTML=wordHelpHTML(example.annotations[Number(b.dataset.annotation)]);bindSaved(help);});
  const toggle=container.querySelector('[data-toggle-translation]'),translation=container.querySelector('.reading-translation');
  if(toggle)toggle.onclick=()=>{translation.hidden=!translation.hidden;toggle.textContent=translation.hidden?'Mostrar traducción':'Ocultar traducción';toggle.setAttribute('aria-expanded',String(!translation.hidden));};
+ const form=container.querySelector('.explore-word-form'),input=form?.querySelector('input');
+ if(form){
+  const update=()=>{const q=input.value.trim();form.querySelector('[data-dictionary-lookup]').href='#lexico/buscar/'+encodeURIComponent(q);form.querySelector('[data-dictionary-lookup]').hidden=!q;};
+  input.oninput=update;form.onsubmit=e=>{e.preventDefault();const q=input.value.trim();if(q)location.hash='#investigar/'+encodeURIComponent(q);};update();
+  container.querySelectorAll('[data-explore-word]').forEach(b=>b.onclick=()=>{input.value=b.dataset.exploreWord;update();form.dispatchEvent(new Event('submit',{bubbles:true,cancelable:true}));});
+ }
 }
-function readingCard(example,index,hide=false,cloze=false){return `<article class="reading-card" data-example="${index}"><p class="meta">${esc(example.passage.variant_label)} · ${esc(example.passage.document)}</p><p class="guided-passage" lang="nci">${annotatedPassage(example,cloze)}</p><p class="hint">Pulsa las palabras subrayadas para consultar su ayuda y sus fuentes.</p><button class="link-button" data-toggle-translation aria-expanded="${!hide}">${hide?'Mostrar traducción':'Ocultar traducción'}</button><p class="reading-translation" ${hide?'hidden':''}>${esc(example.passage.es)}</p><div class="reading-help" aria-live="polite"></div>${passageSource(example)}</article>`;}
+function readingCard(example,index,hide=false,cloze=false){return `<article class="reading-card" data-example="${index}" data-archive-id="${esc(example.archive_id)}"><p class="meta">${esc(example.passage.variant_label)} · ${esc(example.passage.document)}</p><p class="guided-passage" lang="nci">${annotatedPassage(example,cloze)}</p><p class="hint">Pulsa las palabras subrayadas para consultar su ayuda y sus fuentes.</p><button class="link-button" data-toggle-translation aria-expanded="${!hide}">${hide?'Mostrar traducción':'Ocultar traducción'}</button><p class="reading-translation" ${hide?'hidden':''}>${esc(example.passage.es)}</p><div class="reading-help" aria-live="polite"></div><details class="reading-explore"><summary>¿Hay otra palabra que quieras entender?</summary><p>Busca su escritura en otros testimonios y compara las traducciones completas.</p>${example.explore_words?.length?`<div class="entry-actions">${example.explore_words.map(q=>`<button class="secondary" data-explore-word="${esc(q)}" lang="nci">${esc(q)}</button>`).join('')}</div>`:''}<form class="explore-word-form"><label>Palabra del fragmento<input type="text" maxlength="300" required placeholder="Copia aquí la palabra que te interesa"></label><div class="entry-actions"><button class="secondary" type="submit">Buscar ejemplos en el archivo</button><a data-dictionary-lookup>Consultar el diccionario</a></div></form></details>${passageSource(example)}</article>`;}
 function lessonProgress(lesson){
  const edition=state.learning.id+':'+(lesson.practice_version||lesson.version||state.learning.version);
  const old=study.lessons[lesson.id];
- if(old?.edition===edition)return {edition,passed:Array.isArray(old.passed)?old.passed.filter(x=>Number.isInteger(x)&&x>=0&&x<lesson.examples.length):[],step:Number.isInteger(old.step)?Math.max(0,Math.min(old.step,lesson.examples.length-1)):0};
- return {edition,passed:[],step:0};
+ const valid=xs=>Array.isArray(xs)?xs.filter(x=>Number.isInteger(x)&&x>=0&&x<lesson.examples.length):[];
+ if(old?.edition===edition)return {edition,passed:valid(old.passed),comprehension:valid(old.comprehension),step:Number.isInteger(old.step)?Math.max(0,Math.min(old.step,lesson.examples.length-1)):0};
+ return {edition,passed:[],comprehension:[],step:0};
 }
+function exampleComplete(lesson,progress,index){return progress.passed.includes(index)&&(!lesson.examples[index].comprehension||progress.comprehension.includes(index));}
+function completedExamples(lesson){const p=lessonProgress(lesson);return lesson.examples.filter((_,i)=>exampleComplete(lesson,p,i)).length;}
 function pilotNote(){return `<p class="pilot-note">Lectura clásica · Piloto editorial · Revisión lingüística pendiente. Las traducciones proceden del corpus.</p>`;}
 function renderLearn(id){
  const lessons=state.learning.lessons,lesson=lessons.find(l=>l.id===id);
  if(lesson){renderLesson(lesson);return;}
- const complete=lessons.filter(l=>lessonProgress(l).passed.length===l.examples.length).length;
- $('content').innerHTML=`<section class="learn-hero"><div><p class="eyebrow">APRENDER CON LAS FUENTES</p><h1>Leer palabras<br>en su contexto.</h1><p>Empieza a reconocer palabras del náhuatl clásico en fragmentos breves. Compara el original y su traducción, consulta las referencias visuales en sus documentos y guarda lo que quieras recordar.</p><div class="entry-actions"><a class="primary" href="#aprender/${esc(lessons.find(l=>lessonProgress(l).passed.length<l.examples.length)?.id||lessons[0]?.id||'')}">${complete?'Continuar aprendiendo':'Comenzar la primera lectura'}</a><a class="secondary" href="#lexico">Explorar el diccionario</a></div></div><div class="hero-glyph">${sourceImage(state.byId['glyph-xochitl'])}<p>xochitl · flor</p><small>Códice Mendoza, f. 10r · ${link(state.byId['glyph-xochitl']?.url,'Ver fuente')}</small></div></section>${pilotNote()}<div class="section-heading"><h2>Tus primeras lecturas</h2><span class="meta">${complete} de ${lessons.length} recorridos completados</span></div><div class="lesson-grid">${lessons.map((l,i)=>{const p=lessonProgress(l);return `<article class="lesson-card">${sourceImage(state.byId[l.cover_glyph],'lesson-cover')}<div><p class="eyebrow">Lectura ${i+1} · ${l.minutes} min</p><h3>${esc(l.title)}</h3><p>${esc(l.objective)}</p><p class="meta">${l.examples.length} ejemplos · ${p.passed.length} de ${l.examples.length} practicados</p><a class="secondary" href="#aprender/${esc(l.id)}">${p.passed.length===l.examples.length?'Volver a practicar':p.passed.length?'Continuar':'Abrir lectura'}</a></div></article>`;}).join('')}</div><section class="learn-next"><div><h2>De las palabras al documento</h2><p>El diccionario conserva la forma, el significado y el contexto de cada vínculo glífico. Un mismo signo puede tener funciones distintas según el documento.</p></div><div class="entry-actions"><a class="secondary" href="#leer">Leer los ${lessons.reduce((n,l)=>n+l.examples.length,0)} ejemplos</a><a class="secondary" href="#palabras">Mis palabras · ${study.saved.filter(x=>state.byId[x]?.kind==='sense').length}</a></div></section>`;
+ const complete=lessons.filter(l=>completedExamples(l)===l.examples.length).length;
+ $('content').innerHTML=`<section class="learn-hero"><div><p class="eyebrow">APRENDER CON LAS FUENTES</p><h1>Leer palabras<br>en su contexto.</h1><p>Empieza a reconocer palabras del náhuatl clásico en fragmentos breves. Compara el original y su traducción, consulta las referencias visuales en sus documentos y guarda lo que quieras recordar.</p><div class="entry-actions"><a class="primary" href="#aprender/${esc(lessons.find(l=>completedExamples(l)<l.examples.length)?.id||lessons[0]?.id||'')}">${complete?'Continuar aprendiendo':'Comenzar la primera lectura'}</a><a class="secondary" href="#lexico">Explorar el diccionario</a></div></div><div class="hero-glyph">${sourceImage(state.byId['glyph-xochitl'])}<p>xochitl · flor</p><small>Códice Mendoza, f. 10r · ${link(state.byId['glyph-xochitl']?.url,'Ver fuente')}</small></div></section>${pilotNote()}<div class="section-heading"><h2>Tus primeras lecturas</h2><span class="meta">${complete} de ${lessons.length} recorridos completados</span></div><div class="lesson-grid">${lessons.map((l,i)=>{const p=lessonProgress(l),done=completedExamples(l);return `<article class="lesson-card">${sourceImage(state.byId[l.cover_glyph],'lesson-cover')}<div><p class="eyebrow">Lectura ${i+1} · ${l.minutes} min</p><h3>${esc(l.title)}</h3><p>${esc(l.objective)}</p><p class="meta">${l.examples.length} ejemplos · ${done} de ${l.examples.length} practicados</p><a class="secondary" href="#aprender/${esc(l.id)}">${done===l.examples.length?'Volver a practicar':p.passed.length?'Continuar':'Abrir lectura'}</a></div></article>`;}).join('')}</div><section class="learn-next"><div><h2>De las palabras al documento</h2><p>El diccionario conserva la forma, el significado y el contexto de cada vínculo glífico. Un mismo signo puede tener funciones distintas según el documento.</p></div><div class="entry-actions"><a class="secondary" href="#leer">Leer los ${lessons.reduce((n,l)=>n+l.examples.length,0)} ejemplos</a><a class="secondary" href="#palabras">Mis palabras · ${study.saved.filter(x=>state.byId[x]?.kind==='sense').length}</a></div></section>`;
 }
 function renderLesson(lesson){
  let progress=lessonProgress(lesson),step=progress.step,answered=progress.passed.includes(step);
+ const recordProgress=()=>{progress.step=step;study.lessons[lesson.id]=progress;writeStudy();};
  const draw=()=>{
-  const example=lesson.examples[step],exercise=example.exercise;
-  $('content').innerHTML=`<a class="back-link" href="#aprender">← Todas las lecturas</a>${heading('Lectura guiada · '+(step===lesson.examples.length-1?'Ejemplo nuevo':'Náhuatl clásico'),lesson.title,lesson.objective)}<div class="lesson-progress" role="group" aria-label="Ejemplos de la lectura">${lesson.examples.map((e,i)=>`<button class="step-button ${i===step?'current':''}" data-step="${i}" aria-current="${i===step?'step':'false'}">${i+1}${progress.passed.includes(i)?' ✓':''}</button>`).join('')}<span>Ejemplo ${step+1} de ${lesson.examples.length}${step===lesson.examples.length-1?' · prueba lo que reconoces':''}</span></div>${pilotNote()}${lesson.reading_tips?.length?`<aside class="reading-tips"><h2>Claves para esta lectura</h2><ul>${lesson.reading_tips.map(t=>`<li>${esc(t)}</li>`).join('')}</ul></aside>`:''}<div class="lesson-layout"><section>${readingCard(example,step,true,exercise.kind==='cloze')}<div class="exercise-card"><p class="eyebrow">${exercise.kind==='cloze'?'Recuperar la forma de la fuente':'Comprender el fragmento'}</p><h2>${esc(exercise.question)}</h2><div class="answer-options">${exercise.options.map((o,i)=>`<button class="answer-option" data-answer="${i}" ${answered?'disabled':''}>${esc(o)}</button>`).join('')}</div><p class="exercise-feedback" role="status">${answered?'Respuesta correcta. '+esc(exercise.explanation):''}</p><div class="entry-actions"><button class="primary" id="next-example" ${answered?'':'disabled'}>${step===lesson.examples.length-1?'Terminar lectura':'Siguiente ejemplo →'}</button><button class="link-button" id="retry-example">Practicar este ejemplo otra vez</button></div></div></section><aside class="lesson-words"><h3>Palabras de esta lectura</h3>${lesson.sense_ids.map(id=>`<div class="lesson-word">${sourceImage(representativeGlyph(id),'small-glyph')}<div><a href="#lexico/${esc(id)}">${esc(headword(id))}</a><p>${esc(state.byId[id]?.label)}</p>${saveWordButton(id)}</div></div>`).join('')}<p class="meta">Glifos e imágenes de las fuentes. Abre cada ficha para ver el contexto y el folio.</p></aside></div>`;
+  const example=lesson.examples[step],exercise=example.exercise,question=example.comprehension;
+  const understood=progress.comprehension.includes(step);
+  const comprehension=question?`<section class="exercise-card comprehension-card"><p class="eyebrow">Comprender el contexto</p><h2>${esc(question.question)}</h2><p class="hint">Puedes mostrar la traducción del corpus para comparar.</p><div class="answer-options">${question.options.map((o,i)=>`<button class="answer-option" data-comprehension="${i}" ${understood?'disabled':''}>${esc(o)}</button>`).join('')}</div><p class="comprehension-feedback" role="status">${understood?'Respuesta correcta. '+esc(question.explanation):''}</p></section>`:'';
+  $('content').innerHTML=`<a class="back-link" href="#aprender">← Todas las lecturas</a>${heading('Lectura guiada · Náhuatl clásico',lesson.title,lesson.objective)}<div class="lesson-progress" role="group" aria-label="Ejemplos de la lectura">${lesson.examples.map((e,i)=>`<button class="step-button ${i===step?'current':''}" data-step="${i}" aria-current="${i===step?'step':'false'}">${i+1}${exampleComplete(lesson,progress,i)?' ✓':progress.passed.includes(i)?' ·':''}</button>`).join('')}<span>Ejemplo ${step+1} de ${lesson.examples.length}${step===lesson.examples.length-1?' · prueba lo que reconoces':''}</span></div>${pilotNote()}${lesson.reading_tips?.length?`<aside class="reading-tips"><h2>Claves para esta lectura</h2><ul>${lesson.reading_tips.map(t=>`<li>${esc(t)}</li>`).join('')}</ul></aside>`:''}<div class="lesson-layout"><section>${readingCard(example,step,true,exercise.kind==='cloze')}<div class="exercise-card"><p class="eyebrow">${exercise.kind==='cloze'?'Recuperar la forma de la fuente':'Comprender el fragmento'}</p><h2>${esc(exercise.question)}</h2><div class="answer-options">${exercise.options.map((o,i)=>`<button class="answer-option" data-answer="${i}" ${answered?'disabled':''}>${esc(o)}</button>`).join('')}</div><p class="exercise-feedback" role="status">${answered?'Respuesta correcta. '+esc(exercise.explanation):''}</p>${question&&answered&&!understood?'<p class="hint">Tu reconocimiento ya está guardado. Falta responder la pregunta de contexto.</p>':''}</div>${comprehension}<div class="entry-actions lesson-next"><button class="primary" id="next-example" ${exampleComplete(lesson,progress,step)?'':'disabled'}>${step===lesson.examples.length-1?'Terminar lectura':'Siguiente ejemplo →'}</button><button class="link-button" id="retry-example">Practicar este ejemplo otra vez</button></div></section><aside class="lesson-words"><h3>Palabras de esta lectura</h3>${lesson.sense_ids.map(id=>`<div class="lesson-word">${sourceImage(representativeGlyph(id),'small-glyph')}<div><a href="#lexico/${esc(id)}">${esc(headword(id))}</a><p>${esc(state.byId[id]?.label)}</p>${saveWordButton(id)}</div></div>`).join('')}<p class="meta">Glifos e imágenes de las fuentes. Abre cada ficha para ver el contexto y el folio.</p></aside></div>`;
   bindReading($('content').querySelector('.reading-card'),example);bindSaved($('content'));
-  document.querySelectorAll('[data-step]').forEach(b=>b.onclick=()=>{step=Number(b.dataset.step);answered=progress.passed.includes(step);progress.step=step;study.lessons[lesson.id]=progress;writeStudy();draw();});
+  document.querySelectorAll('[data-step]').forEach(b=>b.onclick=()=>{step=Number(b.dataset.step);answered=progress.passed.includes(step);recordProgress();draw();});
   document.querySelectorAll('[data-answer]').forEach(b=>b.onclick=()=>{
    const correct=Number(b.dataset.answer)===exercise.answer;
    b.classList.add(correct?'correct':'incorrect');
-   document.querySelector('.exercise-feedback').textContent=(correct?'Respuesta correcta. ':'Revisa el fragmento. ')+exercise.explanation;
-   if(correct){answered=true;if(!progress.passed.includes(step))progress.passed.push(step);progress.step=step;study.lessons[lesson.id]=progress;writeStudy();document.querySelectorAll('[data-answer]').forEach(x=>x.disabled=true);$('next-example').disabled=false;}
+   document.querySelector('.exercise-feedback').textContent=correct?'Respuesta correcta. '+exercise.explanation:'Vuelve al fragmento y compara las opciones. Puedes abrir la ayuda de la palabra o mostrar la traducción.';
+   if(correct){answered=true;if(!progress.passed.includes(step))progress.passed.push(step);recordProgress();document.querySelectorAll('[data-answer]').forEach(x=>x.disabled=true);$('next-example').disabled=!exampleComplete(lesson,progress,step);}
   });
-  $('retry-example').onclick=()=>{progress.passed=progress.passed.filter(x=>x!==step);study.lessons[lesson.id]=progress;answered=false;writeStudy();draw();};
+  document.querySelectorAll('[data-comprehension]').forEach(b=>b.onclick=()=>{
+   const correct=Number(b.dataset.comprehension)===question.answer;
+   b.classList.add(correct?'correct':'incorrect');
+   document.querySelector('.comprehension-feedback').textContent=correct?'Respuesta correcta. '+question.explanation:'Revisa lo que cuenta este fragmento en su traducción. La imagen es una referencia de la palabra; no responde por el pasaje.';
+   if(correct){if(!progress.comprehension.includes(step))progress.comprehension.push(step);recordProgress();document.querySelectorAll('[data-comprehension]').forEach(x=>x.disabled=true);$('next-example').disabled=!exampleComplete(lesson,progress,step);}
+  });
+  $('retry-example').onclick=()=>{progress.passed=progress.passed.filter(x=>x!==step);progress.comprehension=progress.comprehension.filter(x=>x!==step);answered=false;recordProgress();draw();};
   $('next-example').onclick=()=>{
-   if(!answered)return;
-   if(step<lesson.examples.length-1){step++;progress.step=step;answered=progress.passed.includes(step);study.lessons[lesson.id]=progress;writeStudy();draw();$('content').scrollIntoView({block:'start'});}
-   else if(progress.passed.length<lesson.examples.length){step=lesson.examples.findIndex((_,i)=>!progress.passed.includes(i));progress.step=step;answered=false;draw();}
+   if(!exampleComplete(lesson,progress,step))return;
+   if(step<lesson.examples.length-1){step++;answered=progress.passed.includes(step);recordProgress();draw();$('content').scrollIntoView({block:'start'});}
+   else if(lesson.examples.some((_,i)=>!exampleComplete(lesson,progress,i))){step=lesson.examples.findIndex((_,i)=>!exampleComplete(lesson,progress,i));answered=progress.passed.includes(step);recordProgress();draw();}
    else renderLessonComplete(lesson);
   };
  };
@@ -130,6 +177,7 @@ function dictionaryEntryHTML(sense){
  return `<article class="dictionary-entry"><a class="back-link" href="#lexico">← Diccionario</a><div class="dictionary-entry-head"><div><p class="eyebrow">${esc(sense.pos==='noun'?'Sustantivo':sense.pos==='verb'?'Verbo':'Otra categoría')} · Forma de referencia</p><h1 lang="nci">${esc(headword(sense.id))}</h1><h2>${esc(sense.label)}</h2><p>${esc(sense.definition)}</p></div>${saveWordButton(sense.id)}</div>${sense.import_status==='automatic_transcription'?'<p class="pilot-note">Entrada histórica extraída automáticamente de Molina/GDN. Se conserva su traducción original, sin modernizar ni segmentar acepciones. Cotejo primario y revisión lingüística pendientes.</p>':''}<section><h2>Palabra y referencia visual</h2>${glyphs.length?glyphs.map(g=>`<article class="glyph-evidence"><div>${sourceImage(g)||'<p class="empty">Imagen pendiente de incorporar. La ficha de la fuente sigue disponible.</p>'}</div><div>${glyphContext(g)}<details><summary>Evidencia de la asociación</summary>${badge(g)}${sourceCitations(g)}<p class="meta">${esc(g.notes)}</p></details></div></article>`).join(''):'<p class="empty">Esta acepción aún no tiene un vínculo glífico específico documentado en el índice. Puedes aportar una referencia con fuente y folio.</p>'}</section><section class="dictionary-forms"><h2>Formas y fuentes léxicas</h2>${forms.map(f=>`<details><summary><strong lang="nci">${esc(f.written)}</strong> · ${esc(f.variant_label||f.variant)} · ${esc(periods[f.period])}</summary><p class="meta">${esc(f.orthography)}</p>${f.catalog_normalized?`<p class="meta">Grafía normalizada por GDN, separada de la paleografía: <strong lang="nci">${esc(f.catalog_normalized)}</strong></p>`:''}${badge(f)}${sourceCitations(f)}${link(f.url,'Consultar entrada léxica')}<p class="meta">${esc(f.notes)}</p></details>`).join('')||'<p class="empty">Sin formas para estos filtros.</p>'}</section><section><h2>Ejemplos para leer</h2>${state.learning.lessons.filter(l=>l.examples.some(e=>e.annotations.some(a=>a.sense_id===sense.id))).map(l=>`<p><a href="#leer/${esc(l.id)}">${esc(l.title)} →</a></p>`).join('')||'<p class="meta">Aún no hay una lectura guiada para esta entrada.</p>'}${texts.map(t=>`<p><a href="#textos/${esc(t.id)}">${esc(t.label)}</a></p>`).join('')}<a class="secondary" href="#investigar/${encodeURIComponent(headword(sense.id))}">Buscar esta forma en el corpus</a></section><div class="entry-actions"><a class="secondary" href="#extraer/${esc(sense.id)}">Aportar forma o evidencia</a><button id="export-entry" class="link-button">Descargar ficha con fuentes</button></div><p class="content-note">${esc(sense.id)} · Las asociaciones conservan la época, la acepción y el contexto de la fuente.</p></article>`;
 }
 function renderDictionary(id){
+ if(id?.startsWith('buscar/'))state.filter.q=decodeURIComponent(id.slice(7));
  const sense=state.byId[id];
  if(sense?.kind==='sense'){
   $('content').innerHTML=dictionaryEntryHTML(sense);bindSaved($('content'));$('content').scrollIntoView({block:'start'});
@@ -144,19 +192,21 @@ function renderDictionary(id){
   const defaultView=!state.filter.q.trim()&&!state.filter.period&&!state.filter.variant&&!$('dictionary-origin').value&&!$('with-glyph').checked;
   const priority=new Map((state.dictionaryFeatured||[]).map((id,i)=>[id,i]));
   const featured=defaultView?rows.filter(s=>priority.has(s.id)).sort((a,b)=>priority.get(a.id)-priority.get(b.id)):[];
-  const alphabetic=rows.filter(s=>!featured.some(f=>f.id===s.id)).sort(compare);
+  const query=norm(state.filter.q.trim());
+  const exact=s=>query&&[s.label,...(s.aliases||[]),...formsFor(s.id).flatMap(f=>[f.written,f.catalog_normalized||''])].some(v=>norm(v).trim()===query);
+  const alphabetic=rows.filter(s=>!featured.some(f=>f.id===s.id)).sort((a,b)=>Number(exact(b))-Number(exact(a))||compare(a,b));
   const ordered=[...featured,...alphabetic],firstSize=featured.length||48;
   const offset=page===0?0:firstSize+(page-1)*48,limit=page===0?firstSize:48;
   $('dictionary-count').textContent=`${rows.length} acepciones / entradas · ${rows.filter(s=>glyphsFor(s.id).some(g=>g.image)).length} con imagen de fuente`;
-  $('dictionary-order').textContent=featured.length&&page===0?'Palabras representativas · selección inicial. Las siguientes páginas siguen el orden alfabético del náhuatl.':'Orden alfabético por palabra en náhuatl.';
-  $('dictionary-grid').innerHTML=ordered.slice(offset,offset+limit).map(s=>wordCard(s,true)).join('')||'<p class="empty">No hay coincidencias. Prueba otra palabra o quita un filtro.</p>';
+  $('dictionary-order').textContent=featured.length&&page===0?'Palabras representativas · selección inicial. Las siguientes páginas siguen el orden alfabético del náhuatl.':query?'Coincidencias exactas primero; las demás siguen el orden alfabético del náhuatl.':'Orden alfabético por palabra en náhuatl.';
+  $('dictionary-grid').innerHTML=ordered.slice(offset,offset+limit).map(s=>wordCard(s,true)).join('')||`<div class="empty"><p>No hay coincidencias. Prueba otra palabra o quita un filtro.</p>${query?`<p>El archivo puede tener testimonios de esta forma aunque falte su entrada en el diccionario.</p><a class="secondary" data-archive-fallback href="#investigar/${encodeURIComponent(state.filter.q.trim())}">Buscar «${esc(state.filter.q.trim())}» en el archivo →</a>`:''}</div>`;
   $('dictionary-range').textContent=rows.length?`${offset+1}–${Math.min(offset+limit,rows.length)} de ${rows.length}`:'0';
   $('dictionary-previous').disabled=page===0;$('dictionary-next').disabled=offset+limit>=rows.length;bindSaved($('dictionary-grid'));
  };bindToolbar(draw);$('with-glyph').onchange=()=>draw();$('dictionary-origin').onchange=()=>draw();$('dictionary-previous').onclick=()=>{page--;draw(false);};$('dictionary-next').onclick=()=>{page++;draw(false);};draw();
 }
 function renderSaved(){
  const words=study.saved.map(id=>state.byId[id]).filter(r=>r?.kind==='sense'),now=Date.now(),due=words.filter(r=>!(Number(study.reviews[r.id]?.due)>now));
- $('content').innerHTML=heading('Tu cuaderno','Mis palabras','Guarda palabras desde el diccionario o mientras lees. El repaso y el progreso se conservan en este navegador.',`${words.length} guardadas`)+`<div class="saved-toolbar"><p>${due.length} para repasar hoy</p><button class="primary" id="start-review" ${due.length?'':'disabled'}>Repasar pendientes</button>${words.length?'<button class="secondary" id="review-all">Practicar todas</button>':''}</div><div id="word-review"></div><div class="saved-grid">${words.map(s=>wordCard(s,true)).join('')||'<div class="empty"><strong>Empieza con una palabra.</strong><p>Abre una ficha y pulsa Guardar palabra.</p><a href="#lexico">Explorar el diccionario →</a></div>'}</div><p class="content-note">${studyStorageAvailable?'Sin cuenta: los datos son locales a este navegador.':'El navegador no permite guardar; el progreso dura esta sesión.'}</p>`;
+ $('content').innerHTML=heading('Tu cuaderno','Mis palabras','Guarda palabras desde el diccionario o mientras lees. El repaso y el progreso se conservan en este navegador.',`${words.length} guardadas`)+`<div class="saved-toolbar"><p>${due.length} para repasar hoy</p><button class="primary" id="start-review" ${due.length?'':'disabled'}>Repasar pendientes</button>${words.length?'<button class="secondary" id="review-all">Practicar todas</button>':''}</div><div id="word-review"></div><div class="saved-grid">${words.map(s=>`<div>${wordCard(s,true)}${savedPassageHTML(s.id)}</div>`).join('')||'<div class="empty"><strong>Empieza con una palabra.</strong><p>Abre una ficha y pulsa Guardar palabra.</p><a href="#lexico">Explorar el diccionario →</a></div>'}</div><p class="content-note">${studyStorageAvailable?'Sin cuenta: los datos son locales a este navegador.':'El navegador no permite guardar; el progreso dura esta sesión.'}</p>`;
  $('start-review').onclick=()=>reviewWords(due);if($('review-all'))$('review-all').onclick=()=>reviewWords(words);
  document.querySelectorAll('[data-save-word]').forEach(b=>b.onclick=()=>{toggleSaved(b.dataset.saveWord);renderSaved();});
 }
@@ -165,7 +215,7 @@ function reviewWords(words){
  const draw=()=>{
   if(index>=words.length){$('word-review').innerHTML='<section class="review-card"><h2>Repaso terminado</h2><p>Las palabras marcadas para seguir practicando continúan pendientes.</p><button class="secondary" id="finish-review">Volver a mi cuaderno</button></section>';$('finish-review').onclick=renderSaved;return;}
   const s=words[index],g=representativeGlyph(s.id);
-  $('word-review').innerHTML=`<section class="review-card"><p class="eyebrow">Repaso ${index+1} de ${words.length}</p>${g?sourceImage(g,'review-glyph'):''}<h2>${esc(s.label)}</h2><p>¿Recuerdas la forma de referencia de esta ficha?</p><button class="secondary" id="show-word">Mostrar palabra</button><div id="review-answer" hidden><p class="review-word" lang="nci">${esc(headword(s.id))}</p><p class="meta">${esc(g?.context||s.definition)}</p><p class="meta">${esc(g?.evidence?.[0]?.locator||'Consulta la fuente léxica en la ficha.')}</p><a href="#lexico/${esc(s.id)}">Abrir palabra y fuentes</a><div class="entry-actions"><button class="secondary" id="again-word">Seguir practicando</button><button class="primary" id="known-word">La recordé</button></div></div></section>`;
+  $('word-review').innerHTML=`<section class="review-card"><p class="eyebrow">Repaso ${index+1} de ${words.length}</p>${g?sourceImage(g,'review-glyph'):''}<h2>${esc(s.label)}</h2>${savedPassageHTML(s.id,true)}<p>¿Recuerdas la forma de referencia de esta ficha?</p><button class="secondary" id="show-word">Mostrar palabra</button><div id="review-answer" hidden><p class="review-word" lang="nci">${esc(headword(s.id))}</p>${savedPassage(s.id)?`<p class="review-translation">${esc(savedPassage(s.id).example.passage.es)}</p>`:''}<p class="meta">${esc(g?.context||s.definition)}</p><p class="meta">${esc(g?.evidence?.[0]?.locator||'Consulta la fuente léxica en la ficha.')}</p><a href="#lexico/${esc(s.id)}">Abrir palabra y fuentes</a><div class="entry-actions"><button class="secondary" id="again-word">Seguir practicando</button><button class="primary" id="known-word">La recordé</button></div></div></section>`;
   $('show-word').onclick=()=>{$('review-answer').hidden=false;$('show-word').hidden=true;};
   $('again-word').onclick=()=>{study.reviews[s.id]={streak:0,due:0};writeStudy();index++;draw();};
   $('known-word').onclick=()=>{const old=Number(study.reviews[s.id]?.streak)||0,streak=Math.min(Math.max(old,0)+1,4),days=[1,3,7,14][streak-1];study.reviews[s.id]={streak,due:Date.now()+days*86400000};writeStudy();index++;draw();};

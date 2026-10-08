@@ -43,6 +43,11 @@ def build(config,output,base=None,apply=False):
             example=next(e for e in lesson['examples'] if e['archive_id']==edit['archive_id'])
             a=next(a for a in example['annotations'] if a['quote']==edit['quote'])
             a.update(relation=edit['relation'],note=edit['note'])
+        for edit in update.get('example_updates',[]):
+            example=next(e for e in lesson['examples'] if e['archive_id']==edit['archive_id'])
+            if set(edit)-{'archive_id','comprehension','explore_words'}:raise ValueError('Solo puedes añadir comprensión o palabras para explorar.')
+            for key in ('comprehension','explore_words'):
+                if key in edit:example[key]=copy.deepcopy(edit[key])
         changes.append(lesson['id'])
     for recipe in recipes['lessons']:
         if recipe['id'] in existing or not re.fullmatch(r'[a-z0-9][a-z0-9-]{1,79}',recipe['id']):raise ValueError('La receta solo puede añadir IDs de lectura nuevos y únicos.')
@@ -58,6 +63,8 @@ def build(config,output,base=None,apply=False):
             if len(set(map(normalize,[blank,*distractors])))!=3:raise ValueError('Las opciones necesitan tres formas distintas.')
             answer=index%3;options=list(distractors);options.insert(answer,blank)
             example=dict(archive_id=rid,source_hash=hashlib.sha256((row['nah']+'\0'+row['es']).encode()).hexdigest(),context=selection['context'],annotations=copy.deepcopy(selection['annotations']),exercise=dict(kind='cloze',question='Recupera la forma que aparece en el fragmento original.',options=options,answer=answer,explanation=f'El registro escribe «{blank}». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.',blank=blank))
+            for key in ('comprehension','explore_words'):
+                if key in selection:example[key]=copy.deepcopy(selection[key])
             lesson['examples'].append(example);used.add(rid)
         data['lessons'].append(lesson);existing[lesson['id']]=lesson
     with tempfile.TemporaryDirectory() as directory:

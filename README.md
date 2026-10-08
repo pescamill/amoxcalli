@@ -24,10 +24,10 @@ Una pequeña expedición: abre **Flores y cantos**, oculta el español y pulsa u
 
 | Espacio | Uso actual |
 | --- | --- |
-| **Aprender** | Recorrer seis lecturas con ayuda contextual, traducción ocultable y ejercicios basados en la grafía del pasaje. |
+| **Aprender** | Recorrer seis lecturas con ayuda contextual, traducción ocultable y ejercicios basados en la grafía del pasaje. Aves añade cuatro preguntas sobre lo que cuenta la traducción. |
 | **Leer** | Explorar los 24 fragmentos seleccionados, sus notas y procedencia. |
-| **Diccionario** | Consultar palabras, acepciones, formas históricas y conexiones visuales documentadas. La primera página conserva 24 entradas representativas; las demás siguen el orden alfabético náhuatl. |
-| **Mis palabras** | Crear un cuaderno propio y repasar con intervalos. El progreso se guarda en ese navegador, sin cuenta. |
+| **Diccionario** | Consultar palabras, acepciones, formas históricas y conexiones visuales documentadas. La primera página conserva 24 entradas representativas; las demás siguen el orden alfabético náhuatl. Las búsquedas priorizan la coincidencia exacta y ofrecen continuar en el archivo cuando falta una entrada. |
+| **Mis palabras** | Crear un cuaderno propio y repasar con intervalos. Guarda también el fragmento de origen para volver a él durante el repaso. El progreso se guarda en ese navegador, sin cuenta. |
 | **Archivo y herramientas** | Buscar en español o náhuatl, filtrar por variante, obra y época, consultar fuentes y preparar exportaciones con notas de derechos. |
 | **Laboratorio** | Comparar búsqueda de ejemplos, reglas léxicas limitadas y generación experimental; ver los pares español/náhuatl utilizados por el adaptador y los informes de entrenamiento. |
 | **Aportar · Voces** | Proponer texto, voz, traducciones, formas y conexiones; indicar variante y permisos, revisar o retirar aportaciones. |
@@ -66,7 +66,7 @@ python3 -m nahuatl_local.editorial_release --help
 python3 -m nahuatl_local.lesson_builder --help
 ```
 
-El lote `batch-007-v9` está incorporado. `batch-009-v11` quedó preparado y verificado, pendiente de publicación; sus páginas de consulta deben estar disponibles en la caché local para reproducir el cotejo. El lote anterior `batch-008-v10` quedó desactualizado tras ampliar las lecturas.
+El lote `batch-007-v9` está incorporado. `batch-009-v11` quedó preparado y verificado, sin publicar; la ampliación de comprensión del 7 de octubre cambió el hash de las lecturas. Para continuar hay que preparar un lote con ID nuevo y la caché local de fuentes. El lote anterior `batch-008-v10` quedó desactualizado tras ampliar las lecturas.
 
 Lo que más puede hacer crecer el proyecto ahora es añadir buenos contextos y corregir malas conexiones: ampliar las lecturas con criterios repetibles, resolver ambigüedades con evidencia primaria, completar referencias visuales donde exista documentación y probar si una persona aprende con los ejercicios. La [cola de trabajo](docs/LEARNING_ITERATION_PLAN.md) y el [registro de progreso](docs/PROGRESO_INTERNO.md) conservan esas decisiones.
 
@@ -98,6 +98,14 @@ Python, SQLite y HTML/CSS/JavaScript; sin una API de inferencia externa. El mode
 
 ```bash
 python3 -m unittest discover -s tests
+```
+
+Para las comprobaciones de interfaz (Node.js, solo desarrollo):
+
+```bash
+npm ci --ignore-scripts
+npm run test:ui
+npm run test:offline
 ```
 
 Algunas comprobaciones de entrenamiento y cotejo editorial requieren dependencias, datos preparados o páginas cacheadas que no forman parte de una instalación mínima. Sus requisitos aparecen en las guías correspondientes.

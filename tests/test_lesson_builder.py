@@ -58,5 +58,18 @@ class LessonBuilderTests(unittest.TestCase):
         self.assertEqual(json.loads(before)['lessons'][0]['version'],2)
         self.assertEqual(json.loads(before)['lessons'][1]['practice_version'],1)
 
+    def test_context_recipe_adds_source_backed_questions_without_replacing_old_keys(self):
+        base=ROOT/'reports/learning-before-reading-context-2026-10-07/learning-v1.json'
+        config=ROOT/'configs/reading-context-2026-10-07.json'
+        result=build(config,self.output,base)
+        self.assertEqual(result['added_examples'],0)
+        self.assertEqual(result['clarified_lessons'],['aves'])
+        data=json.loads(self.output.read_text())['learning']
+        self.assertEqual(data,json.loads((ROOT/'corpus/learning-v1.json').read_text()))
+        recipes=json.loads(config.read_text())
+        recipes['lesson_updates'][0]['example_updates'][0]['exercise']={}
+        altered=self.root/'altered.json';altered.write_bytes(encoded(recipes))
+        with self.assertRaises(ValueError):build(altered,self.root/'bad.json',base)
+
 
 if __name__=='__main__':unittest.main()

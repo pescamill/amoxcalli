@@ -107,6 +107,27 @@ class LearningTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'parte interna'):
             self.load_changed(lambda d:d['lessons'][0]['examples'][2]['annotations'][0].update(quote='xochitl',sense_id='sense-xochitl'))
 
+    def test_context_questions_quote_the_original_translation_and_keep_recognition(self):
+        before=json.loads((ROOT/'reports/learning-before-reading-context-2026-10-07/learning-v1.json').read_text())
+        current=Learning(self.archive).data
+        for old,new in zip(before['lessons'],current['lessons']):
+            self.assertEqual([(e['archive_id'],e['source_hash'],e['exercise']) for e in old['examples']],
+                             [(e['archive_id'],e['source_hash'],e['exercise']) for e in new['examples']])
+        aves=current['lessons'][-1]
+        self.assertEqual((aves['version'],aves['practice_version']),(2,1))
+        for example in aves['examples']:
+            question=example['comprehension'];row=self.archive.get(example['archive_id'])
+            self.assertIn(question['options'][question['answer']],row['es'])
+            self.assertTrue(all(word in row['nah'] for word in example['explore_words']))
+        changes=[lambda e:e['comprehension'].update(answer=True),
+                 lambda e:e['comprehension'].update(options=['Una traducción inventada.','Otra invención.']),
+                 lambda e:e.update(explore_words=['palabra ausente']),
+                 lambda e:e.update(explore_words=[{}]),
+                 lambda e:e.update(comprehension=[])]
+        for change in changes:
+            with self.subTest(change=change),self.assertRaises(ValueError):
+                self.load_changed(lambda d:change(d['lessons'][-1]['examples'][0]))
+
     def test_flor_update_is_append_only_preserves_passages_and_other_lessons(self):
         original=json.loads((ROOT/'reports/learning-audit-before-flor-v2/learning-v1.json').read_text())
         current=Learning(self.archive).data

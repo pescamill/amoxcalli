@@ -55,3 +55,8 @@ La interfaz cuenta los ejemplos de cada lectura y del lector completo dinámicam
 Se añadieron agua/tierra, flores/cantos y aves: 3 recorridos / 12 pasajes. La app reúne 6 recorridos / 24 pasajes de 6 obras. Las 12 selecciones y claves previas se conservaron, junto con la práctica guardada. [Informe](../reports/LECTURAS_002_2026-09-30.md).
 
 Son lecturas editoriales con revisión primaria y lingüística pendiente. El mecanismo valida citas y referencias; no acredita interpretación semántica, análisis gramatical ni eficacia con principiantes. Los permisos de entrenamiento y las reservas de evaluación siguen separados.
+
+
+## Comprensión y palabras para explorar
+
+Las recetas pueden incluir `comprehension` (`kind=meaning`, pregunta, opciones, índice de respuesta y explicación) y `explore_words`. La respuesta correcta debe ser una cita literal de la traducción española del registro; las formas para explorar deben aparecer en su texto náhuatl. Esto comprueba procedencia, no calidad pedagógica o lingüística. Para añadirlos a un ejemplo existente, usar `lesson_updates[].example_updates[]` con `archive_id`; no se reemplazan ni el pasaje ni la clave de reconocimiento. La receta [reading-context-2026-10-07](../configs/reading-context-2026-10-07.json) muestra cuatro ejemplos de Aves. Se conserva `practice_version=1`; la interfaz registra la comprensión aparte y mantiene el reconocimiento previo.

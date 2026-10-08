@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "review_status": "editorial_draft",
+  "release_id": "reading-context-2026-10-07",
+  "lesson_updates": [
+    {
+      "id": "aves",
+      "example_updates": [
+        {
+          "archive_id": "axolotl-14546",
+          "explore_words": [
+            "chachalaca",
+            "tlatohua"
+          ],
+          "comprehension": {
+            "kind": "meaning",
+            "question": "Según la traducción del poema, ¿qué hace el ave?",
+            "options": [
+              "Por allí anda el ave, parlotea y canta",
+              "Lleva carrizos al palacio.",
+              "Construye una casa."
+            ],
+            "answer": 0,
+            "explanation": "La traducción del corpus dice «Por allí anda el ave, parlotea y canta». La respuesta corresponde a este fragmento, no a una glosa aislada."
+          }
+        },
+        {
+          "archive_id": "axolotl-14253",
+          "explore_words": [
+            "michi",
+            "cuiatl"
+          ],
+          "comprehension": {
+            "kind": "meaning",
+            "question": "Según este relato, ¿qué llevaban tenochcas y tlatelolcas?",
+            "options": [
+              "Flores y collares.",
+              "aves, pescados y ranas",
+              "Escudos y dardos."
+            ],
+            "answer": 1,
+            "explanation": "La traducción del corpus dice «aves, pescados y ranas». La respuesta corresponde a este fragmento, no a una glosa aislada."
+          }
+        },
+        {
+          "archive_id": "axolotl-08856",
+          "explore_words": [
+            "michi",
+            "tletlalito"
+          ],
+          "comprehension": {
+            "kind": "meaning",
+            "question": "¿A qué lugar llevaban lo que enumera el fragmento?",
+            "options": [
+              "En la casa del dios.",
+              "En la región de los magueyes.",
+              "en Azcapotzalco"
+            ],
+            "answer": 2,
+            "explanation": "La traducción del corpus dice «en Azcapotzalco». La respuesta corresponde a este fragmento, no a una glosa aislada."
+          }
+        },
+        {
+          "archive_id": "axolotl-00751",
+          "explore_words": [
+            "cohuatl"
+          ],
+          "comprehension": {
+            "kind": "meaning",
+            "question": "Según la traducción, ¿con qué cazaban?",
+            "options": [
+              "con sus flechas y sus arcos",
+              "Con escudos y dardos.",
+              "Con redes y canoas."
+            ],
+            "answer": 0,
+            "explanation": "La traducción del corpus dice «con sus flechas y sus arcos». La respuesta corresponde a este fragmento, no a una glosa aislada."
+          }
+        }
+      ]
+    }
+  ],
+  "lessons": []
+}
