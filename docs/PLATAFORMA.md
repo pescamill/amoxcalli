@@ -1,10 +1,10 @@
-# Scriptorium: aprender, consultar y aportar
+# Amoxcalli: aprender, consultar y aportar
 
 Actualización: 2026-09-29. Español primero. Python y SQLite; no necesita APIs, PyTorch ni un LLM para consultar o aportar.
 
 ## Una plataforma, un corpus
 
-Voces deja de ser una app desconectada. La entrada principal de Scriptorium reúne Aprender, Leer, Diccionario, Mis palabras y Laboratorio. Archivo completo, fichas textuales y fuentes están en «Archivo y herramientas». La escritura, grabación y revisión comunitaria de Voces viven en `/aportar`. Comparten servidor, cookies de sesión y `data/community/voces.sqlite3`.
+Voces deja de ser una app desconectada. La entrada principal de Amoxcalli reúne Aprender, Leer, Diccionario, Mis palabras y Laboratorio. Archivo completo, fichas textuales y fuentes están en «Archivo y herramientas». La escritura, grabación y revisión comunitaria de Voces viven en `/aportar`. Comparten servidor, cookies de sesión y `data/community/voces.sqlite3`.
 
 La unidad léxica es una **acepción**, no una traducción universal. «Árbol» y «madera» tienen IDs distintos; «luna» y «mes» también. Cada acepción puede tener numerosas formas por variante, localidad, época y convención de escritura. `quauitl` y `cuahuitl` muestran una relación ortográfica heredada; no se hacen pasar por dos dialectos modernos.
 
@@ -37,7 +37,7 @@ python3 -m nahuatl_local.platform --db /ruta/mi-corpus.sqlite3 serve
 
 Antes de actualizar una instalación con datos, detén el servidor y copia `data/community/` a un respaldo privado. Conserva tu carpeta `data`; no está incluida en el ZIP. La migración crea únicamente tablas `corpus_*`, no sobrescribe las tablas de Voces ni modifica pesos. La semilla se importa una vez; los registros tienen ID y versión. Los datos de pruebas están en directorios temporales y no se distribuyen.
 
-Se recuperó la fuente de Scriptorium en el commit `3e8a7a67f995f92858519c6cffe15e74d0e7c794`. Se portaron sus 17 registros y sus reglas limitadas de composición. `corpus/scriptorium-legacy.json` conserva la procedencia; `corpus/seed.json` es el corpus normalizado. No se trasladó la dependencia del cliente OpenAI. El alojamiento anterior permanece en su versión previa; este paquete es la versión local integrada.
+Se recuperó la fuente de Amoxcalli en el commit `3e8a7a67f995f92858519c6cffe15e74d0e7c794`. Se portaron sus 17 registros y sus reglas limitadas de composición. `corpus/scriptorium-legacy.json` conserva la procedencia; `corpus/seed.json` es el corpus normalizado. No se trasladó la dependencia del cliente OpenAI. El alojamiento anterior permanece en su versión previa; este paquete es la versión local integrada.
 
 ## Catálogo instalado (semilla y migraciones)
 
@@ -146,7 +146,7 @@ Los registros exportados conservan grupo de fuente y, para aportaciones nuevas, 
 
 Actualización: el modelo se activa automáticamente cuando sus dependencias, base y adaptador están disponibles. `scripts/iniciar.sh` prepara todo. La búsqueda principal consulta el archivo completo, no sólo el léxico editorial. Consulta `ESTADO_MODELO.md` para los resultados reales de esta integración.
 
-El laboratorio porta las reglas limitadas de Scriptorium: palabra aislada, «veo + un objeto singular» y coordinación de dos sustantivos. Toda oración nueva se marca como propuesta. No cubre negación, otros tiempos o número por inferencia.
+El laboratorio porta las reglas limitadas de Amoxcalli: palabra aislada, «veo + un objeto singular» y coordinación de dos sustantivos. Toda oración nueva se marca como propuesta. No cubre negación, otros tiempos o número por inferencia.
 
 Para habilitar el modelo existente, instala y descarga primero sus dependencias como indica el README y arranca:
 
@@ -168,7 +168,7 @@ Para reuniones entre varias personas, queda pendiente un despliegue endurecido c
 
 El lote `corpus/glyph-links-v2.json` añade cuatro referencias consultadas en VLA (árbol, sol, luna y mes) y la fuente Códice Osuna. Se aplica al primer arranque de esta versión, también sobre bases existentes. Conserva los cinco vínculos anteriores y cualquier edición local con el mismo identificador; repetir el arranque no duplica registros. Total glífico anterior: 57 entidades, incluidas 9 referencias glíficas. No se ha importado el catálogo completo.
 
-El lote `corpus/glyph-images-v4.json` enlaza (no copia) la imagen de cuatro glifos heredados de Scriptorium —flor, agua, casa y árbol florido— desde sus fichas del Visual Lexicon of Aztec Hieroglyphs, con atribución visible a Bodleian Libraries, University of Oxford (MS. Arch. Selden. A. 1) y licencia CC BY-NC-SA 3.0 UK. La webapp las muestra mediante enlace directo (hotlink) con crédito y enlace de retorno; las fichas sin imagen mantienen su referencia; si falla un enlace externo, la interfaz conserva el acceso a la fuente. El relleno es idempotente: añade `image` e `image_credit` solo a glifos ya presentes y no sustituye ediciones locales.
+El lote `corpus/glyph-images-v4.json` enlaza (no copia) la imagen de cuatro glifos heredados de Amoxcalli —flor, agua, casa y árbol florido— desde sus fichas del Visual Lexicon of Aztec Hieroglyphs, con atribución visible a Bodleian Libraries, University of Oxford (MS. Arch. Selden. A. 1) y licencia CC BY-NC-SA 3.0 UK. La webapp las muestra mediante enlace directo (hotlink) con crédito y enlace de retorno; las fichas sin imagen mantienen su referencia; si falla un enlace externo, la interfaz conserva el acceso a la fuente. El relleno es idempotente: añade `image` e `image_credit` solo a glifos ya presentes y no sustituye ediciones locales.
 
 ## Archivo de consulta
 
@@ -176,7 +176,7 @@ El lote `corpus/glyph-images-v4.json` enlaza (no copia) la imagen de cuatro glif
 
 Las consultas con texto se ordenan con BM25 en español y náhuatl; los filtros y la paginación se aplican sobre los resultados. El campo náhuatl usa las reglas seguras de comparación de `nah-ortho-1`; el español conserva su tokenización. Los resultados muestran el texto original. La navegación sin consulta conserva el orden del archivo. La recuperación de contexto del laboratorio usa el mismo índice, limitada a náhuatl clásico y pasajes breves. Este índice completo no participa en el benchmark reservado, que utiliza solo `train.jsonl`.
 
-La política CSP de Scriptorium permite imágenes de `https://aztecglyphs.wired-humanities.org` para los cuatro enlaces aprobados. El servidor de Voces por separado mantiene imágenes locales. Scripts, conexiones y otros orígenes de imágenes conservan sus restricciones. Se comprobó la carga real de agua, casa, flor y árbol florido en el navegador, además del encabezado HTTP.
+La política CSP de Amoxcalli permite imágenes de `https://aztecglyphs.wired-humanities.org` para los cuatro enlaces aprobados. El servidor de Voces por separado mantiene imágenes locales. Scripts, conexiones y otros orígenes de imágenes conservan sus restricciones. Se comprobó la carga real de agua, casa, flor y árbol florido en el navegador, además del encabezado HTTP.
 
 Las propuestas de clasificación del archivo se revisan mediante [AUDITORIA_VARIANTES.md](AUDITORIA_VARIANTES.md); la ampliación de las acepciones y el trabajo necesario para una plataforma editorial compartida se describe en [LEXICO_GOBERNANZA.md](LEXICO_GOBERNANZA.md).
 
@@ -187,7 +187,7 @@ Las propuestas de clasificación del archivo se revisan mediante [AUDITORIA_VARI
 
 `corpus/glyph-source-images-v5.json` completa las imágenes de árbol, sol, luna y mes mediante una migración separada que conserva ediciones locales. Piedra recibe una referencia del Mendoza aparte de la ficha existente del Xólotl. Ver, y/con y madera siguen sin imagen glífica específica incorporada. La interfaz ofrece los enlaces al catálogo y al folio cuando está localizado. Las imágenes necesitan conexión a sus servidores externos; un fallo conserva la ficha y su enlace.
 
-`corpus/learning-v1.json` selecciona 24 fragmentos de 6 obras, agrupados en 6 lecturas. `/api/learning` conserva la fila de Axolotl y verifica su etiqueta nci, hash y correspondencia literal de las anotaciones. Las ayudas son editoriales y las claves se basan en el texto seleccionado; no se utiliza el LLM como corrector. La traducción y su cotejo siguen pendientes de revisión lingüística. Los glifos y los pasajes alfabéticos proceden de documentos distintos, enlazados por acepción; no se presenta una imagen como escritura de toda la frase.
+`corpus/learning-v1.json` selecciona 48 fragmentos de 10 obras, agrupados en 12 lecturas tras el lote del 7 de octubre. `/api/learning` conserva la fila de Axolotl y verifica su etiqueta nci, hash y correspondencia literal de las anotaciones. Las ayudas son editoriales y las claves se basan en el texto seleccionado; no se utiliza el LLM como corrector. La traducción y su cotejo siguen pendientes de revisión lingüística. Los glifos y los pasajes alfabéticos proceden de documentos distintos, enlazados por acepción; no se presenta una imagen como escritura de toda la frase.
 
 El cuaderno y las lecturas guardan progreso en `localStorage` del navegador, separado de perfiles y aportaciones de Voces. Cambiar de navegador u origen crea otro cuaderno. Si no se permite almacenamiento, el repaso funciona durante la sesión con un aviso. La revisión de palabras se agenda a 1, 3, 7 y 14 días según lo que la persona marca como recordado; no acredita aprendizaje lingüístico.
 
@@ -213,3 +213,7 @@ El [pipeline](EDITORIAL_PIPELINE.md) coteja fuentes cacheadas y publica lotes ad
 
 
 La ampliación [lecturas-002](../reports/LECTURAS_002_2026-09-30.md) conserva las doce selecciones y claves previas, añade tres recorridos y aclara enlaces temáticos. `practice_version` distingue la edición de ejercicios de las aclaraciones de contenido; cielo/lugares conservan su práctica. El contador de ejemplos es dinámico. [Guía de recetas y publicación](LECTURAS_PIPELINE.md).
+
+## Diccionario pictográfico · Amoxcalli
+
+La consulta **Glifos** añade un índice documental separado del léxico didáctico: apariciones, zonas, elementos y valores por contexto. No convierte referencias temáticas previas en componentes ni añade sus datos al entrenamiento. [Modelo, lote piloto y comandos de ampliación](DICCIONARIO_PICTOGRAFICO.md). El nombre visible es Amoxcalli; las claves técnicas antiguas conservan compatibilidad y progreso.

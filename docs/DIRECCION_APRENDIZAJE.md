@@ -1,10 +1,12 @@
 # Dirección propuesta: aprender náhuatl mediante ejemplos
 
+> Documento histórico de la decisión inicial. La dirección vigente del 7 de octubre de 2026 está en [PROPOSITO](PROPOSITO.md), con [propuesta de piloto](PILOTO_INSTITUCIONAL.md) y guía de colaboración en CONTRIBUTING. Las cifras siguientes describen el estado observado en septiembre.
+
 Análisis del 29 de septiembre de 2026. Se revisaron código, informes, datos y la interfaz local. El usuario eligió **aprender náhuatl mediante ejemplos** como primer uso. Este documento propone el siguiente trabajo; no cambia la aplicación ni aprueba contenido lingüístico.
 
 ## Decisión de producto
 
-Organizar Scriptorium alrededor de una experiencia de lectura guiada y práctica breve. Una persona debe poder terminar una sesión y comprender mejor un ejemplo nuevo. El archivo bilingüe, las acepciones, las fuentes y las aportaciones alimentan ese recorrido.
+Organizar Amoxcalli alrededor de una experiencia de lectura guiada y práctica breve. Una persona debe poder terminar una sesión y comprender mejor un ejemplo nuevo. El archivo bilingüe, las acepciones, las fuentes y las aportaciones alimentan ese recorrido.
 
 La primera ruta requiere elegir entre lectura de náhuatl clásico y aprendizaje de una variedad contemporánea para comunicarse. Los textos históricos y las fichas existentes permiten preparar un piloto de lectura clásica. Una ruta contemporánea necesita una variedad/localidad concreta, ejemplos adecuados y colaboración de hablantes. Ambas pueden coexistir después como rutas identificadas; los ejercicios no deben mezclarlas silenciosamente.
 

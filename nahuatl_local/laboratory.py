@@ -4,6 +4,8 @@ import json
 from pathlib import Path
 from .community import ROOT
 from .model_status import DEFAULT_ADAPTER
+from .documentary_laboratory import public_summary as documentary_summary
+from .visual_preparation import status as visual_preparation_status
 
 REPORTS = {
     'training': 'outputs/continued-unseen/run/training-report.json',
@@ -50,6 +52,8 @@ def snapshot(capability, adapter=None, root=ROOT):
                if isinstance(v, dict) and isinstance(v.get('step'), (int, float))
                and isinstance(v.get('loss'), (int, float))]
     return dict(
+        documentary=documentary_summary(root),
+        visual_preparation=visual_preparation_status(root),
         model=capability, reference_adapter='outputs/continued-unseen/run/best',
         active_is_reference=active == reference,
         training=dict(available=bool(training), status=automation.get('status'),

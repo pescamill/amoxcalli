@@ -1,6 +1,6 @@
 > Actualización de la plataforma unificada: `/aportar` obtiene tareas del archivo completo de 16,111 pares. Las misiones de ejemplo descritas abajo se conservan sólo para compatibilidad del servidor comunitario independiente. El arranque principal es `bash scripts/iniciar.sh`.
 
-> Integración 2026-09-27: Voces forma parte de Scriptorium. `scripts/voces.sh` abre el corpus unificado; entra en «Voces · texto y voz». Consulta [PLATAFORMA.md](PLATAFORMA.md).
+> Integración 2026-09-27: Voces forma parte de Amoxcalli. `scripts/voces.sh` abre el corpus unificado; entra en «Voces · texto y voz». Consulta [PLATAFORMA.md](PLATAFORMA.md).
 
 # Voces · colaboración de hablantes
 

@@ -1,4 +1,8 @@
-# Grow Scriptorium through small, reviewed learning units
+# Grow Amoxcalli through small, reviewed learning units
+
+> Current priorities, 12 October 2026: finish a usable learning unit before expanding general infrastructure. [Aves](http://127.0.0.1:8766/#aprender/aves) is available for study with four sourced passages, eight exercises and a final context comparison. Specialist review and learner trials remain separate pending milestones. Follow [PROPOSITO](PROPOSITO.md) and the revised [iteration method](TRABAJO_AUTONOMO.md). The institutional pilot has its own requirements. Dated cycle results below are historical evidence.
+
+For each delivery, identify the learner task, make the change, check the affected behavior and record the result briefly. Do not spend another cycle packaging unchanged material or rerun retrieval measurements for presentation changes. Keep originals, answer keys and study progress. A new reading review packet is needed when its review material changes; navigation changes do not change the underlying passages.
 
 Prepared 30 September 2026. The product remains centered on learning Náhuatl through examples, documented glyphs and their sources. The dictionary and corpus supply evidence; the laboratory explains model experiments. This plan defines the editorial cycle. The flor cycle and a second batch of three readings have been published as disclosed editorial drafts; dated results follow.
 
@@ -12,7 +16,7 @@ Prepared 30 September 2026. The product remains centered on learning Náhuatl th
 
 The home page no longer promises one glyph per word. Quoted forms and dictionary references are displayed separately. Compound/thematic links and the single Moon passage are explained. Recipes in [the reading builder](LECTURAS_PIPELINE.md) make source/hash/exact-form exercise assembly repeatable; they do not certify linguistic interpretation. The current [audit](../reports/learning-audit-lecturas-002/inventory.md) has 36 tasks: 1 resolved editorially, 4 blocked and 31 open. The water/land preparation gap is now replaced by that reading's source, exercise and learner-trial checks.
 
-Next, review these added contexts, obtain another Moon passage with explicit primary/variety evidence, resolve NIQUITTA/xochitli/tlacuilolcalli with competent linguistic review, and carry out a beginner trial. The dictionary batch batch-009-v11 is ready against the expanded lessons; the earlier batch-008-v10 lesson hash is stale.
+Next, review these added contexts, obtain another Moon passage with explicit primary/variety evidence, resolve NIQUITTA/xochitli/tlacuilolcalli with competent linguistic review, and carry out a beginner trial. The dictionary batch batch-009-v11 was ready against the September lessons but became stale after the October comprehension update; the earlier batch-008-v10 lesson hash is also stale.
 
 ## Starting baseline
 
@@ -102,3 +106,7 @@ Open the flor packet and its four source passages. Resolve cuicatl's lexical evi
 ## Validation of this preparation
 
 Five audit tests and six existing learning tests pass: stable inventory, distinction between image coverage and primary-context review, custom lesson IDs and missing dependencies, evidence-bound decisions, safe snapshot validation, preservation of human notes and unchanged source lessons. Report: [tests-lesson-audit-2026-09-30.txt](../reports/tests-lesson-audit-2026-09-30.txt). This validates the mechanism, not the linguistic correctness of the material.
+
+## Iteración pictográfica · 7 de octubre de 2026
+
+Se añadió el piloto documental descrito en [DICCIONARIO_PICTOGRAFICO](DICCIONARIO_PICTOGRAFICO.md). Antes de ampliar, probar el recorrido calli con lectores: ¿distinguen la denominación del elemento de la lectura del conjunto y pueden localizar la fuente? Registrar dudas por código de aparición. Revisión especializada pendiente; preservar las seis lecturas, primera página representativa y cuaderno. Ampliar después mediante el script por lotes, con excepciones documentadas y puentes explícitos.

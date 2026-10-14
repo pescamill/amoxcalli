@@ -4,7 +4,7 @@
  const box=document.createElement('details');box.className='app-install';
  const summary=document.createElement('summary');summary.textContent='Instalar app';box.append(summary);
  const help=document.createElement('p');help.textContent='Abre el menú del navegador y elige «Instalar aplicación» o «Añadir a pantalla de inicio». En iPhone o iPad: Compartir → Añadir a pantalla de inicio.';box.append(help);
- const button=document.createElement('button');button.textContent='Instalar Scriptorium';button.type='button';button.hidden=true;box.append(button);
+ const button=document.createElement('button');button.textContent='Instalar Amoxcalli';button.type='button';button.hidden=true;box.append(button);
  const note=document.createElement('p');note.textContent='El servidor debe estar encendido para consultar y guardar aportaciones.';box.append(note);
  const tools=document.querySelector('[data-app-tools]');if(tools)tools.append(box);else document.querySelector('header')?.insertAdjacentElement('afterend',box);
  if(!window.isSecureContext)help.textContent='Puedes usar esta webapp aquí. Para instalarla y grabar con el micrófono desde tu teléfono, abre la dirección HTTPS de tu servidor.';

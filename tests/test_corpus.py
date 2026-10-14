@@ -8,6 +8,7 @@ import unittest
 from nahuatl_local.community import Store, Problem
 from nahuatl_local.corpus import CorpusStore, editorial_releases
 from nahuatl_local.platform import make_server, rule_query
+from nahuatl_local.pictography import load_catalog
 
 
 class CorpusTests(unittest.TestCase):
@@ -165,7 +166,7 @@ class CorpusTests(unittest.TestCase):
         try:
             conn.request('GET','/')
             response=conn.getresponse();policy=response.getheader('Content-Security-Policy');response.read()
-            self.assertIn("img-src 'self' data: https://aztecglyphs.wired-humanities.org;",policy)
+            self.assertIn("img-src 'self' data: https://aztecglyphs.wired-humanities.org https://tlachia.iib.unam.mx;",policy)
             self.assertIn("script-src 'self';",policy)
             self.assertIn("connect-src 'self';",policy)
             self.assertNotIn('*',policy)
@@ -173,6 +174,19 @@ class CorpusTests(unittest.TestCase):
             self.assertEqual(req('GET','/api/proposals')[0],401)
             self.assertEqual(req('GET','/learning.js')[0],200)
             self.assertEqual(req('GET','/learning.css')[0],200)
+            self.assertEqual(req('GET','/pictography.js')[0],200)
+            self.assertEqual(req('GET','/pictography.css')[0],200)
+            status,payload=req('GET','/api/pictography');self.assertEqual(status,200)
+            catalog = load_catalog()
+            expected_glyphs = sum(row['kind'] == 'glyph' for row in catalog['occurrences'])
+            self.assertEqual(json.loads(payload)['summary']['glyphs'], expected_glyphs)
+            self.assertEqual(req('GET','/project.js')[0],200)
+            self.assertEqual(req('GET','/project.css')[0],200)
+            for path,phrase in [('/project/purpose.md','Propósito actual'),('/project/pilot.md','No enviada'),('/project/contributing.md','Mejorar Amoxcalli')]:
+                status,payload=req('GET',path);self.assertEqual(status,200)
+                self.assertIn(phrase,payload.decode())
+            for path in ('/project/../../data/community/voces.sqlite3','/project/PROGRESO_INTERNO.md'):
+                self.assertIn(req('GET',path)[0],(401,404))
             self.assertEqual(req('GET','/laboratory.js')[0],200)
             self.assertEqual(req('GET','/laboratory.css')[0],200)
             status,lab=req('GET','/api/laboratory');self.assertEqual(status,200);lab=json.loads(lab)
@@ -188,7 +202,7 @@ class CorpusTests(unittest.TestCase):
             self.assertEqual(req('GET','/api/training-pairs')[0],401)
             self.assertEqual(req('GET','/api/laboratory/context?query=flor')[0],200)
             status,payload=req('GET','/api/learning');self.assertEqual(status,200)
-            self.assertEqual(sum(len(l['examples']) for l in json.loads(payload)['lessons']),24)
+            self.assertEqual(sum(len(l['examples']) for l in json.loads(payload)['lessons']),48)
             headers={'Cookie':'voces_session='+self.token,'Origin':f'http://127.0.0.1:{port}'}
             self.assertEqual(req('GET','/api/proposals',**headers)[0],200)
             self.assertEqual(req('POST','/api/compose',{'text':'agua'},Origin='https://attacker.example')[0],403)

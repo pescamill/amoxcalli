@@ -22,7 +22,7 @@ class LessonBuilderTests(unittest.TestCase):
     def tearDown(self):self.tmp.cleanup()
 
     def test_batch_preserves_sources_keys_and_generates_exact_cloze_options(self):
-        originals={p:p.read_bytes() for p in (self.base,ROOT/'corpus/axolotl/axolotl.csv',ROOT/'data/community/voces.sqlite3')}
+        originals={p:p.read_bytes() for p in (self.base,ROOT/'corpus/axolotl/axolotl.csv')}
         result=build(self.config,self.output,self.base)
         self.assertEqual((result['added_lessons'],result['added_examples']),(3,12))
         before=self.output.read_bytes();build(self.config,self.output,self.base);self.assertEqual(self.output.read_bytes(),before)
@@ -37,6 +37,18 @@ class LessonBuilderTests(unittest.TestCase):
         for lesson in data['lessons'][3:]:
             for e in lesson['examples']:
                 ex=e['exercise'];self.assertEqual(ex['options'][ex['answer']],ex['blank'])
+
+    def test_second_expansion_keeps_all_six_existing_lessons_intact(self):
+        base=ROOT/'reports/learning-before-lecturas-003-2026-10-07/learning-v1.json'
+        config=ROOT/'configs/learning-expansion-2026-10-07.json'
+        sentinel=self.root/'private-sentinel.sqlite3';sentinel.write_bytes(b'Synthetic private state; never opened by builder')
+        before=sentinel.read_bytes()
+        result=build(config,self.output,base)
+        data=json.loads(self.output.read_text())['learning']
+        self.assertEqual((result['added_lessons'],result['added_examples']),(6,24))
+        self.assertEqual(data['lessons'][:6],json.loads(base.read_text())['lessons'])
+        self.assertEqual(data,json.loads((ROOT/'corpus/learning-v1.json').read_text()))
+        self.assertEqual(sentinel.read_bytes(),before)
 
     def test_duplicate_passages_unknown_forms_and_wrong_visual_dependencies_fail(self):
         recipes=json.loads(self.config.read_text())
@@ -65,7 +77,7 @@ class LessonBuilderTests(unittest.TestCase):
         self.assertEqual(result['added_examples'],0)
         self.assertEqual(result['clarified_lessons'],['aves'])
         data=json.loads(self.output.read_text())['learning']
-        self.assertEqual(data,json.loads((ROOT/'corpus/learning-v1.json').read_text()))
+        self.assertEqual(data,json.loads((ROOT/'reports/learning-before-lecturas-003-2026-10-07/learning-v1.json').read_text()))
         recipes=json.loads(config.read_text())
         recipes['lesson_updates'][0]['example_updates'][0]['exercise']={}
         altered=self.root/'altered.json';altered.write_bytes(encoded(recipes))

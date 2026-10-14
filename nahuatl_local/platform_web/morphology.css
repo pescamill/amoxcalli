@@ -1,0 +1,40 @@
+/* Análisis morfológico y glosa interlineal. Usa las variables de la identidad editorial. */
+.plain-word{font:inherit;color:inherit;background:none;border:0;padding:0;margin:0;cursor:pointer;border-bottom:1px dotted transparent;border-radius:0;min-height:0;text-align:left;white-space:normal}
+.plain-word:hover,.plain-word:focus-visible{border-bottom-color:var(--ochre,#c99538);background:#f3e8cc}
+.plain-word[aria-expanded=true]{background:#ead9ab;border-bottom-color:var(--red,#812d37)}
+.reading-toggles{display:flex;flex-wrap:wrap;gap:6px 22px;align-items:center}
+.word-analysis{background:#f4ecd9;border-left:3px solid var(--blue,#245b70);padding:18px 20px;margin-top:20px;overflow-wrap:anywhere}
+.word-analysis h3{font:600 26px var(--serif,Georgia,serif);margin:4px 0 12px}
+.word-analysis>p,.word-analysis .meta{font-size:13px}
+.morph-chips{list-style:none;display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 12px;padding:0}
+.morph-chip{display:grid;gap:1px;padding:7px 11px 8px;background:var(--white,#fffdf6);border:1px solid var(--line,#d3c5ad);min-width:58px}
+.morph-chip.stem{border-color:var(--red,#812d37);border-width:2px;padding:6px 10px 7px}
+.morph-form{font:600 20px var(--serif,Georgia,serif);color:var(--ink,#302921)}
+.morph-tag{font:600 10.5px/1.3 ui-monospace,Menlo,Consolas,monospace;letter-spacing:.04em;color:var(--blue,#245b70)}
+.morph-gloss{font-size:12px;color:var(--muted,#685b4b);max-width:220px}
+.basis-pill{display:inline-block;font-size:11px;font-weight:650;padding:2px 8px;margin-right:6px;border:1px solid currentColor;color:var(--jade,#3d6252)}
+.basis-pill.basis-rules,.basis-pill.basis-loan_or_name{color:var(--muted,#685b4b)}
+.basis-pill.basis-corpus{color:var(--blue,#245b70)}
+.morph-dictionary{font-size:14px;margin:6px 0 10px}
+.gloss-hints,.attestations{border-top:1px solid var(--line,#d3c5ad);padding-top:12px;margin-top:12px;font-size:14px}
+.hint-word{font-weight:650}
+.attestation-list{display:grid;gap:10px;margin:10px 0}
+.attestation{background:var(--white,#fffdf6);border:1px solid var(--line,#d3c5ad);padding:10px 14px}
+.attestation blockquote{font:17px/1.6 var(--serif,Georgia,serif);margin:4px 0}
+.attestation mark{background:#ead9ab;color:inherit;padding:0 2px}
+.attestation .preview-translation{font-size:14px;margin-top:6px}
+.morph-alternatives{margin:12px 0;font-size:13px}
+.morph-alternatives summary{cursor:pointer}
+.morph-alt{margin:10px 0 0;padding-left:10px;border-left:2px solid var(--line,#d3c5ad)}
+.morph-alt .morph-form{font-size:16px}
+.interlinear-box{margin:14px 0 6px}
+.interlinear{display:flex;flex-wrap:wrap;gap:14px 18px;padding:16px;background:var(--white,#fffdf6);border:1px solid var(--line,#d3c5ad)}
+.igt-word{display:grid;gap:2px;min-width:0}
+.igt-surface{font:600 19px var(--serif,Georgia,serif)}
+.igt-seg{font:15px var(--serif,Georgia,serif);color:var(--red,#812d37)}
+.igt-tags{font:10.5px/1.35 ui-monospace,Menlo,Consolas,monospace;color:var(--blue,#245b70);max-width:190px;overflow-wrap:anywhere}
+.igt-gloss{font-size:12.5px;color:var(--ink,#302921);max-width:170px}
+.igt-gloss.corpus_hint{color:var(--muted,#685b4b);font-style:italic}
+.igt-gloss.none{color:var(--muted,#685b4b)}
+.word-suggestion{margin:14px 0;padding:16px;background:#f4ecd9;border-left:3px solid var(--blue,#245b70);text-align:left}
+@media(max-width:600px){.word-analysis{padding:15px}.morph-form{font-size:18px}.interlinear{gap:12px 14px;padding:12px}.igt-surface{font-size:17px}}

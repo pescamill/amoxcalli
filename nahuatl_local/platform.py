@@ -1,5 +1,6 @@
-"""Scriptorium: corpus, investigación y extractor Voces en un solo servidor local."""
+"""Amoxcalli: corpus, investigación y extractor Voces en un solo servidor local."""
 import argparse
+import hashlib
 import json
 import threading
 from http.server import ThreadingHTTPServer
@@ -11,15 +12,20 @@ from .review import request_bundle, local_review
 from .research import Archive
 from .learning import Learning
 from .laboratory import snapshot as laboratory_snapshot, REPORTS as LAB_REPORTS
+from .documentary_laboratory import public_download as documentary_laboratory_download
+from .visual_preparation import review as visual_preparation_review
 from .training_data import TrainingData, PairProposals
 from .model_status import status as model_status, DEFAULT_ADAPTER
+from .pictography import public_catalog
+from .documentary_retrieval import DocumentaryIndex, PublicSources, digest as documentary_digest, public_path
+from .stems import WordStudy
 
 WEB = Path(__file__).with_name('platform_web')
-INSTALL_HEAD = '<meta name="theme-color" content="#174b3d"><meta name="apple-mobile-web-app-capable" content="yes">\n<link rel="manifest" href="/manifest.webmanifest"><link rel="apple-touch-icon" href="/icon-192.png"><link rel="stylesheet" href="/install.css"><script src="/install.js" defer></script>\n'
+INSTALL_HEAD = '<meta name="theme-color" content="#812d37"><meta name="apple-mobile-web-app-capable" content="yes">\n<link rel="manifest" href="/manifest.webmanifest"><link rel="apple-touch-icon" href="/icon-192.png"><link rel="stylesheet" href="/install.css"><script src="/install.js" defer></script>\n'
 
 
 def rule_query(store, value):
-    """Porta las reglas acotadas de Scriptorium; ninguna salida es validación."""
+    """Porta las reglas acotadas de Amoxcalli; ninguna salida es validación."""
     records=store.public_records()
     q=normalize(value.strip()).rstrip('.!?')
     q=q.removeprefix('yo ')
@@ -58,9 +64,11 @@ def rule_query(store, value):
                 'Las reglas disponibles no cubren esta expresión. Consulta palabras o textos por separado.')
 
 
-def make_handler(store, model_enabled=None, adapter=None):
+def make_handler(store, model_enabled=None, adapter=None, word_study=None):
     base=community_handler(store)
     archive=Archive()
+    # Análisis morfológico, concordancia por raíz y pistas de glosa (sin modelo).
+    word_study=word_study or WordStudy(records_fn=store.public_records)
     learning=Learning(archive)
     training_data=TrainingData()
     pair_proposals=PairProposals(store,training_data)
@@ -68,15 +76,17 @@ def make_handler(store, model_enabled=None, adapter=None):
     capability=model_status(adapter,model_enabled)
     model_lock=threading.Lock()
     loaded=None
+    documentary_cache=None
+    documentary_lock=threading.Lock()
 
     class Handler(base):
         # Solo el catálogo glífico aprobado puede servir imágenes externas.
         content_security_policy = base.content_security_policy.replace(
             "img-src 'self' data:",
-            "img-src 'self' data: https://aztecglyphs.wired-humanities.org")
+            "img-src 'self' data: https://aztecglyphs.wired-humanities.org https://tlachia.iib.unam.mx")
 
         def dispatch(self):
-            nonlocal loaded
+            nonlocal loaded, documentary_cache
             parsed=urlparse(self.path);path=parsed.path
             static={'/':('index.html','text/html; charset=utf-8'),
                     '/corpus.js':('app.js','text/javascript; charset=utf-8'),
@@ -84,6 +94,15 @@ def make_handler(store, model_enabled=None, adapter=None):
                     '/minimal.css':('minimal.css','text/css; charset=utf-8'),
                     '/learning.css':('learning.css','text/css; charset=utf-8'),
                     '/learning.js':('learning.js','text/javascript; charset=utf-8'),
+                    '/morphology.js':('morphology.js','text/javascript; charset=utf-8'),
+                    '/morphology.css':('morphology.css','text/css; charset=utf-8'),
+                    '/documentary.js':('documentary.js','text/javascript; charset=utf-8'),
+                    '/pictography.js':('pictography.js','text/javascript; charset=utf-8'),
+                    '/pictography.css':('pictography.css','text/css; charset=utf-8'),
+                    '/project.js':('project.js','text/javascript; charset=utf-8'),
+                    '/project.css':('project.css','text/css; charset=utf-8'),
+                    '/edition.css':('edition.css','text/css; charset=utf-8'),
+                    '/edition-border.svg':('edition-border.svg','image/svg+xml'),
                     '/laboratory.js':('laboratory.js','text/javascript; charset=utf-8'),
                     '/laboratory.css':('laboratory.css','text/css; charset=utf-8'),
                     '/training-data.js':('training-data.js','text/javascript; charset=utf-8'),
@@ -98,15 +117,44 @@ def make_handler(store, model_enabled=None, adapter=None):
             if self.command=='GET':
                 if path in static:
                     name,mime=static[path];return self.reply((WEB/name).read_bytes(),mime=mime)
+                project_docs={'/project/purpose.md':'docs/PROPOSITO.md',
+                              '/project/pilot.md':'docs/PILOTO_INSTITUCIONAL.md',
+                              '/project/contributing.md':'CONTRIBUTING.md'}
+                if path in project_docs:
+                    return self.reply((ROOT/project_docs[path]).read_bytes(),mime='text/plain; charset=utf-8')
                 if path in ('/aportar','/aportar/'):
                     # Misma sesión, mismos datos y mismos permisos que el corpus.
                     page=(Path(__file__).with_name('community_web')/'index.html').read_text()
-                    return self.reply(page.replace('</head>',INSTALL_HEAD+'<link rel="stylesheet" href="/minimal.css"></head>').encode(),mime='text/html; charset=utf-8')
+                    return self.reply(page.replace('</head>',INSTALL_HEAD+'<link rel="stylesheet" href="/minimal.css"><link rel="stylesheet" href="/edition.css"></head>').encode(),mime='text/html; charset=utf-8')
                 if path=='/api/corpus':
                     data=store.catalog_data();data.update(model_enabled=capability['ready'],model=capability,archive=archive.summary)
                     return self.reply(data)
+                if path=='/api/documentary':
+                    q=parse_qs(parsed.query);value=text(q.get('query',[''])[0],'Consulta',1000)
+                    with documentary_lock:
+                        records=store.public_records();signature=documentary_digest(records)
+                        stale=documentary_cache is None or documentary_cache['signature']!=signature
+                        if not stale:
+                            sources=documentary_cache['index'].sources
+                            stale=any(hashlib.sha256(public_path(ROOT,p).read_bytes()).hexdigest()!=h for p,h in sources.hashes.items())
+                        if stale:
+                            documentary_cache=dict(signature=signature,index=DocumentaryIndex(records))
+                        return self.reply(documentary_cache['index'].search(value))
+                if path=='/api/pictography':return self.reply(public_catalog(store.public_records()))
+                if path=='/api/word':
+                    q=parse_qs(parsed.query);exclude=q.get('exclude',[''])[0] or None
+                    try:return self.reply(word_study.word(q.get('w',[''])[0],exclude))
+                    except ValueError as error:raise Problem(str(error)) from None
+                if path=='/api/gloss':
+                    q=parse_qs(parsed.query);rid=q.get('id',[''])[0]
+                    source=archive.get(rid)['nah'] if rid else q.get('text',[''])[0]
+                    try:return self.reply(dict(word_study.gloss(source),archive_id=rid or None))
+                    except ValueError as error:raise Problem(str(error)) from None
                 if path=='/api/system':return self.reply(dict(model=capability,archive=archive.summary))
                 if path=='/api/laboratory':return self.reply(laboratory_snapshot(capability,adapter))
+                if path=='/api/laboratory/visual-preparation':
+                    if parsed.query:raise Problem('El visor admite solo desarrollo, sin parámetros alternativos.')
+                    return self.reply(visual_preparation_review())
                 if path=='/api/laboratory/context':
                     q=parse_qs(parsed.query);value=text(q.get('query',[''])[0],'Consulta',1000,True)
                     return self.reply(dict(passages=archive.context(value)))
@@ -116,7 +164,10 @@ def make_handler(store, model_enabled=None, adapter=None):
                 if path=='/api/training-pairs':return self.reply(pair_proposals.mine(self.get_person(True)))
                 if path=='/api/training-pairs/export':return self.reply(pair_proposals.export(self.get_person(True)).encode(),mime='text/csv; charset=utf-8')
                 if path.startswith('/api/laboratory/reports/'):
-                    report=LAB_REPORTS.get(path.rsplit('/',1)[1])
+                    name=path.rsplit('/',1)[1]
+                    if name in ('documentary-comparison','documentary-retrieval'):
+                        return self.reply(documentary_laboratory_download(name))
+                    report=LAB_REPORTS.get(name)
                     if not report or not (ROOT/report).is_file():raise Problem('Informe no disponible.',404)
                     return self.reply(json.loads((ROOT/report).read_text(encoding='utf-8')))
                 if path=='/api/learning':return self.reply(learning.catalog(store.public_records()))
@@ -188,8 +239,12 @@ def make_handler(store, model_enabled=None, adapter=None):
     return Handler
 
 
-def make_server(store,host='127.0.0.1',port=8766,public_origin=None,model_enabled=None,adapter=None):
-    httpd=ThreadingHTTPServer((host,port),make_handler(store,model_enabled,adapter))
+def make_server(store,host='127.0.0.1',port=8766,public_origin=None,model_enabled=None,adapter=None,prewarm=False):
+    word_study=WordStudy(records_fn=store.public_records)
+    if prewarm:
+        # El primer arranque estima frecuencias y pistas (~1 min); después se usa data/derived/.
+        threading.Thread(target=word_study.warm,daemon=True,name='word-study-warmup').start()
+    httpd=ThreadingHTTPServer((host,port),make_handler(store,model_enabled,adapter,word_study))
     actual=httpd.server_address[1]
     httpd.public_origin=None
     httpd.allowed_hosts={f'localhost:{actual}',f'127.0.0.1:{actual}',f'{host}:{actual}'}
@@ -214,8 +269,8 @@ def main():
     try:
         store=CorpusStore(args.db)
         if args.command=='serve':
-            httpd=make_server(store,args.host,args.port,args.public_origin,False if args.disable_model else args.enable_model,args.adapter)
-            print(f'Scriptorium · http://127.0.0.1:{httpd.server_address[1]} · Voces en /aportar',flush=True)
+            httpd=make_server(store,args.host,args.port,args.public_origin,False if args.disable_model else args.enable_model,args.adapter,prewarm=True)
+            print(f'Amoxcalli · http://127.0.0.1:{httpd.server_address[1]} · Voces en /aportar',flush=True)
             try:httpd.serve_forever()
             except KeyboardInterrupt:pass
             finally:httpd.server_close()

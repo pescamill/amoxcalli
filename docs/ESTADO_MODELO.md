@@ -1,6 +1,16 @@
 # Estado real del LLM
 
-Actualización: 29 de septiembre de 2026. El modelo permanece disponible en el Laboratorio de la navegación principal. La base, el adaptador y las dependencias están instalados en este equipo; consultar el laboratorio no carga pesos ni inicia entrenamiento.
+Actualización: 12 de octubre de 2026. El modelo textual permanece disponible en el Laboratorio de la navegación principal. La base, el adaptador y las dependencias están instalados en este equipo; consultar el laboratorio no carga pesos ni inicia entrenamiento.
+
+## Estado de la ruta con imágenes
+
+**Todavía no hay un nuevo modelo multimodal ejecutado o entrenado.** El candidato es Qwen3-VL-4B-Instruct. Laboratorio → Modelo y progreso permite inspeccionar 51 consultas documentales visuales de desarrollo, con fuentes y campos de referencia separados de la entrada propuesta; la reserva queda fuera del visor. Consultar una ficha y sus enlaces no equivale a reconocer un glifo desde sus píxeles.
+
+El preflight lee metadatos y el registro literal de arquitecturas sin importar librerías del modelo: Torch 2.9.0, Transformers 4.51.3 y PEFT 0.15.2; `qwen3_vl` no está registrado y MLX/MLX-VLM no están instalados. No se han medido memoria, latencia ni competencia lingüística. Los permisos actuales siguen sin admitir imágenes históricas como entrada al modelo ni para entrenamiento.
+
+La [prueba local preparada](PRUEBA_VISUAL_LOCAL.md) propone una conversión de cuatro bits, entorno independiente, hasta 4 GB de pesos y una imagen técnica propia, sin entrenamiento ni imágenes del catálogo. Está pendiente de autorización para ampliar la fase. [Cambios y pruebas de esta iteración](../reports/PREPARACION_VISUAL_016_2026-10-12.md).
+
+## Integración textual comprobada el 29 de septiembre
 
 La webapp usa Qwen3-0.6B con el adaptador LoRA ya entrenado en `outputs/continued-unseen/run/best`. No se entrenaron pesos nuevos durante esta integración. JEV está retirado.
 

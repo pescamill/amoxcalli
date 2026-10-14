@@ -1,14 +1,14 @@
 {
   "id": "/",
-  "name": "Scriptorium · Corpus del náhuatl",
-  "short_name": "Scriptorium",
-  "description": "Consulta fuentes y participa con texto y voz.",
+  "name": "Amoxcalli · Lecturas de náhuatl",
+  "short_name": "Amoxcalli",
+  "description": "Aprende con lecturas, consulta palabras y explora glifos en sus fuentes.",
   "lang": "es-MX",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#f7f9f6",
-  "theme_color": "#174b3d",
+  "background_color": "#f6f0e2",
+  "theme_color": "#812d37",
   "icons": [
     {
       "src": "/icon-192.png",

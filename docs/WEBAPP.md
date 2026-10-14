@@ -1,4 +1,8 @@
-# Scriptorium en móvil y escritorio
+# Amoxcalli en móvil y escritorio
+
+Para entender el alcance y la colaboración: [propósito](PROPOSITO.md), [guía para contribuir](../CONTRIBUTING.md) y [piloto institucional propuesto](PILOTO_INSTITUCIONAL.md). La aplicación incorpora esos accesos en Proyecto y colaboración.
+
+La plataforma y Voces comparten una [identidad editorial](IDENTIDAD_EDITORIAL.md) con familias tipográficas del sistema, papel cálido, tinta roja y ornamento propio. No añade descargas de fuentes. Las fichas impresas conservan texto negro sobre fondo blanco.
 
 Una webapp reúne aprendizaje mediante ejemplos, diccionario glífico, laboratorio del LLM y colaboración con texto y voz. La consulta funciona sin instalar el modelo; el arranque completo prepara también la generación local, sin claves ni API externa. Python 3.11 o 3.12 y SQLite guardan los datos en tu equipo; el navegador presenta la interfaz adaptable.
 
@@ -56,13 +60,15 @@ Para actualizar: detén el servidor, respalda `data/community/`, reemplaza el c�
 
 ## Alcance comprobado
 
+Desde Leer, **Preparar ficha para taller** selecciona una lectura publicada. Permite incluir u ocultar traducciones y claves en la vista imprimible. **Imprimir / guardar PDF** abre el diálogo del navegador; no genera un PDF en el servidor. El JSON descargable siempre contiene las claves y el contenido público con sus versiones, hashes y procedencia; no incluye el cuaderno ni el perfil. Las notas se escriben en papel. La ficha conserva las condiciones de los pasajes y no concede permisos de redistribución. La impresión es textual, sin depender del LLM ni de imágenes externas.
+
 Se comprueban mediante pruebas locales la consulta, los enlaces glíficos, los envíos escritos, el retiro, la sesión compartida, las rutas del manifiesto y las exportaciones. La instalación real y el permiso de micrófono deben probarse también en los teléfonos y navegadores de tu grupo.
 
 Referencia técnica: [requisitos de instalación de una PWA, MDN](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable).
 
 ## Consulta completa y dos espacios
 
-La pantalla inicial ofrece 6 lecturas con 24 ejemplos de 6 obras, ayuda contextual y ejercicios. Leer, Diccionario y Mis palabras completan el recorrido; el diccionario tiene 575 acepciones / entradas (26 curadas y 549 transcripciones automáticas de Molina/GDN), con 139 entradas vinculadas a imágenes de fuente. La página inicial conserva las 24 palabras representativas; las otras entradas siguen el alfabeto náhuatl, 48 por página. Las búsquedas priorizan las coincidencias exactas; las demás conservan el orden alfabético. Si no hay entrada, puedes buscar la misma forma en el archivo. Las referencias de contexto explican que no escriben la palabra. El script local `nahuatl_local.glyph_linker` genera enlaces e informe sin red ni modelo; 436 entradas siguen pendientes de evidencia. El archivo completo consulta 16.111 pares de Axolotl (33 obras identificadas y un registro sin título), con filtros por variedad y obra y resultados paginados. Las fichas editoriales no delimitan la consulta general. «Aportar cotejo» precarga un pasaje y conserva su variedad original aunque el perfil de quien aporta use otra.
+La pantalla inicial ofrece 12 lecturas con 48 ejemplos de 10 obras, ayuda contextual y ejercicios. Leer, Diccionario y Mis palabras completan el recorrido; el diccionario tiene 575 acepciones / entradas (26 curadas y 549 transcripciones automáticas de Molina/GDN), con 139 entradas vinculadas a imágenes de fuente. La página inicial conserva las 24 palabras representativas; las otras entradas siguen el alfabeto náhuatl, 48 por página. Las búsquedas priorizan las coincidencias exactas; las demás conservan el orden alfabético. Si no hay entrada, puedes buscar la misma forma en el archivo. Las referencias de contexto explican que no escriben la palabra. El script local `nahuatl_local.glyph_linker` genera enlaces e informe sin red ni modelo; 436 entradas siguen pendientes de evidencia. El archivo completo consulta 16.111 pares de Axolotl (33 obras identificadas y un registro sin título), con filtros por variedad y obra y resultados paginados. Las fichas editoriales no delimitan la consulta general. «Aportar cotejo» precarga un pasaje y conserva su variedad original aunque el perfil de quien aporta use otra.
 
 En Aportar, la misión inicial es escribir/hablar. Reconocer, escuchar y revisar están en la barra de tareas. La pantalla conserva las funciones de consentimiento, retirada y participación. Aprender y Aportar son espacios de trabajo, no cuentas con privilegios nuevos; la aceptación editorial sigue por terminal.
 
@@ -77,3 +83,7 @@ Laboratorio está en la navegación principal con tres pestañas: Probar, Datos 
 ## De una lectura al repaso
 
 Cada fragmento permite consultar otra palabra en el archivo o el diccionario. Aves ofrece accesos a formas presentes en sus fuentes y cuatro preguntas de comprensión con respuestas citadas de las traducciones del corpus. El reconocimiento previo se conserva y la comprensión se registra por separado. Al guardar desde una lectura, se vincula también el ID del pasaje: Mis palabras lo resuelve contra las lecturas actuales y permite volver a él. Para una palabra que ya estaba guardada, pulsa «Guardar este fragmento para repaso» en la ayuda contextual. Cambiar el fragmento no reinicia los intervalos de repaso.
+
+## Diccionario pictográfico · Amoxcalli
+
+La consulta **Glifos** añade un índice documental separado del léxico didáctico: apariciones, zonas, elementos y valores por contexto. No convierte referencias temáticas previas en componentes ni añade sus datos al entrenamiento. [Modelo, lote piloto y comandos de ampliación](DICCIONARIO_PICTOGRAFICO.md). El nombre visible es Amoxcalli; las claves técnicas antiguas conservan compatibilidad y progreso.

@@ -2,6 +2,7 @@
 import copy
 import hashlib
 import json
+import re
 from .community import ROOT
 
 
@@ -32,6 +33,11 @@ class Learning:
                     if annotation.get('relation', 'full_word') not in ('full_word', 'observed_form', 'source_variant', 'thematic'):
                         raise ValueError('Relación de lectura inválida.')
                     start = row['nah'].find(annotation['quote'], end)
+                    if annotation.get('relation') == 'full_word' and annotation['quote']:
+                        match = re.compile(r'(?<!\w)' + re.escape(annotation['quote']) + r'(?!\w)').search(row['nah'], end)
+                        if match is None and start >= 0:
+                            raise ValueError('Una palabra completa no puede ser parte interna de otra forma.')
+                        start = match.start() if match else -1
                     if start < 0 or not annotation['quote']:
                         raise ValueError('La anotación no corresponde al texto de la fuente.')
                     if annotation.get('relation')=='full_word' and ((start and (row['nah'][start-1].isalnum() or row['nah'][start-1]=='_')) or (start+len(annotation['quote'])<len(row['nah']) and (row['nah'][start+len(annotation['quote'])].isalnum() or row['nah'][start+len(annotation['quote'])]=='_'))):

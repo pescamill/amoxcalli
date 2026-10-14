@@ -133,3 +133,7 @@ La ampliación educativa lecturas-002 cambió el hash de las lecciones. La prepa
 
 
 La mejora de lectura y comprensión del 7 de octubre cambió otra vez el hash de `corpus/learning-v1.json`. `batch-009-v11` se conserva como preparación histórica; no publicarlo contra la selección actual. Los ejemplos de comandos usan un ID nuevo (`batch-010-v12`), todavía sin preparar.
+
+## Diccionario pictográfico · Amoxcalli
+
+La consulta **Glifos** añade un índice documental separado del léxico didáctico: apariciones, zonas, elementos y valores por contexto. No convierte referencias temáticas previas en componentes ni añade sus datos al entrenamiento. [Modelo, lote piloto y comandos de ampliación](DICCIONARIO_PICTOGRAFICO.md). El nombre visible es Amoxcalli; las claves técnicas antiguas conservan compatibilidad y progreso.

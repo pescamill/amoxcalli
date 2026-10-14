@@ -86,3 +86,7 @@ Para ampliar la cobertura, añade referentes y términos precisos al inventario 
 ## Publicación por lotes · batch-007-v9
 
 Se añadieron 50 acepciones, sus 50 formas y 39 referencias contextuales mediante cotejo literal automático de GDN y de los pares/imágenes archivados. No se declara revisión lingüística ni lectura glífica completa. Cada referencia conserva su tipo, nota, imagen, crédito, evidencia y dependencias. Resultado actual: 139 de 575 entradas con imagen; 436 pendientes. El [pipeline](EDITORIAL_PIPELINE.md) publica lotes con respaldo, hashes y preservación de originales y aportaciones. [Informe de publicación](../reports/publication-batch-007-v9.json). La transcripción paleográfica y la normalización del catálogo siguen en campos separados; no se asignan acepciones por frecuencia ni por letras compartidas.
+
+## Diccionario pictográfico · Amoxcalli
+
+La consulta **Glifos** añade un índice documental separado del léxico didáctico: apariciones, zonas, elementos y valores por contexto. No convierte referencias temáticas previas en componentes ni añade sus datos al entrenamiento. [Modelo, lote piloto y comandos de ampliación](DICCIONARIO_PICTOGRAFICO.md). El nombre visible es Amoxcalli; las claves técnicas antiguas conservan compatibilidad y progreso.

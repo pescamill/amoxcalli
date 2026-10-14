@@ -1,4 +1,9 @@
 import hashlib
+import copy
+from concurrent.futures import ThreadPoolExecutor
+import os
+import shutil
+from unittest.mock import patch
 import json
 from pathlib import Path
 import tempfile
@@ -61,3 +66,269 @@ class LaboratoryTests(unittest.TestCase):
         p = self.root / REPORTS['training']; p.parent.mkdir(parents=True)
         p.write_text('{unfinished')
         self.assertFalse(snapshot(self.capability, root=self.root)['training']['available'])
+
+
+class DocumentaryLaboratoryTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        from nahuatl_local import documentary_laboratory as lab
+        from nahuatl_local.documentary_retrieval_evaluation import validate_report
+        cls.lab = lab
+        cls.retrieval = lab.read(lab.RETRIEVAL_REPORT)
+        cls.retrieval_validation = validate_report(cls.retrieval)
+        cls.report = lab.read(lab.REPORT)
+
+    def checked(self, report):
+        return self.lab.validate_report(report, retrieval=self.retrieval,
+                                        retrieval_validation=self.retrieval_validation)
+
+    def test_current_artifact_matches_independently_replayed_retrieval(self):
+        self.assertTrue(self.retrieval_validation['valid'], self.retrieval_validation)
+        self.assertTrue(self.checked(self.report)['valid'])
+        self.assertEqual([r['status'] for r in self.report['runs']], ['measured', 'not_run', 'not_run'])
+        self.assertEqual(self.report['runs'][0]['metrics'], self.retrieval['metrics'])
+        self.assertEqual(self.report['runs'][0]['metrics']['complete'], 119)
+        self.assertEqual(len(self.report['runs'][0]['failures']), 4)
+        self.assertNotIn(self.lab.REPORT, self.report['input_hashes'])
+        self.assertNotIn(self.lab.DISPLAY, self.report['input_hashes'])
+
+    def test_metrics_costs_method_states_and_sources_cannot_be_fabricated(self):
+        for change in ('stale_hash', 'generated_metrics', 'fake_not_run_cost', 'fake_model_score',
+                       'missing_method', 'duplicate_method', 'measured_model', 'missing_reason',
+                       'private_path', 'raised_rights', 'human_review', 'wrong_battery', 'boolean_number'):
+            r = copy.deepcopy(self.report)
+            if change == 'stale_hash':r['input_hashes']['docs/LABORATORIO.md'] = '0' * 64
+            if change == 'generated_metrics':r['runs'][0]['metrics']['complete'] = 123
+            if change == 'fake_not_run_cost':r['runs'][1]['cost'] = dict(elapsed_seconds=0)
+            if change == 'fake_model_score':r['runs'][2]['metrics'] = dict(complete=123)
+            if change == 'missing_method':r['runs'].pop()
+            if change == 'duplicate_method':r['runs'][2]['method'] = 'textual_model'
+            if change == 'measured_model':r['runs'][1]['status'] = 'measured'
+            if change == 'missing_reason':r['runs'][2].pop('reason')
+            if change == 'private_path':r['input_hashes']['data/community/private.sqlite3'] = '0' * 64
+            if change == 'raised_rights':r['rights']['image_model_input'] = True
+            if change == 'human_review':r['human_review'] = 'reviewed'
+            if change == 'wrong_battery':r['battery']['evaluated_split'] = 'reserve'
+            if change == 'boolean_number':r['schema_version'] = True
+            with self.subTest(change=change):self.assertFalse(self.checked(r)['valid'])
+
+    def test_display_evidence_requires_actual_current_passing_contract(self):
+        for change in ('hash', 'unrelated_file', 'missing', 'fake_checks', 'stale_summary', 'human_claim'):
+            r = copy.deepcopy(self.report)
+            evidence = self.lab.display_contract(r)
+            if change == 'hash':r['display_evidence'][self.lab.DISPLAY] = '0' * 64
+            if change == 'unrelated_file':r['display_evidence'] = {'docs/PROPOSITO.md':self.lab.sha('docs/PROPOSITO.md')}
+            if change == 'missing':r['display_evidence'] = {}
+            if change == 'fake_checks':evidence['checks'] = ['three_methods']
+            if change == 'stale_summary':evidence['public_summary_fingerprint'] = '0' * 64
+            if change == 'human_claim':evidence['human_review'] = True
+            read = self.lab.read
+            def controlled_read(path, root=self.lab.ROOT):
+                return evidence if path == self.lab.DISPLAY else read(path, root)
+            with self.subTest(change=change), patch.object(self.lab, 'read', side_effect=controlled_read):
+                self.assertFalse(self.checked(r)['valid'])
+
+    def test_private_evidence_is_never_opened_and_symlink_inputs_rejected(self):
+        r = copy.deepcopy(self.report)
+        r['display_evidence'] = {'data/community/private.sqlite3':'0' * 64}
+        original = Path.read_bytes
+        reads = []
+        def guarded(path):
+            reads.append(str(path))
+            self.assertNotIn('data/community', str(path))
+            return original(path)
+        with patch.object(Path, 'read_bytes', guarded):
+            self.assertFalse(self.checked(r)['valid'])
+        self.assertTrue(reads)
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / 'reports').mkdir()
+            (root / 'reports' / 'alias').symlink_to(root / 'private-data')
+            with self.assertRaises(ValueError):self.lab.sha('reports/alias/file.json', root)
+
+    def test_public_downloads_exclude_expected_fields_and_reserve_queries(self):
+        # Core/replay has already been tested independently above. This check
+        # inspects the production download projection, never reserve keys.
+        summary = dict(self.lab.projection(self.report), available=True)
+        with patch.object(self.lab, 'public_summary', return_value=summary):
+            exports = [self.lab.public_download(kind) for kind in ('documentary-comparison', 'documentary-retrieval')]
+            with self.assertRaises(ValueError):self.lab.public_download('documentary-reserve')
+        forbidden = {'reference', 'expected_fields', 'expected_target_ids', 'missing_fields', 'source_conditions'}
+        def inspect(value):
+            if isinstance(value, dict):
+                self.assertFalse(forbidden.intersection(value))
+                if 'queries' in value:self.assertIs(type(value['queries']), int)
+                for child in value.values():inspect(child)
+            elif isinstance(value, list):
+                for child in value:inspect(child)
+        for export in exports:
+            inspect(export)
+            self.assertFalse(export['battery']['reserve_used'])
+            self.assertEqual(export['battery']['evaluated_split'], 'development')
+        self.assertIsNone(exports[0]['runs'][1]['cost'])
+        self.assertIsNone(exports[0]['runs'][2]['metrics'])
+
+    def test_retrieval_from_another_run_cannot_be_substituted(self):
+        wrong = copy.deepcopy(self.retrieval)
+        wrong['metrics']['complete'] = 123
+        result = self.lab.validate_report(self.report, retrieval=wrong,
+                                         retrieval_validation=self.retrieval_validation)
+        self.assertIn('retrieval_not_current', result['errors'])
+
+
+class DocumentarySummaryCacheTests(unittest.TestCase):
+    """Real validators/replays over isolated copies of the public dependencies."""
+    def setUp(self):
+        from nahuatl_local import documentary_laboratory as lab
+        self.lab = lab
+        self.tmp = tempfile.TemporaryDirectory()
+        self.root = Path(self.tmp.name) / 'one'
+        self.report = lab.read(lab.REPORT)
+        self.paths = set(self.report['input_hashes']) | set(lab.EVALUATION_INPUTS) | set(lab.DISPLAY_SOURCES) | {lab.REPORT, lab.DISPLAY}
+        self.copy_root(self.root)
+        with lab._SUMMARY_LOCK:
+            lab._SUMMARY_CACHE.clear()
+        self.spy = patch.object(lab, 'validate_retrieval', wraps=lab.validate_retrieval)
+        self.replay = self.spy.start()
+
+    def copy_root(self, root):
+        for relative in self.paths:
+            destination = root / relative
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(self.lab.ROOT / relative, destination)
+
+    def tearDown(self):
+        self.spy.stop()
+        with self.lab._SUMMARY_LOCK:
+            self.lab._SUMMARY_CACHE.clear()
+        self.tmp.cleanup()
+
+    def summary(self):
+        return self.lab.public_summary(self.root)
+
+    def test_gets_and_downloads_reuse_one_replay_and_defensive_copies(self):
+        first = self.summary()
+        self.assertTrue(first['ready'], first)
+        expected = copy.deepcopy(first)
+        first['runs'][0]['metrics']['complete'] = -1
+        first['input_hashes'].clear()
+        self.assertEqual(self.summary(), expected)
+        comparison = self.lab.public_download('documentary-comparison', self.root)
+        retrieval = self.lab.public_download('documentary-retrieval', self.root)
+        comparison['runs'][0]['metrics']['complete'] = -2
+        retrieval['metrics']['complete'] = -3
+        self.assertEqual(self.summary(), expected)
+        self.assertEqual(self.replay.call_count, 1)
+        # Completion/CLI gate must still independently replay in a warm process.
+        self.assertTrue(self.lab.validate_report(self.report, root=self.root)['valid'])
+        self.assertEqual(self.replay.call_count, 2)
+
+    def test_same_size_and_mtime_content_change_invalidates(self):
+        self.assertTrue(self.summary()['ready'])
+        path = self.root / 'nahuatl_local/platform_web/laboratory.css'
+        stat = path.stat()
+        original = path.read_bytes()
+        path.write_bytes(bytes([original[0] ^ 1]) + original[1:])
+        os.utime(path, ns=(stat.st_atime_ns, stat.st_mtime_ns))
+        self.assertEqual(path.stat().st_size, stat.st_size)
+        self.assertEqual(path.stat().st_mtime_ns, stat.st_mtime_ns)
+        changed_summary = self.summary()
+        self.assertTrue(changed_summary['available'])
+        self.assertFalse(changed_summary['ready'])
+        self.assertEqual(self.replay.call_count, 2)
+        path.write_bytes(original)
+        self.assertTrue(self.summary()['ready'])
+        self.assertEqual(self.replay.call_count, 3)
+
+    def test_battery_learning_dependency_invalidates(self):
+        self.assertTrue(self.summary()['ready'])
+        path = self.root / 'corpus/learning-v1.json'
+        self.assertIn('corpus/learning-v1.json', self.report['input_hashes'])
+        source = json.loads(path.read_text())
+        source['lessons'][0]['title'] += ' changed'
+        path.write_text(json.dumps(source))
+        self.assertFalse(self.summary()['available'])
+        self.assertEqual(self.replay.call_count, 2)
+
+    def test_report_tampering_and_missing_input_do_not_serve_previous_summary(self):
+        self.assertTrue(self.summary()['ready'])
+        path = self.root / self.lab.REPORT
+        original = path.read_bytes()
+        changed = copy.deepcopy(self.report)
+        changed['runs'][0]['metrics']['complete'] = 123
+        path.write_text(json.dumps(changed))
+        self.assertFalse(self.summary()['available'])
+        path.write_bytes(original)
+        self.assertTrue(self.summary()['ready'])
+        (self.root / 'nahuatl_local/documentary_laboratory.py').unlink()
+        self.assertFalse(self.summary()['available'])
+        self.assertEqual(self.replay.call_count, 3)
+
+    def test_display_change_or_removal_invalidates_readiness_and_restoration_replays(self):
+        self.assertTrue(self.summary()['ready'])
+        path = self.root / self.lab.DISPLAY
+        original = path.read_bytes()
+        display = json.loads(original)
+        display['checks'] = []
+        path.write_text(json.dumps(display))
+        stale = self.summary()
+        self.assertTrue(stale['available'])
+        self.assertFalse(stale['ready'])
+        path.unlink()
+        self.assertFalse(self.summary()['ready'])
+        path.write_bytes(original)
+        self.assertTrue(self.summary()['ready'])
+        self.assertEqual(self.replay.call_count, 4)
+
+    def test_symlink_and_private_report_path_rejected_before_target_open(self):
+        self.assertTrue(self.summary()['ready'])
+        target = Path(self.tmp.name) / 'private.sqlite3'
+        target.write_bytes(b'private sentinel')
+        path = self.root / 'nahuatl_local/documentary_laboratory.py'
+        path.unlink()
+        path.symlink_to(target)
+        original = Path.read_bytes
+        def guarded(p):
+            self.assertNotEqual(p, target)
+            self.assertFalse(p == path and p.is_symlink())
+            self.assertNotIn('data/community', str(p))
+            return original(p)
+        with patch.object(Path, 'read_bytes', guarded):
+            self.assertFalse(self.summary()['available'])
+        path.unlink()
+        shutil.copyfile(self.lab.ROOT / 'nahuatl_local/documentary_laboratory.py', path)
+        bad = copy.deepcopy(self.report)
+        bad['input_hashes']['data/community/private.sqlite3'] = '0' * 64
+        (self.root / self.lab.REPORT).write_text(json.dumps(bad))
+        with patch.object(Path, 'read_bytes', guarded):
+            self.assertFalse(self.summary()['available'])
+        alias = Path(self.tmp.name) / 'alias'
+        alias.symlink_to(self.root, target_is_directory=True)
+        self.assertFalse(self.lab.public_summary(alias)['available'])
+
+    def test_roots_are_isolated_and_cache_is_bounded(self):
+        other = Path(self.tmp.name) / 'two'
+        self.copy_root(other)
+        with patch.object(self.lab, '_SUMMARY_CACHE_LIMIT', 1):
+            self.assertTrue(self.summary()['ready'])
+            self.assertTrue(self.lab.public_summary(other)['ready'])
+            self.assertEqual(self.replay.call_count, 2)
+            self.assertEqual(len(self.lab._SUMMARY_CACHE), 1)
+            self.assertTrue(self.summary()['ready'])
+            self.assertEqual(self.replay.call_count, 3)
+        (other / self.lab.REPORT).write_text('{}')
+        self.assertFalse(self.lab.public_summary(other)['available'])
+        self.assertTrue(self.summary()['ready'])
+
+    def test_concurrent_first_requests_coalesce_replay(self):
+        with ThreadPoolExecutor(max_workers=4) as pool:
+            values = list(pool.map(lambda _: self.summary(), range(4)))
+        self.assertTrue(values[0]['ready'], values[0])
+        self.assertTrue(all(value == values[0] for value in values))
+        self.assertEqual(self.replay.call_count, 1)
+
+    def test_invalid_download_kind_rejected_without_reads_or_replay(self):
+        with patch.object(self.lab, 'public_summary', side_effect=AssertionError('unexpected validation')):
+            with self.assertRaises(ValueError):
+                self.lab.public_download('documentary-reserve', self.root)
+        self.assertEqual(self.replay.call_count, 0)

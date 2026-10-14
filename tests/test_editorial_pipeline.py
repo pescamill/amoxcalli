@@ -50,7 +50,9 @@ class EditorialPipelineTests(unittest.TestCase):
         self.decisions.write_bytes(encoded(dict(schema_version=1,groups=groups or {},items=items or {})))
 
     def test_repeat_is_identical_and_does_not_touch_sources_or_live_catalogue(self):
-        paths=[self.lessons,ROOT/'corpus/axolotl/axolotl.csv',ROOT/'editorial/lesson-decisions.json',ROOT/'data/community/voces.sqlite3']
+        private_fixture=Path(self.tmpout.name)/'private-sentinel.sqlite3'
+        private_fixture.write_bytes(b'Synthetic private state; no live database dependency')
+        paths=[self.lessons,ROOT/'corpus/axolotl/axolotl.csv',ROOT/'editorial/lesson-decisions.json',private_fixture]
         before={p:p.read_bytes() for p in paths if p.exists()}
         self.assertEqual(prepare(self.config,self.lessons,self.batch)['state'],'unchanged')
         self.assertEqual(before,{p:p.read_bytes() for p in before})
