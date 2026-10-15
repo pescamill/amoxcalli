@@ -1,0 +1,87 @@
+......FFF.FFFF..........................E........
+======================================================================
+ERROR: test_http_lookup_rechecks_public_state_and_preserves_private_sentinel (tests.test_documentary_retrieval.DocumentaryRetrievalTests.test_http_lookup_rechecks_public_state_and_preserves_private_sentinel)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/pescamil/Downloads/nahuatl-local/tests/test_documentary_retrieval.py", line 149, in test_http_lookup_rechecks_public_state_and_preserves_private_sentinel
+    server=make_server(store,port=0,model_enabled=False)
+  File "/Users/pescamil/Downloads/nahuatl-local/nahuatl_local/platform.py", line 225, in make_server
+    httpd=ThreadingHTTPServer((host,port),make_handler(store,model_enabled,adapter))
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/socketserver.py", line 457, in __init__
+    self.server_bind()
+    ~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/http/server.py", line 148, in server_bind
+    socketserver.TCPServer.server_bind(self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/socketserver.py", line 478, in server_bind
+    self.socket.bind(self.server_address)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 1] Operation not permitted
+
+======================================================================
+FAIL: test_concurrent_first_requests_coalesce_replay (tests.test_laboratory.DocumentarySummaryCacheTests.test_concurrent_first_requests_coalesce_replay)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/pescamil/Downloads/nahuatl-local/tests/test_laboratory.py", line 314, in test_concurrent_first_requests_coalesce_replay
+    self.assertTrue(values[0]['ready'], values[0])
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : {'available': False, 'ready': False, 'validation_errors': ['retrieval_invalid']}
+
+======================================================================
+FAIL: test_display_change_or_removal_invalidates_readiness_and_restoration_replays (tests.test_laboratory.DocumentarySummaryCacheTests.test_display_change_or_removal_invalidates_readiness_and_restoration_replays)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/pescamil/Downloads/nahuatl-local/tests/test_laboratory.py", line 256, in test_display_change_or_removal_invalidates_readiness_and_restoration_replays
+    self.assertTrue(self.summary()['ready'])
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_gets_and_downloads_reuse_one_replay_and_defensive_copies (tests.test_laboratory.DocumentarySummaryCacheTests.test_gets_and_downloads_reuse_one_replay_and_defensive_copies)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/pescamil/Downloads/nahuatl-local/tests/test_laboratory.py", line 211, in test_gets_and_downloads_reuse_one_replay_and_defensive_copies
+    self.assertTrue(first['ready'], first)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : {'available': False, 'ready': False, 'validation_errors': ['retrieval_invalid']}
+
+======================================================================
+FAIL: test_report_tampering_and_missing_input_do_not_serve_previous_summary (tests.test_laboratory.DocumentarySummaryCacheTests.test_report_tampering_and_missing_input_do_not_serve_previous_summary)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/pescamil/Downloads/nahuatl-local/tests/test_laboratory.py", line 242, in test_report_tampering_and_missing_input_do_not_serve_previous_summary
+    self.assertTrue(self.summary()['ready'])
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_roots_are_isolated_and_cache_is_bounded (tests.test_laboratory.DocumentarySummaryCacheTests.test_roots_are_isolated_and_cache_is_bounded)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/pescamil/Downloads/nahuatl-local/tests/test_laboratory.py", line 301, in test_roots_are_isolated_and_cache_is_bounded
+    self.assertTrue(self.summary()['ready'])
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_same_size_and_mtime_content_change_invalidates (tests.test_laboratory.DocumentarySummaryCacheTests.test_same_size_and_mtime_content_change_invalidates)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/pescamil/Downloads/nahuatl-local/tests/test_laboratory.py", line 227, in test_same_size_and_mtime_content_change_invalidates
+    self.assertTrue(self.summary()['ready'])
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_symlink_and_private_report_path_rejected_before_target_open (tests.test_laboratory.DocumentarySummaryCacheTests.test_symlink_and_private_report_path_rejected_before_target_open)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/pescamil/Downloads/nahuatl-local/tests/test_laboratory.py", line 272, in test_symlink_and_private_report_path_rejected_before_target_open
+    self.assertTrue(self.summary()['ready'])
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 49 tests in 54.994s
+
+FAILED (failures=7, errors=1)
