@@ -1,0 +1,11 @@
+PASS: documentary lookup, distinct senses, original/normalization, cited passages, accessible form, abstention, escaping and study privacy
+PASS: project purpose, live inventory, public workshop packet, optional print keys/translations, provenance, missing lesson and personal storage preserved
+PASS: guided reading, contextual glyph help, incorrect-answer feedback, exact-form exercise, completion, saved words and review
+PASS: dictionary-to-archive continuation, exact-first lookup, saved passage context, source-backed comprehension and legacy progress preserved
+PASS: accent-insensitive search, separate senses, contextual references and explicit absent variant
+PASS: documentary elements, pagination, filters, context-specific values, guided observation, source hashes, image fallback, public export and study preserved
+PASS: one Voces session submits a sourced lexical proposal with independent permissions
+PASS: pending contribution remains outside corpus and can be withdrawn
+PASS: documentary laboratory comparison, measured costs, honest not_run states, failures, fresh source hashes and safe public downloads
+PASS: laboratory tabs, separate corpus/rules, training pairs, pagination, CSV and private proposals
+PASS: sources and texts render with no application JavaScript errors
