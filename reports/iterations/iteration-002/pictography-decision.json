@@ -1,0 +1,15 @@
+{
+  "id": "pictography-next-documentary-batch",
+  "fingerprint": "f2a6b7ed6a8568e46c2f7260eaa6fa9d5fd00a7ddb0afa22e6de07979809c6dd",
+  "status": "in_progress",
+  "reviewer": "Codex · preparación y validación técnica; no revisión lingüística",
+  "date": "2026-10-07",
+  "evidence": [
+    "reports/iterations/iteration-002/changes.md",
+    "editorial/pictography-tlachia-telleriano-385-26v-v2-candidate-report.json",
+    "editorial/pictography-tlachia-telleriano-385-26v-v2-candidate.json",
+    "tests/test_pictography.py"
+  ],
+  "resolution": "Incorporadas aditivamente 31 apariciones de Telleriano 385_26v con 26 elementos nuevos y 18 reutilizados; comparación íntegra de filas previas, respaldo y repetición idempotente. El índice tiene 91 apariciones y todavía faltan 209 respecto a la meta propuesta de 300.",
+  "notes": "Siguiente mejora: registrar preparación de lecturas y evaluación textual/visual como tareas técnicas; pendientes humanos se conservan."
+}

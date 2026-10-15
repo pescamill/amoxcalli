@@ -1,0 +1,55 @@
+{
+  "aves-009": {
+    "changes": [
+      "docs/REVISION_LECTURA.md",
+      "nahuatl_local/lesson_review_packet.py"
+    ],
+    "outputs": {
+      "json": {
+        "initial": "written",
+        "repeat": "unchanged"
+      },
+      "md": {
+        "initial": "written",
+        "repeat": "unchanged"
+      }
+    },
+    "ready": false,
+    "semantic_validation": "not_run",
+    "state": "stale"
+  },
+  "aves-009-v1": {
+    "changes": [],
+    "outputs": {
+      "json": {
+        "initial": "written",
+        "repeat": "unchanged"
+      },
+      "md": {
+        "initial": "written",
+        "repeat": "unchanged"
+      }
+    },
+    "ready": true,
+    "semantic_validation": "passed",
+    "state": "valid"
+  },
+  "aves-009-v2": {
+    "changes": [
+      "docs/REVISION_LECTURA.md"
+    ],
+    "outputs": {
+      "json": {
+        "initial": "written",
+        "repeat": "unchanged"
+      },
+      "md": {
+        "initial": "written",
+        "repeat": "unchanged"
+      }
+    },
+    "ready": false,
+    "semantic_validation": "not_run",
+    "state": "stale"
+  }
+}

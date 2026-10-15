@@ -1,0 +1,13 @@
+PASS: documentary lookup, distinct senses, original/normalization, cited passages, accessible form, abstention, escaping and study privacy
+PASS: project purpose, live inventory, public workshop packet, optional print keys/translations, provenance, missing lesson and personal storage preserved
+AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert($('.word-help a[href="#lexico/sense-cuicatl"]'))
+
+    at /Users/pescamil/Downloads/nahuatl-local/tests/platform_ui.cjs:60:301 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: null,
+  expected: true,
+  operator: '=='
+}

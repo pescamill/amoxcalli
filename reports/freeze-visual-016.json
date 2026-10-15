@@ -1,0 +1,76 @@
+{
+  "changed_files": {
+    "docs/LABORATORIO.md": {
+      "after": "927748d12a7bd68735978ad5e1d642c8ffead90a36436a7a4acf0296275def0d",
+      "before": "80276857e04d66580610c2a184bf9ce1846611f17de8a43d0217f65a31dcc460"
+    },
+    "docs/PROGRESO_INTERNO.md": {
+      "after": "bebf227c840427528416bdf62b61d3fa3a9717067fa30e76e3d6b354f5db52d1",
+      "before": "f3b8a461332d3d89b3eac9295156140f5063ace59a73d8b573bf6c3c706ffde1"
+    },
+    "nahuatl_local/documentary_laboratory.py": {
+      "after": "9ecad7caa6ca1e8f9a3fb9cfffa595622bf1356ed51fb331e04ea017cda2a93a",
+      "before": "59963b3b61f04111f2c1071c0a1a5409559d89eb9b967d58f1397c8b76dd5cec"
+    },
+    "nahuatl_local/laboratory.py": {
+      "after": "b8d3ae79206197560fca20da4ae45db607006706aafe33e97bff526007e89ded",
+      "before": "8dd556cc49bf57c0ab731ea9991b50e3eb32a14ae86dbbb68fc839c62588de64"
+    },
+    "nahuatl_local/platform.py": {
+      "after": "b072f8398491fd914ea3beb0f1ea21b6b67768b90b81e3ee3dcb9137a7097303",
+      "before": "8ec2548a586dc3dc90a9f0e9c35bc6401f24bd01aa1e71c78e0b248e2a539d7c"
+    },
+    "nahuatl_local/platform_web/app.js": {
+      "after": "cefc662f2eae042511fc77e2d5ff51ddc4acc95d5104836621b0b4508571e633",
+      "before": "debff25e37e0d9a90ee2686fcdcc206957808312c08a3a2b96f8208bec920418"
+    },
+    "nahuatl_local/platform_web/laboratory.css": {
+      "after": "2458fc0fc143e9acec883695ea8123748965be65fbe14acdc0e74bb4edaeadbe",
+      "before": "c2d7a23749c189f40aad5a6bfab1d1a0a3ec2719ea21449f363af0247d1a0243"
+    },
+    "nahuatl_local/platform_web/laboratory.js": {
+      "after": "379870dc4730bebf85bef8e23ab5872590dd1dd3724504d4c60642d857f02aa1",
+      "before": "b84dbfa697d47f7aecf2c388e2730b980a0a8e2f27a27c726b48a4b787706f67"
+    },
+    "reports/documentary-laboratory-display-v1.json": {
+      "after": "12d5f6e15cd0e3ad45943eaec7ec7c1db61cf1df9ef4eef6070c74e8b93afec8",
+      "before": "f28fab305d767339732bc5b4cf467fff92f7598ecee8ff61a00eb75920dc62d6"
+    },
+    "reports/documentary-laboratory-v1.json": {
+      "after": "4b29beb0c64359f7ea1da954d7c718adba48416ab74a69f88f4c9c40f9407df0",
+      "before": "28e23e5be5075ebef0f8495e7ac84970100dccf73947d1927d85dccdab06181f"
+    },
+    "tests/platform_ui.cjs": {
+      "after": "2b37982adb00fae17fbd9ff5006c99776094f49df571ead858dccb7f87aa3d73",
+      "before": "99864cf2d111337f0d1f10c663a214da698aa96f879718456e15f6635b4aae4c"
+    }
+  },
+  "checks": {
+    "all_other_baseline_files_identical": true,
+    "battery_corpus_state_decisions_identical": true,
+    "lab_runs_metrics_costs_identical": true,
+    "only_expected_existing_changes": true,
+    "retrieval_bytes_identical": true
+  },
+  "date": "2026-10-12",
+  "frozen_hashes": {
+    "docs/LABORATORIO.md": "927748d12a7bd68735978ad5e1d642c8ffead90a36436a7a4acf0296275def0d",
+    "nahuatl_local/documentary_laboratory.py": "9ecad7caa6ca1e8f9a3fb9cfffa595622bf1356ed51fb331e04ea017cda2a93a",
+    "nahuatl_local/laboratory.py": "b8d3ae79206197560fca20da4ae45db607006706aafe33e97bff526007e89ded",
+    "nahuatl_local/platform.py": "b072f8398491fd914ea3beb0f1ea21b6b67768b90b81e3ee3dcb9137a7097303",
+    "nahuatl_local/platform_web/app.js": "cefc662f2eae042511fc77e2d5ff51ddc4acc95d5104836621b0b4508571e633",
+    "nahuatl_local/platform_web/laboratory.css": "2458fc0fc143e9acec883695ea8123748965be65fbe14acdc0e74bb4edaeadbe",
+    "nahuatl_local/platform_web/laboratory.js": "379870dc4730bebf85bef8e23ab5872590dd1dd3724504d4c60642d857f02aa1",
+    "nahuatl_local/visual_preparation.py": "cf6b04b43a4f7cf88634ccceb560c5794ed10c4a405b9420e0f4834bd00cb932",
+    "reports/PREPARACION_VISUAL_016_2026-10-12.md": "4581919b4cf229c28a0d86732bded2fd4fc0ffb41ec97b8b7e1fcb48217d9965",
+    "tests/platform_ui.cjs": "2b37982adb00fae17fbd9ff5006c99776094f49df571ead858dccb7f87aa3d73",
+    "tests/test_visual_preparation.py": "f7e820bc0a3f60dbbd40ef30ed011458aabf687e2569b09cb4375f0481db3c8d"
+  },
+  "images_processed": 0,
+  "implementation_status": "frozen_stop",
+  "model_calls": 0,
+  "retrieval_before_hash_authority": "validated pre-016 Lab report backup bound by baseline-visual-016",
+  "retrieval_before_sha256": "a84596ba335bf6f700c536f31c698ade497a0c5e5813220c70bbb5c18bcacf69",
+  "retrieval_measurements_this_cycle": 0,
+  "weights_loaded": false
+}

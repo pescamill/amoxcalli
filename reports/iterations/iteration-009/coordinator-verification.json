@@ -1,0 +1,40 @@
+{
+  "checks": {
+    "package_valid_reconstructed": true,
+    "manifest_hashes_current": true,
+    "public_source_manifest_preserved": true,
+    "lab_report_exact": true,
+    "lab_uncached_still_valid": true,
+    "lesson_fields_preserved": true,
+    "example_fields_preserved": true,
+    "four_pairs_original": true,
+    "questions_complete": true,
+    "five_tasks_exact": true,
+    "all_decisions_blank": true,
+    "human_trial_blank": true,
+    "66_human_tasks_still_open": true,
+    "state_exact_preserved": true,
+    "only_public_records": true,
+    "repeat_inventory.json": true,
+    "repeat_inventory.md": true,
+    "repeat_queue.json": true,
+    "derived_annotation_offsets_valid": true
+  },
+  "package_path": "reports/reading-review/aves-009-v1",
+  "package_hashes": {
+    "package.json": "c6437efecd94b72a8853857a6338e5aa7dedaa138fe5486a67fdfd3ad135f0ea",
+    "package.md": "91f343eb666fc50ea2a723511aaacc139f1f1968709f2418d87a9ff381426de5",
+    "human-decisions.blank.json": "f921a0c3546d9c0115e14856ea7bdc1ce26a770bacc645e62d96fbf0c32f4b7f",
+    "manifest.json": "68c26905055eccca9131696a18c3bdc534690169fd3f8911b2fb8d4ed034f165"
+  },
+  "source_hashes": {
+    "nahuatl_local/lesson_review_packet.py": "cffe8d26a9d61b2ca0e3eb7d8a2a490013fecf6f0a8ecedf5b82dacf79559a36",
+    "docs/REVISION_LECTURA.md": "f9202406ac01d43e97a6acfe6acf329e1562aa944b790a0225ef3868b6221526",
+    "tests/test_lesson_review_packet.py": "679d14fb0ef33986fb98b52dcf6e3ebb104c0410bcf6de075097645f5e410636"
+  },
+  "limits": [
+    "No linguistic review or human learning trial performed.",
+    "Local hashes and reconstruction, not remote source or rights verification."
+  ],
+  "verification_correction": "Initial equality check rejected expected derived start/end annotation offsets added by existing Learning.catalog. Every original annotation field is preserved; UTF-16 spans independently match exact quotes. No implementation repair needed."
+}

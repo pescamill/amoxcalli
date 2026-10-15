@@ -1,0 +1,13 @@
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ 'Volver al pasaje de Un ave en poesía, aves en relatos'
+- 'Volver al pasaje de Aves'
+
+    at /Users/pescamil/Downloads/nahuatl-local/tests/reading_continuity.cjs:31:47 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 'Volver al pasaje de Un ave en poesía, aves en relatos',
+  expected: 'Volver al pasaje de Aves',
+  operator: 'strictEqual'
+}

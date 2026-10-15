@@ -1,0 +1,19 @@
+# Estado del paquete de revisión
+
+Paquete: reports/reading-review/aves-012.
+
+Estado: **Vigente** (`valid`). Reconstrucción: `passed`.
+
+Revisión humana: **pendiente**. Ninguna tarea se cierra.
+
+## Causas
+
+Sin discrepancias; verify reconstruyó y confirmó el paquete completo.
+
+## Alcance
+
+- Vigencia técnica no acredita revisión humana, cotejo lingüístico, derechos nuevos ni aprendizaje.
+- Las revisiones y tareas humanas siguen pendientes; este comando no aplica decisiones ni cierra tareas.
+- Si el paquete no es valid, regenerarlo en una carpeta nueva; conservar el paquete y las notas previas.
+- Solo se informa metadata pública y hashes; no se copian claves, filas de reserva ni notas humanas.
+- Las URLs no se consultan. No hay red, modelo ni lectura de datos privados.

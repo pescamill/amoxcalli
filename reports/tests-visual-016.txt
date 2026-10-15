@@ -1,0 +1,94 @@
+test_ast_never_executes_package_code_and_invalid_or_symlink_registry_is_unknown (test_visual_preparation.VisualPreparationTests.test_ast_never_executes_package_code_and_invalid_or_symlink_registry_is_unknown) ... ok
+test_metadata_registry_absence_and_missing_packages_are_explicit (test_visual_preparation.VisualPreparationTests.test_metadata_registry_absence_and_missing_packages_are_explicit) ... FAIL
+test_projection_opens_only_public_recipe_inputs_and_registry_no_weights_or_image_io (test_visual_preparation.VisualPreparationTests.test_projection_opens_only_public_recipe_inputs_and_registry_no_weights_or_image_io) ... ok
+test_projection_preserves_51_development_references_and_separates_input (test_visual_preparation.VisualPreparationTests.test_projection_preserves_51_development_references_and_separates_input) ... ok
+test_public_status_has_no_cases_or_reference_keys (test_visual_preparation.VisualPreparationTests.test_public_status_has_no_cases_or_reference_keys) ... ok
+test_real_preflight_uses_metadata_without_model_imports_or_paths_in_payload (test_visual_preparation.VisualPreparationTests.test_real_preflight_uses_metadata_without_model_imports_or_paths_in_payload) ... ok
+test_registered_architecture_does_not_claim_inference_or_hardware_fit (test_visual_preparation.VisualPreparationTests.test_registered_architecture_does_not_claim_inference_or_hardware_fit) ... FAIL
+test_stale_sources_and_raised_image_permissions_fail_closed (test_visual_preparation.VisualPreparationTests.test_stale_sources_and_raised_image_permissions_fail_closed) ... ok
+test_wrong_split_is_rejected_even_if_loader_contract_is_bypassed (test_visual_preparation.VisualPreparationTests.test_wrong_split_is_rejected_even_if_loader_contract_is_bypassed) ... ok
+
+======================================================================
+FAIL: test_metadata_registry_absence_and_missing_packages_are_explicit (test_visual_preparation.VisualPreparationTests.test_metadata_registry_absence_and_missing_packages_are_explicit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/pescamil/Downloads/nahuatl-local/tests/test_visual_preparation.py", line 41, in test_metadata_registry_absence_and_missing_packages_are_explicit
+    self.assertEqual(result['state'], 'architecture_missing')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'dependencies_or_registry_pending' != 'architecture_missing'
+- dependencies_or_registry_pending
++ architecture_missing
+
+
+======================================================================
+FAIL: test_registered_architecture_does_not_claim_inference_or_hardware_fit (test_visual_preparation.VisualPreparationTests.test_registered_architecture_does_not_claim_inference_or_hardware_fit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/pescamil/Downloads/nahuatl-local/tests/test_visual_preparation.py", line 54, in test_registered_architecture_does_not_claim_inference_or_hardware_fit
+    self.assertEqual(result['state'], 'metadata_ready_inference_unverified')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'dependencies_or_registry_pending' != 'metadata_ready_inference_unverified'
+- dependencies_or_registry_pending
++ metadata_ready_inference_unverified
+
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.696s
+
+FAILED (failures=2)
+test_ast_never_executes_package_code_and_invalid_or_symlink_registry_is_unknown (test_visual_preparation.VisualPreparationTests.test_ast_never_executes_package_code_and_invalid_or_symlink_registry_is_unknown) ... ok
+test_metadata_registry_absence_and_missing_packages_are_explicit (test_visual_preparation.VisualPreparationTests.test_metadata_registry_absence_and_missing_packages_are_explicit) ... ok
+test_projection_opens_only_public_recipe_inputs_and_registry_no_weights_or_image_io (test_visual_preparation.VisualPreparationTests.test_projection_opens_only_public_recipe_inputs_and_registry_no_weights_or_image_io) ... ok
+test_projection_preserves_51_development_references_and_separates_input (test_visual_preparation.VisualPreparationTests.test_projection_preserves_51_development_references_and_separates_input) ... ok
+test_public_status_has_no_cases_or_reference_keys (test_visual_preparation.VisualPreparationTests.test_public_status_has_no_cases_or_reference_keys) ... ok
+test_real_preflight_uses_metadata_without_model_imports_or_paths_in_payload (test_visual_preparation.VisualPreparationTests.test_real_preflight_uses_metadata_without_model_imports_or_paths_in_payload) ... ok
+test_registered_architecture_does_not_claim_inference_or_hardware_fit (test_visual_preparation.VisualPreparationTests.test_registered_architecture_does_not_claim_inference_or_hardware_fit) ... ok
+test_stale_sources_and_raised_image_permissions_fail_closed (test_visual_preparation.VisualPreparationTests.test_stale_sources_and_raised_image_permissions_fail_closed) ... ok
+test_wrong_split_is_rejected_even_if_loader_contract_is_bypassed (test_visual_preparation.VisualPreparationTests.test_wrong_split_is_rejected_even_if_loader_contract_is_bypassed) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.629s
+
+OK
+{
+  "validation": {
+    "valid": true,
+    "errors": []
+  },
+  "display_required": false,
+  "methods": [
+    {
+      "method": "retrieval",
+      "status": "measured"
+    },
+    {
+      "method": "textual_model",
+      "status": "not_run"
+    },
+    {
+      "method": "multimodal_candidate",
+      "status": "not_run"
+    }
+  ]
+}
+{
+  "validation": {
+    "valid": true,
+    "errors": []
+  },
+  "display_required": true,
+  "methods": [
+    {
+      "method": "retrieval",
+      "status": "measured"
+    },
+    {
+      "method": "textual_model",
+      "status": "not_run"
+    },
+    {
+      "method": "multimodal_candidate",
+      "status": "not_run"
+    }
+  ]
+}

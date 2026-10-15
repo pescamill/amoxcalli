@@ -1,0 +1,14 @@
+{
+  "sha256": {
+    "nahuatl_local/platform_web/app.js": "debff25e37e0d9a90ee2686fcdcc206957808312c08a3a2b96f8208bec920418",
+    "nahuatl_local/platform_web/documentary.js": "dd56343d765651152291d5fb3df36a682e29a9627276a4761a782cc541dfbe22",
+    "nahuatl_local/platform_web/edition.css": "320d57a26607276a721472fdf6a49870c672e0df1fea95325c53a75ffbf58fe4",
+    "nahuatl_local/platform_web/learning.js": "e3460d9c25631b6a20d1483958b4be3f8a30b92f01b1d87d2c91a5f6aa3f4ed4",
+    "nahuatl_local/platform_web/style.css": "7ff7852f8d5917370926c9dd2bfd3ea7c6d5cd0374c22896f39f7a667df97314",
+    "scripts/test-reading-continuity.py": "3ece5b18b7473a35894e9415c73731180961ade7bced2b9d0bef954409667acf",
+    "scripts/test-reading-documentary.py": "9ef56f214a017f6a8b9841c58ac214eb6dc50729e9fa88b54e85f0b64ddda7d8",
+    "tests/platform_ui.cjs": "63ba47366d3d9099c9d54945e5f16c5c961d2641e98f28ac5d00fc19f7c0e338",
+    "tests/reading_continuity.cjs": "80906c0fec6893bbc8e9e3da55bdd2155f64a2273833a2d2ca9f2c15c723f7da",
+    "tests/reading_documentary_continuity.cjs": "e272fca8560f057a77d78925af8b79ced5bd842e1aa2de21977dcfc5edf0296b"
+  }
+}

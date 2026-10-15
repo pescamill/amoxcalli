@@ -1,0 +1,374 @@
+{
+  "files": [
+    {
+      "current_sha256": "f921a0c3546d9c0115e14856ea7bdc1ce26a770bacc645e62d96fbf0c32f4b7f",
+      "expected_sha256": "f921a0c3546d9c0115e14856ea7bdc1ce26a770bacc645e62d96fbf0c32f4b7f",
+      "reference": "human-decisions.blank.json"
+    },
+    {
+      "current_sha256": "fac99c6568f39dd47baa1851003c73bbb687dde5a9b4b208796552dc60a7e2f3",
+      "expected_sha256": "fac99c6568f39dd47baa1851003c73bbb687dde5a9b4b208796552dc60a7e2f3",
+      "reference": "package.json"
+    },
+    {
+      "current_sha256": "4dfe0e998ecc2ef8845e66834caf0b9697615aecb01ee9da5fda3ece28cbd689",
+      "expected_sha256": "4dfe0e998ecc2ef8845e66834caf0b9697615aecb01ee9da5fda3ece28cbd689",
+      "reference": "package.md"
+    }
+  ],
+  "human_review": "pending",
+  "issues": [
+    {
+      "code": "source_changed",
+      "current_sha256": "f9202406ac01d43e97a6acfe6acf329e1562aa944b790a0225ef3868b6221526",
+      "expected_sha256": "5731a9adce34cafc3ee2719033e53a53777427d6cc8ca72b7d591e043fbb1801",
+      "message": "La fuente cambió respecto al SHA-256 previo.",
+      "reference": "docs/REVISION_LECTURA.md"
+    },
+    {
+      "code": "source_changed",
+      "current_sha256": "cffe8d26a9d61b2ca0e3eb7d8a2a490013fecf6f0a8ecedf5b82dacf79559a36",
+      "expected_sha256": "c9cd1d1e03f5671f53e77009a0d5d4d7f361baf9f73898b66603266e6cb0cb9f",
+      "message": "La fuente cambió respecto al SHA-256 previo.",
+      "reference": "nahuatl_local/lesson_review_packet.py"
+    }
+  ],
+  "kind": "reading_review_status",
+  "lesson_id": "aves",
+  "limits": [
+    "Vigencia técnica no acredita revisión humana, cotejo lingüístico, derechos nuevos ni aprendizaje.",
+    "Las revisiones y tareas humanas siguen pendientes; este comando no aplica decisiones ni cierra tareas.",
+    "Si el paquete no es valid, regenerarlo en una carpeta nueva; conservar el paquete y las notas previas.",
+    "Solo se informa metadata pública y hashes; no se copian claves, filas de reserva ni notas humanas.",
+    "Las URLs no se consultan. No hay red, modelo ni lectura de datos privados."
+  ],
+  "llm_calls": 0,
+  "network_requests": 0,
+  "package": "reports/reading-review/aves-009",
+  "ready": false,
+  "schema_version": 1,
+  "semantic_validation": "not_run",
+  "sources": [
+    {
+      "current_sha256": "e05dc8323bb947378fa2720df10ba325c1a9af455766daf7e42a612ff8ec62cb",
+      "expected_sha256": "e05dc8323bb947378fa2720df10ba325c1a9af455766daf7e42a612ff8ec62cb",
+      "reference": "THIRD_PARTY_NOTICES.md"
+    },
+    {
+      "current_sha256": "a3d2da91d6e09d9063f7714ab28ec1945621f4c21580a0e6d71be3d62c1bb284",
+      "expected_sha256": "a3d2da91d6e09d9063f7714ab28ec1945621f4c21580a0e6d71be3d62c1bb284",
+      "reference": "configs/documentary-evaluation-v1.json"
+    },
+    {
+      "current_sha256": "fbdc67bd2a621978ac096af53038d61ed5ba56069061a2bd4c363456502f73aa",
+      "expected_sha256": "fbdc67bd2a621978ac096af53038d61ed5ba56069061a2bd4c363456502f73aa",
+      "reference": "configs/sources.json"
+    },
+    {
+      "current_sha256": "954a7bc1c12beb754e424839736f23cde6c76adfd75b1b0bb909c01f4889ef70",
+      "expected_sha256": "954a7bc1c12beb754e424839736f23cde6c76adfd75b1b0bb909c01f4889ef70",
+      "reference": "corpus/archive-source-v3.json"
+    },
+    {
+      "current_sha256": "ed8e85f560e78c43385f91ac99d08dee071183749bc1f1aa1b88f1b3a2530878",
+      "expected_sha256": "ed8e85f560e78c43385f91ac99d08dee071183749bc1f1aa1b88f1b3a2530878",
+      "reference": "corpus/axolotl/axolotl.csv"
+    },
+    {
+      "current_sha256": "a4d19f31da76c471a0ad4a6f53aa1693b0516680fe9338a83ffd0561cd072dbf",
+      "expected_sha256": "a4d19f31da76c471a0ad4a6f53aa1693b0516680fe9338a83ffd0561cd072dbf",
+      "reference": "corpus/editorial-batch-007-v9.json"
+    },
+    {
+      "current_sha256": "f9535b72367ef9afc8744e3122017a58ab462863de77b70ee61cedfb98594fe5",
+      "expected_sha256": "f9535b72367ef9afc8744e3122017a58ab462863de77b70ee61cedfb98594fe5",
+      "reference": "corpus/editorial-releases.json"
+    },
+    {
+      "current_sha256": "fe3d8ff9c4b0f8b501002b7caef8feb95304a66877f8bf12ba582d8cebd72c64",
+      "expected_sha256": "fe3d8ff9c4b0f8b501002b7caef8feb95304a66877f8bf12ba582d8cebd72c64",
+      "reference": "corpus/flor-lexicon-v8.json"
+    },
+    {
+      "current_sha256": "9cdd2ef1c6274dce7b24d2922afd134549673232bbcd621a657826a55c6c0db1",
+      "expected_sha256": "9cdd2ef1c6274dce7b24d2922afd134549673232bbcd621a657826a55c6c0db1",
+      "reference": "corpus/gdn-lexicon-v6.json"
+    },
+    {
+      "current_sha256": "a8a377fa70fdb2a2ae6af2b27d555830bf9dad0b746e021579fd1116bf285fe3",
+      "expected_sha256": "a8a377fa70fdb2a2ae6af2b27d555830bf9dad0b746e021579fd1116bf285fe3",
+      "reference": "corpus/glyph-associations-v7.json"
+    },
+    {
+      "current_sha256": "e0947dd513698180eb8eabcbf74477069a4ba28c2470eaaa3d8c7354a36c2bf1",
+      "expected_sha256": "e0947dd513698180eb8eabcbf74477069a4ba28c2470eaaa3d8c7354a36c2bf1",
+      "reference": "corpus/glyph-images-v4.json"
+    },
+    {
+      "current_sha256": "d71e6a2baece5b3c1791722331eb4763c2f7b5438c8e2f81afc845060a1ffc98",
+      "expected_sha256": "d71e6a2baece5b3c1791722331eb4763c2f7b5438c8e2f81afc845060a1ffc98",
+      "reference": "corpus/glyph-lexicon-v5.json"
+    },
+    {
+      "current_sha256": "71257931462103073b28ee378d82c24207daaf5bfb4d9a1256bb80eb69444a27",
+      "expected_sha256": "71257931462103073b28ee378d82c24207daaf5bfb4d9a1256bb80eb69444a27",
+      "reference": "corpus/glyph-links-v2.json"
+    },
+    {
+      "current_sha256": "983e976b166287d973ade12e07fc3fa2a9ff843e4740e2efc56d48caae292004",
+      "expected_sha256": "983e976b166287d973ade12e07fc3fa2a9ff843e4740e2efc56d48caae292004",
+      "reference": "corpus/glyph-source-images-v5.json"
+    },
+    {
+      "current_sha256": "18242d28da77f41e888a7cd1a771da972fee9fe0c58f21892a4b66893e101e2f",
+      "expected_sha256": "18242d28da77f41e888a7cd1a771da972fee9fe0c58f21892a4b66893e101e2f",
+      "reference": "corpus/learning-v1.json"
+    },
+    {
+      "current_sha256": "c720d5c3ccb8e8b7026965d6e19343ea5c52be58e99163396751732fc354271f",
+      "expected_sha256": "c720d5c3ccb8e8b7026965d6e19343ea5c52be58e99163396751732fc354271f",
+      "reference": "corpus/pictography/catalog.json"
+    },
+    {
+      "current_sha256": "d64f372778fdcf4ee8e91de1ad546d0f458094c926cb5755fd511db481e5795c",
+      "expected_sha256": "d64f372778fdcf4ee8e91de1ad546d0f458094c926cb5755fd511db481e5795c",
+      "reference": "corpus/seed.json"
+    },
+    {
+      "current_sha256": "87c4f7d3afcbaac391dbf99116aa7ea6d49d8cefd0264a963b8fc363eb276d53",
+      "expected_sha256": "87c4f7d3afcbaac391dbf99116aa7ea6d49d8cefd0264a963b8fc363eb276d53",
+      "reference": "docs/CONSULTA_DOCUMENTAL.md"
+    },
+    {
+      "current_sha256": "5474512ec6502171b9801ca702afea19259cd0108c8fe41b2e7f8692237d317a",
+      "expected_sha256": "5474512ec6502171b9801ca702afea19259cd0108c8fe41b2e7f8692237d317a",
+      "reference": "docs/EVALUACION_DOCUMENTAL.md"
+    },
+    {
+      "current_sha256": "44822a4a69d9248013d09d44a2a028afee8b3a848e699bfc87840cf0699c4141",
+      "expected_sha256": "44822a4a69d9248013d09d44a2a028afee8b3a848e699bfc87840cf0699c4141",
+      "reference": "docs/FUENTES.md"
+    },
+    {
+      "current_sha256": "4dc42577507969ad7874588c1809053c281a1744aa04a01e0849ba4bbf4ffcde",
+      "expected_sha256": "4dc42577507969ad7874588c1809053c281a1744aa04a01e0849ba4bbf4ffcde",
+      "reference": "docs/ITERACIONES.md"
+    },
+    {
+      "current_sha256": "e816e52b3a3ccfecf0bb1186b9f4f87679d29cf5e9eb16b4b229b58c0e67edb5",
+      "expected_sha256": "e816e52b3a3ccfecf0bb1186b9f4f87679d29cf5e9eb16b4b229b58c0e67edb5",
+      "reference": "docs/LABORATORIO.md"
+    },
+    {
+      "current_sha256": "d23a46e6cea6d7a75c19d2493a39ef0d8168fcd1dc60c8b2071858a53c72eced",
+      "expected_sha256": "d23a46e6cea6d7a75c19d2493a39ef0d8168fcd1dc60c8b2071858a53c72eced",
+      "reference": "docs/PILOTO_INSTITUCIONAL.md"
+    },
+    {
+      "current_sha256": "637636673fae116e6a21bac70c02ce769086647df7b368d2f2758a77ece60e9d",
+      "expected_sha256": "637636673fae116e6a21bac70c02ce769086647df7b368d2f2758a77ece60e9d",
+      "reference": "docs/PROPOSITO.md"
+    },
+    {
+      "current_sha256": "f9202406ac01d43e97a6acfe6acf329e1562aa944b790a0225ef3868b6221526",
+      "expected_sha256": "5731a9adce34cafc3ee2719033e53a53777427d6cc8ca72b7d591e043fbb1801",
+      "reference": "docs/REVISION_LECTURA.md"
+    },
+    {
+      "current_sha256": "26745755a106e86f46a06ac44e7fe1608724d4bc639c94fc8cfdb60082b7919a",
+      "expected_sha256": "26745755a106e86f46a06ac44e7fe1608724d4bc639c94fc8cfdb60082b7919a",
+      "reference": "docs/TRABAJO_AUTONOMO.md"
+    },
+    {
+      "current_sha256": "354f609f64b64aad9c7f365eecefa45a4aff46c3b9cc2166b02d4859f2c2fbd5",
+      "expected_sha256": "354f609f64b64aad9c7f365eecefa45a4aff46c3b9cc2166b02d4859f2c2fbd5",
+      "reference": "editorial/lesson-decisions.json"
+    },
+    {
+      "current_sha256": "6f1752e4b133ed643be8bb881377fc4ae3df9805f7ca2c9b066f6df595ec7cd0",
+      "expected_sha256": "6f1752e4b133ed643be8bb881377fc4ae3df9805f7ca2c9b066f6df595ec7cd0",
+      "reference": "nahuatl_local/community.py"
+    },
+    {
+      "current_sha256": "4afae8d8100e98e85dc5bbb962ab6739d7d4a9204eb04ec07166ea5835d9fc32",
+      "expected_sha256": "4afae8d8100e98e85dc5bbb962ab6739d7d4a9204eb04ec07166ea5835d9fc32",
+      "reference": "nahuatl_local/community_web/catalog.json"
+    },
+    {
+      "current_sha256": "48e7eeadae4f2f21310423cde925b636baadf578274b0c7cbe533aa042b8c781",
+      "expected_sha256": "48e7eeadae4f2f21310423cde925b636baadf578274b0c7cbe533aa042b8c781",
+      "reference": "nahuatl_local/corpus.py"
+    },
+    {
+      "current_sha256": "e9ca1706a94c00972386d41cbd9d58aab170609e8ffe00f1813810dd4051a11c",
+      "expected_sha256": "e9ca1706a94c00972386d41cbd9d58aab170609e8ffe00f1813810dd4051a11c",
+      "reference": "nahuatl_local/documentary_evaluation.py"
+    },
+    {
+      "current_sha256": "2f14af0af81432f694e0ab86f1bbe5d74765af255160e61cfe8ca7d387ef8538",
+      "expected_sha256": "2f14af0af81432f694e0ab86f1bbe5d74765af255160e61cfe8ca7d387ef8538",
+      "reference": "nahuatl_local/documentary_laboratory.py"
+    },
+    {
+      "current_sha256": "a1876f4294da4ae338380cc5e484a679aaf4ef8ad1cb758c1f37e2a5264ac06b",
+      "expected_sha256": "a1876f4294da4ae338380cc5e484a679aaf4ef8ad1cb758c1f37e2a5264ac06b",
+      "reference": "nahuatl_local/documentary_retrieval.py"
+    },
+    {
+      "current_sha256": "93146ea4f0fa65423c3177d0c2c41a7f6e0825f5740e92aaa857ef1fe603e533",
+      "expected_sha256": "93146ea4f0fa65423c3177d0c2c41a7f6e0825f5740e92aaa857ef1fe603e533",
+      "reference": "nahuatl_local/documentary_retrieval_evaluation.py"
+    },
+    {
+      "current_sha256": "4ddfb817572c571fd3b3694e1673223ca6af45b3cfd22c8b5bc3587346f4cc6c",
+      "expected_sha256": "4ddfb817572c571fd3b3694e1673223ca6af45b3cfd22c8b5bc3587346f4cc6c",
+      "reference": "nahuatl_local/editorial_pipeline.py"
+    },
+    {
+      "current_sha256": "3550f687a7d190121fb215e949ba397a0def2a5e5e5c9b3d39ec6ea7893ab19c",
+      "expected_sha256": "3550f687a7d190121fb215e949ba397a0def2a5e5e5c9b3d39ec6ea7893ab19c",
+      "reference": "nahuatl_local/iteration.py"
+    },
+    {
+      "current_sha256": "8dd556cc49bf57c0ab731ea9991b50e3eb32a14ae86dbbb68fc839c62588de64",
+      "expected_sha256": "8dd556cc49bf57c0ab731ea9991b50e3eb32a14ae86dbbb68fc839c62588de64",
+      "reference": "nahuatl_local/laboratory.py"
+    },
+    {
+      "current_sha256": "6569a0d1798054696718a0ca77d4a7292d0ba04425db414881ce675c6657c232",
+      "expected_sha256": "6569a0d1798054696718a0ca77d4a7292d0ba04425db414881ce675c6657c232",
+      "reference": "nahuatl_local/learning.py"
+    },
+    {
+      "current_sha256": "98679181e0e75d0ffb795aa9de18ea276b541e7931a0715760d5711f284d9d3f",
+      "expected_sha256": "98679181e0e75d0ffb795aa9de18ea276b541e7931a0715760d5711f284d9d3f",
+      "reference": "nahuatl_local/lesson_audit.py"
+    },
+    {
+      "current_sha256": "cffe8d26a9d61b2ca0e3eb7d8a2a490013fecf6f0a8ecedf5b82dacf79559a36",
+      "expected_sha256": "c9cd1d1e03f5671f53e77009a0d5d4d7f361baf9f73898b66603266e6cb0cb9f",
+      "reference": "nahuatl_local/lesson_review_packet.py"
+    },
+    {
+      "current_sha256": "c64759cdadbca7389cb69f92c2c895cc2c95cb6f9152c4125f6747941e969bbe",
+      "expected_sha256": "c64759cdadbca7389cb69f92c2c895cc2c95cb6f9152c4125f6747941e969bbe",
+      "reference": "nahuatl_local/model_status.py"
+    },
+    {
+      "current_sha256": "8469ba0b8f7780375fb63d69855687b81d9f88b124bad85a10a2d1b8d2583a65",
+      "expected_sha256": "8469ba0b8f7780375fb63d69855687b81d9f88b124bad85a10a2d1b8d2583a65",
+      "reference": "nahuatl_local/pictography.py"
+    },
+    {
+      "current_sha256": "8ec2548a586dc3dc90a9f0e9c35bc6401f24bd01aa1e71c78e0b248e2a539d7c",
+      "expected_sha256": "8ec2548a586dc3dc90a9f0e9c35bc6401f24bd01aa1e71c78e0b248e2a539d7c",
+      "reference": "nahuatl_local/platform.py"
+    },
+    {
+      "current_sha256": "d3a8b795b9b52e83ab5a34654d97512a71cd643df99914c8f808bc3e7b33741f",
+      "expected_sha256": "d3a8b795b9b52e83ab5a34654d97512a71cd643df99914c8f808bc3e7b33741f",
+      "reference": "nahuatl_local/platform_web/app.js"
+    },
+    {
+      "current_sha256": "2d928d3c3f3f2263c20825e4f706ffbf5383523a7520cc335eb121a3333304d5",
+      "expected_sha256": "2d928d3c3f3f2263c20825e4f706ffbf5383523a7520cc335eb121a3333304d5",
+      "reference": "nahuatl_local/platform_web/documentary.js"
+    },
+    {
+      "current_sha256": "5fd6d5029e6796206a1b3f9b1044590204fcf3360215883bc7450118059ac85e",
+      "expected_sha256": "5fd6d5029e6796206a1b3f9b1044590204fcf3360215883bc7450118059ac85e",
+      "reference": "nahuatl_local/platform_web/index.html"
+    },
+    {
+      "current_sha256": "c2d7a23749c189f40aad5a6bfab1d1a0a3ec2719ea21449f363af0247d1a0243",
+      "expected_sha256": "c2d7a23749c189f40aad5a6bfab1d1a0a3ec2719ea21449f363af0247d1a0243",
+      "reference": "nahuatl_local/platform_web/laboratory.css"
+    },
+    {
+      "current_sha256": "b84dbfa697d47f7aecf2c388e2730b980a0a8e2f27a27c726b48a4b787706f67",
+      "expected_sha256": "b84dbfa697d47f7aecf2c388e2730b980a0a8e2f27a27c726b48a4b787706f67",
+      "reference": "nahuatl_local/platform_web/laboratory.js"
+    },
+    {
+      "current_sha256": "d887aa1b5f422d9faf5fb58de8989a0f2312b1fcc5fb559346d5d0858db80bc1",
+      "expected_sha256": "d887aa1b5f422d9faf5fb58de8989a0f2312b1fcc5fb559346d5d0858db80bc1",
+      "reference": "nahuatl_local/platform_web/learning.js"
+    },
+    {
+      "current_sha256": "2e218a635f61fa788f69acd98039bf04d1098700272d725715a7b3b3c2bad9e0",
+      "expected_sha256": "2e218a635f61fa788f69acd98039bf04d1098700272d725715a7b3b3c2bad9e0",
+      "reference": "nahuatl_local/platform_web/project.js"
+    },
+    {
+      "current_sha256": "338feafe4b58070b8e5153745b8132edde8fdc241129d3c002df18d1c7de99e5",
+      "expected_sha256": "338feafe4b58070b8e5153745b8132edde8fdc241129d3c002df18d1c7de99e5",
+      "reference": "nahuatl_local/platform_web/style.css"
+    },
+    {
+      "current_sha256": "53d360bab2c9e4b27bc055333bf2723aea5fbc54d647ccedf07426bb60d23b16",
+      "expected_sha256": "53d360bab2c9e4b27bc055333bf2723aea5fbc54d647ccedf07426bb60d23b16",
+      "reference": "nahuatl_local/platform_web/training-data.js"
+    },
+    {
+      "current_sha256": "bdebbd730a950e051a05042f5316a34a3a93966373381e405d01416ef0e235db",
+      "expected_sha256": "bdebbd730a950e051a05042f5316a34a3a93966373381e405d01416ef0e235db",
+      "reference": "nahuatl_local/research.py"
+    },
+    {
+      "current_sha256": "30a9c219e0a2e940a46118d3b4e96bf7a10a243b19ccd7eebf435454a79f310d",
+      "expected_sha256": "30a9c219e0a2e940a46118d3b4e96bf7a10a243b19ccd7eebf435454a79f310d",
+      "reference": "reports/documentary-evaluation-validation-v1.json"
+    },
+    {
+      "current_sha256": "03a094985925759783be45a310a72184b57b2b2b151e7240d928555ab4203dc1",
+      "expected_sha256": "03a094985925759783be45a310a72184b57b2b2b151e7240d928555ab4203dc1",
+      "reference": "reports/documentary-laboratory-display-v1.json"
+    },
+    {
+      "current_sha256": "cfe7a02b879de24e0142d62506ccc43bf7a587dc95953f38abf9988f1d47dd3d",
+      "expected_sha256": "cfe7a02b879de24e0142d62506ccc43bf7a587dc95953f38abf9988f1d47dd3d",
+      "reference": "reports/documentary-laboratory-v1.json"
+    },
+    {
+      "current_sha256": "94ef70f05f356aa9811000ed1298a8eca22d0eaa82295756152ea336864c3e9b",
+      "expected_sha256": "94ef70f05f356aa9811000ed1298a8eca22d0eaa82295756152ea336864c3e9b",
+      "reference": "reports/documentary-retrieval-v1.json"
+    },
+    {
+      "current_sha256": "60d8e7d05a892d731a41cbd594afbfb216a2cfba89f24f807b10fd35ca256ece",
+      "expected_sha256": "60d8e7d05a892d731a41cbd594afbfb216a2cfba89f24f807b10fd35ca256ece",
+      "reference": "reports/iterations/iteration-008/inventory.json"
+    },
+    {
+      "current_sha256": "c3bdc7fe4a9120e6008970b0d7bf1959012c61370a260b7461a17c6f0e6f10a2",
+      "expected_sha256": "c3bdc7fe4a9120e6008970b0d7bf1959012c61370a260b7461a17c6f0e6f10a2",
+      "reference": "reports/iterations/iteration-008/queue.json"
+    },
+    {
+      "current_sha256": "5d1fb7781f114ca05ba5fe24588c60cde7327cd5d5086e8abf0fb7cfa5e5206c",
+      "expected_sha256": "5d1fb7781f114ca05ba5fe24588c60cde7327cd5d5086e8abf0fb7cfa5e5206c",
+      "reference": "reports/iterations/state.json"
+    },
+    {
+      "current_sha256": "dd3a8d823253d5faae2cf82d707290041777257d81c05a319009a72920012819",
+      "expected_sha256": "dd3a8d823253d5faae2cf82d707290041777257d81c05a319009a72920012819",
+      "reference": "scripts/test-platform-ui.py"
+    },
+    {
+      "current_sha256": "7671129a6bc425f9c6181a08d719b4d87cf8f977b48602a5705baeb07b3485f3",
+      "expected_sha256": "7671129a6bc425f9c6181a08d719b4d87cf8f977b48602a5705baeb07b3485f3",
+      "reference": "tests/platform_ui.cjs"
+    },
+    {
+      "current_sha256": "304e5579a9f3d0b042473e422a8c8b2b8fdcdeb3aee25aae6eb504582d4ade41",
+      "expected_sha256": "304e5579a9f3d0b042473e422a8c8b2b8fdcdeb3aee25aae6eb504582d4ade41",
+      "reference": "tests/test_iteration.py"
+    },
+    {
+      "current_sha256": "85906ccf0f1fb93c5eb18ca845936b4c10906fa0ebeaf80b487d84dd5ef3865f",
+      "expected_sha256": "85906ccf0f1fb93c5eb18ca845936b4c10906fa0ebeaf80b487d84dd5ef3865f",
+      "reference": "tests/test_laboratory.py"
+    }
+  ],
+  "state": "stale"
+}
