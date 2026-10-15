@@ -96,6 +96,7 @@ function clickableWords(text){
 // Diccionario: si una forma flexionada no tiene entrada, sugerir su raíz.
 async function dictionaryWordSuggestion(slot,query){
  if(!slot||!/^[\p{L}\p{M}]+$/u.test(query))return;
+ if(typeof askSuggestion==='function')return askSuggestion(slot,query);
  try{
   const data=await morphWord(query);
   if(!slot.isConnected)return;
