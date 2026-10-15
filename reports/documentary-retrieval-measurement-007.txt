@@ -1,0 +1,33 @@
+{
+  "validation": {
+    "valid": true,
+    "errors": []
+  },
+  "metrics": {
+    "queries": 123,
+    "complete": 119,
+    "correct_source": 119,
+    "supported_citations": 121,
+    "covered": 121,
+    "abstained": 2,
+    "relevant_results": 121,
+    "exact_fields_matched": 840,
+    "exact_fields_required": 860,
+    "categories": {
+      "complete": 119,
+      "abstention": 2,
+      "incomplete_or_unsupported": 2
+    }
+  },
+  "timing": {
+    "index_build_seconds": 5.8412288329564035,
+    "query_total_seconds": 0.7653095447458327,
+    "query_mean_seconds": 0.0062220288190718105,
+    "query_max_seconds": 0.05835075001232326
+  },
+  "memory": {
+    "python_current_bytes": 119849692,
+    "python_peak_bytes": 121584467,
+    "measurement": "tracemalloc; excludes native/process memory"
+  }
+}

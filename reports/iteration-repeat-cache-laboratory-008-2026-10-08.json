@@ -1,0 +1,92 @@
+{
+  "checks": {
+    "66_human_tasks_open": true,
+    "all_task_ids_preserved": true,
+    "all_three_gates_valid": true,
+    "battery_validation_preserved": true,
+    "corpus_battery_rights_hashes_preserved": true,
+    "current_source_manifest_matches": true,
+    "inventory.json_byte_identical": true,
+    "inventory.md_byte_identical": true,
+    "queue.json_byte_identical": true,
+    "retrieval_report_preserved": true,
+    "runs_prefix_preserved": true,
+    "state_byte_identical_repeat": true,
+    "state_history_prefix_preserved": true,
+    "task_decisions_preserved": true,
+    "task_history_prefixes_preserved": true,
+    "task_notes_prefixes_preserved": true,
+    "task_snapshots_prefixes_preserved": true,
+    "task_statuses_preserved": true
+  },
+  "current_inputs": {
+    "reports/documentary-laboratory-display-v1.json": "03a094985925759783be45a310a72184b57b2b2b151e7240d928555ab4203dc1",
+    "reports/documentary-laboratory-v1.json": "cfe7a02b879de24e0142d62506ccc43bf7a587dc95953f38abf9988f1d47dd3d",
+    "reports/documentary-retrieval-v1.json": "94ef70f05f356aa9811000ed1298a8eca22d0eaa82295756152ea336864c3e9b"
+  },
+  "limits": [
+    "Preserved local hashes and state; no human review performed or remote provenance rechecked.",
+    "No private database, model weights, image evaluation or final reserve run was opened by this verification."
+  ],
+  "repeat_hashes": {
+    "inventory.json": [
+      "60d8e7d05a892d731a41cbd594afbfb216a2cfba89f24f807b10fd35ca256ece",
+      "60d8e7d05a892d731a41cbd594afbfb216a2cfba89f24f807b10fd35ca256ece"
+    ],
+    "inventory.md": [
+      "0901c43025c6645807e63e971664123a9290e97ab54988c9d77c29ff89f2a09a",
+      "0901c43025c6645807e63e971664123a9290e97ab54988c9d77c29ff89f2a09a"
+    ],
+    "queue.json": [
+      "c3bdc7fe4a9120e6008970b0d7bf1959012c61370a260b7461a17c6f0e6f10a2",
+      "c3bdc7fe4a9120e6008970b0d7bf1959012c61370a260b7461a17c6f0e6f10a2"
+    ]
+  },
+  "schema_version": 1,
+  "state_after_sha256": "5d1fb7781f114ca05ba5fe24588c60cde7327cd5d5086e8abf0fb7cfa5e5206c",
+  "state_before_sha256": "c17a2410eb459a7285381a6e728fe71cc44c333aa86bd24b231d7afba06088d8",
+  "tasks": {
+    "categories": {
+      "human": 66
+    },
+    "historical_tasks": 4,
+    "stale_decisions": 5,
+    "statuses": {
+      "open": 66
+    },
+    "total": 66
+  },
+  "technical_progress": {
+    "evaluation": {
+      "counts": {
+        "development": {
+          "textual": 123,
+          "visual": 51
+        },
+        "reserve": {
+          "textual": 37,
+          "visual": 15
+        }
+      },
+      "fingerprint": "f2b2996e86d3595ff117b014962340eafbed0e894cc73e9b14f56a7008a09fb4",
+      "invalid_queries": 0,
+      "ready": true,
+      "reserve_groups_independent": true,
+      "scope": "local_documentary_fields_only",
+      "validation_errors": [],
+      "visual_model_evaluation_enabled": false
+    },
+    "laboratory": {
+      "measured_methods": [
+        "retrieval"
+      ],
+      "ready": true,
+      "validation_errors": []
+    },
+    "retrieval": {
+      "measured_queries": 123,
+      "ready": true,
+      "validation_errors": []
+    }
+  }
+}
