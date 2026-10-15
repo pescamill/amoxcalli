@@ -1,0 +1,192 @@
+{
+  "battery": {
+    "counts": {
+      "development": {
+        "textual": 123,
+        "visual": 51
+      },
+      "reserve": {
+        "textual": 37,
+        "visual": 15
+      }
+    },
+    "evaluated_modality": "textual",
+    "evaluated_split": "development",
+    "path": "configs/documentary-evaluation-v1.json",
+    "reserve_used": false,
+    "sha256": "a3d2da91d6e09d9063f7714ab28ec1945621f4c21580a0e6d71be3d62c1bb284"
+  },
+  "comparison": "documentary-development-v1",
+  "display_evidence": {
+    "reports/documentary-laboratory-display-v1.json": "faceb51ec47a99a95492fe5de24547199172e8168042662d7f5082f0233e46e6"
+  },
+  "evaluation_fingerprint": "f2b2996e86d3595ff117b014962340eafbed0e894cc73e9b14f56a7008a09fb4",
+  "human_review": "pending",
+  "input_hashes": {
+    "configs/documentary-evaluation-v1.json": "a3d2da91d6e09d9063f7714ab28ec1945621f4c21580a0e6d71be3d62c1bb284",
+    "configs/sources.json": "fbdc67bd2a621978ac096af53038d61ed5ba56069061a2bd4c363456502f73aa",
+    "corpus/archive-source-v3.json": "954a7bc1c12beb754e424839736f23cde6c76adfd75b1b0bb909c01f4889ef70",
+    "corpus/axolotl/axolotl.csv": "ed8e85f560e78c43385f91ac99d08dee071183749bc1f1aa1b88f1b3a2530878",
+    "corpus/editorial-batch-007-v9.json": "a4d19f31da76c471a0ad4a6f53aa1693b0516680fe9338a83ffd0561cd072dbf",
+    "corpus/editorial-releases.json": "f9535b72367ef9afc8744e3122017a58ab462863de77b70ee61cedfb98594fe5",
+    "corpus/flor-lexicon-v8.json": "fe3d8ff9c4b0f8b501002b7caef8feb95304a66877f8bf12ba582d8cebd72c64",
+    "corpus/gdn-lexicon-v6.json": "9cdd2ef1c6274dce7b24d2922afd134549673232bbcd621a657826a55c6c0db1",
+    "corpus/glyph-associations-v7.json": "a8a377fa70fdb2a2ae6af2b27d555830bf9dad0b746e021579fd1116bf285fe3",
+    "corpus/glyph-images-v4.json": "e0947dd513698180eb8eabcbf74477069a4ba28c2470eaaa3d8c7354a36c2bf1",
+    "corpus/glyph-lexicon-v5.json": "d71e6a2baece5b3c1791722331eb4763c2f7b5438c8e2f81afc845060a1ffc98",
+    "corpus/glyph-links-v2.json": "71257931462103073b28ee378d82c24207daaf5bfb4d9a1256bb80eb69444a27",
+    "corpus/glyph-source-images-v5.json": "983e976b166287d973ade12e07fc3fa2a9ff843e4740e2efc56d48caae292004",
+    "corpus/learning-v1.json": "18242d28da77f41e888a7cd1a771da972fee9fe0c58f21892a4b66893e101e2f",
+    "corpus/pictography/catalog.json": "c720d5c3ccb8e8b7026965d6e19343ea5c52be58e99163396751732fc354271f",
+    "corpus/seed.json": "d64f372778fdcf4ee8e91de1ad546d0f458094c926cb5755fd511db481e5795c",
+    "docs/EVALUACION_DOCUMENTAL.md": "5474512ec6502171b9801ca702afea19259cd0108c8fe41b2e7f8692237d317a",
+    "nahuatl_local/community.py": "6f1752e4b133ed643be8bb881377fc4ae3df9805f7ca2c9b066f6df595ec7cd0",
+    "nahuatl_local/community_web/catalog.json": "4afae8d8100e98e85dc5bbb962ab6739d7d4a9204eb04ec07166ea5835d9fc32",
+    "nahuatl_local/corpus.py": "48e7eeadae4f2f21310423cde925b636baadf578274b0c7cbe533aa042b8c781",
+    "nahuatl_local/documentary_evaluation.py": "e9ca1706a94c00972386d41cbd9d58aab170609e8ffe00f1813810dd4051a11c",
+    "nahuatl_local/documentary_laboratory.py": "9ecad7caa6ca1e8f9a3fb9cfffa595622bf1356ed51fb331e04ea017cda2a93a",
+    "nahuatl_local/documentary_retrieval.py": "a1876f4294da4ae338380cc5e484a679aaf4ef8ad1cb758c1f37e2a5264ac06b",
+    "nahuatl_local/documentary_retrieval_evaluation.py": "f53d809b4ad6384ae13af694ac1a053871c5aa5ee6d41f8e15ba1c32658683e0",
+    "nahuatl_local/pictography.py": "8469ba0b8f7780375fb63d69855687b81d9f88b124bad85a10a2d1b8d2583a65",
+    "reports/documentary-evaluation-validation-v1.json": "30a9c219e0a2e940a46118d3b4e96bf7a10a243b19ccd7eebf435454a79f310d",
+    "reports/documentary-retrieval-v1.json": "a84596ba335bf6f700c536f31c698ade497a0c5e5813220c70bbb5c18bcacf69"
+  },
+  "limitation": "Consultas parametrizadas sobre fichas conocidas: no mide comprensión general, traducción ni reconocimiento de imágenes. Las referencias son documentales, sin revisión humana nueva.",
+  "rights": {
+    "evaluation": false,
+    "external_send": false,
+    "image_copy": false,
+    "image_model_input": false,
+    "local_documentary_fields": "authorized_local_scope",
+    "training": false
+  },
+  "runs": [
+    {
+      "cost": {
+        "context": "perf_counter; index and queries with tracemalloc enabled; sources loaded before tracing; monetary cost not measured",
+        "elapsed_seconds": 7.38372466689907,
+        "image_downloads": 0,
+        "memory": {
+          "measurement": "tracemalloc; excludes native/process memory",
+          "python_current_bytes": 119853028,
+          "python_peak_bytes": 121587611
+        },
+        "model_calls": 0,
+        "monetary_cost": null,
+        "network_requests": 0,
+        "timing": {
+          "index_build_seconds": 5.922976417001337,
+          "query_max_seconds": 0.06010841694660485,
+          "query_mean_seconds": 0.006230670341661548,
+          "query_total_seconds": 0.7663724520243704
+        }
+      },
+      "failures": [
+        {
+          "category": "abstention",
+          "consult_url": "#consultar/%C2%BFQu%C3%A9%20glosa%20hist%C3%B3rica%20registra%20la%20ficha%20de%20A%3F%20Conserva%20todas%20las%20acepciones%20registradas%20y%20cita%20sus%20entradas.",
+          "errors": [
+            "missing_required_fields",
+            "missing_required_sources",
+            "missing_required_urls",
+            "abstained"
+          ],
+          "matched_fields": 0,
+          "query": "¿Qué glosa histórica registra la ficha de A? Conserva todas las acepciones registradas y cita sus entradas.",
+          "query_id": "doc-textual-gloss-772588bdea8c94c2",
+          "required_field_count": 5,
+          "returned_ids": []
+        },
+        {
+          "category": "incomplete_or_unsupported",
+          "consult_url": "#consultar/%C2%BFQu%C3%A9%20glosa%20hist%C3%B3rica%20registra%20la%20ficha%20de%20Titi%20%2F%20Y%3F%20Conserva%20todas%20las%20acepciones%20registradas%20y%20cita%20sus%20entradas.",
+          "errors": [
+            "missing_required_fields",
+            "missing_required_urls"
+          ],
+          "matched_fields": 5,
+          "query": "¿Qué glosa histórica registra la ficha de Titi / Y? Conserva todas las acepciones registradas y cita sus entradas.",
+          "query_id": "doc-textual-gloss-b5c2d25c8e434d71",
+          "required_field_count": 10,
+          "returned_ids": [
+            "lex-gdn-m2-161535"
+          ]
+        },
+        {
+          "category": "abstention",
+          "consult_url": "#consultar/Compara%20la%20escritura%20original%20y%20la%20normalizaci%C3%B3n%20catalogada%20de%20A.%20%C2%BFCoinciden%20y%20qu%C3%A9%20ID%20de%20acepci%C3%B3n%20corresponde%20a%20cada%20ficha%3F",
+          "errors": [
+            "missing_required_fields",
+            "missing_required_sources",
+            "missing_required_urls",
+            "abstained"
+          ],
+          "matched_fields": 0,
+          "query": "Compara la escritura original y la normalización catalogada de A. ¿Coinciden y qué ID de acepción corresponde a cada ficha?",
+          "query_id": "doc-textual-spelling-772588bdea8c94c2",
+          "required_field_count": 5,
+          "returned_ids": []
+        },
+        {
+          "category": "incomplete_or_unsupported",
+          "consult_url": "#consultar/Compara%20la%20escritura%20original%20y%20la%20normalizaci%C3%B3n%20catalogada%20de%20Titi%20%2F%20Y.%20%C2%BFCoinciden%20y%20qu%C3%A9%20ID%20de%20acepci%C3%B3n%20corresponde%20a%20cada%20ficha%3F",
+          "errors": [
+            "missing_required_fields",
+            "missing_required_urls"
+          ],
+          "matched_fields": 5,
+          "query": "Compara la escritura original y la normalización catalogada de Titi / Y. ¿Coinciden y qué ID de acepción corresponde a cada ficha?",
+          "query_id": "doc-textual-spelling-b5c2d25c8e434d71",
+          "required_field_count": 10,
+          "returned_ids": [
+            "lex-gdn-m2-161535"
+          ]
+        }
+      ],
+      "label": "Recuperación documental local",
+      "method": "retrieval",
+      "metrics": {
+        "abstained": 2,
+        "categories": {
+          "abstention": 2,
+          "complete": 119,
+          "incomplete_or_unsupported": 2
+        },
+        "complete": 119,
+        "correct_source": 119,
+        "covered": 121,
+        "exact_fields_matched": 840,
+        "exact_fields_required": 860,
+        "queries": 123,
+        "relevant_results": 121,
+        "supported_citations": 121
+      },
+      "report_hashes": {
+        "reports/documentary-retrieval-v1.json": "a84596ba335bf6f700c536f31c698ade497a0c5e5813220c70bbb5c18bcacf69"
+      },
+      "status": "measured"
+    },
+    {
+      "candidate_source": "docs/TRABAJO_AUTONOMO.md",
+      "cost": null,
+      "label": "Qwen3-0.6B + LoRA",
+      "method": "textual_model",
+      "metrics": null,
+      "reason": "Qwen3-0.6B + LoRA no se ejecutó sobre esta batería documental. Las métricas históricas de traducción usan otras muestras y no son comparables. Este ciclo no carga pesos ni entrena.",
+      "report_hashes": {},
+      "status": "not_run"
+    },
+    {
+      "candidate_source": "docs/TRABAJO_AUTONOMO.md",
+      "cost": null,
+      "label": "Qwen3-VL-4B-Instruct · candidato",
+      "method": "multimodal_candidate",
+      "metrics": null,
+      "reason": "Qwen3-VL-4B-Instruct es un candidato documentado, sin descarga de pesos ni ejecución. Los permisos de entrada/evaluación de imágenes siguen pendientes; su ficha no acredita competencia en náhuatl.",
+      "report_hashes": {},
+      "status": "not_run"
+    }
+  ],
+  "schema_version": 1,
+  "scope": "known_record_queries_local_documentary_fields_only"
+}
