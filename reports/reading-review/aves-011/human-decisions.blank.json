@@ -1,0 +1,69 @@
+{
+  "comprehension_trial": {
+    "agreed_rubric": "",
+    "agreed_task": "",
+    "agreements": [],
+    "date": "",
+    "facilitator": "",
+    "observations": [],
+    "results": [],
+    "status": "pending"
+  },
+  "decisions": [
+    {
+      "date": "",
+      "evidence": [],
+      "fingerprint": "468e1e53e129f189c9d9fe8960734ecb2bfccaf4aa6cf1f5bee822cedd44999b",
+      "notes": "",
+      "resolution": "",
+      "reviewer": "",
+      "status": "pending",
+      "task_id": "batch-visual-policy"
+    },
+    {
+      "date": "",
+      "evidence": [],
+      "fingerprint": "382523c0a19c4f327a4e672086a66e872712c5de98deb33b988071ba988e9c1a",
+      "notes": "",
+      "resolution": "",
+      "reviewer": "",
+      "status": "pending",
+      "task_id": "lesson-aves-source-review"
+    },
+    {
+      "date": "",
+      "evidence": [],
+      "fingerprint": "246b94f9039a1c1da3486c2ae276ccbc0b6fd60a6996f0441d638aeb98f8ac4e",
+      "notes": "",
+      "resolution": "",
+      "reviewer": "",
+      "status": "pending",
+      "task_id": "lesson-aves-exercises"
+    },
+    {
+      "date": "",
+      "evidence": [],
+      "fingerprint": "fe406a5c673bdd96c3e8fed3a9cc94370c2ae7e889a504895259e360e45e1e23",
+      "notes": "",
+      "resolution": "",
+      "reviewer": "",
+      "status": "pending",
+      "task_id": "lesson-aves-learner-trial"
+    },
+    {
+      "date": "",
+      "evidence": [],
+      "fingerprint": "2ea69dba6ff416313af47937586eec6cf11beb72b827233b249eaf8d3754be93",
+      "notes": "",
+      "resolution": "",
+      "reviewer": "",
+      "status": "pending",
+      "task_id": "word-sense-tototl-glyph-scope"
+    }
+  ],
+  "diagnostic_fingerprint": "4498a001f854e08510423556c2fe9a66fc49b6b14f8f6aef21683aefe7e50b07",
+  "kind": "reading_review_notes_template",
+  "lesson_id": "aves",
+  "schema_version": 1,
+  "status": "pending"
+}

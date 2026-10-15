@@ -1,0 +1,22 @@
+{
+  "sha256": {
+    "docs/PROGRESO_INTERNO.md": "be7a8d00e6fffefa4b044a4aafcc57c1e7a3bb30817b9a5b4933e72edcc5faa5",
+    "reports/CONTINUIDAD_COTEJO_012_2026-10-09.md": "0d43c8accb96b7bbd4584a60c785c3ffedc4fbd4762c68707b0cb242f163cb1b",
+    "reports/documentary-laboratory-display-v1.json": "a3680ea0950d4a7e9eabecb37421f255870ada0251fd26e3772320811202aac8",
+    "reports/documentary-laboratory-v1.json": "275db2de9a369dd1fb519e72cb8592fe277a57ea03aacde1d52b427386978d8f",
+    "reports/documentary-retrieval-v1.json": "42c14a4bcea05165010f55ace16a00ddbc3ce4a97ddc2d86fc9778a19c447a38",
+    "reports/iteration-repeat-cotejo-012-2026-10-09.json": "cf816eb9fab1eac0d77350640b305854f32667532238ec9961292cb4226d58b5",
+    "reports/iterations/iteration-012/inventory.json": "59fdf531430c1579dcc84483bd1287b30405536822cf2f805208986c6093deb3",
+    "reports/iterations/iteration-012/queue.json": "aa6fab2d059ebe2c5f95e027e2138f13c6fed66090cec02b7a860f68f82b2921",
+    "reports/iterations/iteration-012/source-freeze.json": "e0720710a88fa7201944a8611f981b1eee7eeaa9034f80f69fed29fd9f725f1b",
+    "reports/iterations/state.json": "6ee7dc248d6b7f6367b932105f65ba0f7e51c2644e282238a8cc29d3156808f4",
+    "reports/reading-review-status/aves-011-012.json": "ae189e7b1758c3402f653895028e4809421f63d3d160d1c0bbe2735b46d890dd",
+    "reports/reading-review-status/aves-011-012.md": "1d5c9a9ec179352b2a6497c72e19e5c9bdfa3c7d1e8b22440f0fbe77bd8f9d55",
+    "reports/reading-review-status/aves-012.json": "3d03edf71908d47016ced18113b44e746b10d71623f7f47686a7a6974353bb88",
+    "reports/reading-review-status/aves-012.md": "da65d337396f165e644e63cadac65960245143501f7af9ce4798f5a4c035674f",
+    "reports/reading-review/aves-012/human-decisions.blank.json": "a1392073c4699fbd70d6a17f86b09e74280f8682bfad947abf0438c3d8fdfbe6",
+    "reports/reading-review/aves-012/manifest.json": "6fce9021efef3de6fa54bcf0f637aa23d15a219a49a3399e9e6788b712cafc55",
+    "reports/reading-review/aves-012/package.json": "5fe9aad5b8dbef4bc8e0fd7d79af06b53c04834f0e6c2af71c022818f58f8c16",
+    "reports/reading-review/aves-012/package.md": "91f343eb666fc50ea2a723511aaacc139f1f1968709f2418d87a9ff381426de5"
+  }
+}

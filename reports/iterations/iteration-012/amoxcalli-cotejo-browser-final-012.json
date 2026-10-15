@@ -1,0 +1,31 @@
+{
+  "proof360": {
+    "client": 345,
+    "content": 345,
+    "focusedReturn": true,
+    "query": "chachalaca",
+    "results": "3 fichas mostradas de 3 coincidencias.",
+    "returnHref": "#leer/aves?from=leer&lesson=aves&passage=axolotl-14546",
+    "width": 360
+  },
+  "proof390": {
+    "client": 375,
+    "content": 375,
+    "focusedReturn": true,
+    "query": "chachalaca",
+    "results": "3 fichas mostradas de 3 coincidencias.",
+    "returnHref": "#leer/aves?from=leer&lesson=aves&passage=axolotl-14546",
+    "width": 390
+  },
+  "changedQuery012": {
+    "query": "atl",
+    "returnHref": "#leer/aves?from=leer&lesson=aves&passage=axolotl-14546"
+  },
+  "return360": {
+    "client": 345,
+    "content": 345,
+    "focused": "axolotl-14546"
+  },
+  "keyboardReturn": true,
+  "limitations": "Browser viewport emulation, not a physical phone; no user study controls activated."
+}

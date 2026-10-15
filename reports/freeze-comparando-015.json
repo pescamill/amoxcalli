@@ -1,0 +1,41 @@
+{
+  "changed_files": {
+    "docs/PROGRESO_INTERNO.md": {
+      "after": "4d058f796c0eb6220db6c550197e1234b28bcdec36e6bca6df7afefad59f9a9b",
+      "before": "36d7a9793a1604b069af4f19ed4ceb1979ea92e7ad8901ad88bb552ead519f91"
+    },
+    "nahuatl_local/platform_web/learning.js": {
+      "after": "0b668296e8b59c690754e09c383db95a18ecd68807622412a54dbad2ed0ef3f2",
+      "before": "d0af02a5665abd15f79ef2d3d270f5b45bb3f12d19a94d09b0981fd7acc74f1b"
+    },
+    "reports/documentary-laboratory-display-v1.json": {
+      "after": "f28fab305d767339732bc5b4cf467fff92f7598ecee8ff61a00eb75920dc62d6",
+      "before": "378fcb52b9d1b1fdda070cfcfe618ef0644577bddcab3841bc291021aac5b537"
+    },
+    "reports/documentary-laboratory-v1.json": {
+      "after": "28e23e5be5075ebef0f8495e7ac84970100dccf73947d1927d85dccdab06181f",
+      "before": "6bf8381dd2098bd12f5ccc4dfb68f9d5eb44bf10f7c9cd83edd0aa79ceb20611"
+    },
+    "tests/platform_ui.cjs": {
+      "after": "99864cf2d111337f0d1f10c663a214da698aa96f879718456e15f6635b4aae4c",
+      "before": "f045b41df43478fdeb92e3da4577039cbb04c9f59af99421519a2a6d207f723d"
+    }
+  },
+  "checks": {
+    "corpus_learning_and_archive_identical": true,
+    "lab_only_display_evidence_changed": true,
+    "only_expected_changes": true,
+    "protected_public_bytes_identical": true,
+    "retrieval_bytes_identical_014": true,
+    "state_and_decisions_identical": true
+  },
+  "date": "2026-10-12",
+  "dom_http_successful_runs": 1,
+  "frozen_hashes": {
+    "nahuatl_local/platform_web/learning.js": "0b668296e8b59c690754e09c383db95a18ecd68807622412a54dbad2ed0ef3f2",
+    "reports/APRENDER_COMPARANDO_015_2026-10-12.md": "3873030366d36dd62fa61a8f8b5730d0dd4b913fbdaf96ce8c6bbe4b8ed198b0",
+    "tests/platform_ui.cjs": "99864cf2d111337f0d1f10c663a214da698aa96f879718456e15f6635b4aae4c"
+  },
+  "implementation_status": "frozen_stop",
+  "retrieval_measurements_this_cycle": 0
+}

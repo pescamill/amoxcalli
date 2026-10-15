@@ -1,0 +1,70 @@
+{
+  "checks": {
+    "protected_49_files_unchanged": true,
+    "inventory_sources_current": true,
+    "code_freeze_current": true,
+    "three_gates_ready": true,
+    "66_human_tasks_open": true,
+    "state_task_ids_preserved": true,
+    "history_runs_preserved": true,
+    "task_notes_history_snapshots_preserved": true,
+    "task_statuses_preserved": true,
+    "editorial_decisions_preserved": true,
+    "repeat_diagnosis_identical": true,
+    "all_123_responses_and_audits_preserved": true,
+    "retrieval_configuration_metrics_preserved": true,
+    "laboratory_uncached_replay_valid": true,
+    "battery_rights_human_state_preserved": true,
+    "absent_models_unchanged": true,
+    "new_packet_verify_valid": true,
+    "new_status_ready": true,
+    "old_packet_stale_preserved": true,
+    "lesson_4_originals_8_questions_unchanged": true,
+    "human_template_blank": true,
+    "browser_exact_return_keyboard": true,
+    "browser_no_horizontal_overflow": true,
+    "final_8_code_hashes_current": true,
+    "updated_readme_report_links_exist": true
+  },
+  "protected_files": 49,
+  "laboratory_validation": {
+    "valid": true,
+    "errors": []
+  },
+  "browser": {
+    "thirdReturn": {
+      "content": 1265,
+      "focusLabel": "Pasaje de Un ave en poesía, aves en relatos · Axolotl, registro CSV 8856; página de la edición primaria pendiente",
+      "focusedPassage": "axolotl-08856",
+      "width": 1280
+    },
+    "thirdReturnKeyboard": true,
+    "thirdRoute": "http://127.0.0.1:8766/#leer/aves?from=leer&lesson=aves&passage=axolotl-08856",
+    "firstPassageReturn": "axolotl-14546",
+    "firstArchiveResults": 3,
+    "thirdDictionaryResults": 0,
+    "thirdArchiveResults": 14,
+    "directLegacyQueryHasNoOrigin": true,
+    "viewportOverride": false
+  },
+  "scope": "Public files and local browser only; no human certification or model execution",
+  "sources_changed_since_baseline": [
+    "nahuatl_local/platform_web/app.js",
+    "nahuatl_local/platform_web/learning.js",
+    "nahuatl_local/platform_web/style.css",
+    "reports/documentary-laboratory-display-v1.json",
+    "reports/documentary-laboratory-v1.json",
+    "reports/documentary-retrieval-v1.json",
+    "tests/platform_ui.cjs"
+  ],
+  "final_documentation_hashes": {
+    "README.md": "9626113a772e9cac33be1409dc684257a693fd12fe483b4bcd0426404ec451d5",
+    "docs/README.en.md": "403bccec3b935b8916b0eb33b14c3af225a0728146cb555d0de72164394a7e0b",
+    "docs/PROGRESO_INTERNO.md": "782efe9248b75b408af3a599b7e16f46807a7f2b4c9c5968eb5a523efd7d9c38"
+  },
+  "documentation_close": "Coordinator appended progress after worker delivery freeze; worker freeze remains a historical snapshot, source-freeze and diagnostic inputs remain current.",
+  "browser_screenshots": [
+    "/Users/pescamil/Downloads/nahuatl-local/reports/iterations/iteration-011/amoxcalli-continuidad-archivo-011.jpg",
+    "/Users/pescamil/Downloads/nahuatl-local/reports/iterations/iteration-011/amoxcalli-continuidad-tercer-pasaje-011.jpg"
+  ]
+}

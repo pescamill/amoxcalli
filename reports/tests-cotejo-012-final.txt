@@ -1,0 +1,2 @@
+PASS DOM 360: consulta actual, cotejo con IDs/fuentes iguales al endpoint, retorno exacto lector/guiado y foco; consulta editada → Archivo; orígenes inválidos/directos; cero escrituras. No mide geometría.
+PASS DOM 390: consulta actual, cotejo con IDs/fuentes iguales al endpoint, retorno exacto lector/guiado y foco; consulta editada → Archivo; orígenes inválidos/directos; cero escrituras. No mide geometría.

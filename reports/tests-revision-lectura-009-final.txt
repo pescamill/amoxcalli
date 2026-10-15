@@ -1,0 +1,17 @@
+test_extra_files_and_manifest_names_are_rejected (tests.test_lesson_review_packet.LessonReviewPacketTests.test_extra_files_and_manifest_names_are_rejected) ... ok
+test_forged_queue_or_state_and_invalid_lesson (tests.test_lesson_review_packet.LessonReviewPacketTests.test_forged_queue_or_state_and_invalid_lesson) ... ok
+test_idempotence_and_reconstruction (tests.test_lesson_review_packet.LessonReviewPacketTests.test_idempotence_and_reconstruction) ... ok
+test_markdown_has_both_keys_and_scope_citations (tests.test_lesson_review_packet.LessonReviewPacketTests.test_markdown_has_both_keys_and_scope_citations) ... ok
+test_notes_cannot_be_overwritten (tests.test_lesson_review_packet.LessonReviewPacketTests.test_notes_cannot_be_overwritten) ... ok
+test_originals_ids_citations_and_all_existing_questions (tests.test_lesson_review_packet.LessonReviewPacketTests.test_originals_ids_citations_and_all_existing_questions) ... ok
+test_private_traversal_external_and_output_paths (tests.test_lesson_review_packet.LessonReviewPacketTests.test_private_traversal_external_and_output_paths) ... ok
+test_relevant_tasks_preserve_both_fingerprints_and_evidence (tests.test_lesson_review_packet.LessonReviewPacketTests.test_relevant_tasks_preserve_both_fingerprints_and_evidence) ... ok
+test_semantic_forgery_even_with_recalculated_manifest (tests.test_lesson_review_packet.LessonReviewPacketTests.test_semantic_forgery_even_with_recalculated_manifest) ... ok
+test_stale_hash_and_source_manifest (tests.test_lesson_review_packet.LessonReviewPacketTests.test_stale_hash_and_source_manifest) ... ok
+test_symlink_input_ancestor_output_and_members (tests.test_lesson_review_packet.LessonReviewPacketTests.test_symlink_input_ancestor_output_and_members) ... ok
+test_visual_scope_rights_and_unfilled_human_notes (tests.test_lesson_review_packet.LessonReviewPacketTests.test_visual_scope_rights_and_unfilled_human_notes) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 21.040s
+
+OK

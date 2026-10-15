@@ -1,0 +1,296 @@
+{
+  "mlx": {
+    "requires_dist": [
+      "mlx-metal==0.32.3; platform_system == \"Darwin\"",
+      "ml_dtypes; extra == \"dev\"",
+      "numpy>=2; extra == \"dev\"",
+      "pre-commit; extra == \"dev\"",
+      "torch>=2.9; extra == \"dev\"",
+      "typing_extensions; extra == \"dev\"",
+      "mlx-cuda-12==0.32.3; platform_system == \"Linux\" and extra == \"cuda\"",
+      "mlx-cuda-12==0.32.3; platform_system == \"Linux\" and extra == \"cuda12\"",
+      "mlx-cuda-13==0.32.3; platform_system == \"Linux\" and extra == \"cuda13\"",
+      "mlx-cpu==0.32.3; platform_system == \"Linux\" and extra == \"cpu\""
+    ],
+    "requires_python": ">=3.10",
+    "version": "0.32.3",
+    "wheels": [
+      {
+        "bytes": 655804,
+        "name": "mlx-0.32.3-cp310-cp310-macosx_14_0_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/7d/6d/369081cd86b32237910837ec2e8ed97c9c468f5e10798b28ee273301cc4b/mlx-0.32.3-cp310-cp310-macosx_14_0_arm64.whl"
+      },
+      {
+        "bytes": 655802,
+        "name": "mlx-0.32.3-cp310-cp310-macosx_15_0_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/fb/91/d68f66bb29e8de96d255b784a105d8a2fc26f6e844b7920ff19ded517c4d/mlx-0.32.3-cp310-cp310-macosx_15_0_arm64.whl"
+      },
+      {
+        "bytes": 655957,
+        "name": "mlx-0.32.3-cp310-cp310-macosx_26_0_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/f7/72/8056c38934512ba9dcc63c0f1df5bdc67a27881e205fb51730fdc8832b17/mlx-0.32.3-cp310-cp310-macosx_26_0_arm64.whl"
+      },
+      {
+        "bytes": 693228,
+        "name": "mlx-0.32.3-cp310-cp310-manylinux_2_35_aarch64.whl",
+        "url": "https://files.pythonhosted.org/packages/2f/0e/333d6d51386c940d5b364b815e6c1c24b26a565de8e04de38eb1433a16ec/mlx-0.32.3-cp310-cp310-manylinux_2_35_aarch64.whl"
+      },
+      {
+        "bytes": 760238,
+        "name": "mlx-0.32.3-cp310-cp310-manylinux_2_35_x86_64.whl",
+        "url": "https://files.pythonhosted.org/packages/1d/e6/12dd16dc0306980048395cefb13b6d5543f23db997730763f901fb632969/mlx-0.32.3-cp310-cp310-manylinux_2_35_x86_64.whl"
+      },
+      {
+        "bytes": 631399,
+        "name": "mlx-0.32.3-cp310-cp310-win_amd64.whl",
+        "url": "https://files.pythonhosted.org/packages/05/99/ddc5cab3bd6d4307a9bc94d0e8a00b5f675b3486db4dfba1115415f1601e/mlx-0.32.3-cp310-cp310-win_amd64.whl"
+      },
+      {
+        "bytes": 655739,
+        "name": "mlx-0.32.3-cp311-cp311-macosx_14_0_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/a6/ed/7ced6107f0eb4959659e2a3bed2e402b70eb117d3c8941d4c9b21e9c3ca8/mlx-0.32.3-cp311-cp311-macosx_14_0_arm64.whl"
+      },
+      {
+        "bytes": 655739,
+        "name": "mlx-0.32.3-cp311-cp311-macosx_15_0_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/d8/98/44ed08071e8ab99800d01ba7d6683a1f565233bae000d68aa7fe3a9ff11f/mlx-0.32.3-cp311-cp311-macosx_15_0_arm64.whl"
+      },
+      {
+        "bytes": 655786,
+        "name": "mlx-0.32.3-cp311-cp311-macosx_26_0_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/3c/26/893e65bed5616901b7e8554ddf278bfe81037e1efa67736a7ea0f6924891/mlx-0.32.3-cp311-cp311-macosx_26_0_arm64.whl"
+      },
+      {
+        "bytes": 693156,
+        "name": "mlx-0.32.3-cp311-cp311-manylinux_2_35_aarch64.whl",
+        "url": "https://files.pythonhosted.org/packages/1f/51/084a2aee6485e87fc148c2aa87265ea4668e7e174ce9de8ac00b13af9c5b/mlx-0.32.3-cp311-cp311-manylinux_2_35_aarch64.whl"
+      },
+      {
+        "bytes": 760589,
+        "name": "mlx-0.32.3-cp311-cp311-manylinux_2_35_x86_64.whl",
+        "url": "https://files.pythonhosted.org/packages/3d/7a/b277953da0570bd126d7efac397b79f76ad2ff2bad6f710e555791c7cb56/mlx-0.32.3-cp311-cp311-manylinux_2_35_x86_64.whl"
+      },
+      {
+        "bytes": 631499,
+        "name": "mlx-0.32.3-cp311-cp311-win_amd64.whl",
+        "url": "https://files.pythonhosted.org/packages/79/a0/ef212864baf8d14ffe86664cca32c590a83a018fea0c48740630283cf70d/mlx-0.32.3-cp311-cp311-win_amd64.whl"
+      },
+      {
+        "bytes": 622950,
+        "name": "mlx-0.32.3-cp311-cp311-win_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/cc/a5/2d8cd63427be851c46f0c78431611396227061db8bf1d841f7a97f6a5933/mlx-0.32.3-cp311-cp311-win_arm64.whl"
+      },
+      {
+        "bytes": 651041,
+        "name": "mlx-0.32.3-cp312-cp312-macosx_14_0_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/26/8c/2f8b796885b4c02ab9644916bebf656cd1d6d366df94d174b046903ea250/mlx-0.32.3-cp312-cp312-macosx_14_0_arm64.whl"
+      },
+      {
+        "bytes": 651042,
+        "name": "mlx-0.32.3-cp312-cp312-macosx_15_0_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/6e/06/aacd94119d4a999d43f07f24b02904d7f895ee074ed4678b28456c319ea3/mlx-0.32.3-cp312-cp312-macosx_15_0_arm64.whl"
+      },
+      {
+        "bytes": 651118,
+        "name": "mlx-0.32.3-cp312-cp312-macosx_26_0_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/4a/c1/13ff85d72f7cf01239c1031688b11cf1c7a3f0c7380636728976e510bfbd/mlx-0.32.3-cp312-cp312-macosx_26_0_arm64.whl"
+      },
+      {
+        "bytes": 680634,
+        "name": "mlx-0.32.3-cp312-cp312-manylinux_2_35_aarch64.whl",
+        "url": "https://files.pythonhosted.org/packages/0e/c7/68b17902b5c38667e1ea1303a0c430ba1375cc5eea5e40d6b3a48b4d9f6d/mlx-0.32.3-cp312-cp312-manylinux_2_35_aarch64.whl"
+      },
+      {
+        "bytes": 754620,
+        "name": "mlx-0.32.3-cp312-cp312-manylinux_2_35_x86_64.whl",
+        "url": "https://files.pythonhosted.org/packages/9a/15/b7d62225c126c73ef65cc3ea9478f4c06bb7a4b39cf9e12237b9ca88554a/mlx-0.32.3-cp312-cp312-manylinux_2_35_x86_64.whl"
+      },
+      {
+        "bytes": 629327,
+        "name": "mlx-0.32.3-cp312-cp312-win_amd64.whl",
+        "url": "https://files.pythonhosted.org/packages/dc/82/372271f6daf3d73da955b0e9438327f83f66dfb4855465d53d8d1666b61c/mlx-0.32.3-cp312-cp312-win_amd64.whl"
+      },
+      {
+        "bytes": 620647,
+        "name": "mlx-0.32.3-cp312-cp312-win_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/6e/bc/401cad7f79b1ef5ecae0c4e452d52279c10be76c9e866963c25c5d41b0ce/mlx-0.32.3-cp312-cp312-win_arm64.whl"
+      },
+      {
+        "bytes": 651142,
+        "name": "mlx-0.32.3-cp313-cp313-macosx_14_0_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/8c/e1/0039c25cb2e40e605de6409e6ede52b01b7c79d6a0727e0c103ec60d88b2/mlx-0.32.3-cp313-cp313-macosx_14_0_arm64.whl"
+      },
+      {
+        "bytes": 651143,
+        "name": "mlx-0.32.3-cp313-cp313-macosx_15_0_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/29/dc/01ac6c32fb405a542be80f021bc978125af51d2ee5ae1db624bfd954e756/mlx-0.32.3-cp313-cp313-macosx_15_0_arm64.whl"
+      },
+      {
+        "bytes": 651075,
+        "name": "mlx-0.32.3-cp313-cp313-macosx_26_0_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/53/a9/70bf746c2cd13a198a429e33244d2f072ecd0c89508299a636529d3317cb/mlx-0.32.3-cp313-cp313-macosx_26_0_arm64.whl"
+      },
+      {
+        "bytes": 680699,
+        "name": "mlx-0.32.3-cp313-cp313-manylinux_2_35_aarch64.whl",
+        "url": "https://files.pythonhosted.org/packages/f7/2c/d9a53850cb64f1dec9852aea3951b5aa5f83e8bce6b27800dedfc4147022/mlx-0.32.3-cp313-cp313-manylinux_2_35_aarch64.whl"
+      },
+      {
+        "bytes": 754734,
+        "name": "mlx-0.32.3-cp313-cp313-manylinux_2_35_x86_64.whl",
+        "url": "https://files.pythonhosted.org/packages/e5/14/fe8cba4d2c35f746a2631bbeb2ebc344eccaa5599aee6f4f6ca4a7acb7a4/mlx-0.32.3-cp313-cp313-manylinux_2_35_x86_64.whl"
+      },
+      {
+        "bytes": 675637,
+        "name": "mlx-0.32.3-cp313-cp313t-macosx_14_0_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/68/73/f1511b38c9b200fc84bff84470ff1e4303f2f7b47f614b14a2d3f4cd6226/mlx-0.32.3-cp313-cp313t-macosx_14_0_arm64.whl"
+      },
+      {
+        "bytes": 675638,
+        "name": "mlx-0.32.3-cp313-cp313t-macosx_15_0_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/3e/40/20733670ac7a5571e10d80fb510bc0fbed6d0917a8e34cdf6c3de52b5a8e/mlx-0.32.3-cp313-cp313t-macosx_15_0_arm64.whl"
+      },
+      {
+        "bytes": 675600,
+        "name": "mlx-0.32.3-cp313-cp313t-macosx_26_0_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/15/ac/65a1b9484f3eedb57dc73589af213d03821d13d99caa76430ad849be6114/mlx-0.32.3-cp313-cp313t-macosx_26_0_arm64.whl"
+      },
+      {
+        "bytes": 686475,
+        "name": "mlx-0.32.3-cp313-cp313t-manylinux_2_35_aarch64.whl",
+        "url": "https://files.pythonhosted.org/packages/f7/53/91f4030bed4ce920ab781b4f3e8843d74bed5c171b425d3ecca8a5ae2830/mlx-0.32.3-cp313-cp313t-manylinux_2_35_aarch64.whl"
+      },
+      {
+        "bytes": 755078,
+        "name": "mlx-0.32.3-cp313-cp313t-manylinux_2_35_x86_64.whl",
+        "url": "https://files.pythonhosted.org/packages/c1/5c/52651813664c3869d9ea4aab93d027f30b7208554254106120256bd90c4f/mlx-0.32.3-cp313-cp313t-manylinux_2_35_x86_64.whl"
+      },
+      {
+        "bytes": 655613,
+        "name": "mlx-0.32.3-cp313-cp313t-win_amd64.whl",
+        "url": "https://files.pythonhosted.org/packages/96/a2/5752afdc0554e4e630f4804c95345125b93f28b904f962d7dec5e291a17f/mlx-0.32.3-cp313-cp313t-win_amd64.whl"
+      },
+      {
+        "bytes": 638696,
+        "name": "mlx-0.32.3-cp313-cp313t-win_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/0b/b0/2977a4e0d97b5e08f34e14843aadca4434e6bec8106aeea05f0a71da083d/mlx-0.32.3-cp313-cp313t-win_arm64.whl"
+      },
+      {
+        "bytes": 629471,
+        "name": "mlx-0.32.3-cp313-cp313-win_amd64.whl",
+        "url": "https://files.pythonhosted.org/packages/dd/71/6e03d66dd60f634b000c64205f36bc27ac440e731762066a1de7773b9d78/mlx-0.32.3-cp313-cp313-win_amd64.whl"
+      },
+      {
+        "bytes": 620933,
+        "name": "mlx-0.32.3-cp313-cp313-win_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/dc/be/7d0fb383d5a77dec60b50d5b116b409ff1fc2b269f6c885623776f4c008c/mlx-0.32.3-cp313-cp313-win_arm64.whl"
+      },
+      {
+        "bytes": 652868,
+        "name": "mlx-0.32.3-cp314-cp314-macosx_14_0_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/74/91/4d7dc37533d5439e27e57b09d2200b1a7988e433259d9beac8f8241197e4/mlx-0.32.3-cp314-cp314-macosx_14_0_arm64.whl"
+      },
+      {
+        "bytes": 652868,
+        "name": "mlx-0.32.3-cp314-cp314-macosx_15_0_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/ed/50/b79bf60cad0cf3c6a0040c18963e682a628ad12bdd83ff0f45e9b5893b2d/mlx-0.32.3-cp314-cp314-macosx_15_0_arm64.whl"
+      },
+      {
+        "bytes": 652880,
+        "name": "mlx-0.32.3-cp314-cp314-macosx_26_0_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/d6/34/3bccf8ee413afb055b739215be3b74cb810ec655e508dc90bb3c79e4d16b/mlx-0.32.3-cp314-cp314-macosx_26_0_arm64.whl"
+      },
+      {
+        "bytes": 681931,
+        "name": "mlx-0.32.3-cp314-cp314-manylinux_2_35_aarch64.whl",
+        "url": "https://files.pythonhosted.org/packages/3b/44/a03ebe19b1d2bb1786c9ab2f68d058d951f4bff27c741e94061635c0c2ff/mlx-0.32.3-cp314-cp314-manylinux_2_35_aarch64.whl"
+      },
+      {
+        "bytes": 754480,
+        "name": "mlx-0.32.3-cp314-cp314-manylinux_2_35_x86_64.whl",
+        "url": "https://files.pythonhosted.org/packages/fb/3a/d0f8448103b3ab3ef2d408c8ad88b228bd60178751c4cdf3d802bf7c082b/mlx-0.32.3-cp314-cp314-manylinux_2_35_x86_64.whl"
+      },
+      {
+        "bytes": 675632,
+        "name": "mlx-0.32.3-cp314-cp314t-macosx_14_0_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/ae/31/254d11d662a0f68157f659ab7eb90216d51a71acabeb38e61e54c6927623/mlx-0.32.3-cp314-cp314t-macosx_14_0_arm64.whl"
+      },
+      {
+        "bytes": 675635,
+        "name": "mlx-0.32.3-cp314-cp314t-macosx_15_0_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/3f/94/32e6f4c3e24635ec79fb751fccecd624d9f40d6c15e013acb40973501443/mlx-0.32.3-cp314-cp314t-macosx_15_0_arm64.whl"
+      },
+      {
+        "bytes": 675564,
+        "name": "mlx-0.32.3-cp314-cp314t-macosx_26_0_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/c5/c2/b94c58c0d634907fed225abe81bacc73901b5f1a9fb1b976d7232f03afcb/mlx-0.32.3-cp314-cp314t-macosx_26_0_arm64.whl"
+      },
+      {
+        "bytes": 686431,
+        "name": "mlx-0.32.3-cp314-cp314t-manylinux_2_35_aarch64.whl",
+        "url": "https://files.pythonhosted.org/packages/48/5e/4164aaf0c7ca06307980a5ee0d757ccc641e4edd9d39b8d7f6fa50c21e02/mlx-0.32.3-cp314-cp314t-manylinux_2_35_aarch64.whl"
+      },
+      {
+        "bytes": 755034,
+        "name": "mlx-0.32.3-cp314-cp314t-manylinux_2_35_x86_64.whl",
+        "url": "https://files.pythonhosted.org/packages/ec/d2/d8d6a42050cd92dcc36748db5360efc96cea42d92dc7f9cc00a2ed87eb07/mlx-0.32.3-cp314-cp314t-manylinux_2_35_x86_64.whl"
+      },
+      {
+        "bytes": 676319,
+        "name": "mlx-0.32.3-cp314-cp314t-win_amd64.whl",
+        "url": "https://files.pythonhosted.org/packages/e5/a2/c29e31a1f5ea0954e0409e87581cf11995f382d751109c772111d1d914c2/mlx-0.32.3-cp314-cp314t-win_amd64.whl"
+      },
+      {
+        "bytes": 653601,
+        "name": "mlx-0.32.3-cp314-cp314t-win_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/ba/e1/8acaa8ec37361e1f8daf1366df89a35effd44f6c28e3dfcbab00c13f60a7/mlx-0.32.3-cp314-cp314t-win_arm64.whl"
+      },
+      {
+        "bytes": 644575,
+        "name": "mlx-0.32.3-cp314-cp314-win_amd64.whl",
+        "url": "https://files.pythonhosted.org/packages/70/19/6d7d850ba70c3efb1e8e3afa5388407bf5824f8c40e911634e67dcb3e999/mlx-0.32.3-cp314-cp314-win_amd64.whl"
+      },
+      {
+        "bytes": 637364,
+        "name": "mlx-0.32.3-cp314-cp314-win_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/5d/76/6e99c1c2f79a49adb841eee5e3ac46d30c1d9b804dcd13a9827c481750a0/mlx-0.32.3-cp314-cp314-win_arm64.whl"
+      }
+    ]
+  },
+  "mlx-vlm": {
+    "requires_dist": [
+      "mlx>=0.32.2",
+      "transformers>=5.14.0",
+      "jinja2>=3.1.0",
+      "sentencepiece>=0.2.0",
+      "miniaudio>=1.59",
+      "tqdm>=4.66.2",
+      "Pillow>=10.3.0",
+      "requests>=2.31.0",
+      "llguidance>=1.7.0",
+      "mlx-audio>=0.5.2",
+      "opencv-python>=4.12.0.88",
+      "fastapi>=0.95.1",
+      "python-multipart>=0.0.9",
+      "starlette>=1.0.1",
+      "uvicorn",
+      "websockets>=14.0",
+      "numpy",
+      "cryptography>=43.0.0",
+      "gradio>=5.19.0; extra == \"ui\"",
+      "mlx-cuda; extra == \"cuda\"",
+      "mlx-cpu; extra == \"cpu\"",
+      "datasets>=2.19.1; extra == \"train\"",
+      "sounddevice>=0.5.0; extra == \"realtime\""
+    ],
+    "requires_python": ">=3.10",
+    "version": "0.7.6",
+    "wheels": [
+      {
+        "bytes": 3159230,
+        "name": "mlx_vlm-0.7.6-py3-none-any.whl",
+        "url": "https://files.pythonhosted.org/packages/8c/77/407c016eebabb69d64b608e86149453986d72bf313006116cc5f92d48bcc/mlx_vlm-0.7.6-py3-none-any.whl"
+      }
+    ]
+  }
+}

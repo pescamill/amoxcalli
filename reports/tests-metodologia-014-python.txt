@@ -1,0 +1,49 @@
+test_contracts_exclude_process_guides_and_presentation_from_measured_manifest (test_documentary_dependencies.DocumentaryDependencyTests.test_contracts_exclude_process_guides_and_presentation_from_measured_manifest) ... ok
+test_forged_response_still_fails_independent_replay (test_documentary_dependencies.DocumentaryDependencyTests.test_forged_response_still_fails_independent_replay) ... ok
+test_learning_and_css_change_display_diagnosis_without_changing_retrieval (test_documentary_dependencies.DocumentaryDependencyTests.test_learning_and_css_change_display_diagnosis_without_changing_retrieval) ... ok
+test_process_guides_change_diagnosis_without_changing_measurement_or_display (test_documentary_dependencies.DocumentaryDependencyTests.test_process_guides_change_diagnosis_without_changing_measurement_or_display) ... ok
+test_ranker_store_corpus_source_config_battery_and_evaluator_remain_measured_inputs (test_documentary_dependencies.DocumentaryDependencyTests.test_ranker_store_corpus_source_config_battery_and_evaluator_remain_measured_inputs) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 11.965s
+
+OK
+test_current_artifact_matches_independently_replayed_retrieval (test_laboratory.DocumentaryLaboratoryTests.test_current_artifact_matches_independently_replayed_retrieval) ... ok
+test_display_evidence_requires_actual_current_passing_contract (test_laboratory.DocumentaryLaboratoryTests.test_display_evidence_requires_actual_current_passing_contract) ... ok
+test_metrics_costs_method_states_and_sources_cannot_be_fabricated (test_laboratory.DocumentaryLaboratoryTests.test_metrics_costs_method_states_and_sources_cannot_be_fabricated) ... ok
+test_private_evidence_is_never_opened_and_symlink_inputs_rejected (test_laboratory.DocumentaryLaboratoryTests.test_private_evidence_is_never_opened_and_symlink_inputs_rejected) ... ok
+test_public_downloads_exclude_expected_fields_and_reserve_queries (test_laboratory.DocumentaryLaboratoryTests.test_public_downloads_exclude_expected_fields_and_reserve_queries) ... ok
+test_retrieval_from_another_run_cannot_be_substituted (test_laboratory.DocumentaryLaboratoryTests.test_retrieval_from_another_run_cannot_be_substituted) ... ok
+test_battery_learning_dependency_invalidates (test_laboratory.DocumentarySummaryCacheTests.test_battery_learning_dependency_invalidates) ... ok
+test_concurrent_first_requests_coalesce_replay (test_laboratory.DocumentarySummaryCacheTests.test_concurrent_first_requests_coalesce_replay) ... ok
+test_display_change_or_removal_invalidates_readiness_and_restoration_replays (test_laboratory.DocumentarySummaryCacheTests.test_display_change_or_removal_invalidates_readiness_and_restoration_replays) ... ok
+test_gets_and_downloads_reuse_one_replay_and_defensive_copies (test_laboratory.DocumentarySummaryCacheTests.test_gets_and_downloads_reuse_one_replay_and_defensive_copies) ... ok
+test_invalid_download_kind_rejected_without_reads_or_replay (test_laboratory.DocumentarySummaryCacheTests.test_invalid_download_kind_rejected_without_reads_or_replay) ... ok
+test_report_tampering_and_missing_input_do_not_serve_previous_summary (test_laboratory.DocumentarySummaryCacheTests.test_report_tampering_and_missing_input_do_not_serve_previous_summary) ... ok
+test_roots_are_isolated_and_cache_is_bounded (test_laboratory.DocumentarySummaryCacheTests.test_roots_are_isolated_and_cache_is_bounded) ... ok
+test_same_size_and_mtime_content_change_invalidates (test_laboratory.DocumentarySummaryCacheTests.test_same_size_and_mtime_content_change_invalidates) ... ok
+test_symlink_and_private_report_path_rejected_before_target_open (test_laboratory.DocumentarySummaryCacheTests.test_symlink_and_private_report_path_rejected_before_target_open) ... ERROR
+
+======================================================================
+ERROR: test_symlink_and_private_report_path_rejected_before_target_open (test_laboratory.DocumentarySummaryCacheTests.test_symlink_and_private_report_path_rejected_before_target_open)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/pescamil/Downloads/nahuatl-local/tests/test_laboratory.py", line 288, in test_symlink_and_private_report_path_rejected_before_target_open
+    path.unlink()
+    ~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 1042, in unlink
+    os.unlink(self)
+    ~~~~~~~~~^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/var/folders/3x/y_gg7xzs6rd5h6_k5tjwxkqm0000gn/T/tmps07poaw_/one/docs/LABORATORIO.md'
+
+----------------------------------------------------------------------
+Ran 15 tests in 40.944s
+
+FAILED (errors=1)
+test_symlink_and_private_report_path_rejected_before_target_open (test_laboratory.DocumentarySummaryCacheTests.test_symlink_and_private_report_path_rejected_before_target_open) ... ok
+test_contracts_exclude_process_guides_and_presentation_from_measured_manifest (test_documentary_dependencies.DocumentaryDependencyTests.test_contracts_exclude_process_guides_and_presentation_from_measured_manifest) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 4.005s
+
+OK

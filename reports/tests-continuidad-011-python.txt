@@ -1,0 +1,61 @@
+test_changed_source_mixed_variant_bad_span_and_answer_fail_closed (tests.test_learning.LearningTests.test_changed_source_mixed_variant_bad_span_and_answer_fail_closed) ... ok
+test_cloze_rejects_wrong_source_form_and_glyph_rejects_wrong_meaning (tests.test_learning.LearningTests.test_cloze_rejects_wrong_source_form_and_glyph_rejects_wrong_meaning) ... ok
+test_complete_word_search_skips_earlier_internal_occurrence (tests.test_learning.LearningTests.test_complete_word_search_skips_earlier_internal_occurrence) ... ok
+test_complete_words_require_matching_forms_and_preserve_practice_editions (tests.test_learning.LearningTests.test_complete_words_require_matching_forms_and_preserve_practice_editions) ... ok
+test_context_questions_quote_the_original_translation_and_keep_recognition (tests.test_learning.LearningTests.test_context_questions_quote_the_original_translation_and_keep_recognition) ... ok
+test_dictionary_expands_with_cited_images_without_training_grants (tests.test_learning.LearningTests.test_dictionary_expands_with_cited_images_without_training_grants) ... ok
+test_flor_update_is_append_only_preserves_passages_and_other_lessons (tests.test_learning.LearningTests.test_flor_update_is_append_only_preserves_passages_and_other_lessons) ... ok
+test_image_migration_preserves_local_image_credit_and_context (tests.test_learning.LearningTests.test_image_migration_preserves_local_image_credit_and_context) ... ok
+test_new_readings_preserve_every_existing_lesson_and_comprehension (tests.test_learning.LearningTests.test_new_readings_preserve_every_existing_lesson_and_comprehension) ... ok
+test_private_or_withdrawn_dependency_hides_lesson (tests.test_learning.LearningTests.test_private_or_withdrawn_dependency_hides_lesson) ... ok
+test_provenance_link_and_glyph_type_validation (tests.test_learning.LearningTests.test_provenance_link_and_glyph_type_validation) ... ok
+test_selected_passages_preserve_original_and_only_classical (tests.test_learning.LearningTests.test_selected_passages_preserve_original_and_only_classical) ... ok
+test_bilingual_bm25_ranking_and_pagination (tests.test_research.ResearchTests.test_bilingual_bm25_ranking_and_pagination) ... ok
+test_complete_archive_and_pagination (tests.test_research.ResearchTests.test_complete_archive_and_pagination) ... ok
+test_context_uses_same_ranking_and_skips_long_or_nonclassical_passages (tests.test_research.ResearchTests.test_context_uses_same_ranking_and_skips_long_or_nonclassical_passages) ... ok
+test_lazy_full_archive_index_and_empty_query_browsing (tests.test_research.ResearchTests.test_lazy_full_archive_index_and_empty_query_browsing) ... ok
+test_ranked_filters_keep_unknown_document_period_and_variant (tests.test_research.ResearchTests.test_ranked_filters_keep_unknown_document_period_and_variant) ... ok
+test_real_tasks_and_correction_keep_original_variant (tests.test_research.ResearchTests.test_real_tasks_and_correction_keep_original_variant) ... ok
+test_safe_historical_equivalences_and_original_passage (tests.test_research.ResearchTests.test_safe_historical_equivalences_and_original_passage) ... ok
+test_search_and_context_preserve_provenance (tests.test_research.ResearchTests.test_search_and_context_preserve_provenance) ... ok
+test_broken_connections_become_technical_tasks_with_exact_evidence (tests.test_iteration.IterationTests.test_broken_connections_become_technical_tasks_with_exact_evidence) ... ok
+test_counts_or_old_sft_reports_cannot_complete_documentary_evaluation (tests.test_iteration.IterationTests.test_counts_or_old_sft_reports_cannot_complete_documentary_evaluation) ... ERROR
+test_decision_and_notes_survive_reruns_and_disappearing_findings (tests.test_iteration.IterationTests.test_decision_and_notes_survive_reruns_and_disappearing_findings) ... ok
+test_invalid_state_and_destinations_do_not_modify_inputs (tests.test_iteration.IterationTests.test_invalid_state_and_destinations_do_not_modify_inputs) ... ok
+test_inventory_is_calculated_and_does_not_infer_links (tests.test_iteration.IterationTests.test_inventory_is_calculated_and_does_not_infer_links) ... ok
+test_legacy_decisions_are_imported_without_inventing_human_review (tests.test_iteration.IterationTests.test_legacy_decisions_are_imported_without_inventing_human_review) ... ok
+test_milestones_are_conditional_and_preserve_history_when_complete (tests.test_iteration.IterationTests.test_milestones_are_conditional_and_preserve_history_when_complete) ... ERROR
+test_private_paths_and_symlink_evidence_are_rejected_before_reading (tests.test_iteration.IterationTests.test_private_paths_and_symlink_evidence_are_rejected_before_reading) ... ok
+test_real_cli_is_byte_deterministic_and_never_opens_private_database (tests.test_iteration.IterationTests.test_real_cli_is_byte_deterministic_and_never_opens_private_database) ... ok
+test_resolution_evidence_hash_is_checked_without_losing_history (tests.test_iteration.IterationTests.test_resolution_evidence_hash_is_checked_without_losing_history) ... ok
+test_resolution_requires_current_fingerprint_and_real_evidence (tests.test_iteration.IterationTests.test_resolution_requires_current_fingerprint_and_real_evidence) ... ok
+test_source_change_reopens_with_snapshot_and_decision_preserved (tests.test_iteration.IterationTests.test_source_change_reopens_with_snapshot_and_decision_preserved) ... ok
+
+======================================================================
+ERROR: test_counts_or_old_sft_reports_cannot_complete_documentary_evaluation (tests.test_iteration.IterationTests.test_counts_or_old_sft_reports_cannot_complete_documentary_evaluation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/pescamil/Downloads/nahuatl-local/tests/test_iteration.py", line 118, in test_counts_or_old_sft_reports_cannot_complete_documentary_evaluation
+    artifacts=self.artifacts();evaluation=artifacts['evaluation']
+  File "/Users/pescamil/Downloads/nahuatl-local/tests/test_iteration.py", line 90, in artifacts
+    laboratory=build_laboratory()
+  File "/Users/pescamil/Downloads/nahuatl-local/nahuatl_local/documentary_laboratory.py", line 131, in build
+    raise ValueError('Recuperación inválida: ' + ', '.join(validation['errors']))
+ValueError: Recuperación inválida: stale_inputs
+
+======================================================================
+ERROR: test_milestones_are_conditional_and_preserve_history_when_complete (tests.test_iteration.IterationTests.test_milestones_are_conditional_and_preserve_history_when_complete)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/pescamil/Downloads/nahuatl-local/tests/test_iteration.py", line 99, in test_milestones_are_conditional_and_preserve_history_when_complete
+    artifacts=self.artifacts()
+  File "/Users/pescamil/Downloads/nahuatl-local/tests/test_iteration.py", line 90, in artifacts
+    laboratory=build_laboratory()
+  File "/Users/pescamil/Downloads/nahuatl-local/nahuatl_local/documentary_laboratory.py", line 131, in build
+    raise ValueError('Recuperación inválida: ' + ', '.join(validation['errors']))
+ValueError: Recuperación inválida: stale_inputs
+
+----------------------------------------------------------------------
+Ran 32 tests in 21.258s
+
+FAILED (errors=2)

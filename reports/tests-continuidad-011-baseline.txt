@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "/Users/pescamil/Downloads/nahuatl-local/scripts/test-reading-continuity.py", line 19, in <module>
+    httpd = make_server(CorpusStore(Path(directory) / 'qa.sqlite3'), port=0)
+  File "/Users/pescamil/Downloads/nahuatl-local/nahuatl_local/platform.py", line 225, in make_server
+    httpd=ThreadingHTTPServer((host,port),make_handler(store,model_enabled,adapter))
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/socketserver.py", line 457, in __init__
+    self.server_bind()
+    ~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/http/server.py", line 148, in server_bind
+    socketserver.TCPServer.server_bind(self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/socketserver.py", line 478, in server_bind
+    self.socket.bind(self.server_address)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 1] Operation not permitted
