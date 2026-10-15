@@ -45,7 +45,7 @@ python3 -m nahuatl_local.curate data/pares-revisados-nuevos.csv \
   --base data/prepared --output data/curated-nuevo
 ```
 
-Usa rutas nuevas: los comandos rechazan sobrescritura. El navegador descarga solo tus pares aceptados; el responsable puede exportar todos los aceptados desde terminal. `curate` conserva validación y prueba byte por byte y escribe otra preparación. Entrenar es un paso posterior explícito; ver [MEJORAR.md](MEJORAR.md).
+Usa rutas nuevas: los comandos rechazan sobrescritura. El navegador descarga solo tus pares aceptados; el responsable puede exportar todos los aceptados desde terminal. `curate` conserva validación y prueba byte por byte y escribe otra preparación. Entrenar es un paso posterior explícito (`python3 -m nahuatl_local.train`); ver [MODEL_CARD.md](../MODEL_CARD.md).
 
 ## Modelo y progreso: resultados y procedencia
 

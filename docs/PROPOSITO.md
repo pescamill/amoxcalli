@@ -2,7 +2,7 @@
 
 Dirección de producto, 7 de octubre de 2026. Sustituye las prioridades propuestas el 29 de septiembre; los informes anteriores se conservan como historia. Repositorio: amoxcalli. Aplicación: Amoxcalli.
 
-Actualización de prioridades, 12 de octubre: cerrar entregas didácticas utilizables antes de ampliar infraestructura. «Disponible para estudiar», «revisado lingüísticamente» y «probado con lectores» son estados distintos. Aves cumple el primero con cuatro pasajes, ocho ejercicios y una comparación final de contextos; cotejo especializado y prueba con personas permanecen pendientes. La [metodología autónoma](TRABAJO_AUTONOMO.md) aplica pruebas por tipo de cambio y evita renovar expedientes por modificaciones ajenas a su contenido.
+Actualización de prioridades, 12 de octubre: cerrar entregas didácticas utilizables antes de ampliar infraestructura. «Disponible para estudiar», «revisado lingüísticamente» y «probado con lectores» son estados distintos. Aves cumple el primero con cuatro pasajes, ocho ejercicios y una comparación final de contextos; cotejo especializado y prueba con personas permanecen pendientes. Cada cambio se comprueba con las pruebas que le corresponden; un cambio de interfaz no renueva evidencias medidas ([ROADMAP](ROADMAP.md)).
 
 ## Propósito actual
 
@@ -43,7 +43,7 @@ No se fija una meta de que cada palabra tenga una imagen: la ausencia de evidenc
 - Proyecto y colaboración explica alcance, estado y siguientes acciones sin exigir leer documentación técnica.
 - La ficha para taller reutiliza una lectura publicada. No crea otra copia editorial ni recoge notas de participantes. La vista impresa es textual y las claves son opcionales; el JSON siempre incluye claves y procedencia para el facilitador.
 - Cada ampliación conserva original, variante, ID, localizador, evidencia y permisos. Los scripts ensamblan y verifican; las personas deciden significado, adecuación y alcance.
-- La documentación tiene entradas claras: README para arrancar; este documento para prioridades; CONTRIBUTING para mejorar; el piloto para colaborar; PROGRESO_INTERNO para registrar entregas. Los demás archivos describen herramientas y decisiones históricas.
+- La documentación tiene entradas claras: README para arrancar; este documento para prioridades; CONTRIBUTING para mejorar; el piloto para colaborar; ROADMAP como plan único y HISTORIA para lo ya hecho. Los demás archivos describen herramientas.
 
 ## Cómo tomarlo en serio
 

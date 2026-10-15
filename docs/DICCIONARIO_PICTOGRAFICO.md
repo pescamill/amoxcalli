@@ -42,7 +42,7 @@ El léxico mantiene **575 acepciones y 578 formas**, sus imágenes y las 24 pala
 
 ### Segunda lámina de Telleriano · 7 de octubre de 2026
 
-El lote `tlachia-telleriano-385-26v-v2` añade [Telleriano-Remensis, 385_26v](https://tlachia.iib.unam.mx/telleriano/385_26v): 31 apariciones y 68 componentes. Reutiliza 18 elementos del mismo documento y añade 26, conservando íntegramente las fichas anteriores. El índice actual reúne **3 conjuntos, 4 láminas, 32 zonas, 77 glifos, 14 personajes, 87 registros de elementos, 77 denominaciones distintas y 167 componentes**, con 9 puentes léxicos explícitos. [Informe y comprobaciones](../reports/iterations/iteration-002/changes.md).
+El lote `tlachia-telleriano-385-26v-v2` añade [Telleriano-Remensis, 385_26v](https://tlachia.iib.unam.mx/telleriano/385_26v): 31 apariciones y 68 componentes. Reutiliza 18 elementos del mismo documento y añade 26, conservando íntegramente las fichas anteriores. El índice actual reúne **3 conjuntos, 4 láminas, 32 zonas, 77 glifos, 14 personajes, 87 registros de elementos, 77 denominaciones distintas y 167 componentes**, con 9 puentes léxicos explícitos.
 
 Cuando otra lámina documenta un elemento existente, la publicación permite una URL de página distinta únicamente si todos los demás campos coinciden. Conserva la URL y las notas originales del elemento; la aparición nueva mantiene su propio localizador. Un cambio de sentido, designación, imagen o notas sigue siendo un conflicto.
 
@@ -50,7 +50,7 @@ Cuando otra lámina documenta un elemento existente, la publicación permite una
 
 Los lotes v3–v6 añaden 220 apariciones de las láminas 385_21v, 385_22r, 385_22v, 385_23r, 385_23v, 385_24r, 385_24v, 385_25r y 385_25v. El índice reúne ahora **3 conjuntos, 13 láminas, 155 zonas, 297 glifos, 14 personajes, 152 registros de elementos, 142 denominaciones distintas y 613 componentes**. Conserva los 9 puentes léxicos y todas las filas anteriores, incluidas sus notas y URLs.
 
-Se reutilizó HTML de fuente cacheado, en lotes de 86, 25, 86 y 23 apariciones, sin llamadas al LLM para extraer ni enlazar datos. Cada publicación tiene receta, candidato, informe y respaldo; repetirla conserva los bytes. La comprobación del catálogo y su procedencia no constituye un cotejo primario del manuscrito. Hay 79 apariciones sin cita y 70 sin componentes; esas ausencias permanecen explícitas. [Informe, fuentes y pruebas](../reports/PICTOGRAFIA_LOTES_004_2026-10-08.md).
+Se reutilizó HTML de fuente cacheado, en lotes de 86, 25, 86 y 23 apariciones, sin llamadas al LLM para extraer ni enlazar datos. Cada publicación tiene receta, candidato, informe y respaldo; repetirla conserva los bytes. La comprobación del catálogo y su procedencia no constituye un cotejo primario del manuscrito. Hay 79 apariciones sin cita y 70 sin componentes; esas ausencias permanecen explícitas.
 
 La meta cuantitativa de 300 apariciones está cubierta. El siguiente paso técnico es preparar consultas documentales de desarrollo y una reserva independiente para evaluar recuperación y futuras comparaciones del Laboratorio. La revisión especializada y la prueba del recorrido con personas siguen pendientes.
 
