@@ -46,7 +46,7 @@ Cada respuesta incluye un bloque «Explicación» de 2 a 5 frases. Cada frase te
 
 ```bash
 .venv/bin/pip install anthropic   # dependencia opcional
-bash scripts/plataforma.sh --explain-model claude   # usa ANTHROPIC_API_KEY o un perfil de `ant auth login`
+bash scripts/amoxcalli.sh serve --explain-model claude   # usa ANTHROPIC_API_KEY o un perfil de `ant auth login`
 ```
 
 El validador acepta una explicación solo si cada frase cita IDs de la evidencia mostrada y las formas entre «» aparecen en lo citado. Si la explicación de Claude no pasa la validación, si el modelo declina o si falta el paquete o la credencial, se muestra la extractiva con el motivo. En la medición, las 46 explicaciones extractivas del conjunto pasan la validación (2,9 frases y 3,7 citas de media). Claude no se ha medido todavía; para hacerlo (envía pasajes y tiene costo): `.venv/bin/python -m nahuatl_local.evidence_evaluation --explain claude`.

@@ -7,8 +7,10 @@ const delay=ms=>new Promise(r=>setTimeout(r,ms));
 async function until(fn){for(let i=0;i<100;i++){if(fn())return;await delay(30)}throw Error('Timed out waiting for UI condition')}
 (async()=>{
  const virtualConsole=new VirtualConsole();virtualConsole.on('jsdomError',e=>{if(!e.message.includes('HTMLMediaElement'))errors.push(e.message)});
- const dom=await JSDOM.fromURL(origin,{runScripts:'dangerously',resources:'usable',pretendToBeVisual:true,cookieJar,virtualConsole,beforeParse(w){
+ const dom=await JSDOM.fromURL(origin+'/aportar',{runScripts:'dangerously',resources:'usable',pretendToBeVisual:true,cookieJar,virtualConsole,beforeParse(w){
   w.fetch=async(url,options={})=>{const absolute=new URL(url,origin).href;const headers=new Headers(options.headers);const cookie=cookieJar.getCookieStringSync(absolute);if(cookie)headers.set('Cookie',cookie);if(options.method&&options.method!=='GET')headers.set('Origin',origin);const response=await fetch(absolute,{...options,headers});for(const value of response.headers.getSetCookie())cookieJar.setCookieSync(value,absolute);return response};
+  // /aportar carga install.js (instalación PWA), que consulta matchMedia; jsdom no lo implementa.
+  w.matchMedia=()=>({matches:false,addEventListener(){},removeEventListener(){}});
   w.HTMLDialogElement.prototype.showModal=function(){this.open=true};w.HTMLDialogElement.prototype.close=function(){this.open=false};
   w.Blob=Blob;w.URL.createObjectURL=()=> 'blob:http://127.0.0.1:8766/test-only';w.URL.revokeObjectURL=()=>{};
  }});

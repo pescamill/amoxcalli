@@ -72,3 +72,7 @@ Helpers: `strip_marks`, `squash`, `tokens`, `es_key`, `key_of`, `readable`. `tes
 3. Any change to `text.py` that alters `phonemic_key` must update the fingerprint in `tests/test_text.py` *after* re-measuring the analyzer.
 
 Measured results live in `reports/` (`MORFOLOGIA_EVALUACION.md`, `EVIDENCIA_EVALUACION.md`, `documentary-retrieval-v1.json`); the before/after comparison of this paradigm change is in `reports/data-paradigm-comparison-2026-10-15.md`.
+
+## 6. Serving
+
+One process serves the app, Voces (`/aportar`) and the API: `bash scripts/amoxcalli.sh serve` (`setup` also installs the local model). `web.py` owns what every route shares — the route table, JSON errors (400/401/403/404/405/500, tracebacks to stderr without query or body), security headers and CSP, allowed hosts, the `Origin` check on writes, static files, and a listen queue of 64. `platform.py` registers the application routes and `community.py` the Voces routes; neither has its own server.

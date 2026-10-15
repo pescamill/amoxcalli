@@ -10,4 +10,4 @@ def status(adapter=None,enabled=None):
     trained=all((adapter/n).is_file() for n in ('adapter_config.json','adapter_model.safetensors'))
     return dict(name='Qwen3-0.6B + LoRA',ready=base and trained and not missing and enabled is not False,
                 base_ready=base,adapter_ready=trained,missing_dependencies=missing,disabled=enabled is False,
-                setup_command='bash scripts/iniciar.sh',note='Generador experimental; requiere revisión lingüística.')
+                setup_command='bash scripts/amoxcalli.sh setup',note='Generador experimental; requiere revisión lingüística.')

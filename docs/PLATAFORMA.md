@@ -26,13 +26,13 @@ flowchart TD
 ## Arranque y actualización
 
 ```bash
-bash scripts/plataforma.sh
+bash scripts/amoxcalli.sh serve
 ```
 
-Abre http://127.0.0.1:8766 (`make demo` prepara antes los análisis derivados). Para otra ubicación de la base:
+Abre http://127.0.0.1:8766 (`make demo` prepara antes los análisis derivados). Un solo proceso sirve la aplicación, Voces (`/aportar`) y la API; las opciones están en el [README](../README.md#probarlo). Para otra ubicación de la base:
 
 ```bash
-python3 -m nahuatl_local.platform --db /ruta/mi-corpus.sqlite3 serve
+bash scripts/amoxcalli.sh serve --db /ruta/mi-corpus.sqlite3
 ```
 
 Antes de actualizar una instalación con datos, detén el servidor y copia `data/community/` a un respaldo privado. Conserva tu carpeta `data`; no está en el repositorio. La migración crea únicamente tablas `corpus_*`, no sobrescribe las tablas de Voces ni modifica pesos. La semilla se importa una vez; los registros tienen ID y versión. Los datos de pruebas están en directorios temporales y no se distribuyen.
@@ -128,14 +128,14 @@ Los registros exportados conservan grupo de fuente y, para aportaciones nuevas, 
 
 ## Modelo y revisión humana dentro del ecosistema
 
-El modelo se activa cuando sus dependencias, base y adaptador están disponibles; `scripts/iniciar.sh` los prepara. La búsqueda principal consulta el archivo completo, no sólo el léxico editorial. Resultados reales: [MODEL_CARD.md](../MODEL_CARD.md).
+El modelo se activa cuando sus dependencias, base y adaptador están disponibles; `bash scripts/amoxcalli.sh setup` los prepara y arranca. La búsqueda principal consulta el archivo completo, no sólo el léxico editorial. Resultados reales: [MODEL_CARD.md](../MODEL_CARD.md).
 
 El laboratorio porta las reglas limitadas de Amoxcalli: palabra aislada, «veo + un objeto singular» y coordinación de dos sustantivos. Toda oración nueva se marca como propuesta. No cubre negación, otros tiempos o número por inferencia.
 
 Para habilitar el modelo existente, instala y descarga primero sus dependencias como indica el README y arranca:
 
 ```bash
-bash scripts/plataforma.sh --enable-model --adapter outputs/continued-unseen/run/best
+bash scripts/amoxcalli.sh serve --adapter outputs/continued-unseen/run/best
 ```
 
 La carga es perezosa y local. Se conserva el modelo, entrenamiento y evaluación previos; no se volvió a entrenar durante esta integración. Los splits de entrenamiento y sus comandos se conservan. El CSV íntegro de Axolotl ahora se consulta como archivo separado, con etiquetas y atribuciones de origen. Sus pasajes no se convierten automáticamente en fichas editoriales aprobadas ni en nuevos pares autorizados de entrenamiento.
@@ -148,7 +148,7 @@ La ficha de revisión exporta candidato, entrada y evidencias para evaluación h
 
 Las consultas con texto se ordenan con BM25 en español y náhuatl; los filtros y la paginación se aplican sobre los resultados. El campo náhuatl usa las reglas seguras de comparación de `nah-ortho-1`; el español conserva su tokenización. Los resultados muestran el texto original. La navegación sin consulta conserva el orden del archivo. La recuperación de contexto del laboratorio usa el mismo índice, limitada a náhuatl clásico y pasajes breves. Este índice completo no participa en el benchmark reservado, que utiliza solo `train.jsonl`.
 
-La política CSP de Amoxcalli permite imágenes de `https://aztecglyphs.wired-humanities.org` para los cuatro enlaces aprobados. El servidor de Voces por separado mantiene imágenes locales. Scripts, conexiones y otros orígenes de imágenes conservan sus restricciones. Se comprobó la carga real de agua, casa, flor y árbol florido en el navegador, además del encabezado HTTP.
+La política CSP de Amoxcalli permite imágenes de `https://aztecglyphs.wired-humanities.org` para los cuatro enlaces aprobados. Scripts, conexiones y otros orígenes de imágenes conservan sus restricciones. Se comprobó la carga real de agua, casa, flor y árbol florido en el navegador, además del encabezado HTTP.
 
 Las propuestas de clasificación del archivo están en `corpus/variant-proposals-v1.json`, pendientes de decisión; la ampliación de las acepciones y el trabajo necesario para una plataforma editorial compartida se describe en [LEXICO_GOBERNANZA.md](LEXICO_GOBERNANZA.md).
 

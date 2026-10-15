@@ -7,10 +7,10 @@ Instalación, acceso desde el teléfono, HTTPS y comportamiento sin conexión. Q
 Desde la carpeta del repositorio, ejecuta `make demo` (prepara los análisis derivados y arranca) o directamente:
 
 ```bash
-bash scripts/plataforma.sh
+bash scripts/amoxcalli.sh serve
 ```
 
-En Windows, desde PowerShell, usa `py -m nahuatl_local.platform serve`.
+En Windows, desde PowerShell, usa `py -m nahuatl_local.platform serve`. Opciones: [README](../README.md#probarlo).
 
 Abre http://127.0.0.1:8766. Consulta «agua», abre su referencia glífica y sigue el enlace a su fuente. En «Voces · texto y voz», crea un perfil con tu variante y completa una misión. En «Aportar», registra una forma, texto o referencia glífica con su fuente y localizador. Los envíos quedan pendientes de revisión y aparecen en tus aportaciones.
 
@@ -21,7 +21,7 @@ La revisión editorial y la importación por lotes se administran desde terminal
 Sustituye la dirección del ejemplo por la IP local del equipo servidor:
 
 ```bash
-bash scripts/plataforma.sh --host 192.168.1.25 --port 8766
+bash scripts/amoxcalli.sh serve --host 192.168.1.25 --port 8766
 ```
 
 Abre `http://192.168.1.25:8766` en el teléfono conectado al mismo Wi-Fi. Autoriza el puerto en el cortafuegos local si es necesario. Puedes buscar, escribir y cargar un audio ya grabado. Usa la IP concreta en `--host`: el servidor comprueba el encabezado Host.
@@ -41,7 +41,7 @@ nahuatl.example.org {
 Arranca la app en el mismo equipo del proxy:
 
 ```bash
-bash scripts/plataforma.sh --public-origin https://nahuatl.example.org
+bash scripts/amoxcalli.sh serve --public-origin https://nahuatl.example.org
 ```
 
 El proxy debe conservar el Host y servir un certificado válido. Esta configuración requiere que tú dispongas del dominio, red y certificado; el paquete no crea ni publica un servidor. Para un piloto privado, limita su acceso al grupo participante. El piloto conserva sesiones locales, pero aún no incorpora recuperación de cuentas ni cuotas de almacenamiento para un servicio público.
