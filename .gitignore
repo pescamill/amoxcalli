@@ -42,3 +42,9 @@ reports/editorial-pipeline/batch-003/
 reports/editorial-pipeline/batch-004/
 reports/editorial-pipeline/batch-005/
 reports/editorial-pipeline/batch-006/
+
+# Local rollback copies written before regenerating evidence; not read back by code.
+reports/*-backups/
+reports/*-experiments/
+reports/iterations/**/*.before
+reports/iterations/iteration-011/documentary-retrieval-before.json
