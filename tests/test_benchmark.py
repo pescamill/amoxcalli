@@ -1,4 +1,4 @@
-import csv,hashlib,io,json,socket,sys,tempfile,unittest
+import csv,hashlib,importlib.util,io,json,socket,sys,tempfile,unittest
 from contextlib import redirect_stdout
 from pathlib import Path
 from types import SimpleNamespace
@@ -81,6 +81,7 @@ class BootstrapTests(unittest.TestCase):
         ci=bootstrap_ci([],mean)
         self.assertEqual(ci['n'],0);self.assertIsNone(ci['estimate'])
 
+@unittest.skipUnless(importlib.util.find_spec('sacrebleu'),'sacrebleu no instalado (extra de medición)')
 class RetrievalBenchmarkTests(unittest.TestCase):
     def setUp(self):
         self.folder=tempfile.TemporaryDirectory();self.addCleanup(self.folder.cleanup)

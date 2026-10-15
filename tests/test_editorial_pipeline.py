@@ -12,7 +12,7 @@ from nahuatl_local.editorial_pipeline import assemble as pipeline_assemble, enco
 
 
 BASELINE=ROOT/'reports/editorial-pipeline/batch-007/catalog-baseline.json'
-LESSONS=ROOT/'reports/learning-before-expansion-2026-09-30/learning-v1.json'
+LESSONS=ROOT/'tests/fixtures/learning/before-expansion-2026-09-30.json'
 
 
 def prepare(*args,**kwargs):

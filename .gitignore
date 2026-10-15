@@ -35,16 +35,11 @@ outputs/**/*-previous
 *-previous
 *.zip
 
-# Redundant prototypes; batch-007 remains as an integration fixture.
-reports/editorial-pipeline/batch-001/
-reports/editorial-pipeline/batch-002/
-reports/editorial-pipeline/batch-003/
-reports/editorial-pipeline/batch-004/
-reports/editorial-pipeline/batch-005/
-reports/editorial-pipeline/batch-006/
-
-# Local rollback copies written before regenerating evidence; not read back by code.
+# reports/ solo versiona informes vigentes (ver reports/README.md); lo demás es local.
+reports/editorial-pipeline/batch-00[1-6]/
 reports/*-backups/
 reports/*-experiments/
-reports/iterations/**/*.before
-reports/iterations/iteration-011/documentary-retrieval-before.json
+reports/iterations/
+reports/learning-before-*/
+reports/learning-audit*/
+reports/lexicon-candidates.*

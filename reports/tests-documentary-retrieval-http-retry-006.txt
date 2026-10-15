@@ -1,6 +1,0 @@
-test_http_lookup_rechecks_public_state_and_preserves_private_sentinel (tests.test_documentary_retrieval.DocumentaryRetrievalTests.test_http_lookup_rechecks_public_state_and_preserves_private_sentinel) ... ok
-
-----------------------------------------------------------------------
-Ran 1 test in 5.631s
-
-OK

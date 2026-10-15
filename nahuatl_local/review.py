@@ -1,8 +1,5 @@
 """Revisión determinista y ficha de evaluación humana, sin servicios externos."""
-import argparse
-import json
 import unicodedata
-from pathlib import Path
 
 
 def exact(text):
@@ -31,18 +28,3 @@ def validate_request(bundle):
         raise ValueError('Faltan evidencia o campos de revisión humana')
     return bundle
 
-
-def main():
-    p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument('input', help='JSON producido por infer --output')
-    p.add_argument('--export')
-    a = p.parse_args()
-    result = json.loads(Path(a.input).read_text())
-    bundle = validate_request(request_bundle(result))
-    if a.export:
-        Path(a.export).write_text(json.dumps(bundle, ensure_ascii=False, indent=2))
-    print(json.dumps(local_review(result), ensure_ascii=False, indent=2))
-
-
-if __name__ == '__main__':
-    main()

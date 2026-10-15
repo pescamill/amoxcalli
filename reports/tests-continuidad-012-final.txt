@@ -1,5 +1,0 @@
-PASS: reader Aves → chachalaca archive → exact passage, keyboard focus, scroll and unfiltered results
-PASS: another source → empty dictionary → archive fallback → same passage; annotation detail → archive preserves origin
-PASS: guided return selects exact step, leaves answers blank and preserves persisted progress
-PASS: legacy/direct routes, malformed/external/duplicate/cross-lesson origins and HTML escaping
-PASS: study bytes unchanged, zero storage writes, public GET only, no application errors

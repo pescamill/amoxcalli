@@ -73,7 +73,7 @@ class LearningTests(unittest.TestCase):
         self.assertEqual(e['annotations'][1]['start'],annotation['start'])
 
     def test_new_readings_preserve_every_existing_lesson_and_comprehension(self):
-        before=json.loads((ROOT/'reports/learning-before-lecturas-003-2026-10-07/learning-v1.json').read_text())
+        before=json.loads((ROOT/'tests/fixtures/learning/before-lecturas-003-2026-10-07.json').read_text())
         current=json.loads((ROOT/'corpus/learning-v1.json').read_text())
         self.assertEqual(current['lessons'][:len(before['lessons'])],before['lessons'])
         self.assertEqual([l['id'] for l in current['lessons'][6:]],
@@ -141,7 +141,7 @@ class LearningTests(unittest.TestCase):
             self.load_changed(lambda d:d['lessons'][0]['examples'][2]['annotations'][0].update(quote='xochitl',sense_id='sense-xochitl'))
 
     def test_context_questions_quote_the_original_translation_and_keep_recognition(self):
-        before=json.loads((ROOT/'reports/learning-before-reading-context-2026-10-07/learning-v1.json').read_text())
+        before=json.loads((ROOT/'tests/fixtures/learning/before-reading-context-2026-10-07.json').read_text())
         current=Learning(self.archive).data
         for old,new in zip(before['lessons'],current['lessons']):
             self.assertEqual([(e['archive_id'],e['source_hash'],e['exercise']) for e in old['examples']],
@@ -162,7 +162,7 @@ class LearningTests(unittest.TestCase):
                 self.load_changed(lambda d:change(next(l for l in d['lessons'] if l['id']=='aves')['examples'][0]))
 
     def test_flor_update_is_append_only_preserves_passages_and_other_lessons(self):
-        original=json.loads((ROOT/'reports/learning-audit-before-flor-v2/learning-v1.json').read_text())
+        original=json.loads((ROOT/'tests/fixtures/learning/before-flor-v2.json').read_text())
         current=Learning(self.archive).data
         self.assertEqual(current['lessons'][0]['version'],2)
         for old,new in zip(original['lessons'],current['lessons']):
@@ -172,7 +172,7 @@ class LearningTests(unittest.TestCase):
         for lesson in current['lessons']:
             for example in lesson['examples']:
                 for a in example['annotations']:a.pop('start');a.pop('end')
-        snapshot=json.loads((ROOT/'reports/learning-before-expansion-2026-09-30/learning-v1.json').read_text())
+        snapshot=json.loads((ROOT/'tests/fixtures/learning/before-expansion-2026-09-30.json').read_text())
         self.assertEqual(snapshot['lessons'][1:],original['lessons'][1:])
         for old,new in zip(snapshot['lessons'],current['lessons']):
             self.assertEqual([e['exercise'] for e in old['examples']],[e['exercise'] for e in new['examples']])

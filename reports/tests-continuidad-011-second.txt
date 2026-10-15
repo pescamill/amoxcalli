@@ -1,4 +1,0 @@
-PASS: reader Aves → chachalaca archive → exact passage, keyboard focus, scroll and unfiltered results
-Error: UI timeout
-    at until (/Users/pescamil/Downloads/nahuatl-local/tests/reading_continuity.cjs:7:87)
-    at async /Users/pescamil/Downloads/nahuatl-local/tests/reading_continuity.cjs:45:39

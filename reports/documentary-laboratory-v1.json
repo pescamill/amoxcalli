@@ -17,9 +17,6 @@
     "sha256": "a3d2da91d6e09d9063f7714ab28ec1945621f4c21580a0e6d71be3d62c1bb284"
   },
   "comparison": "documentary-development-v1",
-  "display_evidence": {
-    "reports/documentary-laboratory-display-v1.json": "a6b467d3fe731963902c4baf82cee8346b992d03664ed52308ed67fde4f6fb6a"
-  },
   "evaluation_fingerprint": "f2b2996e86d3595ff117b014962340eafbed0e894cc73e9b14f56a7008a09fb4",
   "human_review": "pending",
   "input_hashes": {
@@ -44,7 +41,6 @@
     "nahuatl_local/community_web/catalog.json": "4afae8d8100e98e85dc5bbb962ab6739d7d4a9204eb04ec07166ea5835d9fc32",
     "nahuatl_local/corpus.py": "48e7eeadae4f2f21310423cde925b636baadf578274b0c7cbe533aa042b8c781",
     "nahuatl_local/documentary_evaluation.py": "e9ca1706a94c00972386d41cbd9d58aab170609e8ffe00f1813810dd4051a11c",
-    "nahuatl_local/documentary_laboratory.py": "9ecad7caa6ca1e8f9a3fb9cfffa595622bf1356ed51fb331e04ea017cda2a93a",
     "nahuatl_local/documentary_retrieval.py": "a1876f4294da4ae338380cc5e484a679aaf4ef8ad1cb758c1f37e2a5264ac06b",
     "nahuatl_local/documentary_retrieval_evaluation.py": "f53d809b4ad6384ae13af694ac1a053871c5aa5ee6d41f8e15ba1c32658683e0",
     "nahuatl_local/pictography.py": "8469ba0b8f7780375fb63d69855687b81d9f88b124bad85a10a2d1b8d2583a65",
@@ -167,7 +163,7 @@
       "status": "measured"
     },
     {
-      "candidate_source": "docs/TRABAJO_AUTONOMO.md",
+      "candidate_source": "docs/ROADMAP.md",
       "cost": null,
       "label": "Qwen3-0.6B + LoRA",
       "method": "textual_model",
@@ -177,7 +173,7 @@
       "status": "not_run"
     },
     {
-      "candidate_source": "docs/TRABAJO_AUTONOMO.md",
+      "candidate_source": "docs/ROADMAP.md",
       "cost": null,
       "label": "Qwen3-VL-4B-Instruct · candidato",
       "method": "multimodal_candidate",
