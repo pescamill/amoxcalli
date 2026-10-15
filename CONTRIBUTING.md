@@ -29,16 +29,14 @@ La revisión registra responsable autorizado, fecha, evidencia, decisión y lím
 Haz cambios acotados, conserva el almacenamiento del cuaderno y los permisos existentes, y explica el problema que resuelves. Verifica el recorrido afectado con teclado y tamaño de teléfono cuando cambie su interfaz. No amplíes la recogida de datos para medir uso sin un acuerdo explícito.
 
 ```bash
-bash scripts/plataforma.sh
-python3 -m unittest discover -s tests
-npm ci --ignore-scripts
-npm run test:ui
-npm run test:offline
+make demo                  # servir en http://127.0.0.1:8766
+npm ci --ignore-scripts    # una vez, para la suite DOM
+make test                  # suite Python + suite DOM (lo mismo que CI)
 ```
 
-Algunas pruebas Python necesitan dependencias de entrenamiento y fuentes cacheadas; consulta las guías antes de concluir que una instalación mínima falla. Usa el entorno `.venv` si está preparado. Las pruebas de interfaz arrancan una base temporal, sin modificar las aportaciones de tu instalación. Para un cambio concreto, ejecuta primero las pruebas relevantes; no hace falta entrenar ni descargar pesos para mejorar la lectura.
+Las pruebas que necesitan el laboratorio LLM (`requirements.txt`) o la caché local de páginas de Molina se omiten con un aviso si faltan. Un cambio solo de interfaz se verifica con `make test-ui`; no regeneres informes. Un cambio en ranking, datos, batería o evaluador sí exige `make reports` y `make check` ([reports/README.md](reports/README.md)). Las pruebas de interfaz arrancan una base temporal, sin modificar las aportaciones de tu instalación. Para un cambio concreto, ejecuta primero las pruebas relevantes; no hace falta entrenar ni descargar pesos para mejorar la lectura.
 
-Describe en la propuesta el comportamiento resultante, la verificación realizada y cualquier duda pendiente. Actualiza la guía correspondiente y registra la entrega en `docs/PROGRESO_INTERNO.md`. Los informes históricos se conservan; las prioridades actuales viven en `docs/PROPOSITO.md`.
+Describe en la propuesta el comportamiento resultante, la verificación realizada y cualquier duda pendiente. Actualiza la guía correspondiente y, si cierra un paso del plan, su entrada en [docs/ROADMAP.md](docs/ROADMAP.md). No escribas informes por ciclo: el commit y el ROADMAP son el registro.
 
 ## Licencias y acceso
 

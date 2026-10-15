@@ -16,9 +16,9 @@ Una institución mexicana podría evaluar el proyecto como herramienta de lectur
 | Propósito y límites | [PROPOSITO](PROPOSITO.md) y pantalla Proyecto y colaboración | Alcance declarado y públicos previstos |
 | Ficha de lectura | Leer → Preparar ficha para taller; `#taller/aves` | Pasajes, preguntas, claves opcionales, localizadores y hashes |
 | Receta y respaldo | `configs/reading-context-2026-10-07.json` y `reports/learning-before-reading-context-2026-10-07/` | Conservación del contenido original y decisiones reproducibles |
-| Revisión pendiente | [Plan de iteración](LEARNING_ITERATION_PLAN.md), auditoría de lecturas y notas de cada ficha | Dudas visibles; no revisión especializada concluida |
+| Revisión pendiente | [Plan vigente](ROADMAP.md), auditoría de lecturas y notas de cada ficha | Dudas visibles; no revisión especializada concluida |
 | Condiciones del contenido | [Fuentes](FUENTES.md), [Voces](VOCES.md), THIRD_PARTY_NOTICES | Separación de permisos; revisión de derechos pendiente por obra y uso |
-| Funcionamiento técnico | [Entrega del recorrido](../reports/RECORRIDO_CONECTADO_2026-10-07.md) | Pruebas técnicas; no evidencia de aprendizaje ni certificación |
+| Funcionamiento técnico | `make test` (suite Python y DOM) | Pruebas técnicas; no evidencia de aprendizaje ni certificación |
 
 ## Trabajo propuesto en seis semanas
 

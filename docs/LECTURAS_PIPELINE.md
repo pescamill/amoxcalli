@@ -52,7 +52,7 @@ La interfaz cuenta los ejemplos de cada lectura y del lector completo dinámicam
 
 ## Estado de la primera expansión
 
-Se añadieron agua/tierra, flores/cantos y aves: 3 recorridos / 12 pasajes. La app reúne 6 recorridos / 24 pasajes de 6 obras. Las 12 selecciones y claves previas se conservaron, junto con la práctica guardada. [Informe](../reports/LECTURAS_002_2026-09-30.md).
+Se añadieron agua/tierra, flores/cantos y aves: 3 recorridos / 12 pasajes. La app reúne 6 recorridos / 24 pasajes de 6 obras. Las 12 selecciones y claves previas se conservaron, junto con la práctica guardada.
 
 Son lecturas editoriales con revisión primaria y lingüística pendiente. El mecanismo valida citas y referencias; no acredita interpretación semántica, análisis gramatical ni eficacia con principiantes. Los permisos de entrenamiento y las reservas de evaluación siguen separados.
 

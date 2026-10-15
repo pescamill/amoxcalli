@@ -1,8 +1,6 @@
-> Actualización de la plataforma unificada: `/aportar` obtiene tareas del archivo completo de 16,111 pares. Las misiones de ejemplo descritas abajo se conservan sólo para compatibilidad del servidor comunitario independiente. El arranque principal es `bash scripts/iniciar.sh`.
-
-> Integración 2026-09-27: Voces forma parte de Amoxcalli. `scripts/voces.sh` abre el corpus unificado; entra en «Voces · texto y voz». Consulta [PLATAFORMA.md](PLATAFORMA.md).
-
 # Voces · colaboración de hablantes
+
+Voces forma parte de Amoxcalli en `/aportar` (arranque: `make demo` o `bash scripts/plataforma.sh`); sus tareas usan el archivo completo de 16.111 pares. Las misiones de ejemplo descritas abajo se conservan para el servidor comunitario independiente. Operación y revisión: [PLATAFORMA.md](PLATAFORMA.md).
 
 App local para reunir juicios de lectura, traducciones propuestas, grabaciones y revisiones entre participantes. El código usa la licencia MIT del proyecto. No requiere descargar el modelo, instalar PyTorch, pagar una API ni crear una cuenta externa. Esta primera versión sirve para un piloto acompañado; la información lingüística necesita revisión antes de entrenar.
 

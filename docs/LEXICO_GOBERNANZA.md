@@ -61,7 +61,7 @@ Las páginas quedan en caché local; repetir el lote produce el mismo JSON sin r
 
 El parser conserva la paleografía y traducción histórica exactamente como texto de la ficha; decodifica los escapes de transporte y entidades HTML. La grafía normalizada del catálogo se guarda en `catalog_normalized`, separada del testimonio. No moderniza el español ni divide acepciones automáticamente. Cada entrada enlaza `/contexto/{id}` y conserva ID, URL de consulta y SHA256 de la página. Si cambia el formato, la extracción se detiene antes de publicar el lote. La validación del contrato precede a la escritura.
 
-La migración añade IDs nuevos sin sustituir fichas editadas. El filtro «Origen» distingue transcripción automática y selección editorial; el diccionario reserva su primera página para las 24 palabras representativas; el resto se ordena por la forma náhuatl, 48 fichas por página. Las asociaciones y sus pendientes se gestionan por el script v7 descrito abajo. `catalog_checked` significa consulta del catálogo, no cotejo primario ni revisión especializada. `rights.training=false` evita usarlas automáticamente para entrenamiento. Informe: [dictionary-import-v6.json](../reports/dictionary-import-v6.json).
+La migración añade IDs nuevos sin sustituir fichas editadas. El filtro «Origen» distingue transcripción automática y selección editorial; el diccionario reserva su primera página para las 24 palabras representativas; el resto se ordena por la forma náhuatl, 48 fichas por página. Las asociaciones y sus pendientes se gestionan por el script v7 descrito abajo. `catalog_checked` significa consulta del catálogo, no cotejo primario ni revisión especializada. `rights.training=false` evita usarlas automáticamente para entrenamiento.
 
 
 ## Enlaces visuales deterministas · v7
@@ -80,12 +80,12 @@ Lee las referencias locales y los pasajes clásicos en una sola pasada. No usa L
 
 Los vínculos de definición y ejemplo son ayudas contextuales, **no componentes glíficos atribuidos a la entrada**. No se admiten asociaciones por letras compartidas o imágenes genéricas. Si no hay referencia, queda pendiente. Resultado histórico de v7: 99 de 523 entradas con imagen; 424 pendientes en [glyph-coverage-v7.json](../reports/glyph-coverage-v7.json). Todavía no se cumple la cobertura total pedida. Todos los vínculos nuevos tienen `rights.training=false`; las dependencias a forma, glifo original y fuentes se guardan en `corpus_links`, de modo que retirar una dependencia también oculta el vínculo público. Las imágenes abren directamente la ficha documental.
 
-Para ampliar la cobertura, añade referentes y términos precisos al inventario con fuente, folio, crédito y alcance explícitos; ejecuta el mismo script y revisa el informe. No hace falta investigar cada palabra con el LLM. La importación preservó exactamente las 1.094 entidades anteriores: [data-preservation-v7.json](../reports/data-preservation-v7.json).
+Para ampliar la cobertura, añade referentes y términos precisos al inventario con fuente, folio, crédito y alcance explícitos; ejecuta el mismo script y revisa el informe. No hace falta investigar cada palabra con el LLM. La importación preservó exactamente las 1.094 entidades anteriores.
 
 
 ## Publicación por lotes · batch-007-v9
 
-Se añadieron 50 acepciones, sus 50 formas y 39 referencias contextuales mediante cotejo literal automático de GDN y de los pares/imágenes archivados. No se declara revisión lingüística ni lectura glífica completa. Cada referencia conserva su tipo, nota, imagen, crédito, evidencia y dependencias. Resultado actual: 139 de 575 entradas con imagen; 436 pendientes. El [pipeline](EDITORIAL_PIPELINE.md) publica lotes con respaldo, hashes y preservación de originales y aportaciones. [Informe de publicación](../reports/publication-batch-007-v9.json). La transcripción paleográfica y la normalización del catálogo siguen en campos separados; no se asignan acepciones por frecuencia ni por letras compartidas.
+Se añadieron 50 acepciones, sus 50 formas y 39 referencias contextuales mediante cotejo literal automático de GDN y de los pares/imágenes archivados. No se declara revisión lingüística ni lectura glífica completa. Cada referencia conserva su tipo, nota, imagen, crédito, evidencia y dependencias. Resultado actual: 139 de 575 entradas con imagen; 436 pendientes. El [pipeline](EDITORIAL_PIPELINE.md) publica lotes con respaldo, hashes y preservación de originales y aportaciones. La transcripción paleográfica y la normalización del catálogo siguen en campos separados; no se asignan acepciones por frecuencia ni por letras compartidas.
 
 ## Diccionario pictográfico · Amoxcalli
 

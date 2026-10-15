@@ -12,7 +12,7 @@ Updated 15 October 2026. This is the only planning document: `docs/PROGRESO_INTE
 | Archive | 16,111 aligned passages; ~10k are *not* classical (Puebla 2,884 · Morelos 1,938 · Central 1,543 · Huasteca 1,596 · unlabeled 2,157) | Archive search is spelling-sensitive; analyzer is classical-only |
 | Documentary lookup | BM25 + citation validator + abstention: 119/123 complete | Ranks glyph elements above the dictionary entry for "¿Qué significa xochitl?" |
 | Model lab | Qwen3‑0.6B + LoRA: best 22.4 chrF++ with RAG, below "top BM25 passage" (27.2) | The LLM has no product role yet |
-| Engineering | Python stdlib server, vanilla JS PWA; 248 Python tests + 5 DOM suites; CI on a clean clone | Cold start ~1 min until `data/derived/` exists |
+| Engineering | Python stdlib server, vanilla JS PWA; 267 Python tests + 5 DOM suites; CI on a clean clone | Cold start ~1 min until `data/derived/` exists |
 
 ### Found while testing (14 October)
 
