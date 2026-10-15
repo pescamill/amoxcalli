@@ -12,3 +12,6 @@
 .ask-note{font-size:12px;color:var(--muted,#6b756f);margin-top:24px}
 .ask-abstained{padding:16px;border:1px solid var(--line,#e0e6df);border-radius:7px;background:white}
 @media(max-width:600px){.ask-passage .nah-passage{font-size:18px}.ask-row button{flex:1}}
+.ask-explanation{margin:20px 0;padding:16px 18px;border:1px solid var(--line,#e0e6df);border-radius:7px;background:white}.ask-explanation h2{margin-top:0}
+.ask-explanation-body p{line-height:1.6}.ask-cite{font:12px system-ui;border:1px solid #c8d1c7;background:#f0f5eb;border-radius:10px;padding:1px 7px;margin-left:3px;cursor:pointer;min-height:0;color:inherit}
+.ask-flash{outline:2px solid var(--ochre,#c99538);outline-offset:4px;transition:outline-color .4s}

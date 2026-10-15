@@ -59,6 +59,10 @@ This file replaces scattered planning across dated reports. **Each iteration shi
 - **Measured** on `evaluation/evidence-questions-v1.json` (32 held-out queries): entry top-1 92% vs 42% for exact search; at least one relevant passage 100% vs 76%; modern spellings 0% → 100%. Guide: [EVIDENCIA.md](EVIDENCIA.md).
 - Partly covers iteration 1 for retrieval only (the analyzer's own key is unchanged).
 
+### 4b · Cited explanations and one word mechanism (15 October 2026)
+- Every Preguntar answer has a 2–5 sentence explanation where each sentence cites evidence IDs; a validator rejects uncited sentences, IDs outside the evidence and «quoted» forms not found in the cited text. The extractive writer (no model) is the default; Claude (`--explain-model claude`, opt-in because it sends the question and passages to Anthropic) is used only when its answer validates, otherwise the extractive one is shown with the reason. 46/46 extractive explanations validate; Claude is not yet measured.
+- Aprender now uses the same word mechanism as Leer: every word is analyzable and the interlinear gloss is available during cloze exercises, with only the blank hidden; the passage is restored after a correct answer; editorial word help shows the automatic analysis inline.
+
 ### 4 · Grounded explanation agent (the LLM's product role)
 - The LLM *explains*; it does not translate from memory. It is a tool-using agent over `analyze_word`, `concordance`, `dictionary`, `gloss_hints` and `archive_search`. Every claim cites passage or entry IDs, and the existing citation validator rejects anything that doesn't. It abstains when the evidence is missing.
 - Off by default. Model is swappable: a hosted model (e.g., Claude via API) or a local one (the LoRA lab).

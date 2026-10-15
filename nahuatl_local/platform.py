@@ -20,6 +20,7 @@ from .pictography import public_catalog
 from .documentary_retrieval import DocumentaryIndex, PublicSources, digest as documentary_digest, public_path
 from .stems import WordStudy
 from .evidence import Evidence
+from .explain import ClaudeWriter, explain
 
 WEB = Path(__file__).with_name('platform_web')
 INSTALL_HEAD = '<meta name="theme-color" content="#812d37"><meta name="apple-mobile-web-app-capable" content="yes">\n<link rel="manifest" href="/manifest.webmanifest"><link rel="apple-touch-icon" href="/icon-192.png"><link rel="stylesheet" href="/install.css"><script src="/install.js" defer></script>\n'
@@ -65,7 +66,7 @@ def rule_query(store, value):
                 'Las reglas disponibles no cubren esta expresión. Consulta palabras o textos por separado.')
 
 
-def make_handler(store, model_enabled=None, adapter=None, word_study=None):
+def make_handler(store, model_enabled=None, adapter=None, word_study=None, explain_writer=None):
     base=community_handler(store)
     archive=Archive()
     # Análisis morfológico, concordancia por raíz y pistas de glosa (sin modelo).
@@ -150,8 +151,16 @@ def make_handler(store, model_enabled=None, adapter=None, word_study=None):
                     try:return self.reply(word_study.word(q.get('w',[''])[0],exclude))
                     except ValueError as error:raise Problem(str(error)) from None
                 if path=='/api/ask':
-                    try:return self.reply(evidence_index.ask(parse_qs(parsed.query).get('q',[''])[0]))
+                    try:result=evidence_index.ask(parse_qs(parsed.query).get('q',[''])[0])
                     except ValueError as error:raise Problem(str(error)) from None
+                    return self.reply(dict(result,explanation=explain(result),explain_models=['extractive']+(['claude'] if explain_writer else [])))
+                if path=='/api/explain':
+                    q=parse_qs(parsed.query);model=q.get('model',['extractive'])[0]
+                    if model not in ('extractive','claude'):raise Problem('Modelo de explicación desconocido.')
+                    if model=='claude' and not explain_writer:raise Problem('La explicación con Claude no está activada en este servidor (--explain-model claude).')
+                    try:result=evidence_index.ask(q.get('q',[''])[0])
+                    except ValueError as error:raise Problem(str(error)) from None
+                    return self.reply(explain(result,explain_writer if model=='claude' else None))
                 if path=='/api/gloss':
                     q=parse_qs(parsed.query);rid=q.get('id',[''])[0]
                     source=archive.get(rid)['nah'] if rid else q.get('text',[''])[0]
@@ -251,12 +260,14 @@ class PlatformServer(ThreadingHTTPServer):
     request_queue_size=64
 
 
-def make_server(store,host='127.0.0.1',port=8766,public_origin=None,model_enabled=None,adapter=None,prewarm=False):
+def make_server(store,host='127.0.0.1',port=8766,public_origin=None,model_enabled=None,adapter=None,prewarm=False,explain_model=None):
     word_study=WordStudy(records_fn=store.public_records)
     if prewarm:
         # El primer arranque estima frecuencias y pistas (~1 min); después se usa data/derived/.
         threading.Thread(target=word_study.warm,daemon=True,name='word-study-warmup').start()
-    httpd=PlatformServer((host,port),make_handler(store,model_enabled,adapter,word_study))
+    # Claude solo redacta si se pide al arrancar: la explicación envía la pregunta y los pasajes citados a Anthropic.
+    writer=ClaudeWriter() if explain_model=='claude' else None
+    httpd=PlatformServer((host,port),make_handler(store,model_enabled,adapter,word_study,writer))
     actual=httpd.server_address[1]
     httpd.public_origin=None
     httpd.allowed_hosts={f'localhost:{actual}',f'127.0.0.1:{actual}',f'{host}:{actual}'}
@@ -272,7 +283,7 @@ def make_server(store,host='127.0.0.1',port=8766,public_origin=None,model_enable
 def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--db',type=Path,default=DEFAULT_DB)
     sub=p.add_subparsers(dest='command',required=True)
-    serve=sub.add_parser('serve');serve.add_argument('--host',default='127.0.0.1');serve.add_argument('--port',type=int,default=8766);serve.add_argument('--public-origin');serve.add_argument('--enable-model',action='store_true',default=None);serve.add_argument('--disable-model',action='store_true');serve.add_argument('--adapter',default=str(ROOT/'outputs/continued-unseen/run/best'))
+    serve=sub.add_parser('serve');serve.add_argument('--host',default='127.0.0.1');serve.add_argument('--port',type=int,default=8766);serve.add_argument('--public-origin');serve.add_argument('--enable-model',action='store_true',default=None);serve.add_argument('--disable-model',action='store_true');serve.add_argument('--adapter',default=str(ROOT/'outputs/continued-unseen/run/best'));serve.add_argument('--explain-model',choices=['claude'],help='Activa explicaciones redactadas por Claude (envía la pregunta y los pasajes citados a la API de Anthropic).')
     imp=sub.add_parser('import');imp.add_argument('path');imp.add_argument('--reviewer',required=True);imp.add_argument('--reason',required=True)
     sub.add_parser('queue')
     review=sub.add_parser('review');review.add_argument('id');review.add_argument('--decision',choices=['accepted','rejected'],required=True);review.add_argument('--reviewer',required=True);review.add_argument('--reason',required=True);review.add_argument('--primary-checked',action='store_true');review.add_argument('--rights-checked',action='store_true')
@@ -281,7 +292,7 @@ def main():
     try:
         store=CorpusStore(args.db)
         if args.command=='serve':
-            httpd=make_server(store,args.host,args.port,args.public_origin,False if args.disable_model else args.enable_model,args.adapter,prewarm=True)
+            httpd=make_server(store,args.host,args.port,args.public_origin,False if args.disable_model else args.enable_model,args.adapter,prewarm=True,explain_model=args.explain_model)
             print(f'Amoxcalli · http://127.0.0.1:{httpd.server_address[1]} · Voces en /aportar',flush=True)
             try:httpd.serve_forever()
             except KeyboardInterrupt:pass

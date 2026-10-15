@@ -38,3 +38,5 @@
 .igt-gloss.none{color:var(--muted,#685b4b)}
 .word-suggestion{margin:14px 0;padding:16px;background:#f4ecd9;border-left:3px solid var(--blue,#245b70);text-align:left}
 @media(max-width:600px){.word-analysis{padding:15px}.morph-form{font-size:18px}.interlinear{gap:12px 14px;padding:12px}.igt-surface{font-size:17px}}
+.cloze-blank{letter-spacing:.05em;color:var(--red,#812d37)}
+.auto-analysis{margin-top:14px;padding-top:12px;border-top:1px solid var(--line,#e0e6df)}

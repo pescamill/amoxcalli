@@ -37,4 +37,18 @@ La pertinencia se decide automáticamente (raíz esperada en una palabra del pas
 - Nombres propios leídos como poseídos (*Mo-tecuhzoma*) y otros errores del analizador; ver el paso 2 de [ROADMAP](ROADMAP.md).
 - Las palabras sin entrada en el diccionario (*cihuatl*, *tlacatl*) dependen de los pasajes y de las pistas del corpus.
 
-Endpoint: `GET /api/ask?q=…`. Siguiente paso previsto: una capa opcional que redacte explicaciones citando solo esta evidencia, validada por el comprobador de citas.
+## Explicación con citas
+
+Cada respuesta incluye un bloque «Explicación» de 2 a 5 frases. Cada frase termina con los IDs que la sustentan; al pulsarlos se resalta el pasaje o la entrada. Dos redactores comparten el mismo contrato (`nahuatl_local/explain.py`):
+
+- **Extractivo** (por omisión, sin modelo): frases fijas con los campos de la evidencia. Si hay pasajes con la misma palabra (en cualquier grafía), solo usa esos; si no, los de la misma raíz.
+- **Claude** (opcional): redacta solo con la evidencia numerada, en `claude-opus-5-5` y con la respuesta de respaldo del servidor ante rechazos (`fallbacks: "default"`). **Envía la pregunta y los pasajes citados a la API de Anthropic**, por eso queda apagado salvo que se arranque así:
+
+```bash
+.venv/bin/pip install anthropic   # dependencia opcional
+bash scripts/plataforma.sh --explain-model claude   # usa ANTHROPIC_API_KEY o un perfil de `ant auth login`
+```
+
+El validador acepta una explicación solo si cada frase cita IDs de la evidencia mostrada y las formas entre «» aparecen en lo citado. Si la explicación de Claude no pasa la validación, si el modelo declina o si falta el paquete o la credencial, se muestra la extractiva con el motivo. En la medición, las 46 explicaciones extractivas del conjunto pasan la validación (2,9 frases y 3,7 citas de media). Claude no se ha medido todavía; para hacerlo (envía pasajes y tiene costo): `.venv/bin/python -m nahuatl_local.evidence_evaluation --explain claude`.
+
+Endpoints: `GET /api/ask?q=…` (incluye la explicación extractiva) y `GET /api/explain?q=…&model=claude`.
