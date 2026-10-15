@@ -1,0 +1,4172 @@
+{
+  "schema_version": 1,
+  "release_id": "tlachia-telleriano-385-22r-23v-v5",
+  "attribution": "Datos consultados en Tlachia, UNAM. Análisis atribuidos a sus responsables; Amoxcalli añade organización y ayudas didácticas.",
+  "rights": {
+    "training": false,
+    "note": "Índice de consulta con enlaces a Tlachia. Las imágenes se cargan desde su sitio, con atribución; no se redistribuyen en este repositorio ni se relicencian como MIT. No se declara permiso de entrenamiento. Consultar las condiciones de cada documento antes de otros usos."
+  },
+  "documents": [
+    {
+      "id": "telleriano",
+      "title": "Códice Telleriano-Remensis",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_26r",
+      "attribution": "Tlachia, UNAM. Investigación, imágenes, datos y paleografía: Bertina Olmedo (INAH).",
+      "scope": "Una lámina del estudio de las secciones calendáricas. El estudio trata las deidades como zonas que reúnen glifos; no se les aplica una segmentación nueva."
+    }
+  ],
+  "pages": [
+    {
+      "id": "telleriano:385_22r",
+      "document_id": "telleriano",
+      "locator": "385_22r",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22r",
+      "source_hash": "a91b21e263c0cf2664760b7c52f072f952940be8e49a9e05baaf80fbb8c5322f",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22r.jpg"
+    },
+    {
+      "id": "telleriano:385_22v",
+      "document_id": "telleriano",
+      "locator": "385_22v",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "source_hash": "fb7674be928aca48a1fc46ee3e14203c03c6ba716e15f707b6b85d984ae8f755",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22v.jpg"
+    },
+    {
+      "id": "telleriano:385_23r",
+      "document_id": "telleriano",
+      "locator": "385_23r",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "source_hash": "8c53176c0aa2067a51f2e4eb1b185af05658c10789a5c968c8e4caf6a8a78882",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r.jpg"
+    },
+    {
+      "id": "telleriano:385_23v",
+      "document_id": "telleriano",
+      "locator": "385_23v",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23v",
+      "source_hash": "8e1b6b82dc7ed434f5a35523ded2d52d2bb9cf144d170b9ec4ae766bef4ff5c2",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23v.jpg"
+    }
+  ],
+  "zones": [
+    {
+      "id": "telleriano:385_22r_01",
+      "page_id": "telleriano:385_22r",
+      "code": "385_22r_01",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22r_01.jpg"
+    },
+    {
+      "id": "telleriano:385_22r_02",
+      "page_id": "telleriano:385_22r",
+      "code": "385_22r_02",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22r_02.jpg"
+    },
+    {
+      "id": "telleriano:385_22r_03",
+      "page_id": "telleriano:385_22r",
+      "code": "385_22r_03",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22r_03.jpg"
+    },
+    {
+      "id": "telleriano:385_22r_04",
+      "page_id": "telleriano:385_22r",
+      "code": "385_22r_04",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22r_04.jpg"
+    },
+    {
+      "id": "telleriano:385_22r_05",
+      "page_id": "telleriano:385_22r",
+      "code": "385_22r_05",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22r_05.jpg"
+    },
+    {
+      "id": "telleriano:385_22r_06",
+      "page_id": "telleriano:385_22r",
+      "code": "385_22r_06",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22r_06.jpg"
+    },
+    {
+      "id": "telleriano:385_22r_07",
+      "page_id": "telleriano:385_22r",
+      "code": "385_22r_07",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22r_07.jpg"
+    },
+    {
+      "id": "telleriano:385_22r_08",
+      "page_id": "telleriano:385_22r",
+      "code": "385_22r_08",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22r_08.jpg"
+    },
+    {
+      "id": "telleriano:385_22r_09",
+      "page_id": "telleriano:385_22r",
+      "code": "385_22r_09",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22r_09.jpg"
+    },
+    {
+      "id": "telleriano:385_22r_10",
+      "page_id": "telleriano:385_22r",
+      "code": "385_22r_10",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22r_10.jpg"
+    },
+    {
+      "id": "telleriano:385_22r_11",
+      "page_id": "telleriano:385_22r",
+      "code": "385_22r_11",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22r_11.jpg"
+    },
+    {
+      "id": "telleriano:385_22r_12",
+      "page_id": "telleriano:385_22r",
+      "code": "385_22r_12",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22r_12.jpg"
+    },
+    {
+      "id": "telleriano:385_22r_13",
+      "page_id": "telleriano:385_22r",
+      "code": "385_22r_13",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22r_13.jpg"
+    },
+    {
+      "id": "telleriano:385_22r_14",
+      "page_id": "telleriano:385_22r",
+      "code": "385_22r_14",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22r_14.jpg"
+    },
+    {
+      "id": "telleriano:385_22r_15",
+      "page_id": "telleriano:385_22r",
+      "code": "385_22r_15",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22r_15.jpg"
+    },
+    {
+      "id": "telleriano:385_22r_16",
+      "page_id": "telleriano:385_22r",
+      "code": "385_22r_16",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22r_16.jpg"
+    },
+    {
+      "id": "telleriano:385_22r_17",
+      "page_id": "telleriano:385_22r",
+      "code": "385_22r_17",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22r_17.jpg"
+    },
+    {
+      "id": "telleriano:385_22v_01",
+      "page_id": "telleriano:385_22v",
+      "code": "385_22v_01",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22v_01.jpg"
+    },
+    {
+      "id": "telleriano:385_22v_02",
+      "page_id": "telleriano:385_22v",
+      "code": "385_22v_02",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22v_02.jpg"
+    },
+    {
+      "id": "telleriano:385_22v_03",
+      "page_id": "telleriano:385_22v",
+      "code": "385_22v_03",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22v_03.jpg"
+    },
+    {
+      "id": "telleriano:385_22v_04",
+      "page_id": "telleriano:385_22v",
+      "code": "385_22v_04",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22v_04.jpg"
+    },
+    {
+      "id": "telleriano:385_22v_05",
+      "page_id": "telleriano:385_22v",
+      "code": "385_22v_05",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22v_05.jpg"
+    },
+    {
+      "id": "telleriano:385_22v_06",
+      "page_id": "telleriano:385_22v",
+      "code": "385_22v_06",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22v_06.jpg"
+    },
+    {
+      "id": "telleriano:385_22v_07",
+      "page_id": "telleriano:385_22v",
+      "code": "385_22v_07",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22v_07.jpg"
+    },
+    {
+      "id": "telleriano:385_22v_08",
+      "page_id": "telleriano:385_22v",
+      "code": "385_22v_08",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22v_08.jpg"
+    },
+    {
+      "id": "telleriano:385_22v_09",
+      "page_id": "telleriano:385_22v",
+      "code": "385_22v_09",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22v_09.jpg"
+    },
+    {
+      "id": "telleriano:385_22v_10",
+      "page_id": "telleriano:385_22v",
+      "code": "385_22v_10",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22v_10.jpg"
+    },
+    {
+      "id": "telleriano:385_22v_11",
+      "page_id": "telleriano:385_22v",
+      "code": "385_22v_11",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22v_11.jpg"
+    },
+    {
+      "id": "telleriano:385_23r_01",
+      "page_id": "telleriano:385_23r",
+      "code": "385_23r_01",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_01.jpg"
+    },
+    {
+      "id": "telleriano:385_23r_02",
+      "page_id": "telleriano:385_23r",
+      "code": "385_23r_02",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_02.jpg"
+    },
+    {
+      "id": "telleriano:385_23r_03",
+      "page_id": "telleriano:385_23r",
+      "code": "385_23r_03",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_03.jpg"
+    },
+    {
+      "id": "telleriano:385_23r_04",
+      "page_id": "telleriano:385_23r",
+      "code": "385_23r_04",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_04.jpg"
+    },
+    {
+      "id": "telleriano:385_23r_05",
+      "page_id": "telleriano:385_23r",
+      "code": "385_23r_05",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_05.jpg"
+    },
+    {
+      "id": "telleriano:385_23r_06",
+      "page_id": "telleriano:385_23r",
+      "code": "385_23r_06",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_06.jpg"
+    },
+    {
+      "id": "telleriano:385_23r_07",
+      "page_id": "telleriano:385_23r",
+      "code": "385_23r_07",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_07.jpg"
+    },
+    {
+      "id": "telleriano:385_23r_08",
+      "page_id": "telleriano:385_23r",
+      "code": "385_23r_08",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_08.jpg"
+    },
+    {
+      "id": "telleriano:385_23r_09",
+      "page_id": "telleriano:385_23r",
+      "code": "385_23r_09",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_09.jpg"
+    },
+    {
+      "id": "telleriano:385_23r_10",
+      "page_id": "telleriano:385_23r",
+      "code": "385_23r_10",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_10.jpg"
+    },
+    {
+      "id": "telleriano:385_23r_11",
+      "page_id": "telleriano:385_23r",
+      "code": "385_23r_11",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_11.jpg"
+    },
+    {
+      "id": "telleriano:385_23r_12",
+      "page_id": "telleriano:385_23r",
+      "code": "385_23r_12",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_12.jpg"
+    },
+    {
+      "id": "telleriano:385_23r_13",
+      "page_id": "telleriano:385_23r",
+      "code": "385_23r_13",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_13.jpg"
+    },
+    {
+      "id": "telleriano:385_23r_14",
+      "page_id": "telleriano:385_23r",
+      "code": "385_23r_14",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_14.jpg"
+    },
+    {
+      "id": "telleriano:385_23r_15",
+      "page_id": "telleriano:385_23r",
+      "code": "385_23r_15",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_15.jpg"
+    },
+    {
+      "id": "telleriano:385_23r_16",
+      "page_id": "telleriano:385_23r",
+      "code": "385_23r_16",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_16.jpg"
+    },
+    {
+      "id": "telleriano:385_23r_17",
+      "page_id": "telleriano:385_23r",
+      "code": "385_23r_17",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_17.jpg"
+    },
+    {
+      "id": "telleriano:385_23v_01",
+      "page_id": "telleriano:385_23v",
+      "code": "385_23v_01",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23v_01.jpg"
+    },
+    {
+      "id": "telleriano:385_23v_02",
+      "page_id": "telleriano:385_23v",
+      "code": "385_23v_02",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23v_02.jpg"
+    },
+    {
+      "id": "telleriano:385_23v_03",
+      "page_id": "telleriano:385_23v",
+      "code": "385_23v_03",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23v_03.jpg"
+    },
+    {
+      "id": "telleriano:385_23v_04",
+      "page_id": "telleriano:385_23v",
+      "code": "385_23v_04",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23v_04.jpg"
+    },
+    {
+      "id": "telleriano:385_23v_05",
+      "page_id": "telleriano:385_23v",
+      "code": "385_23v_05",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23v_05.jpg"
+    },
+    {
+      "id": "telleriano:385_23v_06",
+      "page_id": "telleriano:385_23v",
+      "code": "385_23v_06",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23v_06.jpg"
+    },
+    {
+      "id": "telleriano:385_23v_07",
+      "page_id": "telleriano:385_23v",
+      "code": "385_23v_07",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23v_07.jpg"
+    },
+    {
+      "id": "telleriano:385_23v_08",
+      "page_id": "telleriano:385_23v",
+      "code": "385_23v_08",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23v_08.jpg"
+    },
+    {
+      "id": "telleriano:385_23v_09",
+      "page_id": "telleriano:385_23v",
+      "code": "385_23v_09",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23v_09.jpg"
+    },
+    {
+      "id": "telleriano:385_23v_10",
+      "page_id": "telleriano:385_23v",
+      "code": "385_23v_10",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23v_10.jpg"
+    },
+    {
+      "id": "telleriano:385_23v_11",
+      "page_id": "telleriano:385_23v",
+      "code": "385_23v_11",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23v_11.jpg"
+    }
+  ],
+  "elements": [
+    {
+      "id": "telleriano:element:02.02.08",
+      "document_id": "telleriano",
+      "code": "02.02.08",
+      "designation": "tochtli",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "conejo"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/02.02.08.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22r",
+      "lexical_links": [
+        {
+          "sense_id": "sense-tochtli",
+          "relation": "designation",
+          "note": "La entrada conejo orienta la denominación tochtli. Consulta la función calendárica o nominal en su aparición."
+        }
+      ]
+    },
+    {
+      "id": "telleriano:element:06.01.01",
+      "document_id": "telleriano",
+      "code": "06.01.01",
+      "designation": "ce",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "uno"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/06.01.01.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22r",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:04.05.01",
+      "document_id": "telleriano",
+      "code": "04.05.01",
+      "designation": "atl",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "agua"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/04.05.01.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22r",
+      "lexical_links": [
+        {
+          "sense_id": "sense-atl",
+          "relation": "designation",
+          "note": "Agua es una entrada de consulta para la denominación atl; el valor del componente depende de la ficha."
+        }
+      ]
+    },
+    {
+      "id": "telleriano:element:02.02.12",
+      "document_id": "telleriano",
+      "code": "02.02.12",
+      "designation": "itzcuintli",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "perro"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/02.02.12.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22r",
+      "lexical_links": [
+        {
+          "sense_id": "sense-itzcuintli",
+          "relation": "designation",
+          "note": "La entrada perro sirve para consultar la denominación, sin generalizar la lectura de la imagen."
+        }
+      ]
+    },
+    {
+      "id": "telleriano:element:02.02.30",
+      "document_id": "telleriano",
+      "code": "02.02.30",
+      "designation": "ozomatli",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "mono"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/02.02.30.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22r",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:05.07.22",
+      "document_id": "telleriano",
+      "code": "05.07.22",
+      "designation": "malinalli",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "hierba torcida, enredadera, liana"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/05.07.22.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22r",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:03.02.05",
+      "document_id": "telleriano",
+      "code": "03.02.05",
+      "designation": "acatl",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "caña, carrizo"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/03.02.05.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22r",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:02.02.01",
+      "document_id": "telleriano",
+      "code": "02.02.01",
+      "designation": "ocelotl",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "ocelote, jaguar"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/02.02.01.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22r",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:02.01.06",
+      "document_id": "telleriano",
+      "code": "02.01.06",
+      "designation": "cuauhtli",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "águila"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/02.01.06.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22r",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:07.01.15",
+      "document_id": "telleriano",
+      "code": "07.01.15",
+      "designation": "poztectli",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "quebrado"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/07.01.15.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22r",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:03.01.01",
+      "document_id": "telleriano",
+      "code": "03.01.01",
+      "designation": "cuahuitl_1",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "árbol, madera"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/03.01.01.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22r",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:03.03.01",
+      "document_id": "telleriano",
+      "code": "03.03.01",
+      "designation": "xochitl",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "flor"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/03.03.01.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22r",
+      "lexical_links": [
+        {
+          "sense_id": "sense-xochitl",
+          "relation": "designation",
+          "note": "La entrada flor acompaña la denominación del elemento; no traduce todos los glifos que lo contienen."
+        }
+      ]
+    },
+    {
+      "id": "telleriano:element:01.01.21",
+      "document_id": "telleriano",
+      "code": "01.01.21",
+      "designation": "eztli",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "sangre"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/01.01.21.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22r",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:02.01.12",
+      "document_id": "telleriano",
+      "code": "02.01.12",
+      "designation": "totolin",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "pavo, guajolote"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/02.01.12.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:04.03.05",
+      "document_id": "telleriano",
+      "code": "04.03.05",
+      "designation": "olin",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "movimiento"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/04.03.05.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:04.04.08",
+      "document_id": "telleriano",
+      "code": "04.04.08",
+      "designation": "tecpatl",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "pedernal"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/04.04.08.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:01.02.50",
+      "document_id": "telleriano",
+      "code": "01.02.50",
+      "designation": "tlaloc",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "tlaloc (divinidad)"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/01.02.50.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:08.01.02",
+      "document_id": "telleriano",
+      "code": "08.01.02",
+      "designation": "tliltic",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "negro"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/08.01.02.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:01.04.08",
+      "document_id": "telleriano",
+      "code": "01.04.08",
+      "designation": "iztitl",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "uña, garra"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/01.04.08.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:01.01.20",
+      "document_id": "telleriano",
+      "code": "01.01.20",
+      "designation": "nacayotl",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "cuerpo"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/01.01.20.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:07.01.18",
+      "document_id": "telleriano",
+      "code": "07.01.18",
+      "designation": "yahualiuhqui",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "redondo, esférico"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/07.01.18.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:02.01.48",
+      "document_id": "telleriano",
+      "code": "02.01.48",
+      "designation": "cuezalin",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "pluma del alo (CF); guacamaya"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/02.01.48.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:08.01.15",
+      "document_id": "telleriano",
+      "code": "08.01.15",
+      "designation": "xochipalli",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "color naranja, ocre rojizo"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/08.01.15.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:05.11.02",
+      "document_id": "telleriano",
+      "code": "05.11.02",
+      "designation": "icpatl",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "hilo de algodón"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/05.11.02.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:03.04.41",
+      "document_id": "telleriano",
+      "code": "03.04.41",
+      "designation": "ichcatl_2",
+      "designation_status": "catalog_label",
+      "meanings": [],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/03.04.41.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:05.10.05",
+      "document_id": "telleriano",
+      "code": "05.10.05",
+      "designation": "malacatl",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "malacate, huso"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/05.10.05.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:05.05.21",
+      "document_id": "telleriano",
+      "code": "05.05.21",
+      "designation": "tzontli_2",
+      "designation_status": "catalog_label",
+      "meanings": [],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/05.05.21.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:05.10.08",
+      "document_id": "telleriano",
+      "code": "05.10.08",
+      "designation": "omitl_2",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "punzón"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/05.10.08.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:05.12.08",
+      "document_id": "telleriano",
+      "code": "05.12.08",
+      "designation": "tlalpilli",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "nudo, cosa atada"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/05.12.08.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:02.01.02",
+      "document_id": "telleriano",
+      "code": "02.01.02",
+      "designation": "coxolitli",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "especie de faisán"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/02.01.02.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:02.01.15",
+      "document_id": "telleriano",
+      "code": "02.01.15",
+      "designation": "quetzalli",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "quetzal, pluma de quetzal"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/02.01.15.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:04.04.03",
+      "document_id": "telleriano",
+      "code": "04.04.03",
+      "designation": "chalchihuitl",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "jade"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/04.04.03.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:05.05.72",
+      "document_id": "telleriano",
+      "code": "05.05.72",
+      "designation": "ichcaxochitl_2",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "banda frontal de algodón"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/05.05.72.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:05.05.73",
+      "document_id": "telleriano",
+      "code": "05.05.73",
+      "designation": "ehecaxochitl",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "banda frontal de viento"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/05.05.73.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:08.01.06",
+      "document_id": "telleriano",
+      "code": "08.01.06",
+      "designation": "coztic",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "amarillo"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/08.01.06.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:01.02.60",
+      "document_id": "telleriano",
+      "code": "01.02.60",
+      "designation": "tzonquemitl",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "cabello largo"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/01.02.60.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:01.02.03",
+      "document_id": "telleriano",
+      "code": "01.02.03",
+      "designation": "xayacatl",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "cara, rostro"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/01.02.03.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:02.02.13",
+      "document_id": "telleriano",
+      "code": "02.02.13",
+      "designation": "xolotl",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "acompañante, servidor; perro"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/02.02.13.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:05.06.16",
+      "document_id": "telleriano",
+      "code": "05.06.16",
+      "designation": "xahualli",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "adorno según la moda antigua"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/05.06.16.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:07.01.10",
+      "document_id": "telleriano",
+      "code": "07.01.10",
+      "designation": "coltic",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "curvo o torcido"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/07.01.10.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:04.04.05",
+      "document_id": "telleriano",
+      "code": "04.04.05",
+      "designation": "xihuitl_3",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "turquesa"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/04.04.05.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:05.06.04",
+      "document_id": "telleriano",
+      "code": "05.06.04",
+      "designation": "nacochtli",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "orejeras"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/05.06.04.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:02.03.02",
+      "document_id": "telleriano",
+      "code": "02.03.02",
+      "designation": "cilli",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "caracol pequeño"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/02.03.02.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:05.07.29",
+      "document_id": "telleriano",
+      "code": "05.07.29",
+      "designation": "cozcapetlatl",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "collar ancho"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/05.07.29.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:05.07.26",
+      "document_id": "telleriano",
+      "code": "05.07.26",
+      "designation": "ehecacozcatl",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "joyel del viento"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/05.07.26.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:05.05.62",
+      "document_id": "telleriano",
+      "code": "05.05.62",
+      "designation": "xicolli",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "vestidura, chaleco"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/05.05.62.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:08.01.01",
+      "document_id": "telleriano",
+      "code": "08.01.01",
+      "designation": "iztac",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "blanco"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/08.01.01.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:05.08.14",
+      "document_id": "telleriano",
+      "code": "05.08.14",
+      "designation": "tentlapalli",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "borde rojo"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/05.08.14.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:05.08.04",
+      "document_id": "telleriano",
+      "code": "05.08.04",
+      "designation": "tlalpilli_2",
+      "designation_status": "catalog_label",
+      "meanings": [],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/05.08.04.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:05.08.02",
+      "document_id": "telleriano",
+      "code": "05.08.02",
+      "designation": "maxtlatl",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "taparrabo, braguero"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/05.08.02.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:04.04.04",
+      "document_id": "telleriano",
+      "code": "04.04.04",
+      "designation": "teoxihuitl",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "turquesa fina"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/04.04.04.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:05.07.85",
+      "document_id": "telleriano",
+      "code": "05.07.85",
+      "designation": "macuextli",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "pulsera, sartal de piedras preciosas"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/05.07.85.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:04.04.10",
+      "document_id": "telleriano",
+      "code": "04.04.10",
+      "designation": "teocuitlatl",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "oro"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/04.04.10.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:05.08.08",
+      "document_id": "telleriano",
+      "code": "05.08.08",
+      "designation": "cuecuextli",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "ornamento de pierna (CF)"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/05.08.08.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:05.12.48",
+      "document_id": "telleriano",
+      "code": "05.12.48",
+      "designation": "ixtlapalpanitl",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "bandera transversal"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/05.12.48.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:05.13.29",
+      "document_id": "telleriano",
+      "code": "05.13.29",
+      "designation": "tlamamallahuiztli",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "insignia cargada en la espalda"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/05.13.29.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:05.07.25",
+      "document_id": "telleriano",
+      "code": "05.07.25",
+      "designation": "maquiztli",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "brazalete, pulsera, ajorca"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/05.07.25.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:02.03.01",
+      "document_id": "telleriano",
+      "code": "02.03.01",
+      "designation": "cipactli",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "especie de lagarto, caimán"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/02.03.01.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:04.02.05",
+      "document_id": "telleriano",
+      "code": "04.02.05",
+      "designation": "ehecatl",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "viento, aire"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/04.02.05.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:05.01.01",
+      "document_id": "telleriano",
+      "code": "05.01.01",
+      "designation": "calli",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "casa"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/05.01.01.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "lexical_links": [
+        {
+          "sense_id": "sense-calli",
+          "relation": "designation",
+          "note": "La entrada casa ayuda a entender la denominación calli. No determina la lectura de cada aparición."
+        }
+      ]
+    },
+    {
+      "id": "telleriano:element:02.02.19",
+      "document_id": "telleriano",
+      "code": "02.02.19",
+      "designation": "cuetzpalin",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "lagartija"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/02.02.19.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:02.02.20",
+      "document_id": "telleriano",
+      "code": "02.02.20",
+      "designation": "cohuatl",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "serpiente"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/02.02.20.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:01.02.05",
+      "document_id": "telleriano",
+      "code": "01.02.05",
+      "designation": "cuaxicalli",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "cráneo"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/01.02.05.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:02.02.09",
+      "document_id": "telleriano",
+      "code": "02.02.09",
+      "designation": "mazatl",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "venado"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/02.02.09.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:01.02.15",
+      "document_id": "telleriano",
+      "code": "01.02.15",
+      "designation": "ixtelolotli",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "ojo"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/01.02.15.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:05.13.01",
+      "document_id": "telleriano",
+      "code": "05.13.01",
+      "designation": "mitl",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "flecha, dardo"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/05.13.01.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:05.06.18",
+      "document_id": "telleriano",
+      "code": "05.06.18",
+      "designation": "ixtlilli",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "negro en el rostro"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/05.06.18.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:05.03.24",
+      "document_id": "telleriano",
+      "code": "05.03.24",
+      "designation": "comalli",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "vasija plana que sirve para cocer, comal"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/05.03.24.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:05.07.23",
+      "document_id": "telleriano",
+      "code": "05.07.23",
+      "designation": "cozcatl",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "joya, piedra redonda, cuenta"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/05.07.23.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:04.01.05",
+      "document_id": "telleriano",
+      "code": "04.01.05",
+      "designation": "tonatiuh",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "sol: va irradiando"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/04.01.05.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:05.07.05",
+      "document_id": "telleriano",
+      "code": "05.07.05",
+      "designation": "huipilli",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "blusón, camisola, huipil"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/05.07.05.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:05.08.01",
+      "document_id": "telleriano",
+      "code": "05.08.01",
+      "designation": "cueitl",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "enagua, enredo"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/05.08.01.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:05.08.09",
+      "document_id": "telleriano",
+      "code": "05.08.09",
+      "designation": "cotzehuatl",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "ajorca de piel"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/05.08.09.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:01.02.20",
+      "document_id": "telleriano",
+      "code": "01.02.20",
+      "designation": "tzontli",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "pelo, cabellera; tocado"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/01.02.20.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:02.01.05",
+      "document_id": "telleriano",
+      "code": "02.01.05",
+      "designation": "aztatl",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "garza"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/02.01.05.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:04.04.07",
+      "document_id": "telleriano",
+      "code": "04.04.07",
+      "designation": "tezcatl",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "espejo"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/04.04.07.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:04.02.02",
+      "document_id": "telleriano",
+      "code": "04.02.02",
+      "designation": "popoca",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "humear"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/04.02.02.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:04.02.01",
+      "document_id": "telleriano",
+      "code": "04.02.01",
+      "designation": "tletl",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "fuego"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/04.02.01.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:02.01.16",
+      "document_id": "telleriano",
+      "code": "02.01.16",
+      "designation": "ihuitl",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "plumón"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/02.01.16.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23v",
+      "lexical_links": []
+    },
+    {
+      "id": "telleriano:element:09.09.09",
+      "document_id": "telleriano",
+      "code": "09.09.09",
+      "designation": "?",
+      "designation_status": "catalog_label",
+      "meanings": [
+        "?"
+      ],
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/09.09.09.jpg",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23v",
+      "lexical_links": []
+    }
+  ],
+  "occurrences": [
+    {
+      "id": "telleriano:385_22r_01_01",
+      "page_id": "telleriano:385_22r",
+      "zone_id": "telleriano:385_22r_01",
+      "code": "385_22r_01_01",
+      "kind": "glyph",
+      "reading": "yohualteuctli : tepeyollotl",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22r_01_01.jpg",
+      "citations": [
+        "côzcapetlatl teôxihuitl itlaactoc FC 8 56",
+        "imamacal, yiaztatzon FC 2. cap. 32 132",
+        "y yaztatzon icpac contlaliticac PM 261v",
+        "ytlacuchtzon PM 262v"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": []
+    },
+    {
+      "id": "telleriano:385_22r_02_01",
+      "page_id": "telleriano:385_22r",
+      "zone_id": "telleriano:385_22r_02",
+      "code": "385_22r_02_01",
+      "kind": "glyph",
+      "reading": "yohualteuctli : tlaloc",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22r_02_01.jpg",
+      "citations": [
+        "chalchiuhcozcapetlatl FC 12, cap. 4 12",
+        "imamacal, yiaztzatzon FC 2, cap. 32 132",
+        "mixtlimacaticac PM 261v",
+        "texoamacale FC 1, cap. 11 22",
+        "y yaztazton icpac contlaliticac PM 261v",
+        "yamacal yn texuctica tlacuiloli PM 267r"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": []
+    },
+    {
+      "id": "telleriano:385_22r_03_01",
+      "page_id": "telleriano:385_22r",
+      "zone_id": "telleriano:385_22r_03",
+      "code": "385_22r_03_01",
+      "kind": "glyph",
+      "reading": "yohualteuctli : xiuhteuctli",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22r_03_01.jpg",
+      "citations": [
+        "auh in conaquja itzontecon, iehoatl in tozpololli FC 2, cap. 37 161",
+        "cozcapetlatl teoxihuitl itlaacto FC 8 56",
+        "ixtlan tlataan, tezcapoctli ica FC 2, cap. 37 161",
+        "ixtlantlaanticac PM 262r",
+        "yn jtzintlan quetzalcomjtl, itech tlatzontli tzoncoztli FC 2, cap. 37 159",
+        "ytozpulol quetzaltzoyo, icpac manj PM 261r"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": []
+    },
+    {
+      "id": "telleriano:385_22r_04_01",
+      "page_id": "telleriano:385_22r",
+      "zone_id": "telleriano:385_22r_04",
+      "code": "385_22r_04_01",
+      "kind": "glyph",
+      "reading": "yohualteuctli : itztli",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22r_04_01.jpg",
+      "citations": [
+        "in jcozquj chalchiuhcozcapetlatl FC 12, cap. 4 12",
+        "tecpactzontli, in icpac, contlaliticac PM 261r",
+        "y yamacal quetzalmiavayo PM 264r",
+        "ychoquizxaual eticac PM 266r"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": []
+    },
+    {
+      "id": "telleriano:385_22r_05_01",
+      "page_id": "telleriano:385_22r",
+      "zone_id": "telleriano:385_22r_05",
+      "code": "385_22r_05_01",
+      "kind": "glyph",
+      "reading": "yohualteuctli : piltzinteuctli",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22r_05_01.jpg",
+      "citations": [
+        "in jcozquj chalchiuhcozcapetlatl FC 12, cap. 4 12",
+        "ychalchiuhtetel yn icpac contlaliticac PM 262v",
+        "yteucuitlanacoch PM 266r"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": []
+    },
+    {
+      "id": "telleriano:385_22r_06_01",
+      "page_id": "telleriano:385_22r",
+      "zone_id": "telleriano:385_22r_06",
+      "code": "385_22r_06_01",
+      "kind": "glyph",
+      "reading": "chicuace tochtli",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22r_06_01.jpg",
+      "citations": [
+        "chiquace tochtli FC 4, cap. 28 96"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": [
+        {
+          "element_id": "telleriano:element:02.02.08",
+          "values": [
+            "tochtli"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:06.01.01",
+          "values": [
+            "ce"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_22r_07_01",
+      "page_id": "telleriano:385_22r",
+      "zone_id": "telleriano:385_22r_07",
+      "code": "385_22r_07_01",
+      "kind": "glyph",
+      "reading": "chicome atl",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22r_07_01.jpg",
+      "citations": [
+        "chicome atl FC 4, cap. 28 96"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": [
+        {
+          "element_id": "telleriano:element:06.01.01",
+          "values": [
+            "ce"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:04.05.01",
+          "values": [
+            "atl"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_22r_08_01",
+      "page_id": "telleriano:385_22r",
+      "zone_id": "telleriano:385_22r_08",
+      "code": "385_22r_08_01",
+      "kind": "glyph",
+      "reading": "chicuei itzcuintli",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22r_08_01.jpg",
+      "citations": [
+        "chicuei itzcujntli FC 4, cap. 28 96"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": [
+        {
+          "element_id": "telleriano:element:06.01.01",
+          "values": [
+            "ce"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:02.02.12",
+          "values": [
+            "itzcuintli"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_22r_09_01",
+      "page_id": "telleriano:385_22r",
+      "zone_id": "telleriano:385_22r_09",
+      "code": "385_22r_09_01",
+      "kind": "glyph",
+      "reading": "chiucnahui ozomatli",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22r_09_01.jpg",
+      "citations": [
+        "chicunauj oçomatli FC 4, cap. 28 96"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": [
+        {
+          "element_id": "telleriano:element:06.01.01",
+          "values": [
+            "ce"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:02.02.30",
+          "values": [
+            "ozmatli"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_22r_10_01",
+      "page_id": "telleriano:385_22r",
+      "zone_id": "telleriano:385_22r_10",
+      "code": "385_22r_10_01",
+      "kind": "glyph",
+      "reading": "matlactli malinalli",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22r_10_01.jpg",
+      "citations": [
+        "matlactli malinalli FC 4, cap. 28 96"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": [
+        {
+          "element_id": "telleriano:element:05.07.22",
+          "values": [
+            "malinalli"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:06.01.01",
+          "values": [
+            "ce"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_22r_11_01",
+      "page_id": "telleriano:385_22r",
+      "zone_id": "telleriano:385_22r_11",
+      "code": "385_22r_11_01",
+      "kind": "glyph",
+      "reading": "yohualteuctli : cinteotl",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22r_11_01.jpg",
+      "citations": [
+        "in jcozquj chalchiuhcozcapetlatl FC 12, cap. 4 12",
+        "ixtlauhxaoale FC 1, cap. 7 13",
+        "tlaujtl yn jamacal FC 2, cap. 23 65"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": []
+    },
+    {
+      "id": "telleriano:385_22r_12_01",
+      "page_id": "telleriano:385_22r",
+      "zone_id": "telleriano:385_22r_12",
+      "code": "385_22r_12_01",
+      "kind": "glyph",
+      "reading": "matlactli oce acatl",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22r_12_01.jpg",
+      "citations": [
+        "matlactloce acatl FC 4, cap. 28 96"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": [
+        {
+          "element_id": "telleriano:element:03.02.05",
+          "values": [
+            "acatl"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:06.01.01",
+          "values": [
+            "ce"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_22r_13_01",
+      "page_id": "telleriano:385_22r",
+      "zone_id": "telleriano:385_22r_13",
+      "code": "385_22r_13_01",
+      "kind": "glyph",
+      "reading": "yohualteuctli : mictlanteuctli",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22r_13_01.jpg",
+      "citations": [
+        "motenhvlcopinticac PM 262v",
+        "ycuexcochtechimal PM 266v",
+        "yxquatechimale FC 1, ad. I 79"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": []
+    },
+    {
+      "id": "telleriano:385_22r_14_01",
+      "page_id": "telleriano:385_22r",
+      "zone_id": "telleriano:385_22r_14",
+      "code": "385_22r_14_01",
+      "kind": "glyph",
+      "reading": "matlactli omome ocelotl",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22r_14_01.jpg",
+      "citations": [
+        "matlactlomome ocelutl FC 4, cap. 28 96"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": [
+        {
+          "element_id": "telleriano:element:02.02.01",
+          "values": [
+            "ocelotl"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:06.01.01",
+          "values": [
+            "ce"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_22r_15_01",
+      "page_id": "telleriano:385_22r",
+      "zone_id": "telleriano:385_22r_15",
+      "code": "385_22r_15_01",
+      "kind": "glyph",
+      "reading": "yohualteuctli : chalchiuhtlicue",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22r_15_01.jpg",
+      "citations": [
+        "chalchiuhcozcapetlatl FC 12, cap. 4 12",
+        "texoamacale, quetzalmjiaoaio FC 1, cap. 11 22",
+        "xiuhnacoche FC 1, cap. 11 22",
+        "xiuhnacochtli malacachtic FC 12, cap. 4 12"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": []
+    },
+    {
+      "id": "telleriano:385_22r_16_01",
+      "page_id": "telleriano:385_22r",
+      "zone_id": "telleriano:385_22r_16",
+      "code": "385_22r_16_01",
+      "kind": "glyph",
+      "reading": "matlactli omei cuauhtli",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22r_16_01.jpg",
+      "citations": [
+        "matlactlomej quauhtli FC 4, cap. 28 96"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": [
+        {
+          "element_id": "telleriano:element:06.01.01",
+          "values": [
+            "ce"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:02.01.06",
+          "values": [
+            "cuauhtli"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_22r_17_01",
+      "page_id": "telleriano:385_22r",
+      "zone_id": "telleriano:385_22r_17",
+      "code": "385_22r_17_01",
+      "kind": "glyph",
+      "reading": "cuahuitl poztectli : tamoanchan",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22r_17_01.jpg",
+      "citations": [
+        "tamoancha, xuchitlycacan Telleriano-Remensis 22r"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": [
+        {
+          "element_id": "telleriano:element:07.01.15",
+          "values": [
+            "poztectli"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:03.01.01",
+          "values": [
+            "cuahuitl"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:03.03.01",
+          "values": [
+            "?"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:01.01.21",
+          "values": [
+            "?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_22v_01_01",
+      "page_id": "telleriano:385_22v",
+      "zone_id": "telleriano:385_22v_01",
+      "code": "385_22v_01_01",
+      "kind": "glyph",
+      "reading": "yohualteuctli : tlazolteotl",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22v_01_01.jpg",
+      "citations": [
+        "côzcapetlatl teôxihuitl itlaactoc FC 8 56",
+        "ichcaxochioa, FC 1, cap. 8 16",
+        "motenholcupinticac, tlaxapochtli in contlaliticac, ycamapa[n] PM 263r",
+        "motenolcopi, tlaxapuchtli qujmotlatlalili yn jcamapa[n] FC 1, cap. 8 16",
+        "xiuhnacoche FC 1, cap. 11 22",
+        "ychcaxochiuh contlaliticac PM 263r"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": []
+    },
+    {
+      "id": "telleriano:385_22v_02_01",
+      "page_id": "telleriano:385_22v",
+      "zone_id": "telleriano:385_22v_02",
+      "code": "385_22v_02_01",
+      "kind": "glyph",
+      "reading": "yohualteuctli : tepeyollotl",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22v_02_01.jpg",
+      "citations": [
+        "côzcapetlatl teôxihuitl itlaactoc FC 8 56",
+        "imamacal, yiaztatzon FC 2. cap. 32 132",
+        "y yaztatzon icpac contlaliticac PM 261v",
+        "ytlacuchtzon PM 262v"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": []
+    },
+    {
+      "id": "telleriano:385_22v_03_01",
+      "page_id": "telleriano:385_22v",
+      "zone_id": "telleriano:385_22v_03",
+      "code": "385_22v_03_01",
+      "kind": "glyph",
+      "reading": "yohualteuctli : tlaloc",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22v_03_01.jpg",
+      "citations": [
+        "chalchiuhcozcapetlatl FC 12, cap. 4 12",
+        "imamacal, yiaztzatzon FC 2, cap. 32 132",
+        "mixtlimacaticac PM 261v",
+        "texoamacale FC 1, cap. 11 22",
+        "y yaztazton icpac contlaliticac PM 261v",
+        "yamacal yn texuctica tlacuiloli PM 267r"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": []
+    },
+    {
+      "id": "telleriano:385_22v_04_01",
+      "page_id": "telleriano:385_22v",
+      "zone_id": "telleriano:385_22v_04",
+      "code": "385_22v_04_01",
+      "kind": "glyph",
+      "reading": "yohualteuctli : xiuhteuctli",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22v_04_01.jpg",
+      "citations": [
+        "auh in conaquja itzontecon, iehoatl in tozpololli FC 2, cap. 37 161",
+        "cozcapetlatl teoxihuitl itlaacto FC 8 56",
+        "ixtlan tlataan, tezcapoctli ica FC 2, cap. 37 161",
+        "ixtlantlaanticac PM 262r",
+        "yn jtzintlan quetzalcomjtl, itech tlatzontli tzoncoztli FC 2, cap. 37 159",
+        "ytozpulol quetzaltzoyo, icpac manj PM 261r"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": []
+    },
+    {
+      "id": "telleriano:385_22v_05_01",
+      "page_id": "telleriano:385_22v",
+      "zone_id": "telleriano:385_22v_05",
+      "code": "385_22v_05_01",
+      "kind": "glyph",
+      "reading": "yohualteuctli : itztli",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22v_05_01.jpg",
+      "citations": [
+        "in jcozquj chalchiuhcozcapetlatl FC 12, cap. 4 12",
+        "tecpactzontli, in icpac, contlaliticac PM 261r",
+        "y yamacal quetzalmiavayo PM 264r",
+        "ychoquizxaual eticac PM 266r"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": []
+    },
+    {
+      "id": "telleriano:385_22v_06_01",
+      "page_id": "telleriano:385_22v",
+      "zone_id": "telleriano:385_22v_06",
+      "code": "385_22v_06_01",
+      "kind": "glyph",
+      "reading": "ce cozcacuauhtli",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22v_06_01.jpg",
+      "citations": [
+        "ce cozcaquauhtli FC 4, cap. 29 97"
+      ],
+      "morphology": [],
+      "segmentation": [
+        "ce cozca-cuauh-tli"
+      ],
+      "unexpressed": [],
+      "components": [
+        {
+          "element_id": "telleriano:element:02.01.12",
+          "values": [
+            "cozcacuauhtli"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:06.01.01",
+          "values": [
+            "ce"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_22v_07_01",
+      "page_id": "telleriano:385_22v",
+      "zone_id": "telleriano:385_22v_07",
+      "code": "385_22v_07_01",
+      "kind": "glyph",
+      "reading": "ome olin",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22v_07_01.jpg",
+      "citations": [],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": [
+        {
+          "element_id": "telleriano:element:06.01.01",
+          "values": [
+            "ce"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:04.03.05",
+          "values": [
+            "olin"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_22v_08_01",
+      "page_id": "telleriano:385_22v",
+      "zone_id": "telleriano:385_22v_08",
+      "code": "385_22v_08_01",
+      "kind": "glyph",
+      "reading": "yei tecpatl",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22v_08_01.jpg",
+      "citations": [
+        "ei tecpatl FC 4, cap. 29 97"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": [
+        {
+          "element_id": "telleriano:element:04.04.08",
+          "values": [
+            "tecpatl"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:06.01.01",
+          "values": [
+            "ce"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_22v_09_01",
+      "page_id": "telleriano:385_22v",
+      "zone_id": "telleriano:385_22v_09",
+      "code": "385_22v_09_01",
+      "kind": "glyph",
+      "reading": "nahui quiyahuitl",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22v_09_01.jpg",
+      "citations": [
+        "nahuj qujavitl FC 4, cap. 29 97"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": [
+        {
+          "element_id": "telleriano:element:01.02.50",
+          "values": [
+            "quiyahuitl"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:06.01.01",
+          "values": [
+            "ce"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_22v_10_01",
+      "page_id": "telleriano:385_22v",
+      "zone_id": "telleriano:385_22v_10",
+      "code": "385_22v_10_01",
+      "kind": "glyph",
+      "reading": "macuilli xochitl",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22v_10_01.jpg",
+      "citations": [
+        "macujlli suchitl FC 4, cap. 29 97"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": [
+        {
+          "element_id": "telleriano:element:03.03.01",
+          "values": [
+            "xochitl"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:06.01.01",
+          "values": [
+            "ce"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_22v_11_01",
+      "page_id": "telleriano:385_22v",
+      "zone_id": "telleriano:385_22v_11",
+      "code": "385_22v_11_01",
+      "kind": "glyph",
+      "reading": "inacayo izticoliuhqui : xolotl",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22v_11_01.jpg",
+      "citations": [],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [
+        "i-,"
+      ],
+      "components": [
+        {
+          "element_id": "telleriano:element:08.01.02",
+          "values": [
+            "?"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:01.04.08",
+          "values": [
+            "izti"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:01.01.20",
+          "values": [
+            "nacayo"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_22v_11_02",
+      "page_id": "telleriano:385_22v",
+      "zone_id": "telleriano:385_22v_11",
+      "code": "385_22v_11_02",
+      "kind": "glyph",
+      "reading": "iichcaxochiuh coxoliyo iehecaxochiuh quetzaltzonyo : xolotl",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22v_11_02.jpg",
+      "citations": [
+        "yecaxochiuh PM 267r",
+        "coxoliio FC 12, cap. 4 12",
+        "ychcaxochiuh contlaliticac PM 263r"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [
+        "i-, -uh,"
+      ],
+      "components": [
+        {
+          "element_id": "telleriano:element:07.01.18",
+          "values": [
+            "?"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:02.01.48",
+          "values": [
+            "?"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:08.01.15",
+          "values": [
+            "?"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:05.11.02",
+          "values": [
+            "?"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:03.04.41",
+          "values": [
+            "ichcaxochi"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:05.10.05",
+          "values": [
+            "?"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:05.05.21",
+          "values": [
+            "tzon"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:05.10.08",
+          "values": [
+            "?"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:01.01.21",
+          "values": [
+            "?"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:05.12.08",
+          "values": [
+            "?"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:02.01.02",
+          "values": [
+            "coxoliyo"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:02.01.15",
+          "values": [
+            "quetzaltzonyo"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:04.04.03",
+          "values": [
+            "?"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:05.05.72",
+          "values": [
+            "ichcaxochi"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:05.05.73",
+          "values": [
+            "ehecaxochi"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_22v_11_04",
+      "page_id": "telleriano:385_22v",
+      "zone_id": "telleriano:385_22v_11",
+      "code": "385_22v_11_04",
+      "kind": "glyph",
+      "reading": "itzonquen itzoncoz : xolotl",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22v_11_04.jpg",
+      "citations": [
+        "tzoncoztli FC 2, cap. 37 159",
+        "tzonqueme FC 8, cap. 15 47"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [
+        "i-,"
+      ],
+      "components": [
+        {
+          "element_id": "telleriano:element:04.04.03",
+          "values": [
+            "?"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:08.01.06",
+          "values": [
+            "coz"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:01.02.60",
+          "values": [
+            "tzonquen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_22v_11_05",
+      "page_id": "telleriano:385_22v",
+      "zone_id": "telleriano:385_22v_11",
+      "code": "385_22v_11_05",
+      "kind": "glyph",
+      "reading": "ixayac : xolotl",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22v_11_05.jpg",
+      "citations": [],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [
+        "i-,"
+      ],
+      "components": [
+        {
+          "element_id": "telleriano:element:01.02.03",
+          "values": [
+            "xayac"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:02.02.13",
+          "values": [
+            "xolotl"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:05.06.16",
+          "values": [
+            "?"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:08.01.02",
+          "values": [
+            "?"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:08.01.06",
+          "values": [
+            "?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_22v_11_06",
+      "page_id": "telleriano:385_22v",
+      "zone_id": "telleriano:385_22v_11",
+      "code": "385_22v_11_06",
+      "kind": "glyph",
+      "reading": "tzicoliuhqui ixiuhnacoch : xolotl",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22v_11_06.jpg",
+      "citations": [
+        "tzicoliuhcanacoche FC 1, cap. 5 9",
+        "tzicoliuhqui teucuitlatl in inacuch PM 261v",
+        "xiuhnacochtli, malacachtic, itech pilcatica teucujtlaepcololli FC 12, cap. 4 12"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": [
+        {
+          "element_id": "telleriano:element:07.01.10",
+          "values": [
+            "tzicoliuhqui"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:04.04.05",
+          "values": [
+            "xiuh"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:05.06.04",
+          "values": [
+            "nacoch"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_22v_11_07",
+      "page_id": "telleriano:385_22v",
+      "zone_id": "telleriano:385_22v_11",
+      "code": "385_22v_11_07",
+      "kind": "glyph",
+      "reading": "iteocuitlaacuechcozqui : xolotl",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22v_11_07.jpg",
+      "citations": [
+        "teucujtlaacuechcozque FC 1, cap. 5 9",
+        "Yteucuitlaacuechcuzquj PM 261v"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": [
+        {
+          "element_id": "telleriano:element:02.03.02",
+          "values": [
+            "cuech"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:05.07.29",
+          "values": [
+            "cozqui"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:08.01.15",
+          "values": [
+            "teocuitla"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_22v_11_08",
+      "page_id": "telleriano:385_22v",
+      "zone_id": "telleriano:385_22v_11",
+      "code": "385_22v_11_08",
+      "kind": "glyph",
+      "reading": "iehecacozqui : xolotl",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22v_11_08.jpg",
+      "citations": [
+        "hecaillacatzcuzcayo PM 261v"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [
+        "i-,"
+      ],
+      "components": [
+        {
+          "element_id": "telleriano:element:05.07.26",
+          "values": [
+            "ehecacozqui"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:05.12.08",
+          "values": [
+            "?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_22v_11_09",
+      "page_id": "telleriano:385_22v",
+      "zone_id": "telleriano:385_22v_11",
+      "code": "385_22v_11_09",
+      "kind": "glyph",
+      "reading": "ixicol : xolotl",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22v_11_09.jpg",
+      "citations": [],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [
+        "i-,"
+      ],
+      "components": [
+        {
+          "element_id": "telleriano:element:05.05.62",
+          "values": [
+            "xicol"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:08.01.01",
+          "values": [
+            "?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_22v_11_10",
+      "page_id": "telleriano:385_22v",
+      "zone_id": "telleriano:385_22v_11",
+      "code": "385_22v_11_10",
+      "kind": "glyph",
+      "reading": "itlalpil itentlapal inic motzinilpiticac : xolotl",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22v_11_10.jpg",
+      "citations": [
+        "ytentlapal inic motzinilpiticac PM 261v"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": [
+        {
+          "element_id": "telleriano:element:05.08.14",
+          "values": [
+            "tentlapal"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:05.08.04",
+          "values": [
+            "tlalpil"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_22v_11_11",
+      "page_id": "telleriano:385_22v",
+      "zone_id": "telleriano:385_22v_11",
+      "code": "385_22v_11_11",
+      "kind": "glyph",
+      "reading": "imaxtli tlayahualiuhcatectli : xolotl",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22v_11_11.jpg",
+      "citations": [
+        "tlayavaliuhcatectli PM 267r"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": [
+        {
+          "element_id": "telleriano:element:08.01.15",
+          "values": [
+            "?"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:05.08.02",
+          "values": [
+            "maxtli"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:07.01.18",
+          "values": [
+            "yahualiuhca"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_22v_11_12",
+      "page_id": "telleriano:385_22v",
+      "zone_id": "telleriano:385_22v_11",
+      "code": "385_22v_11_12",
+      "kind": "glyph",
+      "reading": "ixiuhmacuex : xolotl",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22v_11_12.jpg",
+      "citations": [],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": [
+        {
+          "element_id": "telleriano:element:04.04.04",
+          "values": [
+            "xiuh"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:05.07.85",
+          "values": [
+            "macuex"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_22v_11_13",
+      "page_id": "telleriano:385_22v",
+      "zone_id": "telleriano:385_22v_11",
+      "code": "385_22v_11_13",
+      "kind": "glyph",
+      "reading": "ichalchiuhcuecuex, iteocuitlacoyol : xolotl",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22v_11_13.jpg",
+      "citations": [
+        "chalchiuhcuecuextli, teucujtlacoiollotoc FC 12, cap. 4 11",
+        "teocujtlacoiolli in jxci itech monequja FC 12, cap. 4 12"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": [
+        {
+          "element_id": "telleriano:element:04.04.10",
+          "values": [
+            "teocuitlacoyol"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:04.04.03",
+          "values": [
+            "chalchiuh"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:05.08.08",
+          "values": [
+            "cuecuex"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_22v_11_14",
+      "page_id": "telleriano:385_22v",
+      "zone_id": "telleriano:385_22v_11",
+      "code": "385_22v_11_14",
+      "kind": "glyph",
+      "reading": "itlamamal tlahuiztli ipan : xolotl",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22v_11_14.jpg",
+      "citations": [
+        "yxtlapalpanitl PM 79r",
+        "tlamamalli tlauiztli FC 9, cap. 21 96"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [
+        "i-,"
+      ],
+      "components": [
+        {
+          "element_id": "telleriano:element:08.01.15",
+          "values": [
+            "?"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:05.12.48",
+          "values": [
+            "?"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:05.13.29",
+          "values": [
+            "tlamamal",
+            "tlahuiztli"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_22v_11_15",
+      "page_id": "telleriano:385_22v",
+      "zone_id": "telleriano:385_22v_11",
+      "code": "385_22v_11_15",
+      "kind": "glyph",
+      "reading": "ichalchiuhmaquiz : xolotl",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_22v",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_22v_11_15.jpg",
+      "citations": [
+        "chalchiuhtli maquiztli FC 10, cap. 16 60"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": [
+        {
+          "element_id": "telleriano:element:05.07.25",
+          "values": [
+            "maquiz"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:04.04.03",
+          "values": [
+            "chalchiuh"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:04.04.10",
+          "values": [
+            "?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_23r_01_01",
+      "page_id": "telleriano:385_23r",
+      "zone_id": "telleriano:385_23r_01",
+      "code": "385_23r_01_01",
+      "kind": "glyph",
+      "reading": "yohualteuctli : piltzinteuctli",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_01_01.jpg",
+      "citations": [
+        "in jcozquj chalchiuhcozcapetlatl FC 12, cap. 4 12",
+        "ychalchiuhtetel yn icpac contlaliticac PM 262v",
+        "yteucuitlanacoch PM 266r"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": []
+    },
+    {
+      "id": "telleriano:385_23r_02_01",
+      "page_id": "telleriano:385_23r",
+      "zone_id": "telleriano:385_23r_02",
+      "code": "385_23r_02_01",
+      "kind": "glyph",
+      "reading": "yohualteuctli : cinteotl",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_02_01.jpg",
+      "citations": [
+        "in jcozquj chalchiuhcozcapetlatl FC 12, cap. 4 12",
+        "ixtlauhxaoale FC 1, cap. 7 13",
+        "tlaujtl yn jamacal FC 2, cap. 23 65"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": []
+    },
+    {
+      "id": "telleriano:385_23r_03_01",
+      "page_id": "telleriano:385_23r",
+      "zone_id": "telleriano:385_23r_03",
+      "code": "385_23r_03_01",
+      "kind": "glyph",
+      "reading": "yohualteuctli : mictlanteuctli",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_03_01.jpg",
+      "citations": [
+        "motenhvlcopinticac PM 262v",
+        "ycuexcochtechimal PM 266v",
+        "yxquatechimale FC 1, ad. I 79"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": []
+    },
+    {
+      "id": "telleriano:385_23r_04_01",
+      "page_id": "telleriano:385_23r",
+      "zone_id": "telleriano:385_23r_04",
+      "code": "385_23r_04_01",
+      "kind": "glyph",
+      "reading": "yohualteuctli : chalchiuhtlicue",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_04_01.jpg",
+      "citations": [
+        "chalchiuhcozcapetlatl FC 12, cap. 4 12",
+        "texoamacale, quetzalmjiaoaio FC 1, cap. 11 22",
+        "xiuhnacoche FC 1, cap. 11 22",
+        "xiuhnacochtli malacachtic FC 12, cap. 4 12"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": []
+    },
+    {
+      "id": "telleriano:385_23r_05_01",
+      "page_id": "telleriano:385_23r",
+      "zone_id": "telleriano:385_23r_05",
+      "code": "385_23r_05_01",
+      "kind": "glyph",
+      "reading": "yohualteuctli : tlazolteotl",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_05_01.jpg",
+      "citations": [
+        "côzcapetlatl teôxihuitl itlaactoc FC 8 56",
+        "ichcaxochioa, FC 1, cap. 8 16",
+        "motenholcupinticac, tlaxapochtli in contlaliticac, ycamapa[n] PM 263r",
+        "motenolcopi, tlaxapuchtli qujmotlatlalili yn jcamapa[n] FC 1, cap. 8 16",
+        "xiuhnacoche FC 1, cap. 11 22",
+        "ychcaxochiuh contlaliticac PM 263r"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": []
+    },
+    {
+      "id": "telleriano:385_23r_06_01",
+      "page_id": "telleriano:385_23r",
+      "zone_id": "telleriano:385_23r_06",
+      "code": "385_23r_06_01",
+      "kind": "glyph",
+      "reading": "chicuace cipactli",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_06_01.jpg",
+      "citations": [
+        "chiquacen cipactli FC 4, cap. 29 97"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": [
+        {
+          "element_id": "telleriano:element:02.03.01",
+          "values": [
+            "cipactli"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:06.01.01",
+          "values": [
+            "ce"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_23r_07_01",
+      "page_id": "telleriano:385_23r",
+      "zone_id": "telleriano:385_23r_07",
+      "code": "385_23r_07_01",
+      "kind": "glyph",
+      "reading": "chicome ehecatl",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_07_01.jpg",
+      "citations": [
+        "chicome hecatl FC 4, cap. 29 97"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": [
+        {
+          "element_id": "telleriano:element:06.01.01",
+          "values": [
+            "ce"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:04.02.05",
+          "values": [
+            "ehecatl"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_23r_08_01",
+      "page_id": "telleriano:385_23r",
+      "zone_id": "telleriano:385_23r_08",
+      "code": "385_23r_08_01",
+      "kind": "glyph",
+      "reading": "chicuei calli",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_08_01.jpg",
+      "citations": [
+        "chicuei calli FC 4, cap. 29 97"
+      ],
+      "morphology": [],
+      "segmentation": [
+        "chicuei cal-li"
+      ],
+      "unexpressed": [],
+      "components": [
+        {
+          "element_id": "telleriano:element:05.01.01",
+          "values": [
+            "calli"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:06.01.01",
+          "values": [
+            "ce"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_23r_09_01",
+      "page_id": "telleriano:385_23r",
+      "zone_id": "telleriano:385_23r_09",
+      "code": "385_23r_09_01",
+      "kind": "glyph",
+      "reading": "chiucnahui cuetzpalin",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_09_01.jpg",
+      "citations": [
+        "chicunauj cuetzpalin FC 4, cap. 29 97"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": [
+        {
+          "element_id": "telleriano:element:02.02.19",
+          "values": [
+            "cuetzpalin"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:06.01.01",
+          "values": [
+            "ce"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_23r_10_01",
+      "page_id": "telleriano:385_23r",
+      "zone_id": "telleriano:385_23r_10",
+      "code": "385_23r_10_01",
+      "kind": "glyph",
+      "reading": "matlactli cohuatl",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_10_01.jpg",
+      "citations": [
+        "matlactli coatl FC 4, cap. 29 97"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": [
+        {
+          "element_id": "telleriano:element:02.02.20",
+          "values": [
+            "cohuatl"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:06.01.01",
+          "values": [
+            "ce"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_23r_11_01",
+      "page_id": "telleriano:385_23r",
+      "zone_id": "telleriano:385_23r_11",
+      "code": "385_23r_11_01",
+      "kind": "glyph",
+      "reading": "yohualteuctli : tepeyollotl",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_11_01.jpg",
+      "citations": [
+        "côzcapetlatl teôxihuitl itlaactoc FC 8 56",
+        "imamacal, yiaztatzon FC 2. cap. 32 132",
+        "y yaztatzon icpac contlaliticac PM 261v",
+        "ytlacuchtzon PM 262v"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": []
+    },
+    {
+      "id": "telleriano:385_23r_12_01",
+      "page_id": "telleriano:385_23r",
+      "zone_id": "telleriano:385_23r_12",
+      "code": "385_23r_12_01",
+      "kind": "glyph",
+      "reading": "matlactli oce miquiztli",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_12_01.jpg",
+      "citations": [
+        "matlactloce mjqujztli FC 4, cap. 29 97"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": [
+        {
+          "element_id": "telleriano:element:01.02.05",
+          "values": []
+        },
+        {
+          "element_id": "telleriano:element:06.01.01",
+          "values": []
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_23r_13_01",
+      "page_id": "telleriano:385_23r",
+      "zone_id": "telleriano:385_23r_13",
+      "code": "385_23r_13_01",
+      "kind": "glyph",
+      "reading": "yohualteuctli : tlaloc",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_13_01.jpg",
+      "citations": [
+        "chalchiuhcozcapetlatl FC 12, cap. 4 12",
+        "imamacal, yiaztzatzon FC 2, cap. 32 132",
+        "mixtlimacaticac PM 261v",
+        "texoamacale FC 1, cap. 11 22",
+        "y yaztazton icpac contlaliticac PM 261v",
+        "yamacal yn texuctica tlacuiloli PM 267r"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": []
+    },
+    {
+      "id": "telleriano:385_23r_14_01",
+      "page_id": "telleriano:385_23r",
+      "zone_id": "telleriano:385_23r_14",
+      "code": "385_23r_14_01",
+      "kind": "glyph",
+      "reading": "matlactli omome mazatl",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_14_01.jpg",
+      "citations": [
+        "matlactlomome maçatl FC 4, cap. 29 97"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": [
+        {
+          "element_id": "telleriano:element:06.01.01",
+          "values": [
+            "ce"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:02.02.09",
+          "values": [
+            "mazatl"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_23r_15_01",
+      "page_id": "telleriano:385_23r",
+      "zone_id": "telleriano:385_23r_15",
+      "code": "385_23r_15_01",
+      "kind": "glyph",
+      "reading": "yohualteuctli : xiuhteuctli",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_15_01.jpg",
+      "citations": [
+        "auh in conaquja itzontecon, iehoatl in tozpololli FC 2, cap. 37 161",
+        "cozcapetlatl teoxihuitl itlaacto FC 8 56",
+        "ixtlan tlataan, tezcapoctli ica FC 2, cap. 37 161",
+        "ixtlantlaanticac PM 262r",
+        "yn jtzintlan quetzalcomjtl, itech tlatzontli tzoncoztli FC 2, cap. 37 159",
+        "ytozpulol quetzaltzoyo, icpac manj PM 261r"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": []
+    },
+    {
+      "id": "telleriano:385_23r_16_01",
+      "page_id": "telleriano:385_23r",
+      "zone_id": "telleriano:385_23r_16",
+      "code": "385_23r_16_01",
+      "kind": "glyph",
+      "reading": "matlactli omei tochtli",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_16_01.jpg",
+      "citations": [
+        "matlactl vmei tochtli Fc 4, cap. 29 97"
+      ],
+      "morphology": [],
+      "segmentation": [
+        "matlactli om-ei toch-tli"
+      ],
+      "unexpressed": [],
+      "components": [
+        {
+          "element_id": "telleriano:element:02.02.08",
+          "values": [
+            "tochtli"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:06.01.01",
+          "values": [
+            "ce"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_23r_17_01",
+      "page_id": "telleriano:385_23r",
+      "zone_id": "telleriano:385_23r_17",
+      "code": "385_23r_17_01",
+      "kind": "glyph",
+      "reading": "inacayo : tlalchitonatiuh",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_17_01.jpg",
+      "citations": [],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": [
+        {
+          "element_id": "telleriano:element:01.01.20",
+          "values": [
+            "nacayo"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:08.01.02",
+          "values": [
+            "?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_23r_17_02",
+      "page_id": "telleriano:385_23r",
+      "zone_id": "telleriano:385_23r_17",
+      "code": "385_23r_17_02",
+      "kind": "glyph",
+      "reading": "iamacal quetzalmiyahuayo : tlalchitonatiuh",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_17_02.jpg",
+      "citations": [
+        "y yamacal quetzalmiavayo PM 263v"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [
+        "i-,"
+      ],
+      "components": [
+        {
+          "element_id": "telleriano:element:01.02.15",
+          "values": []
+        },
+        {
+          "element_id": "telleriano:element:08.01.15",
+          "values": [
+            "?"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:05.05.21",
+          "values": [
+            "amacal"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:05.12.08",
+          "values": [
+            "?"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:02.01.15",
+          "values": [
+            "quetzaltzonyo"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_23r_17_03",
+      "page_id": "telleriano:385_23r",
+      "zone_id": "telleriano:385_23r_17",
+      "code": "385_23r_17_03",
+      "kind": "glyph",
+      "reading": "itzonquen itzoncoz : tlalchitonatiuh",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_17_03.jpg",
+      "citations": [
+        "tzoncoztli FC 2, cap. 37 159",
+        "tzonqueme FC 8, cap. 15 47"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": [
+        {
+          "element_id": "telleriano:element:08.01.06",
+          "values": [
+            "coz"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:01.02.60",
+          "values": [
+            "tzonquen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_23r_17_04",
+      "page_id": "telleriano:385_23r",
+      "zone_id": "telleriano:385_23r_17",
+      "code": "385_23r_17_04",
+      "kind": "glyph",
+      "reading": "ixayac mixtlilmacaticac : tlalchitonatiuh",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_17_04.jpg",
+      "citations": [
+        "mixtlilmacaticac PM 261v"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [
+        "i-,"
+      ],
+      "components": [
+        {
+          "element_id": "telleriano:element:05.13.01",
+          "values": [
+            "?"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:01.02.03",
+          "values": [
+            "xayac"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:05.06.16",
+          "values": [
+            "?"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:01.02.50",
+          "values": [
+            "tlaloc"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:05.06.18",
+          "values": [
+            "ixtlil"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_23r_17_05",
+      "page_id": "telleriano:385_23r",
+      "zone_id": "telleriano:385_23r_17",
+      "code": "385_23r_17_05",
+      "kind": "glyph",
+      "reading": "tzicoliuhqui ixiuhnacoch : tlalchitonatiuh",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_17_05.jpg",
+      "citations": [
+        "tzicoliuhcanacoche FC 1, cap. 5 9",
+        "tzicoliuhqui teucuitlatl in inacuch PM 261v",
+        "xiuhnacochtli, malacachtic, itech pilcatica teucujtlaepcololli FC 12, cap. 4 12"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": [
+        {
+          "element_id": "telleriano:element:07.01.10",
+          "values": [
+            "tzicoliuhqui"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:04.04.05",
+          "values": [
+            "xiuh"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:05.06.04",
+          "values": [
+            "nacoch"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_23r_17_06",
+      "page_id": "telleriano:385_23r",
+      "zone_id": "telleriano:385_23r_17",
+      "code": "385_23r_17_06",
+      "kind": "glyph",
+      "reading": "ichalchiuhcozcapetl : tlalchitonatiuh",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_17_06.jpg",
+      "citations": [
+        "chalchiuhcozcapetlatl CF, 12, cap. 4 12"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": [
+        {
+          "element_id": "telleriano:element:04.04.10",
+          "values": [
+            "?"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:04.04.03",
+          "values": [
+            "chalchiuh"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:05.07.29",
+          "values": [
+            "cozcapetl"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_23r_17_07",
+      "page_id": "telleriano:385_23r",
+      "zone_id": "telleriano:385_23r_17",
+      "code": "385_23r_17_07",
+      "kind": "glyph",
+      "reading": "iteocuitlacozqui ihuan teocuitlacomalli : tlalchitonatiuh",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_17_07.jpg",
+      "citations": [
+        "chalchiuhcozcapetlatl nepantla mantiuh teocujtlacomalli FC 12, cap. 4 11",
+        "qujcozcatiaia, cozcapetlatl, itech pilcatiuh cuztic teucujtlacomalli FC 1, cap. 11 21",
+        "teucujtlacozcatl FC 8, cap. 17 58"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": [
+        {
+          "element_id": "telleriano:element:05.03.24",
+          "values": [
+            "comal"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:04.04.03",
+          "values": [
+            "?"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:04.04.10",
+          "values": [
+            "teocuitla"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:05.07.23",
+          "values": [
+            "cozqui"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_23r_17_08",
+      "page_id": "telleriano:385_23r",
+      "zone_id": "telleriano:385_23r_17",
+      "code": "385_23r_17_08",
+      "kind": "glyph",
+      "reading": "ixicol : tlalchitonatiuh",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_17_08.jpg",
+      "citations": [],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [
+        "i-,"
+      ],
+      "components": [
+        {
+          "element_id": "telleriano:element:08.01.15",
+          "values": [
+            "?"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:05.05.62",
+          "values": [
+            "xicol"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_23r_17_09",
+      "page_id": "telleriano:385_23r",
+      "zone_id": "telleriano:385_23r_17",
+      "code": "385_23r_17_09",
+      "kind": "glyph",
+      "reading": "itlalpil inic motzinilpiticac : tlalchitonatiuh",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_17_09.jpg",
+      "citations": [],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [
+        "i-,"
+      ],
+      "components": [
+        {
+          "element_id": "telleriano:element:05.08.04",
+          "values": [
+            "tlalpil"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:08.01.15",
+          "values": [
+            "?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_23r_17_10",
+      "page_id": "telleriano:385_23r",
+      "zone_id": "telleriano:385_23r_17",
+      "code": "385_23r_17_10",
+      "kind": "glyph",
+      "reading": "ixiuhmacuex : tlalchitonatiuh",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_17_10.jpg",
+      "citations": [],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": [
+        {
+          "element_id": "telleriano:element:04.04.04",
+          "values": [
+            "xiuh"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:05.07.85",
+          "values": [
+            "macuex"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_23r_17_11",
+      "page_id": "telleriano:385_23r",
+      "zone_id": "telleriano:385_23r_17",
+      "code": "385_23r_17_11",
+      "kind": "glyph",
+      "reading": "itlamamal tlahuiztli tonatiuh : tlalchitonatiuh",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_17_11.jpg",
+      "citations": [],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [
+        "i-,"
+      ],
+      "components": [
+        {
+          "element_id": "telleriano:element:05.13.29",
+          "values": [
+            "tlamamal"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:04.01.05",
+          "values": [
+            "tonatiuh"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:02.02.20",
+          "values": [
+            "?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_23r_17_12",
+      "page_id": "telleriano:385_23r",
+      "zone_id": "telleriano:385_23r_17",
+      "code": "385_23r_17_12",
+      "kind": "glyph",
+      "reading": "tlalteuctli : tlalchitonatiuh",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_17_12.jpg",
+      "citations": [],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": [
+        {
+          "element_id": "telleriano:element:02.03.01",
+          "values": [
+            "?"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:05.07.05",
+          "values": [
+            "?"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:05.08.01",
+          "values": [
+            "?"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:05.07.85",
+          "values": [
+            "?"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:05.08.09",
+          "values": [
+            "?"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:01.02.20",
+          "values": [
+            "?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_23r_17_13",
+      "page_id": "telleriano:385_23r",
+      "zone_id": "telleriano:385_23r_17",
+      "code": "385_23r_17_13",
+      "kind": "glyph",
+      "reading": "ichalchiuhmaquiz : tlalchitonatiuh",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23r",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23r_17_13.jpg",
+      "citations": [
+        "chalchiuhtli maquiztli FC 10, cap. 16 60"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": [
+        {
+          "element_id": "telleriano:element:05.07.25",
+          "values": [
+            "maquiz"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:04.04.03",
+          "values": [
+            "chalchiuh"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:04.04.10",
+          "values": [
+            "?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_23v_01_01",
+      "page_id": "telleriano:385_23v",
+      "zone_id": "telleriano:385_23v_01",
+      "code": "385_23v_01_01",
+      "kind": "glyph",
+      "reading": "yohualteuctli : itztli",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23v",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23v_01_01.jpg",
+      "citations": [
+        "in jcozquj chalchiuhcozcapetlatl FC 12, cap. 4 12",
+        "tecpactzontli, in icpac, contlaliticac PM 261r",
+        "y yamacal quetzalmiavayo PM 264r",
+        "ychoquizxaual eticac PM 266r"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": []
+    },
+    {
+      "id": "telleriano:385_23v_02_01",
+      "page_id": "telleriano:385_23v",
+      "zone_id": "telleriano:385_23v_02",
+      "code": "385_23v_02_01",
+      "kind": "glyph",
+      "reading": "yohualteuctli : piltzinteuctli",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23v",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23v_02_01.jpg",
+      "citations": [
+        "in jcozquj chalchiuhcozcapetlatl FC 12, cap. 4 12",
+        "ychalchiuhtetel yn icpac contlaliticac PM 262v",
+        "yteucuitlanacoch PM 266r"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": []
+    },
+    {
+      "id": "telleriano:385_23v_03_01",
+      "page_id": "telleriano:385_23v",
+      "zone_id": "telleriano:385_23v_03",
+      "code": "385_23v_03_01",
+      "kind": "glyph",
+      "reading": "yohualteuctli : cinteotl",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23v",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23v_03_01.jpg",
+      "citations": [
+        "in jcozquj chalchiuhcozcapetlatl FC 12, cap. 4 12",
+        "ixtlauhxaoale FC 1, cap. 7 13",
+        "tlaujtl yn jamacal FC 2, cap. 23 65"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": []
+    },
+    {
+      "id": "telleriano:385_23v_04_01",
+      "page_id": "telleriano:385_23v",
+      "zone_id": "telleriano:385_23v_04",
+      "code": "385_23v_04_01",
+      "kind": "glyph",
+      "reading": "yohualteuctli : mictlanteuctli",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23v",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23v_04_01.jpg",
+      "citations": [
+        "motenhvlcopinticac PM 262v",
+        "ycuexcochtechimal PM 266v",
+        "yxquatechimale FC 1, ad. I 79"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": []
+    },
+    {
+      "id": "telleriano:385_23v_05_01",
+      "page_id": "telleriano:385_23v",
+      "zone_id": "telleriano:385_23v_05",
+      "code": "385_23v_05_01",
+      "kind": "glyph",
+      "reading": "yohualteuctli : chalchiuhtlicue",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23v",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23v_05_01.jpg",
+      "citations": [
+        "chalchiuhcozcapetlatl FC 12, cap. 4 12",
+        "texoamacale, quetzalmjiaoaio FC 1, cap. 11 22",
+        "xiuhnacoche FC 1, cap. 11 22",
+        "xiuhnacochtli malacachtic FC 12, cap. 4 12"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": []
+    },
+    {
+      "id": "telleriano:385_23v_06_01",
+      "page_id": "telleriano:385_23v",
+      "zone_id": "telleriano:385_23v_06",
+      "code": "385_23v_06_01",
+      "kind": "glyph",
+      "reading": "ce atl",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23v",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23v_06_01.jpg",
+      "citations": [
+        "ce atl FC 4, cap. 30 99"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": [
+        {
+          "element_id": "telleriano:element:04.05.01",
+          "values": [
+            "atl"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:06.01.01",
+          "values": [
+            "ce"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_23v_07_01",
+      "page_id": "telleriano:385_23v",
+      "zone_id": "telleriano:385_23v_07",
+      "code": "385_23v_07_01",
+      "kind": "glyph",
+      "reading": "ome itzcuintli",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23v",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23v_07_01.jpg",
+      "citations": [
+        "vme itzcujntli FC 4, cap. 30 100"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": [
+        {
+          "element_id": "telleriano:element:06.01.01",
+          "values": [
+            "ce"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:02.02.12",
+          "values": [
+            "itzcuintli"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_23v_08_01",
+      "page_id": "telleriano:385_23v",
+      "zone_id": "telleriano:385_23v_08",
+      "code": "385_23v_08_01",
+      "kind": "glyph",
+      "reading": "yei ozomatli",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23v",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23v_08_01.jpg",
+      "citations": [
+        "ey oçomatli FC 4, cap. 30 100"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": [
+        {
+          "element_id": "telleriano:element:06.01.01",
+          "values": [
+            "ce"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:02.02.30",
+          "values": [
+            "ozmatli"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_23v_09_01",
+      "page_id": "telleriano:385_23v",
+      "zone_id": "telleriano:385_23v_09",
+      "code": "385_23v_09_01",
+      "kind": "glyph",
+      "reading": "nahui malinalli",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23v",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23v_09_01.jpg",
+      "citations": [
+        "nauj malinalli FC 4, cap. 30 100"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": [
+        {
+          "element_id": "telleriano:element:05.07.22",
+          "values": [
+            "malinalli"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:06.01.01",
+          "values": [
+            "ce"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_23v_10_01",
+      "page_id": "telleriano:385_23v",
+      "zone_id": "telleriano:385_23v_10",
+      "code": "385_23v_10_01",
+      "kind": "glyph",
+      "reading": "macuilli acatl",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23v",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23v_10_01.jpg",
+      "citations": [
+        "macujlli acatl FC 4, cap. 30 100"
+      ],
+      "morphology": [],
+      "segmentation": [
+        "macuilli aca-tl"
+      ],
+      "unexpressed": [],
+      "components": [
+        {
+          "element_id": "telleriano:element:03.02.05",
+          "values": [
+            "acatl"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:06.01.01",
+          "values": [
+            "ce"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_23v_11_01",
+      "page_id": "telleriano:385_23v",
+      "zone_id": "telleriano:385_23v_11",
+      "code": "385_23v_11_01",
+      "kind": "glyph",
+      "reading": "inacayo : chalchiuhtotolin",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23v",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23v_11_01.jpg",
+      "citations": [],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [
+        "i-,"
+      ],
+      "components": [
+        {
+          "element_id": "telleriano:element:01.01.20",
+          "values": [
+            "nacayo"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:02.01.12",
+          "values": [
+            "totolin"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_23v_11_02",
+      "page_id": "telleriano:385_23v",
+      "zone_id": "telleriano:385_23v_11",
+      "code": "385_23v_11_02",
+      "kind": "glyph",
+      "reading": "iaztatzon quetzaltzonyo : chalchiuhtotolin",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23v",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23v_11_02.jpg",
+      "citations": [],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [
+        "i-,"
+      ],
+      "components": [
+        {
+          "element_id": "telleriano:element:05.05.21",
+          "values": [
+            "tzon"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:02.01.15",
+          "values": [
+            "quetzaltzonyo"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:02.01.05",
+          "values": [
+            "azta"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_23v_11_03",
+      "page_id": "telleriano:385_23v",
+      "zone_id": "telleriano:385_23v_11",
+      "code": "385_23v_11_03",
+      "kind": "glyph",
+      "reading": "itezca popoca : chalchiuhtotolin",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23v",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23v_11_03.jpg",
+      "citations": [],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [
+        "i-,"
+      ],
+      "components": [
+        {
+          "element_id": "telleriano:element:04.04.07",
+          "values": [
+            "tezca"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:04.02.02",
+          "values": [
+            "popoca"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:04.02.01",
+          "values": [
+            "?"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:02.01.16",
+          "values": [
+            "?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_23v_11_04",
+      "page_id": "telleriano:385_23v",
+      "zone_id": "telleriano:385_23v_11",
+      "code": "385_23v_11_04",
+      "kind": "glyph",
+      "reading": "icozcapetl teoxihuitl itlaactoc : chalchiuhtotolin",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23v",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23v_11_04.jpg",
+      "citations": [
+        "côzcapetlatl teôxihuitl itlaactoc FC 8 56"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [
+        "i-,"
+      ],
+      "components": [
+        {
+          "element_id": "telleriano:element:05.07.29",
+          "values": [
+            "cozcapetl"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:04.04.04",
+          "values": [
+            "teoxihuitl"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:04.04.10",
+          "values": [
+            "?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_23v_11_05",
+      "page_id": "telleriano:385_23v",
+      "zone_id": "telleriano:385_23v_11",
+      "code": "385_23v_11_05",
+      "kind": "glyph",
+      "reading": "pechera plumas : chalchiuhtotolin",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23v",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23v_11_05.jpg",
+      "citations": [],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": [
+        {
+          "element_id": "telleriano:element:09.09.09",
+          "values": [
+            "?"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:02.01.15",
+          "values": [
+            "?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telleriano:385_23v_11_06",
+      "page_id": "telleriano:385_23v",
+      "zone_id": "telleriano:385_23v_11",
+      "code": "385_23v_11_06",
+      "kind": "glyph",
+      "reading": "ixiuhcuecuex, iteocuitlacoyol : chalchiuhtotolin",
+      "verification": "catalog_checked",
+      "url": "https://tlachia.iib.unam.mx/telleriano/385_23v",
+      "image": "https://tlachia.iib.unam.mx/archivos/telleriano/imagenes/385_23v_11_06.jpg",
+      "citations": [
+        "tzitzilli, oyoalli, in icxic caca, coyolj PM 261r",
+        "teucujtlacoiolli, itlanjtzco, molpiaia FC 12, cap. 4 12"
+      ],
+      "morphology": [],
+      "segmentation": [],
+      "unexpressed": [],
+      "components": [
+        {
+          "element_id": "telleriano:element:04.04.10",
+          "values": [
+            "?"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:04.04.04",
+          "values": [
+            "xiuh"
+          ]
+        },
+        {
+          "element_id": "telleriano:element:05.08.08",
+          "values": [
+            "cuecuex"
+          ]
+        }
+      ]
+    }
+  ]
+}
