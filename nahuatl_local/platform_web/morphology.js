@@ -64,8 +64,13 @@ async function showWordAnalysis(help,word,example){
   help.innerHTML=wordAnalysisHTML(data);bindAnalysis(help.closest('.reading-card')||help,help,example);
  }catch(e){if(help.isConnected)help.innerHTML=`<div class="word-analysis"><p>No se pudo analizar la palabra: ${esc(e.message)}</p></div>`;}
 }
-function interlinearHTML(data){
- return `<div class="interlinear" role="table" aria-label="Glosa interlineal automática">${data.tokens.map(t=>`<div class="igt-word" role="row"><span class="igt-surface" lang="nci" role="cell">${esc(t.token)}</span><span class="igt-seg" lang="nci" role="cell">${esc(t.segmentation)}</span><span class="igt-tags" role="cell">${esc(t.tags.join('-'))}</span><span class="igt-gloss ${esc(t.gloss_source||'none')}" role="cell">${esc(t.gloss||'—')}</span></div>`).join('')}</div><p class="meta">Glosa interlineal automática (reglas + diccionario + corpus). Las glosas con «≈» son pistas estadísticas del corpus paralelo; las demás provienen del diccionario o de la tabla de partículas. Pendiente de revisión lingüística.</p>`;
+// En un ejercicio de completar, la palabra del hueco no se muestra en la glosa.
+function maskGloss(tokens,blank){
+ if(!blank)return tokens;let done=false;
+ return tokens.map(t=>{if(done||t.token!==blank)return t;done=true;return {token:'_____',segmentation:'_____',tags:[],gloss:'?',gloss_source:'none'};});
+}
+function interlinearHTML(data,blank){
+ return `<div class="interlinear" role="table" aria-label="Glosa interlineal automática">${maskGloss(data.tokens,blank).map(t=>`<div class="igt-word" role="row"><span class="igt-surface" lang="nci" role="cell">${esc(t.token)}</span><span class="igt-seg" lang="nci" role="cell">${esc(t.segmentation)}</span><span class="igt-tags" role="cell">${esc(t.tags.join('-'))}</span><span class="igt-gloss ${esc(t.gloss_source||'none')}" role="cell">${esc(t.gloss||'—')}</span></div>`).join('')}</div><p class="meta">Glosa interlineal automática (reglas + diccionario + corpus). Las glosas con «≈» son pistas estadísticas del corpus paralelo; las demás provienen del diccionario o de la tabla de partículas. Pendiente de revisión lingüística.</p>`;
 }
 function bindWordStudy(container,example){
  const help=container.querySelector('.reading-help');
@@ -79,15 +84,16 @@ function bindWordStudy(container,example){
   box.hidden=false;toggle.textContent='Ocultar glosa interlineal';toggle.setAttribute('aria-expanded','true');
   if(box.dataset.loaded)return;
   box.innerHTML='<p class="meta" role="status">Preparando la glosa…</p>';
-  try{box.innerHTML=interlinearHTML(await api('/api/gloss?'+new URLSearchParams({id:example.archive_id})));box.dataset.loaded='1';}
+  try{box.innerHTML=interlinearHTML(await api('/api/gloss?'+new URLSearchParams({id:example.archive_id})),container.dataset.clozeBlank);box.dataset.loaded='1';}
   catch(e){box.innerHTML=`<p>No se pudo preparar la glosa: ${esc(e.message)}</p>`;}
  };
 }
 // Palabras del pasaje como botones; respeta las anotaciones editoriales existentes.
 const MORPH_WORD=/[\p{L}\p{M}]+(?:['’][\p{L}\p{M}]+)*/gu;
-function clickableWords(text){
+function clickableWords(text,mask=null){
  let out='',end=0;
  for(const m of String(text).matchAll(MORPH_WORD)){
+  if(mask&&!mask.done&&m[0]===mask.word){mask.done=true;out+=esc(text.slice(end,m.index))+'<span class="cloze-blank" aria-label="Palabra por completar">_____</span>';end=m.index+m[0].length;continue;}
   out+=esc(text.slice(end,m.index))+`<button type="button" class="plain-word" data-word="${esc(m[0])}" aria-expanded="false" aria-label="Analizar ${esc(m[0])}">${esc(m[0])}</button>`;
   end=m.index+m[0].length;
  }

@@ -23,7 +23,11 @@ Sistema `evidence-root-v1` · conjunto `evidence-questions-v1` · partición `al
 | spanish | 16 | 92.3% → 92.3% | 100% → 100% |
 | variant | 16 | 0% → 100% | 50% → 100% |
 
-## 3. Fallos del sistema con evidencia
+## 3. Explicaciones con citas
+
+Redactor `explain-cited-v1` (extractive): 46 de 46 explicaciones pasan la validación de citas (cada frase cita IDs de la evidencia y las formas entre «» aparecen en lo citado); 2.85 frases y 3.67 citas de media. Claude: not_run: usar --explain claude con credenciales (tiene costo); no se ejecutó en esta medición.
+
+## 4. Fallos del sistema con evidencia
 
 - `pájaro` (dev, spanish): entrada top‑1: ninguna
 - `atlan` (test, inflected): entrada top‑1: ninguna
@@ -35,4 +39,4 @@ Sistema `evidence-root-v1` · conjunto `evidence-questions-v1` · partición `al
 
 - Un pasaje es pertinente si la forma señalada (o, en la línea base, alguna palabra náhuatl del pasaje) contiene la raíz esperada según la clave laxa. Es una aproximación automática.
 - El conjunto es pequeño y lo escribió el equipo técnico; las particiones separan desarrollo de prueba, no sustituyen la revisión de una persona experta.
-- Construcción de índices: 3.19 s (sobre cachés derivados ya presentes). Tiempo medio por consulta: exact_search 107.99 ms, evidence 25.77 ms.
+- Construcción de índices: 3.1 s (sobre cachés derivados ya presentes). Tiempo medio por consulta: exact_search 110.38 ms, evidence 26.18 ms.

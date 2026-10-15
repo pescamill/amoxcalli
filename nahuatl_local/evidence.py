@@ -211,6 +211,14 @@ class Evidence:
             ranked = sorted(conc['passages'], key=lambda p: len(p['nah']) > SHORT)  # estable: conserva la diversidad
             passages = [self._passage(p['id'], p['form'], 'misma raíz' if p['form'].casefold() != word.casefold() else 'misma forma')
                         for p in ranked[:6]]
+            if interpreted_as and not any(p['form'].casefold() == interpreted_as for p in passages):
+                # Un ejemplo de la grafía con la que se leyó la palabra, primero.
+                same = sorted((rid for rid, w in self.postings.get(loose_key(interpreted_as), [])
+                               if w.casefold() == interpreted_as and self.rows[rid]['iso'] == 'nci'),
+                              key=lambda rid: len(self.rows[rid]['nah']) > SHORT)
+                if same:
+                    form = next(w for rid, w in self.postings[loose_key(interpreted_as)] if rid == same[0] and w.casefold() == interpreted_as)
+                    passages = [self._passage(same[0], form, 'grafía con la que se leyó')] + [p for p in passages if p['id'] != same[0]][:5]
         # Otras variedades: misma palabra por clave laxa (el analizador es solo clásico)
         other, docs = [], set()
         for form in dict.fromkeys([word] + ([interpreted_as] if interpreted_as else [])):
