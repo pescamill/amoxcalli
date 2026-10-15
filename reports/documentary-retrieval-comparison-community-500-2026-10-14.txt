@@ -1,0 +1,23 @@
+Comparación de medición de recuperación documental · 14 oct 2026
+Motivo: community.py (entrada medida) recibió un manejador de errores 500 JSON en 96f7bfc.
+Antes sha256: a84596ba335bf6f700c536f31c698ade497a0c5e5813220c70bbb5c18bcacf69 (respaldo en reports/documentary-retrieval-backups/)
+Después sha256: 21151d46a2c215eb70e67d565763132ec92a52f34ba530dbc5df781316de4e9a
+Excluidos de la comparación: segundos por consulta, timing, memoria, elapsed.
+configuration: igual
+evaluation_fingerprint: igual
+image_downloads: igual
+index: igual
+input_hashes: DIFERENTE
+method: igual
+metrics: igual
+model_calls: igual
+network_requests: igual
+private_database_opened: igual
+reserve_used: igual
+results: igual
+schema_version: igual
+scope: igual
+  hash de entrada cambiado: nahuatl_local/community.py
+Resultados: 123 → 123 ; respuestas, campos y auditorías idénticos salvo segundos: True
+Métricas idénticas: True {"complete": 119, "abstained": 2, "exact_fields_matched": 840, "exact_fields_required": 860}
+Conclusión: el cambio no altera el ranking ni las respuestas; solo renueva el hash de community.py.

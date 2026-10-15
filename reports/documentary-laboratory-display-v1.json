@@ -2,7 +2,7 @@
   "schema_version": 1,
   "kind": "documentary_laboratory_dom_http",
   "route": "#modelos/progreso",
-  "public_summary_fingerprint": "c5b596f7a9e151d6bfc1a526c6ba24098cad6c95c60551c38305e69d6a5fa3cf",
+  "public_summary_fingerprint": "34dea93f06408f5fe1a10e6245e0dd5dbb2bd9394546dc1df1e500df279c7deb",
   "input_hashes": {
     "configs/documentary-evaluation-v1.json": "a3d2da91d6e09d9063f7714ab28ec1945621f4c21580a0e6d71be3d62c1bb284",
     "configs/sources.json": "fbdc67bd2a621978ac096af53038d61ed5ba56069061a2bd4c363456502f73aa",
@@ -21,7 +21,7 @@
     "corpus/pictography/catalog.json": "c720d5c3ccb8e8b7026965d6e19343ea5c52be58e99163396751732fc354271f",
     "corpus/seed.json": "d64f372778fdcf4ee8e91de1ad546d0f458094c926cb5755fd511db481e5795c",
     "docs/EVALUACION_DOCUMENTAL.md": "5474512ec6502171b9801ca702afea19259cd0108c8fe41b2e7f8692237d317a",
-    "nahuatl_local/community.py": "6f1752e4b133ed643be8bb881377fc4ae3df9805f7ca2c9b066f6df595ec7cd0",
+    "nahuatl_local/community.py": "f1e1b593643ae0865cf040df47d6780852da92c8e40b69d14f8f34b15fd07133",
     "nahuatl_local/community_web/catalog.json": "4afae8d8100e98e85dc5bbb962ab6739d7d4a9204eb04ec07166ea5835d9fc32",
     "nahuatl_local/corpus.py": "48e7eeadae4f2f21310423cde925b636baadf578274b0c7cbe533aa042b8c781",
     "nahuatl_local/documentary_evaluation.py": "e9ca1706a94c00972386d41cbd9d58aab170609e8ffe00f1813810dd4051a11c",
@@ -30,7 +30,7 @@
     "nahuatl_local/documentary_retrieval_evaluation.py": "f53d809b4ad6384ae13af694ac1a053871c5aa5ee6d41f8e15ba1c32658683e0",
     "nahuatl_local/pictography.py": "8469ba0b8f7780375fb63d69855687b81d9f88b124bad85a10a2d1b8d2583a65",
     "reports/documentary-evaluation-validation-v1.json": "30a9c219e0a2e940a46118d3b4e96bf7a10a243b19ccd7eebf435454a79f310d",
-    "reports/documentary-retrieval-v1.json": "a84596ba335bf6f700c536f31c698ade497a0c5e5813220c70bbb5c18bcacf69"
+    "reports/documentary-retrieval-v1.json": "21151d46a2c215eb70e67d565763132ec92a52f34ba530dbc5df781316de4e9a"
   },
   "presentation_hashes": {
     "nahuatl_local/laboratory.py": "b8d3ae79206197560fca20da4ae45db607006706aafe33e97bff526007e89ded",

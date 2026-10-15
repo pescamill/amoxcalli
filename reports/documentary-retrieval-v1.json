@@ -10,7 +10,7 @@
     "token_min_overlap": 2,
     "version": "documentary-lookup-v1"
   },
-  "elapsed_seconds": 7.38372466689907,
+  "elapsed_seconds": 7.531513875000201,
   "evaluation_fingerprint": "f2b2996e86d3595ff117b014962340eafbed0e894cc73e9b14f56a7008a09fb4",
   "image_downloads": 0,
   "index": {
@@ -43,7 +43,7 @@
     "corpus/pictography/catalog.json": "c720d5c3ccb8e8b7026965d6e19343ea5c52be58e99163396751732fc354271f",
     "corpus/seed.json": "d64f372778fdcf4ee8e91de1ad546d0f458094c926cb5755fd511db481e5795c",
     "docs/EVALUACION_DOCUMENTAL.md": "5474512ec6502171b9801ca702afea19259cd0108c8fe41b2e7f8692237d317a",
-    "nahuatl_local/community.py": "6f1752e4b133ed643be8bb881377fc4ae3df9805f7ca2c9b066f6df595ec7cd0",
+    "nahuatl_local/community.py": "f1e1b593643ae0865cf040df47d6780852da92c8e40b69d14f8f34b15fd07133",
     "nahuatl_local/community_web/catalog.json": "4afae8d8100e98e85dc5bbb962ab6739d7d4a9204eb04ec07166ea5835d9fc32",
     "nahuatl_local/corpus.py": "48e7eeadae4f2f21310423cde925b636baadf578274b0c7cbe533aa042b8c781",
     "nahuatl_local/documentary_evaluation.py": "e9ca1706a94c00972386d41cbd9d58aab170609e8ffe00f1813810dd4051a11c",
@@ -53,8 +53,8 @@
   },
   "memory": {
     "measurement": "tracemalloc; excludes native/process memory",
-    "python_current_bytes": 119853028,
-    "python_peak_bytes": 121587611
+    "python_current_bytes": 119853791,
+    "python_peak_bytes": 121588486
   },
   "method": "public_documentary_retrieval",
   "metrics": {
@@ -528,7 +528,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.0007282921578735113,
+      "seconds": 0.0006749579997631372,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -1400,7 +1400,7 @@
         "total": 2,
         "truncated": false
       },
-      "seconds": 0.0014407909475266933,
+      "seconds": 0.001435332999790262,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -1859,7 +1859,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.0003856669645756483,
+      "seconds": 0.00036229099987394875,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -2475,7 +2475,7 @@
         "total": 3,
         "truncated": false
       },
-      "seconds": 0.0010392498224973679,
+      "seconds": 0.000977374999820313,
       "source_ids": [
         "src-axolotl",
         "src-gdn",
@@ -2935,7 +2935,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.00037712487392127514,
+      "seconds": 0.0003476249994491809,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -3394,7 +3394,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.0003853340167552233,
+      "seconds": 0.0003510829992592335,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -3853,7 +3853,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.00037829112261533737,
+      "seconds": 0.00035341700004209997,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -4725,7 +4725,7 @@
         "total": 2,
         "truncated": false
       },
-      "seconds": 0.000524209113791585,
+      "seconds": 0.00044791699929191964,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -5597,7 +5597,7 @@
         "total": 2,
         "truncated": false
       },
-      "seconds": 0.00045825005508959293,
+      "seconds": 0.00043287500011501834,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -6056,7 +6056,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.000386625062674284,
+      "seconds": 0.00035829100033879513,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -6515,7 +6515,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.001778957899659872,
+      "seconds": 0.001661874999626889,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -8505,7 +8505,7 @@
         "total": 12,
         "truncated": false
       },
-      "seconds": 0.004802583018317819,
+      "seconds": 0.004984041000170691,
       "source_ids": [
         "src-axolotl",
         "src-gdn",
@@ -8965,7 +8965,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.00038316589780151844,
+      "seconds": 0.0003542499998729909,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -9815,7 +9815,7 @@
         "total": 6,
         "truncated": false
       },
-      "seconds": 0.007922624936327338,
+      "seconds": 0.007606500000292726,
       "source_ids": [
         "src-axolotl",
         "src-gdn",
@@ -10767,7 +10767,7 @@
         "total": 3,
         "truncated": false
       },
-      "seconds": 0.002034833887591958,
+      "seconds": 0.0019917920008083456,
       "source_ids": [
         "src-axolotl",
         "src-gdn",
@@ -11227,7 +11227,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.0003813749644905329,
+      "seconds": 0.00036204200023348676,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -11686,7 +11686,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.00036758300848305225,
+      "seconds": 0.0003391250002096058,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -12145,7 +12145,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.0003637080080807209,
+      "seconds": 0.00034029100061161444,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -12604,7 +12604,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.0003970828838646412,
+      "seconds": 0.00033833399993454805,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -12714,7 +12714,7 @@
         "total": 0,
         "truncated": false
       },
-      "seconds": 0.0002838750369846821,
+      "seconds": 0.00025833400013652863,
       "source_ids": [],
       "supported_citations": false,
       "task": "lexical",
@@ -13996,7 +13996,7 @@
         "total": 3,
         "truncated": false
       },
-      "seconds": 0.0006872499361634254,
+      "seconds": 0.0006697079998048139,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -14947,7 +14947,7 @@
         "total": 3,
         "truncated": false
       },
-      "seconds": 0.0013327919878065586,
+      "seconds": 0.0012821250002161833,
       "source_ids": [
         "src-axolotl",
         "src-gdn",
@@ -15821,7 +15821,7 @@
         "total": 2,
         "truncated": false
       },
-      "seconds": 0.0005057498347014189,
+      "seconds": 0.0004966659998899559,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -16694,7 +16694,7 @@
         "total": 2,
         "truncated": false
       },
-      "seconds": 0.0005415000487118959,
+      "seconds": 0.0004931670000587474,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -20652,7 +20652,7 @@
         "total": 37,
         "truncated": true
       },
-      "seconds": 0.003987082978710532,
+      "seconds": 0.003808374999607622,
       "source_ids": [
         "src-axolotl",
         "src-gdn",
@@ -21112,7 +21112,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.0003996661398559809,
+      "seconds": 0.0003879160003634752,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -21571,7 +21571,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.00047129206359386444,
+      "seconds": 0.0004628329998013214,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -22030,7 +22030,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.0004754168912768364,
+      "seconds": 0.00046149999980116263,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -22489,7 +22489,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.0003826660104095936,
+      "seconds": 0.00034724999932223,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -23361,7 +23361,7 @@
         "total": 2,
         "truncated": false
       },
-      "seconds": 0.0005204170010983944,
+      "seconds": 0.00048445799984619953,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -23886,7 +23886,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.0003947908990085125,
+      "seconds": 0.00036420800006453646,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -24758,7 +24758,7 @@
         "total": 2,
         "truncated": false
       },
-      "seconds": 0.0004905420355498791,
+      "seconds": 0.00046225000005506445,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -25217,7 +25217,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.0003772920463234186,
+      "seconds": 0.00035141700027452316,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -25676,7 +25676,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.00042862514965236187,
+      "seconds": 0.00039420900066033937,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -26548,7 +26548,7 @@
         "total": 2,
         "truncated": false
       },
-      "seconds": 0.0006419578567147255,
+      "seconds": 0.0006133340002634213,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -27835,7 +27835,7 @@
         "total": 3,
         "truncated": false
       },
-      "seconds": 0.0008103330619633198,
+      "seconds": 0.0007756250006423215,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -28294,7 +28294,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.00037691579200327396,
+      "seconds": 0.0003407080002943985,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -29166,7 +29166,7 @@
         "total": 2,
         "truncated": false
       },
-      "seconds": 0.0013580000959336758,
+      "seconds": 0.001321665999967081,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -30864,7 +30864,7 @@
         "total": 4,
         "truncated": false
       },
-      "seconds": 0.003784916130825877,
+      "seconds": 0.003847334000056435,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -31323,7 +31323,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.0003992910496890545,
+      "seconds": 0.00034833300014724955,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -32195,7 +32195,7 @@
         "total": 2,
         "truncated": false
       },
-      "seconds": 0.0004899171181023121,
+      "seconds": 0.0004538339999271557,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -32654,7 +32654,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.0005809580907225609,
+      "seconds": 0.0005648750002364977,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -33113,7 +33113,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.0004152499604970217,
+      "seconds": 0.00037245800012897234,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -33572,7 +33572,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.00038162502460181713,
+      "seconds": 0.0003422500003580353,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -35508,7 +35508,7 @@
         "total": 1502,
         "truncated": true
       },
-      "seconds": 0.023067333037033677,
+      "seconds": 0.022937459000786475,
       "source_ids": [
         "src-axolotl",
         "src-gdn",
@@ -37445,7 +37445,7 @@
         "total": 654,
         "truncated": true
       },
-      "seconds": 0.013158082962036133,
+      "seconds": 0.012981457999558188,
       "source_ids": [
         "src-axolotl",
         "src-gdn",
@@ -39382,7 +39382,7 @@
         "total": 845,
         "truncated": true
       },
-      "seconds": 0.0136609161272645,
+      "seconds": 0.013845708999724593,
       "source_ids": [
         "src-axolotl",
         "src-gdn",
@@ -41319,7 +41319,7 @@
         "total": 2317,
         "truncated": true
       },
-      "seconds": 0.030697042122483253,
+      "seconds": 0.03050291700037633,
       "source_ids": [
         "src-axolotl",
         "src-gdn",
@@ -43256,7 +43256,7 @@
         "total": 654,
         "truncated": true
       },
-      "seconds": 0.012777040945366025,
+      "seconds": 0.012355249999927764,
       "source_ids": [
         "src-axolotl",
         "src-gdn",
@@ -45193,7 +45193,7 @@
         "total": 654,
         "truncated": true
       },
-      "seconds": 0.012923041824251413,
+      "seconds": 0.012477166999815381,
       "source_ids": [
         "src-axolotl",
         "src-gdn",
@@ -47130,7 +47130,7 @@
         "total": 845,
         "truncated": true
       },
-      "seconds": 0.01386891701258719,
+      "seconds": 0.013452000000143016,
       "source_ids": [
         "src-axolotl",
         "src-gdn",
@@ -49067,7 +49067,7 @@
         "total": 2333,
         "truncated": true
       },
-      "seconds": 0.03034795797429979,
+      "seconds": 0.029763292000097863,
       "source_ids": [
         "src-axolotl",
         "src-gdn",
@@ -51004,7 +51004,7 @@
         "total": 654,
         "truncated": true
       },
-      "seconds": 0.012752125039696693,
+      "seconds": 0.012556334000692004,
       "source_ids": [
         "src-axolotl",
         "src-gdn",
@@ -52941,7 +52941,7 @@
         "total": 654,
         "truncated": true
       },
-      "seconds": 0.012064500013366342,
+      "seconds": 0.012196792000395362,
       "source_ids": [
         "src-axolotl",
         "src-gdn",
@@ -54878,7 +54878,7 @@
         "total": 654,
         "truncated": true
       },
-      "seconds": 0.013196291867643595,
+      "seconds": 0.012294666000343568,
       "source_ids": [
         "src-axolotl",
         "src-gdn",
@@ -56815,7 +56815,7 @@
         "total": 1502,
         "truncated": true
       },
-      "seconds": 0.0224760421551764,
+      "seconds": 0.022020499999598542,
       "source_ids": [
         "src-axolotl",
         "src-gdn",
@@ -58752,7 +58752,7 @@
         "total": 2315,
         "truncated": true
       },
-      "seconds": 0.02957079093903303,
+      "seconds": 0.029757874999631895,
       "source_ids": [
         "src-axolotl",
         "src-gdn",
@@ -60689,7 +60689,7 @@
         "total": 845,
         "truncated": true
       },
-      "seconds": 0.013421957846730947,
+      "seconds": 0.013832874999934575,
       "source_ids": [
         "src-axolotl",
         "src-gdn",
@@ -62626,7 +62626,7 @@
         "total": 654,
         "truncated": true
       },
-      "seconds": 0.06010841694660485,
+      "seconds": 0.05844720799996139,
       "source_ids": [
         "src-axolotl",
         "src-gdn",
@@ -64563,7 +64563,7 @@
         "total": 654,
         "truncated": true
       },
-      "seconds": 0.01243441691622138,
+      "seconds": 0.012724875000458269,
       "source_ids": [
         "src-axolotl",
         "src-gdn",
@@ -66500,7 +66500,7 @@
         "total": 654,
         "truncated": true
       },
-      "seconds": 0.012002708157524467,
+      "seconds": 0.012336124999819731,
       "source_ids": [
         "src-axolotl",
         "src-gdn",
@@ -68437,7 +68437,7 @@
         "total": 654,
         "truncated": true
       },
-      "seconds": 0.012674333993345499,
+      "seconds": 0.01246579200051201,
       "source_ids": [
         "src-axolotl",
         "src-gdn",
@@ -70374,7 +70374,7 @@
         "total": 845,
         "truncated": true
       },
-      "seconds": 0.013617791002616286,
+      "seconds": 0.013737416000367375,
       "source_ids": [
         "src-axolotl",
         "src-gdn",
@@ -72311,7 +72311,7 @@
         "total": 845,
         "truncated": true
       },
-      "seconds": 0.013865041080862284,
+      "seconds": 0.013715334000153234,
       "source_ids": [
         "src-axolotl",
         "src-gdn",
@@ -74248,7 +74248,7 @@
         "total": 2333,
         "truncated": true
       },
-      "seconds": 0.030674499925225973,
+      "seconds": 0.030481167000289133,
       "source_ids": [
         "src-axolotl",
         "src-gdn",
@@ -76185,7 +76185,7 @@
         "total": 654,
         "truncated": true
       },
-      "seconds": 0.012779208831489086,
+      "seconds": 0.012696582999524253,
       "source_ids": [
         "src-axolotl",
         "src-gdn",
@@ -78122,7 +78122,7 @@
         "total": 2317,
         "truncated": true
       },
-      "seconds": 0.030956540955230594,
+      "seconds": 0.030735250000361702,
       "source_ids": [
         "src-axolotl",
         "src-gdn",
@@ -80059,7 +80059,7 @@
         "total": 845,
         "truncated": true
       },
-      "seconds": 0.013672249857336283,
+      "seconds": 0.01406924999992043,
       "source_ids": [
         "src-axolotl",
         "src-gdn",
@@ -81996,7 +81996,7 @@
         "total": 2317,
         "truncated": true
       },
-      "seconds": 0.030127415899187326,
+      "seconds": 0.031046625000271888,
       "source_ids": [
         "src-axolotl",
         "src-gdn",
@@ -83933,7 +83933,7 @@
         "total": 1502,
         "truncated": true
       },
-      "seconds": 0.022784125059843063,
+      "seconds": 0.0220316670001921,
       "source_ids": [
         "src-axolotl",
         "src-gdn",
@@ -85870,7 +85870,7 @@
         "total": 1502,
         "truncated": true
       },
-      "seconds": 0.02248824993148446,
+      "seconds": 0.022096333999797935,
       "source_ids": [
         "src-axolotl",
         "src-gdn",
@@ -87807,7 +87807,7 @@
         "total": 654,
         "truncated": true
       },
-      "seconds": 0.012753124814480543,
+      "seconds": 0.012758707999637409,
       "source_ids": [
         "src-axolotl",
         "src-gdn",
@@ -89744,7 +89744,7 @@
         "total": 654,
         "truncated": true
       },
-      "seconds": 0.012197915930300951,
+      "seconds": 0.012679124999522173,
       "source_ids": [
         "src-axolotl",
         "src-gdn",
@@ -91984,7 +91984,7 @@
         "total": 383,
         "truncated": true
       },
-      "seconds": 0.009826458990573883,
+      "seconds": 0.010413750000225264,
       "source_ids": [
         "src-axolotl",
         "src-gdn",
@@ -93921,7 +93921,7 @@
         "total": 845,
         "truncated": true
       },
-      "seconds": 0.013540416955947876,
+      "seconds": 0.013837833999787108,
       "source_ids": [
         "src-axolotl",
         "src-gdn",
@@ -95858,7 +95858,7 @@
         "total": 654,
         "truncated": true
       },
-      "seconds": 0.012823791010305285,
+      "seconds": 0.012630666000404744,
       "source_ids": [
         "src-axolotl",
         "src-gdn",
@@ -97795,7 +97795,7 @@
         "total": 2317,
         "truncated": true
       },
-      "seconds": 0.03089612489566207,
+      "seconds": 0.03124666699932277,
       "source_ids": [
         "src-axolotl",
         "src-gdn",
@@ -99732,7 +99732,7 @@
         "total": 654,
         "truncated": true
       },
-      "seconds": 0.012434707954525948,
+      "seconds": 0.012839750000239292,
       "source_ids": [
         "src-axolotl",
         "src-gdn",
@@ -101669,7 +101669,7 @@
         "total": 2308,
         "truncated": true
       },
-      "seconds": 0.02929037483409047,
+      "seconds": 0.029791457999635895,
       "source_ids": [
         "src-axolotl",
         "src-gdn",
@@ -102129,7 +102129,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.0005837080534547567,
+      "seconds": 0.0005793330001324648,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -103001,7 +103001,7 @@
         "total": 2,
         "truncated": false
       },
-      "seconds": 0.0014062081463634968,
+      "seconds": 0.0013641669993376127,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -103460,7 +103460,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.0004441249184310436,
+      "seconds": 0.00044504200013761874,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -103919,7 +103919,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.00102320802398026,
+      "seconds": 0.0009940840000126627,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -104378,7 +104378,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.00043575000017881393,
+      "seconds": 0.00043287500011501834,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -104837,7 +104837,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.0004180839750915766,
+      "seconds": 0.00043249999998806743,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -105296,7 +105296,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.00043754209764301777,
+      "seconds": 0.0004407090000313474,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -106168,7 +106168,7 @@
         "total": 2,
         "truncated": false
       },
-      "seconds": 0.0005396672058850527,
+      "seconds": 0.000532541000211495,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -107040,7 +107040,7 @@
         "total": 2,
         "truncated": false
       },
-      "seconds": 0.0005550000350922346,
+      "seconds": 0.000570917000004556,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -107499,7 +107499,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.00040804105810821056,
+      "seconds": 0.0004383329996926477,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -107958,7 +107958,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.0006983329076319933,
+      "seconds": 0.0006922499997017439,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -109714,7 +109714,7 @@
         "total": 9,
         "truncated": false
       },
-      "seconds": 0.004647457972168922,
+      "seconds": 0.0047651250006310875,
       "source_ids": [
         "src-axolotl",
         "src-gdn",
@@ -110174,7 +110174,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.00046566687524318695,
+      "seconds": 0.00044787499973608647,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -110633,7 +110633,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.0075825839303433895,
+      "seconds": 0.008107040999675519,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -111505,7 +111505,7 @@
         "total": 2,
         "truncated": false
       },
-      "seconds": 0.0020380839705467224,
+      "seconds": 0.002195541999753914,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -111964,7 +111964,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.0004539161454886198,
+      "seconds": 0.0004518750001807348,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -112423,7 +112423,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.0004128750879317522,
+      "seconds": 0.0004507080002440489,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -112882,7 +112882,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.00043462496250867844,
+      "seconds": 0.00042958300036843866,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -113341,7 +113341,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.0004397500306367874,
+      "seconds": 0.0004257079999661073,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -113451,7 +113451,7 @@
         "total": 0,
         "truncated": false
       },
-      "seconds": 0.0003322919365018606,
+      "seconds": 0.0003418750002310844,
       "source_ids": [],
       "supported_citations": false,
       "task": "comparison",
@@ -114733,7 +114733,7 @@
         "total": 3,
         "truncated": false
       },
-      "seconds": 0.0007377502042800188,
+      "seconds": 0.0007549590000053286,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -115605,7 +115605,7 @@
         "total": 2,
         "truncated": false
       },
-      "seconds": 0.0013777499552816153,
+      "seconds": 0.0014366660006999155,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -116478,7 +116478,7 @@
         "total": 2,
         "truncated": false
       },
-      "seconds": 0.0005672499537467957,
+      "seconds": 0.0005850000006830669,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -117351,7 +117351,7 @@
         "total": 2,
         "truncated": false
       },
-      "seconds": 0.0005744588561356068,
+      "seconds": 0.0005919169998378493,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -121309,7 +121309,7 @@
         "total": 37,
         "truncated": true
       },
-      "seconds": 0.003917250083759427,
+      "seconds": 0.004224166999847512,
       "source_ids": [
         "src-axolotl",
         "src-gdn",
@@ -121769,7 +121769,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.00044779200106859207,
+      "seconds": 0.0004830840007343795,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -122228,7 +122228,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.0005211250390857458,
+      "seconds": 0.0005764170000475133,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -122687,7 +122687,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.0005435000639408827,
+      "seconds": 0.0005605830001513823,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -123146,7 +123146,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.00044045806862413883,
+      "seconds": 0.00045374999990599463,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -124018,7 +124018,7 @@
         "total": 2,
         "truncated": false
       },
-      "seconds": 0.0005898750387132168,
+      "seconds": 0.000563874999897962,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -124543,7 +124543,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.0004602500703185797,
+      "seconds": 0.0004839590001211036,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -125415,7 +125415,7 @@
         "total": 2,
         "truncated": false
       },
-      "seconds": 0.0005667500663548708,
+      "seconds": 0.0005828339999425225,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -125874,7 +125874,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.00041208299808204174,
+      "seconds": 0.0004749159998027608,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -126333,7 +126333,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.0004943329840898514,
+      "seconds": 0.0004929579999952693,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -127205,7 +127205,7 @@
         "total": 2,
         "truncated": false
       },
-      "seconds": 0.000701333861798048,
+      "seconds": 0.0007475420006812783,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -128492,7 +128492,7 @@
         "total": 3,
         "truncated": false
       },
-      "seconds": 0.000904708867892623,
+      "seconds": 0.0009135840000453754,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -128951,7 +128951,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.00046329107135534286,
+      "seconds": 0.0004303329997128458,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -129823,7 +129823,7 @@
         "total": 2,
         "truncated": false
       },
-      "seconds": 0.0014157090336084366,
+      "seconds": 0.0015979170002538012,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -131521,7 +131521,7 @@
         "total": 4,
         "truncated": false
       },
-      "seconds": 0.003987707896158099,
+      "seconds": 0.0040214580003521405,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -131980,7 +131980,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.0004449589177966118,
+      "seconds": 0.0004607920000125887,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -132852,7 +132852,7 @@
         "total": 2,
         "truncated": false
       },
-      "seconds": 0.0005441249813884497,
+      "seconds": 0.0005572090003624908,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -133311,7 +133311,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.0006546250078827143,
+      "seconds": 0.0006651670000792365,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -133770,7 +133770,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.0004318749997764826,
+      "seconds": 0.00047329200060630683,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -134229,7 +134229,7 @@
         "total": 1,
         "truncated": false
       },
-      "seconds": 0.0004327499773353338,
+      "seconds": 0.00042383300024084747,
       "source_ids": [
         "src-gdn",
         "src-molina"
@@ -134242,9 +134242,9 @@
   "schema_version": 1,
   "scope": "local_documentary_fields_only",
   "timing": {
-    "index_build_seconds": 5.922976417001337,
-    "query_max_seconds": 0.06010841694660485,
-    "query_mean_seconds": 0.006230670341661548,
-    "query_total_seconds": 0.7663724520243704
+    "index_build_seconds": 6.068025958999897,
+    "query_max_seconds": 0.05844720799996139,
+    "query_mean_seconds": 0.006213613178918947,
+    "query_total_seconds": 0.7642744210070305
   }
 }
