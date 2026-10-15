@@ -1,0 +1,40 @@
+test_additive_publication_preserves_edits_and_is_idempotent (tests.test_pictography.PictographyTests.test_additive_publication_preserves_edits_and_is_idempotent) ... ok
+test_adds_a_distinct_batch_with_public_backup (tests.test_pictography.PictographyTests.test_adds_a_distinct_batch_with_public_backup) ... ok
+test_documentary_analysis_and_exact_values_are_separate (tests.test_pictography.PictographyTests.test_documentary_analysis_and_exact_values_are_separate) ... ok
+test_missing_reading_is_deferred_instead_of_guessed (tests.test_pictography.PictographyTests.test_missing_reading_is_deferred_instead_of_guessed) ... ok
+test_parser_ignores_embedded_lexical_data_and_keeps_uncertainty (tests.test_pictography.PictographyTests.test_parser_ignores_embedded_lexical_data_and_keeps_uncertainty) ... ok
+test_public_links_require_a_public_sense (tests.test_pictography.PictographyTests.test_public_links_require_a_public_sense) ... ok
+test_rejects_cross_document_components_and_untrusted_images (tests.test_pictography.PictographyTests.test_rejects_cross_document_components_and_untrusted_images) ... ok
+test_reuses_element_on_another_page_without_touching_original_fields (tests.test_pictography.PictographyTests.test_reuses_element_on_another_page_without_touching_original_fields) ... ok
+test_same_element_with_changed_semantics_or_notes_is_rejected (tests.test_pictography.PictographyTests.test_same_element_with_changed_semantics_or_notes_is_rejected) ... ok
+test_broken_connections_become_technical_tasks_with_exact_evidence (tests.test_iteration.IterationTests.test_broken_connections_become_technical_tasks_with_exact_evidence) ... ok
+test_counts_or_old_sft_reports_cannot_complete_documentary_evaluation (tests.test_iteration.IterationTests.test_counts_or_old_sft_reports_cannot_complete_documentary_evaluation) ... ok
+test_decision_and_notes_survive_reruns_and_disappearing_findings (tests.test_iteration.IterationTests.test_decision_and_notes_survive_reruns_and_disappearing_findings) ... ok
+test_invalid_state_and_destinations_do_not_modify_inputs (tests.test_iteration.IterationTests.test_invalid_state_and_destinations_do_not_modify_inputs) ... ok
+test_inventory_is_calculated_and_does_not_infer_links (tests.test_iteration.IterationTests.test_inventory_is_calculated_and_does_not_infer_links) ... FAIL
+test_legacy_decisions_are_imported_without_inventing_human_review (tests.test_iteration.IterationTests.test_legacy_decisions_are_imported_without_inventing_human_review) ... ok
+test_milestones_are_conditional_and_preserve_history_when_complete (tests.test_iteration.IterationTests.test_milestones_are_conditional_and_preserve_history_when_complete) ... ok
+test_private_paths_and_symlink_evidence_are_rejected_before_reading (tests.test_iteration.IterationTests.test_private_paths_and_symlink_evidence_are_rejected_before_reading) ... ok
+test_real_cli_is_byte_deterministic_and_never_opens_private_database (tests.test_iteration.IterationTests.test_real_cli_is_byte_deterministic_and_never_opens_private_database) ... ok
+test_resolution_evidence_hash_is_checked_without_losing_history (tests.test_iteration.IterationTests.test_resolution_evidence_hash_is_checked_without_losing_history) ... ok
+test_resolution_requires_current_fingerprint_and_real_evidence (tests.test_iteration.IterationTests.test_resolution_requires_current_fingerprint_and_real_evidence) ... ok
+test_source_change_reopens_with_snapshot_and_decision_preserved (tests.test_iteration.IterationTests.test_source_change_reopens_with_snapshot_and_decision_preserved) ... ok
+
+======================================================================
+FAIL: test_inventory_is_calculated_and_does_not_infer_links (tests.test_iteration.IterationTests.test_inventory_is_calculated_and_does_not_infer_links)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/pescamil/Downloads/nahuatl-local/tests/test_iteration.py", line 63, in test_inventory_is_calculated_and_does_not_infer_links
+    self.assertEqual({t['id'] for t in tasks if t['category'] == 'technical'},
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                     {'pictography-next-documentary-batch', 'evaluation-documentary-development-reserve',
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                      'retrieval-documentary-baseline', 'laboratory-documentary-multimodal-comparison'})
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'pictography-next-documentary-batch'
+
+----------------------------------------------------------------------
+Ran 21 tests in 1.146s
+
+FAILED (failures=1)
