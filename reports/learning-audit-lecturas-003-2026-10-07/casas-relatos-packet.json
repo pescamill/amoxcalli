@@ -1,0 +1,146 @@
+{
+  "id": "casas-relatos",
+  "title": "Casas, salida y posesión",
+  "objective": "Reconocer calli en episodios sobre casas y distinguir una acción narrada de una declaración de posesión.",
+  "review_status": "editorial_draft",
+  "target_sense_ids": [
+    "sense-calli"
+  ],
+  "annotation_example_counts": {
+    "sense-calli": 4
+  },
+  "examples": [
+    {
+      "archive_id": "axolotl-02051",
+      "nah": "Auh niman yuhqui quichiuhque yn mexica; qüitlacoyonique yn calli, nimann ompa moch quizque yn mexica.",
+      "es": "Así lo hicieron enseguida los mexicas; horadaron la pared trasera de la casa, y por ahí escaparon todos.",
+      "document": "Tercera Relación (Libro las ocho relaciones)",
+      "locator": "Axolotl, registro CSV 2051; página de la edición primaria pendiente",
+      "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv",
+      "iso": "nci",
+      "source_hash": "f7be34105ce8c8032e2b3e26a48e0ffe10118e86004c67c5bb933630b96798aa",
+      "annotations": [
+        {
+          "glyph_id": "glyph-calli",
+          "note": "La referencia es un elemento de edificio en Apancalecan, Mendoza 13r, propuesto por catálogo secundario. No es una ilustración de esta casa ni la escritura de la oración.",
+          "quote": "calli",
+          "relation": "full_word",
+          "sense_id": "sense-calli",
+          "start": 59,
+          "end": 64
+        }
+      ],
+      "exercise": {
+        "answer": 0,
+        "blank": "calli",
+        "explanation": "El registro escribe «calli». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+        "kind": "cloze",
+        "options": [
+          "calli",
+          "atl",
+          "tetl"
+        ],
+        "question": "Recupera la forma que aparece en el fragmento original."
+      }
+    },
+    {
+      "archive_id": "axolotl-10674",
+      "nah": "Auh in otlica on mitl xaxmantoc, tzontli momoyauhtoc. Calli tzontlapohtoc, calli chichiliuhtoc.",
+      "es": "En los caminos yacen dardos rotos, los cabellos están esparcidos. Destechadas están las casas, enrojecidos tienen sus muros.",
+      "document": "La tinta negra y roja (antología de poesía náhuatl)",
+      "locator": "Axolotl, registro CSV 10674; página de la edición primaria pendiente",
+      "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv",
+      "iso": "nci",
+      "source_hash": "c3e1e5b76c1dd48f5547ad6dca650ef81bb5508635de2629509a07d4b90cc98b",
+      "annotations": [
+        {
+          "glyph_id": "glyph-calli",
+          "note": "La referencia es un elemento de edificio en Apancalecan, Mendoza 13r, propuesto por catálogo secundario. No es una ilustración de esta casa ni la escritura de la oración.",
+          "quote": "Calli",
+          "relation": "full_word",
+          "sense_id": "sense-calli",
+          "start": 54,
+          "end": 59
+        }
+      ],
+      "exercise": {
+        "answer": 1,
+        "blank": "Calli",
+        "explanation": "El registro escribe «Calli». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+        "kind": "cloze",
+        "options": [
+          "tepetl",
+          "Calli",
+          "xochitl"
+        ],
+        "question": "Recupera la forma que aparece en el fragmento original."
+      }
+    },
+    {
+      "archive_id": "axolotl-03625",
+      "nah": "Auh niman oquitoque yn tlaxillacalleque ca quemaca ytlatqui y calli ca ynemac catca yn itatzin ca macoque ca ye quipia carta de venta yn ineltica.",
+      "es": "Y luego dijeron los tlaxilacalleque:- Si, la casa es su bien, era merced de su padre, les fue dado; tienen carta de venta que lo confirma.",
+      "document": "Documentos nauas de la Ciudad de México del siglo XVI",
+      "locator": "Axolotl, registro CSV 3625; página de la edición primaria pendiente",
+      "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv",
+      "iso": "nci",
+      "source_hash": "0206b31a47eb39c95f1d50f1f6bd49302df33de9dedcbf0911deb938674a58c6",
+      "annotations": [
+        {
+          "glyph_id": "glyph-calli",
+          "note": "La referencia es un elemento de edificio en Apancalecan, Mendoza 13r, propuesto por catálogo secundario. No es una ilustración de esta casa ni la escritura de la oración.",
+          "quote": "calli",
+          "relation": "full_word",
+          "sense_id": "sense-calli",
+          "start": 62,
+          "end": 67
+        }
+      ],
+      "exercise": {
+        "answer": 2,
+        "blank": "calli",
+        "explanation": "El registro escribe «calli». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+        "kind": "cloze",
+        "options": [
+          "cuicatl",
+          "tototl",
+          "calli"
+        ],
+        "question": "Recupera la forma que aparece en el fragmento original."
+      }
+    },
+    {
+      "archive_id": "axolotl-01900",
+      "nah": "Ypanpa mixpantzinco ninopechteca ma yca motlatoca justiciatzin ximotlanahuatilli ma maco posesion ma axcatillo yn español ynic huel conpiaz in calli in tlalli yn onictlanamaquilti.",
+      "es": "Y por lo susodicho vengo a suplicar a vuestra magestad mande como justicia se de poceción yla tenencia a dicho español de la dicha casa y tierra que le vendí.",
+      "document": "Documentos nauas de la Ciudad de México del siglo XVI",
+      "locator": "Axolotl, registro CSV 1900; página de la edición primaria pendiente",
+      "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv",
+      "iso": "nci",
+      "source_hash": "0522a9cb3d0bcc9c42b4c71ad79f6decfe12c3d6ac13da5e231c924856ea4522",
+      "annotations": [
+        {
+          "glyph_id": "glyph-calli",
+          "note": "La referencia es un elemento de edificio en Apancalecan, Mendoza 13r, propuesto por catálogo secundario. No es una ilustración de esta casa ni la escritura de la oración.",
+          "quote": "calli",
+          "relation": "full_word",
+          "sense_id": "sense-calli",
+          "start": 143,
+          "end": 148
+        }
+      ],
+      "exercise": {
+        "answer": 0,
+        "blank": "calli",
+        "explanation": "El registro escribe «calli». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+        "kind": "cloze",
+        "options": [
+          "calli",
+          "tlalli",
+          "tonatiuh"
+        ],
+        "question": "Recupera la forma que aparece en el fragmento original."
+      }
+    }
+  ]
+}

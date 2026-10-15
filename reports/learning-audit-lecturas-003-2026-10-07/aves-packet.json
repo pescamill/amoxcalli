@@ -1,0 +1,146 @@
+{
+  "id": "aves",
+  "title": "Un ave en poesía, aves en relatos",
+  "objective": "Reconocer tototl y comparar el contexto del ave poética con las aves de los relatos.",
+  "review_status": "editorial_draft",
+  "target_sense_ids": [
+    "sense-tototl"
+  ],
+  "annotation_example_counts": {
+    "sense-tototl": 4
+  },
+  "examples": [
+    {
+      "archive_id": "axolotl-14546",
+      "nah": "Oncan nemi tototl, chachalaca, tlatohua, hual on quimati teotl ichan.",
+      "es": "Por allí anda el ave, parlotea y canta,viene a conocer la casa del dios.",
+      "document": "Trece Poetas del Mundo Azteca",
+      "locator": "Axolotl, registro CSV 14546; página de la edición primaria pendiente",
+      "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv",
+      "iso": "nci",
+      "source_hash": "2c93ffac76b923ab5d31dad8640725f453866880ac9a79326b9012394bd8f43d",
+      "annotations": [
+        {
+          "glyph_id": "glyph-tototl-mdz46r",
+          "note": "Consulta ave como referencia léxica; observa si el español de este registro habla de un ave o de aves. No deduzcas una regla de número solo con esta comparación.",
+          "quote": "tototl",
+          "relation": "full_word",
+          "sense_id": "sense-tototl",
+          "start": 11,
+          "end": 17
+        }
+      ],
+      "exercise": {
+        "answer": 0,
+        "blank": "tototl",
+        "explanation": "El registro escribe «tototl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+        "kind": "cloze",
+        "options": [
+          "tototl",
+          "xochitl",
+          "atl"
+        ],
+        "question": "Recupera la forma que aparece en el fragmento original."
+      }
+    },
+    {
+      "archive_id": "axolotl-14253",
+      "nah": "Ynhin upa yxtiuia nepanixtiuia yn tenochca yn tlatilulca, yzquipa yntlatqui yetiuia tototl michi cuiatl.",
+      "es": "Siempre acudían juntos tenochcas y tlatelolcas, y cada vez llevaban aves, pescados y ranas.",
+      "document": "Anales de Tlatelolco",
+      "locator": "Axolotl, registro CSV 14253; página de la edición primaria pendiente",
+      "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv",
+      "iso": "nci",
+      "source_hash": "fac136e3a0457c008c312b42641cd4622684ed4dbe5477b8515b3ed1b388a49e",
+      "annotations": [
+        {
+          "glyph_id": "glyph-tototl-mdz46r",
+          "note": "Consulta ave como referencia léxica; observa si el español de este registro habla de un ave o de aves. No deduzcas una regla de número solo con esta comparación.",
+          "quote": "tototl",
+          "relation": "full_word",
+          "sense_id": "sense-tototl",
+          "start": 84,
+          "end": 90
+        }
+      ],
+      "exercise": {
+        "answer": 1,
+        "blank": "tototl",
+        "explanation": "El registro escribe «tototl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+        "kind": "cloze",
+        "options": [
+          "cuicatl",
+          "tototl",
+          "tlalli"
+        ],
+        "question": "Recupera la forma que aparece en el fragmento original."
+      }
+    },
+    {
+      "archive_id": "axolotl-08856",
+      "nah": "Nima ye yc quimaxilia yn tototl y michi yn cuiatl, acaquauhtzintli tlacopopotl ynic yaque tlachpanato tletlalito Azcapotzalco yn ichan tlatouani Acolnauacatzi.",
+      "es": "Y empezaron a llevar aves, pescados, ranas, carrizos y varas para ir a barrer y a hacer fuego en Azcapotzalco, en el palacio del tlatoani Acolnahuacatzin.",
+      "document": "Anales de Tlatelolco",
+      "locator": "Axolotl, registro CSV 8856; página de la edición primaria pendiente",
+      "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv",
+      "iso": "nci",
+      "source_hash": "ff72fa785c95318cf04dddf607259f2c16866c8702f9457edbfc7618d9aca789",
+      "annotations": [
+        {
+          "glyph_id": "glyph-tototl-mdz46r",
+          "note": "Consulta ave como referencia léxica; observa si el español de este registro habla de un ave o de aves. No deduzcas una regla de número solo con esta comparación.",
+          "quote": "tototl",
+          "relation": "full_word",
+          "sense_id": "sense-tototl",
+          "start": 25,
+          "end": 31
+        }
+      ],
+      "exercise": {
+        "answer": 2,
+        "blank": "tototl",
+        "explanation": "El registro escribe «tototl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+        "kind": "cloze",
+        "options": [
+          "atl",
+          "xochitl",
+          "tototl"
+        ],
+        "question": "Recupera la forma que aparece en el fragmento original."
+      }
+    },
+    {
+      "archive_id": "axolotl-00751",
+      "nah": "Auh in yehuantin yn chichimeca yn totollimpaneca yn imitac hualmochiuhtia çan yehuatl ynic hualmotlayecoltitiaque; yn inmiuh yn intlahuitol quiminia yn maçatl yn tochtli yn cohuatl yn tototl yn tequani.",
+      "es": "En cuanto a los chichimecas totolimpanecas, su sustento consistía sólo en lo que podían procurarse; con sus flechas y sus arcos cazaban venados, conejos, serpientes, aves y fieras.",
+      "document": "Cuarta Relación (Libro las ocho relaciones)",
+      "locator": "Axolotl, registro CSV 751; página de la edición primaria pendiente",
+      "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv",
+      "iso": "nci",
+      "source_hash": "3542b019692cbcac4ccdc9ac5cba0f50e69e5c7766e8051e06520ee09079b237",
+      "annotations": [
+        {
+          "glyph_id": "glyph-tototl-mdz46r",
+          "note": "Consulta ave como referencia léxica; observa si el español de este registro habla de un ave o de aves. No deduzcas una regla de número solo con esta comparación.",
+          "quote": "tototl",
+          "relation": "full_word",
+          "sense_id": "sense-tototl",
+          "start": 184,
+          "end": 190
+        }
+      ],
+      "exercise": {
+        "answer": 0,
+        "blank": "tototl",
+        "explanation": "El registro escribe «tototl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+        "kind": "cloze",
+        "options": [
+          "tototl",
+          "tlalli",
+          "cuicatl"
+        ],
+        "question": "Recupera la forma que aparece en el fragmento original."
+      }
+    }
+  ]
+}
