@@ -143,4 +143,4 @@ A [lexical candidate script](CANDIDATOS_CONEXIONES_LEXICAS.md) compares pictogra
 
 ## Architecture and evaluation
 
-For an engineering overview (data flow, design principles, the new word-study layer, measured results and where an LLM should and should not sit), read [ARCHITECTURE.md](ARCHITECTURE.md). The morphology evaluation is reproducible with `python3 -m nahuatl_local.morphology_evaluation`.
+For an engineering overview (data flow, design principles, the new word-study layer, measured results and where an LLM should and should not sit), read [ARCHITECTURE.md](ARCHITECTURE.md). What comes next, iteration by iteration, is in [ROADMAP.md](ROADMAP.md). The morphology evaluation is reproducible with `python3 -m nahuatl_local.morphology_evaluation`.
