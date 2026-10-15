@@ -1,0 +1,21 @@
+{
+  "validation": {
+    "valid": true,
+    "errors": []
+  },
+  "display_required": true,
+  "methods": [
+    {
+      "method": "retrieval",
+      "status": "measured"
+    },
+    {
+      "method": "textual_model",
+      "status": "not_run"
+    },
+    {
+      "method": "multimodal_candidate",
+      "status": "not_run"
+    }
+  ]
+}

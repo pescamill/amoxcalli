@@ -1,0 +1,120 @@
+{
+  "current_report_hashes": {
+    "reports/documentary-laboratory-display-v1.json": "2ba78e2d92c4a94a89e5e26de47d483f7a1d4c6fe8695d0668b1b333b4c10116",
+    "reports/documentary-laboratory-v1.json": "2c5d8bfc97b33ce8c31aa92501577d8b33506f69bf30d0d7cd9be9f94fbf7139",
+    "reports/documentary-retrieval-v1.json": "94ef70f05f356aa9811000ed1298a8eca22d0eaa82295756152ea336864c3e9b"
+  },
+  "current_source_manifest_matches": true,
+  "diagnostic_same_bytes": true,
+  "files": {
+    "inventory.json": {
+      "same_bytes": true,
+      "sha256": "87d3495cb41dcdad7e3f682460786661808692427ed03eb1cb59d12c1d7bbeb6"
+    },
+    "inventory.md": {
+      "same_bytes": true,
+      "sha256": "d25d2d83e38a858520b9970963056411e7193127c6e04c97a294a7b5040cb7ec"
+    },
+    "queue.json": {
+      "same_bytes": true,
+      "sha256": "a3a85840f334799a412e60904890f0076da34f93ae64a27519a45113c0703474"
+    },
+    "state.json": {
+      "same_bytes": true,
+      "sha256": "c17a2410eb459a7285381a6e728fe71cc44c333aa86bd24b231d7afba06088d8"
+    }
+  },
+  "frozen_006_snapshots_unchanged": {
+    "inventory.json": true,
+    "inventory.md": true,
+    "queue.json": true
+  },
+  "previous_measured_report": {
+    "path": "reports/documentary-laboratory-experiments/iteration-007/retrieval-before.json",
+    "sha256": "3a121bba29af5a0186e2db7ca90de9f918329d50fab1a8d7734b7fb56ecb4f85"
+  },
+  "private_database_opened": false,
+  "reserve_evaluated": false,
+  "retrieval_outcomes_identical_to_006": true,
+  "schema_version": 1,
+  "scope": "Local documentary preparation; no new human decision.",
+  "state_preservation": {
+    "decisions_preserved": true,
+    "history_prefix_preserved": true,
+    "prior_task_ids_preserved": true,
+    "runs_prefix_preserved": true,
+    "task_history_prefix_preserved": true,
+    "task_notes_prefix_preserved": true,
+    "task_snapshots_prefix_preserved": true
+  },
+  "tasks": {
+    "categories": {
+      "human": 66
+    },
+    "historical_tasks": 4,
+    "stale_decisions": 5,
+    "statuses": {
+      "open": 66
+    },
+    "total": 66
+  },
+  "technical_progress": {
+    "evaluation": {
+      "counts": {
+        "development": {
+          "textual": 123,
+          "visual": 51
+        },
+        "reserve": {
+          "textual": 37,
+          "visual": 15
+        }
+      },
+      "fingerprint": "f2b2996e86d3595ff117b014962340eafbed0e894cc73e9b14f56a7008a09fb4",
+      "invalid_queries": 0,
+      "ready": true,
+      "reserve_groups_independent": true,
+      "scope": "local_documentary_fields_only",
+      "validation_errors": [],
+      "visual_model_evaluation_enabled": false
+    },
+    "laboratory": {
+      "measured_methods": [
+        "retrieval"
+      ],
+      "ready": true,
+      "validation_errors": []
+    },
+    "retrieval": {
+      "measured_queries": 123,
+      "ready": true,
+      "validation_errors": []
+    }
+  },
+  "unchanged_public_sources": {
+    "configs/documentary-evaluation-v1.json": true,
+    "corpus/archive-source-v3.json": true,
+    "corpus/axolotl/axolotl.csv": true,
+    "corpus/editorial-batch-007-v9.json": true,
+    "corpus/editorial-releases.json": true,
+    "corpus/flor-lexicon-v8.json": true,
+    "corpus/gdn-lexicon-v6.json": true,
+    "corpus/glyph-associations-v7.json": true,
+    "corpus/glyph-images-v4.json": true,
+    "corpus/glyph-lexicon-v5.json": true,
+    "corpus/glyph-links-v2.json": true,
+    "corpus/glyph-source-images-v5.json": true,
+    "corpus/pictography/catalog.json": true,
+    "corpus/seed.json": true,
+    "docs/EVALUACION_DOCUMENTAL.md": true,
+    "nahuatl_local/documentary_evaluation.py": true,
+    "nahuatl_local/documentary_retrieval.py": true
+  },
+  "weights": {
+    "modified": false,
+    "new_weight_hash_computed": false,
+    "note": "Published weight files were not read or written by this cycle; no new hash of published weights was computed. Historical model metrics remain separate.",
+    "opened": false,
+    "scope": "Published project model weights only; inherited tests use synthetic tiny models in temporary directories."
+  }
+}

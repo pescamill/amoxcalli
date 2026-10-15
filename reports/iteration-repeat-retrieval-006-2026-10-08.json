@@ -1,0 +1,84 @@
+{
+  "diagnostic_same_bytes": true,
+  "files": {
+    "inventory.json": {
+      "same_bytes": true,
+      "sha256": "7c31e2e85be1e31320f3d210f1bd81368c490e469810cce18504224b6cc66058"
+    },
+    "inventory.md": {
+      "same_bytes": true,
+      "sha256": "0fbdee5308490ac823f4777c10ae66d1cad5a8e99695a70522fe4c11f67791c9"
+    },
+    "queue.json": {
+      "same_bytes": true,
+      "sha256": "3194b2743c64bf3261dabfd6426cd109b0e0d31fa6ea689ed6c19b7a4cd688e4"
+    },
+    "state.json": {
+      "same_bytes": true,
+      "sha256": "9050dcb8240650e90a01b73717246dd3c1317344236fff18945a5ff5b4571788"
+    }
+  },
+  "measured_report_sha256": "3a121bba29af5a0186e2db7ca90de9f918329d50fab1a8d7734b7fb56ecb4f85",
+  "note": "Final CSS corrected; same measured report for diagnostic repeat, timings not remeasured. Local preparation only; no human review.",
+  "schema_version": 1,
+  "state_preservation": {
+    "decisions_preserved": true,
+    "history_prefix_preserved": true,
+    "prior_task_ids_preserved": true,
+    "runs_prefix_preserved": true,
+    "task_history_prefix_preserved": true,
+    "task_notes_prefix_preserved": true,
+    "task_snapshots_prefix_preserved": true
+  },
+  "stylesheet_hash": "338feafe4b58070b8e5153745b8132edde8fdc241129d3c002df18d1c7de99e5",
+  "technical_progress": {
+    "evaluation": {
+      "counts": {
+        "development": {
+          "textual": 123,
+          "visual": 51
+        },
+        "reserve": {
+          "textual": 37,
+          "visual": 15
+        }
+      },
+      "fingerprint": "f2b2996e86d3595ff117b014962340eafbed0e894cc73e9b14f56a7008a09fb4",
+      "invalid_queries": 0,
+      "ready": true,
+      "reserve_groups_independent": true,
+      "scope": "local_documentary_fields_only",
+      "validation_errors": [],
+      "visual_model_evaluation_enabled": false
+    },
+    "laboratory": {
+      "measured_methods": [],
+      "ready": false
+    },
+    "retrieval": {
+      "measured_queries": 123,
+      "ready": true,
+      "validation_errors": []
+    }
+  },
+  "unchanged_from_005": {
+    "configs/documentary-evaluation-v1.json": true,
+    "corpus/archive-source-v3.json": true,
+    "corpus/axolotl/axolotl.csv": true,
+    "corpus/editorial-batch-007-v9.json": true,
+    "corpus/editorial-releases.json": true,
+    "corpus/flor-lexicon-v8.json": true,
+    "corpus/gdn-lexicon-v6.json": true,
+    "corpus/glyph-associations-v7.json": true,
+    "corpus/glyph-images-v4.json": true,
+    "corpus/glyph-lexicon-v5.json": true,
+    "corpus/glyph-links-v2.json": true,
+    "corpus/glyph-source-images-v5.json": true,
+    "corpus/learning-v1.json": true,
+    "corpus/pictography/catalog.json": true,
+    "corpus/seed.json": true,
+    "docs/EVALUACION_DOCUMENTAL.md": true,
+    "nahuatl_local/documentary_evaluation.py": true,
+    "reports/documentary-evaluation-validation-v1.json": true
+  }
+}
