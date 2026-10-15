@@ -5,7 +5,8 @@ import tempfile
 import unittest
 
 from nahuatl_local.community import ROOT, Problem
-from nahuatl_local.corpus import CorpusStore, editorial_releases, normalize
+from nahuatl_local.corpus import CorpusStore, editorial_releases
+from nahuatl_local.text import fold
 from nahuatl_local.glyph_linker import build_bundle, tokens
 from nahuatl_local.research import Archive
 
@@ -61,9 +62,9 @@ class GlyphLinkerTests(unittest.TestCase):
             self.assertEqual(a['passage']['nah'],row['nah'])
             self.assertEqual(a['passage']['es'],row['es'])
             self.assertEqual(row['iso'],'nci')
-            self.assertIn(normalize(self.records[a['reference_form_id']]['written']),tokens(row['nah']))
+            self.assertIn(fold(self.records[a['reference_form_id']]['written']),tokens(row['nah']))
             ref=self.records[a['reference_glyph_id']]
-            self.assertIn(normalize(ref['reading']),tokens(row['nah']))
+            self.assertIn(fold(ref['reading']),tokens(row['nah']))
             self.assertIn(a['matched_term'],tokens(row['es']))
         self.assertNotIn('glyph-link-v7-sense-gdn-m2-161535',self.records)  # Titi ≠ normalized i.
 

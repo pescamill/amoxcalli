@@ -10,7 +10,7 @@
     }
   },
   "errors": [],
-  "evaluation_sha256": "f5a3dfa5c592a3ef9eb96b45bcc44c7f6493accbac053529fa54a7543142978c",
+  "evaluation_sha256": "c02fc3cfb9c3ea083887c42c324f6f6e22f9b314b67f5689498ef7c19ec01bbc",
   "image_downloads": 0,
   "model_calls": 0,
   "network_requests": 0,
@@ -51,7 +51,7 @@
     "corpus/pictography/catalog.json": "c720d5c3ccb8e8b7026965d6e19343ea5c52be58e99163396751732fc354271f",
     "corpus/seed.json": "d64f372778fdcf4ee8e91de1ad546d0f458094c926cb5755fd511db481e5795c",
     "docs/EVALUACION_DOCUMENTAL.md": "5474512ec6502171b9801ca702afea19259cd0108c8fe41b2e7f8692237d317a",
-    "nahuatl_local/documentary_evaluation.py": "e9ca1706a94c00972386d41cbd9d58aab170609e8ffe00f1813810dd4051a11c"
+    "nahuatl_local/documentary_evaluation.py": "651d8d631c5462d1981df2fcee526e66ec348754333fe619ad792f57c9875634"
   },
   "task_counts": {
     "comparison": 104,

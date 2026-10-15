@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "senses": 523,
-  "with_image": 99,
-  "pending": 424,
+  "senses": 575,
+  "with_image": 139,
+  "pending": 436,
   "unresolved": [
     {
       "sense_id": "sense-gdn-m2-147139",
@@ -178,6 +178,41 @@
       "definition": "o. interjection del que sequexa con dolor.",
       "reason": "no_documented_reference",
       "form_url": "https://gdn.iib.unam.mx/contexto/147454"
+    },
+    {
+      "sense_id": "sense-gdn-m2-148735",
+      "written": "Intechcopa",
+      "definition": "dellos.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/148735"
+    },
+    {
+      "sense_id": "sense-gdn-m2-148742",
+      "written": "Intlaca",
+      "definition": "sino. conjunction.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/148742"
+    },
+    {
+      "sense_id": "sense-gdn-m2-148745",
+      "written": "Intlacamo",
+      "definition": "ysino. conjunction.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/148745"
+    },
+    {
+      "sense_id": "sense-gdn-m2-148754",
+      "written": "Intlanel",
+      "definition": "y aunque, o dado que. aduerbio.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/148754"
+    },
+    {
+      "sense_id": "sense-gdn-m2-148761",
+      "written": "Intlaça",
+      "definition": "y si, y si todavia, o mas si. conjunction.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/148761"
     },
     {
       "sense_id": "sense-gdn-m2-150574",
@@ -885,6 +920,20 @@
       "definition": "mayormente, o especialmente. aduerbio.",
       "reason": "no_documented_reference",
       "form_url": "https://gdn.iib.unam.mx/contexto/154921"
+    },
+    {
+      "sense_id": "sense-gdn-m2-155401",
+      "written": "Oneua",
+      "definition": "auer recaudo para todos, o venir justa y cabal la cosa, o alcançar y llegar la soga, o el madero adonde era menester, alcanzar parte de alguna cosa a todos. preter: ooneuac.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/155401"
+    },
+    {
+      "sense_id": "sense-gdn-m2-155458",
+      "written": "Onyez",
+      "definition": "sera, o aura. s. alguna cosa.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/155458"
     },
     {
       "sense_id": "sense-gdn-m2-155711",
@@ -2021,6 +2070,20 @@
       "form_url": "https://gdn.iib.unam.mx/contexto/168621"
     },
     {
+      "sense_id": "sense-gdn-m2-168711",
+      "written": "Xiquipilli",
+      "definition": "costal, talega, alforja, o bolsa.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/168711"
+    },
+    {
+      "sense_id": "sense-gdn-m2-168814",
+      "written": "Xixtli",
+      "definition": "estiercol de hombre.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/168814"
+    },
+    {
       "sense_id": "sense-gdn-m2-169190",
       "written": "Yacacelicayotl",
       "definition": "el freno de las narizes.",
@@ -2369,6 +2432,27 @@
       "definition": "assentadero de olla, o de tinaja hecho desparto o de cosa semejante.",
       "reason": "no_documented_reference",
       "form_url": "https://gdn.iib.unam.mx/contexto/169427"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169527",
+      "written": "Yeccan",
+      "definition": "lugar bueno y abrigado.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169527"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169528",
+      "written": "Yeccan",
+      "definition": "abuen tiempo. aduerbio.",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169528"
+    },
+    {
+      "sense_id": "sense-gdn-m2-169737",
+      "written": "Yequene",
+      "definition": "y mas, y tá[m]bien. có[n]junctió[n]. vel. ité[n]. mas",
+      "reason": "no_documented_reference",
+      "form_url": "https://gdn.iib.unam.mx/contexto/169737"
     },
     {
       "sense_id": "sense-gdn-m2-170791",
@@ -2982,6 +3066,6 @@
   "llm_calls": 0,
   "network_requests": 0,
   "policy": "Solo referencias existentes, relaciones explícitas de significado y coocurrencia exacta en pasajes clásicos. Sin inferencia morfológica ni valores fonéticos por semejanza de letras.",
-  "elapsed_seconds": 0.349,
+  "elapsed_seconds": 0.397,
   "bundle_sha256": "a8a377fa70fdb2a2ae6af2b27d555830bf9dad0b746e021579fd1116bf285fe3"
 }

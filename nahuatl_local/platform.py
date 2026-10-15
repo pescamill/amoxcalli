@@ -7,7 +7,8 @@ from http.server import ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import urlparse, parse_qs
 from .community import handler as community_handler, Problem, ROOT, DEFAULT_DB, text
-from .corpus import CorpusStore, normalize
+from .corpus import CorpusStore
+from .text import fold
 from .review import request_bundle, local_review
 from .research import Archive
 from .learning import Learning
@@ -29,7 +30,7 @@ INSTALL_HEAD = '<meta name="theme-color" content="#812d37"><meta name="apple-mob
 def rule_query(store, value):
     """Porta las reglas acotadas de Amoxcalli; ninguna salida es validación."""
     records=store.public_records()
-    q=normalize(value.strip()).rstrip('.!?')
+    q=fold(value.strip()).rstrip('.!?')
     q=q.removeprefix('yo ')
 
     def noun(phrase):
@@ -37,7 +38,7 @@ def rule_query(store, value):
             if phrase.startswith(article):
                 phrase=phrase[len(article):];break
         for r in records.values():
-            if r['kind']=='sense' and r['pos']=='noun' and phrase in [normalize(x) for x in [r['label'],*r.get('aliases',[])]]:
+            if r['kind']=='sense' and r['pos']=='noun' and phrase in [fold(x) for x in [r['label'],*r.get('aliases',[])]]:
                 if phrase in ('flores','arboles','flowers','trees'):
                     continue
                 # Usa solo el lema histórico heredado por la regla original.
@@ -240,7 +241,7 @@ def make_handler(store, model_enabled=None, adapter=None, word_study=None, expla
                             raise Problem('No se pudo ejecutar el modelo local. Revisa sus dependencias y pesos; la consulta del corpus funciona.',503) from None
                         finally:model_lock.release()
                     if result['method']=='local_model':
-                        words=normalize(' '.join(s['text'] for s in result['segments'])).strip('. ').split()
+                        words=fold(' '.join(s['text'] for s in result['segments'])).strip('. ').split()
                         repeated=len(words)>=4 and len(words)%2==0 and words[:len(words)//2]==words[len(words)//2:]
                         result['quality_issues']=(['repeated_phrase'] if repeated else [])+(['length_limit'] if result.get('truncated') else [])
                         if result['quality_issues']:result['note']+=' Se detectó repetición o un límite de longitud; la salida requiere corrección.'

@@ -4,7 +4,7 @@ Recuperación sin LLM sobre tres fuentes ya existentes:
 
 * el analizador morfológico y la concordancia por raíz (``stems``), para encontrar
   pasajes clásicos de la misma raíz aunque cambien prefijos y sufijos;
-* una **clave laxa** de grafía (``loose_key``), solo para recuperar: une la ortografía
+* una **clave laxa** de grafía (``text.loose_key``), solo para recuperar: une la ortografía
   moderna (SEP/INALI: k, kw, ts, w, j) con la colonial (c/qu, cu/qu, tz, hu, h) y
   reduce consonantes dobles. No sustituye a la clave fonémica evaluada del analizador;
 * el modelo IBM-1 de pistas de glosa invertido, para preguntas en español
@@ -17,9 +17,11 @@ import re
 from collections import Counter, defaultdict
 from threading import Lock
 
-from .morphology import WORD, key_of, readable
-from .research import LABELS
-from .stems import ROOT, WordStudy, es_key, es_norm, es_tokens, load_rows
+from .morphology import WORD
+from . import passages
+from .passages import LABELS
+from .stems import ROOT, WordStudy, es_tokens
+from .text import es_key, fold, loose_key, readable, squash
 
 EVIDENCE_VERSION = 'evidence-root-v1'
 # Pistas invertidas español → raíz: solo asociaciones con apoyo amplio.
@@ -33,24 +35,8 @@ SHORT = 260  # pasajes breves primero: se leen mejor como ejemplo
 ARTICLE = re.compile(r'^(?:el|la|los|las|un|una)\s+', re.I)
 
 
-def loose_key(word):
-    """Clave de recuperación tolerante a la ortografía.
-
-    >>> loose_key('kuali') == loose_key('cualli') == loose_key('qualli')
-    True
-    >>> loose_key('tsontli') == loose_key('tzontli')
-    True
-    """
-    k = key_of(word)
-    k = k.replace('q', 'kw').replace('ts', 'ʦ').replace('j', '')
-    k = re.sub(r'([^aeio])\1+', r'\1', k)
-    if len(k) > 2 and k.endswith('w') and k[-2] in 'aeio':
-        k = k[:-1] + 'o'  # tonatiuh / tonatiu
-    return k
-
-
 def _snippet_label(label, limit=120):
-    label = re.sub(r'\s+', ' ', label or '').strip()
+    label = squash(label or '')
     return label if len(label) <= limit else label[:limit].rsplit(' ', 1)[0] + '…'
 
 
@@ -69,7 +55,7 @@ class Evidence:
             if self._ready:
                 return
             self.analyzer, self.concordance, self.hints = self.word_study._build()
-            self.rows = {r['id']: r for r in load_rows(self.root)}
+            self.rows = {r['id']: r for r in passages.load(self.root)}
             self.postings = defaultdict(list)       # clave laxa → [(id, forma)]
             self.nah_vocab = Counter()
             self.es_vocab = Counter()
@@ -139,7 +125,7 @@ class Evidence:
         if lk in self.lex_loose:
             return 'nah'
         nah_n, es_n = self.nah_vocab[lk], self.es_vocab[es_key(word)]
-        if es_norm(word) != word.casefold() and nah_n == 0:
+        if fold(word) != word.casefold() and nah_n == 0:
             return 'es'  # acento español sin testimonio náhuatl
         return 'es' if es_n > max(3, 2 * nah_n) else 'nah'
 
@@ -241,10 +227,10 @@ class Evidence:
 
     def _ask_es(self, word):
         key = es_key(word)
-        pattern = re.compile(r'(?<![^\W\d_])' + re.escape(es_norm(word)) + r'(?:e?s)?(?![^\W\d_])')
+        pattern = re.compile(r'(?<![^\W\d_])' + re.escape(fold(word)) + r'(?:e?s)?(?![^\W\d_])')
         entries = []
         for h in self.entries.values():
-            label = es_norm(h['label'] or '')
+            label = fold(h['label'] or '')
             m = pattern.search(label)
             if m:
                 rank = (0 if m.start() == 0 else 1, h['automatic'], len(label), h['written'] or '')

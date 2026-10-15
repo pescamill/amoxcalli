@@ -1,7 +1,8 @@
 """Preparación sin dependencias: variantes explícitas y separación por obra."""
-import argparse, collections, csv, io, hashlib, json, random, statistics
+import argparse, collections, hashlib, json, random, statistics
 from pathlib import Path
 from .nahuatl_orthography import storage, comparison, ORTHOGRAPHY_VERSION, STORAGE_RULE_IDS, COMPARISON_RULE_IDS
+from .passages import AXOLOTL, passage_id, records as axolotl_records
 ROOT=Path(__file__).resolve().parents[1]
 LENGTH_RATIO_TAU=2.5
 LENGTH_RATIO_UNIT='words'
@@ -23,8 +24,8 @@ def passage_group(row):
 
 def default_corpus_path():
     """Prefiere el corpus versionado; cae al descargado por download.py."""
-    committed=ROOT/'corpus/axolotl/axolotl.csv'
-    downloaded=ROOT/'data/raw/axolotl.csv'
+    committed=ROOT/AXOLOTL
+    downloaded=ROOT/'data/raw'/Path(AXOLOTL).name
     if committed.exists():return committed
     if downloaded.exists():return downloaded
     raise FileNotFoundError(
@@ -49,7 +50,9 @@ def _token_length_stats(tokenizer_dir,records):
 def prepare(raw,output,seed=42,tokenizer_dir=None):
     output=Path(output);output.mkdir(parents=True,exist_ok=True)
     records=[];rejected=collections.Counter();seen_es=set();seen_nah=set()
-    for line,row in enumerate(csv.reader(io.StringIO(Path(raw).read_text(encoding='utf-8'))),1):
+    # Formato de entrenamiento congelado (manifiestos y referencias lo fijan): sale de los
+    # registros crudos del único lector del CSV, no del modelo de pasaje de la aplicación.
+    for line,row in axolotl_records(raw):
         if len(row)<5:rejected['schema']+=1;continue
         es,nah,variant,document,iso=row[:5]
         if variant!='Classical Nahuatl' or iso!='nci':rejected['other_or_unknown_variant']+=1;continue
@@ -64,7 +67,7 @@ def prepare(raw,output,seed=42,tokenizer_dir=None):
         e,n=comparison(es),comparison(nah)
         if e in seen_es or n in seen_nah:rejected['duplicate_source_or_target']+=1;continue
         seen_es.add(e);seen_nah.add(n)
-        records.append({'id':f'axolotl-{line:05d}','es':es,'nah':nah,'variant':variant,'iso':'nci','document':document,'group':work_group(document),'locator':f'axolotl.csv, fila {line} (sin página de edición disponible)','source_url':'https://www.axolotl-corpus.mx/','declared_license':'MPL-2.0 (repositorio distribuidor)','linguistic_review':'upstream_alignment_not_independently_reviewed'})
+        records.append({'id':passage_id(line),'es':es,'nah':nah,'variant':variant,'iso':'nci','document':document,'group':work_group(document),'locator':f'axolotl.csv, fila {line} (sin página de edición disponible)','source_url':'https://www.axolotl-corpus.mx/','declared_license':'MPL-2.0 (repositorio distribuidor)','linguistic_review':'upstream_alignment_not_independently_reviewed'})
     groups=sorted({r['group'] for r in records});random.Random(seed).shuffle(groups)
     if len(groups)<3:raise ValueError('Se requieren al menos tres obras para separar entrenamiento, validación y prueba.')
     n=max(1,round(len(groups)*0.15));test=set(groups[:n]);valid=set(groups[n:2*n]);train=set(groups[2*n:])

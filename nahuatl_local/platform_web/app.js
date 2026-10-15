@@ -1,7 +1,8 @@
 'use strict';
 const $=id=>document.getElementById(id);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const norm=s=>String(s??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+// Único plegado del navegador (equivale a text.fold): minúsculas y sin marcas diacríticas. Lo comparten corpus.js, learning.js y pictography.js.
+const norm=s=>String(s??'').toLowerCase().normalize('NFD').replace(/\p{Mn}/gu,'');
 const state={records:[],byId:{},variants:[],profile:null,model:false,filter:{q:'',period:'',variant:'',sourceType:''}};
 const kindNames={source:'Fuente',sense:'Acepción',form:'Forma léxica',text:'Texto',glyph:'Referencia glífica',note:'Nota de investigación'};
 const statuses={inherited:'Referencia heredada · por cotejar',catalog_checked:'Ficha consultada · sin cotejo primario',reviewed:'Revisión registrada'};

@@ -9,7 +9,7 @@ las vincula con entradas del diccionario del proyecto y explica cada morfema.
 
 Diseño
 ------
-1. **Clave fonémica** (``phonemic_key``): neutraliza variación ortográfica
+1. **Clave fonémica** (``text.phonemic_key``): neutraliza variación ortográfica
    colonial (qu/c/k, hu/uh/u/v, z/ç/c, h saltillo, y/i, vocales dobles) y
    conserva, para cada fonema, el tramo de la grafía original. Así la
    segmentación se muestra en la escritura de la fuente.
@@ -33,136 +33,17 @@ traducción: la interfaz siempre lo presenta así.
 import json
 import math
 import re
-import unicodedata
 from collections import Counter, defaultdict
 from functools import lru_cache
 
+# La clave fonémica vive en ``text`` (normalización única); aquí se reexporta.
+from .text import VOWELS, spelling_base, phonemic_key, key_of, readable  # noqa: F401
+
 ANALYZER_VERSION = 'nah-morph-1'
-VOWELS = set('aeio')
-
-# --------------------------------------------------------------------------
-# 1. Clave fonémica con alineación a la grafía original
-# --------------------------------------------------------------------------
-# Símbolos de un carácter: č=ch, ʦ=tz, λ=tl, q=kw. El resto son letras latinas.
-DISPLAY = {'č': 'ch', 'ʦ': 'tz', 'λ': 'tl', 'q': 'kw'}
-
-
-def _base(text):
-    """Minúsculas, sin marcas diacríticas; ç→s, v→u (ortografía colonial).
-
-    «j» se conserva: en el corpus clásico de Axolotl aparece casi solo en
-    préstamos y nombres (Juan, justicia, juez), que se marcan como tales."""
-    out = []
-    for ch in unicodedata.normalize('NFC', text):
-        low = ch.casefold()
-        if low == 'ç':
-            out.append('s')
-            continue
-        decomposed = unicodedata.normalize('NFD', low)
-        base = ''.join(c for c in decomposed if unicodedata.category(c) != 'Mn') or low
-        base = {'v': 'u'}.get(base, base)
-        out.append(base[:1])  # un carácter de salida por carácter de entrada
-    return ''.join(out)
-
-
-def phonemic_key(word):
-    """Devuelve (clave, tramos). ``tramos[i]`` es (inicio, fin) en ``word``.
-
-    >>> phonemic_key('niquitta')[0]
-    'nikitta'
-    >>> phonemic_key('yhuan')[0] == phonemic_key('ihuan')[0] == phonemic_key('iuan')[0]
-    True
-    """
-    s = _base(word)
-    n = len(s)
-    key, spans = [], []
-
-    lead = None  # «h» inicial: se une al primer símbolo
-
-    def emit(sym, start, end):
-        nonlocal lead
-        if lead is not None and not spans:
-            start, lead = 0, None
-        key.append(sym)
-        spans.append([start, end])
-
-    def is_v(i):
-        return 0 <= i < n and s[i] in 'aeiou'
-
-    i = 0
-    while i < n:
-        c = s[i]
-        nxt = s[i + 1] if i + 1 < n else ''
-        if c == 'c' and nxt == 'h':
-            emit('č', i, i + 2); i += 2; continue
-        if c == 't' and nxt == 'z':
-            emit('ʦ', i, i + 2); i += 2; continue
-        if c == 't' and nxt == 'l':
-            emit('λ', i, i + 2); i += 2; continue
-        if c == 'q' and nxt == 'u':
-            after = s[i + 2] if i + 2 < n else ''
-            if after in ('e', 'i'):
-                emit('k', i, i + 2); i += 2; continue
-            emit('q', i, i + 2); i += 2; continue          # qua/quo = kw
-        if c == 'c' and nxt == 'u' and is_v(i + 2):
-            emit('q', i, i + 2); i += 2; continue          # cua/cui = kw
-        if c == 'u' and nxt == 'c' and i > 0 and is_v(i - 1) and not is_v(i + 2) and s[i + 2:i + 3] != 'h':
-            emit('q', i, i + 2); i += 2; continue          # teuctli = tekw-tli
-        if c == 'h' and nxt == 'u' and is_v(i + 2):
-            emit('w', i, i + 2); i += 2; continue          # hua = wa
-        if c == 'u' and nxt == 'h' and i > 0 and is_v(i - 1):
-            emit('w', i, i + 2); i += 2; continue          # -uh = w
-        if c == 'u' and is_v(i + 1) and (i == 0 or is_v(i - 1) or s[i - 1] not in 'qg'):
-            emit('w', i, i + 1); i += 1; continue          # uel = wel, xiuitl = xiwitl
-        if c == 'c':
-            emit('s' if nxt in ('e', 'i') else 'k', i, i + 1); i += 1; continue
-        if c == 'z':
-            emit('s', i, i + 1); i += 1; continue
-        if c == 'h':
-            # Saltillo u «h» ortográfica: se omite; su tramo se une al símbolo vecino.
-            if spans:
-                spans[-1][1] = i + 1
-            else:
-                lead = i + 1 if lead is None else lead
-            i += 1; continue
-        if c == 'y':
-            emit('y' if is_v(i + 1) else 'i', i, i + 1); i += 1; continue
-        if c == 'u':
-            emit('o', i, i + 1); i += 1; continue          # u vocálica = o
-        if c == 'k':
-            emit('k', i, i + 1); i += 1; continue
-        emit(c, i, i + 1); i += 1
-
-    # vocales dobles (longitud) → una sola, uniendo tramos
-    out_k, out_s = [], []
-    for sym, sp in zip(key, spans):
-        if out_k and sym in VOWELS and out_k[-1] == sym:
-            out_s[-1][1] = sp[1]
-            continue
-        out_k.append(sym); out_s.append(sp)
-    # w deslizante entre o y vocal: tlahtohua = tlahtoa, itohua = itoa
-    k2, s2 = [], []
-    j = 0
-    while j < len(out_k):
-        if out_k[j] == 'w' and k2 and k2[-1] == 'o' and j + 1 < len(out_k) and out_k[j + 1] in VOWELS:
-            s2[-1][1] = out_s[j][1]
-            j += 1
-            continue
-        k2.append(out_k[j]); s2.append(out_s[j]); j += 1
-    return ''.join(k2), [tuple(x) for x in s2]
-
-
-def key_of(word):
-    return phonemic_key(word)[0]
-
-
-def readable(key):
-    """Clave fonémica legible (ch, tz, tl, kw)."""
-    return ''.join(DISPLAY.get(c, c) for c in key)
 
 
 # --------------------------------------------------------------------------
-# 2. Inventario de morfemas (claves fonémicas)
+# 1. Inventario de morfemas (claves fonémicas)
 # --------------------------------------------------------------------------
 # (id, clave, etiqueta Leipzig, glosa española, clase)
 PREFIXES = {
@@ -297,7 +178,7 @@ FOREIGN = re.compile(r'[bdfgjrñ]|s[^a-z]?$|^s|ss')
 
 
 # --------------------------------------------------------------------------
-# 3. Léxico de raíces a partir de los registros del diccionario
+# 2. Léxico de raíces a partir de los registros del diccionario
 # --------------------------------------------------------------------------
 def _lemma_stems(key, noun_hint):
     """Raíces candidatas de una entrada de diccionario (clave fonémica)."""
@@ -371,7 +252,7 @@ class Lexicon:
 
 
 # --------------------------------------------------------------------------
-# 4. Generación y puntuación de análisis
+# 3. Generación y puntuación de análisis
 # --------------------------------------------------------------------------
 def _consonant_final(s):
     return bool(s) and s[-1] not in VOWELS
@@ -637,7 +518,7 @@ class Analyzer:
         results = []
         if not key:
             return []
-        base = _base(word)
+        base = spelling_base(word)
         if FOREIGN.search(base) or re.fullmatch(r'\d+', base):
             results.append(self._package(word, key, spans, 'foreign', [], key, [], 0.0,
                                          'loan_or_name', [], note='Posible préstamo del español, nombre propio o cifra.'))
