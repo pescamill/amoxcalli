@@ -34,10 +34,10 @@
   },
   "presentation_hashes": {
     "nahuatl_local/laboratory.py": "b8d3ae79206197560fca20da4ae45db607006706aafe33e97bff526007e89ded",
-    "nahuatl_local/platform.py": "85712c2ebfd2f7f7c8b941272de609edb5388c11911e513c0769de0a1b16e02e",
-    "nahuatl_local/platform_web/app.js": "cefc662f2eae042511fc77e2d5ff51ddc4acc95d5104836621b0b4508571e633",
+    "nahuatl_local/platform.py": "cf37a1b74d49ea9cbbf4f5d0f65d3d5e87515814c413912a0355107140b337d6",
+    "nahuatl_local/platform_web/app.js": "960d90c584aac34bea890ec7050ef64c766873c0e9b2215dfcf36a3838233d07",
     "nahuatl_local/platform_web/documentary.js": "dd56343d765651152291d5fb3df36a682e29a9627276a4761a782cc541dfbe22",
-    "nahuatl_local/platform_web/index.html": "6ddf7defddf7079b1cbbd2dd045eb226da3d78d41cd79ec5b8266444fc656993",
+    "nahuatl_local/platform_web/index.html": "cc28bb02a41e183bc5c08621acec5fb4cb437db129e1620f65c20ec7ef9d39ba",
     "nahuatl_local/platform_web/laboratory.css": "2458fc0fc143e9acec883695ea8123748965be65fbe14acdc0e74bb4edaeadbe",
     "nahuatl_local/platform_web/laboratory.js": "379870dc4730bebf85bef8e23ab5872590dd1dd3724504d4c60642d857f02aa1",
     "nahuatl_local/platform_web/learning.js": "8ff89e45125bf5f48083d7cd68e38bc83bafdc44fc263b134c9e79caa8547263",
@@ -45,7 +45,7 @@
     "nahuatl_local/platform_web/training-data.js": "53d360bab2c9e4b27bc055333bf2723aea5fbc54d647ccedf07426bb60d23b16",
     "nahuatl_local/visual_preparation.py": "cf6b04b43a4f7cf88634ccceb560c5794ed10c4a405b9420e0f4834bd00cb932",
     "scripts/test-platform-ui.py": "dd3a8d823253d5faae2cf82d707290041777257d81c05a319009a72920012819",
-    "tests/platform_ui.cjs": "2b37982adb00fae17fbd9ff5006c99776094f49df571ead858dccb7f87aa3d73"
+    "tests/platform_ui.cjs": "d0fc0226f0197aa433f7102119e9f290aca2707e65a980aa6f96230c4ded8bdc"
   },
   "checks": [
     "three_methods",

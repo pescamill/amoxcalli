@@ -54,6 +54,11 @@ This file replaces scattered planning across dated reports. **Each iteration shi
 - Candidate sources, by licence: Molina 1571 (public domain; check the licence of whichever transcription is used), Wiktionary (CC BY-SA), GDN/UNAM (ask for permission). Ingest with per-entry provenance and keep the "extracción automática" label.
 - **Measure:** token root-link coverage, from 41.8% now toward about 65%.
 
+### 4a · Retrieval with evidence, no LLM (done 15 October 2026)
+- `#preguntar` and `GET /api/ask`: one word or short question → analysis, dictionary entries, classical passages sharing the root, other varieties via a loose spelling key, and Spanish → root candidates from the inverted IBM-1 hints. Abstains without evidence. The empty Dictionary search now routes Spanish words here instead of the analyzer.
+- **Measured** on `evaluation/evidence-questions-v1.json` (32 held-out queries): entry top-1 92% vs 42% for exact search; at least one relevant passage 100% vs 76%; modern spellings 0% → 100%. Guide: [EVIDENCIA.md](EVIDENCIA.md).
+- Partly covers iteration 1 for retrieval only (the analyzer's own key is unchanged).
+
 ### 4 · Grounded explanation agent (the LLM's product role)
 - The LLM *explains*; it does not translate from memory. It is a tool-using agent over `analyze_word`, `concordance`, `dictionary`, `gloss_hints` and `archive_search`. Every claim cites passage or entry IDs, and the existing citation validator rejects anything that doesn't. It abstains when the evidence is missing.
 - Off by default. Model is swappable: a hosted model (e.g., Claude via API) or a local one (the LoRA lab).

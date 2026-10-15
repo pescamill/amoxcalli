@@ -19,6 +19,7 @@ from .model_status import status as model_status, DEFAULT_ADAPTER
 from .pictography import public_catalog
 from .documentary_retrieval import DocumentaryIndex, PublicSources, digest as documentary_digest, public_path
 from .stems import WordStudy
+from .evidence import Evidence
 
 WEB = Path(__file__).with_name('platform_web')
 INSTALL_HEAD = '<meta name="theme-color" content="#812d37"><meta name="apple-mobile-web-app-capable" content="yes">\n<link rel="manifest" href="/manifest.webmanifest"><link rel="apple-touch-icon" href="/icon-192.png"><link rel="stylesheet" href="/install.css"><script src="/install.js" defer></script>\n'
@@ -69,6 +70,7 @@ def make_handler(store, model_enabled=None, adapter=None, word_study=None):
     archive=Archive()
     # Análisis morfológico, concordancia por raíz y pistas de glosa (sin modelo).
     word_study=word_study or WordStudy(records_fn=store.public_records)
+    evidence_index=Evidence(word_study)
     learning=Learning(archive)
     training_data=TrainingData()
     pair_proposals=PairProposals(store,training_data)
@@ -96,6 +98,8 @@ def make_handler(store, model_enabled=None, adapter=None, word_study=None):
                     '/learning.js':('learning.js','text/javascript; charset=utf-8'),
                     '/morphology.js':('morphology.js','text/javascript; charset=utf-8'),
                     '/morphology.css':('morphology.css','text/css; charset=utf-8'),
+                    '/evidence.js':('evidence.js','text/javascript; charset=utf-8'),
+                    '/evidence.css':('evidence.css','text/css; charset=utf-8'),
                     '/documentary.js':('documentary.js','text/javascript; charset=utf-8'),
                     '/pictography.js':('pictography.js','text/javascript; charset=utf-8'),
                     '/pictography.css':('pictography.css','text/css; charset=utf-8'),
@@ -144,6 +148,9 @@ def make_handler(store, model_enabled=None, adapter=None, word_study=None):
                 if path=='/api/word':
                     q=parse_qs(parsed.query);exclude=q.get('exclude',[''])[0] or None
                     try:return self.reply(word_study.word(q.get('w',[''])[0],exclude))
+                    except ValueError as error:raise Problem(str(error)) from None
+                if path=='/api/ask':
+                    try:return self.reply(evidence_index.ask(parse_qs(parsed.query).get('q',[''])[0]))
                     except ValueError as error:raise Problem(str(error)) from None
                 if path=='/api/gloss':
                     q=parse_qs(parsed.query);rid=q.get('id',[''])[0]
