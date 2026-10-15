@@ -239,12 +239,17 @@ def make_handler(store, model_enabled=None, adapter=None, word_study=None):
     return Handler
 
 
+class PlatformServer(ThreadingHTTPServer):
+    # La página pide ~20 recursos a la vez; macOS descarta conexiones por encima de la cola (5 por omisión).
+    request_queue_size=64
+
+
 def make_server(store,host='127.0.0.1',port=8766,public_origin=None,model_enabled=None,adapter=None,prewarm=False):
     word_study=WordStudy(records_fn=store.public_records)
     if prewarm:
         # El primer arranque estima frecuencias y pistas (~1 min); después se usa data/derived/.
         threading.Thread(target=word_study.warm,daemon=True,name='word-study-warmup').start()
-    httpd=ThreadingHTTPServer((host,port),make_handler(store,model_enabled,adapter,word_study))
+    httpd=PlatformServer((host,port),make_handler(store,model_enabled,adapter,word_study))
     actual=httpd.server_address[1]
     httpd.public_origin=None
     httpd.allowed_hosts={f'localhost:{actual}',f'127.0.0.1:{actual}',f'{host}:{actual}'}
