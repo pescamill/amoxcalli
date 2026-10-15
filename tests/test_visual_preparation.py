@@ -82,7 +82,11 @@ class VisualPreparationTests(unittest.TestCase):
             return original_import(name, *args, **kwargs)
         with patch('builtins.__import__', side_effect=guarded):
             result = visual.preflight()
-        self.assertEqual(result['packages']['transformers']['version'], metadata.version('transformers'))
+        try:
+            expected = metadata.version('transformers')
+        except metadata.PackageNotFoundError:
+            expected = None
+        self.assertEqual(result['packages']['transformers']['version'], expected)
         self.assertFalse(result['inference_verified'])
         self.assertNotIn(str(ROOT), json.dumps(result))
 

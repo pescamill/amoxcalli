@@ -16,7 +16,7 @@ class LessonBuilderTests(unittest.TestCase):
     def setUp(self):
         self.tmp=tempfile.TemporaryDirectory(dir=ROOT/'editorial',prefix='lesson-test-')
         self.root=Path(self.tmp.name);self.output=self.root/'proposal.json'
-        self.base=ROOT/'reports/learning-before-expansion-2026-09-30/learning-v1.json'
+        self.base=ROOT/'tests/fixtures/learning/before-expansion-2026-09-30.json'
         self.config=ROOT/'configs/learning-expansion-2026-09-30.json'
 
     def tearDown(self):self.tmp.cleanup()
@@ -39,7 +39,7 @@ class LessonBuilderTests(unittest.TestCase):
                 ex=e['exercise'];self.assertEqual(ex['options'][ex['answer']],ex['blank'])
 
     def test_second_expansion_keeps_all_six_existing_lessons_intact(self):
-        base=ROOT/'reports/learning-before-lecturas-003-2026-10-07/learning-v1.json'
+        base=ROOT/'tests/fixtures/learning/before-lecturas-003-2026-10-07.json'
         config=ROOT/'configs/learning-expansion-2026-10-07.json'
         sentinel=self.root/'private-sentinel.sqlite3';sentinel.write_bytes(b'Synthetic private state; never opened by builder')
         before=sentinel.read_bytes()
@@ -71,13 +71,13 @@ class LessonBuilderTests(unittest.TestCase):
         self.assertEqual(json.loads(before)['lessons'][1]['practice_version'],1)
 
     def test_context_recipe_adds_source_backed_questions_without_replacing_old_keys(self):
-        base=ROOT/'reports/learning-before-reading-context-2026-10-07/learning-v1.json'
+        base=ROOT/'tests/fixtures/learning/before-reading-context-2026-10-07.json'
         config=ROOT/'configs/reading-context-2026-10-07.json'
         result=build(config,self.output,base)
         self.assertEqual(result['added_examples'],0)
         self.assertEqual(result['clarified_lessons'],['aves'])
         data=json.loads(self.output.read_text())['learning']
-        self.assertEqual(data,json.loads((ROOT/'reports/learning-before-lecturas-003-2026-10-07/learning-v1.json').read_text()))
+        self.assertEqual(data,json.loads((ROOT/'tests/fixtures/learning/before-lecturas-003-2026-10-07.json').read_text()))
         recipes=json.loads(config.read_text())
         recipes['lesson_updates'][0]['example_updates'][0]['exercise']={}
         altered=self.root/'altered.json';altered.write_bytes(encoded(recipes))

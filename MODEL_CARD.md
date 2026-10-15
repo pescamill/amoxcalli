@@ -4,7 +4,7 @@ Distribución Git: se conservan los adaptadores `best` e informes históricos; l
 
 Actualizado: 12 de octubre de 2026. **No es un traductor validado.** Los resultados de entrenamiento descritos siguen correspondiendo a los pesos existentes.
 
-La ruta con imágenes está en preparación: Qwen3-VL-4B-Instruct no se ha descargado, ejecutado ni entrenado en esta iteración. Laboratorio permite inspeccionar 51 consultas documentales visuales de desarrollo, con referencias separadas de la entrada propuesta. Son consultas de catálogo, no una prueba de reconocimiento de píxeles. El preflight local detecta Transformers 4.51.3 sin `qwen3_vl`; no verifica inferencia ni consumo de memoria. La [primera prueba local propuesta](docs/PRUEBA_VISUAL_LOCAL.md) usa un entorno independiente y una imagen técnica propia; requiere ampliar la fase autorizada.
+La ruta con imágenes está en preparación: Qwen3-VL-4B-Instruct no se ha descargado, ejecutado ni entrenado en esta iteración. Laboratorio permite inspeccionar 51 consultas documentales visuales de desarrollo, con referencias separadas de la entrada propuesta. Son consultas de catálogo, no una prueba de reconocimiento de píxeles. El preflight local detecta Transformers 4.51.3 sin `qwen3_vl`; no verifica inferencia ni consumo de memoria. La primera prueba local con imágenes está descrita en [docs/ROADMAP.md](docs/ROADMAP.md); sigue sin autorizar.
 
 ## Modelo y entrenamiento
 
@@ -19,9 +19,29 @@ Qwen3-0.6B, revisión `c1899de289a04d12100db370d81485cdf75e47ca`, adaptado media
 
 Los pesos del piloto se entrenaron sobre Axolotl/UNAM vía Comunidad Elotl, con registros `Classical Nahuatl` / `nci`: 5.627 pares tras filtrado/deduplicación; 2.248 entrenamiento, 2.066 validación, 1.313 prueba, separados por obra. De entrenamiento, 489 pares excedían la longitud y se omitían. El manifest histórico se conserva en `reports/corpus-preparation-legacy.json`. No se verificó manualmente cada alineación ni la independencia entre antologías.
 
-La preparación actual en `data/prepared` contiene 5.462 pares (2.161/2.049/1.252), con normalización `nah-ortho-1`, proporción máxima de palabras 2,5 y estadísticas del tokenizador local. Estos datos no han producido nuevos pesos. Las métricas antiguas describen otra preparación y muestra; requieren una evaluación nueva para compararse. Las propuestas de variantes de [la auditoría](docs/AUDITORIA_VARIANTES.md) todavía no forman parte de este conjunto.
+La preparación actual en `data/prepared` contiene 5.462 pares (2.161/2.049/1.252), con normalización `nah-ortho-1`, proporción máxima de palabras 2,5 y estadísticas del tokenizador local. Estos datos no han producido nuevos pesos. Las métricas antiguas describen otra preparación y muestra; requieren una evaluación nueva para compararse. Las propuestas de variantes (`corpus/variant-proposals-v1.json`) todavía no forman parte de este conjunto.
 
-La reducción de NLL no mide fidelidad semántica. La comparación exploratoria de generación, sus límites y los comandos de reproducción están en `reports/RESULTADOS.md`. Los juicios gramaticales humanos siguen pendientes. Español es la única entrada implementada; inglés es una fase posterior.
+La reducción de NLL no mide fidelidad semántica.
+
+### Comparación exploratoria de generación (19 de septiembre de 2026)
+
+Mismas 20 frases de prueba (semilla 2026), inferencia CPU greedy, máximo 96 tokens. RAG añade dos pasajes del conjunto de entrenamiento; el adaptador no se entrenó con ese formato. Red bloqueada durante cada evaluación.
+
+| Condición | chrF++ (20) | chrF++ sin alertas de solapamiento (18) | Salidas al límite de 96 tokens |
+|---|---:|---:|---:|
+| Base sin adaptar | 15.36 | 14.65 | 0/20 |
+| Adaptador, 400 pasos | 16.03 | 15.55 | 2/20 |
+| Adaptador + contexto RAG | 22.44 | 17.97 | 6/20 |
+| Devolver directamente el pasaje más cercano | — | 27.20 | No aplica |
+
+chrF++ mide similitud textual, no porcentaje de traducciones correctas. La recuperación directa obtiene más similitud que el generador: no debe presentarse el ajuste como un traductor. Sin intervalos de confianza. Resúmenes en `reports/benchmark-*.json`; para regenerarlos (requiere `requirements.txt` y la base descargada):
+
+```bash
+python3 -m nahuatl_local.benchmark --output reports/benchmark-base-full.json
+python3 -m nahuatl_local.benchmark --adapter outputs/classical-v2/best --output reports/benchmark-adapter-full.json
+python3 -m nahuatl_local.benchmark --adapter outputs/classical-v2/best --rag --output reports/benchmark-adapter-rag-full.json
+```
+ Los juicios gramaticales humanos siguen pendientes. Español es la única entrada implementada; inglés es una fase posterior.
 
 ## Uso previsto y límites
 
@@ -37,7 +57,7 @@ Base Qwen Apache-2.0; código/documentación originales MIT; distribución Elotl
 
 ## Continuación automática
 
-La nueva ejecución y su configuración están en `outputs/automatic/MODEL_CARD.md` y `outputs/automatic/SUMMARY.md`. Las métricas anteriores describen el piloto de 400 pasos; no son las métricas de la continuación. El flujo de entrenamiento está en `docs/AUTOTRAIN.md`.
+La nueva ejecución y su configuración están en `outputs/automatic/MODEL_CARD.md` y `outputs/automatic/SUMMARY.md`. Las métricas anteriores describen el piloto de 400 pasos; no son las métricas de la continuación. El orquestador por etapas (`autotrain`) se retiró el 15 de octubre de 2026 (ver [docs/ROADMAP.md](docs/ROADMAP.md)); `python3 -m nahuatl_local.train` sigue disponible para una corrida nueva.
 
 
 ## Laboratorio en Amoxcalli

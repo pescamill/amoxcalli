@@ -37,11 +37,11 @@ Con un perfil de **Aportar** en la misma sesión puedes guardar un par español/
 Las propuestas se guardan privadas en SQLite. Puedes ver y retirar las tuyas. No se publican ni modifican los conjuntos de entrenamiento automáticamente. Se bloquean duplicados y obras reservadas. Una persona responsable debe revisar traducción y permisos; la aceptación sigue en terminal, con motivo y revisor:
 
 ```bash
-.venv/bin/python -m nahuatl_local.training_data review ID_DE_PROPUESTA \
+python3 -m nahuatl_local.training_data review ID_DE_PROPUESTA \
   --reviewer 'Nombre del responsable' --reason 'Cotejo y permisos documentados' \
   --rights-checked --linguistic-checked
-.venv/bin/python -m nahuatl_local.training_data export --output data/pares-revisados-nuevos.csv
-.venv/bin/python -m nahuatl_local.curate data/pares-revisados-nuevos.csv \
+python3 -m nahuatl_local.training_data export --output data/pares-revisados-nuevos.csv
+python3 -m nahuatl_local.curate data/pares-revisados-nuevos.csv \
   --base data/prepared --output data/curated-nuevo
 ```
 
@@ -58,9 +58,9 @@ Los hashes actuales difieren de aquella corrida: esas métricas no evalúan la p
 No hubo nuevo entrenamiento con estos cambios. Para mejorar el LLM hace falta revisar ejemplos y comparar recuperación, base y adaptador sobre la misma validación actual antes de otra corrida. La ampliación del diccionario conserva `rights.training=false` y no alimenta los pesos.
 
 
-## Comparación documental vigente · ciclo 007
+## Comparación documental vigente
 
-**Modelo y progreso** empieza con tres métodos sobre la batería documental v1: recuperación local medida; Qwen3-0.6B + LoRA sin ejecutar sobre estos casos; y Qwen3-VL-4B-Instruct como candidato sin descarga ni ejecución. El candidato procede de `TRABAJO_AUTONOMO.md`; su ficha no prueba competencia en náhuatl. Solo la recuperación tiene resultados y costes medidos. Tiempo, memoria, puntuación y coste monetario de los modelos figuran **Sin medir**, con `null` en JSON; tampoco se inventa un coste monetario para recuperación.
+**Modelo y progreso** empieza con tres métodos sobre la batería documental v1: recuperación local medida; Qwen3-0.6B + LoRA sin ejecutar sobre estos casos; y Qwen3-VL-4B-Instruct como candidato sin descarga ni ejecución. El candidato figura en [ROADMAP.md](ROADMAP.md); su ficha no prueba competencia en náhuatl. Solo la recuperación tiene resultados y costes medidos. Tiempo, memoria, puntuación y coste monetario de los modelos figuran **Sin medir**, con `null` en JSON; tampoco se inventa un coste monetario para recuperación.
 
 La recuperación conserva **119/123 completas**, **121/123 con resultados**, **121/121 respuestas con citas válidas**, **840/860 campos requeridos exactos**, **2 parciales y 2 abstenciones**. Una parcial puede citar campos válidos y seguir sin cubrir toda su referencia. Los cuatro fallos de desarrollo se enlazan a Consultar fichas para reproducir la pregunta. Es una evaluación de consultas parametrizadas a registros conocidos, no de comprensión general, traducción, reconocimiento de imágenes ni utilidad para personas.
 
@@ -68,34 +68,24 @@ Hay 123 consultas textuales y 51 observaciones documentales visuales de desarrol
 
 `tracemalloc` registra memoria Python trazada durante construcción y consultas, con las fuentes ya cargadas antes de comenzar. No incluye esas fuentes previas, memoria nativa ni RSS del proceso. `perf_counter` registra construcción, acumulado/media/máximo de consultas y total; el trazado puede alterar los tiempos y cada corrida depende del equipo. Refrescar la medición tras cambios de hashes conserva algoritmo y batería, pero genera costes nuevos. No constituye una corrida de modelo.
 
-`reports/documentary-laboratory-v1.json` incorpora hash literal y fingerprint estructurado de batería, hashes públicos actuales, métricas y coste copiados del informe de recuperación validado, estados/razones de cada método, fallos y condiciones. `documentary_laboratory.validate_report` reproduce la recuperación y exige contrato completo idéntico al derivado del informe actual; un hash de cualquier archivo o tres booleanos no completan el hito. Rechaza cifras inventadas, rutas privadas, métodos ausentes, permisos elevados, informes obsoletos y evidencia de presentación ajena o incompleta.
-
-La evidencia `reports/documentary-laboratory-display-v1.json` se escribe **solo tras terminar satisfactoriamente la suite DOM/HTTP**, en una base sintética pública. Vincula la proyección pública y hashes de implementación, tests y guías a comprobaciones de tres métodos, denominadores, fallos, costes ausentes, permisos, historia separada, pestañas, exportación y conservación de progreso. No certifica revisión lingüística ni navegador real. No incluye hash de su propio archivo ni del informe Lab: esos ciclos se evitan al usar la proyección sin evidencia. El informe Lab referencia el hash del archivo de evidencia. Una comprobación de navegador real, cuando exista, se registra aparte.
+`reports/documentary-laboratory-v1.json` incorpora hash literal y fingerprint estructurado de batería, hashes públicos actuales, métricas y coste copiados del informe de recuperación validado, estados/razones de cada método, fallos y condiciones. `documentary_laboratory.validate_report` reproduce la recuperación y exige contrato completo idéntico al derivado del informe actual; un hash de cualquier archivo o tres booleanos no completan el hito. Rechaza cifras inventadas, rutas privadas, métodos ausentes, permisos elevados e informes obsoletos.
 
 ```sh
-# Tras un cambio pertinente, primero revalidar o refrescar recuperación.
-.venv/bin/python -m nahuatl_local.documentary_retrieval_evaluation --check
-# Preparación de pantalla; todavía no acredita presentación.
-.venv/bin/python -m nahuatl_local.documentary_laboratory --prepare-display
-.venv/bin/python scripts/test-platform-ui.py --documentary-display
-# Fijar y comprobar el informe con evidencia de presentación actual.
-.venv/bin/python -m nahuatl_local.documentary_laboratory
-.venv/bin/python -m nahuatl_local.documentary_laboratory --check
+make check     # informes medidos vigentes, sin escribir
+make reports   # tras cambiar ranking, datos, batería o evaluador: medir una vez y derivar el Lab
 ```
 
-`GET /api/laboratory` añade la comparación pública sin cargar pesos. Las rutas cerradas `/api/laboratory/reports/documentary-comparison` y `/api/laboratory/reports/documentary-retrieval` descargan proyecciones con agregados, costes, hashes y fallos observados; **excluyen referencias esperadas, claves y consultas de reserva**. El informe completo permanece como artefacto auditable local. No hay una ruta de descarga de la batería en el laboratorio. Si cambia una fuente, la comparación se marca no disponible hasta revalidarse; una presentación pendiente no completa la tarea.
+`GET /api/laboratory` añade la comparación pública sin cargar pesos. Las rutas cerradas `/api/laboratory/reports/documentary-comparison` y `/api/laboratory/reports/documentary-retrieval` descargan proyecciones con agregados, costes, hashes y fallos observados; **excluyen referencias esperadas, claves y consultas de reserva**. El informe completo permanece como artefacto auditable local. No hay una ruta de descarga de la batería en el laboratorio. Si cambia una entrada medida, la comparación se marca no disponible hasta medir de nuevo.
 
 El alcance de esta batería conserva `training:false`, `evaluation:false`, `image_model_input:false`, `image_copy:false` y `external_send:false`; la autorización local de campos públicos no crea una licencia nueva ni modifica las condiciones originales de cada fuente. Derechos de imágenes, revisión de sentido y pruebas con personas siguen pendientes. No se entrenó, descargó pesos, evaluó imágenes, contactó a nadie ni publicó externamente.
 
-## Vigencia de resultados y presentación · ciclo 014
+## Vigencia: qué invalida un resultado
 
-Los `input_hashes` del informe de recuperación contienen las dependencias de sus respuestas/citas y evaluación. Los `input_hashes` del informe Lab añaden únicamente su proyección y la validación de batería. La evidencia de pantalla añade **`presentation_hashes`** con la lista explícita `DISPLAY_SOURCES` (UI, API y QA), separada de los resultados medidos. Una pantalla modificada conserva los resultados disponibles y marca la presentación pendiente: se vuelve a ejecutar DOM/HTTP y se actualiza su evidencia/hash, sin generar tiempos nuevos de recuperación. El diagnóstico conserva hashes de UI y guías de proceso. Cambiar solo estas guías tampoco invalida medición ni pantalla.
+Los `input_hashes` del informe de recuperación cubren solo las dependencias de sus respuestas, citas y evaluación (`documentary_retrieval_evaluation.IMPLEMENTATION` y `documentary_evaluation.FIXED`); el informe Lab añade la validación de la batería. **La presentación no tiene hashes**: un cambio de `platform.py`, `platform_web/*` o de las pruebas DOM se comprueba con `make test-ui` y no exige regenerar ningún informe. Ante cambios en ranking, datos, fuentes, batería o evaluador, `make reports` mide una vez y deriva el Lab; la validación reproduce el resultado real, de modo que no admite respuestas inventadas.
 
-Ante un cambio solo de UI, usar `documentary_retrieval_evaluation --check`, `scripts/test-platform-ui.py --documentary-display` y después `documentary_laboratory`/`--check` para fijar la evidencia. No ejecutar una medición nueva. Ante cambios en ranking, datos, fuentes, batería/receta o evaluador, medir una vez con respaldo y comparar resultados antes de actualizar Lab. La verificación reproduce el resultado real en ambos casos; esta separación no admite respuestas inventadas.
+## Preparación del candidato con imágenes
 
-## Preparación del candidato con imágenes · ciclo 016
-
-En `#modelos/progreso`, el visor muestra estado `not_run` de `Qwen/Qwen3-VL-4B-Instruct` y preflight local. `.venv/bin/python -m nahuatl_local.visual_preparation` lee versiones de paquetes y el registro literal de configuraciones mediante AST, sin importar librerías del modelo ni abrir pesos. Una arquitectura declarada en el registro no prueba carga, inferencia, soporte de hardware ni que quepa en memoria. No se actualizan dependencias automáticamente.
+En `#modelos/progreso`, el visor muestra estado `not_run` de `Qwen/Qwen3-VL-4B-Instruct` y preflight local. `python3 -m nahuatl_local.visual_preparation` lee versiones de paquetes y el registro literal de configuraciones mediante AST, sin importar librerías del modelo ni abrir pesos. Una arquitectura declarada en el registro no prueba carga, inferencia, soporte de hardware ni que quepa en memoria. No se actualizan dependencias automáticamente.
 
 `GET /api/laboratory` incluye únicamente estado/conteos de esta preparación. **`GET /api/laboratory/visual-preparation`** es un visor explícito para inspección humana de las consultas **visuales documentales de desarrollo**, validado por `load_development(modality='visual')` y reconstrucción. No acepta parámetros de split/ruta ni ejecución POST. Las referencias quedan fuera de las proyecciones públicas de comparación/medición y del estado general descargable. No se expone ninguna referencia de reserva.
 

@@ -1,1 +1,0 @@
-{"state": "unchanged", "counts": {"elements": 152, "elements_without_registered_links": 143, "registered_links": 9, "public_forms": 578, "matched_form_pairs": 17, "excluded_existing_sense_pairs": 9, "candidates": 8, "candidate_elements": 8, "candidate_senses": 8}, "links_applied": 0, "network_requests": 0, "model_calls": 0}

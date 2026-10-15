@@ -178,7 +178,7 @@ Las consultas con texto se ordenan con BM25 en español y náhuatl; los filtros 
 
 La política CSP de Amoxcalli permite imágenes de `https://aztecglyphs.wired-humanities.org` para los cuatro enlaces aprobados. El servidor de Voces por separado mantiene imágenes locales. Scripts, conexiones y otros orígenes de imágenes conservan sus restricciones. Se comprobó la carga real de agua, casa, flor y árbol florido en el navegador, además del encabezado HTTP.
 
-Las propuestas de clasificación del archivo se revisan mediante [AUDITORIA_VARIANTES.md](AUDITORIA_VARIANTES.md); la ampliación de las acepciones y el trabajo necesario para una plataforma editorial compartida se describe en [LEXICO_GOBERNANZA.md](LEXICO_GOBERNANZA.md).
+Las propuestas de clasificación del archivo están en `corpus/variant-proposals-v1.json`, pendientes de decisión; la ampliación de las acepciones y el trabajo necesario para una plataforma editorial compartida se describe en [LEXICO_GOBERNANZA.md](LEXICO_GOBERNANZA.md).
 
 
 ## Lectura guiada y diccionario visual · 29 de septiembre de 2026
@@ -212,7 +212,7 @@ La página 1 conserva las 24 palabras representativas solicitadas, con referenci
 El [pipeline](EDITORIAL_PIPELINE.md) coteja fuentes cacheadas y publica lotes aditivos con respaldo y prueba de preservación. `corpus/editorial-releases.json` registra archivos versionados y sus hashes; las instalaciones nuevas y existentes los cargan sin sustituir ediciones locales. El lote batch-007-v9 añade 50 entradas, 50 formas y 39 referencias contextuales. La app tiene 1.317 entidades. No cambian los permisos de entrenamiento, los pesos ni las lecciones originales.
 
 
-La ampliación [lecturas-002](../reports/LECTURAS_002_2026-09-30.md) conserva las doce selecciones y claves previas, añade tres recorridos y aclara enlaces temáticos. `practice_version` distingue la edición de ejercicios de las aclaraciones de contenido; cielo/lugares conservan su práctica. El contador de ejemplos es dinámico. [Guía de recetas y publicación](LECTURAS_PIPELINE.md).
+La ampliación lecturas-002 conserva las doce selecciones y claves previas, añade tres recorridos y aclara enlaces temáticos. `practice_version` distingue la edición de ejercicios de las aclaraciones de contenido; cielo/lugares conservan su práctica. El contador de ejemplos es dinámico. [Guía de recetas y publicación](LECTURAS_PIPELINE.md).
 
 ## Diccionario pictográfico · Amoxcalli
 

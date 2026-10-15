@@ -1,9 +1,12 @@
 import json,sys,tempfile,unittest
 from pathlib import Path
 from unittest.mock import patch
-import torch
-from transformers import Qwen3Config,Qwen3ForCausalLM
-from safetensors.torch import load_file
+try:
+    import torch
+    from transformers import Qwen3Config,Qwen3ForCausalLM
+    from safetensors.torch import load_file
+except ImportError:  # Extra del laboratorio LLM: requirements.txt.
+    raise unittest.SkipTest('torch/transformers no instalados')
 from nahuatl_local import train
 class Tokenizer:
     eos_token_id=2
