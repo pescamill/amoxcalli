@@ -1,0 +1,27 @@
+name: Dificultad al usar la aplicación
+description: Explicar dónde se interrumpe un recorrido.
+title: "[Uso] "
+body:
+  - type: textarea
+    id: task
+    attributes:
+      label: Qué querías conseguir
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Qué hiciste y en qué pantalla
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Qué ocurrió y qué esperabas
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Navegador, teléfono o computadora
+      description: "No incluyas datos personales; las capturas deben ocultarlos."

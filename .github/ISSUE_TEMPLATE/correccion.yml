@@ -1,0 +1,35 @@
+name: Corrección de una lectura o conexión
+description: Documentar una duda con su contexto y evidencia.
+title: "[Contenido] "
+body:
+  - type: markdown
+    attributes:
+      value: "Conserva el original y evita datos privados o grabaciones sin permiso. Una duda es útil aunque no conozcas la respuesta."
+  - type: input
+    id: reference
+    attributes:
+      label: ID y versión de la lectura, pasaje o ficha
+    validations:
+      required: true
+  - type: textarea
+    id: observation
+    attributes:
+      label: Qué observas y por qué puede confundir
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Fuente, edición y página o folio
+      description: "Indica también variante y contexto cuando corresponda; si no hay evidencia aún, escríbelo."
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Corrección propuesta, alternativas o pregunta pendiente
+  - type: textarea
+    id: scope
+    attributes:
+      label: Alcance, revisión y permisos
+      description: "Qué puede afirmarse, qué falta comprobar y qué uso autorizas del material propio."
