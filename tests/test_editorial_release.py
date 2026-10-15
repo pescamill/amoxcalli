@@ -16,7 +16,7 @@ from nahuatl_local.editorial_release import publish, run, snapshot, verify
 class EditorialReleaseTests(unittest.TestCase):
     def setUp(self):
         self.batch=ROOT/'reports/editorial-pipeline/batch-007'
-        pages=json.loads((self.batch/'sources.json').read_text())['pages']
+        self.pages=pages=json.loads((self.batch/'sources.json').read_text())['pages']
         if not all((ROOT/'data/dictionary-cache'/f"molina2-{page['prefix']}-500.html").is_file() for page in pages):
             # Páginas GDN/Molina cacheadas localmente; no se distribuyen con el repositorio.
             self.skipTest('Falta la caché local data/dictionary-cache/ del lote 007.')
@@ -56,7 +56,7 @@ class EditorialReleaseTests(unittest.TestCase):
         with self.assertRaises(ValueError):verify(self.batch,ROOT/'corpus/source-check.json')
 
     def test_changed_cache_is_deferred_and_never_accepted_as_exact(self):
-        for page in pages:
+        for page in self.pages:
             dest=self.root/'data/dictionary-cache'/f"molina2-{page['prefix']}-500.html"
             dest.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(ROOT/'data/dictionary-cache'/dest.name,dest)
         for dest in (self.root/'data/dictionary-cache').iterdir():dest.write_bytes(dest.read_bytes()+b'changed')
