@@ -46,9 +46,11 @@ class DocumentaryDependencyTests(unittest.TestCase):
         self.assertTrue(validate_report(self.retrieval, root=self.root)['valid'])
 
     def test_ranker_store_corpus_source_config_battery_and_evaluator_remain_measured_inputs(self):
-        for relative in ('nahuatl_local/documentary_retrieval.py', 'nahuatl_local/corpus.py',
-                         'corpus/seed.json', 'configs/sources.json',
-                         'nahuatl_local/community_web/catalog.json', 'configs/documentary-evaluation-v1.json',
+        # Records come from the canonical lexicon catalog, so its builder and readers are measured,
+        # not the server's store (a fresh store equals the catalog: tests/test_lexicon.py).
+        for relative in ('nahuatl_local/documentary_retrieval.py', 'nahuatl_local/lexicon.py',
+                         'nahuatl_local/passages.py', 'nahuatl_local/text.py', 'corpus/lexicon-catalog.json',
+                         'corpus/seed.json', 'configs/sources.json', 'configs/documentary-evaluation-v1.json',
                          'nahuatl_local/documentary_retrieval_evaluation.py', 'nahuatl_local/documentary_evaluation.py'):
             with self.subTest(relative=relative):
                 path = self.root / relative

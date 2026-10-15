@@ -14,7 +14,7 @@ la validación se descarta y se muestra la extractiva, con el motivo.
 """
 import re
 
-from .evidence import loose_key
+from .text import loose_key, squash
 
 EXPLAIN_VERSION = 'explain-cited-v1'
 CLAUDE_MODEL = 'claude-opus-5-5'
@@ -24,7 +24,7 @@ MAX_SENTENCES = 6
 
 
 def _clip(text, limit=160):
-    text = re.sub(r'\s+', ' ', text or '').strip()
+    text = squash(text or '')
     return text if len(text) <= limit else text[:limit].rsplit(' ', 1)[0] + '…'
 
 
@@ -55,10 +55,6 @@ def sentences_of(text):
     return out
 
 
-def _norm(text):
-    return re.sub(r'\s+', ' ', (text or '').casefold())
-
-
 def validate(text, items, query_word=''):
     """Cada frase con ≥1 cita; IDs dentro de la evidencia; formas «…» presentes en lo citado."""
     errors, out = [], []
@@ -76,9 +72,9 @@ def validate(text, items, query_word=''):
         if unknown:
             errors.append('cita_fuera_de_evidencia: ' + ', '.join(unknown))
             continue
-        support = _norm(' '.join(items[i]['text'] for i in ids) + ' ' + query_word)
+        support = squash((' '.join(items[i]['text'] for i in ids) + ' ' + query_word).casefold())
         for q in QUOTE.findall(s):
-            if _norm(q) not in support:
+            if squash(q.casefold()) not in support:
                 errors.append(f'cita_textual_no_respaldada: «{q}»')
         out.append(dict(text=re.sub(r'\s+([.,;:])', r'\1', CITE.sub('', s)).strip(), citations=ids))
     return dict(valid=not errors, errors=errors, sentences=out)

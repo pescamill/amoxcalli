@@ -1477,8 +1477,8 @@
       "evaluable_entries": 101,
       "results": {
         "cooccurrence": {
-          "precision_at_1": 0.238,
-          "hit_at_3": 0.347
+          "precision_at_1": 0.248,
+          "hit_at_3": 0.366
         },
         "dice": {
           "precision_at_1": 0.228,
@@ -1491,27 +1491,29 @@
       },
       "examples": [
         {
-          "stem": "xoči",
-          "entry": "xochitl",
-          "molina": "flor",
+          "stem": "eka",
+          "entry": "eecatl",
+          "molina": "viento",
           "ibm1": [
-            "flor"
+            "viento",
+            "senor",
+            "dia"
           ],
           "dice": [
-            "flor",
-            "canto",
-            "tabaco"
+            "viento",
+            "burla",
+            "signo"
           ],
           "cooccurrence": [
-            "flor",
-            "canto",
+            "senor",
+            "viento",
             "tierra"
           ]
         },
         {
           "stem": "qawi",
           "entry": "cuahuitl",
-          "molina": "árbol",
+          "molina": "madera",
           "ibm1": [
             "arbol",
             "piedra",
@@ -1529,23 +1531,42 @@
           ]
         },
         {
-          "stem": "xočiqawi",
-          "entry": "xochicuahuitl",
-          "molina": "árbol florido",
+          "stem": "meʦ",
+          "entry": "metztli",
+          "molina": "mes",
           "ibm1": [
-            "arbol",
-            "pajaro",
-            "anda"
+            "mes",
+            "dia",
+            "luna"
           ],
           "dice": [
-            "variado",
-            "cascabel",
-            "atabal"
+            "mes",
+            "dia",
+            "mill"
           ],
           "cooccurrence": [
-            "arbol",
-            "pajaro",
-            "estan"
+            "dia",
+            "mes",
+            "ano"
+          ]
+        },
+        {
+          "stem": "kakawaxoči",
+          "entry": "Cacahuaxochitl",
+          "molina": "flor llamada cacahuaxochitl",
+          "ibm1": [
+            "flor",
+            "cacao"
+          ],
+          "dice": [
+            "cacao",
+            "flor",
+            "alla"
+          ],
+          "cooccurrence": [
+            "flor",
+            "cacao",
+            "alla"
           ]
         },
         {
@@ -1567,132 +1588,22 @@
           ]
         },
         {
-          "stem": "tonatiw",
-          "entry": "tonatiuh",
-          "molina": "sol",
+          "stem": "siλal",
+          "entry": "citlalin",
+          "molina": "estrella",
           "ibm1": [
-            "sol",
-            "hacia"
+            "estrella",
+            "humeo"
           ],
           "dice": [
-            "sol",
-            "hacia",
-            "oriente"
+            "estrella",
+            "humeo",
+            "perecido"
           ],
           "cooccurrence": [
-            "sol",
-            "hacia",
-            "casa"
-          ]
-        },
-        {
-          "stem": "meʦ",
-          "entry": "metztli",
-          "molina": "luna",
-          "ibm1": [
-            "mes",
-            "dia",
-            "luna"
-          ],
-          "dice": [
-            "mes",
-            "dia",
-            "mill"
-          ],
-          "cooccurrence": [
-            "dia",
-            "mes",
-            "ano"
-          ]
-        },
-        {
-          "stem": "itta",
-          "entry": "itta",
-          "molina": "ver",
-          "ibm1": [
-            "vio",
-            "ver",
-            "vieron"
-          ],
-          "dice": [
-            "vio",
-            "ver",
-            "vieron"
-          ],
-          "cooccurrence": [
-            "ver",
-            "bien",
-            "solo"
-          ]
-        },
-        {
-          "stem": "toč",
-          "entry": "tochtli",
-          "molina": "conejo",
-          "ibm1": [
+            "estrella",
             "ano",
-            "conejo"
-          ],
-          "dice": [
-            "sucedio",
-            "conejo",
-            "ano"
-          ],
-          "cooccurrence": [
-            "ano",
-            "sucedio",
-            "mexica"
-          ]
-        },
-        {
-          "stem": "masa",
-          "entry": "mazatl",
-          "molina": "venado",
-          "ibm1": [
-            "venado",
-            "conejo"
-          ],
-          "dice": [
-            "venado",
-            "conejo",
-            "ciervo"
-          ],
-          "cooccurrence": [
-            "venado",
-            "conejo",
-            "flecha"
-          ]
-        },
-        {
-          "stem": "toto",
-          "entry": "tototl",
-          "molina": "ave",
-          "ibm1": [
-            "ave",
-            "nuestra",
-            "pajaro"
-          ],
-          "dice": [
-            "ponemo",
-            "ave",
-            "firma"
-          ],
-          "cooccurrence": [
-            "nuestro",
-            "nombre",
-            "ave"
-          ]
-        },
-        {
-          "stem": "mič",
-          "entry": "michin",
-          "molina": "pez",
-          "ibm1": [],
-          "dice": [],
-          "cooccurrence": [
-            "pudo",
-            "sabe",
-            "nadie"
+            "alla"
           ]
         },
         {
@@ -1716,65 +1627,154 @@
           ]
         },
         {
-          "stem": "λal",
-          "entry": "tlalli",
-          "molina": "tierra",
+          "stem": "qika",
+          "entry": "Cuicatl",
+          "molina": "canto / canción",
           "ibm1": [
-            "tierra"
+            "canto",
+            "cantor"
           ],
           "dice": [
-            "tierra",
-            "casa",
-            "qual"
+            "canto",
+            "flor",
+            "bello"
           ],
           "cooccurrence": [
-            "tierra",
-            "casa",
+            "canto",
+            "flor",
             "nuestro"
           ]
         },
         {
-          "stem": "eka",
-          "entry": "ehecatl",
-          "molina": "viento",
-          "ibm1": [
-            "viento",
-            "senor",
-            "dia"
-          ],
+          "stem": "ekapiʦak",
+          "entry": "Ecapitzactli",
+          "molina": "ayre sotil y delgado.",
+          "ibm1": [],
           "dice": [
-            "viento",
-            "burla",
-            "signo"
+            "muger",
+            "dicha",
+            "tre"
           ],
           "cooccurrence": [
-            "senor",
-            "viento",
-            "tierra"
+            "casa",
+            "muger",
+            "tre"
           ]
         },
         {
-          "stem": "siλal",
-          "entry": "citlalin",
-          "molina": "estrella",
+          "stem": "ekatikpak",
+          "entry": "Ecaticpac",
+          "molina": "encima del ayre.",
           "ibm1": [
-            "estrella",
-            "humeo"
+            "air",
+            "pec"
           ],
           "dice": [
-            "estrella",
-            "humeo",
-            "perecido"
+            "air",
+            "pec",
+            "ave"
           ],
           "cooccurrence": [
-            "estrella",
-            "ano",
-            "alla"
+            "agua",
+            "tierra",
+            "ave"
+          ]
+        },
+        {
+          "stem": "ekaxok",
+          "entry": "Ecaxoctli",
+          "molina": "ayre sotil y delgado.",
+          "ibm1": [
+            "cuatro",
+            "jef",
+            "tzompahua"
+          ],
+          "dice": [
+            "tzompahua",
+            "tecuanipantlaca",
+            "jef"
+          ],
+          "cooccurrence": [
+            "cuatro",
+            "jef",
+            "tecuanipantlaca"
+          ]
+        },
+        {
+          "stem": "ekatika",
+          "entry": "Eecatica",
+          "molina": "con ayre.",
+          "ibm1": [],
+          "dice": [],
+          "cooccurrence": [
+            "sementera",
+            "color",
+            "pobre"
+          ]
+        },
+        {
+          "stem": "exkan",
+          "entry": "Eexcan",
+          "molina": "é[n] cada tres partes, o atada tres raciones.",
+          "ibm1": [
+            "part",
+            "tre",
+            "tlatoloyan"
+          ],
+          "dice": [
+            "tlatoloyan",
+            "secundario",
+            "tripartito"
+          ],
+          "cooccurrence": [
+            "tre",
+            "tierra",
+            "casa"
+          ]
+        },
+        {
+          "stem": "expa",
+          "entry": "Eexpa",
+          "molina": "cada tres vezes.",
+          "ibm1": [
+            "tercera",
+            "vez",
+            "primera"
+          ],
+          "dice": [
+            "tercera",
+            "huvo",
+            "hora"
+          ],
+          "cooccurrence": [
+            "vez",
+            "tercera",
+            "gente"
+          ]
+        },
+        {
+          "stem": "ika",
+          "entry": "Ica",
+          "molina": "en algun tiempo, o alguna vez.",
+          "ibm1": [
+            "pie",
+            "estan",
+            "casa"
+          ],
+          "dice": [
+            "tierra",
+            "casa",
+            "senor"
+          ],
+          "cooccurrence": [
+            "tierra",
+            "casa",
+            "senor"
           ]
         }
       ],
       "definition": "Acierto si una palabra propuesta (normalizada) aparece en la definición de Molina de esa entrada. Molina es independiente del corpus paralelo; la coincidencia ortográfica del s. XVI es aproximada."
     }
   },
-  "seconds": 52.9
+  "seconds": 19.8
 }

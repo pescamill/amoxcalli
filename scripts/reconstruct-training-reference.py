@@ -4,51 +4,50 @@ Solo lee el corpus, el tokenizador y el checkpoint local con weights_only=True.
 No prepara el corpus actual, no modifica pesos y no ejecuta entrenamiento.
 """
 import argparse
-import csv
 import hashlib
 import json
 from pathlib import Path
 import random
 import re
 import sys
-import unicodedata
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
+from nahuatl_local.passages import AXOLOTL, passage_id, records  # noqa: E402
+from nahuatl_local.text import squash, strip_marks  # noqa: E402
+
 
 def legacy_canonical(value):
-    value = ''.join(c for c in unicodedata.normalize('NFD', value.lower())
-                    if unicodedata.category(c) != 'Mn')
-    return ' '.join(re.sub(r'[^\w\s]', ' ', value).split())
+    """Clave histórica de deduplicación de la corrida reconstruida (anterior a nah-ortho-1)."""
+    return squash(re.sub(r'[^\w\s]', ' ', strip_marks(value.lower())))
 
 
 def reconstruct():
     rows, seen_es, seen_nah = [], set(), set()
-    with (ROOT / 'corpus/axolotl/axolotl.csv').open(encoding='utf-8', newline='') as file:
-        for line, fields in enumerate(csv.reader(file), 1):
-            if len(fields) < 5:
-                continue
-            es, nah, variant, doc, iso = fields[:5]
-            if (variant, iso) != ('Classical Nahuatl', 'nci'):
-                continue
-            es, nah = es.strip(), nah.strip()
-            if not es or not nah or not doc.strip() or '\ufffd' in es + nah:
-                continue
-            if not 2 <= len(es.split()) <= 100 or not 2 <= len(nah.split()) <= 100:
-                continue
-            e, n = legacy_canonical(es), legacy_canonical(nah)
-            if e == n or e in seen_es or n in seen_nah:
-                continue
-            seen_es.add(e)
-            seen_nah.add(n)
-            rows.append(dict(id=f'axolotl-{line:05d}', es=es, nah=nah,
-                variant=variant, iso='nci', document=doc,
-                group='Chimalpahin: las ocho relaciones' if 'Libro las ocho relaciones' in doc else doc,
-                locator=f'axolotl.csv, fila {line} (sin página de edición disponible)',
-                source_url='https://www.axolotl-corpus.mx/',
-                declared_license='MPL-2.0 (repositorio distribuidor)',
-                linguistic_review='upstream_alignment_not_independently_reviewed'))
+    for line, fields in records(ROOT / AXOLOTL):
+        if len(fields) < 5:
+            continue
+        es, nah, variant, doc, iso = fields[:5]
+        if (variant, iso) != ('Classical Nahuatl', 'nci'):
+            continue
+        es, nah = es.strip(), nah.strip()
+        if not es or not nah or not doc.strip() or '\ufffd' in es + nah:
+            continue
+        if not 2 <= len(es.split()) <= 100 or not 2 <= len(nah.split()) <= 100:
+            continue
+        e, n = legacy_canonical(es), legacy_canonical(nah)
+        if e == n or e in seen_es or n in seen_nah:
+            continue
+        seen_es.add(e)
+        seen_nah.add(n)
+        rows.append(dict(id=passage_id(line), es=es, nah=nah,
+            variant=variant, iso='nci', document=doc,
+            group='Chimalpahin: las ocho relaciones' if 'Libro las ocho relaciones' in doc else doc,
+            locator=f'axolotl.csv, fila {line} (sin página de edición disponible)',
+            source_url='https://www.axolotl-corpus.mx/',
+            declared_license='MPL-2.0 (repositorio distribuidor)',
+            linguistic_review='upstream_alignment_not_independently_reviewed'))
     groups = sorted({r['group'] for r in rows})
     random.Random(42).shuffle(groups)
     n = max(1, round(len(groups) * .15))
@@ -90,7 +89,7 @@ def main():
         usable_ids=[r['id'] for r in usable])
     manifest = dict(schema_version=1, method='legacy-preparation-reconstruction-hash-verified',
         dataset_sha256=expected,
-        raw_sha256=hashlib.sha256((ROOT / 'corpus/axolotl/axolotl.csv').read_bytes()).hexdigest(),
+        raw_sha256=hashlib.sha256((ROOT / AXOLOTL).read_bytes()).hexdigest(),
         adapter='outputs/continued-unseen/run/best', seen_pairs=cursor, usable_pairs=len(usable),
         prepared_train=len(buckets['train']),
         checkpoint_sha256=hashlib.sha256(checkpoint.read_bytes()).hexdigest(),

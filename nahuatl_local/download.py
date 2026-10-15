@@ -1,6 +1,7 @@
 """Único módulo que descarga recursos. No se importa al entrenar ni inferir."""
 import argparse, certifi, hashlib, json, ssl, urllib.request
 from pathlib import Path
+from .passages import AXOLOTL
 ROOT=Path(__file__).resolve().parents[1]
 SSL_CONTEXT=ssl.create_default_context(cafile=certifi.where())
 def fetch(url,path):
@@ -21,7 +22,7 @@ def main():
     config=json.loads((ROOT/'configs/sources.json').read_text());records=[]
     if a.only in ['corpus','all']:
         s=config['corpus'];base=f"https://raw.githubusercontent.com/{s['repository']}/{s['revision']}/"
-        records.append(fetch(base+s['path'],ROOT/'data/raw/axolotl.csv'))
+        records.append(fetch(base+s['path'],ROOT/'data/raw'/Path(AXOLOTL).name))
         records.append(fetch(base+'LICENSE',ROOT/'data/raw/UPSTREAM-LICENSE'))
     if a.only in ['model','all']:
         s=config['model'];base=f"https://huggingface.co/{s['repository']}/resolve/{s['revision']}/"

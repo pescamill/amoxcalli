@@ -16,7 +16,7 @@ Sin raíz con apoyo suficiente, una palabra española muestra pasajes cuya tradu
 
 ## Clave laxa
 
-`evidence.loose_key` parte de la clave fonémica del analizador y además une `kw`/`cu`/`qu`, `ts`/`tz`, quita `j` (saltillo moderno), reduce consonantes dobles (`ll`, `tt`, `nn`) y trata `-uh` final como `-u`. Así *kuali*, *cualli* y *qualli*, *tlajtoli* y *tlahtolli*, o *kali* y *calli* llegan a los mismos pasajes. Se usa solo para recuperar; la clave evaluada del analizador no cambia.
+`text.loose_key` (la tercera clave del módulo único de normalización, ver [ARCHITECTURE](ARCHITECTURE.md)) parte de la clave fonémica del analizador y además une `kw`/`cu`/`qu`, `ts`/`tz`, quita `j` (saltillo moderno), reduce consonantes dobles (`ll`, `tt`, `nn`) y trata `-uh` final como `-u`. Así *kuali*, *cualli* y *qualli*, *tlajtoli* y *tlahtolli*, o *kali* y *calli* llegan a los mismos pasajes. Se usa solo para recuperar; la clave evaluada del analizador no cambia.
 
 ## Medición
 

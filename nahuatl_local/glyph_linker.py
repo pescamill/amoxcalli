@@ -9,17 +9,18 @@ import copy
 import hashlib
 import json
 from pathlib import Path
-import re
 import tempfile
 import time
 
 from .community import ROOT
-from .corpus import CorpusStore, normalize
+from .corpus import CorpusStore
+from .text import fold, tokens as text_tokens
 from .research import Archive
 
 
 def tokens(value):
-    return set(re.findall(r"[^\W\d_]+", normalize(value)))
+    """Conjunto de palabras plegadas (solo letras); ver ``text.tokens``."""
+    return set(text_tokens(value, letters_only=True))
 
 
 def build_bundle(records, rules, passages):
@@ -33,7 +34,7 @@ def build_bundle(records, rules, passages):
             forms[r['sense_id']].append(r)
         elif r['kind'] == 'glyph' and r.get('image'):
             linked.add(r['sense_id'])
-    anchors = [(records[a['glyph_id']], set(map(normalize, a['spanish_terms'])))
+    anchors = [(records[a['glyph_id']], set(map(fold, a['spanish_terms'])))
                for a in rules['anchors']]
     # Índice de tokens exactos, una sola pasada. No BM25, embeddings ni generación.
     examples = defaultdict(list)
@@ -42,7 +43,7 @@ def build_bundle(records, rules, passages):
             continue
         nah, es = tokens(row['nah']), tokens(row['es'])
         candidates = [(g, next(iter(sorted(terms & es)))) for g, terms in anchors
-                      if terms & es and normalize(g['reading']) in nah]
+                      if terms & es and fold(g['reading']) in nah]
         if candidates:
             for word in nah:
                 examples[word].append((row, candidates))
@@ -72,7 +73,7 @@ def build_bundle(records, rules, passages):
         # variedad donde aparezcan literalmente la palabra y un referente conocido.
         if chosen is None:
             for f in fs:
-                keys = [normalize(f['written'])]
+                keys = [fold(f['written'])]
                 options = [entry for key in keys for entry in examples.get(key, [])]
                 if not options:
                     continue

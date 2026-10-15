@@ -1,5 +1,5 @@
 {
- "build_seconds": 3.1,
+ "build_seconds": 3.57,
  "explain_model": "extractive",
  "explanation": {
   "claude": "not_run: usar --explain claude con credenciales (tiene costo); no se ejecutó en esta medición",
@@ -817,7 +817,7 @@
    "relevant": 2,
    "split": "test",
    "system": "exact_search",
-   "top_entry": "cuahuitl"
+   "top_entry": "quauitl"
   },
   {
    "abstain_item": false,
@@ -1651,7 +1651,7 @@
    "relevant": 10,
    "split": "test",
    "system": "evidence",
-   "top_entry": "ehecatl"
+   "top_entry": "eecatl"
   },
   {
    "abstain_item": false,
@@ -1726,7 +1726,7 @@
    "relevant": 10,
    "split": "test",
    "system": "evidence",
-   "top_entry": "ihuan"
+   "top_entry": "iuan"
   },
   {
    "abstain_item": false,
@@ -1976,7 +1976,7 @@
    "relevant": 3,
    "split": "test",
    "system": "evidence",
-   "top_entry": "cuahuitl"
+   "top_entry": "quauitl"
   },
   {
    "abstain_item": false,
@@ -2112,8 +2112,8 @@
   }
  ],
  "mean_ms_per_query": {
-  "evidence": 26.18,
-  "exact_search": 110.38
+  "evidence": 27.82,
+  "exact_search": 110.29
  },
  "model_calls": 0,
  "questions": "evidence-questions-v1",

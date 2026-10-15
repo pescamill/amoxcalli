@@ -60,22 +60,22 @@ Muestra para revisión humana de precisión: `reports/morphology-review/stem-hit
 
 | Método | Precisión@1 | Acierto en top‑3 |
 |---|---:|---:|
-| cooccurrence | 24% | 35% |
+| cooccurrence | 25% | 37% |
 | dice | 23% | 36% |
 | ibm1 | 30% | 39% |
 
 Ejemplos (IBM‑1):
 
-- `xochitl` — Molina: «flor» → flor
-- `cuahuitl` — Molina: «árbol» → arbol, piedra, madera
-- `xochicuahuitl` — Molina: «árbol florido» → arbol, pajaro, anda
+- `eecatl` — Molina: «viento» → viento, senor, dia
+- `cuahuitl` — Molina: «madera» → arbol, piedra, madera
+- `metztli` — Molina: «mes» → mes, dia, luna
+- `Cacahuaxochitl` — Molina: «flor llamada cacahuaxochitl» → flor, cacao
 - `calli` — Molina: «casa» → casa
-- `tonatiuh` — Molina: «sol» → sol, hacia
-- `metztli` — Molina: «luna» → mes, dia, luna
-- `itta` — Molina: «ver» → vio, ver, vieron
-- `tochtli` — Molina: «conejo» → ano, conejo
-- `mazatl` — Molina: «venado» → venado, conejo
-- `tototl` — Molina: «ave» → ave, nuestra, pajaro
+- `citlalin` — Molina: «estrella» → estrella, humeo
+- `coatl` — Molina: «serpiente» → serpiente, comprar, barrio
+- `Cuicatl` — Molina: «canto / canción» → canto, cantor
+- `Ecapitzactli` — Molina: «ayre sotil y delgado.» → —
+- `Ecaticpac` — Molina: «encima del ayre.» → air, pec
 
 ## Límites
 
@@ -84,4 +84,4 @@ Ejemplos (IBM‑1):
 - Molina (1571) no es un diccionario completo ni moderno: una pista correcta puede no aparecer en su definición.
 - Ninguna cifra mide comprensión lectora ni calidad de traducción.
 
-Tiempo de ejecución: 52.9 s.
+Tiempo de ejecución: 19.8 s.

@@ -21,8 +21,9 @@ from pathlib import Path
 
 from .morphology import Analyzer, WORD, PARTICLES, key_of, corpus_words, ANALYZER_VERSION
 from .nahuatl_orthography import comparison
-from .stems import (ROOT, load_records, load_rows, load_default, StemConcordance, GlossHints, es_tokens, es_key,
-                    es_norm, ES_STOP)
+from . import passages
+from .stems import (ROOT, load_records, load_default, StemConcordance, GlossHints, es_tokens, ES_STOP)
+from .text import es_key, fold
 
 GOLD = ROOT / 'evaluation' / 'morphology-gold-v1.json'
 
@@ -153,7 +154,7 @@ def _molina_keys(label):
     """Claves de palabras españolas de una definición del s. XVI, con ortografía relajada."""
     out = set()
     for m in re.finditer(r'[^\W\d_]+', label):
-        n = es_norm(m.group(0))
+        n = fold(m.group(0))
         if len(n) < 3 or n in ES_STOP:
             continue
         out.add(_relax(es_key(m.group(0))))
@@ -225,7 +226,7 @@ def hint_eval(analyzer, rows, hints):
 # ---------------------------------------------------------------------------
 def run(split='all', write=True):
     t0 = time.time()
-    records, rows = load_records(), load_rows()
+    records, rows = load_records(), passages.load()
     full = load_default(True, ROOT, records, rows)
     rules_dict = Analyzer(records)                       # diccionario sin frecuencias del corpus
     rules_only = Analyzer({})                            # solo reglas

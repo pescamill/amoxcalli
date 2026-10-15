@@ -5,20 +5,17 @@ It returns evidence-bearing fields, never generates translations or readings.
 """
 from collections import defaultdict
 import copy
-import csv
 import hashlib
 import json
 import math
 from pathlib import Path
 import re
-import unicodedata
 from urllib.parse import urlparse
 
 from .community import ROOT
+from . import lexicon, passages
+from .text import fold, tokens
 
-BUNDLES = ('seed.json', 'glyph-links-v2.json', 'archive-source-v3.json',
-           'glyph-images-v4.json', 'glyph-lexicon-v5.json', 'glyph-source-images-v5.json',
-           'gdn-lexicon-v6.json', 'glyph-associations-v7.json', 'flor-lexicon-v8.json')
 CONFIG = dict(version='documentary-lookup-v1', limit=20, exact_label_score=100,
               exact_id_score=1000, token_min_overlap=2, maximum_query_characters=1000,
               matching='casefold / accent-insensitive whole tokens; originals unchanged',
@@ -29,15 +26,6 @@ STOPWORDS = set('a al ambos cada con conserva de del el en es escritura ficha fi
                 'lo los normalización original para por que qué registra registro se sin su sus todas traducción '
                 'un una y acompaña catalogada cita coinciden compara corresponde identifica náhuatl española '
                 'conservada declarado declarada variedad'.split())
-
-
-def normalized(value):
-    return ''.join(c for c in unicodedata.normalize('NFD', str(value).casefold())
-                   if unicodedata.category(c) != 'Mn')
-
-
-def tokens(value):
-    return re.findall(r'[\w]+', normalized(value))
 
 
 def canonical(value):
@@ -76,19 +64,7 @@ def safe_url(value):
 
 def public_records(records):
     """Defensive public closure; the live store remains the authority for withdrawals."""
-    rows = {rid: copy.deepcopy(r) for rid, r in records.items() if r.get('rights', {}).get('public') is True}
-    while True:
-        hidden = set()
-        for rid, r in rows.items():
-            deps = [r[k] for k in ('sense_id', 'primary_source_id') if r.get(k)] + r.get('sense_ids', [])
-            deps += [e[k] for e in r.get('evidence', []) for k in ('source_id', 'via_source_id') if e.get(k)]
-            association = r.get('association') or {}
-            deps += [association[k] for k in ('reference_form_id', 'reference_glyph_id') if association.get(k)]
-            if any(d not in rows for d in deps):
-                hidden.add(rid)
-        if not hidden:
-            return rows
-        rows = {rid: r for rid, r in rows.items() if rid not in hidden}
+    return copy.deepcopy(lexicon.public_closure(records))
 
 
 class PublicSources:
@@ -103,25 +79,12 @@ class PublicSources:
             raw = public_path(self.root, path).read_bytes()
             self.hashes[path] = hashlib.sha256(raw).hexdigest()
             return raw
-        paths = ['corpus/' + p for p in BUNDLES]
-        manifest = json.loads(read('corpus/editorial-releases.json'))
-        for release in manifest['releases']:
-            path = 'corpus/' + release['bundle']
-            if path != 'corpus/editorial-' + release['id'] + '.json':
-                raise ValueError('Publicación editorial inválida.')
-            raw = read(path)
-            if hashlib.sha256(raw).hexdigest() != release['sha256']:
-                raise ValueError('Publicación editorial obsoleta.')
-            paths.append(path)
-        for path in paths:
-            for row in json.loads(read(path)).get('records', []):
-                rid = row['id']
-                if 'kind' in row:
-                    self.rows[rid] = row
-                    self.origins[rid] = path
-                elif rid in self.rows:
-                    # Backfills affect live rows, but do not rewrite the original row.
-                    pass
+        read(lexicon.RELEASES)
+        paths = list(lexicon.BUNDLE_PATHS)
+        for release, _ in lexicon.releases(public_path(self.root, lexicon.RELEASES)):
+            paths.append('corpus/' + release['bundle'])
+        # Backfills affect live rows, but do not rewrite the original row.
+        self.rows, self.origins = lexicon.source_rows([(path, json.loads(read(path))) for path in paths])
         self.catalog = json.loads(read('corpus/pictography/catalog.json'))
         from .pictography import validate
         validate(self.catalog)
@@ -131,19 +94,17 @@ class PublicSources:
         self.archive_url = safe_url(f"https://github.com/{config['repository']}/blob/{config['revision']}/{config['path']}")
         self.archive = {}
         self.csv_rows = {}
-        raw = read('corpus/axolotl/axolotl.csv').decode('utf-8')
-        for line, row in enumerate(csv.reader(raw.splitlines(keepends=True)), 1):
-            if len(row) < 5 or not row[0].strip() or not row[1].strip():
-                continue
-            rid = f'axolotl-{line:05d}'
-            self.csv_rows[rid] = row
-            self.archive[rid] = dict(id=rid, es=row[0], nah=row[1], variant=row[2], document=row[3], iso=row[4],
-                                     locator=f'Axolotl, registro CSV {line}; folio primario pendiente',
-                                     source_url=self.archive_url, rights_note=config['rights_note'])
+        origin = dict(url=self.archive_url, rights_note=config['rights_note'])
+        for line, row in passages.parse(read(passages.AXOLOTL).decode('utf-8')):
+            item = passages.passage(line, row, origin)
+            if item is not None:
+                # Las citas usan los campos originales (``csv_rows``); ``archive`` es el modelo común.
+                self.csv_rows[item['id']] = row
+                self.archive[item['id']] = item
 
     def field(self, table, rid, key, value, url=''):
         if table == 'csv':
-            path, row = 'corpus/axolotl/axolotl.csv', self.csv_rows[rid]
+            path, row = passages.AXOLOTL, self.csv_rows[rid]
         elif table == 'records':
             path, row = self.origins.get(rid), self.rows.get(rid)
             if row is None or key not in row or row[key] != value:
@@ -164,7 +125,7 @@ class PublicSources:
             table, rid, key = field['table'], field['record_id'], field['field']
             if table == 'csv':
                 row = self.csv_rows[rid]
-                value = row[{'es': 0, 'nah': 1, 'variant': 2, 'document': 3, 'iso': 4}[key]]
+                value = passages.original(row)[key]
                 valid_urls = {self.archive_url}
             elif table == 'records':
                 row = self.rows[rid]
@@ -212,7 +173,8 @@ class DocumentaryIndex:
             self._add(rid, row['kind'], labels, searchable, fields, source_ids, urls,
                       dict(label=row.get('written') or row.get('label', rid), records=members))
         for rid, row in self.sources.archive.items():
-            fields = [self.sources.field('csv', rid, key, row[key], self.sources.archive_url)
+            original = passages.original(self.sources.csv_rows[rid])
+            fields = [self.sources.field('csv', rid, key, original[key], self.sources.archive_url)
                       for key in ('nah', 'es', 'document', 'iso', 'variant')]
             self._add(rid, 'passage', [], [row['nah'], row['es'], row['document']], fields,
                       ['src-axolotl'], [self.sources.archive_url], dict(label=row['document'], passage=row))
@@ -233,7 +195,7 @@ class DocumentaryIndex:
         key = kind + ':' + rid
         self.entries[key] = dict(id=rid, kind=kind, fields=fields, source_ids=source_ids,
                                  urls=sorted({u for u in map(safe_url, urls) if u}), **content)
-        self.identifiers[normalized(rid)] = key
+        self.identifiers[fold(rid)] = key
         for label in labels:
             phrase = tuple(tokens(label))
             if phrase:
@@ -244,7 +206,7 @@ class DocumentaryIndex:
     def search(self, query):
         if not isinstance(query, str) or len(query) > CONFIG['maximum_query_characters']:
             raise ValueError('Consulta con hasta 1000 caracteres.')
-        q = normalized(query.strip())
+        q = fold(query.strip())
         if not q:
             return self._response(query, [], 0)
         words = tokens(q)

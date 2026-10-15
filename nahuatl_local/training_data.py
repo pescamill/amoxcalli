@@ -6,7 +6,8 @@ import io
 import json
 from pathlib import Path
 from .community import ROOT, Problem, now, text, identifier
-from .corpus import normalize, safe_url
+from .corpus import safe_url
+from .text import fold
 from .data import load_rows, canonical, work_group
 
 LICENSES = ('CC0-1.0', 'CC-BY-4.0', 'CC-BY-SA-4.0', 'Public-Domain', 'MPL-2.0')
@@ -45,9 +46,9 @@ class TrainingData:
         try:offset,limit=int(offset),int(limit)
         except (ValueError,TypeError):raise Problem('Paginación inválida.')
         if offset<0 or not 1<=limit<=100:raise Problem('Paginación fuera de rango.')
-        d=self.datasets[dataset];terms=normalize(query).split()
+        d=self.datasets[dataset];terms=fold(query).split()
         rows=[r for r in d['rows'] if (not document or r['document']==document) and
-              all(t in normalize(r['es']+' '+r['nah']) for t in terms)]
+              all(t in fold(r['es']+' '+r['nah']) for t in terms)]
         return dict(dataset=dataset,note=d['note'],total=len(rows),offset=offset,limit=limit,results=rows[offset:offset+limit],
             datasets=[dict(id=k,label=v['label'],count=len(v['rows'])) for k,v in self.datasets.items()],
             documents=sorted({r['document'] for r in d['rows']}))

@@ -5,19 +5,15 @@ Comparte SQLite y perfiles con Voces. No necesita un modelo ni servicios externo
 import hashlib
 import json
 import re
-import unicodedata
 from pathlib import Path
 from urllib.parse import urlparse
 from .community import Store, Problem, ROOT, now, text, choice, identifier
+from . import lexicon
+from .lexicon import releases as editorial_releases  # noqa: F401 (nombre público; las pruebas lo sustituyen)
+from .text import fold
 
 KINDS = ('source', 'sense', 'form', 'text', 'glyph', 'note')
 PERIODS = ('historical', 'modern', 'unknown')
-
-
-def normalize(value):
-    # Índice auxiliar; jamás modifica la transcripción almacenada.
-    return ''.join(c for c in unicodedata.normalize('NFD', value.casefold())
-                   if unicodedata.category(c) != 'Mn')
 
 
 def safe_url(value):
@@ -32,28 +28,8 @@ def digest(record):
     return hashlib.sha256(json.dumps(record, ensure_ascii=False, sort_keys=True).encode()).hexdigest()
 
 
-def editorial_releases(manifest=None):
-    path=Path(manifest) if manifest is not None else ROOT/'corpus/editorial-releases.json'
-    if not path.exists():return []
-    data=json.loads(path.read_text())
-    if data.get('schema_version')!=1 or not isinstance(data.get('releases'),list):
-        raise ValueError('Registro de publicaciones editoriales inválido.')
-    seen=set();result=[]
-    for release in data['releases']:
-        rid=release.get('id','');filename=release.get('bundle','')
-        if not re.fullmatch(r'[a-z0-9][a-z0-9-]{1,79}',rid) or rid in seen or filename!=f'editorial-{rid}.json':
-            raise ValueError('Identificador o archivo de publicación inválido.')
-        raw=(path.parent/filename).read_bytes()
-        if hashlib.sha256(raw).hexdigest()!=release.get('sha256'):
-            raise ValueError('La publicación editorial cambió sin una versión nueva.')
-        text(release.get('reviewer',''),'Responsable',200,True)
-        text(release.get('reason',''),'Alcance de publicación',2000,True)
-        seen.add(rid);result.append((release,json.loads(raw)))
-    return result
-
-
 class CorpusStore(Store):
-    def __init__(self, path=None):
+    def __init__(self, path=None, root=None):
         super().__init__(path) if path is not None else super().__init__()
         with self.db() as db:
             db.executescript('''
@@ -74,37 +50,17 @@ class CorpusStore(Store):
               payload TEXT NOT NULL, reviewer TEXT NOT NULL, reason TEXT NOT NULL, created TEXT NOT NULL);
             CREATE TABLE IF NOT EXISTS corpus_meta(key TEXT PRIMARY KEY,value TEXT NOT NULL);
             ''')
-            seeded = db.execute("SELECT value FROM corpus_meta WHERE key='seed-v1'").fetchone()
-        if not seeded:
-            self.import_bundle(json.loads((ROOT / 'corpus/seed.json').read_text()), 'Migración inicial', 'Integración Scriptorium + Voces', seed=True)
-        self.import_bundle(json.loads((ROOT / 'corpus/glyph-links-v2.json').read_text()),
-                           'Actualización del catálogo', 'Vínculos glíficos consultados',
-                           migration_key='glyph-links-v2')
-        self.import_bundle(json.loads((ROOT / 'corpus/archive-source-v3.json').read_text()),
-                           'Integración del archivo', 'Fuente de los pasajes consultables', migration_key='archive-source-v3')
-        self.backfill_glyph_images()
-        self.import_bundle(json.loads((ROOT / 'corpus/glyph-lexicon-v5.json').read_text()),
-                           'Consulta editorial de catálogos', 'Lemas y asociaciones glíficas con fuentes ya registradas; sin cotejo primario',
-                           migration_key='glyph-lexicon-v5')
-        self.backfill_source_images()
-        auto_bundle=ROOT/'corpus/gdn-lexicon-v6.json'
-        if auto_bundle.is_file():
-            self.import_bundle(json.loads(auto_bundle.read_text(encoding='utf-8')),
-                               'Extracción automática de GDN', 'Paleografía y traducción de catálogo conservadas; revisión lingüística pendiente',
-                               migration_key='gdn-v6-'+hashlib.sha256(auto_bundle.read_bytes()).hexdigest()[:16])
-        glyph_bundle=ROOT/'corpus/glyph-associations-v7.json'
-        if glyph_bundle.is_file():
-            self.import_bundle(json.loads(glyph_bundle.read_text(encoding='utf-8')),
-                               'Script de referencias visuales', 'Enlaces documentales y contextuales explícitos; sin atribuir lectura completa',
-                               migration_key='glyph-v7-'+hashlib.sha256(glyph_bundle.read_bytes()).hexdigest()[:16])
-        flor_bundle=ROOT/'corpus/flor-lexicon-v8.json'
-        if flor_bundle.is_file():
-            self.import_bundle(json.loads(flor_bundle.read_text(encoding='utf-8')),
-                               'Consulta editorial de flor', 'Entradas léxicas seleccionadas y alcance nominal explícito; cotejo primario pendiente',
-                               migration_key='flor-v8-'+hashlib.sha256(flor_bundle.read_bytes()).hexdigest()[:16])
-        for release,bundle in editorial_releases():
-            self.import_bundle(bundle,release['reviewer'],release['reason'],
-                               migration_key='editorial-release-'+release['id']+'-'+release['sha256'][:16])
+        # Los paquetes y su orden viven en ``lexicon.STEPS``; los marcadores de migración
+        # ya registrados hacen que cada paso se aplique una sola vez por base.
+        release_list = editorial_releases() if root is None else editorial_releases(Path(root) / lexicon.RELEASES)
+        for step, bundle in lexicon.steps(root or ROOT, release_list):
+            if step.action == 'images':
+                self.backfill_glyph_images(bundle)
+            elif step.action == 'source_images':
+                self.backfill_source_images(bundle)
+            else:
+                self.import_bundle(bundle, step.reviewer, step.reason, seed=step.action == 'seed',
+                                   migration_key=None if step.action == 'seed' else step.marker)
 
     def records(self, db=None):
         if db is None:
@@ -297,9 +253,8 @@ class CorpusStore(Store):
                 db.execute('INSERT INTO corpus_meta VALUES(?,?)', (marker, now()))
         return len(records)
 
-    def backfill_glyph_images(self):
+    def backfill_glyph_images(self, bundle):
         # Añade solo image/image_credit a glifos ya presentes; no sustituye ediciones locales.
-        bundle = json.loads((ROOT / 'corpus/glyph-images-v4.json').read_text())
         with self.db() as db:
             db.execute('BEGIN IMMEDIATE')
             if db.execute("SELECT 1 FROM corpus_meta WHERE key='glyph-images-v4'").fetchone():
@@ -321,9 +276,8 @@ class CorpusStore(Store):
             db.execute("INSERT INTO corpus_meta VALUES('glyph-images-v4',?)", (now(),))
         return changed
 
-    def backfill_source_images(self):
+    def backfill_source_images(self, bundle):
         """Completa campos ausentes sin sustituir imágenes, textos o ediciones locales."""
-        bundle = json.loads((ROOT / 'corpus/glyph-source-images-v5.json').read_text())
         with self.db() as db:
             db.execute('BEGIN IMMEDIATE')
             if db.execute("SELECT 1 FROM corpus_meta WHERE key='glyph-source-images-v5'").fetchone():
@@ -349,16 +303,8 @@ class CorpusStore(Store):
         return changed
 
     def public_records(self):
-        with self.db() as db:
-            records = self.records(db)
-            visible = {k: r for k, r in records.items() if r['rights']['public']}
-            links = list(db.execute('SELECT owner,target FROM corpus_links'))
-            # Un dato dependiente de otro retirado/privado deja de publicarse también.
-            while True:
-                hidden = {r['owner'] for r in links if r['owner'] in visible and r['target'] not in visible}
-                if not hidden:
-                    return visible
-                visible = {k: r for k, r in visible.items() if k not in hidden}
+        # Un dato dependiente de otro retirado/privado deja de publicarse también.
+        return lexicon.public_closure(self.records())
 
     def catalog_data(self):
         rows = list(self.public_records().values())
@@ -376,7 +322,7 @@ class CorpusStore(Store):
         if period:
             choice(period, PERIODS, 'época')
         records = self.public_records()
-        terms = normalize(query).split()
+        terms = fold(query).split()
         out = []
         for r in records.values():
             if kind and r['kind'] != kind:
@@ -386,10 +332,10 @@ class CorpusStore(Store):
             if variant and r.get('variant') != variant:
                 continue
             related = records.get(r.get('sense_id'), {})
-            haystack = normalize(' '.join(str(r.get(k, '')) for k in ('label','definition','written','nah','es','description','aliases','variant','context','citation')) + ' ' + str(related.get('label', '')) + ' ' + str(related.get('aliases', '')))
+            haystack = fold(' '.join(str(r.get(k, '')) for k in ('label','definition','written','nah','es','description','aliases','variant','context','citation')) + ' ' + str(related.get('label', '')) + ' ' + str(related.get('aliases', '')))
             if all(t in haystack for t in terms):
                 out.append(r)
-        out.sort(key=lambda r: (0 if normalize(r['label']) == normalize(query) else 1, r['label']))
+        out.sort(key=lambda r: (0 if fold(r['label']) == fold(query) else 1, r['label']))
         return dict(results=out, total=len(out), query=query)
 
     def propose(self, person, body):

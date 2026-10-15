@@ -12,7 +12,7 @@ import re
 import tempfile
 
 from .community import ROOT
-from .corpus import normalize
+from .text import fold
 from .editorial_pipeline import encoded, public_catalog, sha
 from .learning import Learning
 from .research import Archive
@@ -30,7 +30,7 @@ def build(config,output,base=None,apply=False):
             current=Learning(archive,base)
             if len(current.catalog(records)['lessons'])!=len(data['lessons']):raise ValueError('Cambió una dependencia publicada.')
             return dict(state='already_published',output=str(output),**previous['summary'])
-    known={normalize(r['written']) for r in records.values() if r['kind']=='form'}
+    known={fold(r['written']) for r in records.values() if r['kind']=='form'}
     existing={l['id']:l for l in data['lessons']};used={e['archive_id'] for l in data['lessons'] for e in l['examples']}
     changes=[]
     for update in recipes.get('lesson_updates',[]):
@@ -58,9 +58,9 @@ def build(config,output,base=None,apply=False):
             rid=selection['archive_id']
             if rid in used:raise ValueError('El pasaje ya se utiliza en la selección: '+rid)
             row=archive.get(rid);cloze=selection['cloze'];blank=cloze['blank'];distractors=cloze['distractors']
-            if len(distractors)!=2 or normalize(blank) not in known or any(normalize(v) not in known for v in distractors):raise ValueError('La clave y sus distractores necesitan formas de diccionario conocidas.')
+            if len(distractors)!=2 or fold(blank) not in known or any(fold(v) not in known for v in distractors):raise ValueError('La clave y sus distractores necesitan formas de diccionario conocidas.')
             if not any(a['quote']==blank and a.get('relation')=='full_word' for a in selection['annotations']):raise ValueError('El hueco necesita una anotación de palabra completa.')
-            if len(set(map(normalize,[blank,*distractors])))!=3:raise ValueError('Las opciones necesitan tres formas distintas.')
+            if len(set(map(fold,[blank,*distractors])))!=3:raise ValueError('Las opciones necesitan tres formas distintas.')
             answer=index%3;options=list(distractors);options.insert(answer,blank)
             example=dict(archive_id=rid,source_hash=hashlib.sha256((row['nah']+'\0'+row['es']).encode()).hexdigest(),context=selection['context'],annotations=copy.deepcopy(selection['annotations']),exercise=dict(kind='cloze',question='Recupera la forma que aparece en el fragmento original.',options=options,answer=answer,explanation=f'El registro escribe «{blank}». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.',blank=blank))
             for key in ('comprehension','explore_words'):

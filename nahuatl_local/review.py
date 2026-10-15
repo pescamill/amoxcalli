@@ -1,9 +1,12 @@
 """Revisión determinista y ficha de evaluación humana, sin servicios externos."""
 import unicodedata
 
+from .text import squash
+
 
 def exact(text):
-    return ' '.join(unicodedata.normalize('NFC', text).lower().split())
+    """Igualdad exacta salvo mayúsculas y espacios (conserva acentos)."""
+    return squash(unicodedata.normalize('NFC', text).lower())
 
 
 def request_bundle(result):

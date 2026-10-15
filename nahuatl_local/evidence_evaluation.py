@@ -16,10 +16,11 @@ import re
 import time
 from collections import defaultdict
 
-from .evidence import EVIDENCE_VERSION, Evidence, loose_key
+from .evidence import EVIDENCE_VERSION, Evidence
 from .explain import EXPLAIN_VERSION, ClaudeWriter, explain
 from .morphology import WORD
-from .stems import ROOT, es_norm
+from .stems import ROOT
+from .text import fold, loose_key
 
 QUESTIONS = ROOT / 'evaluation' / 'evidence-questions-v1.json'
 SYSTEMS = ('exact_search', 'evidence')
@@ -38,16 +39,16 @@ class ExactSearch:
         e = self.e
         e._build()
         word, _ = e.parse(query)
-        low, norm = word.casefold(), es_norm(word)
+        low, norm = word.casefold(), fold(word)
         pattern = re.compile(r'(?<![^\W\d_])' + re.escape(norm) + r'(?![^\W\d_])')
         entries = [h for h in e.entries.values()
-                   if (h['written'] or '').casefold() == low or pattern.search(es_norm(h['label'] or ''))]
+                   if (h['written'] or '').casefold() == low or pattern.search(fold(h['label'] or ''))]
         entries.sort(key=lambda h: ((h['written'] or '').casefold() != low, h['automatic'], len(h['label'] or '')))
         passages = []
         for rid, r in e.rows.items():
             if len(passages) >= 6:
                 break
-            if low in {w.casefold() for w in WORD.findall(r['nah'])} or pattern.search(es_norm(r['es'])):
+            if low in {w.casefold() for w in WORD.findall(r['nah'])} or pattern.search(fold(r['es'])):
                 passages.append(dict(id=rid, nah=r['nah']))
         return dict(entries=[dict(written=h['written']) for h in entries[:5]], passages=passages, other_varieties=[],
                     abstained=not (entries or passages))

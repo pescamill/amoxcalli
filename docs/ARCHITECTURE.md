@@ -1,189 +1,74 @@
-# Amoxcalli: architecture and design decisions
+# Amoxcalli: data schema and data flow
 
-[Español: README](../README.md) · [Word analysis guide (ES)](MORFOLOGIA.md) · [Evaluation report (ES)](../reports/MORFOLOGIA_EVALUACION.md)
+[Español: README](../README.md) · [Word analysis (ES)](MORFOLOGIA.md) · [Ask with evidence (ES)](EVIDENCIA.md) · [Documentary evaluation (ES)](EVALUACION_DOCUMENTAL.md)
 
-Amoxcalli is a local, offline-first application for **learning to read Classical Nahuatl from sourced examples**. You read a passage, work out a word, look at other passages that use it, and go back to the source. Every answer it shows points to evidence: a dictionary entry, an archive passage, or a glyph record with a URL and a hash. If it has no evidence, it says so.
-
-This document explains the system for engineers. It covers what each layer does, why it is built that way, what has been measured and what is still weak.
-
-## 1. System overview
+Amoxcalli is a local app for learning to read Classical Nahuatl from sourced examples. Every answer points to a record that can be cited by file and hash. This page describes the one data paradigm all code follows: **three versioned sources, one reader each, one normalization module, and the same records for the server, the analyzer and the evaluations.**
 
 ```mermaid
 flowchart LR
-  subgraph Sources["Sources (pinned by revision + SHA-256)"]
-    AX["Axolotl parallel corpus<br/>16,111 es–nah pairs<br/>(5,993 Classical)"]
-    GDN["Molina 1571 via GDN/UNAM<br/>578 forms"]
-    TL["Tlachia / Aztec glyphs<br/>311 glyph occurrences"]
-    CO["Community contributions<br/>(Voces, SQLite)"]
-  end
-  subgraph Build["Deterministic pipelines (stdlib, no LLM)"]
-    ORT["Orthography<br/>nah-ortho-1"]
-    ED["Editorial batches<br/>cache → verify → assemble → publish"]
-    LB["Lesson builder<br/>recipes + hash checks"]
-  end
-  subgraph Services["Runtime services (one Python process)"]
-    BM["BM25 archive search"]
-    DOC["Documentary lookup<br/>citation validator"]
-    MORPH["Word study layer (new)<br/>analyzer · stem concordance · IBM-1 hints"]
-    LLM["Optional local LLM<br/>Qwen3-0.6B + LoRA"]
-  end
-  UI["PWA (vanilla JS)<br/>Aprender · Leer · Diccionario · Glifos · Laboratorio"]
-  AX --> ORT --> BM & DOC & MORPH
-  GDN --> ED --> DOC & MORPH
-  TL --> ED
-  CO --> ED
-  LB --> UI
-  BM & DOC & MORPH & LLM --> UI
+  CSV["corpus/axolotl/axolotl.csv<br/>16,111 es–nah records"] --> P["passages.py<br/>Passage model"]
+  B["corpus/*.json bundles<br/>(lexicon.STEPS + editorial releases)"] --> L["lexicon.py"]
+  L -- "build: fresh CorpusStore" --> C["corpus/lexicon-catalog.json<br/>542 entries · 1,317 records"]
+  L -- "same steps, same markers" --> DB[("SQLite (CorpusStore)<br/>catalog + local edits<br/>+ accepted Voces proposals")]
+  PIC["corpus/pictography/catalog.json"] --> PM["pictography.py"]
+  T["text.py<br/>fold · phonemic_key · loose_key"] -.-> P & L & AN
+  P --> AN["Analyzer · concordance · hints<br/>(morphology, stems)"]
+  C --> AN
+  DB --> S["Server (platform.py)"]
+  AN --> S
+  C --> E["Evaluations<br/>morphology · evidence · documentary"]
+  P --> E
+  B -- "cite file + row hash" --> DOC["documentary_retrieval"]
+  P & PM --> DOC
 ```
 
-| Layer | Main modules | Notes |
+## 1. Sources and their single readers
+
+| Source | Only reader | What everyone else gets |
 |---|---|---|
-| Content | `corpus/*.json`, `corpus/axolotl/axolotl.csv`, `corpus/pictography/catalog.json` | Versioned bundles. Each record keeps original spelling, source, locator, verification status and rights (public / training). |
-| Pipelines | `editorial_pipeline`, `editorial_release`, `lesson_builder`, `pictography_pipeline` | Scripts with no LLM. Batches are additive, backed up and hash-checked. Recipes are explicit, and a person makes the semantic decisions. |
-| Retrieval | `retrieval` (BM25), `documentary_retrieval` | Every documentary hit carries field-level citations. `citation_valid` re-derives each citation from the source file and its hash. |
-| Word study (new) | `morphology`, `stems`, `morphology_evaluation` | Morphological analysis, concordance by root, and gloss hints from the parallel corpus. See §3. |
-| Model lab | `train`, `autotrain`, `benchmark`, `runtime` | LoRA experiments on Qwen3-0.6B. Results are shown honestly, including where they lose to retrieval. |
-| App | `platform.py` (stdlib `http.server`), `platform_web/` | Runs on localhost by default. CSP is on, POST requests are origin-checked, and the app can be installed as a PWA. |
+| `corpus/axolotl/axolotl.csv` (no header; id = 1-based CSV record, `axolotl-00001`) | `passages.py` (`parse`/`records` for raw fields, `load` for passages) | The **passage model** below. Raw fields are kept only where they are cited or hashed (documentary citations, training-split preparation). |
+| Lexical bundles `corpus/seed.json` … `flor-lexicon-v8.json`, plus releases in `corpus/editorial-releases.json` | `lexicon.py` (`STEPS`, `releases`, `steps`) | The **canonical catalog** `corpus/lexicon-catalog.json`, generated by `python -m nahuatl_local.lexicon` from a fresh `CorpusStore` and checked against the bundle hashes on every load. |
+| `corpus/pictography/catalog.json` | `pictography.py` | Documents, pages, zones, elements, occurrences (unchanged by this paradigm). |
 
-**Design principles**
+Bundles are never edited: they are the evidence cited by file and hash. Corrections enter as a new bundle (a new `Step` or an editorial release) or as a reviewed Voces proposal.
 
-1. **Evidence first.** The UI never shows a claim without the record it came from. Saying nothing (abstaining) is a valid answer.
-2. **Deterministic before generative.** Wherever a script can do the job, a script does it: extraction, linking, lesson assembly, glossing. The LLM is optional and fenced off in the Laboratory.
-3. **Every output says how it was produced.** Analyses carry a `basis` (`dictionary`, `particle_table`, `corpus`, `rules`), and hints carry their supporting passages.
-4. **Reproducibility.** Inputs are pinned by hash. Derived artifacts store the fingerprint of their inputs and rebuild when that changes.
-5. **Evaluation hygiene.** Splits are made by work (document), not by sentence. Gold sets have dev and test splits, and the protocol records any change made after looking at test.
+## 2. Schemas
 
-## 2. The problem the new layer solves
+**Passage** (`passages.passage`): `id`, `line`, `nah`, `es` (both verbatim), `variant`, `iso` (`unknown` if missing), `variant_label`, `period` (`historical` for `nci`, `modern`, `unknown`), `document` (the work), `locator`, `source_url`, `rights_note`, `verification`.
 
-Nahuatl is **polysynthetic**: one word often carries subject, object, possessor, direction, tense and the root together. Before this layer, every lookup in the app matched **whole words**: BM25 tokens, documentary search and the reading view's "Comparar aquí". As a result:
+**Record** (unit stored, edited, cited and proposed): `kind` ∈ `sense` (Spanish definition, `pos`, `aliases`), `form` (`written` as in the source, `catalog_normalized`, `sense_id`, `period`, `variant`, `variation_kind`), `glyph` (`sense_id`, `reading`, `image`, `association`), `source`, `text`, `note`. Every record carries `rights` (`public` and `training`, declared separately), `verification` (`inherited` < `catalog_checked` < `reviewed`) and `evidence` (`source_id`, optional `via_source_id`, `locator`, `status`).
 
-- *nocal* (my house), *calco* (in the house) and *calli* (house) never met.
-- Colonial spelling splits the same word across many forms: *yhuan / ihuan / iuan*, *xihuitl / xiuitl*, *iquac / yquac / ihcuac*.
-- The dictionary is a 578-form sample of Molina. Exact matching covered **0.8 %** of the distinct word forms in the Classical corpus.
-- The lessons say it themselves: *NIQUITTA … el análisis de esta forma sigue pendiente* ("the analysis of this form is still pending").
+**Lexical entry** (`lexicon.entries`): forms whose phonemic key matches (*quauitl*/*cuahuitl*, *iuan*/*ihuan*) and the senses they belong to form one entry: `id`, `lemma`, `key`, `loose_key`, `senses`, `forms`, `glyphs` (complete records, unmodified), `spellings`, `sources`, `rights` (`training` only if every sense and form allows it), `review` (lowest status, automatic transcription, primary check).
 
-## 3. Word study layer (`morphology.py`, `stems.py`)
+**Public closure** (`lexicon.public_closure`): a record is public only if it and everything it depends on (sense, sources, association targets) is public. One implementation, used by the store, the catalog and the documentary evaluation.
 
-### 3.1 Phonemic key with alignment back to the source spelling
-`phonemic_key(word)` maps a word to an orthography-neutral phoneme string:
+## 3. Who reads what
 
-- *qu/c/k* → `k`
-- *cu/qu + vowel, uc* → `kw`
-- *hu/uh/u + vowel* → `w`
-- *z/ç/c+e,i* → `s`
-- *tz/ch/tl* each become one symbol
-- the saltillo *h* and doubled vowels are removed
-- the glide in *o(h)ua* is dropped
+| Consumer | Lexical records | Passages |
+|---|---|---|
+| Server (`platform.py`, `CorpusStore.public_records()`) | Catalog + this installation's local edits and accepted proposals | `research.Archive` → `passages.load` |
+| Analyzer, concordance, gloss hints, Ask (`stems`, `evidence`) | Server: the store; offline/CLI: `lexicon.load_records()` | `passages.load` |
+| `morphology_evaluation`, `evidence_evaluation`, `documentary_retrieval_evaluation` | `lexicon.load_records()` (no private database is opened) | `passages.load` |
+| `documentary_evaluation` / `documentary_retrieval` citations | `lexicon.source_rows`: the bundle row and file that a citation hashes | Raw CSV fields via `passages.original` |
 
-For each symbol it also keeps the **character span in the original word**. Segmentations are therefore always shown in the source's own spelling (`NI-QU-ITTA`), never in a normalized form.
+`tests/test_lexicon.py` asserts that a fresh store publishes exactly the catalog, so "what the server serves" and "what the evaluations measure" differ only by local data. `python -m nahuatl_local.lexicon --migrate DB` backs a local database up (`data/backups/voces-before-lexicon-catalog-v1.sqlite3`), applies pending steps (additive: an update never replaces a local edit), records the catalog it sits on and checks that every previous row survives; it reports edited, local-only and hidden IDs.
 
-### 3.2 Candidate generation (slot grammar)
-- **Nominal prefixes:** possessor.
-- **Verbal prefixes:** antecessive · subject · directional · object · reflexive.
-- **Suffixes:** absolutive, possessed, plural, relational/locative, nominal derivation, verbal derivation and tense.
+## 4. Normalization (`text.py`)
 
-Allomorphy constraints prune the candidates:
+| Function | Neutralizes | Used for |
+|---|---|---|
+| `fold` | case and diacritics | Spanish search, catalog labels; the browser's single `norm` in `platform_web/app.js` is its twin |
+| `phonemic_key` | colonial spelling (qu/c/k, hu/uh/u, z/ç/c, saltillo h, y/i, long vowels) with spans back to the source spelling | the analyzer; **frozen**: its output over the 76,698 archive word types is fingerprinted in `tests/test_text.py` |
+| `loose_key` | additionally modern spelling (k, kw, ts, w, j) and double consonants | retrieval in Ask only |
 
-- *-tl* after a vowel, *-tli* after a consonant, *-li* after *l*
-- *qui-* before a consonant, *c/qu-* next to vowels
-- *quim-/im-* only before *m, p*
-- subject and reflexive must agree (*ni-no-*, *ti-mo/to-*)
+Helpers: `strip_marks`, `squash`, `tokens`, `es_key`, `key_of`, `readable`. `tests/test_text.py` fails if any other module strips diacritics, defines another key or parses a CSV itself.
 
-### 3.3 Scoring: three signals plus parsimony
+**`nah-ortho-1` (`nahuatl_orthography.py`) stays frozen and separate.** It is not a lookup key: `storage` cleans text that is persisted and `comparison` is the dedup key of the training splits and the archive BM25. Its version and rule IDs are recorded in `data/prepared/manifest.json` and benchmark reports, so changing it would invalidate published splits and scores. It now reuses `text.strip_marks`. Open question for review: it maps `ç → tz`, while GDN and the analyzer read colonial `ç` as /s/ (`ç → s`); a revised convention should ship as `nah-ortho-2` with re-measured benchmarks, not as an edit.
 
-```
-score = dictionary_evidence(stem, POS-compatible)      # 6 if the stem is a dictionary root (less for 3-phoneme stems, none for shorter ones)
-      + 1.1 · log(1 + corpus_type_frequency(stem))     # learned by hard EM over 26k corpus types
-      + 0.5 · log-odds(noun vs verb usage of the stem)  # also learned by EM, from unambiguous markers
-      − Σ affix_cost(len(affix))                        # long affixes (mitz-, -tzin) are rarely accidental
-```
+## 5. Changing data safely
 
-- **Hard EM (Morfessor-style):** each word type first spreads one vote evenly over its candidate stems. On every later iteration it votes only for the stem of its current best analysis. The number of changed assignments goes 15,522 → 1,188 → 290, so it converges within three iterations.
-- **POS agreement:** a verbal analysis cannot lean on a noun entry, and vice versa. This removes spurious matches such as *quim-aca* backed by Molina's "Aca: alguno".
-- Each result also returns ranked alternatives and a softmax "relative preference" over them. The UI says plainly that this is a preference between candidates, not a calibrated probability.
+1. New lexical data → a new bundle or editorial release → `python -m nahuatl_local.lexicon` → `python -m nahuatl_local.lexicon --migrate data/community/voces.sqlite3`.
+2. Re-measure what reads it: `python -m nahuatl_local.morphology_evaluation`, `python -m nahuatl_local.evidence_evaluation`, `python -m nahuatl_local.documentary_retrieval_evaluation` (backs up its previous report), then `python -m nahuatl_local.documentary_laboratory`. A change to `documentary_evaluation.py` also requires `python -m nahuatl_local.documentary_evaluation` (rebuilds and validates the battery by reconstruction).
+3. Any change to `text.py` that alters `phonemic_key` must update the fingerprint in `tests/test_text.py` *after* re-measuring the analyzer.
 
-### 3.4 Concordance by root
-`StemConcordance` builds an inverted index from root to Classical passages. In the UI this becomes "the root *cal* appears in 579 passages, in 42 different forms", with examples you can click.
-
-### 3.5 Gloss hints (IBM Model 1)
-EM runs over the 5,453 aligned Classical pairs, with Nahuatl roots plus a NULL word as the source and Spanish content words as the target. Spanish words copied over untranslated (names, calendar signs) are excluded. Each hint keeps its translation probability, Dice score and supporting passage IDs. The UI shows a hint only when **≥ 3 passages** support it, and always marks it with "≈".
-
-### 3.6 Product surface
-- **Readings:** every word is clickable. The panel shows morpheme chips, the matching dictionary entry with a save button, hints, other passages with the same root, and alternative analyses. Editorial annotations keep priority, and cloze exercises are left untouched so answers aren't revealed.
-- **Interlinear gloss** toggle (Leipzig-style lines): source word · segmentation · tags · gloss, with the source of each gloss marked.
-- **Dictionary:** when a search finds nothing, the app suggests an analysis. For example, *nocalco* → *no-cal-co* → *calli · casa*.
-- **API:** `GET /api/word?w=…&exclude=<passage>`, `GET /api/gloss?id=<axolotl-id>|text=…`. Each response contains `model_calls: 0`.
-- **Cost:** about 0.2 ms per word once warm. The first start builds the derived files in about 45 s; later starts load them from `data/derived/` (which is gitignored) in about 7 s.
-
-## 4. Results (`python3 -m nahuatl_local.morphology_evaluation`)
-
-**Segmentation gold set:** 52 forms written by the team from textbook paradigms, split 25 dev / 27 test, and still awaiting specialist review.
-
-| System | Exact segmentation top-1 | dev / test | In top-3 |
-|---|---:|---:|---:|
-| Unsegmented baseline | 0 % | 0 / 0 | 0 % |
-| Rules only | 15 % | 8 / 22 | 62 % |
-| Rules + dictionary | 44 % | 48 / 41 | 75 % |
-| Rules + corpus EM | 73 % | 80 / 67 | 92 % |
-| **Full** | **77 %** | **84 / 70** | **92 %** |
-
-In the first test run the full system scored 63 % on test. After that run, two general bugs were fixed: POS agreement, and short nouns that are listed whole in the dictionary such as *atl*. The first-run report is kept in `reports/morphology-evaluation-first-test-run.json`. **Corpus statistics give the biggest gain.** With a 578-form dictionary, the unlabelled corpus does more than the lexicon.
-
-**Coverage of the Classical corpus** (135,288 tokens):
-
-| Measure | Value |
-|---|---|
-| Exact dictionary match | 20.3 % of tokens · 0.8 % of word types |
-| Root linked to a dictionary entry or a particle | 41.8 % of tokens · 3.9 % of word types |
-| At least one affix or link explained | 84.1 % of tokens |
-
-**Concordance:** for 117 dictionary roots, searching by root finds 6,391 passages against 3,493 for exact-word search. I spot-checked 60 of the newly found hits myself: 56–57 are the same lexeme. The errors are homographs, for example *neua* "I" vs *tenehua* "to name". The sample is in `reports/morphology-review/stem-hits-sample.csv`, for linguistic review.
-
-**Gloss hints compared with Molina's definitions** (101 entries; Molina was not used to build the hints):
-
-| Method | Precision@1 | Hit@3 |
-|---|---:|---:|
-| Raw co-occurrence | 24 % | 40 % |
-| Dice | 23 % | 36 % |
-| IBM-1 | 30 % | 39 % |
-
-These numbers are modest and expected. Molina's Spanish is from the 16th century and a 4–5 character match is a strict test. The point of the hints is a lead you can check against passages, not a definition.
-
-## 5. The LLM: what the evidence says, and where it should sit
-
-The lab fine-tuned **Qwen3-0.6B with LoRA** (r=8, q/v projections, 1.15M trainable parameters, about 650 pairs actually seen) for Spanish → Classical Nahuatl. On the same 20 held-out test sentences (chrF++):
-
-| System | chrF++ |
-|---|---:|
-| Base model, no adapter | 15.4 |
-| LoRA `classical-v2` | 16.0 |
-| LoRA `classical-v2` + retrieved passages in the prompt | 22.4 |
-| LoRA `continued-unseen` (the one the app uses) | 20.3 |
-| LoRA `automatic` run (repetition collapse, 53 % repeated trigrams) | 9.5 |
-| **Simply returning the top BM25 passage** | **27.2** |
-
-These are 20 sentences with no linguistic review (`reports/benchmark-*.json`), so the confidence intervals are wide. The ranking is still unambiguous.
-
-That table carries the main architectural conclusion: **with this much data, retrieval beats generation**, and a generator that can't be verified works against the project's goal. Changes I would make, in order:
-
-1. **Reverse the role.** Learners read Nahuatl. The useful direction is nah → es *explanation*, not es → nah *composition*.
-2. **Make the LLM a narrator over grounded tools, not an oracle.** Run it as a tool-calling agent with `analyze_word`, `concordance`, `dictionary` and `gloss_hints`. It must cite record IDs, and the existing `citation_valid` checks those citations and rejects any sentence without support. Abstaining stays allowed. The deterministic layer in §3 is exactly the toolset this needs.
-3. **Morphology-aware input.** Segmenting with the analyzer before tokenizing is a known win for polysynthetic, low-resource MT. The tokenizer audit in `data/prepared/manifest.json` already shows the cost: 0.39 tokens per character for Nahuatl.
-4. **Evaluate faithfulness, not just chrF.** Measure citation precision, abstention rate and human judgment on a reserved, reviewed set. Compare retrieval, base model and adapter on the same cases. That is item 6 in `docs/PROPOSITO.md`.
-
-## 6. Known limits and open questions
-
-- The affix and particle tables are compiled from reference grammars (Andrews 2003; Launey 1992). Reduplication, vowel length, irregular preterites and compounds of more than two roots are not modelled.
-- IBM-1 hints inherit corpus biases. In the annals, *tlatoa* (to speak; *tlahtoani* ruler) co-occurs with "murió" (died) because rulers' deaths are recorded so often. That is why every hint shows how many passages support it and the "≈" marker.
-- The analyzer conflates real homographs (*toa* in *tlatoa* vs *itoa*). The ranked alternatives make that visible instead of hiding it.
-- **Orthography question for review:** `nah-ortho-1` maps `ç → tz`. GDN's own normalization maps Molina's `ç → z` (for example *çan → zan*, *çacatl → zacatl*), which matches the common reading of colonial `ç` as /s/. The analyzer uses `ç → s`. It might be worth checking which convention the project wants.
-- Nothing here measures reading comprehension. That still needs learners and a facilitator (`docs/PILOTO_INSTITUCIONAL.md`).
-
-## 7. Running it
-
-```bash
-bash scripts/plataforma.sh                         # app on http://127.0.0.1:8766 (stdlib only)
-python3 -m nahuatl_local.morphology niquitta nocalco  # CLI analysis
-python3 -m nahuatl_local.morphology_evaluation     # regenerate the report
-python3 -m unittest tests.test_morphology          # 16 tests, ~2 s
-```
+Measured results live in `reports/` (`MORFOLOGIA_EVALUACION.md`, `EVIDENCIA_EVALUACION.md`, `documentary-retrieval-v1.json`); the before/after comparison of this paradigm change is in `reports/data-paradigm-comparison-2026-10-15.md`.

@@ -5,22 +5,22 @@ import copy
 import hashlib
 import json
 import math
-from pathlib import Path
-import tempfile
 from time import perf_counter
 import tracemalloc
 
 from .community import ROOT
-from .corpus import CorpusStore
+from . import lexicon
 from .documentary_evaluation import FIXED as EVALUATION_INPUTS, load_development
 from .documentary_retrieval import CONFIG, DocumentaryIndex, PublicSources, digest, public_path
 
 REPORT = 'reports/documentary-retrieval-v1.json'
 # Dependencies of measured responses/citations and their reference audit only.
 # Presentation/QA belongs to documentary_laboratory; process guides to iteration.
+# The measured records are the canonical lexicon catalog (identical to a fresh CorpusStore,
+# checked by tests), so the store and server code are no longer measured inputs.
 IMPLEMENTATION = ('nahuatl_local/documentary_retrieval.py', 'nahuatl_local/documentary_retrieval_evaluation.py',
-                  'nahuatl_local/corpus.py', 'nahuatl_local/community.py', 'nahuatl_local/pictography.py',
-                  'nahuatl_local/community_web/catalog.json', 'nahuatl_local/documentary_evaluation.py',
+                  'nahuatl_local/lexicon.py', 'nahuatl_local/passages.py', 'nahuatl_local/text.py',
+                  lexicon.CATALOG, 'nahuatl_local/pictography.py', 'nahuatl_local/documentary_evaluation.py',
                   'configs/documentary-evaluation-v1.json')
 
 
@@ -73,8 +73,7 @@ def measure(root=ROOT):
     hashes = manifest(sources)
     tracemalloc.start()
     build_start = perf_counter()
-    with tempfile.TemporaryDirectory(prefix='amoxcalli-documentary-public-') as directory:
-        records = CorpusStore(Path(directory) / 'public.sqlite3').public_records()
+    records = lexicon.load_records(root)
     index = DocumentaryIndex(records, sources)
     build_seconds = perf_counter() - build_start
     rows = []
@@ -130,9 +129,7 @@ def validate_report(report, queries=None, root=ROOT, replay=True):
         if not isinstance(rows, list) or len(rows) != len(queries) or {r['query_id'] for r in rows} != set(by_id):
             return dict(valid=False, errors=errors + ['query_coverage'])
         if replay:
-            with tempfile.TemporaryDirectory(prefix='amoxcalli-retrieval-check-') as directory:
-                records = CorpusStore(Path(directory) / 'public.sqlite3').public_records()
-            index = DocumentaryIndex(records, sources)
+            index = DocumentaryIndex(lexicon.load_records(root), sources)
         for row in rows:
             query = by_id[row['query_id']]
             if row.get('query') != query['question'] or row.get('task') != query['task']:

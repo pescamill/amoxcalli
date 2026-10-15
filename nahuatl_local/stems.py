@@ -2,8 +2,8 @@
 
 Tres piezas, todas deterministas y reproducibles (solo stdlib):
 
-* ``load_default``: construye el analizador morfológico con el diccionario
-  público y estima frecuencias de raíz sobre los pasajes de náhuatl clásico.
+* ``load_default``: construye el analizador morfológico con el catálogo léxico
+  canónico (``lexicon``) y estima frecuencias de raíz sobre los pasajes de náhuatl clásico.
   El resultado se guarda en ``data/derived/`` con el hash de sus entradas; si
   las entradas cambian, se reconstruye.
 * ``StemConcordance``: índice raíz → pasajes. Responde «¿dónde más aparece esta
@@ -13,23 +13,19 @@ Tres piezas, todas deterministas y reproducibles (solo stdlib):
   pista conserva los pasajes que la sustentan: es una asociación estadística
   con evidencia, no una definición.
 """
-import csv
 import hashlib
 import json
 import math
-import re
-import unicodedata
 from collections import Counter, defaultdict
 from pathlib import Path
 from threading import Lock
 
 from .morphology import Analyzer, WORD, PARTICLES, ANALYZER_VERSION, corpus_words, key_of, readable
+from . import lexicon, passages
+from .text import LETTERS, es_key, fold, squash
 
 ROOT = Path(__file__).resolve().parents[1]
 DERIVED = ROOT / 'data' / 'derived'
-BUNDLES = ('seed.json', 'glyph-links-v2.json', 'archive-source-v3.json', 'glyph-images-v4.json',
-           'glyph-lexicon-v5.json', 'glyph-source-images-v5.json', 'gdn-lexicon-v6.json',
-           'glyph-associations-v7.json', 'flor-lexicon-v8.json')
 HINTS_VERSION = 'gloss-hints-ibm1-v1'
 
 
@@ -37,38 +33,15 @@ HINTS_VERSION = 'gloss-hints-ibm1-v1'
 # Entradas
 # ---------------------------------------------------------------------------
 def load_records(root=ROOT):
-    """Registros públicos de los paquetes distribuidos (sin base de datos)."""
-    root = Path(root)
-    records = {}
-    paths = [root / 'corpus' / b for b in BUNDLES]
-    manifest = root / 'corpus' / 'editorial-releases.json'
-    if manifest.is_file():
-        for release in json.loads(manifest.read_text(encoding='utf-8')).get('releases', []):
-            paths.append(root / 'corpus' / release['bundle'])
-    for path in paths:
-        if not path.is_file():
-            continue
-        for row in json.loads(path.read_text(encoding='utf-8')).get('records', []):
-            if 'kind' in row and row.get('rights', {}).get('public', True):
-                records[row['id']] = row
-    return records
-
-
-def load_rows(root=ROOT):
-    rows = []
-    with (Path(root) / 'corpus/axolotl/axolotl.csv').open(encoding='utf-8', newline='') as f:
-        for line, fields in enumerate(csv.reader(f), 1):
-            if len(fields) < 5 or not fields[0].strip() or not fields[1].strip():
-                continue
-            rows.append(dict(id=f'axolotl-{line:05d}', es=fields[0], nah=fields[1], document=fields[3],
-                             iso=fields[4] or 'unknown'))
-    return rows
+    """Registros públicos del catálogo léxico canónico (``lexicon``), sin base de datos."""
+    return lexicon.load_records(root)
 
 
 def _fingerprint(records, rows):
     h = hashlib.sha256()
     h.update(ANALYZER_VERSION.encode())
-    h.update(Path(__file__).with_name('morphology.py').read_bytes())
+    for name in ('morphology.py', 'text.py'):
+        h.update(Path(__file__).with_name(name).read_bytes())
     for rid in sorted(records):
         r = records[rid]
         if r.get('kind') in ('form', 'sense'):
@@ -87,7 +60,7 @@ _LOCK = Lock()
 def load_default(fit=True, root=ROOT, records=None, rows=None, cache=True):
     """Analizador listo para usar; reutiliza ``data/derived/stem-counts.json``."""
     records = load_records(root) if records is None else records
-    rows = load_rows(root) if rows is None else rows
+    rows = passages.load(root) if rows is None else rows
     fp = _fingerprint(records, rows)
     memo = (fp, fit)
     with _LOCK:
@@ -173,28 +146,11 @@ quienes se sea sean ser si sin sino sobre son su sus tal tambien tan tanto te ti
 unos y ya yo vosotros usted ustedes asimismo tambien dicho dicha cosa cosas'''.split())
 
 
-def es_norm(word):
-    w = ''.join(c for c in unicodedata.normalize('NFD', word.casefold()) if unicodedata.category(c) != 'Mn')
-    return w
-
-
-def es_key(word):
-    """Clave española ligera: sin acentos, sin plural regular."""
-    w = es_norm(word)
-    if len(w) > 4 and w.endswith('es') and w[-3] not in 'aeiou':
-        w = w[:-2]
-    elif len(w) > 3 and w.endswith('s'):
-        w = w[:-1]
-    return w
-
-
-ES_WORD = re.compile(r'[^\W\d_]+', re.U)
-
-
 def es_tokens(text):
+    """Palabras de contenido españolas: (``text.es_key``, superficie), sin palabras vacías."""
     out = []
-    for m in ES_WORD.finditer(text):
-        n = es_norm(m.group(0))
+    for m in LETTERS.finditer(text):
+        n = fold(m.group(0))
         if len(n) < 3 or n in ES_STOP:
             continue
         out.append((es_key(m.group(0)), m.group(0)))
@@ -314,7 +270,7 @@ def load_hints(analyzer, rows, root=ROOT, cache=True):
 # Servicio combinado para la aplicación
 # ---------------------------------------------------------------------------
 def _short(text, limit=42):
-    text = re.sub(r'\s+', ' ', text or '').strip()
+    text = squash(text or '')
     return text if len(text) <= limit else text[:limit].rsplit(' ', 1)[0].rstrip(',;:') + '…'
 
 
@@ -330,7 +286,7 @@ class WordStudy:
     def _build(self):
         with self._lock:
             if self._ready is None:
-                rows = load_rows(self.root)
+                rows = passages.load(self.root)
                 records = self.records_fn() if self.records_fn else load_records(self.root)
                 analyzer = load_default(True, self.root, records, rows)
                 self._ready = (analyzer, StemConcordance(analyzer, rows), load_hints(analyzer, rows, self.root))

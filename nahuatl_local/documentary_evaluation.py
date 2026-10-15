@@ -7,24 +7,21 @@ reference strings. No input under data/ is enumerated or opened.
 import argparse
 from collections import Counter, defaultdict
 import copy
-import csv
 import hashlib
 import json
 from pathlib import Path
-import unicodedata
 
 from .community import ROOT
+from . import lexicon, passages as axolotl
+from .text import fold, squash
 
 RECIPE = 'documentary-fields-v1'
-BUNDLES = (
-    'corpus/seed.json', 'corpus/glyph-links-v2.json', 'corpus/archive-source-v3.json',
-    'corpus/glyph-images-v4.json', 'corpus/glyph-lexicon-v5.json',
-    'corpus/glyph-source-images-v5.json', 'corpus/gdn-lexicon-v6.json',
-    'corpus/glyph-associations-v7.json', 'corpus/flor-lexicon-v8.json',
-)
-FIXED = ('corpus/editorial-releases.json', 'corpus/learning-v1.json',
-         'corpus/pictography/catalog.json', 'corpus/axolotl/axolotl.csv',
+BUNDLES = lexicon.BUNDLE_PATHS
+FIXED = (lexicon.RELEASES, 'corpus/learning-v1.json',
+         'corpus/pictography/catalog.json', axolotl.AXOLOTL,
          'configs/sources.json', 'nahuatl_local/documentary_evaluation.py', 'docs/EVALUACION_DOCUMENTAL.md')
+# ``passages``, ``lexicon`` y ``text`` no se fijan por hash aquí: ``validate`` reconstruye la
+# batería completa con ellos, de modo que cualquier cambio de comportamiento la invalida.
 UNCERTAINTY = 'Referencia literal del índice local; cotejo primario y juicio lingüístico pendientes.'
 
 
@@ -38,12 +35,6 @@ def digest(value):
 
 def encoded(value):
     return json.dumps(value, ensure_ascii=False, sort_keys=True, indent=2) + '\n'
-
-
-def normalized(value):
-    """Conservative split-only comparison; originals and references stay intact."""
-    return ' '.join(''.join(c for c in unicodedata.normalize('NFD', value.casefold())
-                           if unicodedata.category(c) != 'Mn').split())
 
 
 def public_path(root, relative):
@@ -61,70 +52,29 @@ def public_path(root, relative):
 
 def inputs(root=ROOT):
     root = Path(root)
-    files = list(BUNDLES) + list(FIXED)
-    manifest = json.loads(public_path(root, 'corpus/editorial-releases.json').read_text())
-    for release in manifest['releases']:
-        filename = 'corpus/' + release['bundle']
-        if filename != 'corpus/editorial-' + release['id'] + '.json':
-            raise ValueError('Publicación editorial inválida.')
-        raw = public_path(root, filename).read_bytes()
-        if hashlib.sha256(raw).hexdigest() != release['sha256']:
-            raise ValueError('Publicación editorial obsoleta.')
-        files.append(filename)
+    release_paths = ['corpus/' + release['bundle']
+                     for release, _ in lexicon.releases(public_path(root, lexicon.RELEASES))]
+    files = list(BUNDLES) + list(FIXED) + release_paths
     hashes = {p: hashlib.sha256(public_path(root, p).read_bytes()).hexdigest() for p in sorted(set(files))}
     docs = {p: json.loads(public_path(root, p).read_text(encoding='utf-8')) for p in files if p.endswith('.json')}
-    records, origins = {}, {}
-    for path in list(BUNDLES) + [p for p in files if p.startswith('corpus/editorial-') and p != 'corpus/editorial-releases.json']:
-        for r in docs[path].get('records', []):
-            # Match admitted migration order; a reference cites the actual file
-            # holding the final row, never a fabricated merged transcription.
-            if 'kind' not in r:
-                # Image backfill bundles contain patches, not replacement rows.
-                # They do not supply lexical/source reference fields.
-                if r['id'] not in records:
-                    raise ValueError('Parche público sin registro previo.')
-                records[r['id']] = dict(records[r['id']], **r)
-            else:
-                records[r['id']] = r
-                origins[r['id']] = path
-    records = public_dependency_filter(records)
+    # Match admitted migration order; a reference cites the actual file holding the
+    # final row, never a fabricated merged transcription. Image backfill bundles
+    # contain patches, not replacement rows; they supply no reference fields.
+    records, origins = lexicon.source_rows([(p, docs[p]) for p in list(BUNDLES) + release_paths], apply_patches=True)
+    records = lexicon.public_closure(records)
     origins = {rid: path for rid, path in origins.items() if rid in records}
     ids = {e['archive_id'] for lesson in docs['corpus/learning-v1.json']['lessons'] for e in lesson['examples']}
     passages = {}
     # Axolotl has no header. The ID is the original 1-based CSV row index.
-    with public_path(root, 'corpus/axolotl/axolotl.csv').open(encoding='utf-8', newline='') as f:
-        for line, row in enumerate(csv.reader(f), 1):
-            rid = f'axolotl-{line:05d}'
-            if rid in ids:
-                if len(row) < 5:
-                    raise ValueError('Pasaje sin campos originales.')
-                passages[rid] = row
+    for line, row in axolotl.records(public_path(root, axolotl.AXOLOTL)):
+        rid = axolotl.passage_id(line)
+        if rid in ids:
+            if len(row) < 5:
+                raise ValueError('Pasaje sin campos originales.')
+            passages[rid] = row
     if set(passages) != ids:
         raise ValueError('Falta un pasaje publicado.')
     return dict(root=root, hashes=hashes, docs=docs, records=records, origins=origins, passages=passages)
-
-
-def public_dependency_filter(records):
-    """Apply the public dependency closure without opening any persistent store.
-
-    A later private version hides the earlier public row. Source, sense and
-    association dependencies use the same contract as CorpusStore.validate.
-    Only the public keys retained here may enter split families or references.
-    """
-    visible = {rid: row for rid, row in records.items() if row.get('rights', {}).get('public') is True}
-    while True:
-        hidden = set()
-        for rid, row in visible.items():
-            dependencies = [row[k] for k in ('sense_id', 'primary_source_id') if row.get(k)]
-            dependencies += row.get('sense_ids', [])
-            dependencies += [e[k] for e in row.get('evidence', []) for k in ('source_id', 'via_source_id') if e.get(k)]
-            association = row.get('association') or {}
-            dependencies += [association[k] for k in ('reference_form_id', 'reference_glyph_id') if association.get(k)]
-            if any(target not in visible for target in dependencies):
-                hidden.add(rid)
-        if not hidden:
-            return visible
-        visible = {rid: row for rid, row in visible.items() if rid not in hidden}
 
 
 def partition_families(nodes):
@@ -176,9 +126,9 @@ def families(data):
             resources.append(('lexical_id', r['sense_id']))
             for key in ('written', 'catalog_normalized'):
                 if r.get(key):
-                    resources.append(('lexical_spelling', normalized(r[key])))
+                    resources.append(('lexical_spelling', squash(fold(r[key]))))
             for alias in r.get('aliases', []):
-                resources.append(('lexical_spelling', normalized(alias)))
+                resources.append(('lexical_spelling', squash(fold(alias))))
             entry = r.get('source_entry', {})
             extraction = r.get('extraction', {})
             if entry.get('id') or extraction.get('entry_id'):
@@ -187,7 +137,7 @@ def families(data):
     for rid, row in sorted(data['passages'].items()):
         # Whole works are reserved, a stronger boundary than duplicate passages.
         nodes.append(dict(id='passage:' + rid, resources=[('passage_id', rid),
-                     ('passage_work', row[3]), ('passage_original', normalized(row[1]))]))
+                     ('passage_work', row[3]), ('passage_original', squash(fold(row[1])))]))
     catalog = data['docs']['corpus/pictography/catalog.json']
     pages = {p['id']: p for p in catalog['pages']}
     for table in ('documents', 'pages', 'zones', 'elements', 'occurrences'):
@@ -215,7 +165,7 @@ def families(data):
 def field(data, path, table, rid, key):
     if table == 'csv':
         row = data['passages'][rid]
-        value = row[{'es': 0, 'nah': 1, 'variant': 2, 'document': 3, 'iso': 4}[key]]
+        value = axolotl.original(row)[key]
     else:
         row = next(r for r in data['docs'][path][table] if r['id'] == rid)
         value = row[key]
@@ -275,11 +225,11 @@ def build(root=ROOT):
         form_groups[membership['lex:' + form['id']]].append(form)
     # Do not use pictographic designations to teach/choose lexical references
     # across the manuscript reserve. A shared label is not a linguistic merger.
-    pict_labels = {normalized(e['designation']) for e in catalog['elements']}
+    pict_labels = {squash(fold(e['designation'])) for e in catalog['elements']}
     eligible = []
     excluded = []
     for gid, fs in sorted(form_groups.items()):
-        if any(normalized(f.get(k, '')) in pict_labels for f in fs for k in ('written', 'catalog_normalized')):
+        if any(squash(fold(f.get(k, ''))) in pict_labels for f in fs for k in ('written', 'catalog_normalized')):
             excluded.append(gid)
             continue
         if all(data['origins'][f['id']] in ('corpus/gdn-lexicon-v6.json', 'corpus/editorial-batch-007-v9.json')
@@ -293,9 +243,9 @@ def build(root=ROOT):
     # Include all ambiguous groups first, then spread singletons by spelling.
     ambiguous = sorted((item for item in development if len(item[1]) > 1), key=lambda item: item[0])
     initials = defaultdict(list)
-    for item in sorted(development, key=lambda item: (normalized(item[1][0]['written']), item[0])):
+    for item in sorted(development, key=lambda item: (squash(fold(item[1][0]['written'])), item[0])):
         if len(item[1]) == 1:
-            initials[normalized(item[1][0]['written'])[:1]].append(item)
+            initials[squash(fold(item[1][0]['written']))[:1]].append(item)
     development = ambiguous
     while any(initials.values()):
         for initial in sorted(initials):
@@ -329,7 +279,7 @@ def build(root=ROOT):
     archive_url = f"https://github.com/{config['repository']}/blob/{config['revision']}/{config['path']}"
     for rid, row in sorted(data['passages'].items()):
         split = 'reserve' if row[3] in reserve_works else 'development'
-        refs = [field(data, 'corpus/axolotl/axolotl.csv', 'csv', rid, k) for k in ('nah', 'es', 'document', 'iso')]
+        refs = [field(data, axolotl.AXOLOTL, 'csv', rid, k) for k in ('nah', 'es', 'document', 'iso')]
         queries.append(query(data, membership, ['passage:' + rid], 'parallel', 'textual', split, 'comparison',
                        f'En {row[3]}, registro {rid}, ¿qué original náhuatl acompaña a la traducción española conservada? Cita ambos sin corregirlos e identifica la variedad declarada.',
                        refs, ['src-axolotl'], [archive_url], [config['citation']],

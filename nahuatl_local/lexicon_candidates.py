@@ -15,6 +15,7 @@ from pathlib import Path
 
 from .data import ROOT, default_corpus_path, work_group
 from .nahuatl_orthography import COMPARISON_RULE_IDS, ORTHOGRAPHY_VERSION, comparison, storage
+from .passages import parse as parse_axolotl, passage_id
 
 VERSION = 'lexicon-candidates-1'
 SPLITS = ('train', 'validation', 'test')
@@ -130,11 +131,11 @@ def mine_candidates(raw_path, prepared_dir=ROOT / 'data/prepared', seed_path=ROO
     raw = raw_path.read_bytes()
     source_hash = _sha256(raw)
     original, rejected = {}, collections.Counter()
-    for number, fields in enumerate(csv.reader(io.StringIO(raw.decode('utf-8'), newline='')), 1):
+    for number, fields in parse_axolotl(raw.decode('utf-8')):
         if len(fields) != 5:
             raise ValueError(f'El registro CSV {number} no contiene cinco campos.')
         es, nah, variant, document, iso = fields
-        rid = f'axolotl-{number:05d}'
+        rid = passage_id(number)
         original[rid] = dict(id=rid, record=number, es=es, nah=nah, variant=variant,
                              document=document, iso=iso)
     membership, group_splits, prepared = _prepared_membership(prepared_dir, source_hash, original)

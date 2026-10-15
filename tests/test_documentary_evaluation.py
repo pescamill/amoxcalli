@@ -11,7 +11,8 @@ from unittest.mock import patch
 from nahuatl_local.community import ROOT, DEFAULT_DB
 from nahuatl_local.corpus import CorpusStore
 from nahuatl_local.documentary_evaluation import (build, digest, encoded, families, inputs,
-    load_development, main, overlap_report, partition_families, public_dependency_filter, validate)
+    load_development, main, overlap_report, partition_families, validate)
+from nahuatl_local.lexicon import public_closure
 
 
 class DocumentaryEvaluationTests(unittest.TestCase):
@@ -181,7 +182,7 @@ class DocumentaryEvaluationTests(unittest.TestCase):
         rows = dict(source=dict(rights=dict(public=False)),
                     form=dict(rights=dict(public=True), evidence=[dict(source_id='source')]),
                     dependent=dict(rights=dict(public=True), sense_id='form'))
-        self.assertEqual(public_dependency_filter(rows), {})
+        self.assertEqual(public_closure(rows), {})
 
     def test_cli_preserves_previous_bytes_and_repeats_without_network_or_private_db(self):
         with tempfile.TemporaryDirectory() as directory:
