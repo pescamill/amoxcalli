@@ -834,6 +834,1002 @@
       ],
       "title": "Un ave en poesía, aves en relatos",
       "version": 2
+    },
+    {
+      "cover_glyph": "glyph-calli",
+      "examples": [
+        {
+          "annotations": [
+            {
+              "glyph_id": "glyph-calli",
+              "note": "La referencia es un elemento de edificio en Apancalecan, Mendoza 13r, propuesto por catálogo secundario. No es una ilustración de esta casa ni la escritura de la oración.",
+              "quote": "calli",
+              "relation": "full_word",
+              "sense_id": "sense-calli"
+            }
+          ],
+          "archive_id": "axolotl-02051",
+          "comprehension": {
+            "answer": 0,
+            "explanation": "La traducción de origen dice «horadaron la pared trasera de la casa». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+            "kind": "meaning",
+            "options": [
+              "horadaron la pared trasera de la casa",
+              "Por la puerta delantera.",
+              "Por una canoa."
+            ],
+            "question": "¿Por dónde escaparon los mexicas?"
+          },
+          "context": "Los mexicas abren una salida en la pared trasera y escapan, según el relato.",
+          "exercise": {
+            "answer": 0,
+            "blank": "calli",
+            "explanation": "El registro escribe «calli». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+            "kind": "cloze",
+            "options": [
+              "calli",
+              "atl",
+              "tetl"
+            ],
+            "question": "Recupera la forma que aparece en el fragmento original."
+          },
+          "source_hash": "f7be34105ce8c8032e2b3e26a48e0ffe10118e86004c67c5bb933630b96798aa"
+        },
+        {
+          "annotations": [
+            {
+              "glyph_id": "glyph-calli",
+              "note": "La referencia es un elemento de edificio en Apancalecan, Mendoza 13r, propuesto por catálogo secundario. No es una ilustración de esta casa ni la escritura de la oración.",
+              "quote": "Calli",
+              "relation": "full_word",
+              "sense_id": "sense-calli"
+            }
+          ],
+          "archive_id": "axolotl-10674",
+          "comprehension": {
+            "answer": 1,
+            "explanation": "La traducción de origen dice «Destechadas están las casas». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+            "kind": "meaning",
+            "options": [
+              "Recién construidas.",
+              "Destechadas están las casas",
+              "Cubiertas con flores."
+            ],
+            "question": "¿Cómo están las casas en la traducción?"
+          },
+          "context": "El fragmento describe casas dañadas junto a caminos con dardos rotos. Conserva la repetición Calli/calli del original.",
+          "exercise": {
+            "answer": 1,
+            "blank": "Calli",
+            "explanation": "El registro escribe «Calli». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+            "kind": "cloze",
+            "options": [
+              "tepetl",
+              "Calli",
+              "xochitl"
+            ],
+            "question": "Recupera la forma que aparece en el fragmento original."
+          },
+          "source_hash": "c3e1e5b76c1dd48f5547ad6dca650ef81bb5508635de2629509a07d4b90cc98b"
+        },
+        {
+          "annotations": [
+            {
+              "glyph_id": "glyph-calli",
+              "note": "La referencia es un elemento de edificio en Apancalecan, Mendoza 13r, propuesto por catálogo secundario. No es una ilustración de esta casa ni la escritura de la oración.",
+              "quote": "calli",
+              "relation": "full_word",
+              "sense_id": "sense-calli"
+            }
+          ],
+          "archive_id": "axolotl-03625",
+          "comprehension": {
+            "answer": 2,
+            "explanation": "La traducción de origen dice «carta de venta». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+            "kind": "meaning",
+            "options": [
+              "Una lista de aves.",
+              "Un mapa del cielo.",
+              "carta de venta"
+            ],
+            "question": "¿Qué documento confirma la declaración?"
+          },
+          "context": "Una declaración sobre una casa remite a la carta de venta como confirmación. No convertimos el testimonio en una regla jurídica.",
+          "exercise": {
+            "answer": 2,
+            "blank": "calli",
+            "explanation": "El registro escribe «calli». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+            "kind": "cloze",
+            "options": [
+              "cuicatl",
+              "tototl",
+              "calli"
+            ],
+            "question": "Recupera la forma que aparece en el fragmento original."
+          },
+          "source_hash": "0206b31a47eb39c95f1d50f1f6bd49302df33de9dedcbf0911deb938674a58c6"
+        },
+        {
+          "annotations": [
+            {
+              "glyph_id": "glyph-calli",
+              "note": "La referencia es un elemento de edificio en Apancalecan, Mendoza 13r, propuesto por catálogo secundario. No es una ilustración de esta casa ni la escritura de la oración.",
+              "quote": "calli",
+              "relation": "full_word",
+              "sense_id": "sense-calli"
+            }
+          ],
+          "archive_id": "axolotl-01900",
+          "comprehension": {
+            "answer": 0,
+            "explanation": "La traducción de origen dice «la dicha casa y tierra». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+            "kind": "meaning",
+            "options": [
+              "la dicha casa y tierra",
+              "Una piel de venado.",
+              "Un collar de flores."
+            ],
+            "question": "¿Qué afirma haber vendido?"
+          },
+          "context": "La persona pide que se dé posesión de una casa y tierra que afirma haber vendido. La traducción conserva su grafía histórica.",
+          "exercise": {
+            "answer": 0,
+            "blank": "calli",
+            "explanation": "El registro escribe «calli». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+            "kind": "cloze",
+            "options": [
+              "calli",
+              "tlalli",
+              "tonatiuh"
+            ],
+            "question": "Recupera la forma que aparece en el fragmento original."
+          },
+          "source_hash": "0522a9cb3d0bcc9c42b4c71ad79f6decfe12c3d6ac13da5e231c924856ea4522"
+        }
+      ],
+      "id": "casas-relatos",
+      "minutes": 8,
+      "objective": "Reconocer calli en episodios sobre casas y distinguir una acción narrada de una declaración de posesión.",
+      "reading_tips": [
+        "Estas apariciones hablan de edificios; no se enseña aquí el signo calendárico Calli.",
+        "La escritura del español histórico se conserva. Usa la frase completa para explicar qué ocurre con la casa."
+      ],
+      "sense_ids": [
+        "sense-calli"
+      ],
+      "title": "Casas, salida y posesión",
+      "version": 1
+    },
+    {
+      "cover_glyph": "glyph-mazatl-mdz13v",
+      "examples": [
+        {
+          "annotations": [
+            {
+              "glyph_id": "glyph-mazatl-mdz13v",
+              "note": "La referencia es una cabeza de venado en el topónimo Mazatlan, Mendoza 13v. No identifica la especie ni representa este episodio.",
+              "quote": "mazatl",
+              "relation": "full_word",
+              "sense_id": "sense-mazatl"
+            }
+          ],
+          "archive_id": "axolotl-10995",
+          "comprehension": {
+            "answer": 0,
+            "explanation": "La traducción de origen dice «la piel de un venado». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+            "kind": "meaning",
+            "options": [
+              "la piel de un venado",
+              "Un disco solar.",
+              "Una vasija de barro."
+            ],
+            "question": "¿Qué objeto menciona el verso?"
+          },
+          "context": "El verso menciona una piel de venado usada para hacer reverencia a Axayácatl. El texto español conserva palabras juntas.",
+          "exercise": {
+            "answer": 0,
+            "blank": "mazatl",
+            "explanation": "El registro escribe «mazatl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+            "kind": "cloze",
+            "options": [
+              "mazatl",
+              "coatl",
+              "tototl"
+            ],
+            "question": "Recupera la forma que aparece en el fragmento original."
+          },
+          "source_hash": "2971f9509a5d5b66bf4754e60c4df66cf6726316a1288994bddfe2cba970ab11"
+        },
+        {
+          "annotations": [
+            {
+              "glyph_id": "glyph-mazatl-mdz13v",
+              "note": "La referencia es una cabeza de venado en el topónimo Mazatlan, Mendoza 13v. No identifica la especie ni representa este episodio.",
+              "quote": "mazatl",
+              "relation": "full_word",
+              "sense_id": "sense-mazatl"
+            }
+          ],
+          "archive_id": "axolotl-06302",
+          "comprehension": {
+            "answer": 1,
+            "explanation": "La traducción de origen dice «el venado que quieren». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+            "kind": "meaning",
+            "options": [
+              "La casa que alquilan.",
+              "el venado que quieren",
+              "La salida del sol."
+            ],
+            "question": "¿Qué dicen no haber hallado?"
+          },
+          "context": "Los hablantes dicen no haber encontrado el venado buscado y haber apresado a dos personas. Conserva la negación y el contraste del relato.",
+          "exercise": {
+            "answer": 1,
+            "blank": "mazatl",
+            "explanation": "El registro escribe «mazatl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+            "kind": "cloze",
+            "options": [
+              "michin",
+              "mazatl",
+              "calli"
+            ],
+            "question": "Recupera la forma que aparece en el fragmento original."
+          },
+          "source_hash": "7a42011e26125615db936f1abdd8569e50c9fe684e45fe6ae1b3185b58ade591"
+        },
+        {
+          "annotations": [
+            {
+              "glyph_id": "glyph-coatl-mdz7v",
+              "note": "La referencia procede del topónimo Coaixtlahuacan, Mendoza 7v. No representa las culebras de este relato ni todos los usos calendáricos de la forma.",
+              "quote": "coatl",
+              "relation": "full_word",
+              "sense_id": "sense-coatl"
+            }
+          ],
+          "archive_id": "axolotl-15614",
+          "comprehension": {
+            "answer": 2,
+            "explanation": "La traducción de origen dice «culebras, conejos, venados». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+            "kind": "meaning",
+            "options": [
+              "Piedras, tablas y adobes.",
+              "Flores, cantos y collares.",
+              "culebras, conejos, venados"
+            ],
+            "question": "¿Qué alimentos enumera la traducción?"
+          },
+          "context": "La lista describe vestimenta y alimentación; la forma coatl aparece entre los alimentos. No convertimos toda la lista en entradas nuevas.",
+          "exercise": {
+            "answer": 2,
+            "blank": "coatl",
+            "explanation": "El registro escribe «coatl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+            "kind": "cloze",
+            "options": [
+              "mazatl",
+              "tetl",
+              "coatl"
+            ],
+            "question": "Recupera la forma que aparece en el fragmento original."
+          },
+          "source_hash": "26bcc1d5e1563128131936c537babb57633b42865396e0382eba45b11859d7a3"
+        },
+        {
+          "annotations": [
+            {
+              "glyph_id": "glyph-michin-mdz46r",
+              "note": "La referencia procede de Michapan, Mendoza 46r. No identifica el tamaño o la especie del pez del relato.",
+              "quote": "michin",
+              "relation": "full_word",
+              "sense_id": "sense-michin"
+            }
+          ],
+          "archive_id": "axolotl-06005",
+          "comprehension": {
+            "answer": 0,
+            "explanation": "La traducción de origen dice «Nadie sabe». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+            "kind": "meaning",
+            "options": [
+              "Nadie sabe",
+              "Todos lo vieron.",
+              "Se confirmó el mismo día."
+            ],
+            "question": "¿Qué grado de certeza expresa el comienzo?"
+          },
+          "context": "El relato dice que nadie sabe qué pasó con Temillotzin y enumera posibilidades. No afirma que un pez lo devoró.",
+          "exercise": {
+            "answer": 0,
+            "blank": "michin",
+            "explanation": "El registro escribe «michin». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+            "kind": "cloze",
+            "options": [
+              "michin",
+              "coatl",
+              "atl"
+            ],
+            "question": "Recupera la forma que aparece en el fragmento original."
+          },
+          "source_hash": "a811f4fbd510f4229f7d567a5496968b4bf1a6f89a49b4498c73411d7ad7ff03"
+        }
+      ],
+      "id": "animales-relatos",
+      "minutes": 8,
+      "objective": "Reconocer mazatl, coatl y michin y explicar el papel de cada animal en su relato sin identificar especies.",
+      "reading_tips": [
+        "La piel, el alimento y una posibilidad incierta son contextos diferentes. Lee cuál corresponde a cada pasaje.",
+        "No se cambia cohuatl por coatl ni se analiza esa variante automáticamente; la ayuda destaca solo la forma citada."
+      ],
+      "sense_ids": [
+        "sense-mazatl",
+        "sense-coatl",
+        "sense-michin"
+      ],
+      "title": "Venados, culebras y un pez",
+      "version": 1
+    },
+    {
+      "cover_glyph": "glyph-tetl-mdz48r",
+      "examples": [
+        {
+          "annotations": [
+            {
+              "glyph_id": "glyph-tetl-mdz48r",
+              "note": "La referencia es un elemento de piedra de un topónimo, Mendoza 48r. No representa estas piedras ni explica las medidas o la expresión del pasaje.",
+              "quote": "tetl",
+              "relation": "full_word",
+              "sense_id": "sense-tetl"
+            }
+          ],
+          "archive_id": "axolotl-15430",
+          "comprehension": {
+            "answer": 0,
+            "explanation": "La traducción de origen dice «una braza de piedra». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+            "kind": "meaning",
+            "options": [
+              "una braza de piedra",
+              "Una piel de venado.",
+              "Una vasija de carbón."
+            ],
+            "question": "¿Qué se declara enterrado?"
+          },
+          "context": "Una declaración menciona piedra enterrada en un cercado y su herencia. No se deduce un sistema de medidas a partir de la palabra.",
+          "exercise": {
+            "answer": 0,
+            "blank": "tetl",
+            "explanation": "El registro escribe «tetl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+            "kind": "cloze",
+            "options": [
+              "tetl",
+              "cuahuitl",
+              "calli"
+            ],
+            "question": "Recupera la forma que aparece en el fragmento original."
+          },
+          "source_hash": "94b4a16366c977a15c77db07864a4ac501374c61c804a1725a46d1976bcf1b44"
+        },
+        {
+          "annotations": [
+            {
+              "glyph_id": "glyph-tetl-mdz48r",
+              "note": "La referencia es un elemento de piedra de un topónimo, Mendoza 48r. No representa estas piedras ni explica las medidas o la expresión del pasaje.",
+              "quote": "tetl",
+              "relation": "full_word",
+              "sense_id": "sense-tetl"
+            }
+          ],
+          "archive_id": "axolotl-01669",
+          "comprehension": {
+            "answer": 1,
+            "explanation": "La traducción de origen dice «no abia cosa alguna dello». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+            "kind": "meaning",
+            "options": [
+              "Dos casas nuevas.",
+              "no abia cosa alguna dello",
+              "Una carta firmada."
+            ],
+            "question": "¿Qué encontraron al volver?"
+          },
+          "context": "Un testimonio cuenta que dejaron materiales y un aposento en Zoquipan, y al volver faltaba todo.",
+          "exercise": {
+            "answer": 1,
+            "blank": "tetl",
+            "explanation": "El registro escribe «tetl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+            "kind": "cloze",
+            "options": [
+              "atl",
+              "tetl",
+              "tepetl"
+            ],
+            "question": "Recupera la forma que aparece en el fragmento original."
+          },
+          "source_hash": "fed7e8e3a31cfa07c86d5d01c301a19d2081f6adff67d37398ce02a2e1569188"
+        },
+        {
+          "annotations": [
+            {
+              "glyph_id": "glyph-related-madera-mh487r",
+              "note": "La comparación visual muestra Tlecuauh completo, Matrícula de Huexotzinco 487r: el catálogo identifica una tabla en el compuesto de madera y fuego. No escribe únicamente cuahuitl ni representa la leña o el palo de este pasaje.",
+              "quote": "cuahuitl",
+              "relation": "full_word",
+              "sense_id": "sense-madera"
+            }
+          ],
+          "archive_id": "axolotl-04424",
+          "comprehension": {
+            "answer": 2,
+            "explanation": "La traducción de origen dice «la leña, el carbón». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+            "kind": "meaning",
+            "options": [
+              "La luna, las estrellas.",
+              "Las flores, los cantos.",
+              "la leña, el carbón"
+            ],
+            "question": "¿Qué materiales se disponen junto a los recipientes?"
+          },
+          "context": "Se disponen recipientes, leña y carbón en una casa. La anotación consulta material leñoso por la traducción de este registro.",
+          "exercise": {
+            "answer": 2,
+            "blank": "cuahuitl",
+            "explanation": "El registro escribe «cuahuitl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+            "kind": "cloze",
+            "options": [
+              "tetl",
+              "tototl",
+              "cuahuitl"
+            ],
+            "question": "Recupera la forma que aparece en el fragmento original."
+          },
+          "source_hash": "4556b3f1ceb17c5f22c66bd8edd4ed07e614deaf475889e78a9ef62b17701291"
+        },
+        {
+          "annotations": [
+            {
+              "glyph_id": "glyph-related-madera-mh487r",
+              "note": "La comparación visual muestra Tlecuauh completo, Matrícula de Huexotzinco 487r: el catálogo identifica una tabla en el compuesto de madera y fuego. No escribe únicamente cuahuitl ni representa la leña o el palo de este pasaje.",
+              "quote": "cuahuitl",
+              "relation": "full_word",
+              "sense_id": "sense-madera"
+            }
+          ],
+          "archive_id": "axolotl-13052",
+          "comprehension": {
+            "answer": 0,
+            "explanation": "La traducción de origen dice «dentro de la piedra y del palo». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+            "kind": "meaning",
+            "options": [
+              "dentro de la piedra y del palo",
+              "Dentro de una canoa.",
+              "En el octavo cielo."
+            ],
+            "question": "¿Dónde dice el pasaje que está mirando?"
+          },
+          "context": "El pasaje dice que el señor mira dentro de la piedra y del palo. Conserva el contexto y no lo reemplaces por una explicación literal de materiales.",
+          "exercise": {
+            "answer": 0,
+            "blank": "cuahuitl",
+            "explanation": "El registro escribe «cuahuitl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+            "kind": "cloze",
+            "options": [
+              "cuahuitl",
+              "xochitl",
+              "tonatiuh"
+            ],
+            "question": "Recupera la forma que aparece en el fragmento original."
+          },
+          "source_hash": "e2f2f5a75f1a4fa471d16e80104afe863871a6349472cfefafe58526d91061e2"
+        }
+      ],
+      "id": "piedra-lena",
+      "minutes": 8,
+      "objective": "Reconocer tetl y cuahuitl en contextos materiales y distinguir esos referentes de la expresión piedra y palo.",
+      "reading_tips": [
+        "Cuahuitl se consulta aquí como material; la lectura de árboles usa una acepción separada.",
+        "La expresión piedra y palo exige leer su contexto. La referencia visual no explica automáticamente esa expresión."
+      ],
+      "sense_ids": [
+        "sense-tetl",
+        "sense-madera"
+      ],
+      "title": "Piedra, leña y un palo",
+      "version": 1
+    },
+    {
+      "cover_glyph": "glyph-cuahuitl-mdz7v",
+      "examples": [
+        {
+          "annotations": [
+            {
+              "glyph_id": "glyph-cuahuitl-mdz7v",
+              "note": "La referencia es un árbol separado de Cuauhnahuac, Mendoza 7v. No identifica la especie ni representa los árboles de este relato.",
+              "quote": "quauitl",
+              "relation": "full_word",
+              "sense_id": "sense-cuahuitl"
+            }
+          ],
+          "archive_id": "axolotl-01138",
+          "comprehension": {
+            "answer": 0,
+            "explanation": "La traducción de origen dice «para que nosotros podamos seguir el camino». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+            "kind": "meaning",
+            "options": [
+              "para que nosotros podamos seguir el camino",
+              "Para confirmar una venta.",
+              "Para marcar un eclipse."
+            ],
+            "question": "¿Para qué piden dejar señales?"
+          },
+          "context": "Los hablantes piden dejar señales mediante árboles y piedras para poder seguir un camino.",
+          "exercise": {
+            "answer": 0,
+            "blank": "quauitl",
+            "explanation": "El registro escribe «quauitl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+            "kind": "cloze",
+            "options": [
+              "quauitl",
+              "tetl",
+              "metztli"
+            ],
+            "question": "Recupera la forma que aparece en el fragmento original."
+          },
+          "source_hash": "befeeb0acd29dd33ffd560e79c79bb1f7c32d137374437e22b49c25e1818a356"
+        },
+        {
+          "annotations": [
+            {
+              "glyph_id": "glyph-cuahuitl-mdz7v",
+              "note": "La referencia es un árbol separado de Cuauhnahuac, Mendoza 7v. No identifica la especie ni representa los árboles de este relato.",
+              "quote": "cuahuitl",
+              "relation": "full_word",
+              "sense_id": "sense-cuahuitl"
+            }
+          ],
+          "archive_id": "axolotl-12972",
+          "comprehension": {
+            "answer": 1,
+            "explanation": "La traducción de origen dice «los desarraigan». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+            "kind": "meaning",
+            "options": [
+              "Los cubren con flores.",
+              "los desarraigan",
+              "Los convierten en casas."
+            ],
+            "question": "¿Qué ocurre con los árboles?"
+          },
+          "context": "La traducción habla de grandes árboles arrastrados y desarraigados, y de angustia durante varios días.",
+          "exercise": {
+            "answer": 1,
+            "blank": "cuahuitl",
+            "explanation": "El registro escribe «cuahuitl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+            "kind": "cloze",
+            "options": [
+              "calli",
+              "cuahuitl",
+              "cuicatl"
+            ],
+            "question": "Recupera la forma que aparece en el fragmento original."
+          },
+          "source_hash": "daabee099c09682555c8b4d6293ea5d9cad2fd237b02458da3e63293717bef51"
+        },
+        {
+          "annotations": [
+            {
+              "glyph_id": "glyph-cuahuitl-mdz7v",
+              "note": "La referencia es un árbol separado de Cuauhnahuac, Mendoza 7v. No identifica la especie ni representa los árboles de este relato.",
+              "quote": "cuahuitl",
+              "relation": "full_word",
+              "sense_id": "sense-cuahuitl"
+            }
+          ],
+          "archive_id": "axolotl-11726",
+          "comprehension": {
+            "answer": 2,
+            "explanation": "La traducción de origen dice «entre las piedras, entre los árboles». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+            "kind": "meaning",
+            "options": [
+              "Dentro de la casa, sobre el techo.",
+              "Junto al mercado, dentro de la canoa.",
+              "entre las piedras, entre los árboles"
+            ],
+            "question": "¿Qué lugares enumera la traducción?"
+          },
+          "context": "El pasaje presenta lugares posibles para acostarse, entre piedras y árboles, junto a una advertencia. Conserva la posibilidad expresada en español.",
+          "exercise": {
+            "answer": 2,
+            "blank": "cuahuitl",
+            "explanation": "El registro escribe «cuahuitl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+            "kind": "cloze",
+            "options": [
+              "atl",
+              "mazatl",
+              "cuahuitl"
+            ],
+            "question": "Recupera la forma que aparece en el fragmento original."
+          },
+          "source_hash": "cd05e51c5b5130e9b1b9a5796e281bc3489e8bcde6403ad61032b2555bda1247"
+        },
+        {
+          "annotations": [
+            {
+              "glyph_id": "glyph-tepetl-mdz32r",
+              "note": "La referencia es un cerro extraído de Ocotepec, Mendoza 32r. No representa el cerro nombrado en este fragmento.",
+              "quote": "tepetl",
+              "relation": "full_word",
+              "sense_id": "sense-tepetl"
+            }
+          ],
+          "archive_id": "axolotl-13930",
+          "comprehension": {
+            "answer": 0,
+            "explanation": "La traducción de origen dice «sobre el cerro». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+            "kind": "meaning",
+            "options": [
+              "sobre el cerro",
+              "En el puerto.",
+              "Dentro de una vasija."
+            ],
+            "question": "¿Dónde encendieron su fuego?"
+          },
+          "context": "Se narra el encendido de fuego sobre un cerro y se explica el nombre Tonallitlatlayan. No se analiza ese nombre por subcadenas.",
+          "exercise": {
+            "answer": 0,
+            "blank": "tepetl",
+            "explanation": "El registro escribe «tepetl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+            "kind": "cloze",
+            "options": [
+              "tepetl",
+              "tlalli",
+              "tototl"
+            ],
+            "question": "Recupera la forma que aparece en el fragmento original."
+          },
+          "source_hash": "684e62529589f2a5cad910650bcb8a84615352a2573f6cd32f178ea4991993e1"
+        }
+      ],
+      "id": "arboles-cerros",
+      "minutes": 8,
+      "objective": "Reconocer quauitl, cuahuitl y tepetl al leer un camino, árboles arrastrados y un lugar de asentamiento.",
+      "reading_tips": [
+        "Quauitl y cuahuitl tienen formas documentadas de consulta; no se deduce una regla de cambio de letras.",
+        "Los nombres de lugares se conservan completos. La imagen de un cerro de otro documento no identifica este lugar."
+      ],
+      "sense_ids": [
+        "sense-cuahuitl",
+        "sense-tepetl"
+      ],
+      "title": "Árboles, señales y cerros",
+      "version": 1
+    },
+    {
+      "cover_glyph": "glyph-tletl-mdz13r",
+      "examples": [
+        {
+          "annotations": [
+            {
+              "glyph_id": "glyph-tletl-mdz13r",
+              "note": "La referencia es una llama de una escena de conquista, Mendoza 13r, clasificada como iconografía. No escribe la oración ni ilustra el rito descrito aquí.",
+              "quote": "tletl",
+              "relation": "full_word",
+              "sense_id": "sense-tletl"
+            }
+          ],
+          "archive_id": "axolotl-05345",
+          "comprehension": {
+            "answer": 0,
+            "explanation": "La traducción de origen dice «cuatro días». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+            "kind": "meaning",
+            "options": [
+              "cuatro días",
+              "Dos meses.",
+              "Un año."
+            ],
+            "question": "¿Cuánto tiempo mantuvo ardiendo el fuego?"
+          },
+          "context": "Ixcuecuénotl mantiene un fuego nuevo encendido en Tepantonco; el pasaje también contiene un año calendárico que no se anota como animal.",
+          "exercise": {
+            "answer": 0,
+            "blank": "tletl",
+            "explanation": "El registro escribe «tletl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+            "kind": "cloze",
+            "options": [
+              "tletl",
+              "ehecatl",
+              "atl"
+            ],
+            "question": "Recupera la forma que aparece en el fragmento original."
+          },
+          "source_hash": "fe2af3b97118054c04a68b9bdd9074eee9097478bb67cae076073b01e25b8a76"
+        },
+        {
+          "annotations": [
+            {
+              "glyph_id": "glyph-tletl-mdz13r",
+              "note": "La referencia es una llama de una escena de conquista, Mendoza 13r, clasificada como iconografía. No escribe la oración ni ilustra el rito descrito aquí.",
+              "quote": "tletl",
+              "relation": "full_word",
+              "sense_id": "sense-tletl"
+            }
+          ],
+          "archive_id": "axolotl-06073",
+          "comprehension": {
+            "answer": 1,
+            "explanation": "La traducción de origen dice «hacen la imagen del fuego». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+            "kind": "meaning",
+            "options": [
+              "Construyen una casa.",
+              "hacen la imagen del fuego",
+              "Preparan una carta de venta."
+            ],
+            "question": "¿Qué hacen al pintar el papel?"
+          },
+          "context": "El relato describe el dibujo de una figura en papel como imagen del fuego, no una llama material.",
+          "exercise": {
+            "answer": 1,
+            "blank": "tletl",
+            "explanation": "El registro escribe «tletl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+            "kind": "cloze",
+            "options": [
+              "cuahuitl",
+              "tletl",
+              "tetl"
+            ],
+            "question": "Recupera la forma que aparece en el fragmento original."
+          },
+          "source_hash": "a5d507ef40d9fa21ac2e2c6a4458858921661de56fb758615839a92ef6195ec5"
+        },
+        {
+          "annotations": [
+            {
+              "glyph_id": "glyph-ehecatl-mdz12r",
+              "note": "La referencia muestra una cabeza asociada a Ehecatl en Ecatepec, Mendoza 12r; la ficha se titula Ecatl y discute esa relación. Se usa para comparar el referente viento; no es la imagen de este pasaje.",
+              "quote": "ehecatl",
+              "relation": "full_word",
+              "sense_id": "sense-ehecatl"
+            }
+          ],
+          "archive_id": "axolotl-03579",
+          "comprehension": {
+            "answer": 2,
+            "explanation": "La traducción de origen dice «sed y de hambre». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+            "kind": "meaning",
+            "options": [
+              "Una caída de la casa.",
+              "Un eclipse de sol.",
+              "sed y de hambre"
+            ],
+            "question": "¿Qué casi hace perecer a uno en este lugar?"
+          },
+          "context": "La traducción menciona el ardor del sol y del viento junto a sed y hambre. Conserva ese conjunto de afirmaciones.",
+          "exercise": {
+            "answer": 2,
+            "blank": "ehecatl",
+            "explanation": "El registro escribe «ehecatl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+            "kind": "cloze",
+            "options": [
+              "tletl",
+              "calli",
+              "ehecatl"
+            ],
+            "question": "Recupera la forma que aparece en el fragmento original."
+          },
+          "source_hash": "ab26c0802557289b1510e6bc534f740b73b6a20acea1f9bf3bd8e56eba145f14"
+        },
+        {
+          "annotations": [
+            {
+              "glyph_id": "glyph-ehecatl-mdz12r",
+              "note": "La referencia muestra una cabeza asociada a Ehecatl en Ecatepec, Mendoza 12r; la ficha se titula Ecatl y discute esa relación. Se usa para comparar el referente viento; no es la imagen de este pasaje.",
+              "quote": "ehecatl",
+              "relation": "full_word",
+              "sense_id": "sense-ehecatl"
+            }
+          ],
+          "archive_id": "axolotl-10466",
+          "comprehension": {
+            "answer": 0,
+            "explanation": "La traducción de origen dice «como de obsidianas». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+            "kind": "meaning",
+            "options": [
+              "como de obsidianas",
+              "Con flores de cacao.",
+              "Con una carta de venta."
+            ],
+            "question": "¿Con qué compara el pasaje el viento?"
+          },
+          "context": "El pasaje compara el viento con obsidianas en una descripción de llanto y abatimiento. No sustituimos la comparación por una definición del viento.",
+          "exercise": {
+            "answer": 0,
+            "blank": "ehecatl",
+            "explanation": "El registro escribe «ehecatl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+            "kind": "cloze",
+            "options": [
+              "ehecatl",
+              "tonatiuh",
+              "xochitl"
+            ],
+            "question": "Recupera la forma que aparece en el fragmento original."
+          },
+          "source_hash": "ec4dc5237883a56007b77418f712d69075c8689a72b5cd209e5560fdd1714fd0"
+        }
+      ],
+      "id": "fuego-viento",
+      "minutes": 8,
+      "objective": "Reconocer tletl y ehecatl en acciones y descripciones, conservando el alcance ritual o figurado de cada pasaje.",
+      "reading_tips": [
+        "La representación del fuego en papel y el fuego encendido son referentes distintos.",
+        "El viento aparece en descripciones que requieren su contexto. No se asigna automáticamente una divinidad a cada aparición."
+      ],
+      "sense_ids": [
+        "sense-tletl",
+        "sense-ehecatl"
+      ],
+      "title": "Un fuego y dos contextos del viento",
+      "version": 1
+    },
+    {
+      "cover_glyph": "glyph-tonatiuh-mdz34r",
+      "examples": [
+        {
+          "annotations": [
+            {
+              "glyph_id": "glyph-tonatiuh-mdz34r",
+              "note": "La referencia es un disco solar, Mendoza 34r, usado también en Tonatiuhco. No representa este eclipse, rumbo o relato de creación.",
+              "quote": "tonatiuh",
+              "relation": "full_word",
+              "sense_id": "sense-tonatiuh"
+            }
+          ],
+          "archive_id": "axolotl-02027",
+          "comprehension": {
+            "answer": 0,
+            "explanation": "La traducción de origen dice «las estrellas». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+            "kind": "meaning",
+            "options": [
+              "las estrellas",
+              "Las casas.",
+              "Los venados."
+            ],
+            "question": "¿Qué se vio durante el eclipse?"
+          },
+          "context": "Un relato registra un eclipse de sol y la aparición de estrellas. La anotación no cambia cicitlaltin por otra forma.",
+          "exercise": {
+            "answer": 0,
+            "blank": "tonatiuh",
+            "explanation": "El registro escribe «tonatiuh». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+            "kind": "cloze",
+            "options": [
+              "tonatiuh",
+              "metztli",
+              "tepetl"
+            ],
+            "question": "Recupera la forma que aparece en el fragmento original."
+          },
+          "source_hash": "5ea4916ee340fe3f17c095963ef41add17dcc4e1492c542950f58b9d6bff9b9f"
+        },
+        {
+          "annotations": [
+            {
+              "glyph_id": "glyph-tonatiuh-mdz34r",
+              "note": "La referencia es un disco solar, Mendoza 34r, usado también en Tonatiuhco. No representa este eclipse, rumbo o relato de creación.",
+              "quote": "tonatiuh",
+              "relation": "full_word",
+              "sense_id": "sense-tonatiuh"
+            }
+          ],
+          "archive_id": "axolotl-04888",
+          "comprehension": {
+            "answer": 1,
+            "explanation": "La traducción de origen dice «hacia la salida del sol». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+            "kind": "meaning",
+            "options": [
+              "Hacia la casa arrendada.",
+              "hacia la salida del sol",
+              "Hacia el puerto."
+            ],
+            "question": "¿Hacia dónde se realiza la acción?"
+          },
+          "context": "El pasaje describe una acción hacia la salida del sol y conserva el nombre español del rumbo.",
+          "exercise": {
+            "answer": 1,
+            "blank": "tonatiuh",
+            "explanation": "El registro escribe «tonatiuh». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+            "kind": "cloze",
+            "options": [
+              "tletl",
+              "tonatiuh",
+              "atl"
+            ],
+            "question": "Recupera la forma que aparece en el fragmento original."
+          },
+          "source_hash": "c003105c5070af362db9c446dfea17d46183a65606e94b094c60c72a621f49ed"
+        },
+        {
+          "annotations": [
+            {
+              "glyph_id": "glyph-metztli-fcbk11f214v",
+              "note": "La referencia es un elemento lunar separado de Temetztli, Florentino libro 11, 214v. Aquí se consulta Luna por el contexto; no se extrapola a la acepción mes.",
+              "quote": "metztli",
+              "relation": "full_word",
+              "sense_id": "sense-metztli"
+            }
+          ],
+          "archive_id": "axolotl-09427",
+          "comprehension": {
+            "answer": 2,
+            "explanation": "La traducción de origen dice «en el primer cielo». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+            "kind": "meaning",
+            "options": [
+              "En el octavo cielo.",
+              "En el cuarto cielo.",
+              "en el primer cielo"
+            ],
+            "question": "¿Dónde sitúa a la Luna?"
+          },
+          "context": "El relato cristiano de creación sitúa estrellas, Luna y Sol en distintos cielos. Es la distribución que afirma este fragmento, no una explicación astronómica.",
+          "exercise": {
+            "answer": 2,
+            "blank": "metztli",
+            "explanation": "El registro escribe «metztli». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+            "kind": "cloze",
+            "options": [
+              "tonatiuh",
+              "tototl",
+              "metztli"
+            ],
+            "question": "Recupera la forma que aparece en el fragmento original."
+          },
+          "source_hash": "f166961b52412c33408bcd578cda8b5d8e3ff3b894861c66330b650d1d329be9"
+        },
+        {
+          "annotations": [
+            {
+              "glyph_id": "glyph-metztli-fcbk11f214v",
+              "note": "La referencia es un elemento lunar separado de Temetztli, Florentino libro 11, 214v. Aquí se consulta Luna por el contexto; no se extrapola a la acepción mes.",
+              "quote": "metztli",
+              "relation": "full_word",
+              "sense_id": "sense-metztli"
+            }
+          ],
+          "archive_id": "axolotl-14327",
+          "comprehension": {
+            "answer": 0,
+            "explanation": "La traducción de origen dice «durante la noche». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+            "kind": "meaning",
+            "options": [
+              "durante la noche",
+              "Durante el día.",
+              "Solo al mediodía."
+            ],
+            "question": "¿Cuándo dice que alumbra la Luna?"
+          },
+          "context": "El relato de creación distingue la gran luminaria solar de la pequeña lunar; conserva la traducción completa y su marco religioso.",
+          "exercise": {
+            "answer": 0,
+            "blank": "metztli",
+            "explanation": "El registro escribe «metztli». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+            "kind": "cloze",
+            "options": [
+              "metztli",
+              "cuicatl",
+              "tlalli"
+            ],
+            "question": "Recupera la forma que aparece en el fragmento original."
+          },
+          "source_hash": "89259691ca9dd8208b0a53975d70e2723ec5833acd36d74412f80decfca05b7f"
+        }
+      ],
+      "id": "sol-luna",
+      "minutes": 10,
+      "objective": "Reconocer tonatiuh y metztli como cuerpos celestes y comparar un eclipse, un rumbo y dos pasajes de creación.",
+      "reading_tips": [
+        "Metztli también tiene una acepción mes; aquí la traducción menciona la Luna. Los contextos no se mezclan.",
+        "Los dos fragmentos de creación son largos y conservan su marco cristiano. Lee la traducción antes de responder sobre la distribución de luces."
+      ],
+      "sense_ids": [
+        "sense-tonatiuh",
+        "sense-metztli"
+      ],
+      "title": "El Sol y la Luna en los relatos",
+      "version": 1
     }
   ],
   "note": "Piloto editorial local. Traducciones heredadas de Axolotl y ayudas redactadas para la lectura; revisión lingüística y cotejo de páginas primarias pendientes.",

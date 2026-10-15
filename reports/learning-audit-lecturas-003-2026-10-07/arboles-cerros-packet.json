@@ -1,0 +1,148 @@
+{
+  "id": "arboles-cerros",
+  "title": "Árboles, señales y cerros",
+  "objective": "Reconocer quauitl, cuahuitl y tepetl al leer un camino, árboles arrastrados y un lugar de asentamiento.",
+  "review_status": "editorial_draft",
+  "target_sense_ids": [
+    "sense-cuahuitl",
+    "sense-tepetl"
+  ],
+  "annotation_example_counts": {
+    "sense-cuahuitl": 3,
+    "sense-tepetl": 1
+  },
+  "examples": [
+    {
+      "archive_id": "axolotl-01138",
+      "nah": "Yc ye quiuallilhuia: “Ma ximouica, ma ye xitlamachiotitiuh, ma xicmatzayatiuh yn quauitl ma tetl xictlalitiuh ynic tiquitztiazque”.",
+      "es": "Pero luego le dijeron: “Ve tú por delante; ve poniendo señales, cortando la corteza de los árboles, amontonando piedras, para que nosotros podamos seguir el camino”.",
+      "document": "Anales de Tlatelolco",
+      "locator": "Axolotl, registro CSV 1138; página de la edición primaria pendiente",
+      "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv",
+      "iso": "nci",
+      "source_hash": "befeeb0acd29dd33ffd560e79c79bb1f7c32d137374437e22b49c25e1818a356",
+      "annotations": [
+        {
+          "glyph_id": "glyph-cuahuitl-mdz7v",
+          "note": "La referencia es un árbol separado de Cuauhnahuac, Mendoza 7v. No identifica la especie ni representa los árboles de este relato.",
+          "quote": "quauitl",
+          "relation": "full_word",
+          "sense_id": "sense-cuahuitl",
+          "start": 81,
+          "end": 88
+        }
+      ],
+      "exercise": {
+        "answer": 0,
+        "blank": "quauitl",
+        "explanation": "El registro escribe «quauitl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+        "kind": "cloze",
+        "options": [
+          "quauitl",
+          "tetl",
+          "metztli"
+        ],
+        "question": "Recupera la forma que aparece en el fragmento original."
+      }
+    },
+    {
+      "archive_id": "axolotl-12972",
+      "nah": "in moch quiuica quitzineuhtiuh ueuey cuahuitl: auh ca oncan tiquezquilhuitiz timatzacuaz titlaihiyouiz in mocuitlaxcoltica in monetequiliztica.",
+      "es": "arrastran consigo todos los grandes árboles y los desarraigan: y allí tendrás que durar varios días, estarás impedido por las aguas, tendrás grandes angustias a causa de tu estómago vacío y del deseo de todas las cosas!",
+      "document": "Vida económica de Tenochtitlan",
+      "locator": "Axolotl, registro CSV 12972; página de la edición primaria pendiente",
+      "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv",
+      "iso": "nci",
+      "source_hash": "daabee099c09682555c8b4d6293ea5d9cad2fd237b02458da3e63293717bef51",
+      "annotations": [
+        {
+          "glyph_id": "glyph-cuahuitl-mdz7v",
+          "note": "La referencia es un árbol separado de Cuauhnahuac, Mendoza 7v. No identifica la especie ni representa los árboles de este relato.",
+          "quote": "cuahuitl",
+          "relation": "full_word",
+          "sense_id": "sense-cuahuitl",
+          "start": 37,
+          "end": 45
+        }
+      ],
+      "exercise": {
+        "answer": 1,
+        "blank": "cuahuitl",
+        "explanation": "El registro escribe «cuahuitl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+        "kind": "cloze",
+        "options": [
+          "calli",
+          "cuahuitl",
+          "cuicatl"
+        ],
+        "question": "Recupera la forma que aparece en el fragmento original."
+      }
+    },
+    {
+      "archive_id": "axolotl-11726",
+      "nah": "In azo cana atlauhitic atlauhcamac tlacopac tetl itzintlan cuahuitl itzintlan timocochitiz in azo cana timopopoliuitiz mitz tlatiz totecuyo;",
+      "es": "Puede ser que en alguna parte tengas que acostarte dentro de la barranca, a la boca de la barranca, o en la cresta del monte, entre las piedras, entre los árboles; puede ser que en algún lugar quedes del todo aniquilado, acabe contigo nuestro señor.",
+      "document": "Vida económica de Tenochtitlan",
+      "locator": "Axolotl, registro CSV 11726; página de la edición primaria pendiente",
+      "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv",
+      "iso": "nci",
+      "source_hash": "cd05e51c5b5130e9b1b9a5796e281bc3489e8bcde6403ad61032b2555bda1247",
+      "annotations": [
+        {
+          "glyph_id": "glyph-cuahuitl-mdz7v",
+          "note": "La referencia es un árbol separado de Cuauhnahuac, Mendoza 7v. No identifica la especie ni representa los árboles de este relato.",
+          "quote": "cuahuitl",
+          "relation": "full_word",
+          "sense_id": "sense-cuahuitl",
+          "start": 59,
+          "end": 67
+        }
+      ],
+      "exercise": {
+        "answer": 2,
+        "blank": "cuahuitl",
+        "explanation": "El registro escribe «cuahuitl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+        "kind": "cloze",
+        "options": [
+          "atl",
+          "mazatl",
+          "cuahuitl"
+        ],
+        "question": "Recupera la forma que aparece en el fragmento original."
+      }
+    },
+    {
+      "archive_id": "axolotl-13930",
+      "nah": "Yc-etetl tonalli eilhuitl yn oncan quitlatique ycpac tepetl, ynic motocayoti Tonalliytlatlayan; yc tlemamaltacico yn oncan yn totollimpaneca chichimeca.",
+      "es": "En esos tres días encendieron su fuego sobre el cerro, que por eso se llamó Tonallitlatlayan; así fue como los totolimpanecas chichimecas encendieron allá su fuego al llegar.",
+      "document": "Memorial Breve (Libro las ocho relaciones)",
+      "locator": "Axolotl, registro CSV 13930; página de la edición primaria pendiente",
+      "source_url": "https://github.com/ElotlMX/py-elotl/blob/157f34300f4ca92c3d75b74ec14142916d75c30b/elotl/corpora/axolotl.csv",
+      "iso": "nci",
+      "source_hash": "684e62529589f2a5cad910650bcb8a84615352a2573f6cd32f178ea4991993e1",
+      "annotations": [
+        {
+          "glyph_id": "glyph-tepetl-mdz32r",
+          "note": "La referencia es un cerro extraído de Ocotepec, Mendoza 32r. No representa el cerro nombrado en este fragmento.",
+          "quote": "tepetl",
+          "relation": "full_word",
+          "sense_id": "sense-tepetl",
+          "start": 53,
+          "end": 59
+        }
+      ],
+      "exercise": {
+        "answer": 0,
+        "blank": "tepetl",
+        "explanation": "El registro escribe «tepetl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+        "kind": "cloze",
+        "options": [
+          "tepetl",
+          "tlalli",
+          "tototl"
+        ],
+        "question": "Recupera la forma que aparece en el fragmento original."
+      }
+    }
+  ]
+}
