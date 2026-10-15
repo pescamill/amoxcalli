@@ -277,7 +277,7 @@ async function open(path,studyData){
  const fake=JSON.parse(JSON.stringify(firstVisual));fake.reference.fields[0].value='<img src="https://image.invalid" onerror="bad()">';fake.reference.attributed_responsibility=['<script>literal source</script>'];fake.proposed_input.catalog_page_url='javascript:alert(1)';
  const holder=d.createElement('div');holder.innerHTML=w.labVisualCase(fake);assert.equal(holder.querySelector('script'),null);assert.equal(holder.querySelector('img'),null);assert.equal(holder.querySelector('a[href^="javascript:"]'),null);assert(holder.textContent.includes('<script>literal source</script>'));
  for(const query of ['?split=reserve','?path=data/community/private.sqlite3']){const denied=await w.fetch('/api/laboratory/visual-preparation'+query);assert.equal(denied.status,400);assert(!Object.hasOwn(await denied.json(),'cases'));}
- const noExecute=await w.fetch('/api/laboratory/visual-preparation',{method:'POST',headers:{'Content-Type':'application/json'},body:'{}'});assert.equal(noExecute.status,404);
+ const noExecute=await w.fetch('/api/laboratory/visual-preparation',{method:'POST',headers:{'Content-Type':'application/json'},body:'{}'});assert.equal(noExecute.status,405);
  const incomplete=w.labVisualPreparation({...visualStatus,available:false,case_count:0});assert(incomplete.includes('no se muestran referencias'));assert(!incomplete.includes('Campos de referencia'));
  const labStorage=w.localStorage.getItem('scriptorium-study-v1');assert.equal(labStorage,studyBeforeLab);
  console.log('PASS: preparación visual not_run, 51 casos documentales de desarrollo, selector/obra, referencias separadas y colapsadas, fuentes escapadas/enlaces sin imágenes, sin ejecución/reserva/progreso');

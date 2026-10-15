@@ -16,7 +16,22 @@ Con Python 3.11 o posterior (solo biblioteca estándar):
 make demo
 ```
 
-Abre <http://127.0.0.1:8766>. `make demo` prepara una vez los análisis derivados (~1 min) y arranca el servidor; `bash scripts/plataforma.sh` arranca sin prepararlos. Para usar el teléfono o HTTPS, ver [docs/WEBAPP.md](docs/WEBAPP.md).
+Abre <http://127.0.0.1:8766>. `make demo` prepara una vez los análisis derivados (~1 min) y arranca el servidor. Un solo proceso sirve la aplicación, Voces (`/aportar`) y la API; el arranque es siempre el mismo script:
+
+```bash
+bash scripts/amoxcalli.sh serve [opciones]   # solo biblioteca estándar; detiene un servidor previo en el puerto
+bash scripts/amoxcalli.sh setup [opciones]   # además prepara .venv, dependencias y pesos del modelo local
+```
+
+| Opción | Efecto |
+| --- | --- |
+| `--host`, `--port` | Interfaz y puerto (por omisión `127.0.0.1:8766`). Para el teléfono en la misma red, la IP del equipo: [docs/WEBAPP.md](docs/WEBAPP.md). |
+| `--public-origin https://dominio` | Detrás de un proxy HTTPS: acepta ese Host y lo exige como Origin de escritura. |
+| `--db ruta` | Base local de perfiles, aportaciones y propuestas (por omisión `data/community/voces.sqlite3`). |
+| `--disable-model` | No ofrece generación aunque el modelo esté instalado (se ofrece solo cuando base, adaptador y dependencias existen). `--adapter` elige otro adaptador. |
+| `--explain-model claude` | Explicaciones redactadas por Claude en Preguntar; envía la pregunta y los pasajes citados a la API de Anthropic. Sin ella, nada sale del equipo. |
+
+En Windows: `py -m nahuatl_local.platform serve` con las mismas opciones (`--db` va antes de `serve`).
 
 Un recorrido corto: abre **Aprender → Flores y cantos**, oculta el español y pulsa una palabra para ver su análisis (*ni-qu-itta*), su entrada y otros pasajes con la misma raíz. Después escribe *kuali* o *¿cómo se dice mujer?* en **Preguntar**.
 

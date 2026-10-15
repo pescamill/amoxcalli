@@ -12,7 +12,7 @@ Updated 15 October 2026. This is the only planning document: `docs/PROGRESO_INTE
 | Archive | 16,111 aligned passages; ~10k are *not* classical (Puebla 2,884 · Morelos 1,938 · Central 1,543 · Huasteca 1,596 · unlabeled 2,157) | Archive search is spelling-sensitive; analyzer is classical-only |
 | Documentary lookup | BM25 + citation validator + abstention: 119/123 complete | Ranks glyph elements above the dictionary entry for "¿Qué significa xochitl?" |
 | Model lab | Qwen3‑0.6B + LoRA: best 22.4 chrF++ with RAG, below "top BM25 passage" (27.2) | The LLM has no product role yet |
-| Engineering | Python stdlib server, vanilla JS PWA; 267 Python tests + 5 DOM suites; CI on a clean clone | Cold start ~1 min until `data/derived/` exists |
+| Engineering | Python stdlib server, vanilla JS PWA; 274 Python tests + 5 DOM suites; CI on a clean clone | Cold start ~1 min until `data/derived/` exists |
 
 ### Found while testing (14 October)
 
@@ -83,6 +83,7 @@ Everything below is in git history (last commit containing it: `86c217f`).
 |---|---|
 | Display gate: `reports/documentary-laboratory-display-v1.json`, `DISPLAY_SOURCES`, `display_contract`, `--prepare-display`, `--documentary-display` | Hashed `platform.py`, `app.js`, `learning.js`, `style.css`… into Lab evidence, so every UI change forced regenerating evidence. The DOM suite already checks the same screens. The Lab report now binds only to the replayed retrieval measurement and the battery validation. |
 | `nahuatl_local/serve.py` + `tests/test_server.py` | Legacy inline-HTML server on port 8765, superseded by `platform.py`; only tested itself. |
+| `community.server()` / `community serve`, `scripts/plataforma.sh`, `voces.sh`, `iniciar.sh` | A second server for Voces (with the default listen queue of 5) and three launch scripts. One process now serves app, Voces and API: `web.py` holds the route table, JSON errors, security headers, allowed hosts and static files; `scripts/amoxcalli.sh serve\|setup` is the only launcher (removed after `85ee220`). |
 | `nahuatl_local/infer.py`, `review.py` CLI `main()` | No callers; `review.py`'s functions stay (used by the platform). |
 | `nahuatl_local/iteration.py` + `tests/test_iteration.py` (12) | Autonomous-cycle diagnosis, queue and state; no visible function or current measurement. The editorial queue it read is still produced by `lesson_audit`. |
 | `lesson_review_packet.py`, `lesson_review_status.py` + tests (12 + 16) | Packaging and staleness checks for review packets of one reading; the workshop sheet (`#taller`) and `lesson_audit` cover the visible need. |
@@ -96,5 +97,4 @@ Everything below is in git history (last commit containing it: `86c217f`).
 | 13 docs: `PROGRESO_INTERNO`, `ITERACIONES`, `TRABAJO_AUTONOMO`, `LEARNING_ITERATION_PLAN`, `DIRECCION_APRENDIZAJE`, `REVISION_LECTURA`, `ESTADO_REVISION_LECTURA`, `CANDIDATOS_CONEXIONES_LEXICAS`, `AUDITORIA_VARIANTES`, `AUTOTRAIN`, `MEJORAR`, `ESTADO_MODELO`, `PRUEBA_VISUAL_LOCAL` | Dated logs and guides to removed tools; two plans (PROGRESO_INTERNO and this file) disagreed (e.g. 6 vs 12 readings). Summary in [HISTORIA.md](HISTORIA.md); the image-test proposal is under Human milestones. |
 
 ### Known follow-ups
-- `nahuatl_local/community.py` is still a measured input because `corpus.py` imports `Store` from it; any server change there forces a re-measurement. Moving `Store` to its own module (server task) removes that coupling.
 - `reports/editorial-pipeline/batch-008-v10/` and `batch-009-v11/` can go once editors discard the stale proposals that cite them.

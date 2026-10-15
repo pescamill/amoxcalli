@@ -57,4 +57,4 @@ derived:
 	$(PYTHON) -c "from nahuatl_local.stems import WordStudy; WordStudy()._build()"
 
 demo: derived
-	bash scripts/plataforma.sh --port $(PORT)
+	bash scripts/amoxcalli.sh serve --port $(PORT)

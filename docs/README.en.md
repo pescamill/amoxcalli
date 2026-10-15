@@ -16,7 +16,7 @@ Python 3.11+ (standard library only):
 make demo
 ```
 
-Open <http://127.0.0.1:8766>. `make demo` builds the derived analysis caches once (~1 min) and starts the server. Phone and HTTPS setup: [WEBAPP.md](WEBAPP.md) (ES).
+Open <http://127.0.0.1:8766>. `make demo` builds the derived analysis caches once (~1 min) and starts the server. One process serves the app, Voces (`/aportar`) and the API; `bash scripts/amoxcalli.sh serve` starts it and `setup` also installs the local model. Options (`--host`, `--port`, `--db`, `--public-origin`, `--disable-model`, `--explain-model claude`) are listed in the [Spanish README](../README.md#probarlo). Phone and HTTPS setup: [WEBAPP.md](WEBAPP.md) (ES).
 
 ## What is there
 

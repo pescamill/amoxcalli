@@ -12,7 +12,7 @@ Una institución mexicana podría evaluar el proyecto como herramienta de lectur
 
 | Material | Dónde encontrarlo | Qué demuestra |
 | --- | --- | --- |
-| Aplicación local | `bash scripts/plataforma.sh` | Un recorrido funcional, sin necesidad del LLM |
+| Aplicación local | `bash scripts/amoxcalli.sh serve` | Un recorrido funcional, sin necesidad del LLM |
 | Propósito y límites | [PROPOSITO](PROPOSITO.md) y pantalla Proyecto y colaboración | Alcance declarado y públicos previstos |
 | Ficha de lectura | Leer → Preparar ficha para taller; `#taller/aves` | Pasajes, preguntas, claves opcionales, localizadores y hashes |
 | Receta y respaldo | `configs/reading-context-2026-10-07.json` y `reports/learning-before-reading-context-2026-10-07/` | Conservación del contenido original y decisiones reproducibles |

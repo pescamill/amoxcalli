@@ -1,4 +1,7 @@
-"""Voces: aportaciones locales de texto y voz. Solo biblioteca estándar de Python."""
+"""Voces: almacén de aportaciones de texto y voz, sus rutas HTTP y la administración por consola.
+
+La aplicación (platform.py) sirve Voces en /aportar; este módulo no tiene servidor propio.
+"""
 import argparse
 import contextlib
 import hashlib
@@ -6,13 +9,9 @@ import json
 import secrets
 import sqlite3
 import time
-import traceback
 import uuid
 from datetime import datetime, timezone
-from http.cookies import SimpleCookie
-from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
-from urllib.parse import parse_qs, urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 ASSETS = Path(__file__).with_name('community_web')
@@ -420,154 +419,64 @@ class Store:
         return len(rows)
 
 
-def handler(store):
-    class Handler(BaseHTTPRequestHandler):
-        server_version = 'Voces/1'
-        content_security_policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; media-src 'self' blob:; connect-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'none'"
+def routes(router, store):
+    """Rutas HTTP de Voces; platform.py las monta en la aplicación única (con /api/task y la página /aportar)."""
+    def bootstrap(request):
+        return request.reply(store.bootstrap(request.get_person()))
 
-        def log_message(self, fmt, *args):
-            # No registra textos, cookies ni direcciones de los participantes.
-            pass
+    def mine(request):
+        return request.reply(store.mine(request.get_person(True)))
 
-        def reply(self, value, status=200, mime='application/json; charset=utf-8', cookie=None):
-            body = json.dumps(value, ensure_ascii=False).encode() if mime.startswith('application/json') else value
-            self.send_response(status)
-            self.send_header('Content-Type', mime)
-            self.send_header('Content-Length', str(len(body)))
-            self.send_header('Cache-Control', 'no-store')
-            self.send_header('X-Content-Type-Options', 'nosniff')
-            self.send_header('Referrer-Policy', 'no-referrer')
-            self.send_header('X-Frame-Options', 'DENY')
-            self.send_header('Content-Security-Policy', self.content_security_policy)
-            self.send_header('Permissions-Policy', 'microphone=(self), camera=(), geolocation=()')
-            if cookie:
-                self.send_header('Set-Cookie', cookie)
-            self.end_headers()
-            self.wfile.write(body)
+    def audio(request):
+        mime, body = store.get_audio(request.tail, request.get_person(True))
+        return request.reply(body, mime=mime)
 
-        def get_person(self, required=False):
-            cookies = SimpleCookie()
-            with contextlib.suppress(Exception):
-                cookies.load(self.headers.get('Cookie', ''))
-            item = cookies.get('voces_session')
-            person = store.person(item.value if item else '')
-            if required and person is None:
-                raise Problem('Elige tu variante y crea tu perfil para participar.', 401)
-            return person
+    def profile(request):
+        profile, token = store.save_profile(request.body(), request.get_person())
+        secure = '; Secure' if request.headers.get('Origin', '').startswith('https://') else ''
+        cookie = f'voces_session={token}; HttpOnly; SameSite=Strict; Path=/; Max-Age=7776000{secure}' if token else None
+        return request.reply(profile, cookie=cookie)
 
-        def body(self, raw=False):
-            try:
-                n = int(self.headers.get('Content-Length', '0'))
-            except ValueError:
-                raise Problem('Tamaño de envío inválido.') from None
-            if not 0 < n <= (MAX_AUDIO if raw else 32_768):
-                raise Problem('El envío está vacío o es demasiado grande.', 413)
-            data = self.rfile.read(n)
-            if raw:
-                return data
-            try:
-                value = json.loads(data)
-            except (ValueError, UnicodeDecodeError):
-                raise Problem('No se pudo leer el envío.') from None
-            if not isinstance(value, dict):
-                raise Problem('El envío debe ser un objeto.')
-            return value
+    def save_audio(request):
+        person = request.get_person(True)
+        return request.reply({'id': store.save_audio(person, request.headers.get('Content-Type', ''), request.body(raw=True))}, 201)
 
-        def dispatch(self):
-            parsed = urlparse(self.path)
-            path = parsed.path
-            person = self.get_person()
-            if self.command == 'GET':
-                static = {'/': ('index.html','text/html; charset=utf-8'), '/app.js': ('app.js','text/javascript; charset=utf-8'),
-                          '/style.css': ('style.css','text/css; charset=utf-8'), '/favicon.svg': ('favicon.svg','image/svg+xml')}
-                if path in static:
-                    name, mime = static[path]
-                    return self.reply((ASSETS/name).read_bytes(), mime=mime)
-                if path == '/api/bootstrap':
-                    return self.reply(store.bootstrap(person))
-                person = self.get_person(True)
-                if path == '/api/task':
-                    query = parse_qs(parsed.query)
-                    return self.reply(store.task(query.get('mode',['recognize'])[0], person, query.get('after',[''])[0]))
-                if path == '/api/mine':
-                    return self.reply(store.mine(person))
-                if path.startswith('/api/audio/'):
-                    mime, audio = store.get_audio(path.rsplit('/',1)[1], person)
-                    return self.reply(audio, mime=mime)
-            else:
-                # Rechaza escritura entre sitios y solicitudes sin Origin permitido.
-                origin = self.headers.get('Origin', '')
-                expected = getattr(self.server, 'public_origin', None)
-                local = f'http://{self.headers.get("Host", "")}'
-                if origin not in ([expected] if expected else [local]):
-                    raise Problem('Origen de envío no permitido.', 403)
-                if path == '/api/profile' and self.command == 'POST':
-                    profile, token = store.save_profile(self.body(), person)
-                    secure = '; Secure' if origin.startswith('https://') else ''
-                    cookie = f'voces_session={token}; HttpOnly; SameSite=Strict; Path=/; Max-Age=7776000{secure}' if token else None
-                    return self.reply(profile, cookie=cookie)
-                person = self.get_person(True)
-                if self.command == 'DELETE':
-                    record_id = path.rsplit('/',1)[-1]
-                    if path.startswith('/api/audio/'):
-                        store.delete_unused_audio(record_id, person)
-                    elif path.startswith('/api/contributions/'):
-                        store.withdraw(person, record_id)
-                    elif path.startswith('/api/reviews/'):
-                        store.withdraw(person, record_id, review=True)
-                    else:
-                        raise Problem('Ruta no encontrada.', 404)
-                    return self.reply({'ok':True})
-                if path == '/api/audio':
-                    return self.reply({'id':store.save_audio(person, self.headers.get('Content-Type',''), self.body(raw=True))}, 201)
-                if path == '/api/contributions':
-                    return self.reply(store.contribute(person, self.body()), 201)
-                if path == '/api/reviews':
-                    return self.reply(store.review(person, self.body()), 201)
-            raise Problem('Ruta no encontrada.', 404)
+    def contribute(request):
+        person = request.get_person(True)
+        return request.reply(store.contribute(person, request.body()), 201)
 
-        def handle_request(self):
-            self.connection.settimeout(20)
-            # Impide DNS rebinding en el servidor local; proxy HTTPS mediante --public-origin.
-            host = self.headers.get('Host','')
-            if host not in self.server.allowed_hosts:
-                return self.reply({'error':'Host no permitido.'}, 403)
-            try:
-                self.dispatch()
-            except Problem as error:
-                self.reply({'error':str(error)}, error.status)
-            except (sqlite3.Error, ValueError, TypeError, KeyError) as error:
-                self.reply({'error':'No se pudo guardar. Revisa los campos e inténtalo de nuevo.'}, 400)
-            except (BrokenPipeError, ConnectionResetError, TimeoutError):
-                pass
-            except Exception:
-                # Un fallo inesperado responde 500 en JSON (antes la conexión se cerraba sin respuesta).
-                self.log_error('Error interno en %s\n%s', self.path, traceback.format_exc())
-                self.reply({'error':'Error interno del servidor. El detalle quedó en el registro local.'}, 500)
+    def review(request):
+        person = request.get_person(True)
+        return request.reply(store.review(person, request.body()), 201)
 
-        do_GET = do_POST = do_DELETE = handle_request
-    return Handler
+    def delete_audio(request):
+        store.delete_unused_audio(request.tail, request.get_person(True))
+        return request.reply({'ok': True})
 
+    def withdraw(request):
+        store.withdraw(request.get_person(True), request.tail)
+        return request.reply({'ok': True})
 
-def server(store, host='127.0.0.1', port=8766, public_origin=None):
-    httpd = ThreadingHTTPServer((host,port), handler(store))
-    actual_port = httpd.server_address[1]
-    httpd.public_origin = public_origin
-    httpd.allowed_hosts = {f'localhost:{actual_port}', f'127.0.0.1:{actual_port}', f'{host}:{actual_port}'}
-    if public_origin:
-        parsed = urlparse(public_origin)
-        if parsed.scheme != 'https' or not parsed.netloc or parsed.path not in ('','/'):
-            raise Problem('--public-origin requiere un origen HTTPS sin ruta.')
-        httpd.public_origin = public_origin.rstrip('/')
-        httpd.allowed_hosts.add(parsed.netloc)
-    return httpd
+    def withdraw_review(request):
+        store.withdraw(request.get_person(True), request.tail, review=True)
+        return request.reply({'ok': True})
+
+    router.add('GET', '/api/bootstrap', bootstrap)
+    router.add('GET', '/api/mine', mine)
+    router.add('GET', '/api/audio/', audio, prefix=True)
+    router.add('POST', '/api/profile', profile)
+    router.add('POST', '/api/audio', save_audio)
+    router.add('POST', '/api/contributions', contribute)
+    router.add('POST', '/api/reviews', review)
+    router.add('DELETE', '/api/audio/', delete_audio, prefix=True)
+    router.add('DELETE', '/api/contributions/', withdraw, prefix=True)
+    router.add('DELETE', '/api/reviews/', withdraw_review, prefix=True)
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--db', type=Path, default=DEFAULT_DB)
     commands = parser.add_subparsers(dest='command', required=True)
-    serve = commands.add_parser('serve'); serve.add_argument('--host',default='127.0.0.1'); serve.add_argument('--port',type=int,default=8766); serve.add_argument('--public-origin')
     commands.add_parser('queue')
     imp = commands.add_parser('import-tasks'); imp.add_argument('path')
     curate = commands.add_parser('curate'); curate.add_argument('id'); curate.add_argument('--decision',choices=['accepted','rejected'],required=True); curate.add_argument('--reviewer',required=True); curate.add_argument('--language',choices=['modern','nci'],required=True); curate.add_argument('--evidence',required=True); curate.add_argument('--text',default=''); curate.add_argument('--source-url',default=''); curate.add_argument('--locator',default='')
@@ -575,13 +484,7 @@ def main():
     observations = commands.add_parser('export-observations'); observations.add_argument('--output',required=True)
     args = parser.parse_args(); store = Store(args.db)
     try:
-        if args.command == 'serve':
-            httpd = server(store,args.host,args.port,args.public_origin)
-            print(f'Voces: http://127.0.0.1:{httpd.server_address[1]} — datos: {store.path}', flush=True)
-            try: httpd.serve_forever()
-            except KeyboardInterrupt: pass
-            finally: httpd.server_close()
-        elif args.command == 'queue':
+        if args.command == 'queue':
             with store.db() as db:
                 for row in db.execute("SELECT c.*,t.payload AS task_payload FROM contributions c JOIN tasks t ON t.id=c.task WHERE c.status!='withdrawn'"):
                     item = dict(row);item['payload']=json.loads(item['payload']);item['task_payload']=json.loads(item['task_payload']);item['reviews']=[dict(r) for r in db.execute('SELECT id,payload FROM reviews WHERE contribution=?',(row['id'],))];print(json.dumps(item,ensure_ascii=False))
