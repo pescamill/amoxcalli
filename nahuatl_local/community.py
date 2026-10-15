@@ -6,6 +6,7 @@ import json
 import secrets
 import sqlite3
 import time
+import traceback
 import uuid
 from datetime import datetime, timezone
 from http.cookies import SimpleCookie
@@ -539,6 +540,10 @@ def handler(store):
                 self.reply({'error':'No se pudo guardar. Revisa los campos e inténtalo de nuevo.'}, 400)
             except (BrokenPipeError, ConnectionResetError, TimeoutError):
                 pass
+            except Exception:
+                # Un fallo inesperado responde 500 en JSON (antes la conexión se cerraba sin respuesta).
+                self.log_error('Error interno en %s\n%s', self.path, traceback.format_exc())
+                self.reply({'error':'Error interno del servidor. El detalle quedó en el registro local.'}, 500)
 
         do_GET = do_POST = do_DELETE = handle_request
     return Handler
