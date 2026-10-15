@@ -163,6 +163,16 @@ class WordStudyServiceTests(unittest.TestCase):
                 self.assertEqual(err.exception.code, 400)
                 js = urllib.request.urlopen(base + '/morphology.js').read().decode()
                 self.assertIn('bindWordStudy', js)
+                # Un error inesperado devuelve 500 en JSON, no una conexión vacía.
+                original_word = ws.word
+                ws.word = lambda *a, **kw: (_ for _ in ()).throw(RuntimeError('boom'))
+                try:
+                    with self.assertRaises(urllib.error.HTTPError) as err:
+                        urllib.request.urlopen(base + '/api/word?w=calli')
+                    self.assertEqual(err.exception.code, 500)
+                    self.assertIn('error', json.load(err.exception))
+                finally:
+                    ws.word = original_word
             finally:
                 httpd.shutdown(); httpd.server_close()
 
