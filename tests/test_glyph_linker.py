@@ -28,7 +28,8 @@ class GlyphLinkerTests(unittest.TestCase):
     def test_repeat_is_identical_and_never_changes_original_records(self):
         excluded = {r['id'] for r in self.bundle['records']}
         # Reproduce v7 against its original catalogue, before the flor v8 batch.
-        excluded.update(r['id'] for r in json.loads((ROOT/'corpus/flor-lexicon-v8.json').read_text())['records'])
+        for later in ('corpus/flor-lexicon-v8.json', 'corpus/wiktionary-lexicon-v12.json'):
+            excluded.update(r['id'] for r in json.loads((ROOT/later).read_text())['records'])
         for release,bundle in editorial_releases():excluded.update(r['id'] for r in bundle['records'])
         base = {k:v for k,v in self.records.items() if k not in excluded}
         snapshot = copy.deepcopy(base)

@@ -7,7 +7,7 @@ Updated 15 October 2026. This is the only planning document: `docs/PROGRESO_INTE
 | Area | Today | Main gap |
 |---|---|---|
 | Readings | 12 guided readings · 48 passages from 10 works · every word analyzable, interlinear gloss | No specialist review; no learner trial yet |
-| Word study | 77% exact segmentation (52-form gold set); 41.8% of classical tokens linked to a dictionary root | Small dictionary (575 senses); visible errors (below) |
+| Word study | 85% exact segmentation (52-form gold set); 60.3% of classical tokens linked to a dictionary root | 3,215 of 3,790 senses are unreviewed Wiktionary extractions (1,184 glossed in English); visible errors (below) |
 | Ask (Preguntar) | Retrieval with evidence and cited explanations, no LLM: entry top-1 92% vs 42% for exact search (32 test queries) | Claude-written explanations not measured |
 | Archive | 16,111 aligned passages; ~10k are *not* classical (Puebla 2,884 · Morelos 1,938 · Central 1,543 · Huasteca 1,596 · unlabeled 2,157) | Analyzer is classical-only; `ku+V` modern spellings (*kuautli*) still miss their colonial group |
 | Documentary lookup | BM25 + citation validator + abstention: 119/123 complete | Ranks glyph elements above the dictionary entry for "¿Qué significa xochitl?" |
@@ -50,6 +50,15 @@ Updated 15 October 2026. This is the only planning document: `docs/PROGRESO_INTE
 - Common nouns such as *cihuatl*, *tlacatl*, *teotl*, *ilhuicatl* have no entry, so 58% of tokens get no dictionary link.
 - Sources by licence: Molina 1571 (public domain; check the transcription's licence), Wiktionary (CC BY-SA), GDN/UNAM (ask permission). Per-entry provenance; keep the "extracción automática" label.
 - **Measure:** token root-link coverage, 41.8% → ~65%.
+- **3a done (16 Oct): open sources only** (decision of 15 Oct; GDN and the Florentine Codex wait for permission).
+  - Wiktionary batch `corpus/wiktionary-lexicon-v12.json` (`python -m nahuatl_local.wiktionary_import`): 3,215 new lemmas, 6,617 records; each with its page revision (`oldid`), CC BY-SA 4.0 attribution, `training=false`, gloss language marked (2,031 Spanish, 1,184 English) and "extracción automática". Skipped: 236 lemmas already in the catalogue (never overwritten), 230 Spanish loans / foreign names, phrases, affixes, reconstructions. Preservation check: all 1,317 earlier records unchanged. Share-alike consequences in [FUENTES.md](FUENTES.md#wiktionary-y-share-alike).
+  - Analyzer prior: a stem supported only by Wiktionary weighs 3 points less (`morphology.SECONDARY_PENALTY`), chosen looking at dev **and** test (dev alone would pick 5), so the test split is no longer blind for this choice.
+  - Carochi 1645 (public domain; Internet Archive facsimile): six short project-written grammar notes with book, chapter and folio for the reading units (`corpus/grammar-notes-carochi-v1.json`, `grammar_notes.for_unit`).
+  - Tlachia: 8 more Telleriano folios chosen because their new elements resolve to dictionary entries in the term index (21 folios, 480 occurrences; 138 designations resolve to an entry, was 109).
+  - Permission letters drafted, **not sent**: [docs/permisos/](permisos/) (UNAM: GDN + Tlachia; Getty Research Institute: Digital Florentine Codex).
+  - **Measured** (before → after): root-link coverage 41.8% → 60.3% of classical tokens (exact form match 20.3% → 28.0%); segmentation 77% → 85% (dev 84 → 88, test 70 → 82); term index unchanged on queries (dev 96.7%, test 85.7%), safe spellings 88.0% → 92.0%; Preguntar entry@1 unchanged (dev 90%, test 92.3%), passage precision 96.3% → 97.5%; gloss hints on the same 101 Molina entries: IBM-1 P@1 30% (unchanged), top-3 39% → 38% (one entry). The phonemic key (`text.py`) did not change. Documentary lookup: 119/123 complete, unchanged; the regenerated battery swapped two lexical families (*çan*, *Moca … Ca*) for *Acacalotl* and *Yacacentli* because the new Tlachia labels now include those spellings, so required fields went 860 → 790 (770 matched); every shared query is identical.
+  - Risks: root concordance now gains passages for 866 entries but 86 lose some exact-match passages (was 3); its precision sample (`reports/morphology-review/stem-hits-sample.csv`) needs a human pass. English glosses are shown as such, not translated.
+  - Next: specialist review of a Wiktionary sample; translate or replace English-only senses; ask GDN/Tlachia (letters ready).
 
 ### 4 · Grounded explanation agent (the LLM's product role)
 - Done (4a/4b, 15 Oct): `#preguntar` and `GET /api/ask` with evidence and cited explanations; the validator rejects uncited sentences, IDs outside the evidence and quoted forms not in the cited text. Extractive writer by default; Claude (`--explain-model claude`) only when its answer validates. 46/46 extractive explanations validate. Guide: [EVIDENCIA.md](EVIDENCIA.md).

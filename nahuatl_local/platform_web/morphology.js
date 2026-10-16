@@ -23,7 +23,7 @@ function morphemeChips(a){
 }
 function morphDictionaryHTML(a){
  if(!a.dictionary?.length)return '';
- return `<p class="morph-dictionary">Entrada: ${a.dictionary.slice(0,2).map(d=>{const sense=state.byId?.[d.sense_id];const label=`<span lang="nci">${esc(d.written)}</span> · ${esc(d.label.slice(0,90))}`;return sense?`<a href="#lexico/${esc(d.sense_id)}">${label}</a>`:label;}).join(' · ')}${a.dictionary[0].automatic?' <span class="pill proposed">Molina / GDN · extracción automática</span>':''}</p>`;
+ return `<p class="morph-dictionary">Entrada: ${a.dictionary.slice(0,2).map(d=>{const sense=state.byId?.[d.sense_id];const label=`<span lang="nci">${esc(d.written)}</span> · ${esc(d.label.slice(0,90))}`;return sense?`<a href="#lexico/${esc(d.sense_id)}">${label}</a>`:label;}).join(' · ')}${a.dictionary[0].automatic?` <span class="pill proposed">${esc(originLabel(state.byId?.[a.dictionary[0].sense_id]))}</span>`:''}</p>`;
 }
 function wordAnalysisHTML(data){
  const [best,...alternatives]=data.analyses||[];

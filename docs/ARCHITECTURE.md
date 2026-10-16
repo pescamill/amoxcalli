@@ -8,7 +8,7 @@ Amoxcalli is a local app for learning to read Classical Nahuatl from sourced exa
 flowchart LR
   CSV["corpus/axolotl/axolotl.csv<br/>16,111 es–nah records"] --> P["passages.py<br/>Passage model"]
   B["corpus/*.json bundles<br/>(lexicon.STEPS + editorial releases)"] --> L["lexicon.py"]
-  L -- "build: fresh CorpusStore" --> C["corpus/lexicon-catalog.json<br/>542 entries · 1,317 records"]
+  L -- "build: fresh CorpusStore" --> C["corpus/lexicon-catalog.json<br/>3,745 entries · 7,934 records"]
   L -- "same steps, same markers" --> DB[("SQLite (CorpusStore)<br/>catalog + local edits<br/>+ accepted Voces proposals")]
   PIC["corpus/pictography/catalog.json"] --> PM["pictography.py"]
   T["text.py<br/>fold · phonemic_key · loose_key"] -.-> P & L & AN

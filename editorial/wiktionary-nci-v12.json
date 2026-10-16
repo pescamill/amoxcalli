@@ -1,0 +1,100 @@
+{
+  "id": "wiktionary-nci-v12",
+  "output": "corpus/wiktionary-lexicon-v12.json",
+  "report": "reports/wiktionary-import-v12.json",
+  "consulted": "2026-10-15",
+  "license": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "terms": "https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use"
+  },
+  "note": "Extractos de wiktextract publicados en kaikki.org. Solo se usan las tres secciones de náhuatl clásico (código nci). Los SHA-256 fijan exactamente los archivos leídos; una versión nueva del extracto exige un lote nuevo.",
+  "extracts": [
+    {
+      "id": "es",
+      "file": "es-nci.jsonl",
+      "url": "https://kaikki.org/eswiktionary/N%C3%A1huatl%20cl%C3%A1sico/kaikki.org-dictionary-N%C3%A1huatlcl%C3%A1sico.jsonl",
+      "sha256": "e45e47cad4aaa75f107b73da775aa3794106b193ea960cf4b89545610b964784",
+      "wiki": "es.wiktionary.org",
+      "gloss_language": "es",
+      "section": "Náhuatl clásico",
+      "dump": "2026-10-01",
+      "extracted": "2026-10-14",
+      "source_id": "src-wiktionary-es",
+      "orthography": "Título de página de Wikcionario, sección «Náhuatl clásico»; grafía de lema, no paleografía.",
+      "priority": 1
+    },
+    {
+      "id": "es-normalizada",
+      "file": "es-nci-normalizada.jsonl",
+      "url": "https://kaikki.org/eswiktionary/N%C3%A1huatl%20cl%C3%A1sico%20%28Graf%C3%ADa%20normalizada%29/kaikki.org-dictionary-N%C3%A1huatlcl%C3%A1sicoGraf%C3%ADanormalizada.jsonl",
+      "sha256": "b8a07c483509d0f7284fea9cd07086e327551f2625025ae8ebcf7fd7793c94a0",
+      "wiki": "es.wiktionary.org",
+      "gloss_language": "es",
+      "section": "Náhuatl clásico (Grafía normalizada)",
+      "dump": "2026-10-01",
+      "extracted": "2026-10-14",
+      "source_id": "src-wiktionary-es",
+      "orthography": "Título de página de Wikcionario, sección «Náhuatl clásico (Grafía normalizada)»: ortografía moderna con h de saltillo; no es paleografía.",
+      "priority": 2
+    },
+    {
+      "id": "en",
+      "file": "en-nci.jsonl",
+      "url": "https://kaikki.org/dictionary/Classical%20Nahuatl/kaikki.org-dictionary-ClassicalNahuatl.jsonl",
+      "sha256": "24ead519380d7fec5dd713ad5dc05051674df1b91aa8a65dc23bd5c85d94d983",
+      "wiki": "en.wiktionary.org",
+      "gloss_language": "en",
+      "section": "Classical Nahuatl",
+      "dump": "2026-09-02",
+      "extracted": "2026-10-03",
+      "source_id": "src-wiktionary-en",
+      "orthography": "Título de página de Wiktionary, sección «Classical Nahuatl»; la forma canónica con macrones va aparte; no es paleografía.",
+      "priority": 3
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-wiktionary-es",
+      "kind": "source",
+      "label": "Wikcionario en español · náhuatl clásico",
+      "source_type": "catalog",
+      "url": "https://es.wiktionary.org/wiki/Categor%C3%ADa:NCI:Lemas",
+      "institution": "Wikimedia Foundation · proyecto colaborativo Wikcionario",
+      "author": "Colaboradores de Wikcionario",
+      "date": "volcado 2026-10-01; extracto wiktextract/kaikki.org 2026-10-14",
+      "language": "es / náhuatl clásico",
+      "description": "Diccionario colaborativo. Se incorporan lema, acepciones y formas de las secciones «Náhuatl clásico» y «Náhuatl clásico (Grafía normalizada)», con enlace a la revisión de cada página. Las acepciones no han sido cotejadas con una fuente primaria por el proyecto.",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": false,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "share_alike": true,
+        "note": "Texto de Wikcionario bajo CC BY-SA 4.0 (condiciones de uso de Wikimedia). Se redistribuye con la misma licencia y atribución a sus colaboradores; no se relicencia como MIT. Entrenamiento excluido salvo decisión explícita del proyecto."
+      }
+    },
+    {
+      "id": "src-wiktionary-en",
+      "kind": "source",
+      "label": "Wiktionary (inglés) · Classical Nahuatl",
+      "source_type": "catalog",
+      "url": "https://en.wiktionary.org/wiki/Category:Classical_Nahuatl_lemmas",
+      "institution": "Wikimedia Foundation · proyecto colaborativo Wiktionary",
+      "author": "Colaboradores de Wiktionary",
+      "date": "volcado 2026-09-02; extracto wiktextract/kaikki.org 2026-10-03",
+      "language": "en / náhuatl clásico",
+      "description": "Diccionario colaborativo en inglés. Se incorporan lema, acepciones (en inglés, marcadas como tales) y formas de la sección «Classical Nahuatl», con enlace a la revisión de cada página. Las acepciones no han sido cotejadas con una fuente primaria por el proyecto.",
+      "verification": "inherited",
+      "rights": {
+        "public": true,
+        "training": false,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "share_alike": true,
+        "note": "Texto de Wiktionary bajo CC BY-SA 4.0 (condiciones de uso de Wikimedia). Se redistribuye con la misma licencia y atribución a sus colaboradores; no se relicencia como MIT. Entrenamiento excluido salvo decisión explícita del proyecto."
+      }
+    }
+  ]
+}

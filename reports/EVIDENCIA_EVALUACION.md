@@ -10,8 +10,8 @@ Sistema `evidence-root-v1` · conjunto `evidence-questions-v1` · partición `al
 | exact_search | test | 32 | 42.3% | 42.3% | 75.9% | 84% | 24.1% | 33.3% |
 | exact_search | all | 49 | 38.9% | 38.9% | 75% | 87.8% | 25% | 60% |
 | evidence | dev | 17 | 90% | 90% | 100% | 99.2% | 0% | 100% |
-| evidence | test | 32 | 92.3% | 92.3% | 100% | 94.4% | 0% | 33.3% |
-| evidence | all | 49 | 91.7% | 91.7% | 100% | 96.3% | 0% | 60% |
+| evidence | test | 32 | 92.3% | 92.3% | 100% | 96.4% | 0% | 33.3% |
+| evidence | all | 49 | 91.7% | 91.7% | 100% | 97.5% | 0% | 60% |
 
 ## 2. Por tipo de consulta (todas las particiones)
 
@@ -25,11 +25,11 @@ Sistema `evidence-root-v1` · conjunto `evidence-questions-v1` · partición `al
 
 ## 3. Explicaciones con citas
 
-Redactor `explain-cited-v1` (extractive): 46 de 46 explicaciones pasan la validación de citas (cada frase cita IDs de la evidencia y las formas entre «» aparecen en lo citado); 2.85 frases y 3.67 citas de media. Claude: not_run: usar --explain claude con credenciales (tiene costo); no se ejecutó en esta medición.
+Redactor `explain-cited-v1` (extractive): 46 de 46 explicaciones pasan la validación de citas (cada frase cita IDs de la evidencia y las formas entre «» aparecen en lo citado); 2.98 frases y 3.76 citas de media. Claude: not_run: usar --explain claude con credenciales (tiene costo); no se ejecutó en esta medición.
 
 ## 4. Fallos del sistema con evidencia
 
-- `pájaro` (dev, spanish): entrada top‑1: ninguna
+- `pájaro` (dev, spanish): entrada top‑1: acxoyatototl
 - `atlan` (test, inflected): entrada top‑1: ninguna
 - `michime` (test, inflected): entrada top‑1: ninguna
 - `teléfono` (test, abstain): no se abstuvo — Etiqueta escrita antes de la primera corrida y conservada. El archivo sí traduce «teléfono» en pasajes de Morelos (huehcatlahtolaztli); mostrarlos no es un error.
@@ -39,4 +39,4 @@ Redactor `explain-cited-v1` (extractive): 46 de 46 explicaciones pasan la valida
 
 - Un pasaje es pertinente si la forma señalada (o, en la línea base, alguna palabra náhuatl del pasaje) contiene la raíz esperada según la clave laxa. Es una aproximación automática.
 - El conjunto es pequeño y lo escribió el equipo técnico; las particiones separan desarrollo de prueba, no sustituyen la revisión de una persona experta.
-- Construcción de índices: 3.25 s (sobre cachés derivados ya presentes). Tiempo medio por consulta: exact_search 108.88 ms, evidence 41.16 ms.
+- Construcción de índices: 3.95 s (sobre cachés derivados ya presentes). Tiempo medio por consulta: exact_search 117.21 ms, evidence 51.33 ms.

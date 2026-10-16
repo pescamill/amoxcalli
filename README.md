@@ -43,7 +43,7 @@ Un recorrido corto: abre **Aprender → Flores y cantos**, oculta el español y 
 | **Leer** | Los mismos fragmentos con procedencia. Toda palabra se puede analizar; glosa interlineal del fragmento. Ficha imprimible para taller. |
 | **Analizar una palabra** | Segmentación en la grafía de la fuente, entrada del diccionario, pasajes con la misma raíz y pistas del corpus paralelo, cada una con su base (diccionario, corpus o reglas). [Guía](docs/MORFOLOGIA.md). |
 | **Preguntar** | Una palabra en cualquier grafía (*kuali*, *nocal*) o una pregunta en español: análisis, entradas y pasajes con su motivo, y una explicación breve donde cada frase cita su evidencia. Se abstiene sin evidencia. [Guía](docs/EVIDENCIA.md). |
-| **Diccionario y Glifos** | 575 acepciones y 578 formas (26 curadas, 549 transcripciones automáticas de Molina vía GDN); 311 apariciones pictográficas de Tlachia en 13 láminas. Una imagen junto a una entrada no siempre escribe la palabra: la ficha dice qué relación documenta. [Guía](docs/DICCIONARIO_PICTOGRAFICO.md). |
+| **Diccionario y Glifos** | 3.790 acepciones y 3.978 formas (26 curadas, 549 transcripciones automáticas de Molina vía GDN y 3.215 lemas de Wiktionary, CC BY-SA, extracción automática); 480 apariciones pictográficas de Tlachia en 21 láminas. Cada ficha muestra su fuente y su licencia ([FUENTES](docs/FUENTES.md)). Una imagen junto a una entrada no siempre escribe la palabra: la ficha dice qué relación documenta. [Guía](docs/DICCIONARIO_PICTOGRAFICO.md). |
 | **Archivo y Consultar fichas** | 16.111 pares de Axolotl con sus etiquetas de variante y obra; consulta de fichas con campos originales y citas comprobables. [Guía](docs/CONSULTA_DOCUMENTAL.md). |
 | **Mis palabras** | Cuaderno y repaso espaciado en el navegador, sin cuenta; guarda el pasaje de origen. |
 | **Laboratorio** | Mediciones, pares de entrenamiento y el modelo experimental Qwen3-0.6B + LoRA, con sus fallos. [Guía](docs/LABORATORIO.md) · [ficha del modelo](MODEL_CARD.md). |
@@ -55,9 +55,9 @@ Cada cifra sale de un comando; `make reports` los regenera y `make check` compru
 
 | Medición | Resultado | Informe |
 | --- | --- | --- |
-| Segmentación morfológica (52 formas de referencia) | 77 % exacta; 41,8 % de las palabras del corpus clásico con raíz enlazada al diccionario (20,3 % por coincidencia exacta) | [MORFOLOGIA_EVALUACION.md](reports/MORFOLOGIA_EVALUACION.md) |
+| Segmentación morfológica (52 formas de referencia) | 85 % exacta; 60,3 % de las palabras del corpus clásico con raíz enlazada al diccionario (28,0 % por coincidencia exacta) | [MORFOLOGIA_EVALUACION.md](reports/MORFOLOGIA_EVALUACION.md) |
 | Preguntar (32 consultas de prueba) | Entrada correcta en primer lugar 92 % frente a 42 % de la búsqueda exacta; grafías modernas 0 % → 100 % | [EVIDENCIA_EVALUACION.md](reports/EVIDENCIA_EVALUACION.md) |
-| Consulta documental (123 consultas de desarrollo) | 119 completas, 2 parciales, 2 abstenciones; 840/860 campos exactos | `reports/documentary-retrieval-v1.json` |
+| Consulta documental (123 consultas de desarrollo) | 119 completas, 2 parciales, 2 abstenciones; 770/790 campos exactos | `reports/documentary-retrieval-v1.json` |
 | Modelo LoRA (20 frases de prueba, chrF++) | 22,4 con contexto recuperado, frente a 27,2 de devolver el pasaje más cercano: **no es un traductor** | [MODEL_CARD.md](MODEL_CARD.md) |
 
 Son comprobaciones técnicas sobre conjuntos pequeños escritos por el equipo; no sustituyen la revisión de una persona experta ni demuestran que alguien aprenda.

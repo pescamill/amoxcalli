@@ -12,8 +12,9 @@ from nahuatl_local.terms import TermIndex, glyph_scope, parse
 
 ROOT = Path(__file__).resolve().parents[1]
 # Las consultas de la tarea: cada una debe llevar al mismo grupo en cualquier vista.
-SAME = {'kuali': 'term-kwali', 'cualli': 'term-kwali', 'qualli': 'term-kwali', 'nocal': 'lemma-kalli',
-        'calli': 'lemma-kalli', 'tonatiu': 'lemma-tonatiw', 'mujer': 'term-siwatl'}
+# cualli y cihuatl tienen entrada desde el lote de Wiktionary (v12): sus grupos ya no son solo de archivo.
+SAME = {'kuali': 'lemma-kwalli', 'cualli': 'lemma-kwalli', 'qualli': 'lemma-kwalli', 'nocal': 'lemma-kalli',
+        'calli': 'lemma-kalli', 'tonatiu': 'lemma-tonatiw', 'mujer': 'lemma-siwatl'}
 
 
 class TermIndexTests(unittest.TestCase):
@@ -31,7 +32,7 @@ class TermIndexTests(unittest.TestCase):
             self.assertEqual({self.top(q)['id'] for q, g in SAME.items() if g == gid}, {gid})
 
     def test_group_gathers_colonial_modern_and_inflected_spellings(self):
-        g = self.terms.summary('term-kwali')
+        g = self.terms.summary('lemma-kwalli')
         attested = {v['form'] for v in g['spellings']['attested']}
         self.assertTrue({'cualli', 'qualli', 'kuali', 'kwali'} <= attested)
         self.assertEqual({v['orthography'] for v in g['spellings']['attested'] if v['form'] in ('kuali', 'kwali')}, {'moderna'})
@@ -41,7 +42,7 @@ class TermIndexTests(unittest.TestCase):
         self.assertEqual(calli['passages']['total'], sum(calli['passages']['by_variety'].values()))
 
     def test_homographs_and_contained_words_stay_apart(self):
-        cualli = self.terms.summary('term-kwali')
+        cualli = self.terms.summary('lemma-kwalli')
         certain = {v['form'] for v in cualli['spellings']['attested']} | {f for v in cualli['spellings']['inflected'] for f in v['forms']}
         uncertain = {f for v in cualli['spellings']['uncertain'] for f in v['forms']}
         self.assertIn('tlacualli', uncertain)

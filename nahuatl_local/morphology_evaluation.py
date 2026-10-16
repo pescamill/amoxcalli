@@ -202,6 +202,9 @@ def hint_eval(analyzer, rows, hints):
     for stem, entries in analyzer.lexicon.stems.items():
         if len(stem) < 3 or df_n.get(stem, 0) < 2:
             continue
+        # Solo definiciones de Molina o del índice editorial: las glosas de Wiktionary (a veces en
+        # inglés) no son la referencia que describe esta medida.
+        entries = [e for e in entries if not e.get('secondary')]
         gold = set().union(*(_molina_keys(e['label']) for e in entries))
         if not gold:
             continue

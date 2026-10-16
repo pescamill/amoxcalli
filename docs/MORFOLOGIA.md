@@ -27,7 +27,7 @@ Las pistas «≈» son asociaciones estadísticas (IBM‑1) entre una raíz y la
 
 1. Una **clave fonémica** neutraliza la variación colonial (*yhuan/ihuan/iuan*, *xihuitl/xiuitl*, *iquac/ihcuac*) y conserva, para cada sonido, el tramo de la grafía original; por eso la segmentación se muestra con la escritura de la fuente.
 2. Una **gramática de posiciones** genera candidatos con prefijos (poseedor; antecesivo, sujeto, direccional, objeto, reflexivo) y sufijos (absolutivo, poseído, plural, relacionales, derivación, tiempo) y restricciones de alomorfía.
-3. La **puntuación** combina evidencia del diccionario con concordancia de categoría, frecuencia de la raíz en el corpus (EM duro sobre 26 mil formas), preferencia nominal/verbal aprendida y un coste por afijo.
+3. La **puntuación** combina evidencia del diccionario (una raíz apoyada solo en entradas de Wiktionary, sin fuente lexicográfica revisada, pesa menos: `SECONDARY_PENALTY`) con concordancia de categoría, frecuencia de la raíz en el corpus (EM duro sobre 26 mil formas), preferencia nominal/verbal aprendida y un coste por afijo.
 
 Detalles, cifras y comparación con líneas base: [ARCHITECTURE.md](ARCHITECTURE.md) y [la evaluación](../reports/MORFOLOGIA_EVALUACION.md).
 

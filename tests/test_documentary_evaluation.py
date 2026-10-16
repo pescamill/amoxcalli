@@ -27,7 +27,7 @@ class DocumentaryEvaluationTests(unittest.TestCase):
         self.assertTrue(validate(self.battery)['valid'])
         self.assertEqual(self.data, before)
         counts = validate(self.battery)['counts']
-        self.assertEqual(counts, dict(development=dict(textual=123, visual=51),
+        self.assertEqual(counts, dict(development=dict(textual=123, visual=52),
                                       reserve=dict(textual=37, visual=15)))
         ids = [q['id'] for q in self.battery['queries']]
         self.assertEqual(len(ids), len(set(ids)))
@@ -148,7 +148,7 @@ class DocumentaryEvaluationTests(unittest.TestCase):
             path = root / 'configs/documentary-evaluation-v1.json'
             path.write_text(encoded(self.battery))
             dev = load_development(path, root=root)
-            self.assertEqual(len(dev), 174)
+            self.assertEqual(len(dev), 175)
             self.assertTrue(all(q['split'] == 'development' for q in dev))
             self.assertFalse({q['id'] for q in dev} & {q['id'] for q in self.battery['queries'] if q['split'] == 'reserve'})
             dev[0]['reference']['fields'][0]['value'] = 'changed by consumer'

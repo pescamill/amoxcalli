@@ -23,16 +23,16 @@ Open <http://127.0.0.1:8766>. `make demo` builds the derived analysis caches onc
 - **Learn / Read:** 12 guided readings (48 passages from 10 works), hideable translation, exercises on the passage's own spelling, 28 comprehension questions keyed to the original translation. Every word can be analyzed; interlinear gloss.
 - **Word analysis:** segmentation in the source spelling, dictionary entry, passages sharing the root, parallel-corpus hints, each with its basis. Design: [ARCHITECTURE.md](ARCHITECTURE.md).
 - **Ask (Preguntar):** a word in any spelling or a Spanish question → analysis, entries and passages with reasons, plus a short explanation where every sentence cites its evidence; abstains without evidence.
-- **Dictionary and Glyphs:** 575 senses / 578 forms (26 curated, 549 automatic Molina/GDN transcriptions); 311 pictographic occurrences from Tlachia.
+- **Dictionary and Glyphs:** 3,790 senses / 3,978 forms (26 curated, 549 automatic Molina/GDN transcriptions, 3,215 Wiktionary lemmas under CC BY-SA, automatic extraction); 480 pictographic occurrences from 21 Tlachia folios. Every card shows its source and licence.
 - **Archive and documentary lookup**, **My words** (spaced review in the browser), **Laboratory** (measurements and the Qwen3-0.6B + LoRA experiment, see [MODEL_CARD.md](../MODEL_CARD.md)), **Contribute · Voces**.
 
 ## Numbers and where they come from
 
 | Measurement | Result |
 |---|---|
-| Morphological segmentation (52 gold forms) | 77% exact; 41.8% of classical tokens linked to a dictionary root (20.3% by exact match) |
+| Morphological segmentation (52 gold forms) | 85% exact; 60.3% of classical tokens linked to a dictionary root (28.0% by exact match) |
 | Ask (32 test queries) | correct entry first 92% vs 42% for exact search |
-| Documentary lookup (123 development queries) | 119 complete, 840/860 required fields |
+| Documentary lookup (123 development queries) | 119 complete, 770/790 required fields |
 | LoRA model (20 test sentences, chrF++) | 22.4 with retrieved context vs 27.2 for returning the nearest passage: **not a translator** |
 
 `make reports` regenerates them, `make check` verifies they are current ([reports/README.md](../reports/README.md)). These are technical checks on small team-written sets, not expert review or evidence of learning.

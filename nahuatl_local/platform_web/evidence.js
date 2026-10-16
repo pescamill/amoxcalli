@@ -21,7 +21,7 @@ function askExplanationHTML(x){
 function askEntryHTML(e){
  const sense=state.byId?.[e.sense_id];
  const title=`<strong lang="nci">${esc(e.written)}</strong> · ${esc(e.label)}`;
- return `<li class="ask-entry" data-evidence-id="${esc(e.sense_id)}">${sense?`<a href="#lexico/${esc(e.sense_id)}">${title}</a>`:title}<span class="ask-why">${esc(e.how)}${e.derivation?' · '+esc(e.derivation):''}</span>${e.automatic?'<span class="pill">Molina / GDN · extracción automática</span>':''}</li>`;
+ return `<li class="ask-entry" data-evidence-id="${esc(e.sense_id)}">${sense?`<a href="#lexico/${esc(e.sense_id)}">${title}</a>`:title}<span class="ask-why">${esc(e.how)}${e.derivation?' · '+esc(e.derivation):''}</span>${e.automatic?`<span class="pill">${esc(originLabel(sense))}</span>`:''}</li>`;
 }
 function askPassageHTML(p){
  return `<article class="ask-passage" data-evidence-id="${esc(p.id)}"><p class="passage-meta"><span>${esc(p.variety)}</span><span>${esc(p.document||'Obra no indicada')}</span><span>${esc(p.id)}</span></p><p class="nah-passage" lang="nci">${askHighlight(p.nah,p.form)}</p><p class="spanish-passage">${esc(p.es)}</p><p class="ask-why">${esc(p.why)}</p></article>`;

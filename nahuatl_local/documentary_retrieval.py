@@ -5,6 +5,7 @@ It returns evidence-bearing fields, never generates translations or readings.
 """
 from collections import defaultdict
 import copy
+from functools import lru_cache
 import hashlib
 import json
 import math
@@ -55,6 +56,12 @@ def public_path(root, relative, writing=False):
 def safe_url(value):
     if not isinstance(value, str):
         return ''
+    return _safe_url(value)
+
+
+@lru_cache(maxsize=65536)
+def _safe_url(value):
+    # Pocas URLs distintas se repiten en cientos de miles de campos: se valida cada una una vez.
     try:
         u = urlparse(value)
         return value if u.scheme in ('https', 'http') and u.hostname and not u.username and not u.password else ''

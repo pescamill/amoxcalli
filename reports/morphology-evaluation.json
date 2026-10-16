@@ -812,36 +812,28 @@
     },
     "rules+dictionary": {
       "n": 52,
-      "top1": 0.442,
-      "top3": 0.75,
-      "stem_top1": 0.404,
+      "top1": 0.635,
+      "top3": 0.808,
+      "stem_top1": 0.577,
       "by_split": {
         "dev": {
           "n": 25,
-          "top1": 0.48,
-          "top3": 0.76
+          "top1": 0.68,
+          "top3": 0.88
         },
         "test": {
           "n": 27,
-          "top1": 0.407,
+          "top1": 0.593,
           "top3": 0.741
         }
       },
       "errors": [
         {
-          "word": "tlacatl",
-          "expected": "tlaca-tl",
-          "got": "tlacatl",
+          "word": "nocal",
+          "expected": "no-cal",
+          "got": "n-ocal",
           "correct": false,
           "in_top3": true,
-          "split": "dev"
-        },
-        {
-          "word": "nicchihua",
-          "expected": "ni-c-chihua",
-          "got": "ni-cchihua",
-          "correct": false,
-          "in_top3": false,
           "split": "dev"
         },
         {
@@ -855,23 +847,15 @@
         {
           "word": "tlachihualli",
           "expected": "tla-chihua-l-li",
-          "got": "tla-chihualli",
+          "got": "tlachihual-li",
           "correct": false,
           "in_top3": false,
           "split": "dev"
         },
         {
-          "word": "itoca",
-          "expected": "i-toca",
-          "got": "itoca",
-          "correct": false,
-          "in_top3": true,
-          "split": "dev"
-        },
-        {
           "word": "mochiuh",
           "expected": "mo-chiuh",
-          "got": "mochiuh",
+          "got": "mochi-uh",
           "correct": false,
           "in_top3": true,
           "split": "dev"
@@ -893,17 +877,9 @@
           "split": "dev"
         },
         {
-          "word": "niquitohua",
-          "expected": "ni-qu-itohua",
-          "got": "ni-quitohua",
-          "correct": false,
-          "in_top3": false,
-          "split": "dev"
-        },
-        {
-          "word": "tlahtohuani",
-          "expected": "tlahtohua-ni",
-          "got": "tlah-tohuani",
+          "word": "tlalticpac",
+          "expected": "tlal-ti-cpac",
+          "got": "tlalticpac",
           "correct": false,
           "in_top3": true,
           "split": "dev"
@@ -917,51 +893,11 @@
           "split": "dev"
         },
         {
-          "word": "mitoa",
-          "expected": "m-itoa",
-          "got": "mitoa",
-          "correct": false,
-          "in_top3": true,
-          "split": "dev"
-        },
-        {
-          "word": "nimitztlazohtla",
-          "expected": "ni-mitz-tlazohtla",
-          "got": "ni-mitztlazohtla",
-          "correct": false,
-          "in_top3": false,
-          "split": "dev"
-        },
-        {
-          "word": "nicochiz",
-          "expected": "ni-cochi-z",
-          "got": "ni-cochiz",
-          "correct": false,
-          "in_top3": false,
-          "split": "test"
-        },
-        {
-          "word": "quitoa",
-          "expected": "qu-itoa",
-          "got": "quitoa",
-          "correct": false,
-          "in_top3": true,
-          "split": "test"
-        },
-        {
           "word": "quitoque",
           "expected": "qu-ito-que",
           "got": "quito-que",
           "correct": false,
           "in_top3": false,
-          "split": "test"
-        },
-        {
-          "word": "ytoca",
-          "expected": "y-toca",
-          "got": "ytoca",
-          "correct": false,
-          "in_top3": true,
           "split": "test"
         },
         {
@@ -977,7 +913,7 @@
           "expected": "no-chan",
           "got": "nochan",
           "correct": false,
-          "in_top3": true,
+          "in_top3": false,
           "split": "test"
         },
         {
@@ -985,21 +921,21 @@
           "expected": "to-chan",
           "got": "tochan",
           "correct": false,
-          "in_top3": true,
+          "in_top3": false,
           "split": "test"
         },
         {
-          "word": "tlaxcalli",
-          "expected": "tlaxcal-li",
-          "got": "tla-xcalli",
+          "word": "icalpan",
+          "expected": "i-cal-pan",
+          "got": "i-calpan",
           "correct": false,
           "in_top3": true,
           "split": "test"
         },
         {
-          "word": "tlatoque",
-          "expected": "tlato-que",
-          "got": "tla-toque",
+          "word": "Mexico",
+          "expected": "Mexi-co",
+          "got": "mexico",
           "correct": false,
           "in_top3": true,
           "split": "test"
@@ -1007,15 +943,7 @@
         {
           "word": "Tenochtitlan",
           "expected": "Tenoch-ti-tlan",
-          "got": "tenoch-titlan",
-          "correct": false,
-          "in_top3": false,
-          "split": "test"
-        },
-        {
-          "word": "quimacaque",
-          "expected": "qui-maca-que",
-          "got": "quimaca-que",
+          "got": "tenochtitlan",
           "correct": false,
           "in_top3": false,
           "split": "test"
@@ -1023,15 +951,23 @@
         {
           "word": "tlaqualli",
           "expected": "tla-qua-l-li",
-          "got": "tla-qualli",
+          "got": "tlaqual-li",
           "correct": false,
           "in_top3": false,
           "split": "test"
         },
         {
+          "word": "ilhuicac",
+          "expected": "ilhuica-c",
+          "got": "ilhuicac",
+          "correct": false,
+          "in_top3": true,
+          "split": "test"
+        },
+        {
           "word": "nonantzin",
           "expected": "no-nan-tzin",
-          "got": "nonan-tzin",
+          "got": "no-nantzin",
           "correct": false,
           "in_top3": false,
           "split": "test"
@@ -1043,40 +979,24 @@
           "correct": false,
           "in_top3": false,
           "split": "test"
-        },
-        {
-          "word": "cihuatl",
-          "expected": "cihua-tl",
-          "got": "cihuatl",
-          "correct": false,
-          "in_top3": true,
-          "split": "test"
-        },
-        {
-          "word": "tlatoani",
-          "expected": "tlatoa-ni",
-          "got": "tla-toani",
-          "correct": false,
-          "in_top3": true,
-          "split": "test"
         }
       ]
     },
     "rules+corpus_em": {
       "n": 52,
-      "top1": 0.731,
-      "top3": 0.923,
-      "stem_top1": 0.692,
+      "top1": 0.827,
+      "top3": 0.981,
+      "stem_top1": 0.788,
       "by_split": {
         "dev": {
           "n": 25,
-          "top1": 0.8,
+          "top1": 0.88,
           "top3": 1.0
         },
         "test": {
           "n": 27,
-          "top1": 0.667,
-          "top3": 0.852
+          "top1": 0.778,
+          "top3": 0.963
         }
       },
       "errors": [
@@ -1084,14 +1004,6 @@
           "word": "tlachihualli",
           "expected": "tla-chihua-l-li",
           "got": "tlachihual-li",
-          "correct": false,
-          "in_top3": true,
-          "split": "dev"
-        },
-        {
-          "word": "itoca",
-          "expected": "i-toca",
-          "got": "ito-ca",
           "correct": false,
           "in_top3": true,
           "split": "dev"
@@ -1105,14 +1017,6 @@
           "split": "dev"
         },
         {
-          "word": "niquitohua",
-          "expected": "ni-qu-itohua",
-          "got": "ni-qui-tohua",
-          "correct": false,
-          "in_top3": true,
-          "split": "dev"
-        },
-        {
           "word": "tlalli",
           "expected": "tlal-li",
           "got": "tlalli",
@@ -1121,25 +1025,9 @@
           "split": "dev"
         },
         {
-          "word": "ticochi",
-          "expected": "ti-cochi",
-          "got": "ti-c-ochi",
-          "correct": false,
-          "in_top3": false,
-          "split": "test"
-        },
-        {
           "word": "nicochiz",
           "expected": "ni-cochi-z",
-          "got": "ni-c-ochi-z",
-          "correct": false,
-          "in_top3": false,
-          "split": "test"
-        },
-        {
-          "word": "quitoa",
-          "expected": "qu-itoa",
-          "got": "qui-toa",
+          "got": "ni-cochiz",
           "correct": false,
           "in_top3": true,
           "split": "test"
@@ -1148,14 +1036,6 @@
           "word": "quitoque",
           "expected": "qu-ito-que",
           "got": "quito-que",
-          "correct": false,
-          "in_top3": true,
-          "split": "test"
-        },
-        {
-          "word": "ytoca",
-          "expected": "y-toca",
-          "got": "yto-ca",
           "correct": false,
           "in_top3": true,
           "split": "test"
@@ -1179,7 +1059,7 @@
         {
           "word": "tlaqualli",
           "expected": "tla-qua-l-li",
-          "got": "tla-qual-li",
+          "got": "tlaqual-li",
           "correct": false,
           "in_top3": false,
           "split": "test"
@@ -1189,26 +1069,26 @@
           "expected": "te-tlazohtla-liz-tli",
           "got": "tetlazohtlaliz-tli",
           "correct": false,
-          "in_top3": false,
+          "in_top3": true,
           "split": "test"
         }
       ]
     },
     "full (rules+dictionary+corpus_em)": {
       "n": 52,
-      "top1": 0.769,
-      "top3": 0.923,
-      "stem_top1": 0.712,
+      "top1": 0.846,
+      "top3": 0.962,
+      "stem_top1": 0.769,
       "by_split": {
         "dev": {
           "n": 25,
-          "top1": 0.84,
+          "top1": 0.88,
           "top3": 1.0
         },
         "test": {
           "n": 27,
-          "top1": 0.704,
-          "top3": 0.852
+          "top1": 0.815,
+          "top3": 0.926
         }
       },
       "errors": [
@@ -1221,9 +1101,9 @@
           "split": "dev"
         },
         {
-          "word": "itoca",
-          "expected": "i-toca",
-          "got": "ito-ca",
+          "word": "mochiuh",
+          "expected": "mo-chiuh",
+          "got": "mochi-uh",
           "correct": false,
           "in_top3": true,
           "split": "dev"
@@ -1237,49 +1117,17 @@
           "split": "dev"
         },
         {
-          "word": "niquitohua",
-          "expected": "ni-qu-itohua",
-          "got": "ni-qui-tohua",
-          "correct": false,
-          "in_top3": true,
-          "split": "dev"
-        },
-        {
-          "word": "ticochi",
-          "expected": "ti-cochi",
-          "got": "ti-c-ochi",
-          "correct": false,
-          "in_top3": false,
-          "split": "test"
-        },
-        {
-          "word": "nicochiz",
-          "expected": "ni-cochi-z",
-          "got": "ni-c-ochi-z",
-          "correct": false,
-          "in_top3": false,
-          "split": "test"
-        },
-        {
-          "word": "quitoa",
-          "expected": "qu-itoa",
-          "got": "qui-toa",
-          "correct": false,
-          "in_top3": true,
-          "split": "test"
-        },
-        {
           "word": "quitoque",
           "expected": "qu-ito-que",
           "got": "quito-que",
           "correct": false,
-          "in_top3": true,
+          "in_top3": false,
           "split": "test"
         },
         {
-          "word": "ytoca",
-          "expected": "y-toca",
-          "got": "yto-ca",
+          "word": "Mexico",
+          "expected": "Mexi-co",
+          "got": "mexico",
           "correct": false,
           "in_top3": true,
           "split": "test"
@@ -1287,7 +1135,7 @@
         {
           "word": "Tenochtitlan",
           "expected": "Tenoch-ti-tlan",
-          "got": "tenoch-titlan",
+          "got": "tenochtitlan",
           "correct": false,
           "in_top3": true,
           "split": "test"
@@ -1295,7 +1143,7 @@
         {
           "word": "tlaqualli",
           "expected": "tla-qua-l-li",
-          "got": "tla-qual-li",
+          "got": "tlaqual-li",
           "correct": false,
           "in_top3": false,
           "split": "test"
@@ -1305,7 +1153,7 @@
           "expected": "te-tlazohtla-liz-tli",
           "got": "tetlazohtlaliz-tli",
           "correct": false,
-          "in_top3": false,
+          "in_top3": true,
           "split": "test"
         }
       ]
@@ -1314,11 +1162,11 @@
   "coverage": {
     "tokens": 135288,
     "types": 26396,
-    "exact_dictionary_tokens": 0.2029,
-    "analyzer_linked_tokens": 0.4178,
-    "analyzer_explained_tokens": 0.8414,
-    "exact_dictionary_types": 0.0077,
-    "analyzer_linked_types": 0.0387,
+    "exact_dictionary_tokens": 0.2799,
+    "analyzer_linked_tokens": 0.6029,
+    "analyzer_explained_tokens": 0.8638,
+    "exact_dictionary_types": 0.0387,
+    "analyzer_linked_types": 0.2669,
     "definitions": {
       "exact": "la palabra completa, normalizada, coincide con una forma del diccionario",
       "linked": "el mejor análisis enlaza la raíz con una entrada o con la tabla de partículas",
@@ -1326,14 +1174,24 @@
     }
   },
   "concordance": {
-    "entries_with_hits": 117,
-    "passages_exact": 3493,
-    "passages_stem": 6391,
-    "entries_gaining": 95,
-    "entries_losing": 3,
-    "passages_only_exact": 4,
+    "entries_with_hits": 1119,
+    "passages_exact": 10645,
+    "passages_stem": 25289,
+    "entries_gaining": 866,
+    "entries_losing": 86,
+    "passages_only_exact": 1351,
     "median_gain": 2,
     "top_gains": [
+      {
+        "stem": "ipan",
+        "written": [
+          "iipan"
+        ],
+        "exact": 0,
+        "stem_index": 1036,
+        "only_stem": 1036,
+        "only_exact": 0
+      },
       {
         "stem": "xiwi",
         "written": [
@@ -1356,107 +1214,94 @@
         "only_exact": 0
       },
       {
-        "stem": "itta",
+        "stem": "toka",
         "written": [
-          "itta"
+          "toca",
+          "tocatl"
         ],
-        "exact": 6,
-        "stem_index": 133,
-        "only_stem": 127,
+        "exact": 11,
+        "stem_index": 683,
+        "only_stem": 672,
         "only_exact": 0
       },
       {
-        "stem": "yewa",
+        "stem": "iqak",
         "written": [
-          "Yehua",
-          "Yeua"
+          "ihcuac"
         ],
-        "exact": 31,
-        "stem_index": 125,
-        "only_stem": 94,
+        "exact": 105,
+        "stem_index": 597,
+        "only_stem": 492,
         "only_exact": 0
       },
       {
-        "stem": "onka",
+        "stem": "λatoa",
         "written": [
-          "Onca"
-        ],
-        "exact": 70,
-        "stem_index": 155,
-        "only_stem": 85,
-        "only_exact": 0
-      },
-      {
-        "stem": "masewal",
-        "written": [
-          "Maceualli"
-        ],
-        "exact": 14,
-        "stem_index": 96,
-        "only_stem": 82,
-        "only_exact": 0
-      },
-      {
-        "stem": "tepe",
-        "written": [
-          "tepetl"
-        ],
-        "exact": 44,
-        "stem_index": 124,
-        "only_stem": 80,
-        "only_exact": 0
-      },
-      {
-        "stem": "onkan",
-        "written": [
-          "Oncan"
-        ],
-        "exact": 838,
-        "stem_index": 904,
-        "only_stem": 66,
-        "only_exact": 0
-      },
-      {
-        "stem": "nakayo",
-        "written": [
-          "NAcaayotl",
-          "Nacayo",
-          "Nacayotl"
+          "tlahtoa"
         ],
         "exact": 2,
-        "stem_index": 49,
-        "only_stem": 47,
+        "stem_index": 435,
+        "only_stem": 433,
         "only_exact": 0
       },
       {
-        "stem": "inteč",
+        "stem": "itoa",
         "written": [
-          "Intech"
+          "ihtoa"
         ],
-        "exact": 35,
-        "stem_index": 79,
-        "only_stem": 44,
+        "exact": 1,
+        "stem_index": 413,
+        "only_stem": 412,
         "only_exact": 0
       },
       {
-        "stem": "toto",
+        "stem": "mexika",
         "written": [
-          "tototl"
+          "mexihcatl"
         ],
-        "exact": 18,
-        "stem_index": 59,
-        "only_stem": 41,
+        "exact": 0,
+        "stem_index": 312,
+        "only_stem": 312,
         "only_exact": 0
       },
       {
-        "stem": "qawi",
+        "stem": "čiwa",
         "written": [
-          "cuahuitl",
-          "quauitl"
+          "chiua"
         ],
-        "exact": 13,
-        "stem_index": 53,
-        "only_stem": 40,
+        "exact": 1,
+        "stem_index": 277,
+        "only_stem": 276,
+        "only_exact": 0
+      },
+      {
+        "stem": "mati",
+        "written": [
+          "mati"
+        ],
+        "exact": 3,
+        "stem_index": 275,
+        "only_stem": 272,
+        "only_exact": 0
+      },
+      {
+        "stem": "moči",
+        "written": [
+          "mochi"
+        ],
+        "exact": 123,
+        "stem_index": 394,
+        "only_stem": 271,
+        "only_exact": 0
+      },
+      {
+        "stem": "λatol",
+        "written": [
+          "tlahtolli"
+        ],
+        "exact": 21,
+        "stem_index": 284,
+        "only_stem": 263,
         "only_exact": 0
       }
     ],
@@ -1469,7 +1314,7 @@
       "method": "IBM Model 1 (EM), raíz náhuatl → palabra española, con palabra nula",
       "iterations": 8,
       "pairs": 5453,
-      "stems": 4291,
+      "stems": 4415,
       "min_support": 2,
       "analyzer": "nah-morph-1"
     },
@@ -1486,7 +1331,7 @@
         },
         "ibm1": {
           "precision_at_1": 0.297,
-          "hit_at_3": 0.386
+          "hit_at_3": 0.376
         }
       },
       "examples": [
@@ -1495,19 +1340,17 @@
           "entry": "eecatl",
           "molina": "viento",
           "ibm1": [
-            "viento",
-            "senor",
-            "dia"
+            "viento"
           ],
           "dice": [
             "viento",
-            "burla",
-            "signo"
+            "signo",
+            "temillotzin"
           ],
           "cooccurrence": [
             "senor",
             "viento",
-            "tierra"
+            "ano"
           ]
         },
         {
@@ -1758,8 +1601,8 @@
           "molina": "en algun tiempo, o alguna vez.",
           "ibm1": [
             "pie",
-            "estan",
-            "casa"
+            "casa",
+            "estan"
           ],
           "dice": [
             "tierra",
@@ -1776,5 +1619,5 @@
       "definition": "Acierto si una palabra propuesta (normalizada) aparece en la definición de Molina de esa entrada. Molina es independiente del corpus paralelo; la coincidencia ortográfica del s. XVI es aproximada."
     }
   },
-  "seconds": 17.7
+  "seconds": 18.8
 }

@@ -54,8 +54,9 @@ class DocumentaryRetrievalTests(unittest.TestCase):
         self.assertTrue(all(self.sources.citation_valid(f) for f in row['fields']))
         occurrence = next(iter(self.sources.tables['occurrences']))
         self.assertEqual(self.index.search(occurrence)['results'][0]['id'], occurrence)
-        self.assertTrue(self.index.search('zzzz-no-evidence-7821')['abstained'])
-        self.assertFalse(self.index.search('zzzz-no-evidence-7821')['results'])
+        # Sin palabras reales: «no» ya es la glosa de una entrada (amo, Wiktionary).
+        self.assertTrue(self.index.search('zzzz-qqqq-evidence-7821')['abstained'])
+        self.assertFalse(self.index.search('zzzz-qqqq-evidence-7821')['results'])
         with self.assertRaises(ValueError): self.index.search(dict(question='ic',expected='hidden'))
 
     def test_oracle_independence_and_immutable_evidence(self):

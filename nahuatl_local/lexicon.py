@@ -75,6 +75,9 @@ STEPS = (
          'Enlaces documentales y contextuales explícitos; sin atribuir lectura completa', True),
     Step('corpus/flor-lexicon-v8.json', 'import', 'flor-v8-', 'Consulta editorial de flor',
          'Entradas léxicas seleccionadas y alcance nominal explícito; cotejo primario pendiente', True),
+    Step('corpus/wiktionary-lexicon-v12.json', 'import', 'wiktionary-v12-', 'Extracción automática de Wiktionary',
+         'Lemas nuevos de Wiktionary (CC BY-SA 4.0) con revisión y atribución por registro; sin sobrescribir fichas previas; '
+         'revisión lingüística pendiente', True),
 )
 BUNDLE_PATHS = tuple(step.path for step in STEPS)
 
