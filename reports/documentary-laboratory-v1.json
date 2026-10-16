@@ -14,13 +14,13 @@
     "evaluated_split": "development",
     "path": "configs/documentary-evaluation-v1.json",
     "reserve_used": false,
-    "sha256": "04b2f3a3c3f966c5cbb90c05407e6c39cd74a7a9f3c5a6297792102bad9574ed"
+    "sha256": "f0640b47dc6e6a2d68961e9b13fa5cf79afef150f434e0fb89da82b8e467ee44"
   },
   "comparison": "documentary-development-v1",
-  "evaluation_fingerprint": "ff9ebc7bd128a193c8e9bc3b0b1a1f2a3efd9cac0c7f5b9a321be3ba9f1fb740",
+  "evaluation_fingerprint": "e0c229e3b11ab7b7628d74d948c4e0fed3dfdc93a2b033bfb9c6f5284d272561",
   "human_review": "pending",
   "input_hashes": {
-    "configs/documentary-evaluation-v1.json": "04b2f3a3c3f966c5cbb90c05407e6c39cd74a7a9f3c5a6297792102bad9574ed",
+    "configs/documentary-evaluation-v1.json": "f0640b47dc6e6a2d68961e9b13fa5cf79afef150f434e0fb89da82b8e467ee44",
     "configs/sources.json": "fbdc67bd2a621978ac096af53038d61ed5ba56069061a2bd4c363456502f73aa",
     "corpus/archive-source-v3.json": "954a7bc1c12beb754e424839736f23cde6c76adfd75b1b0bb909c01f4889ef70",
     "corpus/axolotl/axolotl.csv": "ed8e85f560e78c43385f91ac99d08dee071183749bc1f1aa1b88f1b3a2530878",
@@ -33,7 +33,7 @@
     "corpus/glyph-lexicon-v5.json": "d71e6a2baece5b3c1791722331eb4763c2f7b5438c8e2f81afc845060a1ffc98",
     "corpus/glyph-links-v2.json": "71257931462103073b28ee378d82c24207daaf5bfb4d9a1256bb80eb69444a27",
     "corpus/glyph-source-images-v5.json": "983e976b166287d973ade12e07fc3fa2a9ff843e4740e2efc56d48caae292004",
-    "corpus/learning-v1.json": "18242d28da77f41e888a7cd1a771da972fee9fe0c58f21892a4b66893e101e2f",
+    "corpus/learning-v1.json": "7462f977d93c44478e4bc04a4b20a7e353eb7a4054d585e874164ba5f62d13f1",
     "corpus/lexicon-catalog.json": "21ed1217e707a36c8deb87d6f1d01c919e32a2fbd589f8dc5a19c515e2bb1198",
     "corpus/pictography/catalog.json": "2d23e609ab8be558f1bc51e4776cc53fdd28341cc68373824e1e57303e47e5c1",
     "corpus/seed.json": "d64f372778fdcf4ee8e91de1ad546d0f458094c926cb5755fd511db481e5795c",
@@ -46,8 +46,8 @@
     "nahuatl_local/passages.py": "491f2342cef7ad3c0be8ef353fc8add7ca8b3bacec58ff4d3a30a83a74736ed1",
     "nahuatl_local/pictography.py": "8469ba0b8f7780375fb63d69855687b81d9f88b124bad85a10a2d1b8d2583a65",
     "nahuatl_local/text.py": "3d12feaf3cc910741fd03fdef4f5cbf8780c0cfdf345d2469de8a4130183663a",
-    "reports/documentary-evaluation-validation-v1.json": "6aed6eeac7fe21368753c67ef5d6bb4e7772c65e398394006c3232ac54a91b40",
-    "reports/documentary-retrieval-v1.json": "da020b24689e45c99f62faa0636cf28856f13b985011925492a2d1aa9e8d06c0"
+    "reports/documentary-evaluation-validation-v1.json": "48c92a60ec559f4a76a38e3c0cd95e529b53b2ea606f5e4ca35e252358e43fd9",
+    "reports/documentary-retrieval-v1.json": "a01f67a6e1a87d42eba3cad09bc2f93d4d6826b30b0123927ec493dc63c695a4"
   },
   "limitation": "Consultas parametrizadas sobre fichas conocidas: no mide comprensión general, traducción ni reconocimiento de imágenes. Las referencias son documentales, sin revisión humana nueva.",
   "rights": {
@@ -62,21 +62,21 @@
     {
       "cost": {
         "context": "perf_counter; index and queries with tracemalloc enabled; sources loaded before tracing; monetary cost not measured",
-        "elapsed_seconds": 16.3682472500077,
+        "elapsed_seconds": 17.4396957919962,
         "image_downloads": 0,
         "memory": {
           "measurement": "tracemalloc; excludes native/process memory",
           "python_current_bytes": 233151461,
-          "python_peak_bytes": 234873316
+          "python_peak_bytes": 234873300
         },
         "model_calls": 0,
         "monetary_cost": null,
         "network_requests": 0,
         "timing": {
-          "index_build_seconds": 13.99439279201033,
-          "query_max_seconds": 0.03284795799118001,
-          "query_mean_seconds": 0.006199313715484553,
-          "query_total_seconds": 0.7625155870046001
+          "index_build_seconds": 14.829361415992025,
+          "query_max_seconds": 0.03908199998841155,
+          "query_mean_seconds": 0.006894308585665052,
+          "query_total_seconds": 0.8479999560368014
         }
       },
       "failures": [
@@ -160,7 +160,7 @@
         "supported_citations": 121
       },
       "report_hashes": {
-        "reports/documentary-retrieval-v1.json": "da020b24689e45c99f62faa0636cf28856f13b985011925492a2d1aa9e8d06c0"
+        "reports/documentary-retrieval-v1.json": "a01f67a6e1a87d42eba3cad09bc2f93d4d6826b30b0123927ec493dc63c695a4"
       },
       "status": "measured"
     },

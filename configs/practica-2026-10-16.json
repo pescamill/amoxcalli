@@ -1,0 +1,505 @@
+{
+ "schema_version": 1,
+ "review_status": "editorial_draft",
+ "release_id": "practica-2026-10-16",
+ "note": "Práctica v2: distractores de la misma raíz (formas flexionadas del archivo) o palabras del diccionario; opciones de comprensión en el mismo registro que la respuesta; claves de lectura en lenguaje de estudiante. No cambia pasajes, respuestas ni la forma del hueco.",
+ "lessons": [],
+ "lesson_updates": [
+  {
+   "id": "flor",
+   "exercise_updates": [
+    {
+     "archive_id": "axolotl-06231",
+     "distractors": [
+      "ixochiuh",
+      "xochicuahuitl"
+     ]
+    },
+    {
+     "archive_id": "axolotl-13493",
+     "distractors": [
+      "xochicuahuitl",
+      "tototl"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cielo",
+   "reading_tips": [
+    "Los cuatro fragmentos hablan del Sol; solo uno menciona también a la Luna (metztli).",
+    "Aquí metztli quiere decir «luna». La misma palabra también puede significar «mes», pero ese sentido no aparece en esta lectura."
+   ],
+   "exercise_updates": [
+    {
+     "archive_id": "axolotl-00455",
+     "distractors": [
+      "itonatiuh",
+      "metztli"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lugares",
+   "reading_tips": [
+    "tlacuilolcalli es una palabra compuesta que contiene calli («casa»): toda la palabra se traduce «casa de las pinturas», no solo «casa».",
+    "Un fragmento traduce tlalli, tepetl como «la tierra, la ciudad». Esa traducción vale para ese contexto: tepetl no significa siempre «ciudad»."
+   ],
+   "exercise_updates": [
+    {
+     "archive_id": "axolotl-14900",
+     "distractors": [
+      "itepetzin",
+      "tlalli"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "agua-tierra",
+   "reading_tips": [
+    "Una palabra conocida ayuda a orientarte; la traducción completa cuenta qué sucede.",
+    "La imagen del glifo viene de otro documento; no ilustra estos relatos."
+   ],
+   "exercise_updates": [
+    {
+     "archive_id": "axolotl-04153",
+     "distractors": [
+      "tlalli",
+      "tepetl"
+     ]
+    },
+    {
+     "archive_id": "axolotl-01923",
+     "distractors": [
+      "tlalli",
+      "tetl"
+     ]
+    },
+    {
+     "archive_id": "axolotl-00833",
+     "distractors": [
+      "notlal",
+      "tepetl"
+     ]
+    },
+    {
+     "archive_id": "axolotl-01325",
+     "distractors": [
+      "totlal",
+      "atl"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "flores-cantos",
+   "reading_tips": [
+    "Lee «flores» y «cantos» dentro del verso: traducir una palabra suelta no explica todo el poema.",
+    "El español puede decir «flores» aunque el náhuatl escriba xochitl: la forma escrita y el número de la traducción no siempre coinciden."
+   ],
+   "exercise_updates": [
+    {
+     "archive_id": "axolotl-13428",
+     "distractors": [
+      "icuicatzin",
+      "cuicani"
+     ]
+    },
+    {
+     "archive_id": "axolotl-05366",
+     "distractors": [
+      "ixochiuh",
+      "xochitzin"
+     ]
+    },
+    {
+     "archive_id": "axolotl-02623",
+     "distractors": [
+      "icuicatzin",
+      "cuicani"
+     ]
+    },
+    {
+     "archive_id": "axolotl-09215",
+     "distractors": [
+      "xochitzin",
+      "moxochiuh"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "aves",
+   "reading_tips": [
+    "El mismo término aparece en poesía y en relatos históricos; lee qué papel tiene en cada fragmento.",
+    "En los relatos también aparecen michi y cohuatl. Se muestran tal como las escribió el documento; la app no las cambia por otra palabra del diccionario."
+   ],
+   "exercise_updates": [
+    {
+     "archive_id": "axolotl-14546",
+     "distractors": [
+      "itototzin",
+      "mazatl"
+     ],
+     "comprehension_distractors": [
+      "Por allí vuela el ave, busca agua y descansa",
+      "Por allí duerme el ave, calla y se esconde"
+     ]
+    },
+    {
+     "archive_id": "axolotl-14253",
+     "distractors": [
+      "itototzin",
+      "mazatl"
+     ],
+     "comprehension_distractors": [
+      "maíz, frijol y chile",
+      "mantas, plumas y cacao"
+     ]
+    },
+    {
+     "archive_id": "axolotl-08856",
+     "distractors": [
+      "itototzin",
+      "mazatl"
+     ],
+     "comprehension_distractors": [
+      "en Tlatelolco",
+      "en Tenochtitlan"
+     ]
+    },
+    {
+     "archive_id": "axolotl-00751",
+     "distractors": [
+      "itototzin",
+      "michin"
+     ],
+     "comprehension_distractors": [
+      "con sus redes y sus trampas",
+      "con sus lanzas y sus escudos"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "casas-relatos",
+   "reading_tips": [
+    "Aquí calli quiere decir casa o edificio. Calli también es el nombre de un día del calendario, pero ese uso no aparece en esta lectura.",
+    "Las traducciones conservan el español antiguo y su ortografía. Lee la frase completa para entender qué pasa con la casa."
+   ],
+   "exercise_updates": [
+    {
+     "archive_id": "axolotl-02051",
+     "distractors": [
+      "ical",
+      "tepetl"
+     ],
+     "comprehension_distractors": [
+      "saltaron por el techo de la casa",
+      "salieron por la puerta del patio"
+     ]
+    },
+    {
+     "archive_id": "axolotl-10674",
+     "distractors": [
+      "Ical",
+      "Tepetl"
+     ],
+     "comprehension_distractors": [
+      "Quemadas están las casas",
+      "Inundadas están las casas"
+     ]
+    },
+    {
+     "archive_id": "axolotl-03625",
+     "distractors": [
+      "nocal",
+      "tlalli"
+     ],
+     "comprehension_distractors": [
+      "testamento",
+      "mapa del barrio"
+     ]
+    },
+    {
+     "archive_id": "axolotl-01900",
+     "distractors": [
+      "tocal",
+      "tepetl"
+     ],
+     "comprehension_distractors": [
+      "la dicha casa y huerta",
+      "el dicho solar y camino"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "animales-relatos",
+   "reading_tips": [
+    "Los animales aparecen en situaciones distintas: una piel de venado, una lista de alimentos, algo que nadie sabe con certeza. Fíjate en cuál es cuál.",
+    "Un fragmento escribe cohuatl y el diccionario usa coatl. Te mostramos la palabra tal como está en el documento, sin corregirla."
+   ],
+   "exercise_updates": [
+    {
+     "archive_id": "axolotl-10995",
+     "distractors": [
+      "mazatlan",
+      "tochtli"
+     ],
+     "comprehension_distractors": [
+      "la pluma de un ave",
+      "el colmillo de un jaguar"
+     ]
+    },
+    {
+     "archive_id": "axolotl-06302",
+     "distractors": [
+      "mazatlan",
+      "tochtli"
+     ],
+     "comprehension_distractors": [
+      "el conejo que buscan",
+      "la serpiente que piden"
+     ]
+    },
+    {
+     "archive_id": "axolotl-15614",
+     "distractors": [
+      "coatlan",
+      "michin"
+     ],
+     "comprehension_distractors": [
+      "pescados, ranas, aves",
+      "maíz, frijol, calabaza"
+     ]
+    },
+    {
+     "archive_id": "axolotl-06005",
+     "distractors": [
+      "mazatl",
+      "tototl"
+     ],
+     "comprehension_distractors": [
+      "Todos saben",
+      "Algunos vieron"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "piedra-lena",
+   "reading_tips": [
+    "Aquí cuahuitl quiere decir madera o leña. En la lectura de árboles la misma palabra se lee como «árbol».",
+    "«Dentro de la piedra y del palo» es una expresión: lee el fragmento completo para entenderla. La imagen del glifo muestra la palabra, no explica la expresión."
+   ],
+   "exercise_updates": [
+    {
+     "archive_id": "axolotl-15430",
+     "distractors": [
+      "tepetl",
+      "tlalli"
+     ],
+     "comprehension_distractors": [
+      "una braza de madera",
+      "una olla de cacao"
+     ]
+    },
+    {
+     "archive_id": "axolotl-01669",
+     "distractors": [
+      "tlalli",
+      "tepetl"
+     ],
+     "comprehension_distractors": [
+      "todo estaba en su lugar",
+      "abia otra casa en el sitio"
+     ]
+    },
+    {
+     "archive_id": "axolotl-04424",
+     "distractors": [
+      "xochicuahuitl",
+      "tetl"
+     ],
+     "comprehension_distractors": [
+      "la cal, la arena",
+      "el maíz, el frijol"
+     ]
+    },
+    {
+     "archive_id": "axolotl-13052",
+     "distractors": [
+      "xochicuahuitl",
+      "tepetl"
+     ],
+     "comprehension_distractors": [
+      "dentro del agua y del cerro",
+      "encima de la casa y del camino"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "arboles-cerros",
+   "reading_tips": [
+    "Verás quauitl y cuahuitl: son dos maneras de escribir la misma palabra en documentos distintos. No es una regla para cambiar letras en otras palabras.",
+    "Los nombres de lugar se dejan completos. La imagen de un cerro viene de otro documento: no muestra este lugar."
+   ],
+   "exercise_updates": [
+    {
+     "archive_id": "axolotl-01138",
+     "distractors": [
+      "xochicuahuitl",
+      "tepetl"
+     ],
+     "comprehension_distractors": [
+      "para que nadie pueda seguir el camino",
+      "para que los árboles vuelvan a crecer"
+     ]
+    },
+    {
+     "archive_id": "axolotl-12972",
+     "distractors": [
+      "xochicuahuitl",
+      "tepetl"
+     ],
+     "comprehension_distractors": [
+      "los queman",
+      "los siembran"
+     ]
+    },
+    {
+     "archive_id": "axolotl-11726",
+     "distractors": [
+      "xochicuahuitl",
+      "calli"
+     ],
+     "comprehension_distractors": [
+      "entre las casas, entre los caminos",
+      "entre las flores, entre los cantos"
+     ]
+    },
+    {
+     "archive_id": "axolotl-13930",
+     "distractors": [
+      "itepetzin",
+      "tlalli"
+     ],
+     "comprehension_distractors": [
+      "junto al río",
+      "dentro de la cueva"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fuego-viento",
+   "reading_tips": [
+    "En un fragmento se pinta el fuego en papel; en otro se mantiene un fuego encendido. Son dos cosas distintas.",
+    "Ehecatl es «viento» y también el nombre de un dios. Lee el contexto: no cada viento es el dios."
+   ],
+   "exercise_updates": [
+    {
+     "archive_id": "axolotl-05345",
+     "distractors": [
+      "ehecatl",
+      "atl"
+     ],
+     "comprehension_distractors": [
+      "cinco días",
+      "cuatro años"
+     ]
+    },
+    {
+     "archive_id": "axolotl-06073",
+     "distractors": [
+      "ehecatl",
+      "atl"
+     ],
+     "comprehension_distractors": [
+      "hacen la imagen del agua",
+      "hacen la imagen del sol"
+     ]
+    },
+    {
+     "archive_id": "axolotl-03579",
+     "distractors": [
+      "iehecatzin",
+      "tletl"
+     ],
+     "comprehension_distractors": [
+      "frío y de cansancio",
+      "miedo y de tristeza"
+     ]
+    },
+    {
+     "archive_id": "axolotl-10466",
+     "distractors": [
+      "iehecatzin",
+      "tletl"
+     ],
+     "comprehension_distractors": [
+      "como de plumas",
+      "como de flores"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sol-luna",
+   "reading_tips": [
+    "metztli puede significar «luna» o «mes». En estos fragmentos la traducción habla de la Luna.",
+    "Dos fragmentos cuentan la creación desde una mirada cristiana y son largos. Lee la traducción antes de responder dónde se colocan el Sol y la Luna."
+   ],
+   "exercise_updates": [
+    {
+     "archive_id": "axolotl-02027",
+     "distractors": [
+      "itonatiuh",
+      "metztli"
+     ],
+     "comprehension_distractors": [
+      "las nubes",
+      "el arcoíris"
+     ]
+    },
+    {
+     "archive_id": "axolotl-04888",
+     "distractors": [
+      "itonatiuh",
+      "metztli"
+     ],
+     "comprehension_distractors": [
+      "hacia la puesta del sol",
+      "hacia el rumbo del norte"
+     ]
+    },
+    {
+     "archive_id": "axolotl-09427",
+     "distractors": [
+      "imetzpan",
+      "citlalin"
+     ],
+     "comprehension_distractors": [
+      "en el octavo cielo",
+      "en el cuarto cielo"
+     ]
+    },
+    {
+     "archive_id": "axolotl-14327",
+     "distractors": [
+      "imetzpan",
+      "metztitlan"
+     ],
+     "comprehension_distractors": [
+      "durante el día",
+      "al amanecer"
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -812,9 +812,9 @@
     },
     "rules+dictionary": {
       "n": 52,
-      "top1": 0.635,
+      "top1": 0.654,
       "top3": 0.808,
-      "stem_top1": 0.577,
+      "stem_top1": 0.596,
       "by_split": {
         "dev": {
           "n": 25,
@@ -823,7 +823,7 @@
         },
         "test": {
           "n": 27,
-          "top1": 0.593,
+          "top1": 0.63,
           "top3": 0.741
         }
       },
@@ -922,14 +922,6 @@
           "got": "tochan",
           "correct": false,
           "in_top3": false,
-          "split": "test"
-        },
-        {
-          "word": "icalpan",
-          "expected": "i-cal-pan",
-          "got": "i-calpan",
-          "correct": false,
-          "in_top3": true,
           "split": "test"
         },
         {
@@ -1163,10 +1155,10 @@
     "tokens": 135288,
     "types": 26396,
     "exact_dictionary_tokens": 0.2799,
-    "analyzer_linked_tokens": 0.6029,
+    "analyzer_linked_tokens": 0.6025,
     "analyzer_explained_tokens": 0.8638,
     "exact_dictionary_types": 0.0387,
-    "analyzer_linked_types": 0.2669,
+    "analyzer_linked_types": 0.2658,
     "definitions": {
       "exact": "la palabra completa, normalizada, coincide con una forma del diccionario",
       "linked": "el mejor análisis enlaza la raíz con una entrada o con la tabla de partículas",
@@ -1174,13 +1166,13 @@
     }
   },
   "concordance": {
-    "entries_with_hits": 1119,
+    "entries_with_hits": 1124,
     "passages_exact": 10645,
-    "passages_stem": 25289,
-    "entries_gaining": 866,
-    "entries_losing": 86,
-    "passages_only_exact": 1351,
-    "median_gain": 2,
+    "passages_stem": 25350,
+    "entries_gaining": 873,
+    "entries_losing": 84,
+    "passages_only_exact": 1328,
+    "median_gain": 2.0,
     "top_gains": [
       {
         "stem": "ipan",
@@ -1314,7 +1306,7 @@
       "method": "IBM Model 1 (EM), raíz náhuatl → palabra española, con palabra nula",
       "iterations": 8,
       "pairs": 5453,
-      "stems": 4415,
+      "stems": 4413,
       "min_support": 2,
       "analyzer": "nah-morph-1"
     },
@@ -1331,7 +1323,7 @@
         },
         "ibm1": {
           "precision_at_1": 0.297,
-          "hit_at_3": 0.376
+          "hit_at_3": 0.386
         }
       },
       "examples": [
@@ -1619,5 +1611,5 @@
       "definition": "Acierto si una palabra propuesta (normalizada) aparece en la definición de Molina de esa entrada. Molina es independiente del corpus paralelo; la coincidencia ortográfica del s. XVI es aproximada."
     }
   },
-  "seconds": 18.8
+  "seconds": 18.7
 }

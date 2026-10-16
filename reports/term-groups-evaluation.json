@@ -90,9 +90,9 @@
     "attested": 5,
     "glyphs": 15,
     "glyphs_uncertain": 4,
-    "inflected": 28,
-    "passages": 762,
-    "uncertain": 4
+    "inflected": 26,
+    "passages": 753,
+    "uncertain": 6
    },
    "id": "calli",
    "lemma": "calli",
@@ -276,9 +276,9 @@
     "attested": 3,
     "glyphs": 14,
     "glyphs_uncertain": 29,
-    "inflected": 4,
-    "passages": 57,
-    "uncertain": 17
+    "inflected": 6,
+    "passages": 60,
+    "uncertain": 18
    },
    "id": "coatl",
    "lemma": "coatl",
@@ -560,8 +560,8 @@
     "attested": 1,
     "glyphs": 8,
     "glyphs_uncertain": 0,
-    "inflected": 1,
-    "passages": 271,
+    "inflected": 2,
+    "passages": 272,
     "uncertain": 6
    },
    "id": "tochtli",
@@ -664,8 +664,8 @@
     "attested": 6,
     "glyphs": 6,
     "glyphs_uncertain": 4,
-    "inflected": 2,
-    "passages": 49,
+    "inflected": 3,
+    "passages": 50,
     "uncertain": 2
    },
    "id": "ehecatl",
@@ -1082,9 +1082,9 @@
     "attested": 2,
     "glyphs": 1,
     "glyphs_uncertain": 40,
-    "inflected": 17,
-    "passages": 604,
-    "uncertain": 10
+    "inflected": 16,
+    "passages": 603,
+    "uncertain": 11
    },
    "id": "tlalli",
    "lemma": "tlalli",
@@ -1186,8 +1186,8 @@
     "attested": 3,
     "glyphs": 4,
     "glyphs_uncertain": 0,
-    "inflected": 0,
-    "passages": 461,
+    "inflected": 2,
+    "passages": 463,
     "uncertain": 3
    },
    "id": "metztli",

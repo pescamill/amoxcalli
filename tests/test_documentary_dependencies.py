@@ -13,8 +13,8 @@ from nahuatl_local.documentary_retrieval_evaluation import manifest, validate_re
 
 # Presentation is verified by the DOM suite, never hashed into measured evidence.
 PRESENTATION = ('nahuatl_local/platform.py', 'nahuatl_local/laboratory.py',
-                'nahuatl_local/platform_web/app.js', 'nahuatl_local/platform_web/learning.js',
-                'nahuatl_local/platform_web/laboratory.js', 'nahuatl_local/platform_web/style.css',
+                'nahuatl_local/platform_web/app.js', 'nahuatl_local/platform_web/reading.js',
+                'nahuatl_local/platform_web/laboratory.js', 'nahuatl_local/platform_web/amoxcalli.css',
                 'nahuatl_local/platform_web/index.html', 'tests/platform_ui.cjs', 'scripts/test-platform-ui.py')
 
 

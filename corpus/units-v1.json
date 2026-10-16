@@ -1,0 +1,1695 @@
+{
+  "generated_by": {
+    "analyzer": "nah-morph-1",
+    "llm_calls": 0,
+    "module": "nahuatl_local.units",
+    "network_requests": 0,
+    "version": "units-gen-1"
+  },
+  "id": "unidades-v1",
+  "note": "Borrador automático: generado desde el archivo, el analizador y el índice de términos; pendiente de revisión.",
+  "review_status": "automatic_draft",
+  "schema_version": 1,
+  "units": [
+    {
+      "closing": {
+        "archive_id": "axolotl-02623",
+        "evidence": [
+          {
+            "archive_id": "axolotl-02623",
+            "form": "xochitl",
+            "segmentation": "xochi-tl",
+            "sense_id": "sense-xochitl",
+            "source_hash": "a6b882c63f3952c2a665f0ac9f612b2048627477803632cc273a67d508557be2",
+            "support": "flores"
+          },
+          {
+            "archive_id": "axolotl-02623",
+            "form": "cuicatl",
+            "segmentation": "cuica-tl",
+            "sense_id": "sense-cuicatl",
+            "source_hash": "a6b882c63f3952c2a665f0ac9f612b2048627477803632cc273a67d508557be2",
+            "support": "canto"
+          }
+        ],
+        "forms": [
+          {
+            "form": "xochitl",
+            "gloss": "flor + absolutivo",
+            "segmentation": "xochi-tl"
+          },
+          {
+            "form": "cuicatl",
+            "gloss": "canto + absolutivo",
+            "segmentation": "cuica-tl"
+          }
+        ]
+      },
+      "exercises": [
+        {
+          "evidence": [
+            {
+              "archive_id": "axolotl-09725",
+              "form": "calli",
+              "segmentation": "cal-li",
+              "sense_id": "sense-calli",
+              "source_hash": "7504bd083fdd2db88d62f70cff28bc9e97097a98bb9d92570efef2ea5a985507",
+              "support": "Casa"
+            },
+            {
+              "archive_id": "axolotl-04310",
+              "form": "xochitl",
+              "segmentation": "xochi-tl",
+              "sense_id": "sense-xochitl",
+              "source_hash": "eda67998cae37d15d6cad0eb76e86594572dd6af4d878cb0f8c804af7693d863",
+              "support": "flores"
+            },
+            {
+              "archive_id": "axolotl-09427",
+              "form": "metztli",
+              "segmentation": "metz-tli",
+              "sense_id": "sense-metztli",
+              "source_hash": "f166961b52412c33408bcd578cda8b5d8e3ff3b894861c66330b650d1d329be9",
+              "support": "luna"
+            },
+            {
+              "archive_id": "axolotl-10264",
+              "form": "tlalli",
+              "segmentation": "tlal-li",
+              "sense_id": "sense-tlalli",
+              "source_hash": "c171a95aac38d6b39e5e05ada0cb6dd82ba67dcf3cb6aa27f886adffb789f619",
+              "support": "tierra"
+            }
+          ],
+          "explanation": "Glosas del analizador, morfema a morfema; no son traducciones. Cada forma aparece en un pasaje real.",
+          "id": "absolutivo-1",
+          "kind": "match",
+          "pairs": [
+            {
+              "form": "calli",
+              "gloss": "casa + absolutivo"
+            },
+            {
+              "form": "xochitl",
+              "gloss": "flor + absolutivo"
+            },
+            {
+              "form": "metztli",
+              "gloss": "luna + absolutivo"
+            },
+            {
+              "form": "tlalli",
+              "gloss": "tierra + absolutivo"
+            }
+          ],
+          "prompt": "Une cada forma del archivo con su glosa por partes."
+        },
+        {
+          "answer": 1,
+          "evidence": [
+            {
+              "archive_id": "axolotl-09725",
+              "form": "calli",
+              "segmentation": "cal-li",
+              "sense_id": "sense-calli",
+              "source_hash": "7504bd083fdd2db88d62f70cff28bc9e97097a98bb9d92570efef2ea5a985507",
+              "support": "Casa"
+            }
+          ],
+          "explanation": "El analizador segmenta «calli» como cal-li; «-li» se glosa «absolutivo (sin poseedor)».",
+          "form": "calli",
+          "id": "absolutivo-2",
+          "kind": "identify",
+          "morpheme": {
+            "key": "li",
+            "slot": "ABS",
+            "surface": "li"
+          },
+          "options": [
+            "en",
+            "absolutivo",
+            "encima de"
+          ],
+          "prompt": "En «calli», ¿qué indica «-li»?"
+        },
+        {
+          "answer": 2,
+          "evidence": [
+            {
+              "archive_id": "axolotl-04310",
+              "form": "xochitl",
+              "segmentation": "xochi-tl",
+              "sense_id": "sense-xochitl",
+              "source_hash": "eda67998cae37d15d6cad0eb76e86594572dd6af4d878cb0f8c804af7693d863",
+              "support": "flores"
+            }
+          ],
+          "explanation": "El analizador segmenta «xochitl» como xochi-tl; «-tl» se glosa «absolutivo (sin poseedor)».",
+          "form": "xochitl",
+          "id": "absolutivo-3",
+          "kind": "identify",
+          "morpheme": {
+            "key": "λ",
+            "slot": "ABS",
+            "surface": "tl"
+          },
+          "options": [
+            "encima de",
+            "en",
+            "absolutivo"
+          ],
+          "prompt": "En «xochitl», ¿qué indica «-tl»?"
+        },
+        {
+          "answer": [
+            1,
+            2
+          ],
+          "evidence": [
+            {
+              "archive_id": "axolotl-09427",
+              "form": "metztli",
+              "segmentation": "metz-tli",
+              "sense_id": "sense-metztli",
+              "source_hash": "f166961b52412c33408bcd578cda8b5d8e3ff3b894861c66330b650d1d329be9",
+              "support": "luna"
+            }
+          ],
+          "explanation": "«metztli» aparece así en el archivo: metz-tli.",
+          "form": "metztli",
+          "gloss": "luna + absolutivo",
+          "id": "absolutivo-4",
+          "kind": "build",
+          "prompt": "Arma la forma que significa «luna + absolutivo».",
+          "tiles": [
+            "li",
+            "metz",
+            "tli"
+          ]
+        },
+        {
+          "answer": [
+            2,
+            0
+          ],
+          "evidence": [
+            {
+              "archive_id": "axolotl-10264",
+              "form": "tlalli",
+              "segmentation": "tlal-li",
+              "sense_id": "sense-tlalli",
+              "source_hash": "c171a95aac38d6b39e5e05ada0cb6dd82ba67dcf3cb6aa27f886adffb789f619",
+              "support": "tierra"
+            }
+          ],
+          "explanation": "«tlalli» aparece así en el archivo: tlal-li.",
+          "form": "tlalli",
+          "gloss": "tierra + absolutivo",
+          "id": "absolutivo-5",
+          "kind": "build",
+          "prompt": "Arma la forma que significa «tierra + absolutivo».",
+          "tiles": [
+            "li",
+            "tl",
+            "tlal"
+          ]
+        },
+        {
+          "answer": 0,
+          "archive_id": "axolotl-04310",
+          "blank": "xochitl",
+          "evidence": [
+            {
+              "archive_id": "axolotl-04310",
+              "form": "xochitl",
+              "segmentation": "xochi-tl",
+              "sense_id": "sense-xochitl",
+              "source_hash": "eda67998cae37d15d6cad0eb76e86594572dd6af4d878cb0f8c804af7693d863",
+              "support": "flores"
+            },
+            {
+              "archive_id": "axolotl-00288",
+              "form": "ixochitzin",
+              "segmentation": "i-xochi-tzin",
+              "sense_id": "sense-xochitl",
+              "source_hash": "74353f3c96ef2a707e50c641ae281f8efc06e0e18df9e1fb0e671e6ad886c65f",
+              "support": "Flores"
+            },
+            {
+              "archive_id": "axolotl-00324",
+              "form": "toxochiuh",
+              "segmentation": "to-xochi-uh",
+              "sense_id": "sense-xochitl",
+              "source_hash": "70ca9894c624c37c57734d575a25b36b5cb8821322f0374ff207cc21e80e2548",
+              "support": "flores"
+            }
+          ],
+          "explanation": "El registro escribe «xochitl» (xochi-tl). Las otras opciones comparten la raíz xochi con otros afijos; también están en el archivo.",
+          "id": "absolutivo-6",
+          "kind": "cloze",
+          "options": [
+            "xochitl",
+            "ixochitzin",
+            "toxochiuh"
+          ],
+          "prompt": "Completa el pasaje con la forma que escribe el registro. La traducción del archivo te orienta."
+        },
+        {
+          "answer": 0,
+          "archive_id": "axolotl-09215",
+          "blank": "xochitl",
+          "evidence": [
+            {
+              "archive_id": "axolotl-09215",
+              "form": "xochitl",
+              "segmentation": "xochi-tl",
+              "sense_id": "sense-xochitl",
+              "source_hash": "4bafa89d7af43d28a32cb5ed0cfea29f3396b0e281e071bbcac48c9d1f3db8f6",
+              "support": "flores"
+            },
+            {
+              "archive_id": "axolotl-00288",
+              "form": "ixochitzin",
+              "segmentation": "i-xochi-tzin",
+              "sense_id": "sense-xochitl",
+              "source_hash": "74353f3c96ef2a707e50c641ae281f8efc06e0e18df9e1fb0e671e6ad886c65f",
+              "support": "Flores"
+            },
+            {
+              "archive_id": "axolotl-00324",
+              "form": "toxochiuh",
+              "segmentation": "to-xochi-uh",
+              "sense_id": "sense-xochitl",
+              "source_hash": "70ca9894c624c37c57734d575a25b36b5cb8821322f0374ff207cc21e80e2548",
+              "support": "flores"
+            }
+          ],
+          "explanation": "El registro escribe «xochitl» (xochi-tl). Las otras opciones comparten la raíz xochi con otros afijos; también están en el archivo.",
+          "id": "absolutivo-7",
+          "kind": "cloze",
+          "options": [
+            "xochitl",
+            "toxochiuh",
+            "ixochitzin"
+          ],
+          "prompt": "Completa el pasaje con la forma que escribe el registro. La traducción del archivo te orienta."
+        },
+        {
+          "answer": 2,
+          "archive_id": "axolotl-13306",
+          "evidence": [
+            {
+              "archive_id": "axolotl-13306",
+              "form": "Cuicatl",
+              "segmentation": "Cuica-tl",
+              "sense_id": "sense-cuicatl",
+              "source_hash": "fe8a62422104cf9deca5f6f6535ef32dc4f76143833ff061ed4f0826be56b0f0",
+              "support": "canto"
+            }
+          ],
+          "explanation": "Es la traducción del archivo para este registro. «Cuicatl» = canto + absolutivo.",
+          "focus_form": "Cuicatl",
+          "id": "absolutivo-8",
+          "kind": "translate",
+          "option_ids": [
+            "axolotl-00735",
+            "axolotl-02623",
+            "axolotl-13306"
+          ],
+          "prompt": "¿Qué dice este pasaje breve?"
+        },
+        {
+          "answer": 2,
+          "archive_id": "axolotl-10264",
+          "evidence": [
+            {
+              "archive_id": "axolotl-10264",
+              "form": "tlalli",
+              "segmentation": "tlal-li",
+              "sense_id": "sense-tlalli",
+              "source_hash": "c171a95aac38d6b39e5e05ada0cb6dd82ba67dcf3cb6aa27f886adffb789f619",
+              "support": "tierra"
+            }
+          ],
+          "explanation": "Es la traducción del archivo para este registro. «tlalli» = tierra + absolutivo.",
+          "focus_form": "tlalli",
+          "id": "absolutivo-9",
+          "kind": "translate",
+          "option_ids": [
+            "axolotl-00833",
+            "axolotl-00137",
+            "axolotl-10264"
+          ],
+          "prompt": "¿Qué dice este pasaje breve?"
+        }
+      ],
+      "id": "absolutivo",
+      "minutes": 7,
+      "objective": "Reconocer el absolutivo de un sustantivo sin poseedor y separar la raíz.",
+      "practice_version": 1,
+      "review_status": "automatic_draft",
+      "rule": {
+        "morphemes": [
+          {
+            "gloss": "absolutivo (sin poseedor)",
+            "key": "li",
+            "slot": "ABS",
+            "surfaces": [
+              "li"
+            ]
+          },
+          {
+            "gloss": "absolutivo (sin poseedor)",
+            "key": "λ",
+            "slot": "ABS",
+            "surfaces": [
+              "tl"
+            ]
+          },
+          {
+            "gloss": "absolutivo (sin poseedor)",
+            "key": "λi",
+            "slot": "ABS",
+            "surfaces": [
+              "tli"
+            ]
+          }
+        ],
+        "points": [
+          "La raíz es lo que queda al quitar el absolutivo: xochi-, metz-, cal-.",
+          "Al poseer el sustantivo o añadirle otro sufijo, el absolutivo desaparece: cal-li → no-cal."
+        ],
+        "summary": "Un sustantivo sin poseedor lleva una terminación llamada absolutivo: -tl tras vocal (xochi-tl), -tli tras consonante (metz-tli) y -li cuando la raíz termina en l (cal-li)."
+      },
+      "sense_ids": [
+        "sense-xochitl",
+        "sense-cuicatl",
+        "sense-metztli",
+        "sense-tlalli",
+        "sense-calli",
+        "sense-atl"
+      ],
+      "title": "La palabra sola: -tl, -tli, -li",
+      "version": 1,
+      "words": [
+        {
+          "attested": 175,
+          "form": "calli",
+          "gloss": "casa + absolutivo",
+          "segmentation": "cal-li",
+          "sense_id": "sense-calli"
+        },
+        {
+          "attested": 73,
+          "form": "xochitl",
+          "gloss": "flor + absolutivo",
+          "segmentation": "xochi-tl",
+          "sense_id": "sense-xochitl"
+        },
+        {
+          "attested": 3,
+          "form": "metztli",
+          "gloss": "luna + absolutivo",
+          "segmentation": "metz-tli",
+          "sense_id": "sense-metztli"
+        },
+        {
+          "attested": 168,
+          "form": "tlalli",
+          "gloss": "tierra + absolutivo",
+          "segmentation": "tlal-li",
+          "sense_id": "sense-tlalli"
+        },
+        {
+          "attested": 56,
+          "form": "atl",
+          "gloss": "agua + absolutivo",
+          "segmentation": "a-tl",
+          "sense_id": "sense-atl"
+        },
+        {
+          "attested": 43,
+          "form": "cuicatl",
+          "gloss": "canto + absolutivo",
+          "segmentation": "cuica-tl",
+          "sense_id": "sense-cuicatl"
+        }
+      ]
+    },
+    {
+      "closing": {
+        "archive_id": "axolotl-00324",
+        "evidence": [
+          {
+            "archive_id": "axolotl-00324",
+            "form": "toxochiuh",
+            "segmentation": "to-xochi-uh",
+            "sense_id": "sense-xochitl",
+            "source_hash": "70ca9894c624c37c57734d575a25b36b5cb8821322f0374ff207cc21e80e2548",
+            "support": "flores"
+          }
+        ],
+        "forms": [
+          {
+            "form": "toxochiuh",
+            "gloss": "nuestro + flor + poseído",
+            "segmentation": "to-xochi-uh"
+          }
+        ]
+      },
+      "exercises": [
+        {
+          "evidence": [
+            {
+              "archive_id": "axolotl-02118",
+              "form": "toxochiuh",
+              "segmentation": "to-xochi-uh",
+              "sense_id": "sense-xochitl",
+              "source_hash": "5d650288c9df21ce8fa074cedadb5bcefafe849123f8bded9c3d2ff973fe2d58",
+              "support": "flores"
+            },
+            {
+              "archive_id": "axolotl-01508",
+              "form": "ical",
+              "segmentation": "i-cal",
+              "sense_id": "sense-calli",
+              "source_hash": "eeda2a30c2ccdbc8676a0b8dead1931d9896728cdebbe027a99eb8679523c9d5",
+              "support": "casa"
+            },
+            {
+              "archive_id": "axolotl-05036",
+              "form": "notlal",
+              "segmentation": "no-tlal",
+              "sense_id": "sense-tlalli",
+              "source_hash": "0545287beb1ca476a6700295ebbd8121cf916d10712ee3a050fc4cf1b637342f",
+              "support": "tierras"
+            },
+            {
+              "archive_id": "axolotl-10754",
+              "form": "moxochiuh",
+              "segmentation": "mo-xochi-uh",
+              "sense_id": "sense-xochitl",
+              "source_hash": "58b300421e9bb6e583dc7f8e3467d0e71cc4f1050f054cebfa9dfafc7ba2ebbd",
+              "support": "flores"
+            }
+          ],
+          "explanation": "Glosas del analizador, morfema a morfema; no son traducciones. Cada forma aparece en un pasaje real.",
+          "id": "posesivos-1",
+          "kind": "match",
+          "pairs": [
+            {
+              "form": "toxochiuh",
+              "gloss": "nuestro + flor + poseído"
+            },
+            {
+              "form": "ical",
+              "gloss": "su + casa"
+            },
+            {
+              "form": "notlal",
+              "gloss": "mi + tierra"
+            },
+            {
+              "form": "moxochiuh",
+              "gloss": "tu + flor + poseído"
+            }
+          ],
+          "prompt": "Une cada forma del archivo con su glosa por partes."
+        },
+        {
+          "answer": 0,
+          "evidence": [
+            {
+              "archive_id": "axolotl-02118",
+              "form": "toxochiuh",
+              "segmentation": "to-xochi-uh",
+              "sense_id": "sense-xochitl",
+              "source_hash": "5d650288c9df21ce8fa074cedadb5bcefafe849123f8bded9c3d2ff973fe2d58",
+              "support": "flores"
+            }
+          ],
+          "explanation": "El analizador segmenta «toxochiuh» como to-xochi-uh; «to-» se glosa «nuestro».",
+          "form": "toxochiuh",
+          "id": "posesivos-2",
+          "kind": "identify",
+          "morpheme": {
+            "key": "to",
+            "slot": "POSS",
+            "surface": "to"
+          },
+          "options": [
+            "nuestro",
+            "mi",
+            "su"
+          ],
+          "prompt": "En «toxochiuh», ¿qué indica «to-»?"
+        },
+        {
+          "answer": 0,
+          "evidence": [
+            {
+              "archive_id": "axolotl-01508",
+              "form": "ical",
+              "segmentation": "i-cal",
+              "sense_id": "sense-calli",
+              "source_hash": "eeda2a30c2ccdbc8676a0b8dead1931d9896728cdebbe027a99eb8679523c9d5",
+              "support": "casa"
+            }
+          ],
+          "explanation": "El analizador segmenta «ical» como i-cal; «i-» se glosa «su (de él / ella)».",
+          "form": "ical",
+          "id": "posesivos-3",
+          "kind": "identify",
+          "morpheme": {
+            "key": "i",
+            "slot": "POSS",
+            "surface": "i"
+          },
+          "options": [
+            "su",
+            "nuestro",
+            "mi"
+          ],
+          "prompt": "En «ical», ¿qué indica «i-»?"
+        },
+        {
+          "answer": [
+            2,
+            0
+          ],
+          "evidence": [
+            {
+              "archive_id": "axolotl-05036",
+              "form": "notlal",
+              "segmentation": "no-tlal",
+              "sense_id": "sense-tlalli",
+              "source_hash": "0545287beb1ca476a6700295ebbd8121cf916d10712ee3a050fc4cf1b637342f",
+              "support": "tierras"
+            }
+          ],
+          "explanation": "«notlal» aparece así en el archivo: no-tlal.",
+          "form": "notlal",
+          "gloss": "mi + tierra",
+          "id": "posesivos-4",
+          "kind": "build",
+          "prompt": "Arma la forma que significa «mi + tierra».",
+          "tiles": [
+            "tlal",
+            "to",
+            "no"
+          ]
+        },
+        {
+          "answer": [
+            0,
+            2,
+            3
+          ],
+          "evidence": [
+            {
+              "archive_id": "axolotl-10754",
+              "form": "moxochiuh",
+              "segmentation": "mo-xochi-uh",
+              "sense_id": "sense-xochitl",
+              "source_hash": "58b300421e9bb6e583dc7f8e3467d0e71cc4f1050f054cebfa9dfafc7ba2ebbd",
+              "support": "flores"
+            }
+          ],
+          "explanation": "«moxochiuh» aparece así en el archivo: mo-xochi-uh.",
+          "form": "moxochiuh",
+          "gloss": "tu + flor + poseído",
+          "id": "posesivos-5",
+          "kind": "build",
+          "prompt": "Arma la forma que significa «tu + flor + poseído».",
+          "tiles": [
+            "mo",
+            "to",
+            "xochi",
+            "uh"
+          ]
+        },
+        {
+          "answer": 0,
+          "archive_id": "axolotl-10754",
+          "blank": "moxochiuh",
+          "evidence": [
+            {
+              "archive_id": "axolotl-10754",
+              "form": "moxochiuh",
+              "segmentation": "mo-xochi-uh",
+              "sense_id": "sense-xochitl",
+              "source_hash": "58b300421e9bb6e583dc7f8e3467d0e71cc4f1050f054cebfa9dfafc7ba2ebbd",
+              "support": "flores"
+            },
+            {
+              "archive_id": "axolotl-00288",
+              "form": "ixochitzin",
+              "segmentation": "i-xochi-tzin",
+              "sense_id": "sense-xochitl",
+              "source_hash": "74353f3c96ef2a707e50c641ae281f8efc06e0e18df9e1fb0e671e6ad886c65f",
+              "support": "Flores"
+            },
+            {
+              "archive_id": "axolotl-00324",
+              "form": "toxochiuh",
+              "segmentation": "to-xochi-uh",
+              "sense_id": "sense-xochitl",
+              "source_hash": "70ca9894c624c37c57734d575a25b36b5cb8821322f0374ff207cc21e80e2548",
+              "support": "flores"
+            }
+          ],
+          "explanation": "El registro escribe «moxochiuh» (mo-xochi-uh). Las otras opciones comparten la raíz xochi con otros afijos; también están en el archivo.",
+          "id": "posesivos-6",
+          "kind": "cloze",
+          "options": [
+            "moxochiuh",
+            "ixochitzin",
+            "toxochiuh"
+          ],
+          "prompt": "Completa el pasaje con la forma que escribe el registro. La traducción del archivo te orienta."
+        },
+        {
+          "answer": 0,
+          "archive_id": "axolotl-02118",
+          "blank": "toxochiuh",
+          "evidence": [
+            {
+              "archive_id": "axolotl-02118",
+              "form": "toxochiuh",
+              "segmentation": "to-xochi-uh",
+              "sense_id": "sense-xochitl",
+              "source_hash": "5d650288c9df21ce8fa074cedadb5bcefafe849123f8bded9c3d2ff973fe2d58",
+              "support": "flores"
+            },
+            {
+              "archive_id": "axolotl-00288",
+              "form": "ixochitzin",
+              "segmentation": "i-xochi-tzin",
+              "sense_id": "sense-xochitl",
+              "source_hash": "74353f3c96ef2a707e50c641ae281f8efc06e0e18df9e1fb0e671e6ad886c65f",
+              "support": "Flores"
+            },
+            {
+              "archive_id": "axolotl-05677",
+              "form": "ixochiuh",
+              "segmentation": "i-xochi-uh",
+              "sense_id": "sense-xochitl",
+              "source_hash": "fa2567645ff42ba7828b6d82fa3bd345a5eccb72cd2f55917df6bdeee5fee0d3",
+              "support": "flores"
+            }
+          ],
+          "explanation": "El registro escribe «toxochiuh» (to-xochi-uh). Las otras opciones comparten la raíz xochi con otros afijos; también están en el archivo.",
+          "id": "posesivos-7",
+          "kind": "cloze",
+          "options": [
+            "toxochiuh",
+            "ixochiuh",
+            "ixochitzin"
+          ],
+          "prompt": "Completa el pasaje con la forma que escribe el registro. La traducción del archivo te orienta."
+        },
+        {
+          "answer": 2,
+          "archive_id": "axolotl-13662",
+          "evidence": [
+            {
+              "archive_id": "axolotl-13662",
+              "form": "moxochiuh",
+              "segmentation": "mo-xochi-uh",
+              "sense_id": "sense-xochitl",
+              "source_hash": "f3325e7670fbeb6c98109b741fda01d996b66ea7eadc60bf97662db4c058dc5f",
+              "support": "flores"
+            }
+          ],
+          "explanation": "Es la traducción del archivo para este registro. «moxochiuh» = tu + flor + poseído.",
+          "focus_form": "moxochiuh",
+          "id": "posesivos-8",
+          "kind": "translate",
+          "option_ids": [
+            "axolotl-00518",
+            "axolotl-00324",
+            "axolotl-13662"
+          ],
+          "prompt": "¿Qué dice este pasaje breve?"
+        },
+        {
+          "answer": 0,
+          "archive_id": "axolotl-08457",
+          "evidence": [
+            {
+              "archive_id": "axolotl-08457",
+              "form": "toxochiuh",
+              "segmentation": "to-xochi-uh",
+              "sense_id": "sense-xochitl",
+              "source_hash": "38436854833927b6388c209fcc69825e8790a6ec87592e777536fe92de408670",
+              "support": "flores"
+            }
+          ],
+          "explanation": "Es la traducción del archivo para este registro. «toxochiuh» = nuestro + flor + poseído.",
+          "focus_form": "toxochiuh",
+          "id": "posesivos-9",
+          "kind": "translate",
+          "option_ids": [
+            "axolotl-08457",
+            "axolotl-00518",
+            "axolotl-00324"
+          ],
+          "prompt": "¿Qué dice este pasaje breve?"
+        }
+      ],
+      "id": "posesivos",
+      "minutes": 7,
+      "objective": "Reconocer al poseedor por el prefijo y notar que el absolutivo cae.",
+      "practice_version": 1,
+      "review_status": "automatic_draft",
+      "rule": {
+        "morphemes": [
+          {
+            "gloss": "su (de él / ella)",
+            "key": "i",
+            "slot": "POSS",
+            "surfaces": [
+              "i"
+            ]
+          },
+          {
+            "gloss": "tu",
+            "key": "mo",
+            "slot": "POSS",
+            "surfaces": [
+              "mo"
+            ]
+          },
+          {
+            "gloss": "mi",
+            "key": "no",
+            "slot": "POSS",
+            "surfaces": [
+              "no"
+            ]
+          },
+          {
+            "gloss": "nuestro",
+            "key": "to",
+            "slot": "POSS",
+            "surfaces": [
+              "to"
+            ]
+          }
+        ],
+        "points": [
+          "Algunas raíces toman -uh al poseerse: xochi-tl → to-xochi-uh «nuestra flor».",
+          "El prefijo dice quién posee; la raíz, qué se posee."
+        ],
+        "summary": "El poseedor va delante de la raíz: no- «mi», mo- «tu», i- «su», to- «nuestro». La forma poseída pierde el absolutivo: cal-li «casa» → i-cal «su casa»."
+      },
+      "sense_ids": [
+        "sense-xochitl",
+        "sense-tonatiuh",
+        "sense-tlalli",
+        "sense-calli",
+        "sense-tepetl"
+      ],
+      "title": "Mi, tu, su, nuestro: no-, mo-, i-, to-",
+      "version": 1,
+      "words": [
+        {
+          "attested": 5,
+          "form": "toxochiuh",
+          "gloss": "nuestro + flor + poseído",
+          "segmentation": "to-xochi-uh",
+          "sense_id": "sense-xochitl"
+        },
+        {
+          "attested": 76,
+          "form": "ical",
+          "gloss": "su + casa",
+          "segmentation": "i-cal",
+          "sense_id": "sense-calli"
+        },
+        {
+          "attested": 11,
+          "form": "notlal",
+          "gloss": "mi + tierra",
+          "segmentation": "no-tlal",
+          "sense_id": "sense-tlalli"
+        },
+        {
+          "attested": 3,
+          "form": "moxochiuh",
+          "gloss": "tu + flor + poseído",
+          "segmentation": "mo-xochi-uh",
+          "sense_id": "sense-xochitl"
+        },
+        {
+          "attested": 2,
+          "form": "itonatiuh",
+          "gloss": "su + sol",
+          "segmentation": "i-tonatiuh",
+          "sense_id": "sense-tonatiuh"
+        },
+        {
+          "attested": 1,
+          "form": "notepeuh",
+          "gloss": "mi + cerro + poseído",
+          "segmentation": "no-tepe-uh",
+          "sense_id": "sense-tepetl"
+        }
+      ]
+    },
+    {
+      "closing": {
+        "archive_id": "axolotl-00137",
+        "evidence": [
+          {
+            "archive_id": "axolotl-00137",
+            "form": "tlalticpac",
+            "segmentation": "tlal-ti-cpac",
+            "sense_id": "sense-tlalli",
+            "source_hash": "0fdfc285e20c151e69089f2016a85eeaf876040908cfb5fec4baef9ed7c0a35b",
+            "support": "tierra"
+          }
+        ],
+        "forms": [
+          {
+            "form": "tlalticpac",
+            "gloss": "tierra + encima de",
+            "segmentation": "tlal-ti-cpac"
+          }
+        ]
+      },
+      "exercises": [
+        {
+          "evidence": [
+            {
+              "archive_id": "axolotl-05448",
+              "form": "tlalticpac",
+              "segmentation": "tlal-ti-cpac",
+              "sense_id": "sense-tlalli",
+              "source_hash": "5a09bf65fbac4d10c85edb7e3f5627c881a3870ca32038625e70a8bb1b91aaa8",
+              "support": "tierra"
+            },
+            {
+              "archive_id": "axolotl-12505",
+              "form": "calitic",
+              "segmentation": "cal-itic",
+              "sense_id": "sense-calli",
+              "source_hash": "8434dd36f6fbb91660e31c42e0baa50a3801c60b4b47125212c5b7e35732f37b",
+              "support": "casa"
+            },
+            {
+              "archive_id": "axolotl-08881",
+              "form": "intlalpan",
+              "segmentation": "in-tlal-pan",
+              "sense_id": "sense-tlalli",
+              "source_hash": "c886411a7390f08152983e51b6e6b60438a625f7aaf0b86654c011d75a040f0e",
+              "support": "tierra"
+            },
+            {
+              "archive_id": "axolotl-13734",
+              "form": "ycalnauac",
+              "segmentation": "y-cal-nauac",
+              "sense_id": "sense-calli",
+              "source_hash": "5386b9022f82a6d4c0c5de0042c29b0fcd2b1e0eab785c773c0fc72983ce4c21",
+              "support": "casas"
+            }
+          ],
+          "explanation": "Glosas del analizador, morfema a morfema; no son traducciones. Cada forma aparece en un pasaje real.",
+          "id": "locativos-1",
+          "kind": "match",
+          "pairs": [
+            {
+              "form": "tlalticpac",
+              "gloss": "tierra + encima de"
+            },
+            {
+              "form": "calitic",
+              "gloss": "casa + dentro de"
+            },
+            {
+              "form": "intlalpan",
+              "gloss": "su + tierra + en, sobre"
+            },
+            {
+              "form": "ycalnauac",
+              "gloss": "su + casa + cerca de"
+            }
+          ],
+          "prompt": "Une cada forma del archivo con su glosa por partes."
+        },
+        {
+          "answer": 0,
+          "evidence": [
+            {
+              "archive_id": "axolotl-05448",
+              "form": "tlalticpac",
+              "segmentation": "tlal-ti-cpac",
+              "sense_id": "sense-tlalli",
+              "source_hash": "5a09bf65fbac4d10c85edb7e3f5627c881a3870ca32038625e70a8bb1b91aaa8",
+              "support": "tierra"
+            }
+          ],
+          "explanation": "El analizador segmenta «tlalticpac» como tlal-ti-cpac; «-cpac» se glosa «encima de».",
+          "form": "tlalticpac",
+          "id": "locativos-2",
+          "kind": "identify",
+          "morpheme": {
+            "key": "kpak",
+            "slot": "REL",
+            "surface": "cpac"
+          },
+          "options": [
+            "encima de",
+            "cerca de",
+            "dentro de"
+          ],
+          "prompt": "En «tlalticpac», ¿qué indica «-cpac»?"
+        },
+        {
+          "answer": 2,
+          "evidence": [
+            {
+              "archive_id": "axolotl-12505",
+              "form": "calitic",
+              "segmentation": "cal-itic",
+              "sense_id": "sense-calli",
+              "source_hash": "8434dd36f6fbb91660e31c42e0baa50a3801c60b4b47125212c5b7e35732f37b",
+              "support": "casa"
+            }
+          ],
+          "explanation": "El analizador segmenta «calitic» como cal-itic; «-itic» se glosa «dentro de».",
+          "form": "calitic",
+          "id": "locativos-3",
+          "kind": "identify",
+          "morpheme": {
+            "key": "itik",
+            "slot": "REL",
+            "surface": "itic"
+          },
+          "options": [
+            "en, sobre",
+            "cerca de",
+            "dentro de"
+          ],
+          "prompt": "En «calitic», ¿qué indica «-itic»?"
+        },
+        {
+          "answer": [
+            1,
+            2,
+            3
+          ],
+          "evidence": [
+            {
+              "archive_id": "axolotl-08881",
+              "form": "intlalpan",
+              "segmentation": "in-tlal-pan",
+              "sense_id": "sense-tlalli",
+              "source_hash": "c886411a7390f08152983e51b6e6b60438a625f7aaf0b86654c011d75a040f0e",
+              "support": "tierra"
+            }
+          ],
+          "explanation": "«intlalpan» aparece así en el archivo: in-tlal-pan.",
+          "form": "intlalpan",
+          "gloss": "su + tierra + en, sobre",
+          "id": "locativos-4",
+          "kind": "build",
+          "prompt": "Arma la forma que significa «su + tierra + en, sobre».",
+          "tiles": [
+            "cpac",
+            "in",
+            "tlal",
+            "pan"
+          ]
+        },
+        {
+          "answer": [
+            1,
+            0,
+            2
+          ],
+          "evidence": [
+            {
+              "archive_id": "axolotl-13734",
+              "form": "ycalnauac",
+              "segmentation": "y-cal-nauac",
+              "sense_id": "sense-calli",
+              "source_hash": "5386b9022f82a6d4c0c5de0042c29b0fcd2b1e0eab785c773c0fc72983ce4c21",
+              "support": "casas"
+            }
+          ],
+          "explanation": "«ycalnauac» aparece así en el archivo: y-cal-nauac.",
+          "form": "ycalnauac",
+          "gloss": "su + casa + cerca de",
+          "id": "locativos-5",
+          "kind": "build",
+          "prompt": "Arma la forma que significa «su + casa + cerca de».",
+          "tiles": [
+            "cal",
+            "y",
+            "nauac",
+            "cpac"
+          ]
+        },
+        {
+          "answer": 1,
+          "archive_id": "axolotl-01729",
+          "blank": "Tlalticpac",
+          "evidence": [
+            {
+              "archive_id": "axolotl-01729",
+              "form": "Tlalticpac",
+              "segmentation": "Tlal-ti-cpac",
+              "sense_id": "sense-tlalli",
+              "source_hash": "5f8389b6ade2c4bf86b85d27f43f7e021d8de2fc6b8f1a189b68bc671e2d1a53",
+              "support": "tierra"
+            },
+            {
+              "archive_id": "axolotl-01655",
+              "form": "tlalitic",
+              "segmentation": "tlal-itic",
+              "sense_id": "sense-tlalli",
+              "source_hash": "1a236cfe774101df0f22cfb0f28ab9def180b31745274d4b3a8fbd61d58b6158",
+              "support": "tierras"
+            },
+            {
+              "archive_id": "axolotl-04374",
+              "form": "yntlalpan",
+              "segmentation": "yn-tlal-pan",
+              "sense_id": "sense-tlalli",
+              "source_hash": "88cb292a5ab060bf16d30c71de57ec74ca727a3e03a8bf1d91fb2586081d31a4",
+              "support": "tierra"
+            }
+          ],
+          "explanation": "El registro escribe «Tlalticpac» (Tlal-ti-cpac). Las otras opciones comparten la raíz tlal con otros afijos; también están en el archivo.",
+          "id": "locativos-6",
+          "kind": "cloze",
+          "options": [
+            "yntlalpan",
+            "Tlalticpac",
+            "tlalitic"
+          ],
+          "prompt": "Completa el pasaje con la forma que escribe el registro. La traducción del archivo te orienta."
+        },
+        {
+          "answer": 1,
+          "archive_id": "axolotl-05448",
+          "blank": "tlalticpac",
+          "evidence": [
+            {
+              "archive_id": "axolotl-05448",
+              "form": "tlalticpac",
+              "segmentation": "tlal-ti-cpac",
+              "sense_id": "sense-tlalli",
+              "source_hash": "5a09bf65fbac4d10c85edb7e3f5627c881a3870ca32038625e70a8bb1b91aaa8",
+              "support": "tierra"
+            },
+            {
+              "archive_id": "axolotl-01655",
+              "form": "tlalitic",
+              "segmentation": "tlal-itic",
+              "sense_id": "sense-tlalli",
+              "source_hash": "1a236cfe774101df0f22cfb0f28ab9def180b31745274d4b3a8fbd61d58b6158",
+              "support": "tierras"
+            },
+            {
+              "archive_id": "axolotl-04374",
+              "form": "yntlalpan",
+              "segmentation": "yn-tlal-pan",
+              "sense_id": "sense-tlalli",
+              "source_hash": "88cb292a5ab060bf16d30c71de57ec74ca727a3e03a8bf1d91fb2586081d31a4",
+              "support": "tierra"
+            }
+          ],
+          "explanation": "El registro escribe «tlalticpac» (tlal-ti-cpac). Las otras opciones comparten la raíz tlal con otros afijos; también están en el archivo.",
+          "id": "locativos-7",
+          "kind": "cloze",
+          "options": [
+            "tlalitic",
+            "tlalticpac",
+            "yntlalpan"
+          ],
+          "prompt": "Completa el pasaje con la forma que escribe el registro. La traducción del archivo te orienta."
+        },
+        {
+          "answer": 1,
+          "archive_id": "axolotl-08712",
+          "evidence": [
+            {
+              "archive_id": "axolotl-08712",
+              "form": "tlalticpac",
+              "segmentation": "tlal-ti-cpac",
+              "sense_id": "sense-tlalli",
+              "source_hash": "49c8bc6451172992903664ff7bf07c43b1d56c9ea378af6d408b84abb0d19fb0",
+              "support": "tierra"
+            }
+          ],
+          "explanation": "Es la traducción del archivo para este registro. «tlalticpac» = tierra + encima de.",
+          "focus_form": "tlalticpac",
+          "id": "locativos-8",
+          "kind": "translate",
+          "option_ids": [
+            "axolotl-00137",
+            "axolotl-08712",
+            "axolotl-00833"
+          ],
+          "prompt": "¿Qué dice este pasaje breve?"
+        },
+        {
+          "answer": 1,
+          "archive_id": "axolotl-10486",
+          "evidence": [
+            {
+              "archive_id": "axolotl-10486",
+              "form": "tlalticpac",
+              "segmentation": "tlal-ti-cpac",
+              "sense_id": "sense-tlalli",
+              "source_hash": "49f868df2cf18ca80078abe2b656e5c95c654666fb93bfa9c7626372b6bc38e6",
+              "support": "tierra"
+            }
+          ],
+          "explanation": "Es la traducción del archivo para este registro. «tlalticpac» = tierra + encima de.",
+          "focus_form": "tlalticpac",
+          "id": "locativos-9",
+          "kind": "translate",
+          "option_ids": [
+            "axolotl-00137",
+            "axolotl-10486",
+            "axolotl-00833"
+          ],
+          "prompt": "¿Qué dice este pasaje breve?"
+        }
+      ],
+      "id": "locativos",
+      "minutes": 7,
+      "objective": "Reconocer un sufijo de lugar pegado a la raíz y leerlo como «en», «sobre» o «junto a».",
+      "practice_version": 1,
+      "review_status": "automatic_draft",
+      "rule": {
+        "morphemes": [
+          {
+            "gloss": "dentro de",
+            "key": "itik",
+            "slot": "REL",
+            "surfaces": [
+              "itic"
+            ]
+          },
+          {
+            "gloss": "encima de",
+            "key": "kpak",
+            "slot": "REL",
+            "surfaces": [
+              "cpac"
+            ]
+          },
+          {
+            "gloss": "cerca de",
+            "key": "nawak",
+            "slot": "REL",
+            "surfaces": [
+              "nauac"
+            ]
+          },
+          {
+            "gloss": "en, sobre",
+            "key": "pan",
+            "slot": "REL",
+            "surfaces": [
+              "pan"
+            ]
+          }
+        ],
+        "points": [
+          "-ticpac y -icpac significan «encima de»: tlal-ti-cpac «sobre la tierra».",
+          "La -ti- de tlal-ti-cpac es una ligadura entre la raíz y el sufijo."
+        ],
+        "summary": "Los lugares se dicen con sufijos pegados a la raíz, sin absolutivo: cal-co «en la casa», tlal-pan «sobre la tierra», te-tlan «junto a las piedras»."
+      },
+      "sense_ids": [
+        "sense-tlalli",
+        "sense-calli",
+        "sense-tepetl"
+      ],
+      "title": "Lugares: -co, -pan, -tlan, -icpac",
+      "version": 1,
+      "words": [
+        {
+          "attested": 123,
+          "form": "tlalticpac",
+          "gloss": "tierra + encima de",
+          "segmentation": "tlal-ti-cpac",
+          "sense_id": "sense-tlalli"
+        },
+        {
+          "attested": 8,
+          "form": "calitic",
+          "gloss": "casa + dentro de",
+          "segmentation": "cal-itic",
+          "sense_id": "sense-calli"
+        },
+        {
+          "attested": 4,
+          "form": "intlalpan",
+          "gloss": "su + tierra + en, sobre",
+          "segmentation": "in-tlal-pan",
+          "sense_id": "sense-tlalli"
+        },
+        {
+          "attested": 1,
+          "form": "ycalnauac",
+          "gloss": "su + casa + cerca de",
+          "segmentation": "y-cal-nauac",
+          "sense_id": "sense-calli"
+        },
+        {
+          "attested": 7,
+          "form": "tepeticpac",
+          "gloss": "cerro + encima de",
+          "segmentation": "tepe-ti-cpac",
+          "sense_id": "sense-tepetl"
+        },
+        {
+          "attested": 3,
+          "form": "itlalpan",
+          "gloss": "su + tierra + en, sobre",
+          "segmentation": "i-tlal-pan",
+          "sense_id": "sense-tlalli"
+        }
+      ]
+    },
+    {
+      "closing": {
+        "archive_id": "axolotl-04728",
+        "evidence": [
+          {
+            "archive_id": "axolotl-04728",
+            "form": "quiytta",
+            "segmentation": "qu-iytta",
+            "sense_id": "sense-itta",
+            "source_hash": "b77718267bda94c8ff4ebb1eee37c754ca2943f41a610fd2f4fc70622bb4d3db",
+            "support": "vio"
+          }
+        ],
+        "forms": [
+          {
+            "form": "quiytta",
+            "gloss": "lo / la + ver",
+            "segmentation": "qu-iytta"
+          }
+        ]
+      },
+      "exercises": [
+        {
+          "evidence": [
+            {
+              "archive_id": "axolotl-13803",
+              "form": "oquittac",
+              "segmentation": "o-qu-itta-c",
+              "sense_id": "sense-itta",
+              "source_hash": "2058e07745f93dd0d54249b8af6c28a583bf1414e4c1ca3c5e3632747038aa3f",
+              "support": "vio"
+            },
+            {
+              "archive_id": "axolotl-10704",
+              "form": "niquitta",
+              "segmentation": "ni-qu-itta",
+              "sense_id": "sense-itta",
+              "source_hash": "07d20a1cad54a16d2ffcf0cb4fa22ea410642f93fa4d087ced9c9411d5fb8599",
+              "support": "contemplo"
+            },
+            {
+              "archive_id": "axolotl-13297",
+              "form": "tiquittaz",
+              "segmentation": "ti-qu-itta-z",
+              "sense_id": "sense-itta",
+              "source_hash": "7d3075e253a1ef489e07ee81efa96c634fb91dbdc7fbfc930df922c478b8c3d9",
+              "support": "verás"
+            },
+            {
+              "archive_id": "axolotl-01612",
+              "form": "quitta",
+              "segmentation": "qu-itta",
+              "sense_id": "sense-itta",
+              "source_hash": "aaf4578a24b697b305cbd5ebb8f27287fdb7ae91fd097da33c3103d82abff105",
+              "support": "ven"
+            }
+          ],
+          "explanation": "Glosas del analizador, morfema a morfema; no son traducciones. Cada forma aparece en un pasaje real.",
+          "id": "sujeto-objeto-1",
+          "kind": "match",
+          "pairs": [
+            {
+              "form": "oquittac",
+              "gloss": "pasado + lo / la + ver + pretérito"
+            },
+            {
+              "form": "niquitta",
+              "gloss": "yo + lo / la + ver"
+            },
+            {
+              "form": "tiquittaz",
+              "gloss": "tú / nosotros + lo / la + ver + futuro"
+            },
+            {
+              "form": "quitta",
+              "gloss": "lo / la + ver"
+            }
+          ],
+          "prompt": "Une cada forma del archivo con su glosa por partes."
+        },
+        {
+          "answer": 2,
+          "evidence": [
+            {
+              "archive_id": "axolotl-13803",
+              "form": "oquittac",
+              "segmentation": "o-qu-itta-c",
+              "sense_id": "sense-itta",
+              "source_hash": "2058e07745f93dd0d54249b8af6c28a583bf1414e4c1ca3c5e3632747038aa3f",
+              "support": "vio"
+            }
+          ],
+          "explanation": "El analizador segmenta «oquittac» como o-qu-itta-c; «qu-» se glosa «lo / la».",
+          "form": "oquittac",
+          "id": "sujeto-objeto-2",
+          "kind": "identify",
+          "morpheme": {
+            "key": "k",
+            "slot": "OBJ",
+            "surface": "qu"
+          },
+          "options": [
+            "yo",
+            "tú / nosotros",
+            "lo / la"
+          ],
+          "prompt": "En «oquittac», ¿qué indica «qu-»?"
+        },
+        {
+          "answer": 1,
+          "evidence": [
+            {
+              "archive_id": "axolotl-10704",
+              "form": "niquitta",
+              "segmentation": "ni-qu-itta",
+              "sense_id": "sense-itta",
+              "source_hash": "07d20a1cad54a16d2ffcf0cb4fa22ea410642f93fa4d087ced9c9411d5fb8599",
+              "support": "contemplo"
+            }
+          ],
+          "explanation": "El analizador segmenta «niquitta» como ni-qu-itta; «ni-» se glosa «yo (sujeto)».",
+          "form": "niquitta",
+          "id": "sujeto-objeto-3",
+          "kind": "identify",
+          "morpheme": {
+            "key": "ni",
+            "slot": "SUBJ",
+            "surface": "ni"
+          },
+          "options": [
+            "lo / la",
+            "yo",
+            "tú / nosotros"
+          ],
+          "prompt": "En «niquitta», ¿qué indica «ni-»?"
+        },
+        {
+          "answer": [
+            0,
+            4,
+            3,
+            2
+          ],
+          "evidence": [
+            {
+              "archive_id": "axolotl-13297",
+              "form": "tiquittaz",
+              "segmentation": "ti-qu-itta-z",
+              "sense_id": "sense-itta",
+              "source_hash": "7d3075e253a1ef489e07ee81efa96c634fb91dbdc7fbfc930df922c478b8c3d9",
+              "support": "verás"
+            }
+          ],
+          "explanation": "«tiquittaz» aparece así en el archivo: ti-qu-itta-z.",
+          "form": "tiquittaz",
+          "gloss": "tú / nosotros + lo / la + ver + futuro",
+          "id": "sujeto-objeto-4",
+          "kind": "build",
+          "prompt": "Arma la forma que significa «tú / nosotros + lo / la + ver + futuro».",
+          "tiles": [
+            "ti",
+            "ni",
+            "z",
+            "itta",
+            "qu"
+          ]
+        },
+        {
+          "answer": [
+            2,
+            1
+          ],
+          "evidence": [
+            {
+              "archive_id": "axolotl-01612",
+              "form": "quitta",
+              "segmentation": "qu-itta",
+              "sense_id": "sense-itta",
+              "source_hash": "aaf4578a24b697b305cbd5ebb8f27287fdb7ae91fd097da33c3103d82abff105",
+              "support": "ven"
+            }
+          ],
+          "explanation": "«quitta» aparece así en el archivo: qu-itta.",
+          "form": "quitta",
+          "gloss": "lo / la + ver",
+          "id": "sujeto-objeto-5",
+          "kind": "build",
+          "prompt": "Arma la forma que significa «lo / la + ver».",
+          "tiles": [
+            "ni",
+            "itta",
+            "qu"
+          ]
+        },
+        {
+          "answer": 0,
+          "archive_id": "axolotl-10704",
+          "blank": "niquitta",
+          "evidence": [
+            {
+              "archive_id": "axolotl-10704",
+              "form": "niquitta",
+              "segmentation": "ni-qu-itta",
+              "sense_id": "sense-itta",
+              "source_hash": "07d20a1cad54a16d2ffcf0cb4fa22ea410642f93fa4d087ced9c9411d5fb8599",
+              "support": "contemplo"
+            },
+            {
+              "archive_id": "axolotl-00082",
+              "form": "tiquittaz",
+              "segmentation": "ti-qu-itta-z",
+              "sense_id": "sense-itta",
+              "source_hash": "2f84ece21c5c9bbcf73cc0b2dab7a5f147910a8e13e5e91e25909e964e63926a",
+              "support": "verás"
+            },
+            {
+              "archive_id": "axolotl-00173",
+              "form": "quimittac",
+              "segmentation": "qui-m-itta-c",
+              "sense_id": "sense-itta",
+              "source_hash": "247fa7d566b17de8526bab73985e331e49421f8a51829e9378a50ab94aa4d6ab",
+              "support": "vio"
+            }
+          ],
+          "explanation": "El registro escribe «niquitta» (ni-qu-itta). Las otras opciones comparten la raíz itta con otros afijos; también están en el archivo.",
+          "id": "sujeto-objeto-6",
+          "kind": "cloze",
+          "options": [
+            "niquitta",
+            "tiquittaz",
+            "quimittac"
+          ],
+          "prompt": "Completa el pasaje con la forma que escribe el registro. La traducción del archivo te orienta."
+        },
+        {
+          "answer": 1,
+          "archive_id": "axolotl-01612",
+          "blank": "quitta",
+          "evidence": [
+            {
+              "archive_id": "axolotl-01612",
+              "form": "quitta",
+              "segmentation": "qu-itta",
+              "sense_id": "sense-itta",
+              "source_hash": "aaf4578a24b697b305cbd5ebb8f27287fdb7ae91fd097da33c3103d82abff105",
+              "support": "ven"
+            },
+            {
+              "archive_id": "axolotl-00082",
+              "form": "tiquittaz",
+              "segmentation": "ti-qu-itta-z",
+              "sense_id": "sense-itta",
+              "source_hash": "2f84ece21c5c9bbcf73cc0b2dab7a5f147910a8e13e5e91e25909e964e63926a",
+              "support": "verás"
+            },
+            {
+              "archive_id": "axolotl-00173",
+              "form": "quimittac",
+              "segmentation": "qui-m-itta-c",
+              "sense_id": "sense-itta",
+              "source_hash": "247fa7d566b17de8526bab73985e331e49421f8a51829e9378a50ab94aa4d6ab",
+              "support": "vio"
+            }
+          ],
+          "explanation": "El registro escribe «quitta» (qu-itta). Las otras opciones comparten la raíz itta con otros afijos; también están en el archivo.",
+          "id": "sujeto-objeto-7",
+          "kind": "cloze",
+          "options": [
+            "quimittac",
+            "quitta",
+            "tiquittaz"
+          ],
+          "prompt": "Completa el pasaje con la forma que escribe el registro. La traducción del archivo te orienta."
+        },
+        {
+          "answer": 1,
+          "archive_id": "axolotl-01384",
+          "evidence": [
+            {
+              "archive_id": "axolotl-01384",
+              "form": "niquitta",
+              "segmentation": "ni-qu-itta",
+              "sense_id": "sense-itta",
+              "source_hash": "2d001d77d21fb217ccfd689e5f1fddad25fb14ab5ea13d242330e0cf34fe80bb",
+              "support": "contemplo"
+            }
+          ],
+          "explanation": "Es la traducción del archivo para este registro. «niquitta» = yo + lo / la + ver.",
+          "focus_form": "niquitta",
+          "id": "sujeto-objeto-8",
+          "kind": "translate",
+          "option_ids": [
+            "axolotl-01612",
+            "axolotl-01384",
+            "axolotl-00173"
+          ],
+          "prompt": "¿Qué dice este pasaje breve?"
+        },
+        {
+          "answer": 0,
+          "archive_id": "axolotl-13803",
+          "evidence": [
+            {
+              "archive_id": "axolotl-13803",
+              "form": "oquittac",
+              "segmentation": "o-qu-itta-c",
+              "sense_id": "sense-itta",
+              "source_hash": "2058e07745f93dd0d54249b8af6c28a583bf1414e4c1ca3c5e3632747038aa3f",
+              "support": "vio"
+            }
+          ],
+          "explanation": "Es la traducción del archivo para este registro. «oquittac» = pasado + lo / la + ver + pretérito.",
+          "focus_form": "oquittac",
+          "id": "sujeto-objeto-9",
+          "kind": "translate",
+          "option_ids": [
+            "axolotl-13803",
+            "axolotl-00173",
+            "axolotl-01384"
+          ],
+          "prompt": "¿Qué dice este pasaje breve?"
+        }
+      ],
+      "id": "sujeto-objeto",
+      "minutes": 7,
+      "objective": "Reconocer el sujeto (ni- «yo», ti- «tú / nosotros») y el objeto qui- / c- «lo, la» en un verbo.",
+      "practice_version": 1,
+      "review_status": "automatic_draft",
+      "rule": {
+        "morphemes": [
+          {
+            "gloss": "lo / la",
+            "key": "k",
+            "slot": "OBJ",
+            "surfaces": [
+              "qu"
+            ]
+          },
+          {
+            "gloss": "yo (sujeto)",
+            "key": "ni",
+            "slot": "SUBJ",
+            "surfaces": [
+              "ni"
+            ]
+          },
+          {
+            "gloss": "tú / nosotros (sujeto)",
+            "key": "ti",
+            "slot": "SUBJ",
+            "surfaces": [
+              "ti"
+            ]
+          }
+        ],
+        "points": [
+          "qui- se escribe qu- ante i y c- ante otras vocales: qu-itta, c-ana.",
+          "El tiempo va al final: qu-itta-z «lo verá», qu-itta-que «lo vieron»."
+        ],
+        "summary": "El verbo lleva delante quién hace la acción y a quién o qué: ni-qu-itta «yo lo veo», ti-qu-itta «tú lo ves», qu-itta «él lo ve» (la tercera persona no lleva prefijo de sujeto)."
+      },
+      "sense_ids": [
+        "sense-itta"
+      ],
+      "title": "Quién ve qué: ni-, ti-, qui-",
+      "version": 1,
+      "words": [
+        {
+          "attested": 9,
+          "form": "oquittac",
+          "gloss": "pasado + lo / la + ver + pretérito",
+          "segmentation": "o-qu-itta-c",
+          "sense_id": "sense-itta"
+        },
+        {
+          "attested": 3,
+          "form": "niquitta",
+          "gloss": "yo + lo / la + ver",
+          "segmentation": "ni-qu-itta",
+          "sense_id": "sense-itta"
+        },
+        {
+          "attested": 5,
+          "form": "tiquittaz",
+          "gloss": "tú / nosotros + lo / la + ver + futuro",
+          "segmentation": "ti-qu-itta-z",
+          "sense_id": "sense-itta"
+        },
+        {
+          "attested": 5,
+          "form": "quitta",
+          "gloss": "lo / la + ver",
+          "segmentation": "qu-itta",
+          "sense_id": "sense-itta"
+        },
+        {
+          "attested": 4,
+          "form": "quittac",
+          "gloss": "lo / la + ver + pretérito",
+          "segmentation": "qu-itta-c",
+          "sense_id": "sense-itta"
+        },
+        {
+          "attested": 1,
+          "form": "quiytta",
+          "gloss": "lo / la + ver",
+          "segmentation": "qu-iytta",
+          "sense_id": "sense-itta"
+        }
+      ]
+    }
+  ],
+  "variant": "nci",
+  "version": 1
+}

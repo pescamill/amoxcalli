@@ -8,7 +8,7 @@ Analizador `nah-morph-1` · conjunto `morphology-gold-v1.json` · partición `al
 |---|---:|---:|---:|---:|---:|
 | unsegmented_baseline | 52 | 0% | 0% / 0% | 0% | 0% |
 | rules_only | 52 | 15% | 8% / 22% | 62% | 15% |
-| rules+dictionary | 52 | 64% | 68% / 59% | 81% | 58% |
+| rules+dictionary | 52 | 65% | 68% / 63% | 81% | 60% |
 | rules+corpus_em | 52 | 83% | 88% / 78% | 98% | 79% |
 | full (rules+dictionary+corpus_em) | 52 | 85% | 88% / 82% | 96% | 77% |
 
@@ -30,12 +30,12 @@ Errores del sistema completo:
 | Medida | Palabras | Formas distintas |
 |---|---:|---:|
 | Coincidencia exacta con una forma del diccionario | 28.0% | 3.9% |
-| Raíz enlazada por el analizador (diccionario o partícula) | 60.3% | 26.7% |
+| Raíz enlazada por el analizador (diccionario o partícula) | 60.2% | 26.6% |
 | Con al menos un afijo o enlace explicado | 86.4% | — |
 
 ## 3. Concordancia por raíz
 
-Para 1119 raíces del diccionario (≥4 fonemas) presentes en el corpus: la búsqueda por palabra exacta encuentra 10645 pasajes; el índice por raíz, 25289. 866 entradas ganan pasajes; 86 pierden alguno (1351 pasajes solo por búsqueda exacta).
+Para 1124 raíces del diccionario (≥4 fonemas) presentes en el corpus: la búsqueda por palabra exacta encuentra 10645 pasajes; el índice por raíz, 25350. 873 entradas ganan pasajes; 84 pierden alguno (1328 pasajes solo por búsqueda exacta).
 
 Muestra para revisión humana de precisión: `reports/morphology-review/stem-hits-sample.csv`. Más pasajes no implica más aciertos: la muestra de revisión estima la precisión de los nuevos hallazgos.
 
@@ -58,7 +58,7 @@ Muestra para revisión humana de precisión: `reports/morphology-review/stem-hit
 |---|---:|---:|
 | cooccurrence | 19% | 36% |
 | dice | 23% | 36% |
-| ibm1 | 30% | 38% |
+| ibm1 | 30% | 39% |
 
 Ejemplos (IBM‑1):
 
@@ -80,4 +80,4 @@ Ejemplos (IBM‑1):
 - Molina (1571) no es un diccionario completo ni moderno: una pista correcta puede no aparecer en su definición.
 - Ninguna cifra mide comprensión lectora ni calidad de traducción.
 
-Tiempo de ejecución: 18.8 s.
+Tiempo de ejecución: 18.7 s.

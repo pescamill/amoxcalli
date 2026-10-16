@@ -21,17 +21,18 @@ from .documentary_retrieval import DocumentaryIndex, PublicSources, digest as do
 from .stems import WordStudy
 from .evidence import Evidence
 from .terms import TermIndex
+from .units import Units
 from .explain import ClaudeWriter, explain
 from .web import Router, Server, Static, handler
 
 WEB = Path(__file__).with_name('platform_web')
-# Mismas URL de siempre: la página principal usa /corpus.*; /app.js, /style.css y /favicon.svg son de Voces.
-STATIC = Static(WEB, {'/': WEB/'index.html', '/corpus.js': WEB/'app.js', '/corpus.css': WEB/'style.css',
+# La página principal usa /corpus.js (su app.js) y /amoxcalli.css; /app.js, /style.css y /favicon.svg son de Voces.
+STATIC = Static(WEB, {'/': WEB/'index.html', '/corpus.js': WEB/'app.js',
                       '/app.js': COMMUNITY_WEB/'app.js', '/style.css': COMMUNITY_WEB/'style.css',
                       '/favicon.svg': COMMUNITY_WEB/'favicon.svg',
                       '/project/purpose.md': ROOT/'docs/PROPOSITO.md', '/project/pilot.md': ROOT/'docs/PILOTO_INSTITUCIONAL.md',
                       '/project/contributing.md': ROOT/'CONTRIBUTING.md'})
-INSTALL_HEAD = '<meta name="theme-color" content="#812d37"><meta name="apple-mobile-web-app-capable" content="yes">\n<link rel="manifest" href="/manifest.webmanifest"><link rel="apple-touch-icon" href="/icon-192.png"><link rel="stylesheet" href="/install.css"><script src="/install.js" defer></script>\n'
+INSTALL_HEAD = '<meta name="theme-color" content="#812d37"><meta name="apple-mobile-web-app-capable" content="yes">\n<link rel="manifest" href="/manifest.webmanifest"><link rel="apple-touch-icon" href="/icon-192.png"><script src="/install.js" defer></script>\n'
 
 
 def rule_query(store, value):
@@ -105,6 +106,8 @@ def make_app(store, model_enabled=None, adapter=None, word_study=None, explain_w
     terms=TermIndex(word_study,records_fn=store.public_records)
     evidence_index=Evidence(word_study,terms=terms)
     learning=Learning(archive)
+    # Unidades de gramática: borradores generados, validados contra el análisis y con su estado en la cola editorial.
+    units=Units(terms,store.public_records)
     training_data=TrainingData()
     pair_proposals=PairProposals(store,training_data)
     adapter=adapter or DEFAULT_ADAPTER
@@ -116,7 +119,7 @@ def make_app(store, model_enabled=None, adapter=None, word_study=None, explain_w
     def contribute_page(request):
         # Misma sesión, mismos datos y mismos permisos que el corpus.
         page=(COMMUNITY_WEB/'index.html').read_text()
-        return request.reply(page.replace('</head>',INSTALL_HEAD+'<link rel="stylesheet" href="/minimal.css"><link rel="stylesheet" href="/edition.css"></head>').encode(),mime='text/html; charset=utf-8')
+        return request.reply(page.replace('</head>',INSTALL_HEAD+'<link rel="stylesheet" href="/amoxcalli.css"></head>').encode(),mime='text/html; charset=utf-8')
 
     def corpus(request):
         data=store.catalog_data();data.update(model_enabled=capability['ready'],model=capability,archive=archive.summary)
@@ -164,6 +167,10 @@ def make_app(store, model_enabled=None, adapter=None, word_study=None, explain_w
         try:result=evidence_index.ask(request.arg('q'))
         except ValueError as error:raise Problem(str(error)) from None
         return request.reply(explain(result,explain_writer if model_name=='claude' else None))
+
+    def unit_examples(request):
+        try:return request.reply(units.examples(request.arg('sense')))
+        except KeyError:raise Problem('Acepción no encontrada.',404) from None
 
     def gloss(request):
         rid=request.arg('id')
@@ -253,6 +260,7 @@ def make_app(store, model_enabled=None, adapter=None, word_study=None, explain_w
             ('/api/training-pairs',lambda r:r.reply(pair_proposals.mine(r.get_person(True)))),
             ('/api/training-pairs/export',lambda r:r.reply(pair_proposals.export(r.get_person(True)).encode(),mime='text/csv; charset=utf-8')),
             ('/api/learning',lambda r:r.reply(learning.catalog(store.public_records()))),
+            ('/api/units',lambda r:r.reply(units.catalog())),('/api/units/examples',unit_examples),
             ('/api/research',research),
             ('/archive.csv',lambda r:r.reply(archive.path.read_bytes(),mime='text/csv; charset=utf-8')),
             ('/api/task',task),('/api/terms',terms_search),

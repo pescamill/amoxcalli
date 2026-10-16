@@ -9,7 +9,7 @@ import tempfile
 import unittest
 from nahuatl_local.laboratory import snapshot, REPORTS
 
-PRESENTATION = 'nahuatl_local/platform_web/laboratory.css'
+PRESENTATION = 'nahuatl_local/platform_web/amoxcalli.css'
 
 
 class LaboratoryTests(unittest.TestCase):

@@ -1,7 +1,7 @@
 const assert=require('node:assert/strict');
 const {JSDOM,VirtualConsole}=require('jsdom');
 const origin=process.env.CORPUS_QA_ORIGIN;
-const initialRaw=JSON.stringify({version:1,saved:['sense-tototl'],lessons:{aves:{edition:'lectura-clasica-v1:1',passed:[0],comprehension:[],step:2}},reviews:{},contexts:{}});
+const initialRaw=JSON.stringify({version:1,saved:['sense-tototl'],lessons:{aves:{edition:'lectura-clasica-v1:2',passed:[0],comprehension:[],step:2}},reviews:{},contexts:{}});
 const pause=ms=>new Promise(r=>setTimeout(r,ms));
 async function until(fn){for(let i=0;i<240;i++){if(fn())return;await pause(25);}throw Error('UI timeout');}
 (async()=>{for(const width of [360,390]){

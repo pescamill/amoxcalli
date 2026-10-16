@@ -2112,8 +2112,8 @@
   }
  ],
  "mean_ms_per_query": {
-  "evidence": 51.33,
-  "exact_search": 117.21
+  "evidence": 51.97,
+  "exact_search": 119.32
  },
  "model_calls": 0,
  "questions": "evidence-questions-v1",
