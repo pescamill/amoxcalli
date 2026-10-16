@@ -33,6 +33,7 @@ function askResultHTML(r){
  if(r.abstained)return `<section class="ask-result ask-abstained"><h2>Sin evidencia suficiente</h2><p>${esc(r.reason)}</p><a href="#investigar/${encodeURIComponent(r.word)}">Buscar «${esc(r.word)}» en el archivo completo →</a></section>`;
  let html='<section class="ask-result">';
  html+=`<p class="ask-understood">${r.language==='es'?`Palabra en español: <strong>${esc(r.word)}</strong>`:`Palabra náhuatl: <strong lang="nci">${esc(r.word)}</strong>`}${r.interpreted_as?` · se leyó como <strong lang="nci">${esc(r.interpreted_as)}</strong>, otra grafía del archivo`:''}</p>`;
+ if(r.terms?.[0])html+=termGroupHTML(r.terms[0],r.query);
  if(r.explanation?.sentences?.length)html+=`<section class="ask-explanation" aria-label="Explicación"><h2>Explicación</h2><div class="ask-explanation-slot">${askExplanationHTML(r.explanation)}</div>${r.explain_models?.includes('claude')?'<button type="button" class="secondary" data-explain-claude>Redactar con Claude</button><p class="meta">Envía la pregunta y los pasajes mostrados a la API de Anthropic. Cada frase debe citar esta evidencia o se descarta.</p>':''}</section>`;
  if(r.analysis&&typeof morphemeChips==='function')html+=`<h2>Análisis</h2>${morphemeChips(r.analysis)}<p class="meta">${esc(morphBasis?.[r.analysis.basis]||r.analysis.basis)} · análisis automático</p>`;
  if(r.entries.length)html+=`<h2>En el diccionario</h2><ul class="ask-entries">${r.entries.map(askEntryHTML).join('')}</ul>`;
@@ -68,15 +69,4 @@ function bindAskResult(root,query){
   try{slot.innerHTML=askExplanationHTML(await api('/api/explain?'+new URLSearchParams({q:query,model:'claude'})));cites();claude.hidden=true;}
   catch(e){slot.insertAdjacentHTML('beforeend',`<p class="meta">${esc(e.message)}</p>`);claude.disabled=false;claude.textContent='Redactar con Claude';}
  };
-}
-// Diccionario vacío: resumen breve con enlace a la evidencia completa.
-async function askSuggestion(slot,query){
- if(!slot||!query)return;
- try{
-  const r=await askEvidence(query);
-  if(!slot.isConnected||r.abstained)return;
-  const top=r.language==='es'?(r.candidates?.length?`El corpus paralelo traduce «${esc(r.word)}» en pasajes con <strong lang="nci">${esc(r.candidates[0].forms[0]?.form||r.candidates[0].stem)}</strong>.`:`Hay pasajes cuya traducción dice «${esc(r.word)}».`)
-   :`${r.analysis&&typeof morphemeChips==='function'?morphemeChips(r.analysis):''}${r.interpreted_as?`<p>Otra grafía de <strong lang="nci">${esc(r.interpreted_as)}</strong>.</p>`:''}${r.entries[0]?`<p>Entrada: <strong lang="nci">${esc(r.entries[0].written)}</strong> · ${esc(r.entries[0].label)}</p>`:''}`;
-  slot.innerHTML=`<div class="word-suggestion"><p class="eyebrow">${r.language==='es'?'Palabra en español':'¿Es una forma flexionada o con otra grafía?'}</p>${top}<a class="secondary" href="#preguntar/${encodeURIComponent(query)}">Ver evidencia y pasajes →</a></div>`;
- }catch{/* La sugerencia es opcional. */}
 }

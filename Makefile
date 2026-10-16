@@ -41,6 +41,7 @@ reports:
 	$(PYTHON) -m nahuatl_local.documentary_laboratory
 	$(PYTHON) -m nahuatl_local.evidence_evaluation
 	$(PYTHON) -m nahuatl_local.morphology_evaluation
+	$(PYTHON) -m nahuatl_local.term_evaluation
 	$(PYTHON) -m nahuatl_local.glyph_linker --output "$$(mktemp -d)/glyph-associations.json"
 
 # Requiere requirements.txt, data/prepared/ y los pesos (models/base, outputs/): ver MODEL_CARD.md.

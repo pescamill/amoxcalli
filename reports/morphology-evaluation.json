@@ -1477,8 +1477,8 @@
       "evaluable_entries": 101,
       "results": {
         "cooccurrence": {
-          "precision_at_1": 0.248,
-          "hit_at_3": 0.366
+          "precision_at_1": 0.188,
+          "hit_at_3": 0.356
         },
         "dice": {
           "precision_at_1": 0.228,
@@ -1564,8 +1564,8 @@
             "alla"
           ],
           "cooccurrence": [
-            "flor",
             "cacao",
+            "flor",
             "alla"
           ]
         },
@@ -1657,8 +1657,8 @@
           ],
           "cooccurrence": [
             "casa",
-            "muger",
-            "tre"
+            "ahora",
+            "ano"
           ]
         },
         {
@@ -1676,7 +1676,7 @@
           ],
           "cooccurrence": [
             "agua",
-            "tierra",
+            "air",
             "ave"
           ]
         },
@@ -1695,9 +1695,9 @@
             "jef"
           ],
           "cooccurrence": [
+            "cuarto",
             "cuatro",
-            "jef",
-            "tecuanipantlaca"
+            "jef"
           ]
         },
         {
@@ -1707,9 +1707,9 @@
           "ibm1": [],
           "dice": [],
           "cooccurrence": [
-            "sementera",
-            "color",
-            "pobre"
+            "alegro",
+            "amigo",
+            "anfora"
           ]
         },
         {
@@ -1727,9 +1727,9 @@
             "tripartito"
           ],
           "cooccurrence": [
-            "tre",
-            "tierra",
-            "casa"
+            "casa",
+            "part",
+            "tierra"
           ]
         },
         {
@@ -1747,9 +1747,9 @@
             "hora"
           ],
           "cooccurrence": [
-            "vez",
             "tercera",
-            "gente"
+            "vez",
+            "ano"
           ]
         },
         {
@@ -1776,5 +1776,5 @@
       "definition": "Acierto si una palabra propuesta (normalizada) aparece en la definición de Molina de esa entrada. Molina es independiente del corpus paralelo; la coincidencia ortográfica del s. XVI es aproximada."
     }
   },
-  "seconds": 19.8
+  "seconds": 17.7
 }

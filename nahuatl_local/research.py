@@ -29,15 +29,22 @@ class Archive:
                 if self._bm25 is None:self._bm25=Index(rows=self.rows)
         return self._bm25.search(query,k=len(self.rows),variant=variant or None)
 
-    def search(self,query='',variant='',document='',period='',offset=0,limit=20):
+    def search(self,query='',variant='',document='',period='',offset=0,limit=20,terms=None):
+        """Pasajes de una consulta. Con ``terms`` (``terms.TermIndex``), una palabra que la búsqueda única
+        resuelve a un grupo devuelve los pasajes de todas sus grafías seguras; si no, BM25 sobre ambas lenguas."""
         if not isinstance(query,str) or len(query)>300:raise Problem('Busca con hasta 300 caracteres.')
         try:offset=int(offset);limit=int(limit)
         except (TypeError,ValueError):raise Problem('Paginación inválida.')
         if offset<0 or not 1<=limit<=100:raise Problem('Paginación fuera de rango.')
-        candidates=self._ranked(query,variant) if query.strip() else self.rows
+        resolved=terms.resolve(query) if terms is not None and query.strip() else None
+        if resolved:
+            group,word=resolved;candidates=[self.index[rid] for rid in terms.passage_ids(group['id'],first=word)]
+        else:
+            group=None;candidates=self._ranked(query,variant) if query.strip() else self.rows
         rows=[r for r in candidates if (not variant or r['iso']==variant) and
               (not document or r['document']==('' if document=='__unknown__' else document)) and (not period or r['period']==period)]
-        return dict(total=len(rows),offset=offset,limit=limit,results=rows[offset:offset+limit])
+        return dict(total=len(rows),offset=offset,limit=limit,results=rows[offset:offset+limit],term=group,
+                    method='term_group' if group else 'bm25' if query.strip() else 'all')
 
     def context(self,query):
         if not query.strip():return []

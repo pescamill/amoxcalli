@@ -1,5 +1,6 @@
 """Amoxcalli: la aplicación local (corpus, aprendizaje, investigación, laboratorio y Voces) en un solo servidor."""
 import argparse
+import copy
 import hashlib
 import json
 import threading
@@ -19,6 +20,7 @@ from .pictography import public_catalog
 from .documentary_retrieval import DocumentaryIndex, PublicSources, digest as documentary_digest, public_path
 from .stems import WordStudy
 from .evidence import Evidence
+from .terms import TermIndex
 from .explain import ClaudeWriter, explain
 from .web import Router, Server, Static, handler
 
@@ -72,6 +74,26 @@ def rule_query(store, value):
                 'Las reglas disponibles no cubren esta expresión. Consulta palabras o textos por separado.')
 
 
+def term_cards(index,group,passage_ids=()):
+    """Fichas documentales (campos citados) de los registros de un grupo de término, sin volver a clasificar."""
+    # Una acepción ya viaja con su forma en la ficha de la forma; solo se añade si no tiene forma.
+    keys=[('sense',s['id']) for s in group['senses'] if not any(f['sense_id']==s['id'] for f in group['forms'])]
+    keys+=[('form',f['id']) for f in group['forms']]+[('glyph',g['id']) for g in group['glyphs'] if g['source']=='dictionary']
+    keys+=[('elements' if g['source']=='tlachia_element' else 'occurrences',g['id']) for g in group['glyphs'] if g['source']!='dictionary']
+    keys+=[('passage',rid) for rid in passage_ids]
+    cards=[]
+    for kind,rid in dict.fromkeys(keys):
+        entry=index.entries.get(kind+':'+rid)
+        if not entry:continue
+        card=copy.deepcopy(entry);card.update(score=None,match=['term_group'])
+        if kind=='form':
+            form=card['records'][0]
+            card['comparison']=dict(written=form['written'],catalog_normalized=form.get('catalog_normalized'),
+                equal_literal=form['written']==form.get('catalog_normalized') if 'catalog_normalized' in form else None,sense_id=form['sense_id'])
+        cards.append(card)
+    return cards
+
+
 def make_app(store, model_enabled=None, adapter=None, word_study=None, explain_writer=None):
     """Tabla de rutas de la aplicación: corpus, investigación, laboratorio y Voces."""
     router=Router()
@@ -79,7 +101,9 @@ def make_app(store, model_enabled=None, adapter=None, word_study=None, explain_w
     archive=Archive()
     # Análisis morfológico, concordancia por raíz y pistas de glosa (sin modelo).
     word_study=word_study or WordStudy(records_fn=store.public_records)
-    evidence_index=Evidence(word_study)
+    # Una sola búsqueda de términos para Diccionario, Archivo, Preguntar y Consultar fichas.
+    terms=TermIndex(word_study,records_fn=store.public_records)
+    evidence_index=Evidence(word_study,terms=terms)
     learning=Learning(archive)
     training_data=TrainingData()
     pair_proposals=PairProposals(store,training_data)
@@ -107,7 +131,22 @@ def make_app(store, model_enabled=None, adapter=None, word_study=None, explain_w
                 stale=any(hashlib.sha256(public_path(ROOT,p).read_bytes()).hexdigest()!=h for p,h in cache['index'].sources.hashes.items())
             if stale:
                 cache=documentary['cache']=dict(signature=signature,index=DocumentaryIndex(records))
-            return request.reply(cache['index'].search(value))
+            index=cache['index']
+        response=index.search(value)
+        resolved=terms.resolve(value)
+        if resolved:
+            # Fichas del grupo de término primero (las mismas que muestran las otras vistas), luego el resto.
+            cards=term_cards(index,resolved[0],terms.passage_ids(resolved[0]['id'],first=resolved[1])[:5]);ids={c['kind']+':'+c['id'] for c in cards}
+            rest=[hit for hit in response['results'] if hit['kind']+':'+hit['id'] not in ids]
+            response.update(results=cards+rest,total=response['total']+len(cards)-(len(response['results'])-len(rest)),
+                            abstained=False,status='matches',absence=None,
+                            source_ids=sorted({s for hit in cards+rest for s in hit['source_ids']}))
+        response['term']=resolved[0] if resolved else None
+        return request.reply(response)
+
+    def terms_search(request):
+        try:return request.reply(terms.search(request.arg('q'),limit=int(request.arg('limit',5))))
+        except ValueError as error:raise Problem(str(error)) from None
 
     def word(request):
         try:return request.reply(word_study.word(request.arg('w'),request.arg('exclude') or None))
@@ -152,16 +191,13 @@ def make_app(store, model_enabled=None, adapter=None, word_study=None, explain_w
         return request.reply(training_data.search(**{k:request.arg(k,v) for k,v in [('dataset','seen'),('query',''),('document',''),('offset',0),('limit',20)]}))
 
     def research(request):
-        return request.reply(archive.search(**{k:request.arg(k) for k in ('query','variant','document','period')},offset=request.arg('offset',0),limit=request.arg('limit',20)))
+        return request.reply(archive.search(**{k:request.arg(k) for k in ('query','variant','document','period')},offset=request.arg('offset',0),limit=request.arg('limit',20),terms=terms))
 
     def task(request):
         # Recordar y traducir usan el archivo completo; escuchar y revisar, las aportaciones de Voces.
         mode=request.arg('mode','recognize');person=request.get_person(True)
         source=(lambda *args:archive.task(store,*args)) if mode in ('recognize','translate') else store.task
         return request.reply(source(mode,person,request.arg('after')))
-
-    def search(request):
-        return request.reply(store.search(**{k:request.arg(k) for k in ('query','kind','period','variant')}))
 
     def withdraw_proposal(request):
         store.withdraw_proposal(request.get_person(True),request.tail)
@@ -219,7 +255,7 @@ def make_app(store, model_enabled=None, adapter=None, word_study=None, explain_w
             ('/api/learning',lambda r:r.reply(learning.catalog(store.public_records()))),
             ('/api/research',research),
             ('/archive.csv',lambda r:r.reply(archive.path.read_bytes(),mime='text/csv; charset=utf-8')),
-            ('/api/task',task),('/api/search',search),
+            ('/api/task',task),('/api/terms',terms_search),
             ('/api/corpus/export',lambda r:r.reply(store.export_data())),
             ('/api/proposals',lambda r:r.reply(store.proposals(r.get_person(True))))]:
         router.add('GET',path,function)

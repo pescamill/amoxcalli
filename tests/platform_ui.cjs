@@ -61,7 +61,7 @@ async function open(path,studyData){
   firstCard().querySelector('[data-compare-word="chachalaca"]').click();
   assert(status().textContent.startsWith('Buscando'));assert.equal(status().getAttribute('aria-live'),'polite');
   await until(()=>previews().length===2);assert.equal(w.location.hash,'#leer/aves');
-  assert.deepEqual(previews().map(p=>p.dataset.previewId),['axolotl-14479','axolotl-10403']);
+  assert.deepEqual(previews().map(p=>p.dataset.previewId),['axolotl-10403','axolotl-14479']);// orden de la búsqueda de términos: grafía consultada, luego orden del archivo
   const response=await(await originalFetch('/api/research?query=chachalaca&variant=nci&period=historical&offset=0&limit=10')).json();
   for(const card of previews()){
    const row=response.results.find(r=>r.id===card.dataset.previewId);assert(row);
@@ -120,7 +120,7 @@ async function open(path,studyData){
  w.location.hash='#lexico/sense-madera';await until(()=>$('.dictionary-entry h2').textContent==='madera');assert($('.dictionary-entry').textContent.includes('no equivale a escribir únicamente'));assert($('.source-image a[href*=tlecuauh]'));w.location.hash='#lexico/sense-ihuan';await until(()=>$('.dictionary-entry h1').textContent==='ihuan');assert($('.association-note').textContent.includes('No representa ihuan'));assert($('.association-note').textContent.includes('Sol y a la Luna'));
  w.location.hash='#lexico/sense-tletl';await until(()=>$('.dictionary-entry h1').textContent==='tletl');assert($('.dictionary-entry').textContent.includes('Imagen iconográfica'));
  assert($('link[rel=manifest]'));assert($('.app-install'));
- w.location.hash='#lexico';await until(()=>$('#search'));$('#search').value='arbol';$('#search').dispatchEvent(new w.Event('input'));assert($('#dictionary-grid').textContent.includes('árbol'));assert($('#dictionary-grid').textContent.includes('árbol florido'));
+ w.location.hash='#lexico';await until(()=>$('#search'));$('#search').value='arbol';$('#search').dispatchEvent(new w.Event('input'));await until(()=>$('#dictionary-grid').textContent.includes('árbol florido'));assert($('#dictionary-grid').textContent.includes('árbol'));assert($('#dictionary-grid').textContent.includes('árbol florido'));
  $('#period').value='modern';$('#period').dispatchEvent(new w.Event('change'));assert($('#dictionary-grid').textContent.includes('No hay coincidencias.'));
  w.location.hash='#lexico/buscar/tototl';await until(()=>$('#dictionary-grid .word-card-link strong')?.textContent==='tototl');assert($('#dictionary-order').textContent.includes('exactas primero'));
  w.location.hash='#lexico/buscar/chachalaca';await until(()=>$('[data-archive-fallback]'));assert.equal($('[data-archive-fallback]').getAttribute('href'),'#investigar/chachalaca');$('[data-archive-fallback]').click();await until(()=>$('#archive-count')?.textContent==='3 resultados');assert($('#archive-results').textContent.includes('parlotea'));
@@ -312,8 +312,11 @@ async function open(path,studyData){
  w.location.hash='#preguntar/'+encodeURIComponent('¿cómo se dice mujer?');await until(()=>$('.ask-candidates'));assert(/ciuatl|cihuatl/.test($('.ask-candidates').textContent));assert($('.ask-result').textContent.includes('No es una definición'));
  w.location.hash='#preguntar/xyzq';await until(()=>$('.ask-abstained'));assert.equal($('.ask-abstained a').getAttribute('href'),'#investigar/xyzq');
  w.location.hash='#preguntar/'+encodeURIComponent('<b>dos</b> palabras');await until(()=>$('#ask-status')?.textContent.includes('sola palabra'));assert.equal($('#ask-results b'),null);
- w.location.hash='#lexico/buscar/mujer';await until(()=>$('[data-word-suggest] a[href^="#preguntar/"]'));assert($('[data-word-suggest]').textContent.includes('español'));assert(!$('[data-word-suggest]').textContent.includes('RAÍZ'));
- console.log('PASS: preguntar con evidencia: grafía laxa, pasajes resaltados, español→raíz, abstención, error escapado y sugerencia del diccionario');
+ // Misma búsqueda de términos en las cuatro vistas: mujer → cihuatl con sus grafías, sin entrada de diccionario.
+ for(const [hash,ready] of [['#lexico/buscar/mujer','#dictionary-term .term-group'],['#investigar/mujer','#archive-term .term-group'],['#preguntar/mujer','#ask-results .term-group'],['#consultar/mujer','#documentary-term .term-group']]){w.location.hash=hash;await until(()=>$(ready));assert.equal($(ready).dataset.termId,'term-siwatl');assert($(ready).textContent.includes('ciuatl'));assert($(ready+' a[href="#preguntar/mujer"]'));}
+ for(const q of ['kuali','qualli']){w.location.hash='#lexico/buscar/'+q;await until(()=>$('#dictionary-term .term-group')?.dataset.termId==='term-kwali');assert($('#dictionary-term .term-uncertain').textContent.includes('tlacualli'));}
+ w.location.hash='#investigar/nocal';await until(()=>$('#archive-term .term-group'));assert.equal($('#archive-term .term-group').dataset.termId,'lemma-kalli');assert($('#archive-term h2').textContent==='calli');assert($('#archive-term a[href^="#glifos/elemento/"]'));
+ console.log('PASS: preguntar con evidencia: grafía laxa, pasajes resaltados, español→raíz, abstención, error escapado; un mismo grupo de término en Diccionario, Archivo, Preguntar y Consultar fichas');
  w.location.hash='#fuentes';await until(()=>$('#source-results'));assert($('#source-results').textContent.includes('UNAM'));assert.equal($('#source-results').children.length,20);
  w.location.hash='#textos';await until(()=>$('#text-results'));assert.equal($('#text-results').children.length,3);
  assert.deepEqual(errors,[]);console.log('PASS: sources and texts render with no application JavaScript errors');dom.window.close();

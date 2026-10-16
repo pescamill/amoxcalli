@@ -50,9 +50,11 @@ class CorpusTests(unittest.TestCase):
         self.assertEqual(again.records()['glyph-atl']['image'],recs['glyph-atl']['image'])
 
     def test_senses_spelling_and_missing_modern_coverage(self):
-        self.assertTrue({'lex-cuahuitl','form-quauitl','lex-xochicuahuitl'} <= {r['id'] for r in self.store.search('arbol',kind='form')['results']})
-        self.assertEqual(self.store.search('quauitl',kind='form')['results'][0]['written'],'quauitl')
-        self.assertEqual(self.store.search('',kind='form',period='modern')['total'],0)
+        # La búsqueda vive en terms.TermIndex (tests/test_terms.py); aquí, los datos que la sostienen.
+        recs=self.store.public_records()
+        self.assertEqual({recs[i]['sense_id'] for i in ('lex-cuahuitl','form-quauitl')},{'sense-cuahuitl'})
+        self.assertEqual(recs['form-quauitl']['written'],'quauitl')
+        self.assertFalse([r for r in recs.values() if r['kind']=='form' and r.get('period')=='modern'])
         self.assertNotEqual(self.store.records()['sense-madera']['id'],self.store.records()['sense-cuahuitl']['id'])
         self.assertTrue(any(r['kind']=='glyph' and r['sense_id']=='sense-madera' for r in self.store.records().values()))
 

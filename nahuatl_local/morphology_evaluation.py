@@ -193,7 +193,7 @@ def hint_eval(analyzer, rows, hints):
         if not c:
             return []
         if kind == 'cooc':
-            return [e for e, _ in c.most_common(3)]
+            return [e for e, _ in sorted(c.items(), key=lambda x: (-x[1], x[0]))[:3]]  # empates por orden alfabético: determinista
         scored = sorted(((2 * n / (df_n[f] + df_e[e]), e) for e, n in c.items() if n >= 2), reverse=True)
         return [e for _, e in scored[:3]]
 

@@ -1,5 +1,5 @@
 {
- "build_seconds": 3.57,
+ "build_seconds": 3.25,
  "explain_model": "extractive",
  "explanation": {
   "claude": "not_run: usar --explain claude con credenciales (tiene costo); no se ejecutó en esta medición",
@@ -2112,8 +2112,8 @@
   }
  ],
  "mean_ms_per_query": {
-  "evidence": 27.82,
-  "exact_search": 110.29
+  "evidence": 41.16,
+  "exact_search": 108.88
  },
  "model_calls": 0,
  "questions": "evidence-questions-v1",
