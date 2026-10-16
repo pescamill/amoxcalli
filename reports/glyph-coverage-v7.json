@@ -22890,6 +22890,6 @@
   "llm_calls": 0,
   "network_requests": 0,
   "policy": "Solo referencias existentes, relaciones explícitas de significado y coocurrencia exacta en pasajes clásicos. Sin inferencia morfológica ni valores fonéticos por semejanza de letras.",
-  "elapsed_seconds": 0.986,
+  "elapsed_seconds": 0.963,
   "bundle_sha256": "a7b8a1d6159e47ab7e918493fe2f436bb435af6c649f102d4afe5f747f37a9ea"
 }

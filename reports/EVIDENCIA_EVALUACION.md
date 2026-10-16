@@ -39,4 +39,4 @@ Redactor `explain-cited-v1` (extractive): 46 de 46 explicaciones pasan la valida
 
 - Un pasaje es pertinente si la forma señalada (o, en la línea base, alguna palabra náhuatl del pasaje) contiene la raíz esperada según la clave laxa. Es una aproximación automática.
 - El conjunto es pequeño y lo escribió el equipo técnico; las particiones separan desarrollo de prueba, no sustituyen la revisión de una persona experta.
-- Construcción de índices: 3.95 s (sobre cachés derivados ya presentes). Tiempo medio por consulta: exact_search 117.21 ms, evidence 51.33 ms.
+- Construcción de índices: 3.95 s (sobre cachés derivados ya presentes). Tiempo medio por consulta: exact_search 119.32 ms, evidence 51.97 ms.

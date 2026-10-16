@@ -468,7 +468,10 @@ class Analyzer:
             left, right = stem[:cut], stem[cut:]
             lh, rh = _compatible(self.lexicon.lookup(left), 'N'), _compatible(self.lexicon.lookup(right), cls)
             if lh and rh:
-                return _weighted(4.0, lh[:2] + rh[:2]), 'dictionary_compound', lh[:2] + rh[:2]
+                # Cada parte del compuesto necesita su propio apoyo: una parte solo de Wiktionary
+                # (p. ej. tzintli en ehecatzin, donde -tzin es sufijo) resta igual que una raíz sola.
+                bonus = 4.0 - (SECONDARY_PENALTY if any(all(h.get('secondary') for h in side) for side in (lh, rh)) else 0)
+                return bonus, 'dictionary_compound', lh[:2] + rh[:2]
         return 0.0, None, []
 
     def _affix_cost(self, form):

@@ -30,7 +30,7 @@ Open <http://127.0.0.1:8766>. `make demo` builds the derived analysis caches onc
 
 | Measurement | Result |
 |---|---|
-| Morphological segmentation (52 gold forms) | 85% exact; 60.3% of classical tokens linked to a dictionary root (28.0% by exact match) |
+| Morphological segmentation (52 gold forms) | 85% exact; 60.2% of classical tokens linked to a dictionary root (28.0% by exact match) |
 | Ask (32 test queries) | correct entry first 92% vs 42% for exact search |
 | Documentary lookup (123 development queries) | 119 complete, 770/790 required fields |
 | LoRA model (20 test sentences, chrF++) | 22.4 with retrieved context vs 27.2 for returning the nearest passage: **not a translator** |

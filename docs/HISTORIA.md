@@ -27,7 +27,7 @@ Resumen único de los registros de ciclo que se retiraron del árbol el 15 de oc
 
 **15 oct · Preguntar y limpieza.** `#preguntar`: recuperación con evidencia, sin LLM; entrada correcta en primer lugar 92 % frente a 42 % de la búsqueda exacta ([EVIDENCIA.md](EVIDENCIA.md)). Explicaciones citadas, con validador de citas. Simplificación del proceso (este documento y la sección «Eliminado» del ROADMAP).
 
-**16 oct · Fuentes abiertas.** Lote de Wiktionary (CC BY-SA, 3.215 lemas con revisión y licencia por ficha), notas gramaticales citadas de Carochi (1645, dominio público), ocho láminas más de Tlachia y borradores de permiso a la UNAM y para el Códice Florentino, sin enviar. Raíz enlazada: 41,8 % → 60,3 % de las palabras clásicas ([FUENTES.md](FUENTES.md), [ROADMAP](ROADMAP.md)).
+**16 oct · Fuentes abiertas.** Lote de Wiktionary (CC BY-SA, 3.215 lemas con revisión y licencia por ficha), notas gramaticales citadas de Carochi (1645, dominio público), ocho láminas más de Tlachia y borradores de permiso a la UNAM y para el Códice Florentino, sin enviar. Raíz enlazada: 41,8 % → 60,2 % de las palabras clásicas ([FUENTES.md](FUENTES.md), [ROADMAP](ROADMAP.md)).
 
 ## Qué se retiró y dónde quedó
 

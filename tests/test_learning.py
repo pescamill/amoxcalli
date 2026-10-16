@@ -8,6 +8,9 @@ from nahuatl_local.corpus import CorpusStore
 from nahuatl_local.learning import Learning
 from nahuatl_local.research import Archive
 
+# Ediciones históricas: se comprueban contra la selección anterior a la práctica v2 (test_lesson_builder cubre v2).
+PRE_PRACTICA = ROOT / 'tests/fixtures/learning/before-practica-2026-10-16.json'
+
 
 class LearningTests(unittest.TestCase):
     @classmethod
@@ -74,7 +77,7 @@ class LearningTests(unittest.TestCase):
 
     def test_new_readings_preserve_every_existing_lesson_and_comprehension(self):
         before=json.loads((ROOT/'tests/fixtures/learning/before-lecturas-003-2026-10-07.json').read_text())
-        current=json.loads((ROOT/'corpus/learning-v1.json').read_text())
+        current=json.loads(PRE_PRACTICA.read_text())
         self.assertEqual(current['lessons'][:len(before['lessons'])],before['lessons'])
         self.assertEqual([l['id'] for l in current['lessons'][6:]],
                          ['casas-relatos','animales-relatos','piedra-lena','arboles-cerros','fuego-viento','sol-luna'])
@@ -142,7 +145,7 @@ class LearningTests(unittest.TestCase):
 
     def test_context_questions_quote_the_original_translation_and_keep_recognition(self):
         before=json.loads((ROOT/'tests/fixtures/learning/before-reading-context-2026-10-07.json').read_text())
-        current=Learning(self.archive).data
+        current=Learning(self.archive,PRE_PRACTICA).data
         for old,new in zip(before['lessons'],current['lessons']):
             self.assertEqual([(e['archive_id'],e['source_hash'],e['exercise']) for e in old['examples']],
                              [(e['archive_id'],e['source_hash'],e['exercise']) for e in new['examples']])
@@ -163,7 +166,7 @@ class LearningTests(unittest.TestCase):
 
     def test_flor_update_is_append_only_preserves_passages_and_other_lessons(self):
         original=json.loads((ROOT/'tests/fixtures/learning/before-flor-v2.json').read_text())
-        current=Learning(self.archive).data
+        current=Learning(self.archive,PRE_PRACTICA).data
         self.assertEqual(current['lessons'][0]['version'],2)
         for old,new in zip(original['lessons'],current['lessons']):
             self.assertEqual([(e['archive_id'],e['source_hash']) for e in old['examples']],

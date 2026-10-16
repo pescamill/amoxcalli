@@ -55,7 +55,7 @@ Cada cifra sale de un comando; `make reports` los regenera y `make check` compru
 
 | Medición | Resultado | Informe |
 | --- | --- | --- |
-| Segmentación morfológica (52 formas de referencia) | 85 % exacta; 60,3 % de las palabras del corpus clásico con raíz enlazada al diccionario (28,0 % por coincidencia exacta) | [MORFOLOGIA_EVALUACION.md](reports/MORFOLOGIA_EVALUACION.md) |
+| Segmentación morfológica (52 formas de referencia) | 85 % exacta; 60,2 % de las palabras del corpus clásico con raíz enlazada al diccionario (28,0 % por coincidencia exacta) | [MORFOLOGIA_EVALUACION.md](reports/MORFOLOGIA_EVALUACION.md) |
 | Preguntar (32 consultas de prueba) | Entrada correcta en primer lugar 92 % frente a 42 % de la búsqueda exacta; grafías modernas 0 % → 100 % | [EVIDENCIA_EVALUACION.md](reports/EVIDENCIA_EVALUACION.md) |
 | Consulta documental (123 consultas de desarrollo) | 119 completas, 2 parciales, 2 abstenciones; 770/790 campos exactos | `reports/documentary-retrieval-v1.json` |
 | Modelo LoRA (20 frases de prueba, chrF++) | 22,4 con contexto recuperado, frente a 27,2 de devolver el pasaje más cercano: **no es un traductor** | [MODEL_CARD.md](MODEL_CARD.md) |

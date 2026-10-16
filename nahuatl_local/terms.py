@@ -316,8 +316,14 @@ class TermIndex:
                     continue
                 seen_keys.add(k)
                 owners = [o for o in self.spelling_owner.get(k, []) if o != gid]
-                analysis = self.analyzer.analyze(fs[0], limit=1)
+                analysis = self.analyzer.analyze(fs[0], limit=3)
                 reason = 'other_entry' if owners else self._certainty(analysis[0], gid, stem, senses) if analysis else 'corpus_root'
+                if reason is None:
+                    # Empate exacto con otra lectura de la misma segmentación (te-coua-ni: «mordedor» o
+                    # «comprador»): si la otra es verbal, la forma es ambigua y no se presenta como segura.
+                    tied = [x['class_'] for x in analysis[1:] if x['segmentation'] == analysis[0]['segmentation']
+                            and abs(x['score'] - analysis[0]['score']) < 1e-9 and x['class_'] in ('verb', 'nominalized')]
+                    reason = tied[0] if tied else None
                 surfaces = self._surfaces(k)
                 item = dict(forms=[v['form'] for v in surfaces] or fs, total=sum(v['total'] for v in surfaces),
                             by_variety=_merge(v['by_variety'] for v in surfaces),

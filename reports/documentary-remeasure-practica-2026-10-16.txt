@@ -1,0 +1,16 @@
+Nueva medición documental tras publicar la práctica v2 (configs/practica-2026-10-16.json), 16 oct 2026.
+
+Motivo: corpus/learning-v1.json es entrada fija de la batería (documentary_evaluation.FIXED);
+la publicación cambió su hash (distractores, opciones de comprensión, claves de lectura y
+practice_version). Los pasajes y sus IDs no cambiaron, así que la batería es la misma.
+
+Comandos: python3 -m nahuatl_local.documentary_evaluation
+          python3 -m nahuatl_local.documentary_retrieval_evaluation
+          python3 -m nahuatl_local.documentary_laboratory
+
+Comparación con los informes anteriores, sin campos de hash, huella, tiempo ni memoria:
+  documentary-evaluation-validation-v1.json   igual
+  documentary-retrieval-v1.json               igual (mismas respuestas, auditorías y métricas)
+  documentary-laboratory-v1.json              igual
+Cambian solo input_hashes / fingerprints (y los tiempos medidos). No se atribuye ninguna
+mejora ni regresión del ranking a este cambio.
