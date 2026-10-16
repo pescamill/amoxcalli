@@ -25,13 +25,13 @@ from .explain import ClaudeWriter, explain
 from .web import Router, Server, Static, handler
 
 WEB = Path(__file__).with_name('platform_web')
-# Mismas URL de siempre: la página principal usa /corpus.*; /app.js, /style.css y /favicon.svg son de Voces.
-STATIC = Static(WEB, {'/': WEB/'index.html', '/corpus.js': WEB/'app.js', '/corpus.css': WEB/'style.css',
+# La página principal usa /corpus.js (su app.js) y /amoxcalli.css; /app.js, /style.css y /favicon.svg son de Voces.
+STATIC = Static(WEB, {'/': WEB/'index.html', '/corpus.js': WEB/'app.js',
                       '/app.js': COMMUNITY_WEB/'app.js', '/style.css': COMMUNITY_WEB/'style.css',
                       '/favicon.svg': COMMUNITY_WEB/'favicon.svg',
                       '/project/purpose.md': ROOT/'docs/PROPOSITO.md', '/project/pilot.md': ROOT/'docs/PILOTO_INSTITUCIONAL.md',
                       '/project/contributing.md': ROOT/'CONTRIBUTING.md'})
-INSTALL_HEAD = '<meta name="theme-color" content="#812d37"><meta name="apple-mobile-web-app-capable" content="yes">\n<link rel="manifest" href="/manifest.webmanifest"><link rel="apple-touch-icon" href="/icon-192.png"><link rel="stylesheet" href="/install.css"><script src="/install.js" defer></script>\n'
+INSTALL_HEAD = '<meta name="theme-color" content="#812d37"><meta name="apple-mobile-web-app-capable" content="yes">\n<link rel="manifest" href="/manifest.webmanifest"><link rel="apple-touch-icon" href="/icon-192.png"><script src="/install.js" defer></script>\n'
 
 
 def rule_query(store, value):
@@ -116,7 +116,7 @@ def make_app(store, model_enabled=None, adapter=None, word_study=None, explain_w
     def contribute_page(request):
         # Misma sesión, mismos datos y mismos permisos que el corpus.
         page=(COMMUNITY_WEB/'index.html').read_text()
-        return request.reply(page.replace('</head>',INSTALL_HEAD+'<link rel="stylesheet" href="/minimal.css"><link rel="stylesheet" href="/edition.css"></head>').encode(),mime='text/html; charset=utf-8')
+        return request.reply(page.replace('</head>',INSTALL_HEAD+'<link rel="stylesheet" href="/amoxcalli.css"></head>').encode(),mime='text/html; charset=utf-8')
 
     def corpus(request):
         data=store.catalog_data();data.update(model_enabled=capability['ready'],model=capability,archive=archive.summary)

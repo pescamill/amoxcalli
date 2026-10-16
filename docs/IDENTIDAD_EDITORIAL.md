@@ -41,8 +41,14 @@ No se inventan traducciones o lemas en náhuatl para nombrar botones. Los origin
 
 ## Aplicación
 
-`nahuatl_local/platform_web/edition.css` se carga al final de las hojas existentes para actualizar la identidad sin cambiar el almacenamiento o los recorridos. Comparte la paleta entre Aprender, Leer, Diccionario, Mis palabras, Laboratorio, Proyecto, talleres y Voces dentro de la plataforma. El servidor comunitario independiente conserva su presentación anterior; el estilo nuevo se incorpora al servir `/aportar` desde la plataforma unificada.
+`nahuatl_local/platform_web/amoxcalli.css` es la única hoja de estilos de la aplicación y de Voces en `/aportar`. Empieza con los tokens (`:root`: tinta, papel, arena, acento, tipografías) y sigue por secciones; la identidad editorial ya no es una capa que se superpone a otras hojas. El único `!important` es `[hidden]`. Voces carga su `style.css` propio y encima `amoxcalli.css`, que define alias (`--green`, `--lime`) para sus nombres de variables.
 
 `edition-border.svg` contiene la cenefa original; `community_web/favicon.svg` usa un cuaderno abierto abstracto. Los iconos raster de instalación existentes se conservan. Las fichas de taller siguen imprimibles en negro y blanco, sin el marco de navegación.
 
-Para una página nueva: reutilizar títulos, separadores, márgenes y controles antes de crear otra tarjeta o patrón. Para cambios futuros, editar esta capa; las hojas previas mantienen reglas de estructura y comportamiento. Una consolidación posterior puede retirar estilos redundantes cuando se verifiquen todos los recorridos y la impresión.
+Para una página nueva: reutilizar títulos, separadores, márgenes y controles antes de crear otra tarjeta o patrón, y tomar los colores de los tokens. La consolidación del 16 de octubre retiró las reglas anuladas y sin uso; la suite DOM y las capturas a 1280 y 375 px verifican los recorridos y la impresión.
+
+## Estructura de la interfaz
+
+Una sola caja de búsqueda en la cabecera (`#search`): en Diccionario, Fuentes y Fichas textuales filtra mientras se escribe; en las demás secciones abre Preguntar, que muestra el grupo de término (grafías, glifos, pasajes) con enlaces a Diccionario, Archivo y Consultar fichas. El Archivo y Consultar fichas conservan su formulario propio con filtros. Navegación principal: Lecturas, Diccionario, Glifos, Preguntar y Mis palabras; lo avanzado (Leer todos los pasajes, Archivo completo, Consultar fichas, Fichas textuales, Fuentes, Laboratorio, Proyecto, Voces, Opciones, exportar e instalar) está en «Más». Un solo aviso de revisión lingüística por página, bajo la cabecera.
+
+Módulos del navegador (scripts clásicos que comparten funciones globales, en este orden): `app.js` (servido como `/corpus.js`: utilidades, estado, enrutador y búsqueda global), `terms.js`, `study.js` (cuaderno local), `words.js` (palabras, glifos y ayuda), `reading.js` (tarjeta de lectura y regreso al pasaje), `lessons.js`, `dictionary.js`, `notebook.js` (Mis palabras), `archive.js`, `library.js` (textos, fuentes, opciones), `contribute.js`, `documentary.js`, `morphology.js`, `evidence.js` (Preguntar), `pictography.js`, `project.js`, `laboratory.js`, `training-data.js`, `install.js`.
