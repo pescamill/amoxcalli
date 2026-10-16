@@ -1,5 +1,5 @@
 {
-  "base_sha256": "18242d28da77f41e888a7cd1a771da972fee9fe0c58f21892a4b66893e101e2f",
+  "base_sha256": "7462f977d93c44478e4bc04a4b20a7e353eb7a4054d585e874164ba5f62d13f1",
   "config_sha256": "0282d1ebcd1fc2f75df7f18f53a5aadbf81bb9020445202309e0539a62710a03",
   "learning": {
     "id": "lectura-clasica-v1",
@@ -61,11 +61,11 @@
             "exercise": {
               "answer": 2,
               "blank": "xochitl",
-              "explanation": "El texto original contiene xochitl. El ejercicio recupera esa forma de la fuente.",
+              "explanation": "El registro escribe «xochitl». «ixochiuh» (i-xochi-uh) tiene la misma raíz con otros afijos. «xochicuahuitl» significa «árbol florido». Consulta la traducción completa para situarla en su contexto.",
               "kind": "cloze",
               "options": [
-                "metztli",
-                "calli",
+                "ixochiuh",
+                "xochicuahuitl",
                 "xochitl"
               ],
               "question": "Completa con la palabra que aparece en la fuente: Tenonotzaliztli itechpa in ___, in cuicatl"
@@ -119,11 +119,11 @@
             "exercise": {
               "answer": 2,
               "blank": "xochitli",
-              "explanation": "El pasaje escribe xochitli. No se corrige automáticamente a xochitl: la relación con esa entrada sigue siendo una ayuda editorial pendiente de cotejo.",
+              "explanation": "El registro escribe «xochitli». «xochicuahuitl» significa «árbol florido». «tototl» significa «ave». Consulta la traducción completa para situarla en su contexto.",
               "kind": "cloze",
               "options": [
-                "xochitl",
-                "cuicatl",
+                "xochicuahuitl",
+                "tototl",
                 "xochitli"
               ],
               "question": "¿Qué forma escribe este pasaje para las flores? Conserva su grafía exacta."
@@ -134,6 +134,7 @@
         "id": "flor",
         "minutes": 7,
         "objective": "Reconocer xochitl y cuicatl, distinguir una palabra completa y conservar la grafía del pasaje.",
+        "practice_version": 3,
         "sense_ids": [
           "sense-xochitl",
           "sense-itta",
@@ -141,7 +142,7 @@
           "sense-cacahuaxochitl"
         ],
         "title": "Reconocer una flor",
-        "version": 2
+        "version": 3
       },
       {
         "cover_glyph": "glyph-tonatiuh-mdz34r",
@@ -193,12 +194,12 @@
             "exercise": {
               "answer": 1,
               "blank": "tonatiuh",
-              "explanation": "El registro contiene tonatiuh. El resto de la expresión se conserva sin análisis automático.",
+              "explanation": "El registro escribe «tonatiuh». «itonatiuh» (i-tonatiuh) tiene la misma raíz con otros afijos. «metztli» significa «luna». Consulta la traducción completa para situarla en su contexto.",
               "kind": "cloze",
               "options": [
-                "metztli",
+                "itonatiuh",
                 "tonatiuh",
-                "tlalli"
+                "metztli"
               ],
               "question": "Completa con la forma exacta de la fuente: in ___ ixcopa itztiaque,"
             },
@@ -256,10 +257,10 @@
         "id": "cielo",
         "minutes": 7,
         "objective": "Reconocer tonatiuh en distintos contextos y compararlo con Metztli en el fragmento que reúne ambos.",
-        "practice_version": 1,
+        "practice_version": 2,
         "reading_tips": [
-          "Esta selección contiene cuatro pasajes del Sol y uno de ellos también menciona la Luna; no son cuatro ejemplos de metztli.",
-          "En el fragmento destacado, metztli se consulta como luna. La acepción mes tiene otra ficha y no se aplica aquí."
+          "Los cuatro fragmentos hablan del Sol; solo uno menciona también a la Luna (metztli).",
+          "Aquí metztli quiere decir «luna». La misma palabra también puede significar «mes», pero ese sentido no aparece en esta lectura."
         ],
         "sense_ids": [
           "sense-tonatiuh",
@@ -267,7 +268,7 @@
           "sense-ihuan"
         ],
         "title": "El Sol y un encuentro con la Luna",
-        "version": 2
+        "version": 3
       },
       {
         "cover_glyph": "glyph-tepetl-mdz32r",
@@ -334,12 +335,12 @@
             "exercise": {
               "answer": 0,
               "blank": "tepetl",
-              "explanation": "La fuente escribe tepetl. Su traducción utiliza montes.",
+              "explanation": "El registro escribe «tepetl». «itepetzin» (i-tepe-tzin) tiene la misma raíz con otros afijos. «tlalli» significa «tierra». Consulta la traducción completa para situarla en su contexto.",
               "kind": "cloze",
               "options": [
                 "tepetl",
-                "xochitl",
-                "atl"
+                "itepetzin",
+                "tlalli"
               ],
               "question": "Completa la forma del texto: quitztihui in ___,"
             },
@@ -379,10 +380,10 @@
         "id": "lugares",
         "minutes": 8,
         "objective": "Reconocer palabras de lugares y observar cuándo la traducción necesita contexto.",
-        "practice_version": 1,
+        "practice_version": 2,
         "reading_tips": [
-          "La palabra completa tlacuilolcalli se conserva: consultar calli como tema no equivale a traducir todo el compuesto como casa.",
-          "El español de un registro puede necesitar contexto. No conviertas ciudad en una traducción universal de tepetl."
+          "tlacuilolcalli es una palabra compuesta que contiene calli («casa»): toda la palabra se traduce «casa de las pinturas», no solo «casa».",
+          "Un fragmento traduce tlalli, tepetl como «la tierra, la ciudad». Esa traducción vale para ese contexto: tepetl no significa siempre «ciudad»."
         ],
         "sense_ids": [
           "sense-tlalli",
@@ -390,7 +391,7 @@
           "sense-tepetl"
         ],
         "title": "Reconocer tierra, casa y cerro",
-        "version": 2
+        "version": 3
       },
       {
         "cover_glyph": "glyph-atl",
@@ -410,12 +411,12 @@
             "exercise": {
               "answer": 0,
               "blank": "atl",
-              "explanation": "El registro escribe «atl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "explanation": "El registro escribe «atl». «tlalli» significa «tierra». «tepetl» significa «cerro». Consulta la traducción completa para situarla en su contexto.",
               "kind": "cloze",
               "options": [
                 "atl",
                 "tlalli",
-                "xochitl"
+                "tepetl"
               ],
               "question": "Recupera la forma que aparece en el fragmento original."
             },
@@ -436,12 +437,12 @@
             "exercise": {
               "answer": 1,
               "blank": "atl",
-              "explanation": "El registro escribe «atl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "explanation": "El registro escribe «atl». «tlalli» significa «tierra». «tetl» significa «piedra». Consulta la traducción completa para situarla en su contexto.",
               "kind": "cloze",
               "options": [
-                "tepetl",
+                "tlalli",
                 "atl",
-                "cuicatl"
+                "tetl"
               ],
               "question": "Recupera la forma que aparece en el fragmento original."
             },
@@ -462,11 +463,11 @@
             "exercise": {
               "answer": 2,
               "blank": "tlalli",
-              "explanation": "El registro escribe «tlalli». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "explanation": "El registro escribe «tlalli». «notlal» (no-tlal) tiene la misma raíz con otros afijos. «tepetl» significa «cerro». Consulta la traducción completa para situarla en su contexto.",
               "kind": "cloze",
               "options": [
-                "atl",
-                "tototl",
+                "notlal",
+                "tepetl",
                 "tlalli"
               ],
               "question": "Recupera la forma que aparece en el fragmento original."
@@ -488,12 +489,12 @@
             "exercise": {
               "answer": 0,
               "blank": "tlalli",
-              "explanation": "El registro escribe «tlalli». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "explanation": "El registro escribe «tlalli». «totlal» (to-tlal) tiene la misma raíz con otros afijos. «atl» significa «agua». Consulta la traducción completa para situarla en su contexto.",
               "kind": "cloze",
               "options": [
                 "tlalli",
-                "metztli",
-                "xochitl"
+                "totlal",
+                "atl"
               ],
               "question": "Recupera la forma que aparece en el fragmento original."
             },
@@ -503,16 +504,17 @@
         "id": "agua-tierra",
         "minutes": 7,
         "objective": "Reconocer atl y tlalli en poesía y relatos, conservando el sentido de cada fragmento.",
+        "practice_version": 2,
         "reading_tips": [
           "Una palabra conocida ayuda a orientarte; la traducción completa cuenta qué sucede.",
-          "El glifo mostrado procede de su propio documento. No es la ilustración original de estos relatos."
+          "La imagen del glifo viene de otro documento; no ilustra estos relatos."
         ],
         "sense_ids": [
           "sense-atl",
           "sense-tlalli"
         ],
         "title": "Agua y tierra en sus contextos",
-        "version": 1
+        "version": 2
       },
       {
         "cover_glyph": "glyph-xochitl",
@@ -539,12 +541,12 @@
             "exercise": {
               "answer": 0,
               "blank": "cuicatl",
-              "explanation": "El registro escribe «cuicatl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "explanation": "El registro escribe «cuicatl». «icuicatzin» (i-cuica-tzin) tiene la misma raíz con otros afijos. «cuicani» (cuica-ni) tiene la misma raíz con otros afijos. Consulta la traducción completa para situarla en su contexto.",
               "kind": "cloze",
               "options": [
                 "cuicatl",
-                "xochitl",
-                "atl"
+                "icuicatzin",
+                "cuicani"
               ],
               "question": "Recupera la forma que aparece en el fragmento original."
             },
@@ -572,12 +574,12 @@
             "exercise": {
               "answer": 1,
               "blank": "xochitl",
-              "explanation": "El registro escribe «xochitl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "explanation": "El registro escribe «xochitl». «ixochiuh» (i-xochi-uh) tiene la misma raíz con otros afijos. «xochitzin» (xochi-tzin) tiene la misma raíz con otros afijos. Consulta la traducción completa para situarla en su contexto.",
               "kind": "cloze",
               "options": [
-                "cuicatl",
+                "ixochiuh",
                 "xochitl",
-                "tototl"
+                "xochitzin"
               ],
               "question": "Recupera la forma que aparece en el fragmento original."
             },
@@ -605,11 +607,11 @@
             "exercise": {
               "answer": 2,
               "blank": "cuicatl",
-              "explanation": "El registro escribe «cuicatl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "explanation": "El registro escribe «cuicatl». «icuicatzin» (i-cuica-tzin) tiene la misma raíz con otros afijos. «cuicani» (cuica-ni) tiene la misma raíz con otros afijos. Consulta la traducción completa para situarla en su contexto.",
               "kind": "cloze",
               "options": [
-                "tlalli",
-                "xochitl",
+                "icuicatzin",
+                "cuicani",
                 "cuicatl"
               ],
               "question": "Recupera la forma que aparece en el fragmento original."
@@ -631,12 +633,12 @@
             "exercise": {
               "answer": 0,
               "blank": "xochitl",
-              "explanation": "El registro escribe «xochitl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "explanation": "El registro escribe «xochitl». «xochitzin» (xochi-tzin) tiene la misma raíz con otros afijos. «moxochiuh» (mo-xochi-uh) tiene la misma raíz con otros afijos. Consulta la traducción completa para situarla en su contexto.",
               "kind": "cloze",
               "options": [
                 "xochitl",
-                "cuicatl",
-                "atl"
+                "xochitzin",
+                "moxochiuh"
               ],
               "question": "Recupera la forma que aparece en el fragmento original."
             },
@@ -646,16 +648,17 @@
         "id": "flores-cantos",
         "minutes": 6,
         "objective": "Reconocer xochitl y cuicatl en nuevos versos y distinguir el texto poético de una glosa de diccionario.",
+        "practice_version": 2,
         "reading_tips": [
-          "Lee flores y cantos dentro del verso. Una glosa aislada no explica todo su sentido poético.",
-          "La forma escrita y el número de la traducción española son datos distintos."
+          "Lee «flores» y «cantos» dentro del verso: traducir una palabra suelta no explica todo el poema.",
+          "El español puede decir «flores» aunque el náhuatl escriba xochitl: la forma escrita y el número de la traducción no siempre coinciden."
         ],
         "sense_ids": [
           "sense-xochitl",
           "sense-cuicatl"
         ],
         "title": "Flores y cantos más allá del título",
-        "version": 1
+        "version": 2
       },
       {
         "cover_glyph": "glyph-tototl-mdz46r",
@@ -677,8 +680,8 @@
               "kind": "meaning",
               "options": [
                 "Por allí anda el ave, parlotea y canta",
-                "Lleva carrizos al palacio.",
-                "Construye una casa."
+                "Por allí vuela el ave, busca agua y descansa",
+                "Por allí duerme el ave, calla y se esconde"
               ],
               "question": "Según la traducción del poema, ¿qué hace el ave?"
             },
@@ -686,12 +689,12 @@
             "exercise": {
               "answer": 0,
               "blank": "tototl",
-              "explanation": "El registro escribe «tototl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "explanation": "El registro escribe «tototl». «itototzin» (i-toto-tzin) tiene la misma raíz con otros afijos. «mazatl» significa «venado». Consulta la traducción completa para situarla en su contexto.",
               "kind": "cloze",
               "options": [
                 "tototl",
-                "xochitl",
-                "atl"
+                "itototzin",
+                "mazatl"
               ],
               "question": "Recupera la forma que aparece en el fragmento original."
             },
@@ -717,9 +720,9 @@
               "explanation": "La traducción del corpus dice «aves, pescados y ranas». La respuesta corresponde a este fragmento, no a una glosa aislada.",
               "kind": "meaning",
               "options": [
-                "Flores y collares.",
+                "maíz, frijol y chile",
                 "aves, pescados y ranas",
-                "Escudos y dardos."
+                "mantas, plumas y cacao"
               ],
               "question": "Según este relato, ¿qué llevaban tenochcas y tlatelolcas?"
             },
@@ -727,12 +730,12 @@
             "exercise": {
               "answer": 1,
               "blank": "tototl",
-              "explanation": "El registro escribe «tototl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "explanation": "El registro escribe «tototl». «itototzin» (i-toto-tzin) tiene la misma raíz con otros afijos. «mazatl» significa «venado». Consulta la traducción completa para situarla en su contexto.",
               "kind": "cloze",
               "options": [
-                "cuicatl",
+                "itototzin",
                 "tototl",
-                "tlalli"
+                "mazatl"
               ],
               "question": "Recupera la forma que aparece en el fragmento original."
             },
@@ -758,8 +761,8 @@
               "explanation": "La traducción del corpus dice «en Azcapotzalco». La respuesta corresponde a este fragmento, no a una glosa aislada.",
               "kind": "meaning",
               "options": [
-                "En la casa del dios.",
-                "En la región de los magueyes.",
+                "en Tlatelolco",
+                "en Tenochtitlan",
                 "en Azcapotzalco"
               ],
               "question": "¿A qué lugar llevaban lo que enumera el fragmento?"
@@ -768,11 +771,11 @@
             "exercise": {
               "answer": 2,
               "blank": "tototl",
-              "explanation": "El registro escribe «tototl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "explanation": "El registro escribe «tototl». «itototzin» (i-toto-tzin) tiene la misma raíz con otros afijos. «mazatl» significa «venado». Consulta la traducción completa para situarla en su contexto.",
               "kind": "cloze",
               "options": [
-                "atl",
-                "xochitl",
+                "itototzin",
+                "mazatl",
                 "tototl"
               ],
               "question": "Recupera la forma que aparece en el fragmento original."
@@ -800,8 +803,8 @@
               "kind": "meaning",
               "options": [
                 "con sus flechas y sus arcos",
-                "Con escudos y dardos.",
-                "Con redes y canoas."
+                "con sus redes y sus trampas",
+                "con sus lanzas y sus escudos"
               ],
               "question": "Según la traducción, ¿con qué cazaban?"
             },
@@ -809,12 +812,12 @@
             "exercise": {
               "answer": 0,
               "blank": "tototl",
-              "explanation": "El registro escribe «tototl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "explanation": "El registro escribe «tototl». «itototzin» (i-toto-tzin) tiene la misma raíz con otros afijos. «michin» significa «pez». Consulta la traducción completa para situarla en su contexto.",
               "kind": "cloze",
               "options": [
                 "tototl",
-                "tlalli",
-                "cuicatl"
+                "itototzin",
+                "michin"
               ],
               "question": "Recupera la forma que aparece en el fragmento original."
             },
@@ -827,16 +830,16 @@
         "id": "aves",
         "minutes": 8,
         "objective": "Reconocer tototl y comparar el contexto del ave poética con las aves de los relatos.",
-        "practice_version": 1,
+        "practice_version": 2,
         "reading_tips": [
           "El mismo término aparece en poesía y en relatos históricos; lee qué papel tiene en cada fragmento.",
-          "Las formas michi y cohuatl que aparecen en los relatos se conservan sin convertirlas automáticamente en otras entradas."
+          "En los relatos también aparecen michi y cohuatl. Se muestran tal como las escribió el documento; la app no las cambia por otra palabra del diccionario."
         ],
         "sense_ids": [
           "sense-tototl"
         ],
         "title": "Un ave en poesía, aves en relatos",
-        "version": 2
+        "version": 3
       },
       {
         "cover_glyph": "glyph-calli",
@@ -858,8 +861,8 @@
               "kind": "meaning",
               "options": [
                 "horadaron la pared trasera de la casa",
-                "Por la puerta delantera.",
-                "Por una canoa."
+                "saltaron por el techo de la casa",
+                "salieron por la puerta del patio"
               ],
               "question": "¿Por dónde escaparon los mexicas?"
             },
@@ -867,12 +870,12 @@
             "exercise": {
               "answer": 0,
               "blank": "calli",
-              "explanation": "El registro escribe «calli». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "explanation": "El registro escribe «calli». «ical» (i-cal) tiene la misma raíz con otros afijos. «tepetl» significa «cerro». Consulta la traducción completa para situarla en su contexto.",
               "kind": "cloze",
               "options": [
                 "calli",
-                "atl",
-                "tetl"
+                "ical",
+                "tepetl"
               ],
               "question": "Recupera la forma que aparece en el fragmento original."
             },
@@ -894,9 +897,9 @@
               "explanation": "La traducción de origen dice «Destechadas están las casas». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
               "kind": "meaning",
               "options": [
-                "Recién construidas.",
+                "Quemadas están las casas",
                 "Destechadas están las casas",
-                "Cubiertas con flores."
+                "Inundadas están las casas"
               ],
               "question": "¿Cómo están las casas en la traducción?"
             },
@@ -904,12 +907,12 @@
             "exercise": {
               "answer": 1,
               "blank": "Calli",
-              "explanation": "El registro escribe «Calli». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "explanation": "El registro escribe «Calli». «Ical» (i-cal) tiene la misma raíz con otros afijos. «Tepetl» significa «cerro». Consulta la traducción completa para situarla en su contexto.",
               "kind": "cloze",
               "options": [
-                "tepetl",
+                "Ical",
                 "Calli",
-                "xochitl"
+                "Tepetl"
               ],
               "question": "Recupera la forma que aparece en el fragmento original."
             },
@@ -931,8 +934,8 @@
               "explanation": "La traducción de origen dice «carta de venta». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
               "kind": "meaning",
               "options": [
-                "Una lista de aves.",
-                "Un mapa del cielo.",
+                "testamento",
+                "mapa del barrio",
                 "carta de venta"
               ],
               "question": "¿Qué documento confirma la declaración?"
@@ -941,11 +944,11 @@
             "exercise": {
               "answer": 2,
               "blank": "calli",
-              "explanation": "El registro escribe «calli». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "explanation": "El registro escribe «calli». «nocal» (no-cal) tiene la misma raíz con otros afijos. «tlalli» significa «tierra». Consulta la traducción completa para situarla en su contexto.",
               "kind": "cloze",
               "options": [
-                "cuicatl",
-                "tototl",
+                "nocal",
+                "tlalli",
                 "calli"
               ],
               "question": "Recupera la forma que aparece en el fragmento original."
@@ -969,8 +972,8 @@
               "kind": "meaning",
               "options": [
                 "la dicha casa y tierra",
-                "Una piel de venado.",
-                "Un collar de flores."
+                "la dicha casa y huerta",
+                "el dicho solar y camino"
               ],
               "question": "¿Qué afirma haber vendido?"
             },
@@ -978,12 +981,12 @@
             "exercise": {
               "answer": 0,
               "blank": "calli",
-              "explanation": "El registro escribe «calli». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "explanation": "El registro escribe «calli». «tocal» (to-cal) tiene la misma raíz con otros afijos. «tepetl» significa «cerro». Consulta la traducción completa para situarla en su contexto.",
               "kind": "cloze",
               "options": [
                 "calli",
-                "tlalli",
-                "tonatiuh"
+                "tocal",
+                "tepetl"
               ],
               "question": "Recupera la forma que aparece en el fragmento original."
             },
@@ -993,15 +996,16 @@
         "id": "casas-relatos",
         "minutes": 8,
         "objective": "Reconocer calli en episodios sobre casas y distinguir una acción narrada de una declaración de posesión.",
+        "practice_version": 2,
         "reading_tips": [
-          "Estas apariciones hablan de edificios; no se enseña aquí el signo calendárico Calli.",
-          "La escritura del español histórico se conserva. Usa la frase completa para explicar qué ocurre con la casa."
+          "Aquí calli quiere decir casa o edificio. Calli también es el nombre de un día del calendario, pero ese uso no aparece en esta lectura.",
+          "Las traducciones conservan el español antiguo y su ortografía. Lee la frase completa para entender qué pasa con la casa."
         ],
         "sense_ids": [
           "sense-calli"
         ],
         "title": "Casas, salida y posesión",
-        "version": 1
+        "version": 2
       },
       {
         "cover_glyph": "glyph-mazatl-mdz13v",
@@ -1023,8 +1027,8 @@
               "kind": "meaning",
               "options": [
                 "la piel de un venado",
-                "Un disco solar.",
-                "Una vasija de barro."
+                "la pluma de un ave",
+                "el colmillo de un jaguar"
               ],
               "question": "¿Qué objeto menciona el verso?"
             },
@@ -1032,12 +1036,12 @@
             "exercise": {
               "answer": 0,
               "blank": "mazatl",
-              "explanation": "El registro escribe «mazatl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "explanation": "El registro escribe «mazatl». «mazatlan» (maza-tlan) tiene la misma raíz con otros afijos. «tochtli» significa «conejo». Consulta la traducción completa para situarla en su contexto.",
               "kind": "cloze",
               "options": [
                 "mazatl",
-                "coatl",
-                "tototl"
+                "mazatlan",
+                "tochtli"
               ],
               "question": "Recupera la forma que aparece en el fragmento original."
             },
@@ -1059,9 +1063,9 @@
               "explanation": "La traducción de origen dice «el venado que quieren». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
               "kind": "meaning",
               "options": [
-                "La casa que alquilan.",
+                "el conejo que buscan",
                 "el venado que quieren",
-                "La salida del sol."
+                "la serpiente que piden"
               ],
               "question": "¿Qué dicen no haber hallado?"
             },
@@ -1069,12 +1073,12 @@
             "exercise": {
               "answer": 1,
               "blank": "mazatl",
-              "explanation": "El registro escribe «mazatl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "explanation": "El registro escribe «mazatl». «mazatlan» (maza-tlan) tiene la misma raíz con otros afijos. «tochtli» significa «conejo». Consulta la traducción completa para situarla en su contexto.",
               "kind": "cloze",
               "options": [
-                "michin",
+                "mazatlan",
                 "mazatl",
-                "calli"
+                "tochtli"
               ],
               "question": "Recupera la forma que aparece en el fragmento original."
             },
@@ -1096,8 +1100,8 @@
               "explanation": "La traducción de origen dice «culebras, conejos, venados». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
               "kind": "meaning",
               "options": [
-                "Piedras, tablas y adobes.",
-                "Flores, cantos y collares.",
+                "pescados, ranas, aves",
+                "maíz, frijol, calabaza",
                 "culebras, conejos, venados"
               ],
               "question": "¿Qué alimentos enumera la traducción?"
@@ -1106,11 +1110,11 @@
             "exercise": {
               "answer": 2,
               "blank": "coatl",
-              "explanation": "El registro escribe «coatl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "explanation": "El registro escribe «coatl». «coatlan» (coa-tlan) tiene la misma raíz con otros afijos. «michin» significa «pez». Consulta la traducción completa para situarla en su contexto.",
               "kind": "cloze",
               "options": [
-                "mazatl",
-                "tetl",
+                "coatlan",
+                "michin",
                 "coatl"
               ],
               "question": "Recupera la forma que aparece en el fragmento original."
@@ -1134,8 +1138,8 @@
               "kind": "meaning",
               "options": [
                 "Nadie sabe",
-                "Todos lo vieron.",
-                "Se confirmó el mismo día."
+                "Todos saben",
+                "Algunos vieron"
               ],
               "question": "¿Qué grado de certeza expresa el comienzo?"
             },
@@ -1143,12 +1147,12 @@
             "exercise": {
               "answer": 0,
               "blank": "michin",
-              "explanation": "El registro escribe «michin». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "explanation": "El registro escribe «michin». «mazatl» significa «venado». «tototl» significa «ave». Consulta la traducción completa para situarla en su contexto.",
               "kind": "cloze",
               "options": [
                 "michin",
-                "coatl",
-                "atl"
+                "mazatl",
+                "tototl"
               ],
               "question": "Recupera la forma que aparece en el fragmento original."
             },
@@ -1158,9 +1162,10 @@
         "id": "animales-relatos",
         "minutes": 8,
         "objective": "Reconocer mazatl, coatl y michin y explicar el papel de cada animal en su relato sin identificar especies.",
+        "practice_version": 2,
         "reading_tips": [
-          "La piel, el alimento y una posibilidad incierta son contextos diferentes. Lee cuál corresponde a cada pasaje.",
-          "No se cambia cohuatl por coatl ni se analiza esa variante automáticamente; la ayuda destaca solo la forma citada."
+          "Los animales aparecen en situaciones distintas: una piel de venado, una lista de alimentos, algo que nadie sabe con certeza. Fíjate en cuál es cuál.",
+          "Un fragmento escribe cohuatl y el diccionario usa coatl. Te mostramos la palabra tal como está en el documento, sin corregirla."
         ],
         "sense_ids": [
           "sense-mazatl",
@@ -1168,7 +1173,7 @@
           "sense-michin"
         ],
         "title": "Venados, culebras y un pez",
-        "version": 1
+        "version": 2
       },
       {
         "cover_glyph": "glyph-tetl-mdz48r",
@@ -1190,8 +1195,8 @@
               "kind": "meaning",
               "options": [
                 "una braza de piedra",
-                "Una piel de venado.",
-                "Una vasija de carbón."
+                "una braza de madera",
+                "una olla de cacao"
               ],
               "question": "¿Qué se declara enterrado?"
             },
@@ -1199,12 +1204,12 @@
             "exercise": {
               "answer": 0,
               "blank": "tetl",
-              "explanation": "El registro escribe «tetl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "explanation": "El registro escribe «tetl». «tepetl» significa «cerro». «tlalli» significa «tierra». Consulta la traducción completa para situarla en su contexto.",
               "kind": "cloze",
               "options": [
                 "tetl",
-                "cuahuitl",
-                "calli"
+                "tepetl",
+                "tlalli"
               ],
               "question": "Recupera la forma que aparece en el fragmento original."
             },
@@ -1226,9 +1231,9 @@
               "explanation": "La traducción de origen dice «no abia cosa alguna dello». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
               "kind": "meaning",
               "options": [
-                "Dos casas nuevas.",
+                "todo estaba en su lugar",
                 "no abia cosa alguna dello",
-                "Una carta firmada."
+                "abia otra casa en el sitio"
               ],
               "question": "¿Qué encontraron al volver?"
             },
@@ -1236,10 +1241,10 @@
             "exercise": {
               "answer": 1,
               "blank": "tetl",
-              "explanation": "El registro escribe «tetl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "explanation": "El registro escribe «tetl». «tlalli» significa «tierra». «tepetl» significa «cerro». Consulta la traducción completa para situarla en su contexto.",
               "kind": "cloze",
               "options": [
-                "atl",
+                "tlalli",
                 "tetl",
                 "tepetl"
               ],
@@ -1263,8 +1268,8 @@
               "explanation": "La traducción de origen dice «la leña, el carbón». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
               "kind": "meaning",
               "options": [
-                "La luna, las estrellas.",
-                "Las flores, los cantos.",
+                "la cal, la arena",
+                "el maíz, el frijol",
                 "la leña, el carbón"
               ],
               "question": "¿Qué materiales se disponen junto a los recipientes?"
@@ -1273,11 +1278,11 @@
             "exercise": {
               "answer": 2,
               "blank": "cuahuitl",
-              "explanation": "El registro escribe «cuahuitl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "explanation": "El registro escribe «cuahuitl». «xochicuahuitl» significa «árbol florido». «tetl» significa «piedra». Consulta la traducción completa para situarla en su contexto.",
               "kind": "cloze",
               "options": [
+                "xochicuahuitl",
                 "tetl",
-                "tototl",
                 "cuahuitl"
               ],
               "question": "Recupera la forma que aparece en el fragmento original."
@@ -1301,8 +1306,8 @@
               "kind": "meaning",
               "options": [
                 "dentro de la piedra y del palo",
-                "Dentro de una canoa.",
-                "En el octavo cielo."
+                "dentro del agua y del cerro",
+                "encima de la casa y del camino"
               ],
               "question": "¿Dónde dice el pasaje que está mirando?"
             },
@@ -1310,12 +1315,12 @@
             "exercise": {
               "answer": 0,
               "blank": "cuahuitl",
-              "explanation": "El registro escribe «cuahuitl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "explanation": "El registro escribe «cuahuitl». «xochicuahuitl» significa «árbol florido». «tepetl» significa «cerro». Consulta la traducción completa para situarla en su contexto.",
               "kind": "cloze",
               "options": [
                 "cuahuitl",
-                "xochitl",
-                "tonatiuh"
+                "xochicuahuitl",
+                "tepetl"
               ],
               "question": "Recupera la forma que aparece en el fragmento original."
             },
@@ -1325,16 +1330,17 @@
         "id": "piedra-lena",
         "minutes": 8,
         "objective": "Reconocer tetl y cuahuitl en contextos materiales y distinguir esos referentes de la expresión piedra y palo.",
+        "practice_version": 2,
         "reading_tips": [
-          "Cuahuitl se consulta aquí como material; la lectura de árboles usa una acepción separada.",
-          "La expresión piedra y palo exige leer su contexto. La referencia visual no explica automáticamente esa expresión."
+          "Aquí cuahuitl quiere decir madera o leña. En la lectura de árboles la misma palabra se lee como «árbol».",
+          "«Dentro de la piedra y del palo» es una expresión: lee el fragmento completo para entenderla. La imagen del glifo muestra la palabra, no explica la expresión."
         ],
         "sense_ids": [
           "sense-tetl",
           "sense-madera"
         ],
         "title": "Piedra, leña y un palo",
-        "version": 1
+        "version": 2
       },
       {
         "cover_glyph": "glyph-cuahuitl-mdz7v",
@@ -1356,8 +1362,8 @@
               "kind": "meaning",
               "options": [
                 "para que nosotros podamos seguir el camino",
-                "Para confirmar una venta.",
-                "Para marcar un eclipse."
+                "para que nadie pueda seguir el camino",
+                "para que los árboles vuelvan a crecer"
               ],
               "question": "¿Para qué piden dejar señales?"
             },
@@ -1365,12 +1371,12 @@
             "exercise": {
               "answer": 0,
               "blank": "quauitl",
-              "explanation": "El registro escribe «quauitl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "explanation": "El registro escribe «quauitl». «xochicuahuitl» significa «árbol florido». «tepetl» significa «cerro». Consulta la traducción completa para situarla en su contexto.",
               "kind": "cloze",
               "options": [
                 "quauitl",
-                "tetl",
-                "metztli"
+                "xochicuahuitl",
+                "tepetl"
               ],
               "question": "Recupera la forma que aparece en el fragmento original."
             },
@@ -1392,9 +1398,9 @@
               "explanation": "La traducción de origen dice «los desarraigan». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
               "kind": "meaning",
               "options": [
-                "Los cubren con flores.",
+                "los queman",
                 "los desarraigan",
-                "Los convierten en casas."
+                "los siembran"
               ],
               "question": "¿Qué ocurre con los árboles?"
             },
@@ -1402,12 +1408,12 @@
             "exercise": {
               "answer": 1,
               "blank": "cuahuitl",
-              "explanation": "El registro escribe «cuahuitl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "explanation": "El registro escribe «cuahuitl». «xochicuahuitl» significa «árbol florido». «tepetl» significa «cerro». Consulta la traducción completa para situarla en su contexto.",
               "kind": "cloze",
               "options": [
-                "calli",
+                "xochicuahuitl",
                 "cuahuitl",
-                "cuicatl"
+                "tepetl"
               ],
               "question": "Recupera la forma que aparece en el fragmento original."
             },
@@ -1429,8 +1435,8 @@
               "explanation": "La traducción de origen dice «entre las piedras, entre los árboles». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
               "kind": "meaning",
               "options": [
-                "Dentro de la casa, sobre el techo.",
-                "Junto al mercado, dentro de la canoa.",
+                "entre las casas, entre los caminos",
+                "entre las flores, entre los cantos",
                 "entre las piedras, entre los árboles"
               ],
               "question": "¿Qué lugares enumera la traducción?"
@@ -1439,11 +1445,11 @@
             "exercise": {
               "answer": 2,
               "blank": "cuahuitl",
-              "explanation": "El registro escribe «cuahuitl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "explanation": "El registro escribe «cuahuitl». «xochicuahuitl» significa «árbol florido». «calli» significa «casa». Consulta la traducción completa para situarla en su contexto.",
               "kind": "cloze",
               "options": [
-                "atl",
-                "mazatl",
+                "xochicuahuitl",
+                "calli",
                 "cuahuitl"
               ],
               "question": "Recupera la forma que aparece en el fragmento original."
@@ -1467,8 +1473,8 @@
               "kind": "meaning",
               "options": [
                 "sobre el cerro",
-                "En el puerto.",
-                "Dentro de una vasija."
+                "junto al río",
+                "dentro de la cueva"
               ],
               "question": "¿Dónde encendieron su fuego?"
             },
@@ -1476,12 +1482,12 @@
             "exercise": {
               "answer": 0,
               "blank": "tepetl",
-              "explanation": "El registro escribe «tepetl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "explanation": "El registro escribe «tepetl». «itepetzin» (i-tepe-tzin) tiene la misma raíz con otros afijos. «tlalli» significa «tierra». Consulta la traducción completa para situarla en su contexto.",
               "kind": "cloze",
               "options": [
                 "tepetl",
-                "tlalli",
-                "tototl"
+                "itepetzin",
+                "tlalli"
               ],
               "question": "Recupera la forma que aparece en el fragmento original."
             },
@@ -1491,16 +1497,17 @@
         "id": "arboles-cerros",
         "minutes": 8,
         "objective": "Reconocer quauitl, cuahuitl y tepetl al leer un camino, árboles arrastrados y un lugar de asentamiento.",
+        "practice_version": 2,
         "reading_tips": [
-          "Quauitl y cuahuitl tienen formas documentadas de consulta; no se deduce una regla de cambio de letras.",
-          "Los nombres de lugares se conservan completos. La imagen de un cerro de otro documento no identifica este lugar."
+          "Verás quauitl y cuahuitl: son dos maneras de escribir la misma palabra en documentos distintos. No es una regla para cambiar letras en otras palabras.",
+          "Los nombres de lugar se dejan completos. La imagen de un cerro viene de otro documento: no muestra este lugar."
         ],
         "sense_ids": [
           "sense-cuahuitl",
           "sense-tepetl"
         ],
         "title": "Árboles, señales y cerros",
-        "version": 1
+        "version": 2
       },
       {
         "cover_glyph": "glyph-tletl-mdz13r",
@@ -1522,8 +1529,8 @@
               "kind": "meaning",
               "options": [
                 "cuatro días",
-                "Dos meses.",
-                "Un año."
+                "cinco días",
+                "cuatro años"
               ],
               "question": "¿Cuánto tiempo mantuvo ardiendo el fuego?"
             },
@@ -1531,7 +1538,7 @@
             "exercise": {
               "answer": 0,
               "blank": "tletl",
-              "explanation": "El registro escribe «tletl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "explanation": "El registro escribe «tletl». «ehecatl» significa «viento». «atl» significa «agua». Consulta la traducción completa para situarla en su contexto.",
               "kind": "cloze",
               "options": [
                 "tletl",
@@ -1558,9 +1565,9 @@
               "explanation": "La traducción de origen dice «hacen la imagen del fuego». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
               "kind": "meaning",
               "options": [
-                "Construyen una casa.",
+                "hacen la imagen del agua",
                 "hacen la imagen del fuego",
-                "Preparan una carta de venta."
+                "hacen la imagen del sol"
               ],
               "question": "¿Qué hacen al pintar el papel?"
             },
@@ -1568,12 +1575,12 @@
             "exercise": {
               "answer": 1,
               "blank": "tletl",
-              "explanation": "El registro escribe «tletl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "explanation": "El registro escribe «tletl». «ehecatl» significa «viento». «atl» significa «agua». Consulta la traducción completa para situarla en su contexto.",
               "kind": "cloze",
               "options": [
-                "cuahuitl",
+                "ehecatl",
                 "tletl",
-                "tetl"
+                "atl"
               ],
               "question": "Recupera la forma que aparece en el fragmento original."
             },
@@ -1595,8 +1602,8 @@
               "explanation": "La traducción de origen dice «sed y de hambre». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
               "kind": "meaning",
               "options": [
-                "Una caída de la casa.",
-                "Un eclipse de sol.",
+                "frío y de cansancio",
+                "miedo y de tristeza",
                 "sed y de hambre"
               ],
               "question": "¿Qué casi hace perecer a uno en este lugar?"
@@ -1605,11 +1612,11 @@
             "exercise": {
               "answer": 2,
               "blank": "ehecatl",
-              "explanation": "El registro escribe «ehecatl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "explanation": "El registro escribe «ehecatl». «iehecatzin» (i-eheca-tzin) tiene la misma raíz con otros afijos. «tletl» significa «fuego». Consulta la traducción completa para situarla en su contexto.",
               "kind": "cloze",
               "options": [
+                "iehecatzin",
                 "tletl",
-                "calli",
                 "ehecatl"
               ],
               "question": "Recupera la forma que aparece en el fragmento original."
@@ -1633,8 +1640,8 @@
               "kind": "meaning",
               "options": [
                 "como de obsidianas",
-                "Con flores de cacao.",
-                "Con una carta de venta."
+                "como de plumas",
+                "como de flores"
               ],
               "question": "¿Con qué compara el pasaje el viento?"
             },
@@ -1642,12 +1649,12 @@
             "exercise": {
               "answer": 0,
               "blank": "ehecatl",
-              "explanation": "El registro escribe «ehecatl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "explanation": "El registro escribe «ehecatl». «iehecatzin» (i-eheca-tzin) tiene la misma raíz con otros afijos. «tletl» significa «fuego». Consulta la traducción completa para situarla en su contexto.",
               "kind": "cloze",
               "options": [
                 "ehecatl",
-                "tonatiuh",
-                "xochitl"
+                "iehecatzin",
+                "tletl"
               ],
               "question": "Recupera la forma que aparece en el fragmento original."
             },
@@ -1657,16 +1664,17 @@
         "id": "fuego-viento",
         "minutes": 8,
         "objective": "Reconocer tletl y ehecatl en acciones y descripciones, conservando el alcance ritual o figurado de cada pasaje.",
+        "practice_version": 2,
         "reading_tips": [
-          "La representación del fuego en papel y el fuego encendido son referentes distintos.",
-          "El viento aparece en descripciones que requieren su contexto. No se asigna automáticamente una divinidad a cada aparición."
+          "En un fragmento se pinta el fuego en papel; en otro se mantiene un fuego encendido. Son dos cosas distintas.",
+          "Ehecatl es «viento» y también el nombre de un dios. Lee el contexto: no cada viento es el dios."
         ],
         "sense_ids": [
           "sense-tletl",
           "sense-ehecatl"
         ],
         "title": "Un fuego y dos contextos del viento",
-        "version": 1
+        "version": 2
       },
       {
         "cover_glyph": "glyph-tonatiuh-mdz34r",
@@ -1688,8 +1696,8 @@
               "kind": "meaning",
               "options": [
                 "las estrellas",
-                "Las casas.",
-                "Los venados."
+                "las nubes",
+                "el arcoíris"
               ],
               "question": "¿Qué se vio durante el eclipse?"
             },
@@ -1697,12 +1705,12 @@
             "exercise": {
               "answer": 0,
               "blank": "tonatiuh",
-              "explanation": "El registro escribe «tonatiuh». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "explanation": "El registro escribe «tonatiuh». «itonatiuh» (i-tonatiuh) tiene la misma raíz con otros afijos. «metztli» significa «luna». Consulta la traducción completa para situarla en su contexto.",
               "kind": "cloze",
               "options": [
                 "tonatiuh",
-                "metztli",
-                "tepetl"
+                "itonatiuh",
+                "metztli"
               ],
               "question": "Recupera la forma que aparece en el fragmento original."
             },
@@ -1724,9 +1732,9 @@
               "explanation": "La traducción de origen dice «hacia la salida del sol». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
               "kind": "meaning",
               "options": [
-                "Hacia la casa arrendada.",
+                "hacia la puesta del sol",
                 "hacia la salida del sol",
-                "Hacia el puerto."
+                "hacia el rumbo del norte"
               ],
               "question": "¿Hacia dónde se realiza la acción?"
             },
@@ -1734,12 +1742,12 @@
             "exercise": {
               "answer": 1,
               "blank": "tonatiuh",
-              "explanation": "El registro escribe «tonatiuh». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "explanation": "El registro escribe «tonatiuh». «itonatiuh» (i-tonatiuh) tiene la misma raíz con otros afijos. «metztli» significa «luna». Consulta la traducción completa para situarla en su contexto.",
               "kind": "cloze",
               "options": [
-                "tletl",
+                "itonatiuh",
                 "tonatiuh",
-                "atl"
+                "metztli"
               ],
               "question": "Recupera la forma que aparece en el fragmento original."
             },
@@ -1761,8 +1769,8 @@
               "explanation": "La traducción de origen dice «en el primer cielo». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
               "kind": "meaning",
               "options": [
-                "En el octavo cielo.",
-                "En el cuarto cielo.",
+                "en el octavo cielo",
+                "en el cuarto cielo",
                 "en el primer cielo"
               ],
               "question": "¿Dónde sitúa a la Luna?"
@@ -1771,11 +1779,11 @@
             "exercise": {
               "answer": 2,
               "blank": "metztli",
-              "explanation": "El registro escribe «metztli». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "explanation": "El registro escribe «metztli». «imetzpan» (i-metz-pan) tiene la misma raíz con otros afijos. «citlalin» significa «estrella». Consulta la traducción completa para situarla en su contexto.",
               "kind": "cloze",
               "options": [
-                "tonatiuh",
-                "tototl",
+                "imetzpan",
+                "citlalin",
                 "metztli"
               ],
               "question": "Recupera la forma que aparece en el fragmento original."
@@ -1799,8 +1807,8 @@
               "kind": "meaning",
               "options": [
                 "durante la noche",
-                "Durante el día.",
-                "Solo al mediodía."
+                "durante el día",
+                "al amanecer"
               ],
               "question": "¿Cuándo dice que alumbra la Luna?"
             },
@@ -1808,12 +1816,12 @@
             "exercise": {
               "answer": 0,
               "blank": "metztli",
-              "explanation": "El registro escribe «metztli». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "explanation": "El registro escribe «metztli». «imetzpan» (i-metz-pan) tiene la misma raíz con otros afijos. «metztitlan» (metz-titlan) tiene la misma raíz con otros afijos. Consulta la traducción completa para situarla en su contexto.",
               "kind": "cloze",
               "options": [
                 "metztli",
-                "cuicatl",
-                "tlalli"
+                "imetzpan",
+                "metztitlan"
               ],
               "question": "Recupera la forma que aparece en el fragmento original."
             },
@@ -1823,16 +1831,17 @@
         "id": "sol-luna",
         "minutes": 10,
         "objective": "Reconocer tonatiuh y metztli como cuerpos celestes y comparar un eclipse, un rumbo y dos pasajes de creación.",
+        "practice_version": 2,
         "reading_tips": [
-          "Metztli también tiene una acepción mes; aquí la traducción menciona la Luna. Los contextos no se mezclan.",
-          "Los dos fragmentos de creación son largos y conservan su marco cristiano. Lee la traducción antes de responder sobre la distribución de luces."
+          "metztli puede significar «luna» o «mes». En estos fragmentos la traducción habla de la Luna.",
+          "Dos fragmentos cuentan la creación desde una mirada cristiana y son largos. Lee la traducción antes de responder dónde se colocan el Sol y la Luna."
         ],
         "sense_ids": [
           "sense-tonatiuh",
           "sense-metztli"
         ],
         "title": "El Sol y la Luna en los relatos",
-        "version": 1
+        "version": 2
       },
       {
         "cover_glyph": "glyph-tepetl-mdz32r",
@@ -2970,7 +2979,9 @@
     "linguistic_certification": false,
     "llm_calls": 0,
     "network_requests": 0,
+    "original_passages_and_answers_preserved": true,
     "original_passages_and_keys_preserved": true,
+    "practice_versions": {},
     "primary_review": false
   }
 }

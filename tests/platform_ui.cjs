@@ -16,7 +16,7 @@ async function open(path,studyData){
  let dom=await open('/aportar'),w=dom.window,d=w.document;
  await until(()=>d.querySelector('#start-profile'));assert.equal(d.querySelector('.role-nav a').textContent,'Aprender');d.querySelector('#start-profile').click();let p=d.querySelector('#profile-form');assert.equal(p.elements.experience.value,'');
  p.elements.alias.value='Integración sintética';p.elements.variant_id.value='inali-04';p.elements.experience.value='learning';p.elements.participation_consent.checked=true;p.dispatchEvent(new w.Event('submit',{bubbles:true,cancelable:true}));await until(()=>d.querySelector('#answer-form'));dom.window.close();
- dom=await open('/',{version:1,saved:[],lessons:{aves:{edition:'lectura-clasica-v1:1',passed:[0],step:0}},reviews:{'sense-tototl':{streak:2,due:1900000000000}}});w=dom.window;d=w.document;const $=s=>d.querySelector(s);
+ dom=await open('/',{version:1,saved:[],lessons:{aves:{edition:'lectura-clasica-v1:2',passed:[0],step:0}},reviews:{'sense-tototl':{streak:2,due:1900000000000}}});w=dom.window;d=w.document;const $=s=>d.querySelector(s);
  await until(()=>$('.learn-hero'));assert.equal(d.querySelectorAll('.lesson-card').length,12);assert(!$('#research-generate'));
 
  const studyBeforeDocumentary=w.localStorage.getItem('scriptorium-study-v1');
@@ -35,7 +35,7 @@ async function open(path,studyData){
  $('#workshop-key').checked=true;$('#workshop-key').dispatchEvent(new w.Event('change'));assert($('.workshop-answer-key').textContent.includes(publicBirds.examples[0].comprehension.options[publicBirds.examples[0].comprehension.answer]));
  $('#workshop-translations').checked=false;$('#workshop-translations').dispatchEvent(new w.Event('change'));assert.equal($('.workshop-translation'),null);assert.equal(d.querySelectorAll('.workshop-passage').length,4);
  let printed=0;w.print=()=>printed++;$('#print-workshop').click();assert.equal(printed,1);
- let exported;const originalDownload=w.download;w.download=(name,value)=>{exported={name,value};};$('#download-workshop').click();w.download=originalDownload;assert.equal(exported.name,'amoxcalli-lectura-aves-v2.json');assert.equal(exported.value.lesson.examples.length,4);assert(exported.value.lesson.examples[0].passage.rights_note);assert.equal(w.localStorage.getItem('scriptorium-study-v1'),studyBeforeProject);
+ let exported;const originalDownload=w.download;w.download=(name,value)=>{exported={name,value};};$('#download-workshop').click();w.download=originalDownload;assert.equal(exported.name,'amoxcalli-lectura-aves-v3.json');// versión de contenido: claves de lectura y práctica v2assert.equal(exported.value.lesson.examples.length,4);assert(exported.value.lesson.examples[0].passage.rights_note);assert.equal(w.localStorage.getItem('scriptorium-study-v1'),studyBeforeProject);
  $('#workshop-lesson').value='flor';$('#workshop-lesson').dispatchEvent(new w.Event('change'));assert.equal(w.location.hash,'#taller/flor');assert($('.workshop-sheet h2').textContent.includes('flor'));
  w.location.hash='#taller/not-a-lesson';await until(()=>$('#content').textContent.includes('Lectura no disponible'));assert.equal($('.workshop-sheet'),null);
  w.location.hash='#leer/aves';await until(()=>$('#reader-workshop'));assert(!d.body.classList.contains('workshop-view'));assert.equal($('#reader-workshop').getAttribute('href'),'#taller/aves');assert($('.reading-source a[href="#extraer/axolotl-14546"]'));
@@ -98,7 +98,7 @@ async function open(path,studyData){
   releaseOld();await pause(30);assert.equal(previews()[0].dataset.previewId,'latest');assert(!firstCard().textContent.includes('OLD_LATE'));
   controlled=()=>new Promise(resolve=>{release=()=>resolve(reply([row('stale-input','michi')]));});compare();
   edit('cuiatl');release();await pause(30);assert.equal(previews().length,0);assert.equal(status().textContent,'');
-  compare();const detached=firstCard(),releaseRoute=release;w.location.hash='#aprender/aves';await until(()=>$('.aves-availability')&&$('[data-answer]'));
+  compare();const detached=firstCard(),releaseRoute=release;w.location.hash='#aprender/aves';await until(()=>$('.lesson-progress')&&$('[data-answer]'));
   releaseRoute();await pause(30);assert(!detached.isConnected);assert.equal(previews().length,0);
   controlled=undefined;firstCard().querySelector('[data-compare-word="chachalaca"]').click();await until(()=>previews().length===2);
   assert(firstCard().querySelector('[data-comparison-archive]').hash.includes('from=aprender&lesson=aves&passage=axolotl-14546'));
@@ -120,7 +120,7 @@ async function open(path,studyData){
  w.location.hash='#lexico/sense-madera';await until(()=>$('.dictionary-entry h2').textContent==='madera');assert($('.dictionary-entry').textContent.includes('no equivale a escribir únicamente'));assert($('.source-image a[href*=tlecuauh]'));w.location.hash='#lexico/sense-ihuan';await until(()=>$('.dictionary-entry h1').textContent==='ihuan');assert($('.association-note').textContent.includes('No representa ihuan'));assert($('.association-note').textContent.includes('Sol y a la Luna'));
  w.location.hash='#lexico/sense-tletl';await until(()=>$('.dictionary-entry h1').textContent==='tletl');assert($('.dictionary-entry').textContent.includes('Imagen iconográfica'));
  assert($('link[rel=manifest]'));assert($('.app-install'));
- w.location.hash='#lexico';await until(()=>$('#search'));$('#search').value='arbol';$('#search').dispatchEvent(new w.Event('input'));await until(()=>$('#dictionary-grid').textContent.includes('árbol florido'));assert($('#dictionary-grid').textContent.includes('árbol'));assert($('#dictionary-grid').textContent.includes('árbol florido'));
+ w.location.hash='#lexico';await until(()=>$('#search')&&$('#dictionary-grid .dictionary-card'));// #search es la búsqueda global: espera la lista$('#search').value='arbol';$('#search').dispatchEvent(new w.Event('input'));await until(()=>$('#dictionary-grid').textContent.includes('árbol florido'));assert($('#dictionary-grid').textContent.includes('árbol'));assert($('#dictionary-grid').textContent.includes('árbol florido'));
  $('#period').value='modern';$('#period').dispatchEvent(new w.Event('change'));assert($('#dictionary-grid').textContent.includes('No hay coincidencias.'));
  w.location.hash='#lexico/buscar/tototl';await until(()=>$('#dictionary-grid .word-card-link strong')?.textContent==='tototl');assert($('#dictionary-order').textContent.includes('exactas primero'));
  w.location.hash='#lexico/buscar/chachalaca';await until(()=>$('[data-archive-fallback]'));assert.equal($('[data-archive-fallback]').getAttribute('href'),'#investigar/chachalaca');$('[data-archive-fallback]').click();await until(()=>$('#archive-count')?.textContent==='3 resultados');assert($('#archive-results').textContent.includes('parlotea'));
@@ -133,16 +133,20 @@ async function open(path,studyData){
  $('[data-answer="2"]').click();$('#next-example').click();$('[data-annotation="0"]').click();assert.equal($('.word-help a[href^="#lexico/sense-cacahuaxochitl?"]').getAttribute('href'),'#lexico/sense-cacahuaxochitl?'+new w.URLSearchParams({from:'aprender',lesson:'flor',passage:$('.reading-card').dataset.archiveId}));assert($('.word-help img').src.includes('CacahuaxochitlMH885v'));assert($('.association-note').textContent.includes('nombre personal'));assert($('.word-help').textContent.includes('identificación botánica'));
  $('[data-answer="0"]').click();$('#next-example').click();assert($('.guided-passage').textContent.includes('_____'));$('[data-answer="0"]').click();assert($('#next-example').disabled);$('[data-answer="2"]').click();$('#next-example').click();assert($('.completion-card'));
  assert.equal(w.lessonProgress({id:'cielo',version:2,practice_version:1,examples:[1,2,3,4]}).edition,'lectura-clasica-v1:1');
- const saved=JSON.parse(w.localStorage.getItem('scriptorium-study-v1'));assert(saved.saved.includes('sense-xochitl'));assert.equal(saved.lessons.flor.passed.length,4);assert.equal(saved.lessons.flor.edition,'lectura-clasica-v1:2');
+ // Práctica v2: el progreso de la edición anterior no se aplica a las opciones nuevas (reglas de versión).
+ w.eval("study.lessons['synthetic-legacy']={edition:'lectura-clasica-v1:1',passed:[0,1],comprehension:[0],step:1}");
+ assert.equal(JSON.stringify(w.lessonProgress({id:'synthetic-legacy',practice_version:1,examples:[1,2,3,4]}).passed),'[0,1]');
+ assert.equal(JSON.stringify(w.lessonProgress({id:'synthetic-legacy',practice_version:2,examples:[1,2,3,4]}).passed),'[]');w.eval("delete study.lessons['synthetic-legacy']");
+ const saved=JSON.parse(w.localStorage.getItem('scriptorium-study-v1'));assert(saved.saved.includes('sense-xochitl'));assert.equal(saved.lessons.flor.passed.length,4);assert.equal(saved.lessons.flor.edition,'lectura-clasica-v1:3');
  w.location.hash='#aprender/lugares';await until(()=>$('.guided-passage'));$('[data-step="1"]').click();$('[data-annotation="0"]').click();assert($('.word-help h3').textContent==='tlacuilolcalli');assert($('.word-help').textContent.includes('Comparación temática'));assert($('.lookup-reference').textContent.includes('calli'));assert($('.word-help').textContent.includes('no escribe el compuesto completo'));
  for(const lid of ['agua-tierra','flores-cantos','aves']){
   w.location.hash='#aprender/'+lid;
   const lessons=(await(await w.fetch('/api/learning')).json()).lessons,l=lessons.find(l=>l.id===lid);
   await until(()=>$('#content h1')?.textContent===l.title&&d.querySelectorAll('[data-step]').length===4);
   if(lid==='aves'){
-   assert($('.aves-availability').textContent.includes('Disponible para estudiar'));
-   assert($('.aves-availability').textContent.includes('4 fragmentos y 8 ejercicios'));
-   assert.equal(d.querySelectorAll('.pilot-note').length,1);
+   // Un solo aviso de revisión por página (el de la cabecera); sin bloque propio de Aves.
+   assert.equal($('.aves-availability'),null);assert.equal(d.querySelectorAll('.review-notice').length,1);
+   assert($('#review-notice').textContent.includes('revisión lingüística'));assert(!$('#content').textContent.includes('revisión lingüística'));
    assert.equal($('#next-example').disabled,true);assert($('[data-answer="0"]').disabled);
    assert($('.hint').textContent||$('.exercise-feedback').textContent);
    $('[data-explore-word="chachalaca"]').click();await until(()=>$('#archive-count')?.textContent==='3 resultados');
@@ -164,7 +168,7 @@ async function open(path,studyData){
   }
   assert($('.completion-card'));
   if(lid==='aves'){
-   assert($('.aves-availability').textContent.includes('pendientes de revisión lingüística'));
+   assert.equal($('.aves-availability'),null);assert.equal(d.querySelectorAll('.review-notice').length,1);
    const beforeExplanation=w.localStorage.getItem('scriptorium-study-v1');
    const compare=$('.aves-self-explanation');assert(compare);assert(!compare.open);
    const compared=[...compare.querySelectorAll('[data-comparison-archive]')];
@@ -189,7 +193,7 @@ async function open(path,studyData){
  const shortLesson=(await(await w.fetch('/api/learning')).json()).lessons.find(l=>l.id==='agua-tierra');w.renderLesson({...shortLesson,id:'synthetic-short',examples:shortLesson.examples.slice(0,2)});assert.equal(d.querySelectorAll('[data-step]').length,2);for(const e of shortLesson.examples.slice(0,2)){$('[data-answer="'+e.exercise.answer+'"]').click();$('#next-example').click();}assert($('.completion-card'));assert($('#content').textContent.includes('los 2 fragmentos'));
  w.location.hash='#leer';await until(()=>$('#reader-examples'));assert.equal(d.querySelectorAll('.reading-card').length,48);assert($('.reading-translation').textContent.includes('CONTEMPLO'));
  w.location.hash='#palabras';await until(()=>$('#start-review'));assert.equal($('.saved-grid').children.length,1);$('#start-review').click();assert($('#review-answer').hidden);assert($('.saved-context blockquote').textContent.toLowerCase().includes('xochitl'));assert($('.saved-context a').getAttribute('href').startsWith('#leer/'));$('#show-word').click();assert(!$('#review-answer').hidden);assert($('.review-translation').textContent.length>0);$('#known-word').click();assert($('#finish-review'));$('#finish-review').click();assert($('#start-review').disabled);
- const migrated=JSON.parse(w.localStorage.getItem('scriptorium-study-v1'));assert.equal(migrated.lessons.aves.edition,'lectura-clasica-v1:1');assert.equal(migrated.lessons.aves.passed.length,4);assert.equal(migrated.lessons.aves.comprehension.length,4);assert.equal(migrated.reviews['sense-tototl'].streak,2);
+ const migrated=JSON.parse(w.localStorage.getItem('scriptorium-study-v1'));assert.equal(migrated.lessons.aves.edition,'lectura-clasica-v1:2');assert.equal(migrated.lessons.aves.passed.length,4);assert.equal(migrated.lessons.aves.comprehension.length,4);assert.equal(migrated.reviews['sense-tototl'].streak,2);
  console.log('PASS: guided reading, contextual glyph help, incorrect-answer feedback, exact-form exercise, completion, saved words and review');
  w.location.hash='#aprender/aves';await until(()=>$('[data-step="0"]'));$('[data-step="0"]').click();$('[data-annotation="0"]').click();$('[data-save-word="sense-tototl"]').click();
  assert.equal(w.savedPassage('sense-tototl').example.archive_id,'axolotl-14546');

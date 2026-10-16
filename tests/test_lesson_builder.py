@@ -47,8 +47,39 @@ class LessonBuilderTests(unittest.TestCase):
         data=json.loads(self.output.read_text())['learning']
         self.assertEqual((result['added_lessons'],result['added_examples']),(6,24))
         self.assertEqual(data['lessons'][:6],json.loads(base.read_text())['lessons'])
-        self.assertEqual(data,json.loads((ROOT/'corpus/learning-v1.json').read_text()))
+        self.assertEqual(data,json.loads((ROOT/'tests/fixtures/learning/before-practica-2026-10-16.json').read_text()))
         self.assertEqual(sentinel.read_bytes(),before)
+
+    def test_practice_v2_changes_options_not_passages_or_answers(self):
+        base=ROOT/'tests/fixtures/learning/before-practica-2026-10-16.json';config=ROOT/'configs/practica-2026-10-16.json'
+        result=build(config,self.output,base)
+        data=json.loads(self.output.read_text())['learning'];old=json.loads(base.read_text())
+        self.assertEqual(data,json.loads((ROOT/'corpus/learning-v1.json').read_text()))
+        self.assertEqual((result['original_passages_and_keys_preserved'],result['original_passages_and_answers_preserved']),(False,True))
+        archive=Archive()
+        for a,b in zip(old['lessons'],data['lessons']):
+            # Cambian las claves: nueva edición de práctica, así el progreso anterior no se aplica a otras opciones.
+            self.assertEqual(b['practice_version'],a.get('practice_version',a.get('version',old['version']))+1)
+            for x,y in zip(a['examples'],b['examples']):
+                self.assertEqual((x['archive_id'],x['source_hash'],x['annotations'],x['exercise']['kind'],x['exercise'].get('blank'),x['exercise']['answer']),
+                                 (y['archive_id'],y['source_hash'],y['annotations'],y['exercise']['kind'],y['exercise'].get('blank'),y['exercise']['answer']))
+                self.assertEqual(x['exercise']['options'][x['exercise']['answer']],y['exercise']['options'][y['exercise']['answer']])
+                if x.get('comprehension'):
+                    q,r=x['comprehension'],y['comprehension'];self.assertEqual((q['question'],q['answer'],q['options'][q['answer']]),(r['question'],r['answer'],r['options'][r['answer']]))
+                if y['exercise']['kind']=='cloze':
+                    nah=archive.get(y['archive_id'])['nah'].lower().split()
+                    for i,option in enumerate(y['exercise']['options']):
+                        if i!=y['exercise']['answer']:self.assertNotIn(option.lower(),nah)
+        self.assertEqual(sum(len(l['examples']) for l in data['lessons']),48)
+
+    def test_practice_v2_rejects_unattested_or_visible_distractors(self):
+        base=ROOT/'tests/fixtures/learning/before-practica-2026-10-16.json'
+        recipe=json.loads((ROOT/'configs/practica-2026-10-16.json').read_text())
+        for distractors in (['cuicani','xochicuahuitl'],['cuicatl','xochicuahuitl'],['ixochiuh','ixochiuh']):
+            changed=copy.deepcopy(recipe);changed['lesson_updates'][0]['exercise_updates'][0]['distractors']=distractors
+            config=self.root/'practice.json';config.write_text(json.dumps(changed))
+            with self.subTest(distractors=distractors),self.assertRaises(ValueError):build(config,self.output,base)
+        self.assertFalse(self.output.exists())
 
     def test_duplicate_passages_unknown_forms_and_wrong_visual_dependencies_fail(self):
         recipes=json.loads(self.config.read_text())

@@ -1,0 +1,53 @@
+'use strict';
+// Aprender: índice de lecturas, lectura guiada con ejercicios y cierre del recorrido.
+
+function avesSelfExplanation(lesson){
+ if(lesson.id!=='aves')return '';
+ const examples=['axolotl-14546','axolotl-14253'].map(id=>lesson.examples.find(e=>e.archive_id===id));
+ if(examples.some(e=>!e))return '';
+ return `<details class="aves-self-explanation"><summary>Autoexplicación opcional · compara dos contextos</summary><p>¿Qué hace el ave en el poema y qué papel tienen las aves en la lista del relato? Explica la diferencia y apóyate en una frase de cada registro.</p>${examples.map((e,i)=>`<article data-comparison-archive="${esc(e.archive_id)}"><h3>${i?'Lista del relato':'Ave del poema'}</h3><blockquote><p lang="nci">${esc(e.passage.nah)}</p><p>${esc(e.passage.es)}</p></blockquote>${passageSource(e)}<a href="${esc(readingLookupHref('#leer/aves',resolveReadingOrigin('leer','aves',e.archive_id)))}">Volver a este pasaje</a></article>`).join('')}<label>Tu explicación (opcional; no se guarda)<textarea rows="4" maxlength="2000"></textarea></label><p class="meta">Compara tu explicación con los fragmentos y sus traducciones de origen. No se califica automáticamente ni se guarda el texto. Esta comparación no establece una regla de número ni identifica una especie.</p></details>`;
+}
+// Las opciones de comprensión se muestran con el mismo formato: la respuesta citada de la
+// traducción no se distingue de las demás por su mayúscula o su punto final.
+function optionLabel(text){const t=String(text).trim().replace(/[.;,:]+$/,'');return t.charAt(0).toLocaleUpperCase('es')+t.slice(1);}
+function renderLearn(id){
+ const lessons=state.learning.lessons,lesson=lessons.find(l=>l.id===id);
+ if(lesson){const origin=routeReadingOrigin();renderLesson(lesson,origin?.index);focusReadingOrigin(origin);return;}
+ const complete=lessons.filter(l=>completedExamples(l)===l.examples.length).length;
+ $('content').innerHTML=`<section class="learn-hero"><div><p class="eyebrow">LECTURAS DE NÁHUATL CLÁSICO</p><h1>Leamos<br>palabra por palabra.</h1><p>Una flor, un ave, el agua: cada palabra tiene un lugar en el relato. Lee un fragmento, compara su traducción y sigue las palabras hasta su fuente.</p><div class="entry-actions"><a class="primary" href="#aprender/${esc(lessons.find(l=>completedExamples(l)<l.examples.length)?.id||lessons[0]?.id||'')}">${complete?'Seguir leyendo':'Abrir la primera lectura'}</a><a class="secondary" href="#lexico">Explorar el diccionario</a></div></div><div class="hero-glyph">${sourceImage(state.byId['glyph-xochitl'])}<p>xochitl · flor</p><small>Códice Mendoza, f. 10r · ${link(state.byId['glyph-xochitl']?.url,'Ver fuente')}</small></div></section><p class="meta"><a href="#proyecto">Propósito, estado y formas de colaborar →</a></p><div class="section-heading"><h2>Índice de lecturas</h2><span class="meta">${complete} de ${lessons.length} recorridos completados</span></div><div class="lesson-grid">${lessons.map((l,i)=>{const p=lessonProgress(l),done=completedExamples(l);return `<article class="lesson-card"><span class="chapter-number" aria-hidden="true">${String(i+1).padStart(2,'0')}</span>${sourceImage(state.byId[l.cover_glyph],'lesson-cover')}<div><p class="eyebrow">Lectura ${i+1} · ${l.minutes} min</p><h3>${esc(l.title)}</h3><p>${esc(l.objective)}</p><p class="meta">${l.examples.length} ejemplos · ${done} de ${l.examples.length} practicados</p><a class="secondary" href="#aprender/${esc(l.id)}">${done===l.examples.length?'Volver a practicar':p.passed.length?'Continuar':'Abrir lectura'}</a></div></article>`;}).join('')}</div><section class="learn-next"><div><h2>De las palabras al documento</h2><p>El diccionario conserva la forma, el significado y el contexto de cada vínculo glífico. Un mismo signo puede tener funciones distintas según el documento.</p></div><div class="entry-actions"><a class="secondary" href="#leer">Leer los ${lessons.reduce((n,l)=>n+l.examples.length,0)} ejemplos</a><a class="secondary" href="#glifos/observar">Observar un glifo</a><a class="secondary" href="#palabras">Mis palabras · ${study.saved.filter(x=>state.byId[x]?.kind==='sense').length}</a></div></section>`;
+}
+function renderLesson(lesson,returnIndex){
+ let progress=lessonProgress(lesson),step=returnIndex??progress.step,answered=progress.passed.includes(step);
+ const recordProgress=()=>{progress.step=step;study.lessons[lesson.id]=progress;writeStudy();};
+ const draw=()=>{
+  const example=lesson.examples[step],exercise=example.exercise,question=example.comprehension;
+  const understood=progress.comprehension.includes(step);
+  const comprehension=question?`<section class="exercise-card comprehension-card"><p class="eyebrow">Comprender el contexto</p><h2>${esc(question.question)}</h2><p class="hint">Puedes mostrar la traducción del corpus para comparar.</p><div class="answer-options">${question.options.map((o,i)=>`<button class="answer-option" data-comprehension="${i}" ${understood?'disabled':''}>${esc(optionLabel(o))}</button>`).join('')}</div><p class="comprehension-feedback" role="status">${understood?'Respuesta correcta. '+esc(question.explanation):''}</p></section>`:'';
+  $('content').innerHTML=`<a class="back-link" href="#aprender">← Todas las lecturas</a>${heading('Lectura guiada · Náhuatl clásico',lesson.title,lesson.objective)}<div class="lesson-progress" role="group" aria-label="Ejemplos de la lectura">${lesson.examples.map((e,i)=>`<button class="step-button ${i===step?'current':''}" data-step="${i}" aria-current="${i===step?'step':'false'}">${i+1}${exampleComplete(lesson,progress,i)?' ✓':progress.passed.includes(i)?' ·':''}</button>`).join('')}<span>Ejemplo ${step+1} de ${lesson.examples.length}${step===lesson.examples.length-1?' · prueba lo que reconoces':''}</span></div>${lesson.reading_tips?.length?`<aside class="reading-tips"><h2>Claves para esta lectura</h2><ul>${lesson.reading_tips.map(t=>`<li>${esc(t)}</li>`).join('')}</ul></aside>`:''}<div class="lesson-layout"><section>${readingCard(example,step,true,exercise.kind==='cloze'&&!answered)}<div class="exercise-card"><p class="eyebrow">${exercise.kind==='cloze'?'Recuperar la forma de la fuente':'Comprender el fragmento'}</p><h2>${esc(exercise.question)}</h2><div class="answer-options">${exercise.options.map((o,i)=>`<button class="answer-option" data-answer="${i}" ${answered?'disabled':''}>${esc(o)}</button>`).join('')}</div><p class="exercise-feedback" role="status">${answered?'Respuesta correcta. '+esc(exercise.explanation):''}</p>${question&&answered&&!understood?'<p class="hint">Tu reconocimiento ya está guardado. Falta responder la pregunta de contexto.</p>':''}</div>${comprehension}<div class="entry-actions lesson-next"><button class="primary" id="next-example" ${exampleComplete(lesson,progress,step)?'':'disabled'}>${step===lesson.examples.length-1?'Terminar lectura':'Siguiente ejemplo →'}</button><button class="link-button" id="retry-example">Practicar este ejemplo otra vez</button></div></section><aside class="lesson-words"><h3>Palabras de esta lectura</h3>${lesson.sense_ids.map(id=>`<div class="lesson-word">${sourceImage(representativeGlyph(id),'small-glyph')}<div><a href="#lexico/${esc(id)}">${esc(headword(id))}</a><p>${esc(state.byId[id]?.label)}</p>${saveWordButton(id)}</div></div>`).join('')}<p class="meta">Glifos e imágenes de las fuentes. Abre cada ficha para ver el contexto y el folio.</p></aside></div>`;
+  bindReading($('content').querySelector('.reading-card'),example);preserveReadingLinks($('content').querySelector('.lesson-words'),readingOrigin(example));bindSaved($('content'));
+  document.querySelectorAll('[data-step]').forEach(b=>b.onclick=()=>{step=Number(b.dataset.step);answered=progress.passed.includes(step);recordProgress();draw();});
+  document.querySelectorAll('[data-answer]').forEach(b=>b.onclick=()=>{
+   const correct=Number(b.dataset.answer)===exercise.answer;
+   b.classList.add(correct?'correct':'incorrect');
+   document.querySelector('.exercise-feedback').textContent=correct?'Respuesta correcta. '+exercise.explanation:'Vuelve al fragmento y compara las opciones. Puedes abrir la ayuda de la palabra o mostrar la traducción.';
+   if(correct){answered=true;if(!progress.passed.includes(step))progress.passed.push(step);recordProgress();document.querySelectorAll('[data-answer]').forEach(x=>x.disabled=true);$('next-example').disabled=!exampleComplete(lesson,progress,step);revealCard(example,step);}
+  });
+  document.querySelectorAll('[data-comprehension]').forEach(b=>b.onclick=()=>{
+   const correct=Number(b.dataset.comprehension)===question.answer;
+   b.classList.add(correct?'correct':'incorrect');
+   document.querySelector('.comprehension-feedback').textContent=correct?'Respuesta correcta. '+question.explanation:'Revisa lo que cuenta este fragmento en su traducción. La imagen es una referencia de la palabra; no responde por el pasaje.';
+   if(correct){if(!progress.comprehension.includes(step))progress.comprehension.push(step);recordProgress();document.querySelectorAll('[data-comprehension]').forEach(x=>x.disabled=true);$('next-example').disabled=!exampleComplete(lesson,progress,step);}
+  });
+  $('retry-example').onclick=()=>{progress.passed=progress.passed.filter(x=>x!==step);progress.comprehension=progress.comprehension.filter(x=>x!==step);answered=false;recordProgress();draw();};
+  $('next-example').onclick=()=>{
+   if(!exampleComplete(lesson,progress,step))return;
+   if(step<lesson.examples.length-1){step++;answered=progress.passed.includes(step);recordProgress();draw();$('content').scrollIntoView({block:'start'});}
+   else if(lesson.examples.some((_,i)=>!exampleComplete(lesson,progress,i))){step=lesson.examples.findIndex((_,i)=>!exampleComplete(lesson,progress,i));answered=progress.passed.includes(step);recordProgress();draw();}
+   else renderLessonComplete(lesson);
+  };
+ };
+ draw();
+}
+function renderLessonComplete(lesson){
+ $('content').innerHTML=heading('Recorrido completado',lesson.title,`Has practicado los ${lesson.examples.length} fragmentos. Guarda las palabras que quieras repasar.`)+avesSelfExplanation(lesson)+`<div class="completion-card"><h2>¿Qué quieres recordar?</h2><div class="saved-grid">${lesson.sense_ids.map(id=>wordCard(state.byId[id],true)).join('')}</div><div class="entry-actions"><a class="primary" href="#palabras">Repasar mis palabras</a><a class="secondary" href="#aprender">Elegir otra lectura</a><a class="secondary" href="#leer/${esc(lesson.id)}">Volver a los ejemplos</a></div><p class="meta">Completar el recorrido registra tu práctica; no certifica dominio de la lengua.</p></div>`;bindSaved($('content'));
+}

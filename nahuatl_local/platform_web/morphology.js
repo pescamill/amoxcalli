@@ -70,7 +70,7 @@ function maskGloss(tokens,blank){
  return tokens.map(t=>{if(done||t.token!==blank)return t;done=true;return {token:'_____',segmentation:'_____',tags:[],gloss:'?',gloss_source:'none'};});
 }
 function interlinearHTML(data,blank){
- return `<div class="interlinear" role="table" aria-label="Glosa interlineal automática">${maskGloss(data.tokens,blank).map(t=>`<div class="igt-word" role="row"><span class="igt-surface" lang="nci" role="cell">${esc(t.token)}</span><span class="igt-seg" lang="nci" role="cell">${esc(t.segmentation)}</span><span class="igt-tags" role="cell">${esc(t.tags.join('-'))}</span><span class="igt-gloss ${esc(t.gloss_source||'none')}" role="cell">${esc(t.gloss||'—')}</span></div>`).join('')}</div><p class="meta">Glosa interlineal automática (reglas + diccionario + corpus). Las glosas con «≈» son pistas estadísticas del corpus paralelo; las demás provienen del diccionario o de la tabla de partículas. Pendiente de revisión lingüística.</p>`;
+ return `<div class="interlinear" role="table" aria-label="Glosa interlineal automática">${maskGloss(data.tokens,blank).map(t=>`<div class="igt-word" role="row"><span class="igt-surface" lang="nci" role="cell">${esc(t.token)}</span><span class="igt-seg" lang="nci" role="cell">${esc(t.segmentation)}</span><span class="igt-tags" role="cell">${esc(t.tags.join('-'))}</span><span class="igt-gloss ${esc(t.gloss_source||'none')}" role="cell">${esc(t.gloss||'—')}</span></div>`).join('')}</div><p class="meta">Glosa interlineal automática (reglas + diccionario + corpus). Las glosas con «≈» son pistas estadísticas del corpus paralelo; las demás provienen del diccionario o de la tabla de partículas.</p>`;
 }
 function bindWordStudy(container,example){
  const help=container.querySelector('.reading-help');

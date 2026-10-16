@@ -49,9 +49,8 @@ function askResultHTML(r){
 }
 async function renderAsk(id){
  const query=decodeURIComponent(id||'');
- $('content').innerHTML=heading('Preguntar con evidencia','¿Qué significa? ¿Cómo se dice?','Escribe una palabra náhuatl en cualquier grafía, o una palabra en español. La respuesta reúne entradas del diccionario y pasajes del archivo; cada resultado dice por qué aparece.')+
-  `<form id="ask-form" class="ask-form"><label for="ask-input">Palabra o pregunta</label><div class="ask-row"><input id="ask-input" type="search" maxlength="120" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="nocal, kuali, ¿cómo se dice mujer?" value="${esc(query)}"><button class="primary" type="submit">Preguntar</button></div><p class="ask-examples">Ejemplos: ${askExamples.map(q=>`<a href="#preguntar/${encodeURIComponent(q)}">${esc(q)}</a>`).join(' · ')}</p></form><div id="ask-status" role="status" aria-live="polite"></div><div id="ask-results"></div>`;
- $('ask-form').onsubmit=e=>{e.preventDefault();const q=$('ask-input').value.trim();if(q)location.hash='preguntar/'+encodeURIComponent(q);};
+ $('content').innerHTML=heading('Preguntar con evidencia','¿Qué significa? ¿Cómo se dice?','Una palabra náhuatl en cualquier grafía, o una palabra en español. La respuesta reúne sus grafías, glifos, entradas del diccionario y pasajes del archivo; cada resultado dice por qué aparece.')+
+  `<p class="ask-examples">Escribe en la búsqueda de arriba o prueba: ${askExamples.map(q=>`<a href="#preguntar/${encodeURIComponent(q)}">${esc(q)}</a>`).join(' · ')}</p><div id="ask-status" role="status" aria-live="polite"></div><div id="ask-results"></div>`;
  if(!query)return;
  $('ask-status').textContent='Buscando evidencia…';
  try{

@@ -34,5 +34,14 @@ ${s.inflected.length?`<h3>Formas flexionadas</h3><ul class="term-spellings">${s.
 ${s.uncertain.length?`<details class="term-uncertain"><summary>${s.uncertain.length} grafías inciertas · aparte, no se suman${g.passages.uncertain_total?` (${g.passages.uncertain_total.toLocaleString('es-MX')} pasajes)`:''}</summary><ul class="term-spellings">${s.uncertain.slice(0,30).map(v=>termSpelling(v.forms.join(' / '),v.total,esc(v.why))).join('')}</ul></details>`:''}</div>
 <div><h3>Glifos y lecturas</h3>${termGlyphsHTML(g)}</div></div>
 <nav class="term-views" aria-label="Ver este término en"><a href="#lexico/buscar/${q}">Diccionario</a><a href="#investigar/${q}">Archivo</a><a href="#preguntar/${q}">Preguntar</a><a href="#consultar/${q}">Consultar fichas</a></nav>
-<p class="meta">Las grafías se reúnen por clave laxa y por raíz del analizador; las inciertas quedan aparte. Análisis automático pendiente de revisión lingüística.</p></section>`;
+<p class="meta">Las grafías se reúnen por clave laxa y por raíz del analizador; las inciertas quedan aparte.</p></section>`;
+}
+// Resumen del término dentro de la ayuda de una palabra (Leer y Aprender): grafías, glifos y paso a Preguntar.
+function termSummaryHTML(g,query){
+ const q=encodeURIComponent(query||g.lemma),spellings=g.spellings.attested.slice(0,5),glyphs=[...g.glyphs].sort((a,b)=>(a.scope!=='word')-(b.scope!=='word')).slice(0,4);
+ const inflected=g.spellings.inflected.length;
+ return `<section class="term-summary" data-term-id="${esc(g.id)}" aria-label="Grafías y glifos de ${esc(g.lemma)}"><p class="eyebrow">Grafías y glifos</p>
+<p>${spellings.map(v=>`<strong lang="nci">${esc(v.form)}</strong> <span class="term-count">${v.total.toLocaleString('es-MX')}</span>`).join(' · ')}${inflected?` · y ${inflected} ${inflected===1?'forma flexionada':'formas flexionadas'}`:''}</p>
+${glyphs.length?`<p class="term-summary-glyphs">${glyphs.map(termGlyphLink).join(' · ')}${g.glyphs.length>glyphs.length?` · y ${g.glyphs.length-glyphs.length} más`:''}</p>`:'<p class="meta">Sin glifos registrados para este término.</p>'}
+<p class="meta">${g.passages.total.toLocaleString('es-MX')} pasajes en el archivo.</p><div class="entry-actions"><a class="primary" href="#preguntar/${q}">Preguntar sobre ${esc(g.lemma)} →</a><a class="secondary" href="#lexico/buscar/${q}">Ver todas sus grafías</a></div></section>`;
 }
