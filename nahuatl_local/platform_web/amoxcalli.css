@@ -920,6 +920,40 @@ body.contributor .badge-emblem{color:var(--ochre)}
 .word-help.blank-help{display:block;font-size:15px}
 .entry-note{margin:14px 0 24px;padding:12px 18px;font-size:13px;color:var(--muted);background:var(--sand);border-left:3px solid var(--ochre)}
 
+/* ═══ Unidades de gramática: tarjetas, fichas de morfemas y marca de borrador automático ═══ */
+.unit-grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr));margin:1rem 0}
+.unit-card{border:1px solid var(--line);border-radius:.6rem;padding:1rem;background:var(--surface)}
+.unit-card h2{margin:.2rem 0 .5rem;font-size:1.2rem}
+.unit-words{font-style:italic}
+.unit-review{display:inline-block;font-size:.8rem;padding:.15rem .5rem;border-radius:1rem;margin:.3rem 0}
+.unit-review.automatic{background:var(--sand);color:var(--rust);border:1px dashed var(--ochre)}
+.unit-review.reviewed{background:var(--ok-bg);color:var(--jade)}
+.automatic-tag{font-size:.75rem;border:1px dashed currentColor;border-radius:.3rem;padding:0 .3rem;margin-left:.4rem}
+.unit-rule ul{margin:.5rem 0 1rem}
+.unit-morphemes{border-collapse:collapse;margin:.5rem 0}
+.unit-morphemes td,.unit-morphemes th{border-bottom:1px solid var(--line);padding:.3rem .8rem;text-align:left}
+.unit-form{font-size:1.6rem;margin:.5rem 0}
+.unit-passage{margin:.8rem 0;padding:.6rem 1rem;border-left:3px solid var(--accent)}
+.unit-passage p[lang=nci]{font-size:1.15rem}
+.unit-blank{display:inline-block;min-width:4rem;border-bottom:2px solid currentColor}
+.unit-tiles,.unit-match>div{display:flex;flex-wrap:wrap;gap:.5rem;margin:.6rem 0}
+.unit-match{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.unit-match>div{flex-direction:column}
+.tile{font:inherit;padding:.45rem .8rem;border:1px solid var(--line-strong);border-radius:.4rem;background:var(--surface);cursor:pointer;text-align:left}
+.tile.selected{outline:2px solid var(--accent)}
+.tile.matched,.tile.placed{background:var(--ok-bg);border-color:var(--jade)}
+.tile:disabled{cursor:default;opacity:.75}
+.unit-built{min-height:2.4rem;display:flex;gap:.25rem;align-items:center;font-size:1.3rem}
+.exercise-feedback.correct{color:var(--jade)}
+.unit-evidence{margin:.8rem 0;font-size:.9rem}
+.proposed-readings{margin-top:2rem}
+.proposed-reading{margin:.5rem 0}
+.concordance-example blockquote mark{background:var(--highlight);padding:0 .1rem}
+@media (max-width:40rem){.unit-match{grid-template-columns:1fr}}
+.unit-chip{display:flex;flex-direction:column;gap:.2rem;padding:.8rem 1rem;border:1px solid var(--line);background:var(--surface);color:var(--ink);text-decoration:none}
+.unit-chip span{font-size:.85rem;color:var(--muted)}
+.units-teaser{margin:2rem 0}
+
 /* ═══ Estructura: cabecera, búsqueda global, navegación, aviso y pie ═══ */
 .skip{position:absolute;left:12px;top:-80px;z-index:30;background:var(--surface);padding:15px}
 .skip:focus{top:10px}

@@ -33,9 +33,9 @@ function bindPassageDownloads(container,rows){container.querySelectorAll('.save-
 const liveSearch={lexico:'Busca en el diccionario: agua, atl, árbol…',fuentes:'Busca título, autor o institución…',textos:'Busca en los textos…'};
 const ownSearch=new Set(['investigar','consultar']);// herramientas avanzadas con su propio formulario
 const searchPlaceholder='Busca una palabra: xochitl, agua, kuali…';
-const pageTitles={aprender:'Lecturas',leer:'Leer',palabras:'Mis palabras',lexico:'Diccionario',preguntar:'Preguntar',consultar:'Consultar fichas',glifos:'Glifos',investigar:'Archivo',modelos:'Laboratorio',proyecto:'Proyecto',taller:'Ficha para taller',textos:'Fichas textuales',extraer:'Aportar evidencia',opciones:'Opciones'};
+const pageTitles={unidades:'Unidades',aprender:'Lecturas',leer:'Leer',palabras:'Mis palabras',lexico:'Diccionario',preguntar:'Preguntar',consultar:'Consultar fichas',glifos:'Glifos',investigar:'Archivo',modelos:'Laboratorio',proyecto:'Proyecto',taller:'Ficha para taller',textos:'Fichas textuales',extraer:'Aportar evidencia',opciones:'Opciones'};
 // Cada sección vive en su módulo; se resuelven al navegar, cuando todos ya se cargaron.
-const renderers={aprender:id=>renderLearn(id),leer:id=>renderReader(id),proyecto:()=>renderProject(),taller:id=>renderWorkshop(id),palabras:()=>renderSaved(),glifos:id=>renderPictography(id),preguntar:id=>renderAsk(id),consultar:id=>renderDocumentary(id),investigar:id=>renderArchive(id),opciones:()=>renderSettings(),textos:id=>renderTexts(id),fuentes:id=>renderSources(id),extraer:id=>renderExtract(id),modelos:id=>renderModels(id),lexico:id=>renderDictionary(id)};
+const renderers={aprender:id=>renderLearn(id),unidades:id=>renderUnits(id),leer:id=>renderReader(id),proyecto:()=>renderProject(),taller:id=>renderWorkshop(id),palabras:()=>renderSaved(),glifos:id=>renderPictography(id),preguntar:id=>renderAsk(id),consultar:id=>renderDocumentary(id),investigar:id=>renderArchive(id),opciones:()=>renderSettings(),textos:id=>renderTexts(id),fuentes:id=>renderSources(id),extraer:id=>renderExtract(id),modelos:id=>renderModels(id),lexico:id=>renderDictionary(id)};
 // Escuchas de la página actual sobre elementos permanentes (búsqueda global); se retiran al cambiar de página.
 let pageSignal=new AbortController();
 function decodeHash(value){try{return decodeURIComponent(value);}catch{return value;}}

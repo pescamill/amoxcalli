@@ -13,6 +13,14 @@ function reviewWords(words){
   if(index>=words.length){$('word-review').innerHTML='<section class="review-card"><h2>Repaso terminado</h2><p>Las palabras marcadas para seguir practicando continúan pendientes.</p><button class="secondary" id="finish-review">Volver a mi cuaderno</button></section>';$('finish-review').onclick=renderSaved;return;}
   const s=words[index],g=representativeGlyph(s.id);
   $('word-review').innerHTML=`<section class="review-card"><p class="eyebrow">Repaso ${index+1} de ${words.length}</p>${g?sourceImage(g,'review-glyph'):''}<h2>${esc(s.label)}</h2>${savedPassageHTML(s.id,true)}<p>¿Recuerdas la forma de referencia de esta ficha?</p><button class="secondary" id="show-word">Mostrar palabra</button><div id="review-answer" hidden><p class="review-word" lang="nci">${esc(headword(s.id))}</p>${savedPassage(s.id)?`<p class="review-translation">${esc(savedPassage(s.id).example.passage.es)}</p>`:''}<p class="meta">${esc(g?.context||s.definition)}</p><p class="meta">${esc(g?.evidence?.[0]?.locator||'Consulta la fuente léxica en la ficha.')}</p><a href="#lexico/${esc(s.id)}">Abrir palabra y fuentes</a><div class="entry-actions"><button class="secondary" id="again-word">Seguir practicando</button><button class="primary" id="known-word">La recordé</button></div></div></section>`;
+  // Concordancia: la palabra flexionada en un pasaje real; el ejemplo cambia con la racha de repasos.
+  const card=$('word-review').querySelector('.review-card'),shown=index;
+  if(typeof concordanceExamples==='function')concordanceExamples(s.id).then(d=>{
+   if(shown!==index||!card.isConnected||!d.examples?.length)return;
+   const example=d.examples[(Number(study.reviews[s.id]?.streak)||0)%d.examples.length];
+   card.querySelector('#show-word').insertAdjacentHTML('beforebegin',concordanceExampleHTML(example));
+   $('review-answer').insertAdjacentHTML('afterbegin',concordanceAnswerHTML(example));
+  });
   $('show-word').onclick=()=>{$('review-answer').hidden=false;$('show-word').hidden=true;};
   $('again-word').onclick=()=>{study.reviews[s.id]={streak:0,due:0};writeStudy();index++;draw();};
   $('known-word').onclick=()=>{const old=Number(study.reviews[s.id]?.streak)||0,streak=Math.min(Math.max(old,0)+1,4),days=[1,3,7,14][streak-1];study.reviews[s.id]={streak,due:Date.now()+days*86400000};writeStudy();index++;draw();};

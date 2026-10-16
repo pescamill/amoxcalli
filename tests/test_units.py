@@ -1,6 +1,10 @@
 import copy
 import json
 import tempfile
+import threading
+import urllib.error
+import urllib.parse
+import urllib.request
 import unittest
 from pathlib import Path
 
@@ -104,6 +108,36 @@ class UnitTests(unittest.TestCase):
             self.assertTrue(u['morphemes'] and u['roots'] and u['passages'])
             self.assertEqual(u['validity']['problems'], [])
         self.assertTrue(all(s['reason'].startswith('insufficient') for s in cov['skipped']))
+
+
+    def test_http_units_and_review_examples(self):
+        from nahuatl_local import platform
+        with tempfile.TemporaryDirectory() as d:
+            httpd = platform.make_server(CorpusStore(Path(d) / 'voces.sqlite3'), port=0)
+            threading.Thread(target=httpd.serve_forever, daemon=True).start()
+            base = f'http://127.0.0.1:{httpd.server_address[1]}'
+            get = lambda path, **q: json.load(urllib.request.urlopen(base + path + '?' + urllib.parse.urlencode(q)))
+            try:
+                data = get('/api/units')
+                self.assertEqual(data['validation']['served'], len(self.data['units']))
+                for unit in data['units']:
+                    self.assertEqual(unit['review']['status'], 'automatic_draft')
+                    self.assertIsNone(unit['review']['reviewer'])
+                    self.assertIn(unit['closing']['archive_id'], unit['passages'])
+                self.assertEqual(len(data['proposed_readings']), 6)
+                self.assertTrue(all(r['review']['status'] == 'automatic_draft' for r in data['proposed_readings']))
+                examples = get('/api/units/examples', sense='sense-calli')['examples']
+                self.assertGreaterEqual(len(examples), 2)
+                self.assertGreater(len({e['segmentation'].split('-')[0] for e in examples}), 1)
+                for e in examples:
+                    self.assertIn(e['form'], e['nah'])
+                    self.assertTrue(e['automatic'])
+                with self.assertRaises(urllib.error.HTTPError) as error:
+                    urllib.request.urlopen(base + '/api/units/examples?sense=sense-inexistente')
+                self.assertEqual(error.exception.code, 404)
+            finally:
+                httpd.shutdown()
+                httpd.server_close()
 
 
 if __name__ == '__main__':
