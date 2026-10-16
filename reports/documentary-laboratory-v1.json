@@ -40,14 +40,14 @@
     "corpus/wiktionary-lexicon-v12.json": "9f4c1fce9eba363a6a84298b5429ca116e5eaddf88458b446240e185e49b0dc0",
     "docs/EVALUACION_DOCUMENTAL.md": "5474512ec6502171b9801ca702afea19259cd0108c8fe41b2e7f8692237d317a",
     "nahuatl_local/documentary_evaluation.py": "651d8d631c5462d1981df2fcee526e66ec348754333fe619ad792f57c9875634",
-    "nahuatl_local/documentary_retrieval.py": "4a2c06efcb1a098f0173ad183ff0424b2839cc62140c4711b156b3802b2d6187",
+    "nahuatl_local/documentary_retrieval.py": "c02af8ff609fc132c5701abdf6a313461dc1fc1145303e7b4e37b17f185c2802",
     "nahuatl_local/documentary_retrieval_evaluation.py": "737854e92e556e8b3f3dcb8a9db4ed0de84daf4e706a0d864241dad8736854e4",
     "nahuatl_local/lexicon.py": "498ab4a3f5cf4f92864d5cba96cd8bfbb9f657f911970f9051651c91d9270317",
     "nahuatl_local/passages.py": "491f2342cef7ad3c0be8ef353fc8add7ca8b3bacec58ff4d3a30a83a74736ed1",
     "nahuatl_local/pictography.py": "8469ba0b8f7780375fb63d69855687b81d9f88b124bad85a10a2d1b8d2583a65",
     "nahuatl_local/text.py": "3d12feaf3cc910741fd03fdef4f5cbf8780c0cfdf345d2469de8a4130183663a",
     "reports/documentary-evaluation-validation-v1.json": "48c92a60ec559f4a76a38e3c0cd95e529b53b2ea606f5e4ca35e252358e43fd9",
-    "reports/documentary-retrieval-v1.json": "a01f67a6e1a87d42eba3cad09bc2f93d4d6826b30b0123927ec493dc63c695a4"
+    "reports/documentary-retrieval-v1.json": "e8f79f2914bd89f56862a0530f36c99b02e227c4de6e4653f581652e93aa155e"
   },
   "limitation": "Consultas parametrizadas sobre fichas conocidas: no mide comprensión general, traducción ni reconocimiento de imágenes. Las referencias son documentales, sin revisión humana nueva.",
   "rights": {
@@ -62,21 +62,21 @@
     {
       "cost": {
         "context": "perf_counter; index and queries with tracemalloc enabled; sources loaded before tracing; monetary cost not measured",
-        "elapsed_seconds": 17.4396957919962,
+        "elapsed_seconds": 5.899223375003203,
         "image_downloads": 0,
         "memory": {
           "measurement": "tracemalloc; excludes native/process memory",
-          "python_current_bytes": 233151461,
-          "python_peak_bytes": 234873300
+          "python_current_bytes": 210054053,
+          "python_peak_bytes": 211775988
         },
         "model_calls": 0,
         "monetary_cost": null,
         "network_requests": 0,
         "timing": {
-          "index_build_seconds": 14.829361415992025,
-          "query_max_seconds": 0.03908199998841155,
-          "query_mean_seconds": 0.006894308585665052,
-          "query_total_seconds": 0.8479999560368014
+          "index_build_seconds": 4.161135624992312,
+          "query_max_seconds": 0.031151832998148166,
+          "query_mean_seconds": 0.005825132804750503,
+          "query_total_seconds": 0.7164913349843118
         }
       },
       "failures": [
@@ -160,7 +160,7 @@
         "supported_citations": 121
       },
       "report_hashes": {
-        "reports/documentary-retrieval-v1.json": "a01f67a6e1a87d42eba3cad09bc2f93d4d6826b30b0123927ec493dc63c695a4"
+        "reports/documentary-retrieval-v1.json": "e8f79f2914bd89f56862a0530f36c99b02e227c4de6e4653f581652e93aa155e"
       },
       "status": "measured"
     },
