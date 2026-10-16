@@ -16,7 +16,7 @@ test-py: data
 	$(PYTHON) -m unittest discover -s tests
 
 # Presentación: se verifica aquí, no con hashes en reports/.
-test-ui: node_modules derived
+test-ui: node_modules data derived
 	$(PYTHON) scripts/test-platform-ui.py
 	$(PYTHON) scripts/test-community-ui.py
 	$(PYTHON) scripts/test-reading-continuity.py
