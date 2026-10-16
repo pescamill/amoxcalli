@@ -21,6 +21,7 @@ test-ui: node_modules
 	$(PYTHON) scripts/test-community-ui.py
 	$(PYTHON) scripts/test-reading-continuity.py
 	$(PYTHON) scripts/test-reading-documentary.py
+	$(PYTHON) scripts/test-units-ui.py
 	node tests/pwa_worker.cjs
 
 node_modules: package-lock.json
@@ -42,6 +43,7 @@ reports:
 	$(PYTHON) -m nahuatl_local.evidence_evaluation
 	$(PYTHON) -m nahuatl_local.morphology_evaluation
 	$(PYTHON) -m nahuatl_local.term_evaluation
+	$(PYTHON) -m nahuatl_local.units
 	$(PYTHON) -m nahuatl_local.glyph_linker --output "$$(mktemp -d)/glyph-associations.json"
 
 # Requiere requirements.txt, data/prepared/ y los pesos (models/base, outputs/): ver MODEL_CARD.md.

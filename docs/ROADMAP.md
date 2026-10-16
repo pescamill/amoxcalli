@@ -1,18 +1,18 @@
 # Roadmap · the single current plan
 
-Updated 15 October 2026. This is the only planning document: `docs/PROGRESO_INTERNO.md` and the per-cycle reports were retired on this date (summary in [HISTORIA.md](HISTORIA.md); full text in git history). **Each iteration ships one change a reader can see, measured against a baseline before and after.** Linguistic review is a separate, explicit milestone, never assumed.
+Updated 16 October 2026. This is the only planning document: `docs/PROGRESO_INTERNO.md` and the per-cycle reports were retired on this date (summary in [HISTORIA.md](HISTORIA.md); full text in git history). **Each iteration ships one change a reader can see, measured against a baseline before and after.** Linguistic review is a separate, explicit milestone, never assumed.
 
 ## Where things stand
 
 | Area | Today | Main gap |
 |---|---|---|
-| Readings | 12 guided readings · 48 passages from 10 works · every word analyzable, interlinear gloss | No specialist review; no learner trial yet |
+| Readings | 12 guided readings · 48 passages from 10 works · every word analyzable, interlinear gloss; 4 grammar units and 6 proposed readings as automatic drafts | No specialist review; no learner trial yet |
 | Word study | 77% exact segmentation (52-form gold set); 41.8% of classical tokens linked to a dictionary root | Small dictionary (575 senses); visible errors (below) |
 | Ask (Preguntar) | Retrieval with evidence and cited explanations, no LLM: entry top-1 92% vs 42% for exact search (32 test queries) | Claude-written explanations not measured |
 | Archive | 16,111 aligned passages; ~10k are *not* classical (Puebla 2,884 · Morelos 1,938 · Central 1,543 · Huasteca 1,596 · unlabeled 2,157) | Analyzer is classical-only; `ku+V` modern spellings (*kuautli*) still miss their colonial group |
 | Documentary lookup | BM25 + citation validator + abstention: 119/123 complete | Ranks glyph elements above the dictionary entry for "¿Qué significa xochitl?" |
 | Model lab | Qwen3‑0.6B + LoRA: best 22.4 chrF++ with RAG, below "top BM25 passage" (27.2) | The LLM has no product role yet |
-| Engineering | Python stdlib server, vanilla JS PWA; 274 Python tests + 5 DOM suites; CI on a clean clone | Cold start ~1 min until `data/derived/` exists |
+| Engineering | Python stdlib server, vanilla JS PWA; 291 Python tests + 6 DOM suites; CI on a clean clone | Cold start ~1 min until `data/derived/` exists |
 
 ### Found while testing (14 October)
 
@@ -57,8 +57,11 @@ Updated 15 October 2026. This is the only planning document: `docs/PROGRESO_INTE
 - **Measure:** a 40-question set scored on citation validity, faithfulness and correct abstention, against retrieval-only answers and the LoRA model.
 
 ### 5 · Learner loop
-- Rank archive passages by root coverage to propose readings faster; auto-draft word help for editorial review (12 → 18 readings).
-- Spaced repetition with concordance examples. Compact phone navigation. Offline fallback for glyph images.
+- **5a done (16 Oct): grammar units and generated readings, as drafts.** `units.py` builds short Duolingo-style units from the archive, the analyzer and the term index's *certain* spellings: absolutive -tl/-tli/-li, possessives no-/mo-/i-/to-, locatives (-co, -pan, -tlan, -icpac, -itic), subject/object ni-/ti-/qui-. Each unit (~7 min) gives its rule, then match form ↔ morpheme gloss, build the word from morpheme tiles, identify the morpheme, choose the translation of a short real passage, same-root cloze, and closes with a short real reading (`#unidades`; teaser on Lecturas; "Más → Unidades de gramática"). Plural (-meh/-tin) is skipped: the reading vocabulary yields one usable form (*totome*). Six new readings (12 → 18) are ranked by root coverage and prepared with `lesson_builder` (`editorial/lecturas-generadas-001.json`, **not applied**); only six roots have a glyph plus ≥ 4 unused short passages with an exact dictionary spelling, so they reinforce taught words. Mis palabras now reviews each word inside a real passage (an inflected form from the term index, rotating with the streak). Unit progress lives in the same local notebook (`study.lessons['unidad:ID']`, edition `unidades-v1:practice_version`); reading progress is untouched.
+  - **Governance:** everything is `automatic_draft` and labeled on screen. The 10 drafts (4 units, 6 readings) are tasks in the existing queue (`editorial/lesson-decisions.json` via `lesson_audit.merge_decisions`; `reports/units-review-queue.json`); a unit shows "Revisada por…" only with a resolved decision carrying reviewer, date, evidence, resolution and the exact fingerprint. No reviewer has signed any yet.
+  - **Measure** ([reports/UNIDADES_COBERTURA.md](../reports/UNIDADES_COBERTURA.md)): 36 exercises, 40/40 answers backed automatically (passage hash, whole-word form, analyzer segmentation and morpheme, certain spelling, Spanish support); 14 morphemes; 9 of 20 reading roots appear in units (the rest lack inflected forms with Spanish support). DOM walkthrough `scripts/test-units-ui.py`: one unit end to end, progress, review with concordance. `python3 -m nahuatl_local.units --check` (in tests) fails if anything generated is stale.
+  - Next: specialist review of one unit; a plural unit once the lexicon has animate nouns (*cihuatl*, *tlacatl*); a second reading batch with new vocabulary after iteration 3.
+- Compact phone navigation. Offline fallback for glyph images.
 - **Run the beginner trial with 5 people**, pending since September (needs the allies this repository is being prepared for).
 - **Measure:** task completion and comprehension in the trial; returning use of Mis palabras.
 
