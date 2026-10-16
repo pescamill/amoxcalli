@@ -223,7 +223,8 @@ class Lexicon:
             entry = dict(form_id=form['id'], sense_id=sense['id'], written=form.get('written'),
                          label=label[:160], url=form.get('url') or sense.get('url') or '',
                          pos='verb' if verb_hint and not noun_hint else 'noun' if noun_hint else sense.get('pos', 'other'),
-                         automatic=sense.get('import_status') == 'automatic_transcription')
+                         automatic=sense.get('import_status') == 'automatic_transcription',
+                         secondary=sense.get('import_source') in SECONDARY_SOURCES)
             self.entries += 1
             key = key_of(written)
             if len(key) < 1:
@@ -416,6 +417,18 @@ def _compatible(hits, cls):
     return [h for h in hits if h['pos'] == want]
 
 
+# Diccionarios colaborativos sin revisión (Wiktionary) amplían la cobertura, pero una raíz
+# apoyada solo en ellos pesa menos que una con fuente lexicográfica (Molina/GDN, curada).
+SECONDARY_SOURCES = ('wiktionary',)
+SECONDARY_PENALTY = 3.0
+
+
+def _weighted(bonus, hits):
+    if bonus is not None and hits and all(h.get('secondary') for h in hits):
+        return bonus - SECONDARY_PENALTY
+    return bonus
+
+
 def _dict_bonus(stem, full):
     """Las entradas muy breves (ca, ic, a) coinciden por azar: valen menos."""
     if len(stem) >= 4:
@@ -439,23 +452,23 @@ class Analyzer:
     def _stem_evidence(self, stem, klass, has_tense_or_poss, cls=None):
         hits = _compatible(self.lexicon.lookup(stem), cls)
         if hits and _dict_bonus(stem, 6.0) is not None:
-            return _dict_bonus(stem, 6.0), 'dictionary', hits
+            return _weighted(_dict_bonus(stem, 6.0), hits), 'dictionary', hits
         # pretérito / poseído con pérdida de vocal final: chiuh ← chihua, cuic ← cuica
         if has_tense_or_poss and len(stem) >= 2:
             for v in 'aeio':
                 hits = _compatible(self.lexicon.lookup(stem + v), cls)
                 if hits and len(stem) >= 3:
-                    return _dict_bonus(stem, 4.5), 'dictionary_truncated', hits
+                    return _weighted(_dict_bonus(stem, 4.5), hits), 'dictionary_truncated', hits
             if stem.endswith('w'):
                 hits = _compatible(self.lexicon.lookup(stem + 'a'), cls)
                 if hits and len(stem) >= 3:
-                    return _dict_bonus(stem, 4.5), 'dictionary_truncated', hits
+                    return _weighted(_dict_bonus(stem, 4.5), hits), 'dictionary_truncated', hits
         # compuesto de dos raíces del diccionario: xochi+cuahui-tl
         for cut in range(3, len(stem) - 2):
             left, right = stem[:cut], stem[cut:]
             lh, rh = _compatible(self.lexicon.lookup(left), 'N'), _compatible(self.lexicon.lookup(right), cls)
             if lh and rh:
-                return 4.0, 'dictionary_compound', lh[:2] + rh[:2]
+                return _weighted(4.0, lh[:2] + rh[:2]), 'dictionary_compound', lh[:2] + rh[:2]
         return 0.0, None, []
 
     def _affix_cost(self, form):

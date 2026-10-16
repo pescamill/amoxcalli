@@ -228,8 +228,12 @@ class CorpusStore(Store):
                 # Una actualización de referencias nunca sustituye una edición local.
                 records = [r for r in records if r['id'] not in existing]
             merged = {**existing, **{r['id']: r for r in records}}
-            # Revalida también los registros dependientes de cualquier cambio.
-            checked = {rid: self.validate(r, merged) for rid, r in merged.items() if not r.get('withdrawn')}
+            # Revalida también los registros dependientes de cualquier cambio. Si el lote solo
+            # añade IDs nuevos, ningún registro previo cambia ni pierde una referencia: basta
+            # validar los nuevos contra el conjunto completo.
+            additive = not any(r['id'] in existing for r in records)
+            scope = {r['id']: r for r in records} if additive else merged
+            checked = {rid: self.validate(r, merged) for rid, r in scope.items() if not r.get('withdrawn')}
             for r in records:
                 old = existing.get(r['id'])
                 if old:

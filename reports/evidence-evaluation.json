@@ -1,13 +1,13 @@
 {
- "build_seconds": 3.25,
+ "build_seconds": 3.95,
  "explain_model": "extractive",
  "explanation": {
   "claude": "not_run: usar --explain claude con credenciales (tiene costo); no se ejecutó en esta medición",
   "claude_accepted": 0,
   "fallbacks": [],
   "items": 46,
-  "mean_citations": 3.67,
-  "mean_sentences": 2.85,
+  "mean_citations": 3.76,
+  "mean_sentences": 2.98,
   "method": "extractive",
   "model_calls": 0,
   "valid": 46,
@@ -240,7 +240,7 @@
    "relevant": 6,
    "split": "dev",
    "system": "exact_search",
-   "top_entry": null
+   "top_entry": "cihuatl"
   },
   {
    "abstain_item": false,
@@ -297,7 +297,7 @@
    "relevant": 4,
    "split": "dev",
    "system": "exact_search",
-   "top_entry": null
+   "top_entry": "acxoyatototl"
   },
   {
    "abstain_item": true,
@@ -855,7 +855,7 @@
    "relevant": 5,
    "split": "test",
    "system": "exact_search",
-   "top_entry": "Meeleuia"
+   "top_entry": "oquichtli"
   },
   {
    "abstain_item": false,
@@ -970,11 +970,11 @@
    "answered": true,
    "entry_at1": false,
    "entry_at3": false,
-   "explanation_citations": 3,
+   "explanation_citations": 4,
    "explanation_fallback": null,
    "explanation_method": "extractive",
    "explanation_model_calls": 0,
-   "explanation_sentences": 3,
+   "explanation_sentences": 4,
    "explanation_valid": true,
    "has_entry_expectation": false,
    "hit": true,
@@ -988,18 +988,18 @@
    "relevant": 10,
    "split": "dev",
    "system": "evidence",
-   "top_entry": null
+   "top_entry": "cualli"
   },
   {
    "abstain_item": false,
    "answered": true,
    "entry_at1": false,
    "entry_at3": false,
-   "explanation_citations": 2,
+   "explanation_citations": 3,
    "explanation_fallback": null,
    "explanation_method": "extractive",
    "explanation_model_calls": 0,
-   "explanation_sentences": 2,
+   "explanation_sentences": 3,
    "explanation_valid": true,
    "has_entry_expectation": false,
    "hit": true,
@@ -1013,7 +1013,7 @@
    "relevant": 10,
    "split": "dev",
    "system": "evidence",
-   "top_entry": null
+   "top_entry": "cualli"
   },
   {
    "abstain_item": false,
@@ -1095,11 +1095,11 @@
    "answered": true,
    "entry_at1": false,
    "entry_at3": false,
-   "explanation_citations": 3,
+   "explanation_citations": 5,
    "explanation_fallback": null,
    "explanation_method": "extractive",
    "explanation_model_calls": 0,
-   "explanation_sentences": 3,
+   "explanation_sentences": 5,
    "explanation_valid": true,
    "has_entry_expectation": false,
    "hit": true,
@@ -1113,7 +1113,7 @@
    "relevant": 8,
    "split": "dev",
    "system": "evidence",
-   "top_entry": null
+   "top_entry": "tzontli"
   },
   {
    "abstain_item": false,
@@ -1145,11 +1145,11 @@
    "answered": true,
    "entry_at1": false,
    "entry_at3": false,
-   "explanation_citations": 3,
+   "explanation_citations": 4,
    "explanation_fallback": null,
    "explanation_method": "extractive",
    "explanation_model_calls": 0,
-   "explanation_sentences": 3,
+   "explanation_sentences": 4,
    "explanation_valid": true,
    "has_entry_expectation": false,
    "hit": true,
@@ -1163,7 +1163,7 @@
    "relevant": 10,
    "split": "dev",
    "system": "evidence",
-   "top_entry": null
+   "top_entry": "tlahtolli"
   },
   {
    "abstain_item": false,
@@ -1195,11 +1195,11 @@
    "answered": true,
    "entry_at1": false,
    "entry_at3": false,
-   "explanation_citations": 3,
+   "explanation_citations": 4,
    "explanation_fallback": null,
    "explanation_method": "extractive",
    "explanation_model_calls": 0,
-   "explanation_sentences": 1,
+   "explanation_sentences": 2,
    "explanation_valid": true,
    "has_entry_expectation": false,
    "hit": true,
@@ -1213,7 +1213,7 @@
    "relevant": 3,
    "split": "dev",
    "system": "evidence",
-   "top_entry": null
+   "top_entry": "cihuatl"
   },
   {
    "abstain_item": false,
@@ -1288,7 +1288,7 @@
    "relevant": 5,
    "split": "dev",
    "system": "evidence",
-   "top_entry": null
+   "top_entry": "acxoyatototl"
   },
   {
    "abstain_item": true,
@@ -1683,11 +1683,11 @@
    "answered": true,
    "entry_at1": false,
    "entry_at3": false,
-   "explanation_citations": 2,
+   "explanation_citations": 3,
    "explanation_fallback": null,
    "explanation_method": "extractive",
    "explanation_model_calls": 0,
-   "explanation_sentences": 2,
+   "explanation_sentences": 3,
    "explanation_valid": true,
    "has_entry_expectation": false,
    "hit": true,
@@ -1701,7 +1701,7 @@
    "relevant": 10,
    "split": "test",
    "system": "evidence",
-   "top_entry": null
+   "top_entry": "cihuatl"
   },
   {
    "abstain_item": false,
@@ -1833,11 +1833,11 @@
    "answered": true,
    "entry_at1": true,
    "entry_at3": true,
-   "explanation_citations": 7,
+   "explanation_citations": 4,
    "explanation_fallback": null,
    "explanation_method": "extractive",
    "explanation_model_calls": 0,
-   "explanation_sentences": 3,
+   "explanation_sentences": 2,
    "explanation_valid": true,
    "has_entry_expectation": true,
    "hit": true,
@@ -1846,7 +1846,7 @@
    "kind": "spanish",
    "language": "es",
    "note": null,
-   "passages": 6,
+   "passages": 3,
    "query": "piedra",
    "relevant": 1,
    "split": "test",
@@ -1998,7 +1998,7 @@
    "note": null,
    "passages": 9,
    "query": "tierra",
-   "relevant": 8,
+   "relevant": 9,
    "split": "test",
    "system": "evidence",
    "top_entry": "tlalli"
@@ -2026,7 +2026,7 @@
    "relevant": 3,
    "split": "test",
    "system": "evidence",
-   "top_entry": "Meeleuia"
+   "top_entry": "oquichtli"
   },
   {
    "abstain_item": false,
@@ -2112,8 +2112,8 @@
   }
  ],
  "mean_ms_per_query": {
-  "evidence": 41.16,
-  "exact_search": 108.88
+  "evidence": 51.33,
+  "exact_search": 117.21
  },
  "model_calls": 0,
  "questions": "evidence-questions-v1",
@@ -2130,7 +2130,7 @@
     "false_abstention": 0.0,
     "n": 49,
     "passage_hit": 100.0,
-    "passage_precision": 96.3,
+    "passage_precision": 97.5,
     "with_entry": 36
    },
    "dev": {
@@ -2190,7 +2190,7 @@
     "false_abstention": 0.0,
     "n": 16,
     "passage_hit": 100.0,
-    "passage_precision": 85.7,
+    "passage_precision": 90.1,
     "with_entry": 13
    },
    "kind:variant": {
@@ -2214,7 +2214,7 @@
     "false_abstention": 0.0,
     "n": 32,
     "passage_hit": 100.0,
-    "passage_precision": 94.4,
+    "passage_precision": 96.4,
     "with_entry": 26
    }
   },

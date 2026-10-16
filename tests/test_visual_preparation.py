@@ -90,12 +90,12 @@ class VisualPreparationTests(unittest.TestCase):
         self.assertFalse(result['inference_verified'])
         self.assertNotIn(str(ROOT), json.dumps(result))
 
-    def test_projection_preserves_51_development_references_and_separates_input(self):
+    def test_projection_preserves_development_references_and_separates_input(self):
         queries = load_development(modality='visual')
         with self.packages():
             result = visual.review()
         self.assertTrue(result['available'])
-        self.assertEqual(result['case_count'], 51)
+        self.assertEqual(result['case_count'], 52)
         self.assertEqual({c['id'] for c in result['cases']}, {q['id'] for q in queries})
         by_id = {q['id']: q for q in queries}
         for case in result['cases']:
@@ -117,7 +117,7 @@ class VisualPreparationTests(unittest.TestCase):
     def test_public_status_has_no_cases_or_reference_keys(self):
         with self.packages():
             result = visual.status()
-        self.assertEqual(result['case_count'], 51)
+        self.assertEqual(result['case_count'], 52)
         forbidden = {'cases', 'reference', 'fields', 'proposed_input', 'source_hashes'}
         def inspect(value):
             if isinstance(value, dict):

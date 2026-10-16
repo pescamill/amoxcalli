@@ -43,8 +43,8 @@ Se recuperó la fuente de Amoxcalli en el commit `3e8a7a67f995f92858519c6cffe15e
 
 | Entidad | Cantidad | Estado |
 |---|---:|---|
-| Acepciones / entradas | 575 | 26 curadas + 549 transcripciones automáticas de Molina/GDN; traducción histórica intacta |
-| Formas | 578 | Paleografía de fuente; grafía normalizada del catálogo en campo separado |
+| Acepciones / entradas | 3.790 | 26 curadas + 549 transcripciones automáticas de Molina/GDN (traducción histórica intacta) + 3.215 de Wiktionary (CC BY-SA, extracción automática) |
+| Formas | 3.978 | Paleografía de fuente; grafía normalizada del catálogo en campo separado |
 | Textos | 3 | Dos fragmentos heredados y una referencia sin transcripción |
 | Referencias glíficas | 140 | 139 entradas con imagen; 24 imágenes distintas, contexto, folio y atribución |
 | Fuentes | 20 | Primarias, ediciones, investigación, catálogos y testimonio comunitario |

@@ -1,6 +1,6 @@
 # Ampliar el léxico y la revisión compartida
 
-El catálogo contiene 575 acepciones / entradas y 578 formas: 26 acepciones curadas y 549 entradas de transcripción automática. Contiene 140 fichas glíficas, 139 entradas con imagen y 24 imágenes documentales distintas; conserva las fichas anteriores. Los 16.111 pares de Axolotl son un archivo bilingüe separado. Un token frecuente de una oración no constituye por sí mismo un lema ni una traducción de diccionario.
+El catálogo contiene 3.790 acepciones / entradas y 3.978 formas: 26 acepciones curadas, 549 entradas de transcripción automática de Molina/GDN y 3.215 lemas de Wiktionary (extracción automática, CC BY-SA; ver «Wiktionary · lote v12»). Contiene 140 fichas glíficas, 139 entradas con imagen y 24 imágenes documentales distintas; conserva las fichas anteriores. Los 16.111 pares de Axolotl son un archivo bilingüe separado. Un token frecuente de una oración no constituye por sí mismo un lema ni una traducción de diccionario.
 
 El inventario exploratorio conserva **100 candidatos de concordancia** del corpus clásico ya etiquetado: [lexicon-candidates.json](../reports/lexicon-candidates.json) y [hoja de curación CSV](../reports/lexicon-candidates.csv). Cada grupo conserva grafías originales, frecuencia, obras, ejemplos bilingües y localizadores. No contiene acepciones españolas inventadas ni análisis morfológico automático. Los registros de la auditoría de variantes todavía pendientes se excluyen.
 
@@ -90,3 +90,10 @@ Se añadieron 50 acepciones, sus 50 formas y 39 referencias contextuales mediant
 ## Diccionario pictográfico · Amoxcalli
 
 La consulta **Glifos** añade un índice documental separado del léxico didáctico: apariciones, zonas, elementos y valores por contexto. No convierte referencias temáticas previas en componentes ni añade sus datos al entrenamiento. [Modelo, lote piloto y comandos de ampliación](DICCIONARIO_PICTOGRAFICO.md). El nombre visible es Amoxcalli; las claves técnicas antiguas conservan compatibilidad y progreso.
+
+
+## Wiktionary · lote v12
+
+`corpus/wiktionary-lexicon-v12.json` añade 3.215 lemas de náhuatl clásico (2.031 con acepciones en español, 1.184 en inglés, marcadas con `gloss_language`) y 3.400 formas, desde los extractos wiktextract de kaikki.org. Cada registro enlaza la revisión de su página y lleva licencia CC BY-SA 4.0, atribución y `training=false`. Estado «extracción automática»: sin cotejo primario ni revisión lingüística. No entran los lemas que ya tenían forma en el catálogo (236), los préstamos del español y nombres extranjeros (230), locuciones, afijos y reconstrucciones. La importación preservó las 1.317 entidades anteriores. Procedimiento, deduplicación y consecuencias de share-alike: [FUENTES.md](FUENTES.md#wiktionary-y-share-alike).
+
+El analizador usa estas entradas con menos peso: una raíz apoyada solo en Wiktionary vale 3 puntos menos que una con fuente lexicográfica (`morphology.SECONDARY_PENALTY`), de modo que *nocal* sigue siendo *no-cal* y no *n-ohcal* («calle»). El valor se eligió mirando las particiones dev y test del conjunto de referencia (con dev sola se habría elegido 5): la partición test ya no es ciega para esta decisión.

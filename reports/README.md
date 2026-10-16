@@ -9,7 +9,7 @@ Un cambio solo de interfaz (`platform.py`, `platform_web/*`, pruebas DOM) **no**
 | Archivo | Comando | Lo muestra |
 |---|---|---|
 | `documentary-evaluation-validation-v1.json` | `python3 -m nahuatl_local.documentary_evaluation` | Validación de la batería `configs/documentary-evaluation-v1.json` |
-| `documentary-retrieval-v1.json` | `python3 -m nahuatl_local.documentary_retrieval_evaluation` | Consulta documental: 119/123 completas, 840/860 campos |
+| `documentary-retrieval-v1.json` | `python3 -m nahuatl_local.documentary_retrieval_evaluation` | Consulta documental: 119/123 completas, 770/790 campos |
 | `documentary-laboratory-v1.json` | `python3 -m nahuatl_local.documentary_laboratory` | Laboratorio · Modelo y progreso (deriva del anterior) |
 | `evidence-evaluation.json`, `EVIDENCIA_EVALUACION.md` | `python3 -m nahuatl_local.evidence_evaluation` | Preguntar ([docs/EVIDENCIA.md](../docs/EVIDENCIA.md)) |
 | `morphology-evaluation.json`, `MORFOLOGIA_EVALUACION.md`, `morphology-review/stem-hits-sample.csv` | `python3 -m nahuatl_local.morphology_evaluation` | Analizar cualquier palabra ([docs/MORFOLOGIA.md](../docs/MORFOLOGIA.md)) |
@@ -34,6 +34,7 @@ Las cifras de tiempo y memoria cambian en cada corrida; las métricas no deben c
 
 No se regeneran ni se borran mientras los datos que los citan existan:
 
+- `wiktionary-import-v12.json` — selección, duplicados omitidos y comprobación de preservación del lote `corpus/wiktionary-lexicon-v12.json` (`python -m nahuatl_local.wiktionary_import --check` lo verifica contra la caché).
 - `editorial-pipeline/batch-007/` — citado por `corpus/editorial-batch-007-v9.json` (lote publicado); también es el fixture de `tests/test_editorial_*`.
 - `editorial-pipeline/batch-008-v10/`, `batch-009-v11/` — citados por las propuestas no publicadas `editorial/batch-00{8,9}-*.json`.
 - `FLOR_CICLO_2026-09-30.md`, `platform-ui-flor-2026-09-30.txt` — evidencia citada por `editorial/lesson-decisions.json`.

@@ -4,7 +4,7 @@ const origin=process.env.CORPUS_QA_ORIGIN,errors=[],requests=[],writes=[],scroll
 const initial={version:1,saved:['sense-tototl'],lessons:{aves:{edition:'lectura-clasica-v1:1',passed:[0],comprehension:[],step:2}},reviews:{'sense-tototl':{streak:2,due:1900000000000}},contexts:{'sense-tototl':{archive_id:'axolotl-14546'}}};
 const initialRaw=JSON.stringify(initial,null,1);
 const pause=ms=>new Promise(r=>setTimeout(r,ms));
-async function until(fn){for(let i=0;i<240;i++){if(fn())return;await pause(25);}throw Error('UI timeout');}
+async function until(fn,tries=240){for(let i=0;i<tries;i++){if(fn())return;await pause(25);}throw Error('UI timeout');}
 (async()=>{
  const vc=new VirtualConsole();vc.on('jsdomError',e=>errors.push(e.message));
  const dom=await JSDOM.fromURL(origin+'/#leer/aves',{runScripts:'dangerously',resources:'usable',pretendToBeVisual:true,virtualConsole:vc,beforeParse(w){
@@ -21,7 +21,8 @@ async function until(fn){for(let i=0;i<240;i++){if(fn())return;await pause(25);}
  const first=$('.reading-card'),archiveId=first.dataset.archiveId;
  assert.equal(archiveId,'axolotl-14546');
  first.querySelector('[data-explore-word="chachalaca"]').click();
- await until(()=>$('#archive-count')?.textContent==='3 resultados');
+ // Primera búsqueda del servidor: construye el índice de términos (~4 s en frío con el catálogo ampliado).
+ await until(()=>$('#archive-count')?.textContent==='3 resultados',800);
  if(process.env.READING_CONTINUITY_BASELINE){
   assert.equal(w.location.hash,'#investigar/chachalaca');assert.equal($('[data-reading-return]'),null);
   assert($('a[href="#leer"]'));assert.equal(w.localStorage.getItem('scriptorium-study-v1'),initialRaw);assert.equal(writes.length,0);

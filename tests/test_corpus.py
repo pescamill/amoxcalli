@@ -30,7 +30,7 @@ class CorpusTests(unittest.TestCase):
         self.assertEqual(again.person(self.token)['id'],self.person['id'])
         legacy=json.loads((Path(__file__).resolve().parents[1]/'corpus/scriptorium-legacy.json').read_text())['corpus']
         self.assertTrue({r['id'] for r in legacy}.issubset(again.records()))
-        self.assertEqual(len(again.records()),1317)
+        self.assertEqual(len(again.records()),7934)
         self.assertEqual(len(Store(self.path).catalog['tasks']),12)
         self.assertTrue(again.records()['glyph-atl']['image'].startswith('https://aztecglyphs'))
 
@@ -46,7 +46,7 @@ class CorpusTests(unittest.TestCase):
         r=copy.deepcopy(recs['glyph-atl']);r['image']='javascript:alert(1)'
         with self.assertRaises(Problem):self.store.validate(r,recs)
         again=CorpusStore(self.path)
-        self.assertEqual(len(again.records()),1317)
+        self.assertEqual(len(again.records()),7934)
         self.assertEqual(again.records()['glyph-atl']['image'],recs['glyph-atl']['image'])
 
     def test_senses_spelling_and_missing_modern_coverage(self):
@@ -79,7 +79,7 @@ class CorpusTests(unittest.TestCase):
             db.execute("DELETE FROM corpus_history WHERE record_id='glyph-cuahuitl-mdz7v'")
             db.execute("DELETE FROM corpus_records WHERE id='glyph-cuahuitl-mdz7v'")
         again=CorpusStore(self.path)
-        self.assertEqual(len(again.records()),1317)
+        self.assertEqual(len(again.records()),7934)
         self.assertEqual(again.records()['glyph-metztli-osu14v']['context'],'Nota de la persona editora')
         self.assertEqual(again.records()['glyph-metztli-osu14v']['version'],3)
         self.assertEqual(again.records()['glyph-metztli-osu14v']['sense_id'],'sense-mes')

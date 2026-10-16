@@ -54,6 +54,12 @@ Se reutilizó HTML de fuente cacheado, en lotes de 86, 25, 86 y 23 apariciones, 
 
 La meta cuantitativa de 300 apariciones está cubierta. El siguiente paso técnico es preparar consultas documentales de desarrollo y una reserva independiente para evaluar recuperación y futuras comparaciones del Laboratorio. La revisión especializada y la prueba del recorrido con personas siguen pendientes.
 
+### Ocho láminas más de Telleriano, enlazadas al índice de términos · 16 de octubre de 2026
+
+Los lotes `tlachia-telleriano-385-01v-19v-v7` (385_01v, 385_02v, 385_04r, 385_08r, 385_19v; 90 apariciones) y `tlachia-telleriano-385-03v-15r-v8` (385_03v, 385_11r, 385_15r; 79 apariciones) se eligieron entre las láminas de Telleriano no incorporadas por el número de elementos **nuevos** cuya denominación el índice de términos resuelve a una entrada del diccionario (`terms.TermIndex.resolve`): *apantli, olli, tototl, tzontecomatl, yauhtli, metztli, tepetl, tetl, ilhuitl, tilmatli, topilli, chimalli, atlatl, centli, petlatl*… El índice reúne ahora **3 conjuntos, 21 láminas, 221 zonas, 197 registros de elementos, 185 denominaciones distintas y 480 apariciones**; 138 denominaciones se resuelven a una entrada del diccionario (109 con el catálogo anterior a estas láminas). Las 311 apariciones y los 152 elementos anteriores se conservan byte a byte (respaldos `catalog-before-…-v7/v8.json`).
+
+Mismo flujo y límites: páginas consultadas una vez y guardadas en la caché local, imágenes solo enlazadas a Tlachia, atribución a Bertina Olmedo (INAH) y a Tlachia, sin LLM, sin cotejo del manuscrito ni revisión lingüística. Se reutilizan los nueve puentes léxicos explícitos; no se añadieron puentes nuevos. El permiso para incorporar más fichas está solicitado en un borrador sin enviar ([permisos/unam-gdn-tlachia.md](permisos/unam-gdn-tlachia.md)).
+
 ### Comandos
 
 Crear una receta con ID nuevo siguiendo `editorial/pictography-tlachia-v1.json`. Definir documentos, URLs de láminas explícitas y puentes léxicos justificados. Un lote admite hasta diez láminas y cien apariciones. No hay rastreo recursivo ni llamadas al LLM.

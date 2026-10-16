@@ -1,0 +1,759 @@
+{
+ "schema_version": 1,
+ "release_id": "wiktionary-nci-v12",
+ "generated_by": "python -m nahuatl_local.wiktionary_import",
+ "consulted": "2026-10-15",
+ "output": "corpus/wiktionary-lexicon-v12.json",
+ "extracts": [
+  {
+   "id": "es",
+   "url": "https://kaikki.org/eswiktionary/N%C3%A1huatl%20cl%C3%A1sico/kaikki.org-dictionary-N%C3%A1huatlcl%C3%A1sico.jsonl",
+   "sha256": "e45e47cad4aaa75f107b73da775aa3794106b193ea960cf4b89545610b964784",
+   "wiki": "es.wiktionary.org",
+   "dump": "2026-10-01",
+   "extracted": "2026-10-14"
+  },
+  {
+   "id": "es-normalizada",
+   "url": "https://kaikki.org/eswiktionary/N%C3%A1huatl%20cl%C3%A1sico%20%28Graf%C3%ADa%20normalizada%29/kaikki.org-dictionary-N%C3%A1huatlcl%C3%A1sicoGraf%C3%ADanormalizada.jsonl",
+   "sha256": "b8a07c483509d0f7284fea9cd07086e327551f2625025ae8ebcf7fd7793c94a0",
+   "wiki": "es.wiktionary.org",
+   "dump": "2026-10-01",
+   "extracted": "2026-10-14"
+  },
+  {
+   "id": "en",
+   "url": "https://kaikki.org/dictionary/Classical%20Nahuatl/kaikki.org-dictionary-ClassicalNahuatl.jsonl",
+   "sha256": "24ead519380d7fec5dd713ad5dc05051674df1b91aa8a65dc23bd5c85d94d983",
+   "wiki": "en.wiktionary.org",
+   "dump": "2026-09-02",
+   "extracted": "2026-10-03"
+  }
+ ],
+ "counts": {
+  "records": 6617,
+  "form": 3400,
+  "sense": 3215,
+  "source": 2,
+  "senses_by_gloss_language": {
+   "en": 1184,
+   "es": 2031
+  },
+  "revisions_before_dump_lookup": 54
+ },
+ "selection": {
+  "afijo_o_locución": 4,
+  "grafía_alternativa_ya_en_el_catálogo": 51,
+  "lema_incorporado": 3215,
+  "locución_o_grafía_no_alfabética": 653,
+  "otra_grafía_misma_clave": 111,
+  "préstamo_del_español_o_nombre_extranjero": 230,
+  "reconstrucción_no_atestiguada": 6,
+  "remisión_añadida_como_forma": 254,
+  "sin_glosa": 2,
+  "solo_remite_a_otra_entrada": 1766,
+  "ya_en_el_catálogo": 236,
+  "ya_en_otro_extracto": 1005
+ },
+ "duplicates_skipped": 138,
+ "duplicates": [
+  {
+   "word": "aca",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-34256"
+  },
+  {
+   "word": "acacalotl",
+   "extract": "es-normalizada",
+   "catalog": "lex-gdn-m2-34257"
+  },
+  {
+   "word": "acacocoyotl",
+   "extract": "es-normalizada",
+   "catalog": "lex-gdn-m2-34264"
+  },
+  {
+   "word": "acalli",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-34316"
+  },
+  {
+   "word": "acaltetepon",
+   "extract": "es-normalizada",
+   "catalog": "lex-gdn-m2-34347"
+  },
+  {
+   "word": "acacuextli",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-34265"
+  },
+  {
+   "word": "acacueyatl",
+   "extract": "es-normalizada",
+   "catalog": "lex-gdn-m2-34266"
+  },
+  {
+   "word": "acahualli",
+   "extract": "es-normalizada",
+   "catalog": "lex-gdn-m2-34396"
+  },
+  {
+   "word": "acachapolin",
+   "extract": "es-normalizada",
+   "catalog": "lex-gdn-m2-34259"
+  },
+  {
+   "word": "acachatl",
+   "extract": "es-normalizada",
+   "catalog": "lex-gdn-m2-34260"
+  },
+  {
+   "word": "acachiquihuitl",
+   "extract": "es-normalizada",
+   "catalog": "lex-gdn-m2-34261"
+  },
+  {
+   "word": "atl",
+   "extract": "es-normalizada",
+   "catalog": "lex-atl"
+  },
+  {
+   "word": "he",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-147454"
+  },
+  {
+   "word": "ehcamecatl",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-147143"
+  },
+  {
+   "word": "ehcapahcuauhtlah",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-147145"
+  },
+  {
+   "word": "ehcapahtli",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-147146"
+  },
+  {
+   "word": "ehcaxoctli",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-147166"
+  },
+  {
+   "word": "ehēcayoh",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-147186"
+  },
+  {
+   "word": "ehcatl",
+   "extract": "es",
+   "catalog": "lex-ehecatl"
+  },
+  {
+   "word": "elehuia",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-151481"
+  },
+  {
+   "word": "ehua",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-154061"
+  },
+  {
+   "word": "excan",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-147193"
+  },
+  {
+   "word": "expa",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-147194"
+  },
+  {
+   "word": "ī",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-161535"
+  },
+  {
+   "word": "ica",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-147558"
+  },
+  {
+   "word": "yn",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-147479"
+  },
+  {
+   "word": "inin",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-148657"
+  },
+  {
+   "word": "itta",
+   "extract": "es",
+   "catalog": "lex-itta"
+  },
+  {
+   "word": "īhuān",
+   "extract": "es",
+   "catalog": "lex-ihuan"
+  },
+  {
+   "word": "itzcuintli",
+   "extract": "es-normalizada",
+   "catalog": "lex-itzcuintli"
+  },
+  {
+   "word": "ca",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-35030"
+  },
+  {
+   "word": "cacalli",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-36069"
+  },
+  {
+   "word": "cacalotl",
+   "extract": "es-normalizada",
+   "catalog": "lex-gdn-m2-36071"
+  },
+  {
+   "word": "cacamatl",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-36073"
+  },
+  {
+   "word": "cacahuapinolli",
+   "extract": "es-normalizada",
+   "catalog": "lex-gdn-m2-36097"
+  },
+  {
+   "word": "cacahuapozonallotl",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-36098"
+  },
+  {
+   "word": "cacahuacentli",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-36094"
+  },
+  {
+   "word": "cacahuatl",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-36092"
+  },
+  {
+   "word": "cacatzac",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-36087"
+  },
+  {
+   "word": "calli",
+   "extract": "es-normalizada",
+   "catalog": "lex-calli"
+  },
+  {
+   "word": "quemah",
+   "extract": "es-normalizada",
+   "catalog": "lex-gdn-m2-157289"
+  },
+  {
+   "word": "quechquemitl",
+   "extract": "es-normalizada",
+   "catalog": "lex-gdn-m2-157268"
+  },
+  {
+   "word": "quecholli",
+   "extract": "es-normalizada",
+   "catalog": "lex-gdn-m2-157279"
+  },
+  {
+   "word": "quechtli",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-157275"
+  },
+  {
+   "word": "coatl",
+   "extract": "es-normalizada",
+   "catalog": "lex-coatl"
+  },
+  {
+   "word": "macahua",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-161572"
+  },
+  {
+   "word": "mazatl",
+   "extract": "es-normalizada",
+   "catalog": "lex-mazatl"
+  },
+  {
+   "word": "macel",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-150606"
+  },
+  {
+   "word": "macehualli",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-150616"
+  },
+  {
+   "word": "macehuallotl",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-150617"
+  },
+  {
+   "word": "mahuiltia",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-150576"
+  },
+  {
+   "word": "machiyotl",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-150649"
+  },
+  {
+   "word": "metztli",
+   "extract": "es",
+   "catalog": "lex-metztli"
+  },
+  {
+   "word": "metl",
+   "extract": "en",
+   "catalog": "lex-metl"
+  },
+  {
+   "word": "michin",
+   "extract": "es-normalizada",
+   "catalog": "lex-michin"
+  },
+  {
+   "word": "nacamolli",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-152635"
+  },
+  {
+   "word": "nacanamacoyan",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-152638"
+  },
+  {
+   "word": "nacazcuihcuitlatl",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-152706"
+  },
+  {
+   "word": "nacatamalli",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-152644"
+  },
+  {
+   "word": "nacayoh",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-152677"
+  },
+  {
+   "word": "nacayotl",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-152612"
+  },
+  {
+   "word": "nacatl",
+   "extract": "es-normalizada",
+   "catalog": "lex-gdn-m2-152647"
+  },
+  {
+   "word": "nacatlaolli",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-152657"
+  },
+  {
+   "word": "nacatlaoyoh",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-152653"
+  },
+  {
+   "word": "nican",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-154231"
+  },
+  {
+   "word": "niman",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-154290"
+  },
+  {
+   "word": "ocachi",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-154814"
+  },
+  {
+   "word": "on",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-154779"
+  },
+  {
+   "word": "oncah",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-155361"
+  },
+  {
+   "word": "oncan",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-155366"
+  },
+  {
+   "word": "pa",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-154352"
+  },
+  {
+   "word": "pahcalli",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-155719"
+  },
+  {
+   "word": "pacqui",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-155755"
+  },
+  {
+   "word": "pacxixihtli",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-155764"
+  },
+  {
+   "word": "palehuia",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-35066"
+  },
+  {
+   "word": "palli",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-155782"
+  },
+  {
+   "word": "pahuatl",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-155974"
+  },
+  {
+   "word": "pachtli",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-155754"
+  },
+  {
+   "word": "pahatl",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-155716"
+  },
+  {
+   "word": "cuahuitl",
+   "extract": "es",
+   "catalog": "lex-cuahuitl"
+  },
+  {
+   "word": "cuīcatl",
+   "extract": "es",
+   "catalog": "lex-cuicatl"
+  },
+  {
+   "word": "zacamecatl",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-170795"
+  },
+  {
+   "word": "zacapilli",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-170806"
+  },
+  {
+   "word": "zacayaman",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-170816"
+  },
+  {
+   "word": "zacatl",
+   "extract": "es-normalizada",
+   "catalog": "lex-gdn-m2-170811"
+  },
+  {
+   "word": "zacatlah",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-170812"
+  },
+  {
+   "word": "zan",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-170841"
+  },
+  {
+   "word": "citlalin",
+   "extract": "es",
+   "catalog": "lex-citlalin"
+  },
+  {
+   "word": "tamalli",
+   "extract": "es-normalizada",
+   "catalog": "lex-gdn-m2-157642"
+  },
+  {
+   "word": "tamazolin",
+   "extract": "es-normalizada",
+   "catalog": "lex-gdn-m2-157645"
+  },
+  {
+   "word": "tanahtli",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-157647"
+  },
+  {
+   "word": "tapalcatemalacatl",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-157658"
+  },
+  {
+   "word": "tapalcatl",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-157659"
+  },
+  {
+   "word": "tapahzolli",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-157671"
+  },
+  {
+   "word": "tapayaxin",
+   "extract": "es-normalizada",
+   "catalog": "lex-gdn-m2-157663"
+  },
+  {
+   "word": "tapachtli",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-157651"
+  },
+  {
+   "word": "tata",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-157676"
+  },
+  {
+   "word": "tatapahtli",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-157685"
+  },
+  {
+   "word": "tahtli",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-157690"
+  },
+  {
+   "word": "tepetl",
+   "extract": "es-normalizada",
+   "catalog": "lex-tepetl"
+  },
+  {
+   "word": "tetl",
+   "extract": "es",
+   "catalog": "form-tetl"
+  },
+  {
+   "word": "tonatiuh",
+   "extract": "es",
+   "catalog": "lex-tonatiuh"
+  },
+  {
+   "word": "tototl",
+   "extract": "es-normalizada",
+   "catalog": "lex-tototl"
+  },
+  {
+   "word": "tochtli",
+   "extract": "es-normalizada",
+   "catalog": "lex-tochtli"
+  },
+  {
+   "word": "huacalli",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-167831"
+  },
+  {
+   "word": "huacqui",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-167839"
+  },
+  {
+   "word": "hualtemoliztli",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-167889"
+  },
+  {
+   "word": "huapalli",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-167899"
+  },
+  {
+   "word": "huapahua",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-167904"
+  },
+  {
+   "word": "xacalli",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-168544"
+  },
+  {
+   "word": "xallah",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-168549"
+  },
+  {
+   "word": "xalli",
+   "extract": "es-normalizada",
+   "catalog": "lex-gdn-m2-168550"
+  },
+  {
+   "word": "xaltetl",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-168557"
+  },
+  {
+   "word": "xaltetlah",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-168558"
+  },
+  {
+   "word": "xaltomatl",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-168559"
+  },
+  {
+   "word": "xaltozan",
+   "extract": "es-normalizada",
+   "catalog": "lex-gdn-m2-168560"
+  },
+  {
+   "word": "xamixcalli",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-168569"
+  },
+  {
+   "word": "xamixcaltepantli",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-168571"
+  },
+  {
+   "word": "xamixcaltexcalli",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-168572"
+  },
+  {
+   "word": "xamixcalchihualoyan",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-168567"
+  },
+  {
+   "word": "xamitl",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-168566"
+  },
+  {
+   "word": "xayacatl",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-168603"
+  },
+  {
+   "word": "xayotl",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-168609"
+  },
+  {
+   "word": "xiquipilli",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-168711"
+  },
+  {
+   "word": "xilotl",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-168678"
+  },
+  {
+   "word": "xinachtli",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-168688"
+  },
+  {
+   "word": "xīhuitl",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-168773"
+  },
+  {
+   "word": "Xochitl",
+   "extract": "es",
+   "catalog": "lex-xochitl"
+  },
+  {
+   "word": "yacaquiquin",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-169230"
+  },
+  {
+   "word": "yacahcuitlatl",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-169205"
+  },
+  {
+   "word": "yacacuitleh",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-169207"
+  },
+  {
+   "word": "yacaxihuitl",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-169276"
+  },
+  {
+   "word": "yacatl",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-169250"
+  },
+  {
+   "word": "yeh",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-169186"
+  },
+  {
+   "word": "yei",
+   "extract": "es",
+   "catalog": "lex-gdn-m2-169613"
+  },
+  {
+   "word": "yectli",
+   "extract": "en",
+   "catalog": "lex-gdn-m2-169584"
+  },
+  {
+   "word": "tlalli",
+   "extract": "es-normalizada",
+   "catalog": "lex-tlalli"
+  },
+  {
+   "word": "tletl",
+   "extract": "es-normalizada",
+   "catalog": "lex-tletl"
+  }
+ ],
+ "llm_calls": 0,
+ "scope": "Extracción automática: sin cotejo primario ni revisión lingüística. rights.training=false en todos los registros.",
+ "preservation": {
+  "records_before": 1317,
+  "records_after": 7934,
+  "added": 6617,
+  "previous_records_unchanged": true
+ }
+}
