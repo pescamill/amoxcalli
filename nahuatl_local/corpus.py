@@ -10,7 +10,6 @@ from urllib.parse import urlparse
 from .community import Store, Problem, ROOT, now, text, choice, identifier
 from . import lexicon
 from .lexicon import releases as editorial_releases  # noqa: F401 (nombre público; las pruebas lo sustituyen)
-from .text import fold
 
 KINDS = ('source', 'sense', 'form', 'text', 'glyph', 'note')
 PERIODS = ('historical', 'modern', 'unknown')
@@ -314,29 +313,6 @@ class CorpusStore(Store):
                     dictionary_featured_ids=featured,
                     variants=self.catalog['variants'],
                     note='Corpus inicial de referencias. La ausencia de una forma o glifo no demuestra que no exista.')
-
-    def search(self, query='', kind='', period='', variant=''):
-        query = text(query, 'Búsqueda', 300)
-        if kind:
-            choice(kind, KINDS, 'tipo')
-        if period:
-            choice(period, PERIODS, 'época')
-        records = self.public_records()
-        terms = fold(query).split()
-        out = []
-        for r in records.values():
-            if kind and r['kind'] != kind:
-                continue
-            if period and r.get('period') != period:
-                continue
-            if variant and r.get('variant') != variant:
-                continue
-            related = records.get(r.get('sense_id'), {})
-            haystack = fold(' '.join(str(r.get(k, '')) for k in ('label','definition','written','nah','es','description','aliases','variant','context','citation')) + ' ' + str(related.get('label', '')) + ' ' + str(related.get('aliases', '')))
-            if all(t in haystack for t in terms):
-                out.append(r)
-        out.sort(key=lambda r: (0 if fold(r['label']) == fold(query) else 1, r['label']))
-        return dict(results=out, total=len(out), query=query)
 
     def propose(self, person, body):
         kind = choice(body.get('kind'), ['form','text','glyph'], 'aportación')

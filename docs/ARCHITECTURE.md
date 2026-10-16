@@ -47,7 +47,7 @@ Bundles are never edited: they are the evidence cited by file and hash. Correcti
 | Consumer | Lexical records | Passages |
 |---|---|---|
 | Server (`platform.py`, `CorpusStore.public_records()`) | Catalog + this installation's local edits and accepted proposals | `research.Archive` → `passages.load` |
-| Analyzer, concordance, gloss hints, Ask (`stems`, `evidence`) | Server: the store; offline/CLI: `lexicon.load_records()` | `passages.load` |
+| Analyzer, concordance, gloss hints, term index, Ask (`stems`, `terms`, `evidence`) | Server: the store; offline/CLI: `lexicon.load_records()` | `passages.load` |
 | `morphology_evaluation`, `evidence_evaluation`, `documentary_retrieval_evaluation` | `lexicon.load_records()` (no private database is opened) | `passages.load` |
 | `documentary_evaluation` / `documentary_retrieval` citations | `lexicon.source_rows`: the bundle row and file that a citation hashes | Raw CSV fields via `passages.original` |
 
@@ -59,7 +59,7 @@ Bundles are never edited: they are the evidence cited by file and hash. Correcti
 |---|---|---|
 | `fold` | case and diacritics | Spanish search, catalog labels; the browser's single `norm` in `platform_web/app.js` is its twin |
 | `phonemic_key` | colonial spelling (qu/c/k, hu/uh/u, z/ç/c, saltillo h, y/i, long vowels) with spans back to the source spelling | the analyzer; **frozen**: its output over the 76,698 archive word types is fingerprinted in `tests/test_text.py` |
-| `loose_key` | additionally modern spelling (k, kw, ts, w, j) and double consonants | retrieval in Ask only |
+| `loose_key` | additionally modern spelling (k, kw, ts, w, j) and double consonants | retrieval only: the term index (§7) and through it every search view |
 
 Helpers: `strip_marks`, `squash`, `tokens`, `es_key`, `key_of`, `readable`. `tests/test_text.py` fails if any other module strips diacritics, defines another key or parses a CSV itself.
 
@@ -76,3 +76,11 @@ Measured results live in `reports/` (`MORFOLOGIA_EVALUACION.md`, `EVIDENCIA_EVAL
 ## 6. Serving
 
 One process serves the app, Voces (`/aportar`) and the API: `bash scripts/amoxcalli.sh serve` (`setup` also installs the local model). `web.py` owns what every route shares — the route table, JSON errors (400/401/403/404/405/500, tracebacks to stderr without query or body), security headers and CSP, allowed hosts, the `Origin` check on writes, static files, and a listen queue of 64. `platform.py` registers the application routes and `community.py` the Voces routes; neither has its own server.
+
+## 7. Term index and the single search (`terms.py`)
+
+A **term group** gathers everything known about one word: the lexical entry (`lexicon.entries`) or, when the dictionary lacks it, an archive spelling (`term-…`: *cualli*, *cihuatl*); its senses; every attested spelling with the same loose key (colonial and SEP/INALI, counted by variety); inflected forms of the same root that the analyzer backs with that dictionary entry; passages by variety; and pictographic references with their scope — dictionary glyphs (`terms.glyph_scope`: whole word, component, meaning relation, thematic) and Tlachia elements (designation or explicit lexical link → component) and occurrences (reading contains the word → whole word; element among its components → component). No image is generated.
+
+Uncertain spellings are kept apart with their reason and never counted as the term: same written root in a verb or a *tla-/te-* derivative (*tlacualli* for *cualli*, *quicohua* for *coatl*), a root with no dictionary entry, a bare or very short root, a spelling owned by another entry, or a word that merely contains the term (*mixcoatl*, *cihuapilli*).
+
+`TermIndex.search` is the only search: normalize (`parse`: question → word, `fold`) → loose key, then analyzer root → order (`terms.SCORES`; the detected language first). Dictionary (`/api/terms`), Archive (`/api/research`: a resolved word returns the passages of all its certain spellings, otherwise BM25 for phrases), Ask (`/api/ask`, `terms` field) and Documentary lookup (`/api/documentary`: the group's cited records first, then the measured ranking, unchanged) all call it; the browser draws the same block (`platform_web/terms.js`). Measured by `python -m nahuatl_local.term_evaluation` (`evaluation/term-groups-v1.json`, `reports/TERMINOS_EVALUACION.md`).

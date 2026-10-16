@@ -1,38 +1,30 @@
 """Consulta con evidencia: una palabra o pregunta → análisis, entradas y pasajes citados.
 
-Recuperación sin LLM sobre tres fuentes ya existentes:
+La resolución de la palabra es la búsqueda única del índice de términos
+(``terms.TermIndex``: normalizar → clave laxa / raíz → orden), la misma que usan
+Diccionario, Archivo y Consultar fichas. Sobre ella, Preguntar presenta:
 
-* el analizador morfológico y la concordancia por raíz (``stems``), para encontrar
+* el análisis morfológico y la concordancia por raíz (``stems``), para mostrar
   pasajes clásicos de la misma raíz aunque cambien prefijos y sufijos;
-* una **clave laxa** de grafía (``text.loose_key``), solo para recuperar: une la ortografía
-  moderna (SEP/INALI: k, kw, ts, w, j) con la colonial (c/qu, cu/qu, tz, hu, h) y
-  reduce consonantes dobles. No sustituye a la clave fonémica evaluada del analizador;
-* el modelo IBM-1 de pistas de glosa invertido, para preguntas en español
-  («¿cómo se dice mujer?»): raíces cuyos pasajes alineados traducen esa palabra.
+* las grafías del archivo con la misma **clave laxa** (``text.loose_key``), que une la
+  ortografía moderna (SEP/INALI) con la colonial; no sustituye a la clave del analizador;
+* para preguntas en español («¿cómo se dice mujer?»), las raíces cuyos pasajes
+  alineados traducen esa palabra (pistas IBM-1 invertidas del índice de términos).
 
 Cada resultado lleva su motivo («misma raíz», «otra grafía», «la traducción dice…»)
-y los IDs de los pasajes. Sin evidencia suficiente, la respuesta se abstiene.
+y los IDs de los pasajes; ``terms`` trae los grupos de término de la consulta.
+Sin evidencia suficiente, la respuesta se abstiene.
 """
-import re
-from collections import Counter, defaultdict
-from threading import Lock
+from collections import Counter
 
-from .morphology import WORD
-from . import passages
 from .passages import LABELS
 from .stems import ROOT, WordStudy, es_tokens
-from .text import es_key, fold, loose_key, readable, squash
+from .terms import TermIndex, parse
+from .text import es_key, loose_key, readable, squash
 
 EVIDENCE_VERSION = 'evidence-root-v1'
-# Pistas invertidas español → raíz: solo asociaciones con apoyo amplio.
-ES_MIN_SUPPORT = 8
-ES_MIN_P = 0.3
 NAH_HINT_SUPPORT = 5
-
-ASK_NAH = re.compile(r'^\s*¿?\s*(?:qu[eé]\s+(?:significa|quiere\s+decir)|significado\s+de)\s+(.+?)\s*\??\s*$', re.I)
-ASK_ES = re.compile(r'^\s*¿?\s*c[oó]mo\s+se\s+dice\s+(.+?)(?:\s+en\s+n[aá]huatl)?\s*\??\s*$', re.I)
 SHORT = 260  # pasajes breves primero: se leen mejor como ejemplo
-ARTICLE = re.compile(r'^(?:el|la|los|las|un|una)\s+', re.I)
 
 
 def _snippet_label(label, limit=120):
@@ -41,58 +33,23 @@ def _snippet_label(label, limit=120):
 
 
 class Evidence:
-    """Índices de recuperación construidos una vez sobre ``WordStudy``."""
+    """Consulta con evidencia sobre el índice de términos (``terms.TermIndex``): la misma búsqueda que las demás vistas."""
 
-    def __init__(self, word_study=None, root=ROOT):
-        self.word_study = word_study or WordStudy(root)
+    def __init__(self, word_study=None, root=ROOT, terms=None):
+        self.terms = terms or TermIndex(word_study or WordStudy(root), root)
+        self.word_study = self.terms.word_study
         self.root = root
-        self._lock = Lock()
         self._ready = False
 
     # -- construcción ---------------------------------------------------------
     def _build(self):
-        with self._lock:
-            if self._ready:
-                return
-            self.analyzer, self.concordance, self.hints = self.word_study._build()
-            self.rows = {r['id']: r for r in passages.load(self.root)}
-            self.postings = defaultdict(list)       # clave laxa → [(id, forma)]
-            self.nah_vocab = Counter()
-            self.es_vocab = Counter()
-            cache = {}
-            for rid, r in self.rows.items():
-                seen = set()
-                for m in WORD.finditer(r['nah']):
-                    w = m.group(0)
-                    lk = cache.get(w.casefold())
-                    if lk is None:
-                        lk = cache[w.casefold()] = loose_key(w)
-                    self.nah_vocab[lk] += 1
-                    if lk and lk not in seen:
-                        seen.add(lk)
-                        self.postings[lk].append((rid, w))
-                for key, _ in es_tokens(r['es']):
-                    self.es_vocab[key] += 1
-            # Diccionario por clave laxa de la forma escrita
-            self.lex_loose = defaultdict(list)
-            self.entries = {}
-            lexicon = self.analyzer.lexicon
-            for bucket in (lexicon.stems, lexicon.whole):
-                for hits in bucket.values():
-                    for h in hits:
-                        if h['sense_id'] in self.entries:
-                            continue
-                        self.entries[h['sense_id']] = h
-                        self.lex_loose[loose_key(h['written'] or '')].append(h)
-            # Pistas invertidas: palabra española → [(raíz, p, apoyo)]
-            self.es_to_stem = defaultdict(list)
-            for stem, rows in self.hints.table.items():
-                for h in rows:
-                    if h['support'] >= ES_MIN_SUPPORT and h['p'] >= ES_MIN_P:
-                        self.es_to_stem[h['es']].append(dict(stem_key=stem, p=h['p'], support=h['support']))
-            for rows in self.es_to_stem.values():
-                rows.sort(key=lambda h: (-h['p'] * min(1, h['support'] / 20), h['stem_key']))
-            self._ready = True
+        if self._ready:
+            return
+        t = self.terms
+        t._build()
+        self.analyzer, self.concordance, self.hints = t.analyzer, t.concordance, t.hints
+        self.rows, self.postings, self.entries, self.lex_loose = t.rows, t.postings, t.entries, t.lex_loose
+        self._ready = True
 
     # -- utilidades -----------------------------------------------------------
     def _entry(self, h, how):
@@ -105,29 +62,11 @@ class Evidence:
                     variety=LABELS.get(r['iso'], r['iso']), form=form, why=why)
 
     def parse(self, query):
-        """Devuelve (palabra, idioma pedido o None). Una palabra por consulta."""
-        if not isinstance(query, str) or not query.strip() or len(query) > 120:
-            raise ValueError('Escribe una palabra o una pregunta breve (hasta 120 caracteres).')
-        language, text = None, query.strip()
-        for pattern, lang in ((ASK_NAH, 'nah'), (ASK_ES, 'es')):
-            m = pattern.match(text)
-            if m:
-                language, text = lang, m.group(1)
-                break
-        text = ARTICLE.sub('', text.strip(' ¿?¡!.,;:«»"\'')).strip()
-        words = WORD.findall(text)
-        if len(words) != 1:
-            raise ValueError('Consulta una sola palabra, por ejemplo «nocal», «kuali» o «¿cómo se dice mujer?».')
-        return words[0], language
+        """Devuelve (palabra, idioma pedido o None): la normalización de ``terms.parse``."""
+        return parse(query)
 
     def detect(self, word):
-        lk = loose_key(word)
-        if lk in self.lex_loose:
-            return 'nah'
-        nah_n, es_n = self.nah_vocab[lk], self.es_vocab[es_key(word)]
-        if fold(word) != word.casefold() and nah_n == 0:
-            return 'es'  # acento español sin testimonio náhuatl
-        return 'es' if es_n > max(3, 2 * nah_n) else 'nah'
+        return self.terms.detect(word)
 
     # -- consulta ---------------------------------------------------------------
     def ask(self, query):
@@ -138,6 +77,7 @@ class Evidence:
         result.update(query=query.strip(), word=word, language=language,
                       method=dict(version=EVIDENCE_VERSION, analyzer=self.analyzer.fingerprint[:12] if getattr(self.analyzer, 'fingerprint', None) else None,
                                   model_calls=0, network_requests=0))
+        result['terms'] = self.terms.search(query, limit=3)['groups']
         result['abstained'] = not (result['entries'] or result['passages'] or result['other_varieties'])
         if result['abstained']:
             result['reason'] = ('No hay entrada del diccionario ni pasajes que sostengan una respuesta. '
@@ -146,14 +86,7 @@ class Evidence:
 
     def _variants(self, word):
         """Grafías del archivo con la misma clave laxa, por variedad."""
-        lk = loose_key(word)
-        counts = defaultdict(Counter)
-        for rid, w in self.postings.get(lk, []):
-            counts[w.casefold()][self.rows[rid]['iso']] += 1
-        out = [dict(form=f, total=sum(c.values()), by_variety={LABELS.get(k, k): n for k, n in c.most_common()})
-               for f, c in counts.items()]
-        out.sort(key=lambda v: (-v['total'], v['form']))
-        return out
+        return self.terms.variants(word)
 
     def _ask_nah(self, word):
         analyses = self.analyzer.analyze(word, limit=3)
@@ -227,19 +160,10 @@ class Evidence:
 
     def _ask_es(self, word):
         key = es_key(word)
-        pattern = re.compile(r'(?<![^\W\d_])' + re.escape(fold(word)) + r'(?:e?s)?(?![^\W\d_])')
-        entries = []
-        for h in self.entries.values():
-            label = fold(h['label'] or '')
-            m = pattern.search(label)
-            if m:
-                rank = (0 if m.start() == 0 else 1, h['automatic'], len(label), h['written'] or '')
-                entries.append((rank, h))
-        entries.sort(key=lambda x: x[0])
-        entries = [self._entry(h, 'la definición dice «%s»' % word) for _, h in entries[:5]]
+        entries = [self._entry(h, 'la definición dice «%s»' % word) for h in self.terms.spanish_entries(word)]
         entry_stems = {self.analyzer.best_stem(e['written']) for e in entries if e['written']}
         candidates, passages = [], []
-        for c in self.es_to_stem.get(key, [])[:3]:
+        for c in self.terms.spanish_stems(word):
             stem = c['stem_key']
             hits = [(rid, w) for rid, w in self.concordance.index.get(stem, [])
                     if key in {k for k, _ in es_tokens(self.rows[rid]['es'])}]

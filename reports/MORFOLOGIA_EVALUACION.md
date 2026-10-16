@@ -60,7 +60,7 @@ Muestra para revisión humana de precisión: `reports/morphology-review/stem-hit
 
 | Método | Precisión@1 | Acierto en top‑3 |
 |---|---:|---:|
-| cooccurrence | 25% | 37% |
+| cooccurrence | 19% | 36% |
 | dice | 23% | 36% |
 | ibm1 | 30% | 39% |
 
@@ -84,4 +84,4 @@ Ejemplos (IBM‑1):
 - Molina (1571) no es un diccionario completo ni moderno: una pista correcta puede no aparecer en su definición.
 - Ninguna cifra mide comprensión lectora ni calidad de traducción.
 
-Tiempo de ejecución: 19.8 s.
+Tiempo de ejecución: 17.7 s.

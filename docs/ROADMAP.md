@@ -9,7 +9,7 @@ Updated 15 October 2026. This is the only planning document: `docs/PROGRESO_INTE
 | Readings | 12 guided readings · 48 passages from 10 works · every word analyzable, interlinear gloss | No specialist review; no learner trial yet |
 | Word study | 77% exact segmentation (52-form gold set); 41.8% of classical tokens linked to a dictionary root | Small dictionary (575 senses); visible errors (below) |
 | Ask (Preguntar) | Retrieval with evidence and cited explanations, no LLM: entry top-1 92% vs 42% for exact search (32 test queries) | Claude-written explanations not measured |
-| Archive | 16,111 aligned passages; ~10k are *not* classical (Puebla 2,884 · Morelos 1,938 · Central 1,543 · Huasteca 1,596 · unlabeled 2,157) | Archive search is spelling-sensitive; analyzer is classical-only |
+| Archive | 16,111 aligned passages; ~10k are *not* classical (Puebla 2,884 · Morelos 1,938 · Central 1,543 · Huasteca 1,596 · unlabeled 2,157) | Analyzer is classical-only; `ku+V` modern spellings (*kuautli*) still miss their colonial group |
 | Documentary lookup | BM25 + citation validator + abstention: 119/123 complete | Ranks glyph elements above the dictionary entry for "¿Qué significa xochitl?" |
 | Model lab | Qwen3‑0.6B + LoRA: best 22.4 chrF++ with RAG, below "top BM25 passage" (27.2) | The LLM has no product role yet |
 | Engineering | Python stdlib server, vanilla JS PWA; 274 Python tests + 5 DOM suites; CI on a clean clone | Cold start ~1 min until `data/derived/` exists |
@@ -20,7 +20,7 @@ Updated 15 October 2026. This is the only planning document: `docs/PROGRESO_INTE
 2. **Tests write into the repo.** Some still create temporary folders under `editorial/` and `reports/` (the editorial pipeline only writes there); they are removed on exit but pile up if a run is killed.
 3. ~~**Empty responses on server errors.**~~ Fixed: 500 JSON + local traceback.
 4. **Cold start ~55 s.** The first `/api/word` call waits for derived caches. `make demo` builds them first; the UI still needs a "preparando análisis" state.
-5. **Same word, three disjoint searches** in the Archive: *kuali* 74, *cualli* 294, *qualli* 42 results. Preguntar already uses a loose key; Archive search and the analyzer key do not.
+5. ~~**Same word, three disjoint searches**~~ Fixed 15 Oct (iteration 1a): *kuali*, *cualli* and *qualli* now open one term group (486 passages, every spelling by variety) in all four views.
 6. **Visible analyzer errors.** *Motecuhçoma* → "your" + root; *mictlan* → *m-ic-tlan*; *tlaca* → pluperfect; the particle *in* shows 4,576 "same-root" passages, including *tin* and *intzalan*.
 7. **Noisy gloss hints** on some roots: *mopohua* → «milpa, nuestra, dejó».
 8. **Phone layout.** About 310 px of header and navigation before any content.
@@ -35,6 +35,9 @@ Updated 15 October 2026. This is the only planning document: `docs/PROGRESO_INTE
 - Pending: the "preparando análisis" state while caches build, and a target of < 10 s to the first analysis.
 
 ### 1 · One search across spellings
+- **1a done (15 Oct): term index and one search.** `terms.py` groups each word with all its attested spellings (colonial, SEP/INALI, inflected), passages by variety and pictographic references with their scope (dictionary glyphs; Tlachia elements and readings); homographs (*tlacualli* vs *cualli*, *cohua* vs *coatl*) and words that only contain the term (*mixcoatl*) are listed apart, never counted. One pipeline (normalize → loose key / root → order) serves Diccionario, Archivo, Preguntar and Consultar fichas; `/api/search`, `CorpusStore.search`, the browser-side dictionary filter and the "¿forma flexionada?" suggestion were removed. Guide: [ARCHITECTURE.md §7](ARCHITECTURE.md).
+  - **Measure** ([reports/TERMINOS_EVALUACION.md](../reports/TERMINOS_EVALUACION.md), `evaluation/term-groups-v1.json`, 21 terms written before the index): test split (14 terms) — query → expected group 85.7% of 42 queries (81.0% on the first run, kept in `reports/term-groups-evaluation-first-test-run.json`; two generic fixes since: dictionary labels decide the language, roots under 3 symbols no longer pick a group), spelling coverage 95.5%, glyph coverage 100% (20/20 with scope), labeled precision 100% for spellings and glyphs. Dev: 96.7% of 30 queries, homographs kept out 9/9. Unchanged: Preguntar evaluation (entry@1 92.3% test, passage precision 94.4%), morphology evaluation, documentary lookup 119/123 (its ranker and measured inputs were not touched).
+  - Misses: *kuautli* (needs the `ku+V` key fix below), *mestli*/*meztli*, *sochitl*; *dios*, *ilhuicac* open their own archive group; *toxtli* → *amoxtli*; *jaguar* has no label.
 - Fix the analyzer key so `ku+V`, `kw` and `qu+a` map to the same symbol and `ts ≡ tz` (*kuali → kwali* but *cualli → qalli* today). Use the loose key from Preguntar in Archive and Dictionary search; show the original spelling, grouped by variety.
 - **Measure:** a 50-pair spelling-variant query set (recall of the union, before/after); re-run the morphology evaluation to check nothing regresses.
 

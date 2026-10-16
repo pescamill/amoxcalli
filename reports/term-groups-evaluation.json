@@ -1,0 +1,1231 @@
+{
+ "generated_by": "python -m nahuatl_local.term_evaluation",
+ "gold": "term-groups-v1",
+ "model_calls": 0,
+ "protocol": "Escrito antes de construir el índice de términos y antes de mirar sus resultados. Las expectativas vienen del conocimiento de la lengua y de los datos de entrada (nombres de glifos del diccionario y designaciones de Tlachia), no de la salida del índice. dev: términos vistos durante la exploración (los siete de la tarea y atl); test: escritos sin consultar la variación del archivo. No se ajusta el conjunto después de medir; una corrección se publica como v2.",
+ "summary": {
+  "all": {
+   "counts": {
+    "glyph_negatives": 11,
+    "glyph_negatives_in_certain": 0,
+    "glyphs_expected": 34,
+    "glyphs_found": 34,
+    "negatives": 9,
+    "negatives_in_certain": 0,
+    "spellings_expected": 50,
+    "spellings_found": 49,
+    "spellings_found_certain": 44
+   },
+   "glyph_coverage": 100.0,
+   "glyph_negatives_separated": 100.0,
+   "glyph_precision_labeled": 100.0,
+   "homographs_separated": 100.0,
+   "queries": 72,
+   "query_top1": 90.3,
+   "same_group": 66.7,
+   "spelling_coverage": 98.0,
+   "spelling_coverage_certain": 88.0,
+   "spelling_precision_labeled": 100.0,
+   "terms": 21
+  },
+  "dev": {
+   "counts": {
+    "glyph_negatives": 8,
+    "glyph_negatives_in_certain": 0,
+    "glyphs_expected": 14,
+    "glyphs_found": 14,
+    "negatives": 9,
+    "negatives_in_certain": 0,
+    "spellings_expected": 28,
+    "spellings_found": 28,
+    "spellings_found_certain": 25
+   },
+   "glyph_coverage": 100.0,
+   "glyph_negatives_separated": 100.0,
+   "glyph_precision_labeled": 100.0,
+   "homographs_separated": 100.0,
+   "queries": 30,
+   "query_top1": 96.7,
+   "same_group": 85.7,
+   "spelling_coverage": 100.0,
+   "spelling_coverage_certain": 89.3,
+   "spelling_precision_labeled": 100.0,
+   "terms": 7
+  },
+  "test": {
+   "counts": {
+    "glyph_negatives": 3,
+    "glyph_negatives_in_certain": 0,
+    "glyphs_expected": 20,
+    "glyphs_found": 20,
+    "negatives": 0,
+    "negatives_in_certain": 0,
+    "spellings_expected": 22,
+    "spellings_found": 21,
+    "spellings_found_certain": 19
+   },
+   "glyph_coverage": 100.0,
+   "glyph_negatives_separated": 100.0,
+   "glyph_precision_labeled": 100.0,
+   "homographs_separated": null,
+   "queries": 42,
+   "query_top1": 85.7,
+   "same_group": 57.1,
+   "spelling_coverage": 95.5,
+   "spelling_coverage_certain": 86.4,
+   "spelling_precision_labeled": 100.0,
+   "terms": 14
+  }
+ },
+ "terms": [
+  {
+   "glyph_negatives": 1,
+   "glyph_negatives_in_certain": 0,
+   "glyph_negatives_listed": [],
+   "glyphs_expected": 3,
+   "glyphs_found": 3,
+   "glyphs_found_any_tier": 3,
+   "group": "lemma-kalli",
+   "group_size": {
+    "attested": 5,
+    "glyphs": 14,
+    "glyphs_uncertain": 3,
+    "inflected": 30,
+    "passages": 768,
+    "uncertain": 6
+   },
+   "id": "calli",
+   "lemma": "calli",
+   "missing_glyphs": [],
+   "missing_spellings": [],
+   "negatives": 0,
+   "negatives_in_certain": [],
+   "negatives_marked_uncertain": 0,
+   "queries": [
+    {
+     "group": "lemma-kalli",
+     "lemma": "calli",
+     "query": "calli",
+     "why": "misma palabra"
+    },
+    {
+     "group": "lemma-kalli",
+     "lemma": "calli",
+     "query": "cali",
+     "why": "otra grafía"
+    },
+    {
+     "group": "lemma-kalli",
+     "lemma": "calli",
+     "query": "kali",
+     "why": "otra grafía"
+    },
+    {
+     "group": "lemma-kalli",
+     "lemma": "calli",
+     "query": "nocal",
+     "why": "forma flexionada (misma raíz)"
+    },
+    {
+     "group": "lemma-kalli",
+     "lemma": "calli",
+     "query": "casa",
+     "why": "la acepción dice «casa»"
+    }
+   ],
+   "queries_ok": 5,
+   "queries_total": 5,
+   "same_group": true,
+   "source": "dictionary",
+   "spellings_expected": 7,
+   "spellings_found": 7,
+   "spellings_found_certain": 7,
+   "split": "dev"
+  },
+  {
+   "glyph_negatives": 0,
+   "glyph_negatives_in_certain": 0,
+   "glyph_negatives_listed": [],
+   "glyphs_expected": 0,
+   "glyphs_found": 0,
+   "glyphs_found_any_tier": 0,
+   "group": "term-kwali",
+   "group_size": {
+    "attested": 8,
+    "glyphs": 0,
+    "glyphs_uncertain": 0,
+    "inflected": 0,
+    "passages": 486,
+    "uncertain": 114
+   },
+   "id": "cualli",
+   "lemma": "cualli",
+   "missing_glyphs": [],
+   "missing_spellings": [],
+   "negatives": 3,
+   "negatives_in_certain": [],
+   "negatives_marked_uncertain": 2,
+   "queries": [
+    {
+     "group": "term-kwali",
+     "lemma": "cualli",
+     "query": "kuali",
+     "why": "grafía del archivo (sin entrada en el diccionario)"
+    },
+    {
+     "group": "term-kwali",
+     "lemma": "cualli",
+     "query": "cualli",
+     "why": "grafía del archivo (sin entrada en el diccionario)"
+    },
+    {
+     "group": "term-kwali",
+     "lemma": "cualli",
+     "query": "qualli",
+     "why": "grafía del archivo (sin entrada en el diccionario)"
+    },
+    {
+     "group": "term-kwali",
+     "lemma": "cualli",
+     "query": "cuali",
+     "why": "grafía del archivo (sin entrada en el diccionario)"
+    },
+    {
+     "group": "term-kwali",
+     "lemma": "cualli",
+     "query": "kwali",
+     "why": "grafía del archivo (sin entrada en el diccionario)"
+    }
+   ],
+   "queries_ok": 5,
+   "queries_total": 5,
+   "same_group": true,
+   "source": "archive",
+   "spellings_expected": 6,
+   "spellings_found": 6,
+   "spellings_found_certain": 5,
+   "split": "dev"
+  },
+  {
+   "glyph_negatives": 0,
+   "glyph_negatives_in_certain": 0,
+   "glyph_negatives_listed": [],
+   "glyphs_expected": 2,
+   "glyphs_found": 2,
+   "glyphs_found_any_tier": 2,
+   "group": "lemma-tonatiw",
+   "group_size": {
+    "attested": 3,
+    "glyphs": 3,
+    "glyphs_uncertain": 12,
+    "inflected": 2,
+    "passages": 235,
+    "uncertain": 9
+   },
+   "id": "tonatiuh",
+   "lemma": "tonatiuh",
+   "missing_glyphs": [],
+   "missing_spellings": [],
+   "negatives": 0,
+   "negatives_in_certain": [],
+   "negatives_marked_uncertain": 0,
+   "queries": [
+    {
+     "group": "lemma-tonatiw",
+     "lemma": "tonatiuh",
+     "query": "tonatiuh",
+     "why": "misma palabra"
+    },
+    {
+     "group": "lemma-tonatiw",
+     "lemma": "tonatiuh",
+     "query": "tonatiu",
+     "why": "otra grafía"
+    },
+    {
+     "group": "lemma-tonatiw",
+     "lemma": "tonatiuh",
+     "query": "tonatiw",
+     "why": "otra grafía"
+    },
+    {
+     "group": "lemma-tonatiw",
+     "lemma": "tonatiuh",
+     "query": "sol",
+     "why": "la acepción dice «sol»"
+    }
+   ],
+   "queries_ok": 4,
+   "queries_total": 4,
+   "same_group": true,
+   "source": "dictionary",
+   "spellings_expected": 2,
+   "spellings_found": 2,
+   "spellings_found_certain": 2,
+   "split": "dev"
+  },
+  {
+   "glyph_negatives": 3,
+   "glyph_negatives_in_certain": 0,
+   "glyph_negatives_listed": [],
+   "glyphs_expected": 3,
+   "glyphs_found": 3,
+   "glyphs_found_any_tier": 3,
+   "group": "lemma-koatl",
+   "group_size": {
+    "attested": 3,
+    "glyphs": 11,
+    "glyphs_uncertain": 26,
+    "inflected": 7,
+    "passages": 63,
+    "uncertain": 18
+   },
+   "id": "coatl",
+   "lemma": "coatl",
+   "missing_glyphs": [],
+   "missing_spellings": [],
+   "negatives": 6,
+   "negatives_in_certain": [],
+   "negatives_marked_uncertain": 4,
+   "queries": [
+    {
+     "group": "lemma-koatl",
+     "lemma": "coatl",
+     "query": "coatl",
+     "why": "misma palabra"
+    },
+    {
+     "group": "lemma-koatl",
+     "lemma": "coatl",
+     "query": "cohuatl",
+     "why": "otra grafía"
+    },
+    {
+     "group": "lemma-koatl",
+     "lemma": "coatl",
+     "query": "couatl",
+     "why": "otra grafía"
+    },
+    {
+     "group": "lemma-koatl",
+     "lemma": "coatl",
+     "query": "koatl",
+     "why": "otra grafía"
+    },
+    {
+     "group": "lemma-koatl",
+     "lemma": "coatl",
+     "query": "serpiente",
+     "why": "la acepción dice «serpiente»"
+    }
+   ],
+   "queries_ok": 5,
+   "queries_total": 5,
+   "same_group": true,
+   "source": "dictionary",
+   "spellings_expected": 4,
+   "spellings_found": 4,
+   "spellings_found_certain": 4,
+   "split": "dev"
+  },
+  {
+   "glyph_negatives": 1,
+   "glyph_negatives_in_certain": 0,
+   "glyph_negatives_listed": [],
+   "glyphs_expected": 1,
+   "glyphs_found": 1,
+   "glyphs_found_any_tier": 1,
+   "group": "term-siwatl",
+   "group_size": {
+    "attested": 5,
+    "glyphs": 1,
+    "glyphs_uncertain": 1,
+    "inflected": 0,
+    "passages": 63,
+    "uncertain": 56
+   },
+   "id": "cihuatl",
+   "lemma": "cihuatl",
+   "missing_glyphs": [],
+   "missing_spellings": [],
+   "negatives": 0,
+   "negatives_in_certain": [],
+   "negatives_marked_uncertain": 0,
+   "queries": [
+    {
+     "group": "term-siwatl",
+     "lemma": "cihuatl",
+     "query": "mujer",
+     "why": "Tlachia: «mujer» designa este elemento"
+    },
+    {
+     "group": "term-siwatl",
+     "lemma": "cihuatl",
+     "query": "cihuatl",
+     "why": "grafía del archivo (sin entrada en el diccionario)"
+    },
+    {
+     "group": "term-siwatl",
+     "lemma": "cihuatl",
+     "query": "ciuatl",
+     "why": "grafía del archivo (sin entrada en el diccionario)"
+    },
+    {
+     "group": "term-siwatl",
+     "lemma": "cihuatl",
+     "query": "siuatl",
+     "why": "grafía del archivo (sin entrada en el diccionario)"
+    },
+    {
+     "group": "term-siwatl",
+     "lemma": "cihuatl",
+     "query": "siwatl",
+     "why": "grafía del archivo (sin entrada en el diccionario)"
+    }
+   ],
+   "queries_ok": 5,
+   "queries_total": 5,
+   "same_group": true,
+   "source": "archive",
+   "spellings_expected": 5,
+   "spellings_found": 5,
+   "spellings_found_certain": 3,
+   "split": "dev"
+  },
+  {
+   "glyph_negatives": 3,
+   "glyph_negatives_in_certain": 0,
+   "glyph_negatives_listed": [],
+   "glyphs_expected": 3,
+   "glyphs_found": 3,
+   "glyphs_found_any_tier": 3,
+   "group": "lemma-xochitl",
+   "group_size": {
+    "attested": 2,
+    "glyphs": 7,
+    "glyphs_uncertain": 21,
+    "inflected": 11,
+    "passages": 138,
+    "uncertain": 73
+   },
+   "id": "xochitl",
+   "lemma": "xochitl",
+   "missing_glyphs": [],
+   "missing_spellings": [],
+   "negatives": 0,
+   "negatives_in_certain": [],
+   "negatives_marked_uncertain": 0,
+   "queries": [
+    {
+     "group": "lemma-xochitl",
+     "lemma": "xochitl",
+     "query": "xochitl",
+     "why": "misma palabra"
+    },
+    {
+     "group": "lemma-xochitl",
+     "lemma": "xochitl",
+     "query": "xuchitl",
+     "why": "otra grafía"
+    },
+    {
+     "group": null,
+     "lemma": null,
+     "query": "sochitl",
+     "why": null
+    },
+    {
+     "group": "lemma-xochitl",
+     "lemma": "xochitl",
+     "query": "flor",
+     "why": "la acepción dice «flor»"
+    }
+   ],
+   "queries_ok": 3,
+   "queries_total": 4,
+   "same_group": false,
+   "source": "dictionary",
+   "spellings_expected": 3,
+   "spellings_found": 3,
+   "spellings_found_certain": 3,
+   "split": "dev"
+  },
+  {
+   "glyph_negatives": 0,
+   "glyph_negatives_in_certain": 0,
+   "glyph_negatives_listed": [],
+   "glyphs_expected": 2,
+   "glyphs_found": 2,
+   "glyphs_found_any_tier": 2,
+   "group": "lemma-atl",
+   "group_size": {
+    "attested": 2,
+    "glyphs": 10,
+    "glyphs_uncertain": 0,
+    "inflected": 0,
+    "passages": 242,
+    "uncertain": 1
+   },
+   "id": "atl",
+   "lemma": "atl",
+   "missing_glyphs": [],
+   "missing_spellings": [],
+   "negatives": 0,
+   "negatives_in_certain": [],
+   "negatives_marked_uncertain": 0,
+   "queries": [
+    {
+     "group": "lemma-atl",
+     "lemma": "atl",
+     "query": "atl",
+     "why": "misma palabra"
+    },
+    {
+     "group": "lemma-atl",
+     "lemma": "atl",
+     "query": "agua",
+     "why": "la acepción dice «agua»"
+    }
+   ],
+   "queries_ok": 2,
+   "queries_total": 2,
+   "same_group": true,
+   "source": "dictionary",
+   "spellings_expected": 1,
+   "spellings_found": 1,
+   "spellings_found_certain": 1,
+   "split": "dev"
+  },
+  {
+   "glyph_negatives": 0,
+   "glyph_negatives_in_certain": 0,
+   "glyph_negatives_listed": [],
+   "glyphs_expected": 1,
+   "glyphs_found": 1,
+   "glyphs_found_any_tier": 1,
+   "group": "term-tlakatl",
+   "group_size": {
+    "attested": 2,
+    "glyphs": 17,
+    "glyphs_uncertain": 0,
+    "inflected": 0,
+    "passages": 458,
+    "uncertain": 48
+   },
+   "id": "tlacatl",
+   "lemma": "tlacatl",
+   "missing_glyphs": [],
+   "missing_spellings": [
+    "tlacah"
+   ],
+   "negatives": 0,
+   "negatives_in_certain": [],
+   "negatives_marked_uncertain": 0,
+   "queries": [
+    {
+     "group": "term-tlakatl",
+     "lemma": "tlacatl",
+     "query": "tlacatl",
+     "why": "grafía del archivo (sin entrada en el diccionario)"
+    },
+    {
+     "group": "term-tlakatl",
+     "lemma": "tlacatl",
+     "query": "tlakatl",
+     "why": "grafía del archivo (sin entrada en el diccionario)"
+    },
+    {
+     "group": "term-tlakatl",
+     "lemma": "tlacatl",
+     "query": "hombre",
+     "why": "Tlachia: «hombre» designa este elemento"
+    }
+   ],
+   "queries_ok": 3,
+   "queries_total": 3,
+   "same_group": true,
+   "source": "archive",
+   "spellings_expected": 3,
+   "spellings_found": 2,
+   "spellings_found_certain": 2,
+   "split": "test"
+  },
+  {
+   "glyph_negatives": 0,
+   "glyph_negatives_in_certain": 0,
+   "glyph_negatives_listed": [],
+   "glyphs_expected": 2,
+   "glyphs_found": 2,
+   "glyphs_found_any_tier": 2,
+   "group": "lemma-tochtli",
+   "group_size": {
+    "attested": 1,
+    "glyphs": 6,
+    "glyphs_uncertain": 0,
+    "inflected": 4,
+    "passages": 277,
+    "uncertain": 4
+   },
+   "id": "tochtli",
+   "lemma": "tochtli",
+   "missing_glyphs": [],
+   "missing_spellings": [],
+   "negatives": 0,
+   "negatives_in_certain": [],
+   "negatives_marked_uncertain": 0,
+   "queries": [
+    {
+     "group": "lemma-tochtli",
+     "lemma": "tochtli",
+     "query": "tochtli",
+     "why": "misma palabra"
+    },
+    {
+     "group": "term-amoxtli",
+     "lemma": "amoxtli",
+     "query": "toxtli",
+     "why": "misma raíz (sin esta grafía en el archivo)"
+    },
+    {
+     "group": "lemma-tochtli",
+     "lemma": "tochtli",
+     "query": "conejo",
+     "why": "la acepción dice «conejo»"
+    }
+   ],
+   "queries_ok": 2,
+   "queries_total": 3,
+   "same_group": false,
+   "source": "dictionary",
+   "spellings_expected": 1,
+   "spellings_found": 1,
+   "spellings_found_certain": 1,
+   "split": "test"
+  },
+  {
+   "glyph_negatives": 0,
+   "glyph_negatives_in_certain": 0,
+   "glyph_negatives_listed": [],
+   "glyphs_expected": 2,
+   "glyphs_found": 2,
+   "glyphs_found_any_tier": 2,
+   "group": "lemma-itzkwintli",
+   "group_size": {
+    "attested": 1,
+    "glyphs": 6,
+    "glyphs_uncertain": 0,
+    "inflected": 0,
+    "passages": 0,
+    "uncertain": 1
+   },
+   "id": "itzcuintli",
+   "lemma": "itzcuintli",
+   "missing_glyphs": [],
+   "missing_spellings": [],
+   "negatives": 0,
+   "negatives_in_certain": [],
+   "negatives_marked_uncertain": 0,
+   "queries": [
+    {
+     "group": "lemma-itzkwintli",
+     "lemma": "itzcuintli",
+     "query": "itzcuintli",
+     "why": "misma palabra"
+    },
+    {
+     "group": "lemma-itzkwintli",
+     "lemma": "itzcuintli",
+     "query": "itskuintli",
+     "why": "otra grafía"
+    },
+    {
+     "group": "lemma-itzkwintli",
+     "lemma": "itzcuintli",
+     "query": "perro",
+     "why": "la acepción dice «perro»"
+    }
+   ],
+   "queries_ok": 3,
+   "queries_total": 3,
+   "same_group": true,
+   "source": "dictionary",
+   "spellings_expected": 1,
+   "spellings_found": 1,
+   "spellings_found_certain": 1,
+   "split": "test"
+  },
+  {
+   "glyph_negatives": 2,
+   "glyph_negatives_in_certain": 0,
+   "glyph_negatives_listed": [],
+   "glyphs_expected": 2,
+   "glyphs_found": 2,
+   "glyphs_found_any_tier": 2,
+   "group": "lemma-ekatl",
+   "group_size": {
+    "attested": 6,
+    "glyphs": 5,
+    "glyphs_uncertain": 4,
+    "inflected": 6,
+    "passages": 109,
+    "uncertain": 1
+   },
+   "id": "ehecatl",
+   "lemma": "eecatl",
+   "missing_glyphs": [],
+   "missing_spellings": [],
+   "negatives": 0,
+   "negatives_in_certain": [],
+   "negatives_marked_uncertain": 0,
+   "queries": [
+    {
+     "group": "lemma-ekatl",
+     "lemma": "eecatl",
+     "query": "ehecatl",
+     "why": "misma palabra"
+    },
+    {
+     "group": "lemma-ekatl",
+     "lemma": "eecatl",
+     "query": "ehekatl",
+     "why": "otra grafía"
+    },
+    {
+     "group": "lemma-ekatl",
+     "lemma": "eecatl",
+     "query": "viento",
+     "why": "la acepción dice «viento»"
+    }
+   ],
+   "queries_ok": 3,
+   "queries_total": 3,
+   "same_group": true,
+   "source": "dictionary",
+   "spellings_expected": 1,
+   "spellings_found": 1,
+   "spellings_found_certain": 1,
+   "split": "test"
+  },
+  {
+   "glyph_negatives": 0,
+   "glyph_negatives_in_certain": 0,
+   "glyph_negatives_listed": [],
+   "glyphs_expected": 2,
+   "glyphs_found": 2,
+   "glyphs_found_any_tier": 2,
+   "group": "lemma-masatl",
+   "group_size": {
+    "attested": 2,
+    "glyphs": 6,
+    "glyphs_uncertain": 0,
+    "inflected": 5,
+    "passages": 28,
+    "uncertain": 8
+   },
+   "id": "mazatl",
+   "lemma": "mazatl",
+   "missing_glyphs": [],
+   "missing_spellings": [],
+   "negatives": 0,
+   "negatives_in_certain": [],
+   "negatives_marked_uncertain": 0,
+   "queries": [
+    {
+     "group": "lemma-masatl",
+     "lemma": "mazatl",
+     "query": "mazatl",
+     "why": "misma palabra"
+    },
+    {
+     "group": "lemma-masatl",
+     "lemma": "mazatl",
+     "query": "masatl",
+     "why": "otra grafía"
+    },
+    {
+     "group": "lemma-masatl",
+     "lemma": "mazatl",
+     "query": "venado",
+     "why": "la acepción dice «venado»"
+    }
+   ],
+   "queries_ok": 3,
+   "queries_total": 3,
+   "same_group": true,
+   "source": "dictionary",
+   "spellings_expected": 1,
+   "spellings_found": 1,
+   "spellings_found_certain": 1,
+   "split": "test"
+  },
+  {
+   "glyph_negatives": 0,
+   "glyph_negatives_in_certain": 0,
+   "glyph_negatives_listed": [],
+   "glyphs_expected": 2,
+   "glyphs_found": 2,
+   "glyphs_found_any_tier": 2,
+   "group": "term-oselotl",
+   "group_size": {
+    "attested": 4,
+    "glyphs": 4,
+    "glyphs_uncertain": 0,
+    "inflected": 0,
+    "passages": 30,
+    "uncertain": 14
+   },
+   "id": "ocelotl",
+   "lemma": "ocelotl",
+   "missing_glyphs": [],
+   "missing_spellings": [],
+   "negatives": 0,
+   "negatives_in_certain": [],
+   "negatives_marked_uncertain": 0,
+   "queries": [
+    {
+     "group": "term-oselotl",
+     "lemma": "ocelotl",
+     "query": "ocelotl",
+     "why": "grafía del archivo (sin entrada en el diccionario)"
+    },
+    {
+     "group": "term-oselotl",
+     "lemma": "ocelotl",
+     "query": "oselotl",
+     "why": "grafía del archivo (sin entrada en el diccionario)"
+    },
+    {
+     "group": null,
+     "lemma": null,
+     "query": "jaguar",
+     "why": null
+    }
+   ],
+   "queries_ok": 2,
+   "queries_total": 3,
+   "same_group": false,
+   "source": "archive",
+   "spellings_expected": 1,
+   "spellings_found": 1,
+   "spellings_found_certain": 1,
+   "split": "test"
+  },
+  {
+   "glyph_negatives": 1,
+   "glyph_negatives_in_certain": 0,
+   "glyph_negatives_listed": [],
+   "glyphs_expected": 2,
+   "glyphs_found": 2,
+   "glyphs_found_any_tier": 2,
+   "group": "term-kwawtli",
+   "group_size": {
+    "attested": 2,
+    "glyphs": 9,
+    "glyphs_uncertain": 3,
+    "inflected": 0,
+    "passages": 45,
+    "uncertain": 39
+   },
+   "id": "cuauhtli",
+   "lemma": "quauhtli",
+   "missing_glyphs": [],
+   "missing_spellings": [],
+   "negatives": 0,
+   "negatives_in_certain": [],
+   "negatives_marked_uncertain": 0,
+   "queries": [
+    {
+     "group": "term-kwawtli",
+     "lemma": "quauhtli",
+     "query": "cuauhtli",
+     "why": "grafía del archivo (sin entrada en el diccionario)"
+    },
+    {
+     "group": "term-kwawtli",
+     "lemma": "quauhtli",
+     "query": "quauhtli",
+     "why": "grafía del archivo (sin entrada en el diccionario)"
+    },
+    {
+     "group": null,
+     "lemma": null,
+     "query": "kuautli",
+     "why": null
+    },
+    {
+     "group": "term-kwawtli",
+     "lemma": "quauhtli",
+     "query": "águila",
+     "why": "Tlachia: «águila» designa este elemento"
+    }
+   ],
+   "queries_ok": 3,
+   "queries_total": 4,
+   "same_group": false,
+   "source": "archive",
+   "spellings_expected": 2,
+   "spellings_found": 2,
+   "spellings_found_certain": 2,
+   "split": "test"
+  },
+  {
+   "glyph_negatives": 0,
+   "glyph_negatives_in_certain": 0,
+   "glyph_negatives_listed": [],
+   "glyphs_expected": 2,
+   "glyphs_found": 2,
+   "glyphs_found_any_tier": 2,
+   "group": "term-tekpatl",
+   "group_size": {
+    "attested": 1,
+    "glyphs": 6,
+    "glyphs_uncertain": 0,
+    "inflected": 0,
+    "passages": 283,
+    "uncertain": 10
+   },
+   "id": "tecpatl",
+   "lemma": "tecpatl",
+   "missing_glyphs": [],
+   "missing_spellings": [],
+   "negatives": 0,
+   "negatives_in_certain": [],
+   "negatives_marked_uncertain": 0,
+   "queries": [
+    {
+     "group": "term-tekpatl",
+     "lemma": "tecpatl",
+     "query": "tecpatl",
+     "why": "grafía del archivo (sin entrada en el diccionario)"
+    },
+    {
+     "group": "term-tekpatl",
+     "lemma": "tecpatl",
+     "query": "tekpatl",
+     "why": "grafía del archivo (sin entrada en el diccionario)"
+    },
+    {
+     "group": "term-tekpatl",
+     "lemma": "tecpatl",
+     "query": "pedernal",
+     "why": "Tlachia: «pedernal» designa este elemento"
+    }
+   ],
+   "queries_ok": 3,
+   "queries_total": 3,
+   "same_group": true,
+   "source": "archive",
+   "spellings_expected": 1,
+   "spellings_found": 1,
+   "spellings_found_certain": 1,
+   "split": "test"
+  },
+  {
+   "glyph_negatives": 0,
+   "glyph_negatives_in_certain": 0,
+   "glyph_negatives_listed": [],
+   "glyphs_expected": 2,
+   "glyphs_found": 2,
+   "glyphs_found_any_tier": 2,
+   "group": "term-sipaktli",
+   "group_size": {
+    "attested": 1,
+    "glyphs": 5,
+    "glyphs_uncertain": 0,
+    "inflected": 0,
+    "passages": 2,
+    "uncertain": 2
+   },
+   "id": "cipactli",
+   "lemma": "cipactli",
+   "missing_glyphs": [],
+   "missing_spellings": [],
+   "negatives": 0,
+   "negatives_in_certain": [],
+   "negatives_marked_uncertain": 0,
+   "queries": [
+    {
+     "group": "term-sipaktli",
+     "lemma": "cipactli",
+     "query": "cipactli",
+     "why": "grafía del archivo (sin entrada en el diccionario)"
+    },
+    {
+     "group": "term-sipaktli",
+     "lemma": "cipactli",
+     "query": "sipaktli",
+     "why": "grafía del archivo (sin entrada en el diccionario)"
+    }
+   ],
+   "queries_ok": 2,
+   "queries_total": 2,
+   "same_group": true,
+   "source": "archive",
+   "spellings_expected": 1,
+   "spellings_found": 1,
+   "spellings_found_certain": 1,
+   "split": "test"
+  },
+  {
+   "glyph_negatives": 0,
+   "glyph_negatives_in_certain": 0,
+   "glyph_negatives_listed": [],
+   "glyphs_expected": 2,
+   "glyphs_found": 2,
+   "glyphs_found_any_tier": 2,
+   "group": "term-osomatli",
+   "group_size": {
+    "attested": 2,
+    "glyphs": 5,
+    "glyphs_uncertain": 0,
+    "inflected": 0,
+    "passages": 5,
+    "uncertain": 3
+   },
+   "id": "ozomatli",
+   "lemma": "ozomatli",
+   "missing_glyphs": [],
+   "missing_spellings": [],
+   "negatives": 0,
+   "negatives_in_certain": [],
+   "negatives_marked_uncertain": 0,
+   "queries": [
+    {
+     "group": "term-osomatli",
+     "lemma": "ozomatli",
+     "query": "ozomatli",
+     "why": "grafía del archivo (sin entrada en el diccionario)"
+    },
+    {
+     "group": "term-osomatli",
+     "lemma": "ozomatli",
+     "query": "osomatli",
+     "why": "grafía del archivo (sin entrada en el diccionario)"
+    },
+    {
+     "group": "term-osomatli",
+     "lemma": "ozomatli",
+     "query": "mono",
+     "why": "Tlachia: «mono» designa este elemento"
+    }
+   ],
+   "queries_ok": 3,
+   "queries_total": 3,
+   "same_group": true,
+   "source": "archive",
+   "spellings_expected": 1,
+   "spellings_found": 1,
+   "spellings_found_certain": 1,
+   "split": "test"
+  },
+  {
+   "glyph_negatives": 0,
+   "glyph_negatives_in_certain": 0,
+   "glyph_negatives_listed": [],
+   "glyphs_expected": 0,
+   "glyphs_found": 0,
+   "glyphs_found_any_tier": 0,
+   "group": "term-teotl",
+   "group_size": {
+    "attested": 3,
+    "glyphs": 0,
+    "glyphs_uncertain": 27,
+    "inflected": 0,
+    "passages": 60,
+    "uncertain": 18
+   },
+   "id": "teotl",
+   "lemma": "teotl",
+   "missing_glyphs": [],
+   "missing_spellings": [],
+   "negatives": 0,
+   "negatives_in_certain": [],
+   "negatives_marked_uncertain": 0,
+   "queries": [
+    {
+     "group": "term-teotl",
+     "lemma": "teotl",
+     "query": "teotl",
+     "why": "grafía del archivo (sin entrada en el diccionario)"
+    },
+    {
+     "group": "term-teotl",
+     "lemma": "teotl",
+     "query": "teutl",
+     "why": "grafía del archivo (sin entrada en el diccionario)"
+    },
+    {
+     "group": "term-dios",
+     "lemma": "dios",
+     "query": "dios",
+     "why": "grafía del archivo (sin entrada en el diccionario)"
+    }
+   ],
+   "queries_ok": 2,
+   "queries_total": 3,
+   "same_group": false,
+   "source": "archive",
+   "spellings_expected": 3,
+   "spellings_found": 3,
+   "spellings_found_certain": 2,
+   "split": "test"
+  },
+  {
+   "glyph_negatives": 0,
+   "glyph_negatives_in_certain": 0,
+   "glyph_negatives_listed": [],
+   "glyphs_expected": 0,
+   "glyphs_found": 0,
+   "glyphs_found_any_tier": 0,
+   "group": "lemma-tlalli",
+   "group_size": {
+    "attested": 2,
+    "glyphs": 1,
+    "glyphs_uncertain": 27,
+    "inflected": 18,
+    "passages": 628,
+    "uncertain": 11
+   },
+   "id": "tlalli",
+   "lemma": "tlalli",
+   "missing_glyphs": [],
+   "missing_spellings": [],
+   "negatives": 0,
+   "negatives_in_certain": [],
+   "negatives_marked_uncertain": 0,
+   "queries": [
+    {
+     "group": "lemma-tlalli",
+     "lemma": "tlalli",
+     "query": "tlalli",
+     "why": "misma palabra"
+    },
+    {
+     "group": "lemma-tlalli",
+     "lemma": "tlalli",
+     "query": "tlali",
+     "why": "otra grafía"
+    },
+    {
+     "group": "lemma-tlalli",
+     "lemma": "tlalli",
+     "query": "tierra",
+     "why": "la acepción dice «tierra»"
+    }
+   ],
+   "queries_ok": 3,
+   "queries_total": 3,
+   "same_group": true,
+   "source": "dictionary",
+   "spellings_expected": 3,
+   "spellings_found": 3,
+   "spellings_found_certain": 3,
+   "split": "test"
+  },
+  {
+   "glyph_negatives": 0,
+   "glyph_negatives_in_certain": 0,
+   "glyph_negatives_listed": [],
+   "glyphs_expected": 0,
+   "glyphs_found": 0,
+   "glyphs_found_any_tier": 0,
+   "group": "term-ilwikatl",
+   "group_size": {
+    "attested": 5,
+    "glyphs": 0,
+    "glyphs_uncertain": 0,
+    "inflected": 0,
+    "passages": 45,
+    "uncertain": 7
+   },
+   "id": "ilhuicatl",
+   "lemma": "ilhuicatl",
+   "missing_glyphs": [],
+   "missing_spellings": [],
+   "negatives": 0,
+   "negatives_in_certain": [],
+   "negatives_marked_uncertain": 0,
+   "queries": [
+    {
+     "group": "term-ilwikatl",
+     "lemma": "ilhuicatl",
+     "query": "ilhuicatl",
+     "why": "grafía del archivo (sin entrada en el diccionario)"
+    },
+    {
+     "group": "term-ilwikak",
+     "lemma": "ilhuicac",
+     "query": "ilhuicac",
+     "why": "grafía del archivo (sin entrada en el diccionario)"
+    },
+    {
+     "group": "term-ilwikatl",
+     "lemma": "ilhuicatl",
+     "query": "cielo",
+     "why": "las traducciones del archivo dicen «cielo»"
+    }
+   ],
+   "queries_ok": 2,
+   "queries_total": 3,
+   "same_group": false,
+   "source": "archive",
+   "spellings_expected": 2,
+   "spellings_found": 2,
+   "spellings_found_certain": 1,
+   "split": "test"
+  },
+  {
+   "glyph_negatives": 0,
+   "glyph_negatives_in_certain": 0,
+   "glyph_negatives_listed": [],
+   "glyphs_expected": 1,
+   "glyphs_found": 1,
+   "glyphs_found_any_tier": 1,
+   "group": "lemma-metztli",
+   "group_size": {
+    "attested": 3,
+    "glyphs": 2,
+    "glyphs_uncertain": 0,
+    "inflected": 3,
+    "passages": 464,
+    "uncertain": 2
+   },
+   "id": "metztli",
+   "lemma": "metztli",
+   "missing_glyphs": [],
+   "missing_spellings": [],
+   "negatives": 0,
+   "negatives_in_certain": [],
+   "negatives_marked_uncertain": 0,
+   "queries": [
+    {
+     "group": "lemma-metztli",
+     "lemma": "metztli",
+     "query": "metztli",
+     "why": "misma palabra"
+    },
+    {
+     "group": "term-mestli",
+     "lemma": "meztli",
+     "query": "mestli",
+     "why": "grafía del archivo (sin entrada en el diccionario)"
+    },
+    {
+     "group": "lemma-metztli",
+     "lemma": "metztli",
+     "query": "luna",
+     "why": "la acepción dice «luna»"
+    }
+   ],
+   "queries_ok": 2,
+   "queries_total": 3,
+   "same_group": false,
+   "source": "dictionary",
+   "spellings_expected": 1,
+   "spellings_found": 1,
+   "spellings_found_certain": 1,
+   "split": "test"
+  }
+ ],
+ "version": "terms-v1"
+}

@@ -13,13 +13,14 @@ Un cambio solo de interfaz (`platform.py`, `platform_web/*`, pruebas DOM) **no**
 | `documentary-laboratory-v1.json` | `python3 -m nahuatl_local.documentary_laboratory` | Laboratorio · Modelo y progreso (deriva del anterior) |
 | `evidence-evaluation.json`, `EVIDENCIA_EVALUACION.md` | `python3 -m nahuatl_local.evidence_evaluation` | Preguntar ([docs/EVIDENCIA.md](../docs/EVIDENCIA.md)) |
 | `morphology-evaluation.json`, `MORFOLOGIA_EVALUACION.md`, `morphology-review/stem-hits-sample.csv` | `python3 -m nahuatl_local.morphology_evaluation` | Analizar cualquier palabra ([docs/MORFOLOGIA.md](../docs/MORFOLOGIA.md)) |
+| `term-groups-evaluation.json`, `TERMINOS_EVALUACION.md` | `python3 -m nahuatl_local.term_evaluation` | Grupos de término: grafías, glifos y precisión ([evaluation/term-groups-v1.json](../evaluation/term-groups-v1.json)) |
 | `glyph-coverage-v7.json` | `python3 -m nahuatl_local.glyph_linker` (en `make reports`, sin reescribir el lote del corpus) | Cobertura de referencias glíficas |
 
 Las cifras de tiempo y memoria cambian en cada corrida; las métricas no deben cambiar si no cambian las entradas medidas.
 
 ## Líneas base de la primera corrida sobre prueba (no se regeneran)
 
-`morphology-evaluation-first-test-run.json` y `evidence-evaluation-first-test-run.md` conservan el primer resultado sobre la partición `test`, antes de corregir fallos. Los informes vigentes las citan para que la mejora posterior no se confunda con ajuste a la prueba.
+`morphology-evaluation-first-test-run.json`, `evidence-evaluation-first-test-run.md` y `term-groups-evaluation-first-test-run.json` conservan el primer resultado sobre la partición `test`, antes de corregir fallos. Los informes vigentes las citan para que la mejora posterior no se confunda con ajuste a la prueba.
 
 ## Laboratorio LLM · requieren `requirements.txt`, `data/prepared/` y pesos · `make reports-model`
 

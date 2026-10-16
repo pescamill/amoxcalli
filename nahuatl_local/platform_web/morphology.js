@@ -99,18 +99,3 @@ function clickableWords(text,mask=null){
  }
  return out+esc(text.slice(end));
 }
-// Diccionario: si una forma flexionada no tiene entrada, sugerir su raíz.
-async function dictionaryWordSuggestion(slot,query){
- if(!slot||!/^[\p{L}\p{M}]+$/u.test(query))return;
- if(typeof askSuggestion==='function')return askSuggestion(slot,query);
- try{
-  const data=await morphWord(query);
-  if(!slot.isConnected)return;
-  const linked=(data.analyses||[]).filter(a=>a.dictionary?.length&&a.morphemes.some(m=>m.role!=='stem')).slice(0,2);
-  const best=data.analyses?.[0];
-  if(!best||best.basis==='rules')return;
-  slot.innerHTML=`<div class="word-suggestion"><p class="eyebrow">¿Es una forma flexionada?</p>${(linked.length?linked:[best]).map(a=>`${morphemeChips(a)}${morphDictionaryHTML(a)}`).join('')}<p class="meta">Análisis automático; compruébalo en los ejemplos.</p><button type="button" class="secondary" data-open-analysis>Ver análisis y ejemplos</button><div class="reading-help"></div></div>`;
-  const help=slot.querySelector('.reading-help');
-  slot.querySelector('[data-open-analysis]').onclick=()=>{help.innerHTML=wordAnalysisHTML(data);bindAnalysis(slot,help,null);};
- }catch{/* La sugerencia es opcional. */}
-}
