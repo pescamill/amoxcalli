@@ -1,0 +1,796 @@
+{
+  "analyzer": "nah-morph-1",
+  "generator": "units-gen-1",
+  "llm_calls": 0,
+  "network_requests": 0,
+  "readings": {
+    "candidate_senses": [
+      {
+        "new_word": false,
+        "passages": 4,
+        "selected": 4,
+        "sense_id": "sense-tepetl"
+      },
+      {
+        "new_word": false,
+        "passages": 8,
+        "selected": 4,
+        "sense_id": "sense-calli"
+      },
+      {
+        "new_word": false,
+        "passages": 10,
+        "selected": 4,
+        "sense_id": "sense-atl"
+      },
+      {
+        "new_word": false,
+        "passages": 15,
+        "selected": 4,
+        "sense_id": "sense-tlalli"
+      },
+      {
+        "new_word": false,
+        "passages": 18,
+        "selected": 4,
+        "sense_id": "sense-cuicatl"
+      },
+      {
+        "new_word": false,
+        "passages": 22,
+        "selected": 4,
+        "sense_id": "sense-tonatiuh"
+      },
+      {
+        "new_word": false,
+        "passages": 30,
+        "selected": 4,
+        "sense_id": "sense-xochitl"
+      }
+    ],
+    "lessons": [
+      {
+        "id": "gen-tepetl",
+        "passages": [
+          "axolotl-15030",
+          "axolotl-05025",
+          "axolotl-05538",
+          "axolotl-01443"
+        ],
+        "sense_id": "sense-tepetl"
+      },
+      {
+        "id": "gen-calli",
+        "passages": [
+          "axolotl-06117",
+          "axolotl-16027",
+          "axolotl-09353",
+          "axolotl-07681"
+        ],
+        "sense_id": "sense-calli"
+      },
+      {
+        "id": "gen-atl",
+        "passages": [
+          "axolotl-08258",
+          "axolotl-12053",
+          "axolotl-05515",
+          "axolotl-07232"
+        ],
+        "sense_id": "sense-atl"
+      },
+      {
+        "id": "gen-tlalli",
+        "passages": [
+          "axolotl-12752",
+          "axolotl-02178",
+          "axolotl-12425",
+          "axolotl-07212"
+        ],
+        "sense_id": "sense-tlalli"
+      },
+      {
+        "id": "gen-cuicatl",
+        "passages": [
+          "axolotl-04343",
+          "axolotl-03242",
+          "axolotl-15909",
+          "axolotl-15557"
+        ],
+        "sense_id": "sense-cuicatl"
+      },
+      {
+        "id": "gen-tonatiuh",
+        "passages": [
+          "axolotl-02237",
+          "axolotl-11287",
+          "axolotl-00536",
+          "axolotl-07237"
+        ],
+        "sense_id": "sense-tonatiuh"
+      }
+    ],
+    "lessons_after_review": 18,
+    "passage_ranking": [
+      {
+        "archive_id": "axolotl-15030",
+        "lesson": "gen-tepetl",
+        "reading_roots": [
+          "sense-calli",
+          "sense-tepetl"
+        ],
+        "roots": [
+          "sense-calli",
+          "sense-tepetl"
+        ],
+        "words": 16
+      },
+      {
+        "archive_id": "axolotl-05025",
+        "lesson": "gen-tepetl",
+        "reading_roots": [
+          "sense-tepetl"
+        ],
+        "roots": [
+          "sense-tepetl"
+        ],
+        "words": 4
+      },
+      {
+        "archive_id": "axolotl-05538",
+        "lesson": "gen-tepetl",
+        "reading_roots": [
+          "sense-tepetl"
+        ],
+        "roots": [
+          "sense-tepetl"
+        ],
+        "words": 19
+      },
+      {
+        "archive_id": "axolotl-01443",
+        "lesson": "gen-tepetl",
+        "reading_roots": [
+          "sense-tepetl"
+        ],
+        "roots": [
+          "sense-tepetl"
+        ],
+        "words": 20
+      },
+      {
+        "archive_id": "axolotl-06117",
+        "lesson": "gen-calli",
+        "reading_roots": [
+          "sense-calli",
+          "sense-tonatiuh"
+        ],
+        "roots": [
+          "sense-calli",
+          "sense-gdn-m2-155428",
+          "sense-tonatiuh"
+        ],
+        "words": 18
+      },
+      {
+        "archive_id": "axolotl-16027",
+        "lesson": "gen-calli",
+        "reading_roots": [
+          "sense-calli",
+          "sense-coatl"
+        ],
+        "roots": [
+          "sense-calli",
+          "sense-coatl"
+        ],
+        "words": 9
+      },
+      {
+        "archive_id": "axolotl-09353",
+        "lesson": "gen-calli",
+        "reading_roots": [
+          "sense-calli"
+        ],
+        "roots": [
+          "sense-calli",
+          "sense-gdn-m2-168773"
+        ],
+        "words": 19
+      },
+      {
+        "archive_id": "axolotl-07681",
+        "lesson": "gen-calli",
+        "reading_roots": [
+          "sense-calli"
+        ],
+        "roots": [
+          "sense-calli"
+        ],
+        "words": 14
+      },
+      {
+        "archive_id": "axolotl-08258",
+        "lesson": "gen-atl",
+        "reading_roots": [
+          "sense-atl",
+          "sense-calli"
+        ],
+        "roots": [
+          "sense-atl",
+          "sense-calli"
+        ],
+        "words": 10
+      },
+      {
+        "archive_id": "axolotl-12053",
+        "lesson": "gen-atl",
+        "reading_roots": [
+          "sense-atl",
+          "sense-madera"
+        ],
+        "roots": [
+          "sense-atl",
+          "sense-madera"
+        ],
+        "words": 20
+      },
+      {
+        "archive_id": "axolotl-05515",
+        "lesson": "gen-atl",
+        "reading_roots": [
+          "sense-atl"
+        ],
+        "roots": [
+          "sense-atl",
+          "sense-gdn-m2-167840",
+          "sense-gdn-m2-168550"
+        ],
+        "words": 11
+      },
+      {
+        "archive_id": "axolotl-07232",
+        "lesson": "gen-atl",
+        "reading_roots": [
+          "sense-atl"
+        ],
+        "roots": [
+          "sense-atl",
+          "sense-gdn-m2-167840",
+          "sense-gdn-m2-168550"
+        ],
+        "words": 15
+      },
+      {
+        "archive_id": "axolotl-12752",
+        "lesson": "gen-tlalli",
+        "reading_roots": [
+          "sense-calli",
+          "sense-tlalli"
+        ],
+        "roots": [
+          "sense-calli",
+          "sense-gdn-m2-168773",
+          "sense-tlalli"
+        ],
+        "words": 18
+      },
+      {
+        "archive_id": "axolotl-02178",
+        "lesson": "gen-tlalli",
+        "reading_roots": [
+          "sense-tlalli",
+          "sense-tonatiuh"
+        ],
+        "roots": [
+          "sense-tlalli",
+          "sense-tonatiuh"
+        ],
+        "words": 15
+      },
+      {
+        "archive_id": "axolotl-12425",
+        "lesson": "gen-tlalli",
+        "reading_roots": [
+          "sense-tepetl",
+          "sense-tlalli"
+        ],
+        "roots": [
+          "sense-tepetl",
+          "sense-tlalli"
+        ],
+        "words": 15
+      },
+      {
+        "archive_id": "axolotl-07212",
+        "lesson": "gen-tlalli",
+        "reading_roots": [
+          "sense-tlalli"
+        ],
+        "roots": [
+          "sense-gdn-m2-147193",
+          "sense-tlalli"
+        ],
+        "words": 17
+      },
+      {
+        "archive_id": "axolotl-04343",
+        "lesson": "gen-cuicatl",
+        "reading_roots": [
+          "sense-cuicatl",
+          "sense-xochitl"
+        ],
+        "roots": [
+          "sense-cuicatl",
+          "sense-gdn-m2-169584",
+          "sense-xochitl"
+        ],
+        "words": 14
+      },
+      {
+        "archive_id": "axolotl-03242",
+        "lesson": "gen-cuicatl",
+        "reading_roots": [
+          "sense-cuicatl",
+          "sense-xochitl"
+        ],
+        "roots": [
+          "sense-cuicatl",
+          "sense-xochitl"
+        ],
+        "words": 5
+      },
+      {
+        "archive_id": "axolotl-15909",
+        "lesson": "gen-cuicatl",
+        "reading_roots": [
+          "sense-cuicatl"
+        ],
+        "roots": [
+          "sense-cuicatl"
+        ],
+        "words": 4
+      },
+      {
+        "archive_id": "axolotl-15557",
+        "lesson": "gen-cuicatl",
+        "reading_roots": [
+          "sense-cuicatl"
+        ],
+        "roots": [
+          "sense-cuicatl"
+        ],
+        "words": 5
+      },
+      {
+        "archive_id": "axolotl-02237",
+        "lesson": "gen-tonatiuh",
+        "reading_roots": [
+          "sense-tlalli",
+          "sense-tonatiuh"
+        ],
+        "roots": [
+          "sense-tlalli",
+          "sense-tonatiuh"
+        ],
+        "words": 14
+      },
+      {
+        "archive_id": "axolotl-11287",
+        "lesson": "gen-tonatiuh",
+        "reading_roots": [
+          "sense-calli",
+          "sense-tonatiuh"
+        ],
+        "roots": [
+          "sense-calli",
+          "sense-tonatiuh"
+        ],
+        "words": 16
+      },
+      {
+        "archive_id": "axolotl-00536",
+        "lesson": "gen-tonatiuh",
+        "reading_roots": [
+          "sense-cuicatl",
+          "sense-tonatiuh"
+        ],
+        "roots": [
+          "sense-cuicatl",
+          "sense-tonatiuh"
+        ],
+        "words": 17
+      },
+      {
+        "archive_id": "axolotl-07237",
+        "lesson": "gen-tonatiuh",
+        "reading_roots": [
+          "sense-ehecatl",
+          "sense-tonatiuh"
+        ],
+        "roots": [
+          "sense-ehecatl",
+          "sense-tonatiuh"
+        ],
+        "words": 17
+      }
+    ],
+    "proposed": 6,
+    "release_id": "lecturas-generadas-001"
+  },
+  "schema_version": 1,
+  "skipped": [
+    {
+      "forms": 1,
+      "id": "plural",
+      "reason": "insufficient",
+      "roots": 1
+    }
+  ],
+  "totals": {
+    "answers": 40,
+    "exercises": 36,
+    "morphemes": 14,
+    "reading_roots": 20,
+    "reading_roots_in_units": 9,
+    "roots_not_in_units": [
+      "sense-cacahuaxochitl",
+      "sense-ihuan",
+      "sense-tototl",
+      "sense-mazatl",
+      "sense-coatl",
+      "sense-michin",
+      "sense-tetl",
+      "sense-madera",
+      "sense-cuahuitl",
+      "sense-tletl",
+      "sense-ehecatl"
+    ],
+    "units": 4,
+    "valid_answers": 40
+  },
+  "units": [
+    {
+      "exercises": {
+        "build": 2,
+        "cloze": 2,
+        "identify": 2,
+        "match": 1,
+        "translate": 2
+      },
+      "forms": [
+        "calli",
+        "xochitl",
+        "metztli",
+        "tlalli",
+        "atl",
+        "cuicatl"
+      ],
+      "id": "absolutivo",
+      "minutes": 7,
+      "morphemes": [
+        {
+          "gloss": "absolutivo (sin poseedor)",
+          "key": "li",
+          "slot": "ABS",
+          "surfaces": [
+            "li"
+          ]
+        },
+        {
+          "gloss": "absolutivo (sin poseedor)",
+          "key": "λ",
+          "slot": "ABS",
+          "surfaces": [
+            "tl"
+          ]
+        },
+        {
+          "gloss": "absolutivo (sin poseedor)",
+          "key": "λi",
+          "slot": "ABS",
+          "surfaces": [
+            "tli"
+          ]
+        }
+      ],
+      "passages": [
+        "axolotl-00288",
+        "axolotl-00324",
+        "axolotl-02623",
+        "axolotl-04310",
+        "axolotl-09215",
+        "axolotl-09427",
+        "axolotl-09725",
+        "axolotl-10264",
+        "axolotl-13306"
+      ],
+      "roots": [
+        {
+          "headword": "xochitl",
+          "label": "flor",
+          "sense_id": "sense-xochitl"
+        },
+        {
+          "headword": "Cuicatl",
+          "label": "canto",
+          "sense_id": "sense-cuicatl"
+        },
+        {
+          "headword": "metztli",
+          "label": "luna",
+          "sense_id": "sense-metztli"
+        },
+        {
+          "headword": "tlalli",
+          "label": "tierra",
+          "sense_id": "sense-tlalli"
+        },
+        {
+          "headword": "calli",
+          "label": "casa",
+          "sense_id": "sense-calli"
+        },
+        {
+          "headword": "atl",
+          "label": "agua",
+          "sense_id": "sense-atl"
+        }
+      ],
+      "title": "La palabra sola: -tl, -tli, -li",
+      "validity": {
+        "answers": 10,
+        "problems": []
+      }
+    },
+    {
+      "exercises": {
+        "build": 2,
+        "cloze": 2,
+        "identify": 2,
+        "match": 1,
+        "translate": 2
+      },
+      "forms": [
+        "toxochiuh",
+        "ical",
+        "notlal",
+        "moxochiuh",
+        "itonatiuh",
+        "notepeuh"
+      ],
+      "id": "posesivos",
+      "minutes": 7,
+      "morphemes": [
+        {
+          "gloss": "su (de él / ella)",
+          "key": "i",
+          "slot": "POSS",
+          "surfaces": [
+            "i"
+          ]
+        },
+        {
+          "gloss": "tu",
+          "key": "mo",
+          "slot": "POSS",
+          "surfaces": [
+            "mo"
+          ]
+        },
+        {
+          "gloss": "mi",
+          "key": "no",
+          "slot": "POSS",
+          "surfaces": [
+            "no"
+          ]
+        },
+        {
+          "gloss": "nuestro",
+          "key": "to",
+          "slot": "POSS",
+          "surfaces": [
+            "to"
+          ]
+        }
+      ],
+      "passages": [
+        "axolotl-00288",
+        "axolotl-00324",
+        "axolotl-01508",
+        "axolotl-02118",
+        "axolotl-05036",
+        "axolotl-05677",
+        "axolotl-08457",
+        "axolotl-10754",
+        "axolotl-13662"
+      ],
+      "roots": [
+        {
+          "headword": "xochitl",
+          "label": "flor",
+          "sense_id": "sense-xochitl"
+        },
+        {
+          "headword": "tonatiuh",
+          "label": "sol",
+          "sense_id": "sense-tonatiuh"
+        },
+        {
+          "headword": "tlalli",
+          "label": "tierra",
+          "sense_id": "sense-tlalli"
+        },
+        {
+          "headword": "calli",
+          "label": "casa",
+          "sense_id": "sense-calli"
+        },
+        {
+          "headword": "tepetl",
+          "label": "cerro",
+          "sense_id": "sense-tepetl"
+        }
+      ],
+      "title": "Mi, tu, su, nuestro: no-, mo-, i-, to-",
+      "validity": {
+        "answers": 10,
+        "problems": []
+      }
+    },
+    {
+      "exercises": {
+        "build": 2,
+        "cloze": 2,
+        "identify": 2,
+        "match": 1,
+        "translate": 2
+      },
+      "forms": [
+        "tlalticpac",
+        "calitic",
+        "tlalpan",
+        "ycalnauac",
+        "tepeticpac",
+        "intlalpan"
+      ],
+      "id": "locativos",
+      "minutes": 7,
+      "morphemes": [
+        {
+          "gloss": "dentro de",
+          "key": "itik",
+          "slot": "REL",
+          "surfaces": [
+            "itic"
+          ]
+        },
+        {
+          "gloss": "encima de",
+          "key": "kpak",
+          "slot": "REL",
+          "surfaces": [
+            "cpac"
+          ]
+        },
+        {
+          "gloss": "cerca de",
+          "key": "nawak",
+          "slot": "REL",
+          "surfaces": [
+            "nauac"
+          ]
+        },
+        {
+          "gloss": "en, sobre",
+          "key": "pan",
+          "slot": "REL",
+          "surfaces": [
+            "pan"
+          ]
+        }
+      ],
+      "passages": [
+        "axolotl-00137",
+        "axolotl-00413",
+        "axolotl-01655",
+        "axolotl-01729",
+        "axolotl-05448",
+        "axolotl-08712",
+        "axolotl-10486",
+        "axolotl-11190",
+        "axolotl-12505",
+        "axolotl-13734"
+      ],
+      "roots": [
+        {
+          "headword": "tlalli",
+          "label": "tierra",
+          "sense_id": "sense-tlalli"
+        },
+        {
+          "headword": "calli",
+          "label": "casa",
+          "sense_id": "sense-calli"
+        },
+        {
+          "headword": "tepetl",
+          "label": "cerro",
+          "sense_id": "sense-tepetl"
+        }
+      ],
+      "title": "Lugares: -co, -pan, -tlan, -icpac",
+      "validity": {
+        "answers": 10,
+        "problems": []
+      }
+    },
+    {
+      "exercises": {
+        "build": 2,
+        "cloze": 2,
+        "identify": 2,
+        "match": 1,
+        "translate": 2
+      },
+      "forms": [
+        "oquittac",
+        "niquitta",
+        "tiquittaz",
+        "quitta",
+        "quittac",
+        "quiytta"
+      ],
+      "id": "sujeto-objeto",
+      "minutes": 7,
+      "morphemes": [
+        {
+          "gloss": "lo / la",
+          "key": "k",
+          "slot": "OBJ",
+          "surfaces": [
+            "qu"
+          ]
+        },
+        {
+          "gloss": "yo (sujeto)",
+          "key": "ni",
+          "slot": "SUBJ",
+          "surfaces": [
+            "ni"
+          ]
+        },
+        {
+          "gloss": "tú / nosotros (sujeto)",
+          "key": "ti",
+          "slot": "SUBJ",
+          "surfaces": [
+            "ti"
+          ]
+        }
+      ],
+      "passages": [
+        "axolotl-00082",
+        "axolotl-00173",
+        "axolotl-01384",
+        "axolotl-01612",
+        "axolotl-04728",
+        "axolotl-10704",
+        "axolotl-13297",
+        "axolotl-13803"
+      ],
+      "roots": [
+        {
+          "headword": "itta",
+          "label": "ver",
+          "sense_id": "sense-itta"
+        }
+      ],
+      "title": "Quién ve qué: ni-, ti-, qui-",
+      "validity": {
+        "answers": 10,
+        "problems": []
+      }
+    }
+  ]
+}
