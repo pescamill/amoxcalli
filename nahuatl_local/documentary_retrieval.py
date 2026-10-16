@@ -124,7 +124,15 @@ class PublicSources:
                 return dict(path=None, table='public_catalog', record_id=rid, field=key, value=copy.deepcopy(value),
                             url=safe_url(url), row_sha256=None, file_sha256=None)
         return dict(path=path, table=table, record_id=rid, field=key, value=copy.deepcopy(value),
-                    url=safe_url(url), row_sha256=digest(row), file_sha256=self.hashes[path])
+                    url=safe_url(url), row_sha256=self._row_digest(row), file_sha256=self.hashes[path])
+
+    def _row_digest(self, row):
+        # Una fila aporta ~15 campos: su hash se calcula una vez por objeto fila (no se modifican en sitio).
+        cache = self.__dict__.setdefault('_row_digests', {})
+        found = cache.get(id(row))
+        if found is None or found[0] is not row:
+            found = cache[id(row)] = (row, digest(row))
+        return found[1]
 
     def citation_valid(self, field):
         """Verify literals, complete rows/files and the documented URL, never follow a URL."""

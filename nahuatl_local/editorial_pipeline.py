@@ -21,6 +21,7 @@ from .passages import AXOLOTL
 from .text import fold
 from .dictionary_import import parse_page, bundle_from_pages
 from .glyph_linker import build_bundle
+from .morphology import SECONDARY_SOURCES
 from .learning import Learning
 from .lesson_audit import audit, fingerprint, merge_decisions, render_markdown
 from .lexicon_candidates import mine_candidates, written_tokens
@@ -198,7 +199,10 @@ def prepare(config_path,lessons_path,output,catalog_path=None,fetch=False,decisi
     merged=validate_candidates(lexical['records'],records)
     rules=json.loads((ROOT/'corpus/glyph-link-rules-v7.json').read_text())
     visual,coverage=build_bundle(merged,rules,archive.rows)
-    visual['records']=[r for r in visual['records'] if r['id'] not in merged]
+    # Las acepciones de fuentes secundarias (Wiktionary) no entran en este lote: llevan su propia
+    # licencia y revisión, y barrerlas aquí desbordaría el límite del lote (139 → 522 registros).
+    visual['records']=[r for r in visual['records'] if r['id'] not in merged
+                       and merged.get(r.get('sense_id'),{}).get('import_source') not in SECONDARY_SOURCES]
     validate_candidates(lexical['records']+visual['records'],records)
     with tempfile.TemporaryDirectory() as directory:
         seed=Path(directory)/'public-catalog.json';seed.write_bytes(encoded(dict(schema_version=1,records=list(records.values()))))

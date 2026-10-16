@@ -87,8 +87,9 @@ class EditorialReleaseTests(unittest.TestCase):
         # New installations load the same release, without needing source caches.
         with patch('nahuatl_local.corpus.editorial_releases',return_value=releases):fresh=CorpusStore(self.root/'fresh.sqlite3')
         self.assertEqual(len(fresh.records()),len(self.store.records()))
+        loaded=fresh.records()
         for r in json.loads(self.bundle.read_text())['records']:
-            self.assertEqual({k:v for k,v in fresh.records()[r['id']].items() if k!='version'},r)
+            self.assertEqual({k:v for k,v in loaded[r['id']].items() if k!='version'},r)
 
     def test_modified_bundle_dependency_and_source_rules_stop_before_backup(self):
         self.accepted();original=self.bundle.read_bytes()
