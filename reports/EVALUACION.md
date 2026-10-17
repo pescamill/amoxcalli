@@ -12,11 +12,15 @@ Una sola tabla, regenerable con `make eval` (`python -m nahuatl_local.evaluate_a
 | Morfología | `evaluation/morphology-gold-v2.json` | Segmentación y clase (top‑1; test ciego) | 89 % | 78 % |  |
 | Morfología | Pasajes `nci` de Axolotl | Palabras con raíz enlazada |  |  | 60.4 % |
 | Morfología | Molina (entradas evaluables) | Pistas de glosa, precisión@1 (IBM‑1) |  |  | 30 % |
-| Índice de términos | `evaluation/term-groups-v1.json` | Consulta → grupo (top‑1) | 96.7 % | 85.7 % | 90.3 % |
+| Índice de términos | `evaluation/term-groups-v1.json` | Consulta → grupo (top‑1) | 100 % | 90.5 % | 94.4 % |
 | Índice de términos | `evaluation/term-groups-v1.json` | Grafías seguras | 85.7 % | 86.4 % | 86 % |
 | Índice de términos | `evaluation/term-groups-v1.json` | Glifos | 100 % | 100 % | 100 % |
 | Índice de términos | `evaluation/term-groups-v1.json` | Precisión de grafías (etiquetadas) | 100 % | 100 % | 100 % |
 | Índice de términos | `evaluation/term-groups-v1.json` | Precisión de glifos (etiquetados) | 100 % | 100 % | 100 % |
+| Grafías | `evaluation/spelling-search-v1.json` | Palabra buscada en top‑1 | 90.5 % | 94.2 % | 92.8 % |
+| Grafías | `evaluation/spelling-search-v1.json` | Palabra buscada en top‑3 | 97.6 % | 97.1 % | 97.3 % |
+| Grafías | `evaluation/spelling-search-v1.json` | Precisión del grafo de grafías | 100 % | 100 % | 100 % |
+| Grafías | `evaluation/spelling-search-v1.json` | Cobertura del grafo de grafías | 86.7 % | 81.5 % | 83.3 % |
 | Preguntar | `evaluation/evidence-questions-v1.json` | Entrada top‑1 | 90 % | 92.3 % | 91.7 % |
 | Preguntar | `evaluation/evidence-questions-v1.json` | Entrada top‑3 | 90 % | 92.3 % | 91.7 % |
 | Preguntar | `evaluation/evidence-questions-v1.json` | Con pasaje pertinente | 100 % | 100 % | 100 % |
@@ -28,7 +32,7 @@ Una sola tabla, regenerable con `make eval` (`python -m nahuatl_local.evaluate_a
 | Fichas documentales | `configs/documentary-evaluation-v1.json` | Citas válidas | 121/121 | reserva sin usar |  |
 | Fichas documentales | `configs/documentary-evaluation-v1.json` | Campos de referencia exactos | 780/790 | reserva sin usar |  |
 
-Detalle por componente: [morfología](#evaluación-del-analizador-morfológico), [términos](#evaluación-de-grupos-de-término), [Preguntar](#evaluación-de-la-consulta-con-evidencia), [fichas documentales](#fichas-documentales-preguntar).
+Detalle por componente: [morfología](#evaluación-del-analizador-morfológico), [términos](#evaluación-de-grupos-de-término), [grafías](#evaluación-del-buscador-de-grafías), [Preguntar](#evaluación-de-la-consulta-con-evidencia), [fichas documentales](#fichas-documentales-preguntar).
 
 ## Evaluación del analizador morfológico
 
@@ -152,9 +156,9 @@ Escrito antes de construir el índice de términos y antes de mirar sus resultad
 
 | Partición | Términos | Consulta → grupo (top-1) | Mismo grupo | Grafías (cualquier nivel) | Grafías seguras | Glifos | Precisión grafías* | Precisión glifos* | Homógrafos separados |
 |---|---|---|---|---|---|---|---|---|---|
-| dev | 7 | 96.7% de 30 | 85.7% | 100.0% | 85.7% | 100.0% | 100.0% | 100.0% | 100.0% |
-| test | 14 | 85.7% de 42 | 57.1% | 95.5% | 86.4% | 100.0% | 100.0% | 100.0% | None% |
-| all | 21 | 90.3% de 72 | 66.7% | 98.0% | 86.0% | 100.0% | 100.0% | 100.0% | 100.0% |
+| dev | 7 | 100.0% de 30 | 100.0% | 100.0% | 85.7% | 100.0% | 100.0% | 100.0% | 100.0% |
+| test | 14 | 90.5% de 42 | 71.4% | 95.5% | 86.4% | 100.0% | 100.0% | 100.0% | None% |
+| all | 21 | 94.4% de 72 | 81.0% | 98.0% | 86.0% | 100.0% | 100.0% | 100.0% | 100.0% |
 
 \* Precisión sobre lo etiquetado: aciertos seguros frente a formas o glifos que el conjunto marca como no seguros y el índice presenta como seguros.
 
@@ -167,7 +171,7 @@ Escrito antes de construir el índice de términos y antes de mirar sus resultad
 | tonatiuh | dev | tonatiuh (dictionary) | 4/4 | 2/2 | 2/2 | — | — |
 | coatl | dev | coatl (dictionary) | 5/5 | 4/4 | 3/3 | — | — |
 | cihuatl | dev | cihuatl (dictionary) | 5/5 | 5/5 | 1/1 | — | — |
-| xochitl | dev | xochitl (dictionary) | 3/4 | 3/3 | 3/3 | — | — |
+| xochitl | dev | xochitl (dictionary) | 4/4 | 3/3 | 3/3 | — | — |
 | atl | dev | atl (dictionary) | 2/2 | 1/1 | 2/2 | — | — |
 | tlacatl | test | tlacatl (dictionary) | 3/3 | 3/3 | 1/1 | — | — |
 | tochtli | test | tochtli (dictionary) | 2/3 | 1/1 | 2/2 | — | — |
@@ -175,24 +179,65 @@ Escrito antes de construir el índice de términos y antes de mirar sus resultad
 | ehecatl | test | eecatl (dictionary) | 3/3 | 1/1 | 2/2 | — | — |
 | mazatl | test | mazatl (dictionary) | 3/3 | 1/1 | 2/2 | — | — |
 | ocelotl | test | ocelotl (dictionary) | 2/3 | 1/1 | 2/2 | — | — |
-| cuauhtli | test | cuauhtli (dictionary) | 3/4 | 2/2 | 2/2 | — | — |
+| cuauhtli | test | cuauhtli (dictionary) | 4/4 | 2/2 | 2/2 | — | — |
 | tecpatl | test | tecpatl (dictionary) | 3/3 | 1/1 | 2/2 | — | — |
 | cipactli | test | cipactli (dictionary) | 2/2 | 1/1 | 2/2 | — | — |
 | ozomatli | test | ozomahtli (dictionary) | 3/3 | 1/1 | 2/2 | — | — |
 | teotl | test | teotl (dictionary) | 2/3 | 2/3 | 0/0 | teteo | — |
 | tlalli | test | tlalli (dictionary) | 3/3 | 3/3 | 0/0 | — | — |
 | ilhuicatl | test | ilhuicaātl (dictionary) | 2/3 | 2/2 | 0/0 | — | — |
-| metztli | test | metztli (dictionary) | 2/3 | 1/1 | 1/1 | — | — |
+| metztli | test | metztli (dictionary) | 3/3 | 1/1 | 1/1 | — | — |
 
 Consultas que no llevan al grupo esperado:
 
-- xochitl: «sochitl» → sin grupo (—)
 - tochtli: «toxtli» → temoxtli (misma raíz (sin esta grafía en el archivo))
 - ocelotl: «jaguar» → oceloquichtli (la acepción dice «jaguar»)
-- cuauhtli: «kuautli» → sin grupo (—)
 - teotl: «dios» → dios (grafía del archivo (sin entrada en el diccionario))
 - ilhuicatl: «ilhuicac» → ilhuicac (misma palabra)
-- metztli: «mestli» → meztli (grafía del archivo (sin entrada en el diccionario))
+
+## Evaluación del buscador de grafías
+
+Buscador `spelling-v1` · conjunto `spelling-search-v1` (SHA-256 `e0769c941208…`) · sin modelos. Regenerar: `make eval`. Detalle: [docs/GRAFIAS.md](../docs/GRAFIAS.md).
+
+El conjunto se escribió y congeló antes de construir el buscador (commit c079a11). Reglas activas: aligned, final_tl, z_tz.
+
+| Partición | Consultas | Top-1 | Top-3 | Pares | Precisión del grafo | Cobertura del grafo | Uniones erróneas |
+|---|---|---|---|---|---|---|---|
+| dev | 42 | 90.5% | 97.6% | 21 | 100.0% | 86.7% | 0 |
+| test | 69 | 94.2% | 97.1% | 33 | 100.0% | 81.5% | 0 |
+| all | 111 | 92.8% | 97.3% | 54 | 100.0% | 83.3% | 0 |
+
+### Por tipo de consulta
+
+| Tipo | Consultas | Top-1 | Top-3 |
+|---|---|---|---|
+| colonial | 20 | 90.0% | 95.0% |
+| known_failure | 13 | 92.3% | 100.0% |
+| modern | 42 | 95.2% | 97.6% |
+| negative | 5 | 100.0% | 100.0% |
+| typo | 10 | 90.0% | 100.0% |
+| variety | 21 | 90.5% | 95.2% |
+
+### Consultas cuyo primer candidato no es la palabra buscada
+
+- dev · «ilhuicac» → ilhuicac (pivot), ilhuicaātl (root), ilhuacac (edit); esperado ilhuicatl · top-3 sí
+- dev · «iluikak» → ilhuicac (pivot), ilhuicaātl (root), ilhuacac (edit); esperado ilhuicatl · top-3 sí
+- dev · «tonatih» → tonatih (pivot), tonatiuh (edit), tonalli (edit); esperado tonatiuh · top-3 sí
+- dev · «kuouit» → kuouit (pivot), kuouat (edit), cueitl (edit); esperado cuahuitl/quahuitl
+- test · «ejekatl» → ejekat (rule), eecatl (edit), aehecatl (edit); esperado ehecatl · top-3 sí
+- test · «tlalticpac» → tlalli (pivot), taltikpak (edit), tlaticpac (edit); esperado tlalticpac
+- test · «tlaltikpak» → tlalli (pivot), taltikpak (edit), tlaticpac (edit); esperado tlalticpac
+- test · «sochimilco» → sochimilco (pivot), Xochimilco (rule), xochmilco (edit); esperado xochimilco · top-3 sí
+
+### Pares mal asociados
+
+- dev · huitzilopochtli / uizilopochtli: no unidas (misma palabra)
+- dev · cuahuitl / kuouit: no unidas (misma palabra)
+- test · tecuhtli / teuctli: no unidas (misma palabra)
+- test · ehecatl / ejekat: no unidas (misma palabra)
+- test · centli / sintli: no unidas (misma palabra)
+- test · michin / michi: no unidas (misma palabra)
+- test · xochitl / xochitli: no unidas (misma palabra)
 
 ## Evaluación de la consulta con evidencia
 

@@ -33,7 +33,7 @@ function termGroupHTML(g,query){
 ${s.inflected.length?`<h3>Formas flexionadas</h3><ul class="term-spellings">${s.inflected.slice(0,16).map(v=>termSpelling(v.forms.join(' / '),v.total,v.segmentation?esc(v.segmentation):'')).join('')}</ul>${s.inflected.length>16?`<p class="meta">y ${s.inflected.length-16} formas más.</p>`:''}`:''}
 ${s.uncertain.length?`<details class="term-uncertain"><summary>${s.uncertain.length} grafías inciertas · aparte, no se suman${g.passages.uncertain_total?` (${g.passages.uncertain_total.toLocaleString('es-MX')} pasajes)`:''}</summary><ul class="term-spellings">${s.uncertain.slice(0,30).map(v=>termSpelling(v.forms.join(' / '),v.total,esc(v.why))).join('')}</ul></details>`:''}</div>
 <div><h3>Glifos y lecturas</h3>${termGlyphsHTML(g)}</div></div>
-<nav class="term-views" aria-label="Ver este término en"><a href="#lexico/buscar/${q}">Diccionario</a><a href="#investigar/${q}">Archivo</a><a href="#preguntar/${q}">Preguntar y fichas</a></nav>
+<nav class="term-views" aria-label="Ver este término en"><a href="#lexico/buscar/${q}">Diccionario</a><a href="#investigar/${q}">Archivo</a><a href="#preguntar/${q}">Preguntar y fichas</a><a href="#grafias/${encodeURIComponent(g.id)}">Grafías</a></nav>
 <p class="meta">Las grafías se reúnen por clave laxa y por raíz del analizador; las inciertas quedan aparte.</p></section>`;
 }
 // Resumen del término dentro de la ayuda de una palabra (Leer y Aprender): grafías, glifos y paso a Preguntar.

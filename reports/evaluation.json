@@ -1809,7 +1809,7 @@
     "definition": "Acierto si una palabra propuesta (normalizada) aparece en la definición de Molina de esa entrada. Molina es independiente del corpus paralelo; la coincidencia ortográfica del s. XVI es aproximada."
    }
   },
-  "seconds": 11.5
+  "seconds": 10.0
  },
  "terms": {
   "version": "terms-v1",
@@ -1821,8 +1821,8 @@
    "all": {
     "terms": 21,
     "queries": 72,
-    "query_top1": 90.3,
-    "same_group": 66.7,
+    "query_top1": 94.4,
+    "same_group": 81.0,
     "spelling_coverage": 98.0,
     "spelling_coverage_certain": 86.0,
     "glyph_coverage": 100.0,
@@ -1845,8 +1845,8 @@
    "dev": {
     "terms": 7,
     "queries": 30,
-    "query_top1": 96.7,
-    "same_group": 85.7,
+    "query_top1": 100.0,
+    "same_group": 100.0,
     "spelling_coverage": 100.0,
     "spelling_coverage_certain": 85.7,
     "glyph_coverage": 100.0,
@@ -1869,8 +1869,8 @@
    "test": {
     "terms": 14,
     "queries": 42,
-    "query_top1": 85.7,
-    "same_group": 57.1,
+    "query_top1": 90.5,
+    "same_group": 71.4,
     "spelling_coverage": 95.5,
     "spelling_coverage_certain": 86.4,
     "glyph_coverage": 100.0,
@@ -1950,7 +1950,7 @@
     "group_size": {
      "attested": 5,
      "inflected": 23,
-     "uncertain": 9,
+     "uncertain": 10,
      "glyphs": 15,
      "glyphs_uncertain": 4,
      "passages": 749
@@ -2014,7 +2014,7 @@
     "group_size": {
      "attested": 8,
      "inflected": 1,
-     "uncertain": 112,
+     "uncertain": 113,
      "glyphs": 0,
      "glyphs_uncertain": 0,
      "passages": 488
@@ -2134,12 +2134,12 @@
     "glyph_negatives_in_certain": 0,
     "glyph_negatives_listed": [],
     "group_size": {
-     "attested": 3,
+     "attested": 4,
      "inflected": 4,
      "uncertain": 20,
      "glyphs": 14,
      "glyphs_uncertain": 29,
-     "passages": 41
+     "passages": 43
     }
    },
    {
@@ -2198,12 +2198,12 @@
     "glyph_negatives_in_certain": 0,
     "glyph_negatives_listed": [],
     "group_size": {
-     "attested": 5,
+     "attested": 6,
      "inflected": 10,
      "uncertain": 46,
      "glyphs": 1,
      "glyphs_uncertain": 15,
-     "passages": 152
+     "passages": 154
     }
    },
    {
@@ -2227,9 +2227,9 @@
      },
      {
       "query": "sochitl",
-      "group": null,
-      "lemma": null,
-      "why": null
+      "group": "lemma-xochitl",
+      "lemma": "xochitl",
+      "why": "posible otra grafía: s o sh = x (sochitl, shochitl = xochitl)"
      },
      {
       "query": "flor",
@@ -2238,9 +2238,9 @@
       "why": "la acepción dice «flor»"
      }
     ],
-    "queries_ok": 3,
+    "queries_ok": 4,
     "queries_total": 4,
-    "same_group": false,
+    "same_group": true,
     "spellings_expected": 3,
     "spellings_found": 3,
     "spellings_found_certain": 2,
@@ -2256,12 +2256,12 @@
     "glyph_negatives_in_certain": 0,
     "glyph_negatives_listed": [],
     "group_size": {
-     "attested": 2,
+     "attested": 3,
      "inflected": 10,
      "uncertain": 74,
      "glyphs": 10,
      "glyphs_uncertain": 21,
-     "passages": 128
+     "passages": 135
     }
    },
    {
@@ -2354,12 +2354,12 @@
     "glyph_negatives_in_certain": 0,
     "glyph_negatives_listed": [],
     "group_size": {
-     "attested": 2,
+     "attested": 4,
      "inflected": 12,
-     "uncertain": 37,
+     "uncertain": 40,
      "glyphs": 17,
      "glyphs_uncertain": 0,
-     "passages": 506
+     "passages": 538
     }
    },
    {
@@ -2510,12 +2510,12 @@
     "glyph_negatives_in_certain": 0,
     "glyph_negatives_listed": [],
     "group_size": {
-     "attested": 6,
+     "attested": 7,
      "inflected": 2,
-     "uncertain": 3,
+     "uncertain": 4,
      "glyphs": 6,
      "glyphs_uncertain": 4,
-     "passages": 32
+     "passages": 35
     }
    },
    {
@@ -2643,9 +2643,9 @@
      },
      {
       "query": "kuautli",
-      "group": null,
-      "lemma": null,
-      "why": null
+      "group": "lemma-kwawtli",
+      "lemma": "cuauhtli",
+      "why": "posible otra grafía: u tras vocal = w en coda (kuautli = cuauhtli)"
      },
      {
       "query": "águila",
@@ -2654,9 +2654,9 @@
       "why": "Tlachia: «águila» designa este elemento"
      }
     ],
-    "queries_ok": 3,
+    "queries_ok": 4,
     "queries_total": 4,
-    "same_group": false,
+    "same_group": true,
     "spellings_expected": 2,
     "spellings_found": 2,
     "spellings_found_certain": 2,
@@ -2674,7 +2674,7 @@
     "group_size": {
      "attested": 2,
      "inflected": 0,
-     "uncertain": 20,
+     "uncertain": 23,
      "glyphs": 12,
      "glyphs_uncertain": 3,
      "passages": 45
@@ -2929,11 +2929,11 @@
     "glyph_negatives_listed": [],
     "group_size": {
      "attested": 2,
-     "inflected": 16,
-     "uncertain": 11,
+     "inflected": 15,
+     "uncertain": 12,
      "glyphs": 1,
      "glyphs_uncertain": 40,
-     "passages": 603
+     "passages": 593
     }
    },
    {
@@ -3003,9 +3003,9 @@
      },
      {
       "query": "mestli",
-      "group": "term-mestli",
-      "lemma": "meztli",
-      "why": "grafía del archivo (sin entrada en el diccionario)"
+      "group": "lemma-metztli",
+      "lemma": "metztli",
+      "why": "otra grafía (grafo de equivalencias)"
      },
      {
       "query": "luna",
@@ -3014,9 +3014,9 @@
       "why": "la acepción dice «luna»"
      }
     ],
-    "queries_ok": 2,
+    "queries_ok": 3,
     "queries_total": 3,
-    "same_group": false,
+    "same_group": true,
     "spellings_expected": 1,
     "spellings_found": 1,
     "spellings_found_certain": 1,
@@ -3032,13 +3032,386 @@
     "glyph_negatives_in_certain": 0,
     "glyph_negatives_listed": [],
     "group_size": {
-     "attested": 3,
+     "attested": 6,
      "inflected": 2,
-     "uncertain": 3,
+     "uncertain": 7,
      "glyphs": 4,
      "glyphs_uncertain": 0,
-     "passages": 463
+     "passages": 473
     }
+   }
+  ]
+ },
+ "spelling": {
+  "version": "spelling-v1",
+  "gold": "spelling-search-v1",
+  "gold_sha256": "e0769c941208ae01ab450f92fd0315300316d1d112116cc614abb7ec274d3fbe",
+  "active_rules": [
+   "aligned",
+   "final_tl",
+   "z_tz"
+  ],
+  "summary": {
+   "dev": {
+    "queries": 42,
+    "top1": 90.5,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 86.7,
+    "false_merges": 0
+   },
+   "test": {
+    "queries": 69,
+    "top1": 94.2,
+    "top3": 97.1,
+    "pairs": 33,
+    "pair_precision": 100.0,
+    "pair_recall": 81.5,
+    "false_merges": 0
+   },
+   "all": {
+    "queries": 111,
+    "top1": 92.8,
+    "top3": 97.3,
+    "pairs": 54,
+    "pair_precision": 100.0,
+    "pair_recall": 83.3,
+    "false_merges": 0
+   }
+  },
+  "by_kind": {
+   "colonial": {
+    "queries": 20,
+    "top1": 90.0,
+    "top3": 95.0
+   },
+   "known_failure": {
+    "queries": 13,
+    "top1": 92.3,
+    "top3": 100.0
+   },
+   "modern": {
+    "queries": 42,
+    "top1": 95.2,
+    "top3": 97.6
+   },
+   "negative": {
+    "queries": 5,
+    "top1": 100.0,
+    "top3": 100.0
+   },
+   "typo": {
+    "queries": 10,
+    "top1": 90.0,
+    "top3": 100.0
+   },
+   "variety": {
+    "queries": 21,
+    "top1": 90.5,
+    "top3": 95.2
+   }
+  },
+  "misses": [
+   {
+    "split": "dev",
+    "kind": "known_failure",
+    "q": "ilhuicac",
+    "expect": [
+     "ilhuicatl"
+    ],
+    "top1": false,
+    "top3": true,
+    "got": [
+     {
+      "lemma": "ilhuicac",
+      "form": "ilhuicac",
+      "how": "pivot",
+      "confidence": "alta"
+     },
+     {
+      "lemma": "ilhuicaātl",
+      "form": null,
+      "how": "root",
+      "confidence": "media"
+     },
+     {
+      "lemma": "ilhuacac",
+      "form": "ilhuacac",
+      "how": "edit",
+      "confidence": "media"
+     }
+    ],
+    "attested": true
+   },
+   {
+    "split": "dev",
+    "kind": "variety",
+    "q": "iluikak",
+    "expect": [
+     "ilhuicatl"
+    ],
+    "top1": false,
+    "top3": true,
+    "got": [
+     {
+      "lemma": "ilhuicac",
+      "form": "ilhuicac",
+      "how": "pivot",
+      "confidence": "alta"
+     },
+     {
+      "lemma": "ilhuicaātl",
+      "form": null,
+      "how": "root",
+      "confidence": "media"
+     },
+     {
+      "lemma": "ilhuacac",
+      "form": "ilhuacac",
+      "how": "edit",
+      "confidence": "media"
+     }
+    ],
+    "attested": true
+   },
+   {
+    "split": "dev",
+    "kind": "typo",
+    "q": "tonatih",
+    "expect": [
+     "tonatiuh"
+    ],
+    "top1": false,
+    "top3": true,
+    "got": [
+     {
+      "lemma": "tonatih",
+      "form": "tonatih",
+      "how": "pivot",
+      "confidence": "alta"
+     },
+     {
+      "lemma": "tonatiuh",
+      "form": "tonatiuh",
+      "how": "edit",
+      "confidence": "media"
+     },
+     {
+      "lemma": "tonalli",
+      "form": "tonalli",
+      "how": "edit",
+      "confidence": "baja"
+     }
+    ],
+    "attested": true
+   },
+   {
+    "split": "dev",
+    "kind": "variety",
+    "q": "kuouit",
+    "expect": [
+     "cuahuitl",
+     "quahuitl"
+    ],
+    "top1": false,
+    "top3": false,
+    "got": [
+     {
+      "lemma": "kuouit",
+      "form": "kuouit",
+      "how": "pivot",
+      "confidence": "alta"
+     },
+     {
+      "lemma": "kuouat",
+      "form": "kuouat",
+      "how": "edit",
+      "confidence": "media"
+     },
+     {
+      "lemma": "cueitl",
+      "form": "cueitl",
+      "how": "edit",
+      "confidence": "baja"
+     }
+    ],
+    "attested": true
+   },
+   {
+    "split": "test",
+    "kind": "modern",
+    "q": "ejekatl",
+    "expect": [
+     "ehecatl"
+    ],
+    "top1": false,
+    "top3": true,
+    "got": [
+     {
+      "lemma": "ejekat",
+      "form": "ejekat",
+      "how": "rule",
+      "confidence": "alta"
+     },
+     {
+      "lemma": "eecatl",
+      "form": "ehecatl",
+      "how": "edit",
+      "confidence": "media"
+     },
+     {
+      "lemma": "aehecatl",
+      "form": "aehecatl",
+      "how": "edit",
+      "confidence": "media"
+     }
+    ],
+    "attested": false
+   },
+   {
+    "split": "test",
+    "kind": "colonial",
+    "q": "tlalticpac",
+    "expect": [
+     "tlalticpac"
+    ],
+    "top1": false,
+    "top3": false,
+    "got": [
+     {
+      "lemma": "tlalli",
+      "form": "tlalticpac",
+      "how": "pivot",
+      "confidence": "alta"
+     },
+     {
+      "lemma": "taltikpak",
+      "form": "taltikpak",
+      "how": "edit",
+      "confidence": "alta"
+     },
+     {
+      "lemma": "tlaticpac",
+      "form": "tlaticpac",
+      "how": "edit",
+      "confidence": "media"
+     }
+    ],
+    "attested": true
+   },
+   {
+    "split": "test",
+    "kind": "modern",
+    "q": "tlaltikpak",
+    "expect": [
+     "tlalticpac"
+    ],
+    "top1": false,
+    "top3": false,
+    "got": [
+     {
+      "lemma": "tlalli",
+      "form": "tlalticpac",
+      "how": "pivot",
+      "confidence": "alta"
+     },
+     {
+      "lemma": "taltikpak",
+      "form": "taltikpak",
+      "how": "edit",
+      "confidence": "alta"
+     },
+     {
+      "lemma": "tlaticpac",
+      "form": "tlaticpac",
+      "how": "edit",
+      "confidence": "media"
+     }
+    ],
+    "attested": false
+   },
+   {
+    "split": "test",
+    "kind": "colonial",
+    "q": "sochimilco",
+    "expect": [
+     "xochimilco"
+    ],
+    "top1": false,
+    "top3": true,
+    "got": [
+     {
+      "lemma": "sochimilco",
+      "form": "sochimilco",
+      "how": "pivot",
+      "confidence": "alta"
+     },
+     {
+      "lemma": "Xochimilco",
+      "form": "xochimilco",
+      "how": "rule",
+      "confidence": "media"
+     },
+     {
+      "lemma": "xochmilco",
+      "form": "xochmilco",
+      "how": "edit",
+      "confidence": "baja"
+     }
+    ],
+    "attested": true
+   }
+  ],
+  "pair_errors": [
+   {
+    "split": "dev",
+    "a": "huitzilopochtli",
+    "b": "uizilopochtli",
+    "same": true,
+    "predicted": false
+   },
+   {
+    "split": "dev",
+    "a": "cuahuitl",
+    "b": "kuouit",
+    "same": true,
+    "predicted": false
+   },
+   {
+    "split": "test",
+    "a": "tecuhtli",
+    "b": "teuctli",
+    "same": true,
+    "predicted": false
+   },
+   {
+    "split": "test",
+    "a": "ehecatl",
+    "b": "ejekat",
+    "same": true,
+    "predicted": false
+   },
+   {
+    "split": "test",
+    "a": "centli",
+    "b": "sintli",
+    "same": true,
+    "predicted": false
+   },
+   {
+    "split": "test",
+    "a": "michin",
+    "b": "michi",
+    "same": true,
+    "predicted": false
+   },
+   {
+    "split": "test",
+    "a": "xochitl",
+    "b": "xochitli",
+    "same": true,
+    "predicted": false
    }
   ]
  },
@@ -3060,10 +3433,10 @@
   "questions": "evidence-questions-v1",
   "split": "all",
   "relevance": "Un pasaje es pertinente si la forma señalada (o, en la línea base, alguna palabra náhuatl del pasaje) contiene la raíz esperada según la clave laxa. Es una aproximación automática.",
-  "build_seconds": 2.25,
+  "build_seconds": 3.59,
   "mean_ms_per_query": {
-   "exact_search": 115.67,
-   "evidence": 47.27
+   "exact_search": 117.1,
+   "evidence": 48.36
   },
   "model_calls": 0,
   "summary": {
@@ -5425,8 +5798,8 @@
    }
   },
   "timing": {
-   "build_seconds": 0.9,
-   "mean_ms_per_query": 9.83
+   "build_seconds": 0.99,
+   "mean_ms_per_query": 9.55
   },
   "results": [
    {
@@ -7699,10 +8072,11 @@
  },
  "timing": {
   "seconds_per_component": {
-   "morphology": 11.5,
-   "terms": 7.4,
-   "evidence": 10.3,
-   "documentary": 2.4
+   "morphology": 10.1,
+   "terms": 4.8,
+   "spelling": 0.6,
+   "evidence": 11.8,
+   "documentary": 2.5
   }
  }
 }

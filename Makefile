@@ -23,6 +23,7 @@ test-ui: node_modules data derived
 	$(PYTHON) scripts/test-reading-continuity.py
 	$(PYTHON) scripts/test-reading-documentary.py
 	$(PYTHON) scripts/test-units-ui.py
+	$(PYTHON) scripts/test-spelling-ui.py
 	node tests/pwa_worker.cjs
 
 node_modules: package-lock.json
