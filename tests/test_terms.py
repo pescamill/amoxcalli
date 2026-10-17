@@ -76,9 +76,11 @@ class TermIndexTests(unittest.TestCase):
             self.terms.search('calli', limit=0)
 
     def test_evaluation_report_is_current(self):
+        from nahuatl_local import evaluate_all
         report = term_evaluation.run(self.terms)
-        self.assertEqual(term_evaluation.REPORT.read_text(encoding='utf-8'), term_evaluation.encode(report),
-                         'Regenera con python -m nahuatl_local.term_evaluation')
+        saved = json.loads(evaluate_all.REPORT.read_text(encoding='utf-8'))['terms']
+        self.assertEqual(evaluate_all.stable(saved), evaluate_all.stable(json.loads(json.dumps(report))),
+                         'Regenera con make eval')
         self.assertEqual(report['summary']['all']['spelling_precision_labeled'], 100.0)
 
 
@@ -96,12 +98,12 @@ class OneSearchAcrossViewsTests(unittest.TestCase):
                     self.assertEqual(get('/api/terms', q=query)['groups'][0]['id'], gid, query)
                     self.assertEqual(get('/api/research', query=query)['term']['id'], gid, query)
                     self.assertEqual(get('/api/ask', q=query)['terms'][0]['id'], gid, query)
-                    self.assertEqual(get('/api/documentary', query=query)['term']['id'], gid, query)
+                    self.assertEqual(get('/api/ask/cards', q=query)['term']['id'], gid, query)
                 research = get('/api/research', query='kuali', limit=100)
                 self.assertEqual(research['method'], 'term_group')
                 self.assertEqual(research['total'], get('/api/terms', q='kuali')['groups'][0]['passages']['total'])
                 self.assertEqual(get('/api/research', query='agua de la casa')['method'], 'bm25')  # frase: BM25
-                cards = get('/api/documentary', query='calli')['results']
+                cards = get('/api/ask/cards', q='calli')['results']
                 self.assertEqual(cards[0]['match'], ['term_group'])
                 self.assertIn('form', {c['kind'] for c in cards})
                 with self.assertRaises(urllib.error.HTTPError) as error:

@@ -2,8 +2,8 @@
 
 Uso::
 
-    python3 -m nahuatl_local.term_evaluation           # escribe el informe
-    python3 -m nahuatl_local.term_evaluation --check   # falla si el informe no coincide
+    make eval                                            # informe único (reports/EVALUACION.md)
+    python3 -m nahuatl_local.term_evaluation --split dev  # solo para ajustar; no escribe
 
 Lee ``evaluation/term-groups-v1.json`` (escrito antes de construir el índice) y mide,
 por término y por partición (dev / test):
@@ -21,7 +21,6 @@ Deterministas: el informe solo cambia si cambian el conjunto, el índice o sus d
 """
 import argparse
 import json
-import sys
 from collections import defaultdict
 
 from .stems import ROOT
@@ -29,8 +28,6 @@ from .terms import TERMS_VERSION, TermIndex
 from .text import fold, loose_key
 
 GOLD = ROOT / 'evaluation' / 'term-groups-v1.json'
-REPORT = ROOT / 'reports' / 'term-groups-evaluation.json'
-MARKDOWN = ROOT / 'reports' / 'TERMINOS_EVALUACION.md'
 
 
 def tiers(group):
@@ -127,13 +124,13 @@ def run(index=None, split='all'):
     summary = dict(all=aggregate(rows), **{s: aggregate([r for r in rows if r['split'] == s]) for s in ('dev', 'test')
                                            if any(r['split'] == s for r in rows)})
     return dict(version=TERMS_VERSION, gold=gold['id'], protocol=gold['protocol'], model_calls=0,
-                generated_by='python -m nahuatl_local.term_evaluation', summary=summary, terms=rows)
+                generated_by='python -m nahuatl_local.evaluate_all', summary=summary, terms=rows)
 
 
 def markdown(report):
     lines = ['# Evaluación de grupos de término', '',
              f"Índice `{report['version']}` · conjunto `{report['gold']}` · sin modelos. "
-             'Regenerar: `python -m nahuatl_local.term_evaluation` (o `make reports`).', '',
+             'Regenerar: `make eval` (`python -m nahuatl_local.evaluate_all`).', '',
              report['protocol'], '',
              '| Partición | Términos | Consulta → grupo (top-1) | Mismo grupo | Grafías (cualquier nivel) | Grafías seguras | Glifos | Precisión grafías* | Precisión glifos* | Homógrafos separados |',
              '|---|---|---|---|---|---|---|---|---|---|']
@@ -156,26 +153,11 @@ def markdown(report):
     return '\n'.join(lines) + '\n'
 
 
-def encode(report):
-    return json.dumps(report, ensure_ascii=False, indent=1, sort_keys=True) + '\n'
-
-
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument('--check', action='store_true', help='Falla si el informe guardado no coincide con una medición nueva.')
-    parser.add_argument('--split', choices=['all', 'dev'], default='all', help='dev: solo para ajustar; no escribe el informe.')
+    parser.add_argument('--split', choices=['all', 'dev'], default='dev', help='dev: solo para ajustar.')
     args = parser.parse_args(argv)
-    report = run(split=args.split)
-    if args.split == 'dev':
-        print(markdown(report))
-        return
-    if args.check:
-        if not REPORT.is_file() or REPORT.read_text(encoding='utf-8') != encode(report):
-            sys.exit('reports/term-groups-evaluation.json no coincide: ejecuta python -m nahuatl_local.term_evaluation')
-    else:
-        REPORT.write_text(encode(report), encoding='utf-8')
-        MARKDOWN.write_text(markdown(report), encoding='utf-8')
-    print(json.dumps(report['summary'], ensure_ascii=False, indent=1))
+    print(markdown(run(split=args.split)))
 
 
 if __name__ == '__main__':

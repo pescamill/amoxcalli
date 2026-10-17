@@ -3,7 +3,7 @@ import unittest
 from pathlib import Path
 
 from nahuatl_local import passages
-from nahuatl_local.documentary_retrieval import PublicSources
+from nahuatl_local.cards import PublicSources
 from nahuatl_local.research import Archive
 
 ROOT = Path(__file__).resolve().parents[1]

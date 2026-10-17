@@ -34,7 +34,7 @@ npm ci --ignore-scripts    # una vez, para la suite DOM
 make test                  # suite Python + suite DOM (lo mismo que CI)
 ```
 
-Las pruebas que necesitan el laboratorio LLM (`requirements.txt`) o la caché local de páginas de Molina se omiten con un aviso si faltan. Un cambio solo de interfaz se verifica con `make test-ui`; no regeneres informes. Un cambio en ranking, datos, batería o evaluador sí exige `make reports` y `make check` ([reports/README.md](reports/README.md)). Las pruebas de interfaz arrancan una base temporal, sin modificar las aportaciones de tu instalación. Para un cambio concreto, ejecuta primero las pruebas relevantes; no hace falta entrenar ni descargar pesos para mejorar la lectura.
+Las pruebas que necesitan la caché local de páginas de Molina se omiten con un aviso si falta; las del laboratorio LLM archivado viven en `experiments/llm/tests/`, fuera de `make test`. Un cambio solo de interfaz se verifica con `make test-ui`; no regeneres informes. Un cambio en datos, analizador, índices, Preguntar o en un conjunto de evaluación sí exige `make eval` y `make check` ([reports/README.md](reports/README.md)). Las pruebas de interfaz arrancan una base temporal, sin modificar las aportaciones de tu instalación. Para un cambio concreto, ejecuta primero las pruebas relevantes; no hace falta entrenar ni descargar pesos para mejorar la lectura.
 
 Describe en la propuesta el comportamiento resultante, la verificación realizada y cualquier duda pendiente. Actualiza la guía correspondiente y, si cierra un paso del plan, su entrada en [docs/ROADMAP.md](docs/ROADMAP.md). No escribas informes por ciclo: el commit y el ROADMAP son el registro.
 

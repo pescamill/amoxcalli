@@ -7,7 +7,7 @@ import threading
 import unittest
 from nahuatl_local.community import Store, Problem
 from nahuatl_local.corpus import CorpusStore, editorial_releases
-from nahuatl_local.platform import make_server, rule_query
+from nahuatl_local.platform import make_server
 from nahuatl_local.pictography import load_catalog
 
 
@@ -155,13 +155,8 @@ class CorpusTests(unittest.TestCase):
         with self.assertRaises(Problem):self.store.decide(id,'accepted','QA','sin derechos')
         self.assertNotIn(id,self.store.records())
 
-    def test_rules_ported_without_faking_general_translation(self):
-        self.assertEqual(rule_query(self.store,'Veo una flor.')['status'],'proposal')
-        self.assertEqual(rule_query(self.store,'El sol y la luna')['status'],'proposal')
-        self.assertEqual(rule_query(self.store,'No veo tres casas mañana')['status'],'insufficient')
-
     def test_http_shared_origin_session_and_no_admin_route(self):
-        server=make_server(self.store,port=0,model_enabled=False);thread=threading.Thread(target=server.serve_forever,daemon=True);thread.start()
+        server=make_server(self.store,port=0);thread=threading.Thread(target=server.serve_forever,daemon=True);thread.start()
         port=server.server_address[1];conn=http.client.HTTPConnection('127.0.0.1',port)
         def req(method,path,body=None,**headers):
             conn.request(method,path,body=json.dumps(body) if body is not None else None,headers=headers);r=conn.getresponse();return r.status,r.read()
@@ -188,31 +183,20 @@ class CorpusTests(unittest.TestCase):
                 self.assertIn(phrase,payload.decode())
             for path in ('/project/../../data/community/voces.sqlite3','/project/PROGRESO_INTERNO.md'):
                 self.assertIn(req('GET',path)[0],(401,404))
-            self.assertEqual(req('GET','/laboratory.js')[0],200)
-            status,lab=req('GET','/api/laboratory');self.assertEqual(status,200);lab=json.loads(lab)
-            self.assertFalse(lab['model']['ready'])
-            self.assertEqual(lab['training']['completed_steps'],250)
-            self.assertFalse(lab['training']['current_data_matches'])
-            self.assertTrue(lab['retrieval']['current_data_matches'])
-            self.assertEqual(req('GET','/api/laboratory/reports/training')[0],200)
-            self.assertEqual(req('GET','/api/laboratory/reports/state.pt')[0],404)
-            self.assertEqual(req('GET','/training-data.js')[0],200)
-            status,payload=req('GET','/api/training-data');self.assertEqual(status,200)
-            self.assertEqual(json.loads(payload)['total'],650)
-            self.assertEqual(req('GET','/api/training-pairs')[0],401)
-            self.assertEqual(req('GET','/api/laboratory/context?query=flor')[0],200)
+            # El laboratorio del LLM está archivado (experiments/llm/): solo queda su página histórica estática.
+            self.assertEqual(req('GET','/lab-history.js')[0],200)
+            for retired in ('/laboratory.js','/training-data.js','/documentary.js','/api/laboratory','/api/training-data',
+                            '/api/training-pairs','/api/laboratory/context?query=flor','/api/documentary?query=atl'):
+                self.assertEqual(req('GET',retired)[0],404,retired)
             status,payload=req('GET','/api/learning');self.assertEqual(status,200)
             self.assertEqual(sum(len(l['examples']) for l in json.loads(payload)['lessons']),48)
             headers={'Cookie':'voces_session='+self.token,'Origin':f'http://127.0.0.1:{port}'}
             self.assertEqual(req('GET','/api/proposals',**headers)[0],200)
-            self.assertEqual(req('POST','/api/compose',{'text':'agua'},Origin='https://attacker.example')[0],403)
-            status,payload=req('POST','/api/compose',{'text':'agua'},**headers)
-            self.assertEqual(status,200);self.assertIn('review_request',json.loads(payload));self.assertNotIn('jev_request',json.loads(payload))
+            self.assertEqual(req('POST','/api/compose',{'text':'agua'},**headers)[0],404)
             status,payload=req('GET','/manifest.webmanifest');self.assertEqual(status,200)
             manifest=json.loads(payload);self.assertEqual(manifest['scope'],'/');self.assertEqual(manifest['display'],'standalone')
             for item in manifest['icons']:self.assertEqual(req('GET',item['src'])[0],200)
             self.assertEqual(req('GET','/sw.js')[0],200);self.assertEqual(req('GET','/offline.html')[0],200)
-            self.assertEqual(req('POST','/api/compose',{'text':'agua','model':True},**headers)[0],503)
             self.assertEqual(req('POST','/api/review',{},**headers)[0],404)
         finally:conn.close();server.shutdown();server.server_close();thread.join()
 

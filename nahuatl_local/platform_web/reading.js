@@ -28,7 +28,7 @@ function resolveReadingOrigin(mode,lessonId,passageId){
 }
 function routeReadingOrigin(){
  const {page,id,params}=route(),keys=['from','lesson','passage'];
- if(!['leer','aprender','lexico','investigar','consultar'].includes(page)||Array.from(params.keys()).length!==keys.length||keys.some(k=>params.getAll(k).length!==1))return null;
+ if(!['leer','aprender','lexico','investigar','preguntar'].includes(page)||Array.from(params.keys()).length!==keys.length||keys.some(k=>params.getAll(k).length!==1))return null;
  const origin=resolveReadingOrigin(params.get('from'),params.get('lesson'),params.get('passage'));
  if(origin&&['leer','aprender'].includes(page)&&(origin.mode!==page||origin.lesson.id!==id))return null;
  return origin;

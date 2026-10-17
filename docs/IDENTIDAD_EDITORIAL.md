@@ -35,7 +35,7 @@ Hablar como quien acompaña una lectura. Dar una acción concreta y dejar espaci
 | Cuaderno | Explicar qué guarda y dónde: palabras, pasajes y progreso en este navegador. |
 | Voces | «Tu palabra, tu voz». Conservar denominación, escritura y decisiones de quien aporta. |
 | Revisión | Indicar junto a la evidencia qué está comprobado y qué falta. No convertir cada invitación en una lista de advertencias. |
-| Laboratorio | Nombrar método, resultado y límite con precisión. Una generación sigue siendo un borrador; el cambio de tono no mejora el modelo. |
+| Laboratorio (histórico) | Nombrar método, resultado y límite con precisión: qué se probó, sus cifras y por qué se retiró. Una generación era un borrador; el cambio de tono no mejoraba el modelo. |
 
 No se inventan traducciones o lemas en náhuatl para nombrar botones. Los originales, las glosas heredadas y las explicaciones editoriales del corpus no se reescriben como parte de esta actualización de voz. Las notas que distinguen variantes, permisos y alcance glífico siguen visibles.
 
@@ -49,6 +49,6 @@ Para una página nueva: reutilizar títulos, separadores, márgenes y controles 
 
 ## Estructura de la interfaz
 
-Una sola caja de búsqueda en la cabecera (`#search`): en Diccionario, Fuentes y Fichas textuales filtra mientras se escribe; en las demás secciones abre Preguntar, que muestra el grupo de término (grafías, glifos, pasajes) con enlaces a Diccionario, Archivo y Consultar fichas. El Archivo y Consultar fichas conservan su formulario propio con filtros. Navegación principal: Lecturas, Diccionario, Glifos, Preguntar y Mis palabras; lo avanzado (Leer todos los pasajes, Archivo completo, Consultar fichas, Fichas textuales, Fuentes, Laboratorio, Proyecto, Voces, Opciones, exportar e instalar) está en «Más». Un solo aviso de revisión lingüística por página, bajo la cabecera.
+Una sola caja de búsqueda en la cabecera (`#search`): en Diccionario, Fuentes y Fichas textuales filtra mientras se escribe; en las demás secciones abre Preguntar, que muestra el grupo de término (grafías, glifos, pasajes) con enlaces a Diccionario y Archivo, y debajo las fichas con sus originales (antes la vista Consultar fichas). El Archivo conserva su formulario propio con filtros. Navegación principal: Lecturas, Diccionario, Glifos, Preguntar y Mis palabras; lo avanzado (Leer todos los pasajes, Archivo completo, Fichas textuales, Fuentes, Proyecto, Laboratorio histórico, Voces, Opciones, exportar e instalar) está en «Más». Un solo aviso de revisión lingüística por página, bajo la cabecera.
 
 Módulos del navegador (scripts clásicos que comparten funciones globales, en este orden): `app.js` (servido como `/corpus.js`: utilidades, estado, enrutador y búsqueda global), `terms.js`, `study.js` (cuaderno local), `words.js` (palabras, glifos y ayuda), `reading.js` (tarjeta de lectura y regreso al pasaje), `lessons.js`, `dictionary.js`, `notebook.js` (Mis palabras), `archive.js`, `library.js` (textos, fuentes, opciones), `contribute.js`, `documentary.js`, `morphology.js`, `evidence.js` (Preguntar), `pictography.js`, `project.js`, `laboratory.js`, `training-data.js`, `install.js`.

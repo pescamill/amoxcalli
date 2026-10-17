@@ -1,5 +1,6 @@
 'use strict';
-// Preguntar: una palabra o pregunta breve → análisis, entradas y pasajes citados.
+// Preguntar: una palabra o pregunta breve → análisis, entradas y pasajes citados; después, sus fichas
+// (campos originales con procedencia: forma/normalización, acepción, pasaje, glifo), también por ID.
 // Recuperación por raíz y por grafía laxa; no se usa un LLM ni se inventa una traducción.
 
 const askExamples=['nocal','kuali','tlajtoli','¿cómo se dice mujer?','¿Qué significa xochitl?'];
@@ -7,6 +8,24 @@ const askCache=new Map();
 function askEvidence(query){
  if(!askCache.has(query))askCache.set(query,api('/api/ask?'+new URLSearchParams({q:query})).catch(e=>{askCache.delete(query);throw e;}));
  return askCache.get(query);
+}
+const cardsCache=new Map();
+function askCards(query){
+ if(!cardsCache.has(query))cardsCache.set(query,api('/api/ask/cards?'+new URLSearchParams({q:query})).catch(e=>{cardsCache.delete(query);throw e;}));
+ return cardsCache.get(query);
+}
+const cardFieldNames={written:'Escritura original',catalog_normalized:'Normalización catalogada',definition:'Glosa registrada',sense_id:'ID de acepción',nah:'Original náhuatl',es:'Español conservado',document:'Obra',iso:'Variedad declarada',designation:'Denominación del catálogo',reading:'Lectura registrada',code:'Código',evidence:'Procedencia registrada',components:'Componentes y valores registrados',citations:'Citas registradas',lexical_links:'Relaciones léxicas explícitas'};
+function cardValue(value){return typeof value==='string'?value:JSON.stringify(value,null,2);}
+function askCardHTML(hit){
+ const fields=hit.fields.filter(f=>f.field in cardFieldNames);
+ const senseId=hit.kind==='form'?hit.comparison?.sense_id:hit.kind==='sense'?hit.id:null;
+ const wordLink=senseId&&state.byId[senseId]?.kind==='sense'?`<a class="secondary" href="#lexico/${esc(senseId)}">Abrir palabra en Diccionario</a>`:'';
+ const sources=hit.source_ids.map(id=>state.byId[id]?`<a href="#fuentes/${esc(id)}">${esc(state.byId[id].label)}</a>`:esc(id)).join(' · ');
+ return `<article class="card documentary-hit" data-card-id="${esc(hit.id)}"><p class="eyebrow">${esc(hit.kind==='form'?'Forma y acepción':hit.kind==='passage'?'Pasaje':kindNames[hit.kind]||'Ficha del catálogo')}</p><h2>${esc(hit.label)}</h2><p class="meta">${esc(hit.id)} · ${esc(hit.match.includes('term_group')?'Ficha del término':hit.match.includes('identifier')?'Coincidencia de ID':hit.match.includes('catalog_label')?'Coincidencia de grafía o etiqueta':'Coincidencia de palabras')}</p>${hit.comparison?`<p class="content-note">Original y normalización: ${hit.comparison.equal_literal===null?'sin normalización registrada':hit.comparison.equal_literal?'coinciden literalmente':'difieren; ambos campos se conservan'}. No decide el sentido en un pasaje.</p>`:''}<dl>${fields.map(f=>`<dt>${esc(cardFieldNames[f.field])} <small>(${esc(f.record_id)})</small></dt><dd><pre>${esc(cardValue(f.value))}</pre>${['public_records','public_catalog'].includes(f.table)?'<p class="content-note">Campo público de esta instalación; no transcripción de la fuente.</p>':''}${link(f.url,['public_records','public_catalog'].includes(f.table)?'Fuente relacionada':'Consultar fuente de este campo')}</dd>`).join('')}</dl>${fields.length?'':'<p>Esta ficha tiene metadatos; abre sus campos completos para examinarlos.</p>'}${sources?`<p>Fuentes: ${sources}</p>`:''}<div class="card-actions">${wordLink}${hit.urls.map(u=>link(u,'Abrir ficha o documento')).join(' ')}</div><details><summary>Todos los campos y su procedencia</summary>${hit.fields.map(f=>`<p><strong>${esc(f.field)}</strong> · ${esc(f.record_id)}</p><pre>${esc(cardValue(f.value))}</pre><p class="meta">${esc(f.path||'Proyección pública de esta instalación')} · ${esc(f.table)} ${f.file_sha256?`· archivo ${esc(f.file_sha256)}`:''}</p>`).join('')}</details></article>`;
+}
+function askCardsHTML(data){
+ if(!data.results.length)return '';
+ return `<section class="ask-cards" aria-labelledby="ask-cards-title"><h2 id="ask-cards-title">Fichas y originales</h2><p class="meta">${data.results.length} fichas${data.truncated?` de ${data.total}; acota la consulta para ver las demás`:''}. ${esc(data.note)}</p>${data.results.map(askCardHTML).join('')}</section>`;
 }
 function askHighlight(text,form){
  if(!form)return esc(text);
@@ -48,16 +67,29 @@ function askResultHTML(r){
  return html;
 }
 async function renderAsk(id){
- const query=decodeURIComponent(id||'');
- $('content').innerHTML=heading('Preguntar con evidencia','¿Qué significa? ¿Cómo se dice?','Una palabra náhuatl en cualquier grafía, o una palabra en español. La respuesta reúne sus grafías, glifos, entradas del diccionario y pasajes del archivo; cada resultado dice por qué aparece.')+
-  `<p class="ask-examples">Escribe en la búsqueda de arriba o prueba: ${askExamples.map(q=>`<a href="#preguntar/${encodeURIComponent(q)}">${esc(q)}</a>`).join(' · ')}</p><div id="ask-status" role="status" aria-live="polite"></div><div id="ask-results"></div>`;
+ const query=decodeHash(id||''),origin=routeReadingOrigin();
+ $('content').innerHTML=readingReturnHTML(origin)+heading('Preguntar con evidencia','¿Qué significa? ¿Cómo se dice?','Una palabra náhuatl en cualquier grafía, una palabra en español o el ID de una ficha. La respuesta reúne sus grafías, glifos, entradas del diccionario, pasajes del archivo y las fichas con sus originales; cada resultado dice por qué aparece.')+
+  `<p class="ask-examples">Escribe en la búsqueda de arriba o prueba: ${askExamples.map(q=>`<a href="#preguntar/${encodeURIComponent(q)}">${esc(q)}</a>`).join(' · ')}</p><div id="ask-status" role="status" aria-live="polite"></div><div id="ask-results"></div><div id="ask-cards" aria-live="polite"></div>`;
+ focusReadingReturn();
  if(!query)return;
+ // La página pudo cambiar (o cerrarse) mientras llegaba una respuesta: entonces no se toca el documento.
+ const current=()=>{try{return route().page==='preguntar'&&decodeHash(route().id||'')===query&&!!$('ask-cards');}catch{return false;}};
  $('ask-status').textContent='Buscando evidencia…';
+ // Fichas en paralelo: una consulta por ID o una pregunta documental no tiene respuesta de palabra, pero sí fichas.
+ const cards=askCards(query).catch(()=>null);
+ let answered=false;
  try{
   const r=await askEvidence(query);
-  if(route().page!=='preguntar'||decodeURIComponent(route().id||'')!==query)return;
-  $('ask-status').textContent='';$('ask-results').innerHTML=askResultHTML(r);bindAskResult($('ask-results'),query);
- }catch(e){if($('ask-status'))$('ask-status').textContent=e.message;}
+  if(!current())return;
+  $('ask-status').textContent='';$('ask-results').innerHTML=askResultHTML(r);preserveReadingLinks($('ask-results'),origin);bindAskResult($('ask-results'),query);answered=true;
+ }catch(e){if(current())$('ask-status').textContent=e.message;}
+ // Las fichas se pintan al llegar, sin retener la página (render no las espera).
+ cards.then(data=>{
+  if(!data||!current())return;
+  $('ask-cards').innerHTML=askCardsHTML(data);preserveReadingLinks($('ask-cards'),origin);
+  if(!answered&&data.results.length)$('ask-status').textContent=`Sin respuesta de palabra para esta consulta; se muestran ${data.results.length} fichas.`;
+  else if(!answered&&$('ask-status').textContent)$('ask-status').textContent+=' '+data.absence;
+ });
 }
 function bindAskResult(root,query){
  const cites=()=>root.querySelectorAll('[data-cite]').forEach(b=>b.onclick=()=>{const target=[...root.querySelectorAll('[data-evidence-id]')].find(el=>el.dataset.evidenceId===b.dataset.cite);if(!target)return;target.scrollIntoView({block:'center'});target.classList.add('ask-flash');setTimeout(()=>target.classList.remove('ask-flash'),1600);});

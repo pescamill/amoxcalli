@@ -4,7 +4,7 @@ Modelo de datos, arranque, revisión, importación y exportación. Qué ofrece l
 
 ## Una plataforma, un corpus
 
-Voces deja de ser una app desconectada. La entrada principal de Amoxcalli reúne Aprender, Leer, Diccionario, Mis palabras y Laboratorio. Archivo completo, fichas textuales y fuentes están en «Archivo y herramientas». La escritura, grabación y revisión comunitaria de Voces viven en `/aportar`. Comparten servidor, cookies de sesión y `data/community/voces.sqlite3`.
+Voces deja de ser una app desconectada. La entrada principal de Amoxcalli reúne Aprender, Leer, Diccionario, Preguntar y Mis palabras; el Laboratorio quedó como página histórica. Archivo completo, fichas textuales y fuentes están en «Archivo y herramientas». La escritura, grabación y revisión comunitaria de Voces viven en `/aportar`. Comparten servidor, cookies de sesión y `data/community/voces.sqlite3`.
 
 La unidad léxica es una **acepción**, no una traducción universal. «Árbol» y «madera» tienen IDs distintos; «luna» y «mes» también. Cada acepción puede tener numerosas formas por variante, localidad, época y convención de escritura. `quauitl` y `cuahuitl` muestran una relación ortográfica heredada; no se hacen pasar por dos dialectos modernos.
 
@@ -128,15 +128,7 @@ Los registros exportados conservan grupo de fuente y, para aportaciones nuevas, 
 
 ## Modelo y revisión humana dentro del ecosistema
 
-El modelo se activa cuando sus dependencias, base y adaptador están disponibles; `bash scripts/amoxcalli.sh setup` los prepara y arranca. La búsqueda principal consulta el archivo completo, no sólo el léxico editorial. Resultados reales: [MODEL_CARD.md](../MODEL_CARD.md).
-
-El laboratorio porta las reglas limitadas de Amoxcalli: palabra aislada, «veo + un objeto singular» y coordinación de dos sustantivos. Toda oración nueva se marca como propuesta. No cubre negación, otros tiempos o número por inferencia.
-
-Para habilitar el modelo existente, instala y descarga primero sus dependencias como indica el README y arranca:
-
-```bash
-bash scripts/amoxcalli.sh serve --adapter outputs/continued-unseen/run/best
-```
+Desde el 16 de octubre de 2026 la aplicación no ofrece generación: el modelo local (Qwen3-0.6B + LoRA), su instalación (`setup`), la ruta `/api/compose` con las reglas limitadas («veo + un objeto singular», coordinación de dos sustantivos) y las pantallas del Laboratorio se archivaron en [experiments/llm/](../experiments/llm/README.md). La recuperación de pasajes superó a sus borradores (27,2 frente a 22,4 chrF++); `#modelos` muestra solo un resumen histórico. La búsqueda principal consulta el archivo completo, no sólo el léxico editorial. Resultados del modelo: [MODEL_CARD.md](../experiments/llm/MODEL_CARD.md).
 
 La carga es perezosa y local. Se conserva el modelo, entrenamiento y evaluación previos; no se volvió a entrenar durante esta integración. Los splits de entrenamiento y sus comandos se conservan. El CSV íntegro de Axolotl ahora se consulta como archivo separado, con etiquetas y atribuciones de origen. Sus pasajes no se convierten automáticamente en fichas editoriales aprobadas ni en nuevos pares autorizados de entrenamiento.
 
@@ -154,4 +146,4 @@ Las propuestas de clasificación del archivo están en `corpus/variant-proposals
 
 ## Más guías
 
-[Laboratorio](LABORATORIO.md) · [Lecturas por recetas](LECTURAS_PIPELINE.md) · [Pipeline editorial](EDITORIAL_PIPELINE.md) · [Léxico y glifos](LEXICO_GOBERNANZA.md) · [Diccionario pictográfico](DICCIONARIO_PICTOGRAFICO.md) · [Voces](VOCES.md)
+[Laboratorio (histórico)](../experiments/llm/LABORATORIO.md) · [Lecturas por recetas](LECTURAS_PIPELINE.md) · [Pipeline editorial](EDITORIAL_PIPELINE.md) · [Léxico y glifos](LEXICO_GOBERNANZA.md) · [Diccionario pictográfico](DICCIONARIO_PICTOGRAFICO.md) · [Voces](VOCES.md)

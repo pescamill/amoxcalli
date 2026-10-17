@@ -1,5 +1,4 @@
-"""QA de continuidad de cotejo documental, sin geometría simulada."""
-import argparse
+"""QA de continuidad: del pasaje a las fichas de Preguntar y de vuelta, sin geometría simulada."""
 import os
 from pathlib import Path
 import subprocess
@@ -13,9 +12,6 @@ from nahuatl_local.corpus import CorpusStore
 from nahuatl_local.platform import make_server
 from qa_prewarm import prewarm
 
-parser = argparse.ArgumentParser(description=__doc__)
-parser.add_argument('--baseline', action='store_true')
-args = parser.parse_args()
 with tempfile.TemporaryDirectory() as directory:
     httpd = make_server(CorpusStore(Path(directory) / 'qa.sqlite3'), port=0)
     thread = threading.Thread(target=httpd.serve_forever, daemon=True)
@@ -23,8 +19,6 @@ with tempfile.TemporaryDirectory() as directory:
     try:
         prewarm(f'http://127.0.0.1:{httpd.server_address[1]}')
         environment = dict(os.environ, CORPUS_QA_ORIGIN=f'http://127.0.0.1:{httpd.server_address[1]}')
-        if args.baseline:
-            environment['READING_DOCUMENTARY_BASELINE'] = '1'
         result = subprocess.run(['node', str(ROOT / 'tests/reading_documentary_continuity.cjs')], env=environment, timeout=60)
     finally:
         httpd.shutdown()

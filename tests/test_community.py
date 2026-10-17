@@ -160,7 +160,7 @@ class CommunityTests(unittest.TestCase):
 
     def test_http_session_and_origin_protection(self):
         # Voces no tiene servidor propio: la aplicación única la sirve en /aportar.
-        httpd=make_server(CorpusStore(self.root/'http.sqlite3'),port=0,model_enabled=False);thread=threading.Thread(target=httpd.serve_forever,daemon=True);thread.start()
+        httpd=make_server(CorpusStore(self.root/'http.sqlite3'),port=0);thread=threading.Thread(target=httpd.serve_forever,daemon=True);thread.start()
         origin='http://127.0.0.1:'+str(httpd.server_address[1])
         try:
             req=urllib.request.Request(origin+'/api/profile',json.dumps(profile()).encode(),{'Content-Type':'application/json','Origin':origin})

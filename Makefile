@@ -2,12 +2,13 @@
 PYTHON ?= python3
 PORT ?= 8766
 
-.PHONY: help test test-py test-ui check reports reports-model data derived demo
+.PHONY: help test test-py test-ui eval check reports data derived demo
 
 help:
 	@echo "make test        Suite Python + suite DOM (requiere: npm ci --ignore-scripts)"
-	@echo "make check       Comprueba que los informes medidos siguen vigentes (sin escribir)"
-	@echo "make reports     Regenera los informes medidos de reports/ (sin modelo ni red)"
+	@echo "make eval        Evaluación única: reports/EVALUACION.md (morfología, términos, Preguntar, fichas)"
+	@echo "make check       Vuelve a medir y falla si una cifra cambió sin regenerar (no escribe)"
+	@echo "make reports     make eval + informes de cobertura (unidades, glifos)"
 	@echo "make demo        Prepara los análisis derivados y sirve en http://127.0.0.1:$(PORT)"
 
 test: test-py test-ui
@@ -28,28 +29,22 @@ node_modules: package-lock.json
 	npm ci --ignore-scripts
 	@touch node_modules
 
-# Compuertas: solo entradas medidas (ranking, datos, batería, evaluador).
+# Una sola evaluación (sin modelo ni red). La batería documental se reconstruye aparte, solo si cambian
+# sus datos: python -m nahuatl_local.documentary_evaluation.
+eval:
+	$(PYTHON) -m nahuatl_local.evaluate_all
+
+# Compuerta: vuelve a medir; solo cuentan las cifras (entradas medidas), no tiempos ni interfaz.
 check:
 	$(PYTHON) -m nahuatl_local.documentary_evaluation --check
-	$(PYTHON) -m nahuatl_local.documentary_retrieval_evaluation --check
-	$(PYTHON) -m nahuatl_local.documentary_laboratory --check
+	$(PYTHON) -m nahuatl_local.evaluate_all --check
 
-# Orden: batería → recuperación medida → comparación del Laboratorio → evaluaciones de Preguntar y morfología.
 # glyph_linker escribe el lote en un temporal: aquí solo se regenera su informe de cobertura.
-reports:
-	$(PYTHON) -m nahuatl_local.documentary_evaluation
-	$(PYTHON) -m nahuatl_local.documentary_retrieval_evaluation
-	$(PYTHON) -m nahuatl_local.documentary_laboratory
-	$(PYTHON) -m nahuatl_local.evidence_evaluation
-	$(PYTHON) -m nahuatl_local.morphology_evaluation
-	$(PYTHON) -m nahuatl_local.term_evaluation
+reports: eval
 	$(PYTHON) -m nahuatl_local.units
 	$(PYTHON) -m nahuatl_local.glyph_linker --output "$$(mktemp -d)/glyph-associations.json"
 
-# Requiere requirements.txt, data/prepared/ y los pesos (models/base, outputs/): ver MODEL_CARD.md.
-reports-model:
-	$(PYTHON) -m nahuatl_local.benchmark --retrieval-only --split validation --output reports/benchmark-retrieval-validation-current-full.json
-	$(PYTHON) scripts/check-local-model.py
+# El laboratorio del LLM (entrenamiento, banco de pruebas, pesos) está archivado en experiments/llm/.
 
 # Preparación del corpus clásico (byte a byte reproducible desde corpus/axolotl/axolotl.csv).
 # Solo si falta: no sobrescribe una preparación local (p. ej. con estadísticas del tokenizador).

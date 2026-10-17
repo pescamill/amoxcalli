@@ -2,10 +2,11 @@
 
 Uso::
 
-    python3 -m nahuatl_local.morphology_evaluation            # informe completo
-    python3 -m nahuatl_local.morphology_evaluation --split dev  # solo para ajustar reglas
+    make eval                                                   # informe único (reports/EVALUACION.md)
+    python3 -m nahuatl_local.morphology_evaluation --split dev  # solo para ajustar reglas; no escribe
 
-Escribe ``reports/morphology-evaluation.json`` y ``reports/MORFOLOGIA_EVALUACION.md``.
+El informe lo escribe el arnés único (``nahuatl_local.evaluate_all``), que también guarda la
+muestra de revisión ``reports/morphology-review/stem-hits-sample.csv``.
 Las cifras miden comportamiento técnico frente a un conjunto pequeño y a un
 diccionario histórico; no sustituyen la revisión lingüística.
 """
@@ -102,7 +103,10 @@ def coverage(analyzer, rows, records):
 # ---------------------------------------------------------------------------
 # 3. Concordancia: pasajes recuperables para cada entrada del diccionario
 # ---------------------------------------------------------------------------
-def concordance_recall(analyzer, rows, records, sample_path, seed=2026):
+SAMPLE = ROOT / 'reports' / 'morphology-review' / 'stem-hits-sample.csv'
+
+
+def concordance_recall(analyzer, rows, records, sample_path=None, seed=2026):
     conc = StemConcordance(analyzer, rows)
     nci = [r for r in rows if r['iso'] == 'nci']
     word_index = defaultdict(set)
@@ -143,7 +147,7 @@ def concordance_recall(analyzer, rows, records, sample_path, seed=2026):
                 passages_only_exact=sum(e['only_exact'] for e in found),
                 median_gain=statistics.median([e['stem_index'] - e['exact'] for e in found]) if found else 0,
                 top_gains=sorted(found, key=lambda e: -(e['only_stem']))[:12],
-                review_sample=str(sample_path.relative_to(ROOT)) if sample_path else None,
+                review_sample=str(SAMPLE.relative_to(ROOT)),
                 caveat='Más pasajes no implica más aciertos: la muestra de revisión estima la precisión de los nuevos hallazgos.')
 
 
@@ -227,7 +231,8 @@ def hint_eval(analyzer, rows, hints):
 
 
 # ---------------------------------------------------------------------------
-def run(split='all', write=True):
+def run(split='all', write_sample=False):
+    """Mide y devuelve el informe; ``write_sample`` guarda además la muestra de revisión humana."""
     t0 = time.time()
     records, rows = load_records(), passages.load()
     full = load_default(True, ROOT, records, rows)
@@ -239,15 +244,10 @@ def run(split='all', write=True):
     report = dict(analyzer=ANALYZER_VERSION, split=split, gold=gold)
     if split != 'dev':
         report['coverage'] = coverage(full, rows, records)
-        report['concordance'] = concordance_recall(full, rows, records,
-                                                   ROOT / 'reports' / 'morphology-review' / 'stem-hits-sample.csv' if write else None)
+        report['concordance'] = concordance_recall(full, rows, records, SAMPLE if write_sample else None)
         hints = GlossHints.train(full, rows)
         report['gloss_hints'] = dict(meta=hints.meta, evaluation=hint_eval(full, rows, hints))
     report['seconds'] = round(time.time() - t0, 1)
-    if write:
-        (ROOT / 'reports').mkdir(exist_ok=True)
-        (ROOT / 'reports' / 'morphology-evaluation.json').write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding='utf-8')
-        (ROOT / 'reports' / 'MORFOLOGIA_EVALUACION.md').write_text(markdown(report), encoding='utf-8')
     return report
 
 
@@ -255,7 +255,7 @@ def markdown(r):
     g = r['gold']
     lines = ['# Evaluación del analizador morfológico', '',
              f"Analizador `{r['analyzer']}` · conjunto `{GOLD.name}` · partición `{r['split']}`. "
-             'Generado por `python3 -m nahuatl_local.morphology_evaluation`.', '',
+             'Generado por `make eval` (`python3 -m nahuatl_local.evaluate_all`).', '',
              '## 1. Segmentación frente al conjunto de referencia', '',
              '| Sistema | n | Segmentación exacta (top‑1) | top‑1 dev / test | En top‑3 | Raíz correcta (top‑1) |', '|---|---:|---:|---:|---:|---:|']
     for name, v in g.items():
@@ -296,18 +296,17 @@ def markdown(r):
               '(concordancia de categoría entre análisis y entrada; sustantivos breves registrados completos, como *atl*); '
               'la primera medición se conserva en `reports/morphology-evaluation-first-test-run.json`. Con 27 casos, un caso equivale a ~4 puntos.',
               '- Molina (1571) no es un diccionario completo ni moderno: una pista correcta puede no aparecer en su definición.',
-              '- Ninguna cifra mide comprensión lectora ni calidad de traducción.',
-              f"\nTiempo de ejecución: {r['seconds']} s."]
+              '- Ninguna cifra mide comprensión lectora ni calidad de traducción.']
+    if r.get('seconds') is not None:
+        lines.append(f"\nTiempo de ejecución: {r['seconds']} s.")
     return '\n'.join(lines) + '\n'
 
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument('--split', choices=['dev', 'test', 'all'], default='all')
-    p.add_argument('--no-write', action='store_true')
+    p.add_argument('--split', choices=['dev', 'test', 'all'], default='dev')
     a = p.parse_args()
-    r = run(a.split, not a.no_write)
-    print(markdown(r))
+    print(markdown(run(a.split)))
 
 
 if __name__ == '__main__':

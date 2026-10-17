@@ -39,7 +39,7 @@ No se fija una meta de que cada palabra tenga una imagen: la ausencia de evidenc
 
 ## Mantenerlo simple
 
-- La entrada principal es Aprender. Leer, Diccionario y Mis palabras apoyan ese recorrido; Archivo y Laboratorio permiten profundizar.
+- La entrada principal es Aprender. Leer, Diccionario y Mis palabras apoyan ese recorrido; Archivo y Preguntar (con sus fichas y originales) permiten profundizar; el Laboratorio del LLM quedó como página histórica.
 - Proyecto y colaboración explica alcance, estado y siguientes acciones sin exigir leer documentación técnica.
 - La ficha para taller reutiliza una lectura publicada. No crea otra copia editorial ni recoge notas de participantes. La vista impresa es textual y las claves son opcionales; el JSON siempre incluye claves y procedencia para el facilitador.
 - Cada ampliación conserva original, variante, ID, localizador, evidencia y permisos. Los scripts ensamblan y verifican; las personas deciden significado, adecuación y alcance.

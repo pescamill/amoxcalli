@@ -18,7 +18,7 @@ with tempfile.TemporaryDirectory() as directory:
     thread=threading.Thread(target=httpd.serve_forever,daemon=True);thread.start()
     try:
         origin=f'http://127.0.0.1:{httpd.server_address[1]}'
-        # Precalienta en el mismo proceso lo que se construye perezosamente (resumen del Laboratorio,
+        # Precalienta en el mismo proceso lo que se construye perezosamente (
         # índices de evidencia y de análisis): en un clon limpio puede tardar más que las esperas del DOM.
         prewarm(origin)
         environment=dict(os.environ,CORPUS_QA_ORIGIN=origin)

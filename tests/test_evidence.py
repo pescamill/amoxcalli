@@ -108,7 +108,7 @@ class EvidenceEvaluationTests(unittest.TestCase):
 
     def test_evidence_beats_exact_search_on_held_out_questions(self):
         from nahuatl_local.evidence_evaluation import run
-        r = run('test', write=False)
+        r = run('test')
         base, ours = r['summary']['exact_search']['test'], r['summary']['evidence']['test']
         self.assertGreater(ours['entry_at1'], base['entry_at1'])
         self.assertGreaterEqual(ours['passage_hit'], base['passage_hit'])

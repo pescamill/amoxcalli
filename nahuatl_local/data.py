@@ -23,14 +23,14 @@ def passage_group(row):
     return '{} :: {}'.format(work_group(row.get('document','')), row.get('locator',''))
 
 def default_corpus_path():
-    """Prefiere el corpus versionado; cae al descargado por download.py."""
+    """Prefiere el corpus versionado; cae al descargado por experiments/llm/download.py."""
     committed=ROOT/AXOLOTL
     downloaded=ROOT/'data/raw'/Path(AXOLOTL).name
     if committed.exists():return committed
     if downloaded.exists():return downloaded
     raise FileNotFoundError(
         f'No se encontró el corpus en {committed} ni en {downloaded}. '
-        'Ejecuta: python -m nahuatl_local.download --only corpus')
+        'Ejecuta: python -m experiments.llm.download --only corpus')
 
 def _token_length_stats(tokenizer_dir,records):
     from transformers import AutoTokenizer

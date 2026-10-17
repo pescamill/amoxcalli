@@ -5,12 +5,13 @@ Se preparan referencias para comprobar consultas a campos públicos ya distribui
 ## Reproducción y alcance
 
 ```sh
-.venv/bin/python -m nahuatl_local.documentary_evaluation
-.venv/bin/python -m nahuatl_local.documentary_evaluation --check
-.venv/bin/python -m unittest tests.test_documentary_evaluation tests.test_iteration -v
+python3 -m nahuatl_local.documentary_evaluation           # reconstruye la batería (tras cambiar sus datos o la receta)
+python3 -m nahuatl_local.documentary_evaluation --check   # la valida sin escribir (también en make check)
+python3 -m unittest tests.test_documentary_evaluation -v
+make eval                                                 # mide las 123 consultas textuales con las fichas de Preguntar
 ```
 
-El módulo usa solamente stdlib y una lista explícita de fuentes públicas; no abre bases de datos, directorios privados, imágenes ni conexiones de red. Genera `configs/documentary-evaluation-v1.json` y `reports/documentary-evaluation-validation-v1.json`. Las mismas fuentes generan los mismos bytes. Antes de sustituir una batería diferente, guarda sus bytes originales en `reports/documentary-evaluation-backups/<sha256>.json`; una publicación editorial cuyo hash no coincide se rechaza.
+El módulo usa solamente stdlib y una lista explícita de fuentes públicas; no abre bases de datos, directorios privados, imágenes ni conexiones de red. Genera `configs/documentary-evaluation-v1.json`; su validación (conteos, solapamientos y SHA256 estructurado) se imprime y la repite el arnés único antes de medir. Las mismas fuentes generan los mismos bytes. Desde el 16 de octubre de 2026 solo se fijan por hash los archivos de datos (`FIXED`): la receta y esta guía ya no, porque la reconstrucción completa cubre el código y la documentación no cambia ninguna consulta. Antes de sustituir una batería diferente, guarda sus bytes originales en `reports/documentary-evaluation-backups/<sha256>.json`; una publicación editorial cuyo hash no coincide se rechaza.
 
 Cada consulta tiene ID derivado de sus entidades y tarea, modalidad, pregunta, referencia estructurada y grupo. Cada campo referenciado conserva valor original, archivo, tabla, ID, nombre de campo, hash de fila y hash de archivo. Las fuentes y URLs se conservan por separado. `attributed_responsibility` identifica los autores/editoriales registrados: Molina/GDN, el corpus Axolotl y los responsables de cada estudio de Tlachia. El script ensambla claves documentales; no se atribuye su autoría histórica. `source_derived_not_human_validated` y la incertidumbre explícita impiden confundir transcripción con cotejo primario o análisis validado.
 
@@ -40,6 +41,6 @@ La validación comprueba límites y condiciones exactamente; elevar esos permiso
 
 `load_development()` devuelve copias exclusivamente del desarrollo y rechaza una batería obsoleta o alterada. No acepta un parámetro de reserva. La reserva se conserva en el artefacto auditable, pero no se proporciona al helper de ajuste. Quien diseñe recuperación debe usar este helper, fijar su método antes de la prueba final y registrar errores/abstenciones sin transformar generaciones en claves.
 
-La batería cuenta 123 consultas textuales y 51 observaciones documentales visuales de desarrollo; la reserva contiene 37 textuales y 15 visuales. Es una reserva pequeña, fijada por evidencia y no por resultados. Las observaciones se distribuyen por lámina y por seis necesidades documentales; los casos de elementos no expresados dependen de que ese campo exista, sin rellenarlo. El conteo mide preparación, no suficiencia estadística.
+La batería cuenta 123 consultas textuales y 52 observaciones documentales visuales de desarrollo (51 hasta el 16 de octubre de 2026); la reserva contiene 37 textuales y 15 visuales. Es una reserva pequeña, fijada por evidencia y no por resultados. Las observaciones se distribuyen por lámina y por seis necesidades documentales; los casos de elementos no expresados dependen de que ese campo exista, sin rellenarlo. El conteo mide preparación, no suficiencia estadística.
 
-La siguiente acción es implementar y medir recuperación textual sobre todos los casos textuales de desarrollo con estas referencias. No se ajusta el recuperador con la reserva. La comparación multimodal y la revisión humana siguen pendientes.
+La recuperación textual se mide sobre todos los casos textuales de desarrollo con estas referencias: desde el 16 de octubre de 2026, con las fichas de Preguntar dentro de `make eval` ([CONSULTA_DOCUMENTAL.md](CONSULTA_DOCUMENTAL.md)). No se ajusta con la reserva. La comparación multimodal y la revisión humana siguen pendientes.

@@ -52,7 +52,7 @@ Los lotes v3–v6 añaden 220 apariciones de las láminas 385_21v, 385_22r, 385_
 
 Se reutilizó HTML de fuente cacheado, en lotes de 86, 25, 86 y 23 apariciones, sin llamadas al LLM para extraer ni enlazar datos. Cada publicación tiene receta, candidato, informe y respaldo; repetirla conserva los bytes. La comprobación del catálogo y su procedencia no constituye un cotejo primario del manuscrito. Hay 79 apariciones sin cita y 70 sin componentes; esas ausencias permanecen explícitas.
 
-La meta cuantitativa de 300 apariciones está cubierta. El siguiente paso técnico es preparar consultas documentales de desarrollo y una reserva independiente para evaluar recuperación y futuras comparaciones del Laboratorio. La revisión especializada y la prueba del recorrido con personas siguen pendientes.
+La meta cuantitativa de 300 apariciones está cubierta. Las consultas documentales de desarrollo y su reserva independiente ya existen (`configs/documentary-evaluation-v1.json`); sus 52 observaciones visuales esperan derechos de imagen y un modelo con imágenes, y las textuales se miden en `make eval`. La revisión especializada y la prueba del recorrido con personas siguen pendientes.
 
 ### Ocho láminas más de Telleriano, enlazadas al índice de términos · 16 de octubre de 2026
 
