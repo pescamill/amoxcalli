@@ -875,6 +875,36 @@ class Entities:
         return dict(id=unit['edition_id'], units=[unit])
 
 
+def routes(router, service=None):
+    """Rutas de la sección: catálogo, ficha, búsqueda por grafía, día del tonalpohualli y unidad."""
+    from .community import Problem
+    service = service or Entities()
+
+    def card(request):
+        try:
+            return request.reply(service.get(request.tail))
+        except KeyError:
+            raise Problem('Ficha no encontrada.', 404) from None
+
+    def search(request):
+        try:
+            return request.reply(service.search(request.arg('q')))
+        except ValueError as error:
+            raise Problem(str(error)) from None
+
+    def day(request):
+        try:
+            return request.reply(service.day(int(request.arg('n')), int(request.arg('sign'))))
+        except (KeyError, ValueError):
+            raise Problem('Día inválido: n va de 1 a 13 y sign de 0 a 19.') from None
+    router.add('GET', '/api/entities', lambda r: r.reply(service.catalog()))
+    router.add('GET', '/api/entities/', card, prefix=True)
+    router.add('GET', '/api/entity-search', search)
+    router.add('GET', '/api/calendar/day', day)
+    router.add('GET', '/api/calendar/unit', lambda r: r.reply(service.unit()))
+    return service
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument('--check', action='store_true', help='Falla si algún archivo generado no coincide con una generación nueva.')
