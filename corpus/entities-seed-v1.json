@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "id": "entidades-semilla-v1",
+  "note": "Semilla redactada por el proyecto (16-17 oct 2026). Cada atributo, relación, glosa y posición cita su fuente: pasajes de Axolotl (cita literal comprobada), acepciones del catálogo (Wiktionary CC BY-SA o curadas), revisiones fijadas de Wiktionary y fichas de Tlachia (UNAM, con atribución). Nada del Códice Florentino. Sin imágenes generadas. Pendiente de revisión especializada.",
+  "restricted_documents": {
+    "Vida económica de Tenochtitlan": "Libro IX de la obra de Sahagún (Códice Florentino): se cuenta, pero no se muestra ni se usa en lecturas hasta tener permiso."
+  },
+  "restricted_passages": {
+    "axolotl-06333": "Presagio del pájaro con espejo (libro XII de Sahagún): mismo motivo.",
+    "axolotl-07104": "Presagio del cometa (libro XII de Sahagún): mismo motivo.",
+    "axolotl-06804": "Huehuetlatolli del libro VI de Sahagún: mismo motivo."
+  },
+  "wiktionary_revisions": {
+    "en:xocotl huetzi": {"revid": 73294096, "timestamp": "2023-06-02T18:17:23Z", "gloss": "the tenth of eighteen veintenas (20-day periods) of the xiuhpōhualli, dedicated to the fire god Xiuhtēuctli", "forms": ["xocotl huetzi", "xocohuetzi", "xocotlhuetzi"]},
+    "en:hueyi tozoztli": {"revid": 73243446, "timestamp": "2023-05-31T18:51:16Z", "gloss": "the fourth of the eighteen veintenas of the xiuhpōhualli, dedicated to the maize god Cintēōtl", "forms": ["hueyi tozoztli", "hueytoçoztli"]},
+    "en:hueyi tecuilhuitl": {"revid": 73243445, "timestamp": "2023-05-31T18:51:13Z", "gloss": "the eighth of the eighteen veintenas of the xiuhpōhualli, dedicated to agricultural deities such as Xīlōnen", "forms": ["hueyi tecuilhuitl", "huey tecuhilhuitl"]},
+    "en:chicueyi": {"revid": 85093529, "timestamp": "2025-06-10T18:26:40Z", "gloss": "eight", "forms": ["chicueyi", "chicuei", "chicuey"]},
+    "en:yei": {"revid": 92350010, "timestamp": "2026-08-26T14:55:29Z", "gloss": "obsolete spelling of ēyi (three)", "forms": ["yei"]},
+    "en:ei": {"revid": 93456510, "timestamp": "2026-10-08T17:29:39Z", "gloss": "obsolete spelling of ēyi (three)", "forms": ["ei"]},
+    "es:quecholli": {"revid": 6376333, "timestamp": "2026-09-07T18:45:01Z", "gloss": "mes quecholli, signo de los meses del tonalpohualli o calendario azteca", "forms": ["quecholli"]}
+  },
+  "numerals": [
+    {"n": 1, "name": "ce", "spellings": ["ce", "cen", "ze", "cem"], "sources": [{"sense": "sense-wikt-es-ce-937e5334"}]},
+    {"n": 2, "name": "ome", "spellings": ["ome"], "sources": [{"sense": "sense-wikt-es-ome-a30bbd54"}]},
+    {"n": 3, "name": "yei", "spellings": ["yei", "ei", "ey", "yey", "eyi"], "sources": [{"wiktionary": "en:yei"}, {"wiktionary": "en:ei"}]},
+    {"n": 4, "name": "nahui", "spellings": ["nahui", "naui"], "sources": [{"sense": "sense-wikt-es-nahui-58cd1e69"}]},
+    {"n": 5, "name": "macuilli", "spellings": ["macuilli", "macuili", "macuil"], "sources": [{"sense": "sense-wikt-es-macuilli-9cbd6989"}]},
+    {"n": 6, "name": "chicuace", "spellings": ["chicuace", "chicuacen", "chiquace", "chiquacen", "chicoace", "chicoacen"], "sources": [{"sense": "sense-wikt-es-chicuace-8b57667d"}]},
+    {"n": 7, "name": "chicome", "spellings": ["chicome"], "sources": [{"sense": "sense-wikt-es-chicome-f6e24374"}]},
+    {"n": 8, "name": "chicuei", "spellings": ["chicuei", "chicuey", "chicueyi"], "sources": [{"wiktionary": "en:chicueyi"}]},
+    {"n": 9, "name": "chiucnahui", "spellings": ["chiucnahui", "chicnahui", "chiconahui", "chicunahui", "chiuhcnahui", "chiucnaui"], "sources": [{"sense": "sense-wikt-es-chicnahui-84603466"}, {"sense": "sense-wikt-en-chiucnahui-f8753964"}]},
+    {"n": 10, "name": "matlactli", "spellings": ["matlactli", "matlactlli", "mahtlactli"], "sources": [{"sense": "sense-wikt-es-mahtlactli-c6f8fdb1"}]},
+    {"n": 11, "name": "matlactli once", "spellings": ["matlactli once", "matlactli oce", "matlactlonce", "matlactloce"], "sources": [{"tlachia_reading": "matlactli oce"}]},
+    {"n": 12, "name": "matlactli omome", "spellings": ["matlactli omome", "matlactlomome"], "sources": [{"tlachia_reading": "matlactli omome"}]},
+    {"n": 13, "name": "matlactli omei", "spellings": ["matlactli omei", "matlactli omey", "matlactli omeyi", "matlactlomei", "matlactlomey"], "sources": [{"tlachia_reading": "matlactli omei"}]}
+  ],
+  "signs": [
+    {"n": 1, "name": "cipactli", "es": "caimán", "spellings": ["cipactli"], "element": "telleriano:element:02.03.01", "sense": "sense-wikt-es-cipactli-195bc71b"},
+    {"n": 2, "name": "ehecatl", "es": "viento", "spellings": ["ehecatl", "ecatl", "hecatl", "eecatl"], "element": "telleriano:element:04.02.05", "sense": "sense-ehecatl"},
+    {"n": 3, "name": "calli", "es": "casa", "spellings": ["calli"], "element": "telleriano:element:05.01.01", "sense": "sense-calli"},
+    {"n": 4, "name": "cuetzpalin", "es": "lagartija", "spellings": ["cuetzpalin", "cuetzpalli"], "element": "telleriano:element:02.02.19", "sense": "sense-wikt-es-cuetzpalin-0019172d"},
+    {"n": 5, "name": "coatl", "es": "serpiente", "spellings": ["coatl", "cohuatl", "couatl"], "element": "telleriano:element:02.02.20", "sense": "sense-coatl"},
+    {"n": 6, "name": "miquiztli", "es": "muerte", "spellings": ["miquiztli"], "sense": "sense-wikt-es-miquiztli-78b0940e"},
+    {"n": 7, "name": "mazatl", "es": "venado", "spellings": ["mazatl"], "element": "telleriano:element:02.02.09", "sense": "sense-mazatl"},
+    {"n": 8, "name": "tochtli", "es": "conejo", "spellings": ["tochtli"], "element": "telleriano:element:02.02.08", "sense": "sense-tochtli"},
+    {"n": 9, "name": "atl", "es": "agua", "spellings": ["atl"], "element": "telleriano:element:04.05.01", "sense": "sense-atl"},
+    {"n": 10, "name": "itzcuintli", "es": "perro", "spellings": ["itzcuintli", "itzquintli"], "element": "telleriano:element:02.02.12", "sense": "sense-itzcuintli"},
+    {"n": 11, "name": "ozomatli", "es": "mono", "spellings": ["ozomatli", "ozomahtli"], "element": "telleriano:element:02.02.30", "sense": "sense-wikt-es-ozomahtli-cb7ad7fe"},
+    {"n": 12, "name": "malinalli", "es": "hierba torcida", "spellings": ["malinalli"], "element": "telleriano:element:05.07.22"},
+    {"n": 13, "name": "acatl", "es": "caña", "spellings": ["acatl"], "element": "telleriano:element:03.02.05", "sense": "sense-wikt-es-acatl-5b2ecf1e"},
+    {"n": 14, "name": "ocelotl", "es": "jaguar", "spellings": ["ocelotl"], "element": "telleriano:element:02.02.01", "sense": "sense-wikt-es-ocelotl-2c9291a4"},
+    {"n": 15, "name": "cuauhtli", "es": "águila", "spellings": ["cuauhtli", "quauhtli"], "element": "telleriano:element:02.01.06", "sense": "sense-wikt-es-cuauhtli-80f06aaf"},
+    {"n": 16, "name": "cozcacuauhtli", "es": "zopilote rey", "spellings": ["cozcacuauhtli", "cozcaquauhtli"], "sense": "sense-wikt-es-cozcacuauhtli-b4cc1af7"},
+    {"n": 17, "name": "ollin", "es": "movimiento", "spellings": ["ollin", "olin"], "element": "telleriano:element:04.03.05", "sense": "sense-wikt-es-ollin-f6a5a9b2"},
+    {"n": 18, "name": "tecpatl", "es": "pedernal", "spellings": ["tecpatl"], "element": "telleriano:element:04.04.08", "sense": "sense-wikt-es-tecpatl-a8f1c984"},
+    {"n": 19, "name": "quiyahuitl", "es": "lluvia", "spellings": ["quiyahuitl", "quiahuitl", "quiauitl"], "sense": "sense-wikt-es-quiyahuitl-23c1ea82"},
+    {"n": 20, "name": "xochitl", "es": "flor", "spellings": ["xochitl", "suchitl"], "element": "telleriano:element:03.03.01", "sense": "sense-xochitl"}
+  ],
+  "structure_sources": [
+    {"text": "Veinte signos de los días: Wiktionary llama a ollin «el decimoséptimo de los veinte signos de los días del tōnalpōhualli».", "sources": [{"sense": "sense-wikt-en-olin-40d1de65"}]},
+    {"text": "Numerales del 1 al 13 que vuelven a empezar con cada trecena: secuencias de días de las láminas del Telleriano-Remensis catalogadas por Tlachia.", "sources": [{"tlachia_reading": "matlactli omei mazatl"}, {"tlachia_reading": "ce tochtli"}]},
+    {"text": "El xiuhpohualli reúne 18 veintenas que suman 360 días.", "sources": [{"sense": "sense-wikt-en-xippohualli-ef223d42"}]},
+    {"text": "Los sabios «ordenan cómo cae un año, cómo sigue su camino la cuenta de los días y cada una de las veintenas» (Coloquios, en La tinta negra y roja).", "sources": [{"passage": "axolotl-13332", "quote": "in yuh otlatoca in tonalpohualli auh in cecempohuallapohualli"}]}
+  ],
+  "veintenas": [
+    {"n": 1, "name": "atlcahualo", "spellings": ["atlcahualo"], "position": {"basis": "sequence", "text": "Chimalpahin la nombra después de izcalli y antes de tlacaxipehualiztli (2.ª según Wiktionary).", "sources": [{"passage": "axolotl-01746", "quote": "yzcalli, atlcahualo, niman tlaccaxipehualiztli"}, {"sense": "sense-wikt-en-tlacaxipehualiztli-605a0a80"}]}, "name_sources": [{"passage": "axolotl-01746", "quote": "atlcahualo"}]},
+    {"n": 2, "name": "tlacaxipehualiztli", "spellings": ["tlacaxipehualiztli", "tlaccaxipehualiztli", "tlacaxipeualiztli"], "position": {"basis": "ordinal", "sources": [{"sense": "sense-wikt-en-tlacaxipehualiztli-605a0a80"}]}, "name_sources": [{"sense": "sense-wikt-en-tlacaxipehualiztli-605a0a80"}], "dedication": {"target": "xipe-totec", "label": "Xipe Totec", "sources": [{"sense": "sense-wikt-en-tlacaxipehualiztli-605a0a80"}]}},
+    {"n": 3, "name": "tozoztontli", "spellings": ["tozoztontli", "toçoztontli"], "position": {"basis": "ordinal", "sources": [{"sense": "sense-wikt-en-tozoztontli-420556d6"}]}, "name_sources": [{"sense": "sense-wikt-en-tozoztontli-420556d6"}], "dedication": {"target": "tlaloc", "label": "Tláloc", "sources": [{"sense": "sense-wikt-en-tozoztontli-420556d6"}]}},
+    {"n": 4, "name": "hueytozoztli", "spellings": ["hueytozoztli", "hueytoçoztli", "huey tozoztli", "hueyi tozoztli"], "position": {"basis": "ordinal", "sources": [{"wiktionary": "en:hueyi tozoztli"}]}, "name_sources": [{"wiktionary": "en:hueyi tozoztli"}, {"passage": "axolotl-01746", "quote": "hueytoçoztli"}], "dedication": {"target": "cinteotl", "label": "Cintéotl", "sources": [{"wiktionary": "en:hueyi tozoztli"}]}},
+    {"n": 5, "name": "toxcatl", "spellings": ["toxcatl"], "position": {"basis": "gap", "text": "Hueco entre la 4.ª (hueytozoztli) y la 6.ª (etzalcualiztli) según Wiktionary; ninguna fuente incorporada da su número.", "sources": [{"wiktionary": "en:hueyi tozoztli"}, {"sense": "sense-wikt-en-etzalcualiztli-9532b6c3"}]}, "name_sources": [{"passage": "axolotl-10129", "quote": "toxcatl ytlamian"}, {"passage": "axolotl-06746", "quote": "Toxcatl"}]},
+    {"n": 6, "name": "etzalcualiztli", "spellings": ["etzalcualiztli", "etzalqualiztli"], "position": {"basis": "ordinal", "sources": [{"sense": "sense-wikt-en-etzalcualiztli-9532b6c3"}]}, "name_sources": [{"sense": "sense-wikt-en-etzalcualiztli-9532b6c3"}, {"passage": "axolotl-02334", "quote": "etzalqualiztli"}], "dedication": {"target": "tlaloc", "label": "los tlaloque", "sources": [{"sense": "sense-wikt-en-etzalcualiztli-9532b6c3"}]}},
+    {"n": 7, "name": "tecuilhuitontli", "spellings": ["tecuilhuitontli"], "position": {"basis": "ordinal", "sources": [{"sense": "sense-wikt-en-tecuilhuitontli-f023bae6"}]}, "name_sources": [{"sense": "sense-wikt-en-tecuilhuitontli-f023bae6"}, {"passage": "axolotl-02334", "quote": "tecuilhuitontli"}], "dedication": {"target": "huixtocihuatl", "label": "Huixtocíhuatl", "sources": [{"sense": "sense-wikt-en-tecuilhuitontli-f023bae6"}]}},
+    {"n": 8, "name": "hueytecuilhuitl", "spellings": ["hueytecuilhuitl", "huey tecuilhuitl", "hueyi tecuilhuitl", "huei tecuilhuitl", "hueytecuhilhuitl"], "position": {"basis": "ordinal", "sources": [{"wiktionary": "en:hueyi tecuilhuitl"}]}, "name_sources": [{"wiktionary": "en:hueyi tecuilhuitl"}, {"passage": "axolotl-02334", "quote": "hueytecuilhuitl"}, {"tlachia_reading": "huei tecuilhuitl : tiyacauh"}], "dedication": {"target": "chicomecoatl", "label": "Xilonen", "sources": [{"wiktionary": "en:hueyi tecuilhuitl"}, {"sense": "sense-wikt-en-xilonen-6219c159"}]}},
+    {"n": 9, "name": "tlaxochimaco", "spellings": ["tlaxochimaco"], "position": {"basis": "gap", "text": "Hueco entre la 8.ª (hueytecuilhuitl) y la 10.ª (xocotl huetzi) según Wiktionary.", "sources": [{"wiktionary": "en:hueyi tecuilhuitl"}, {"wiktionary": "en:xocotl huetzi"}]}, "name_sources": [{"passage": "axolotl-10741", "quote": "tlaxochimaco metztli"}], "note": "El único pasaje es un texto moderno (Historia de México narrada en náhuatl y español) que usa el nombre para el mes de agosto."},
+    {"n": 10, "name": "xocotl huetzi", "spellings": ["xocotl huetzi", "xocotlhuetzi", "xocohuetzi"], "position": {"basis": "ordinal", "sources": [{"wiktionary": "en:xocotl huetzi"}]}, "name_sources": [{"wiktionary": "en:xocotl huetzi"}], "dedication": {"target": "xiuhtecuhtli", "label": "Xiuhtecuhtli", "sources": [{"wiktionary": "en:xocotl huetzi"}]}},
+    {"n": 11, "name": "ochpaniztli", "spellings": ["ochpaniztli"], "position": {"basis": "ordinal", "sources": [{"sense": "sense-wikt-en-ochpaniztli-9a7052f6"}]}, "name_sources": [{"sense": "sense-wikt-en-ochpaniztli-9a7052f6"}], "dedication": {"target": null, "label": "Teteo Innan, «madre de los dioses»", "sources": [{"sense": "sense-wikt-en-ochpaniztli-9a7052f6"}]}},
+    {"n": 12, "name": "teotleco", "spellings": ["teotleco", "teotl eco"], "position": {"basis": "gap", "text": "Hueco entre la 11.ª (ochpaniztli) y la 13.ª (tepeilhuitl) según Wiktionary.", "sources": [{"sense": "sense-wikt-en-ochpaniztli-9a7052f6"}, {"sense": "sense-wikt-en-tepeilhuitl-8276235a"}]}, "name_sources": [], "note": "El nombre no aparece en ninguna fuente abierta incorporada (archivo, Wiktionary, Tlachia, Carochi): queda pendiente de fuente."},
+    {"n": 13, "name": "tepeilhuitl", "spellings": ["tepeilhuitl"], "position": {"basis": "ordinal", "sources": [{"sense": "sense-wikt-en-tepeilhuitl-8276235a"}]}, "name_sources": [{"sense": "sense-wikt-en-tepeilhuitl-8276235a"}], "dedication": {"target": null, "label": "los cerros importantes", "sources": [{"sense": "sense-wikt-en-tepeilhuitl-8276235a"}]}},
+    {"n": 14, "name": "quecholli", "spellings": ["quecholli"], "position": {"basis": "sequence", "text": "Chimalpahin la nombra justo antes de panquetzaliztli (15.ª según Wiktionary).", "sources": [{"passage": "axolotl-01746", "quote": "quitlamique yn quecholli, niman panquetzalliztli"}, {"sense": "sense-wikt-en-panquetzaliztli-b5e88741"}]}, "name_sources": [{"wiktionary": "es:quecholli"}, {"passage": "axolotl-01039", "quote": "ypan metztli quecholli"}, {"passage": "axolotl-10620", "quote": "yn acico quecholli"}], "note": "Quecholli también es el nombre de un ave (espátula rosada): en los himnos suele ser el ave."},
+    {"n": 15, "name": "panquetzaliztli", "spellings": ["panquetzaliztli", "panquetzalliztli"], "position": {"basis": "ordinal", "sources": [{"sense": "sense-wikt-en-panquetzaliztli-b5e88741"}]}, "name_sources": [{"sense": "sense-wikt-en-panquetzaliztli-b5e88741"}, {"passage": "axolotl-01746", "quote": "panquetzalliztli"}], "dedication": {"target": "huitzilopochtli", "label": "Huitzilopochtli", "sources": [{"sense": "sense-wikt-en-panquetzaliztli-b5e88741"}]}},
+    {"n": 16, "name": "atemoztli", "spellings": ["atemoztli"], "position": {"basis": "sequence", "text": "Chimalpahin la nombra justo después de panquetzaliztli (15.ª).", "sources": [{"passage": "axolotl-01746", "quote": "panquetzalliztli, niman atemoztli"}]}, "name_sources": [{"passage": "axolotl-01746", "quote": "atemoztli"}]},
+    {"n": 17, "name": "tititl", "spellings": ["tititl"], "position": {"basis": "sequence", "text": "Chimalpahin la nombra después de atemoztli.", "sources": [{"passage": "axolotl-01746", "quote": "atemoztli, niman tititl"}]}, "name_sources": [{"passage": "axolotl-01746", "quote": "tititl"}]},
+    {"n": 18, "name": "izcalli", "spellings": ["izcalli", "yzcalli"], "position": {"basis": "sequence", "text": "Chimalpahin la nombra después de tititl y antes de atlcahualo, con la que vuelve a empezar el ciclo.", "sources": [{"passage": "axolotl-01746", "quote": "tititl, niman yzcalli, atlcahualo"}]}, "name_sources": [{"passage": "axolotl-01746", "quote": "yzcalli"}, {"passage": "axolotl-10767", "quote": "yzcalli"}]},
+    {"n": 19, "name": "nemontemi", "kind": "nemontemi", "spellings": ["nemontemi"], "position": {"basis": "gap", "text": "Los días que siguen a las 18 veintenas de 360 días.", "sources": [{"sense": "sense-wikt-en-xippohualli-ef223d42"}]}, "name_sources": [], "note": "El nombre no aparece en ninguna fuente abierta incorporada: queda pendiente de fuente."}
+  ],
+  "entities": [
+    {"id": "huitzilopochtli", "kind": "deity", "name": "Huitzilopochtli", "names": ["Huitzilopochtli"], "epithets": [{"name": "Tetzahuitl Huitzilopochtli", "sources": [{"passage": "axolotl-04318", "quote": "Tetzahuitl Huitzillopochtli"}]}], "senses": ["sense-wikt-es-huitzilopochtli-b57f17ea"],
+     "attributes": [
+       {"text": "En las relaciones de Chimalpahin es el dios que guía a los mexicas desde Aztlan; cuatro teomamaque lo llevan a cuestas.", "sources": [{"passage": "axolotl-04318", "quote": "yn itocayocan Aztlan"}, {"passage": "axolotl-05649", "quote": "teomamaque yn quihualmamaque Huitzillopochtli"}]},
+       {"text": "Los Anales de Tlatelolco dicen que se edificó su templo en Tenochtitlan.", "sources": [{"passage": "axolotl-02654", "quote": "quiquetz yn Tenochtitla Uitzilopochtli"}]},
+       {"text": "Los Veinte himnos sacros conservan un canto dedicado a él.", "sources": [{"passage": "axolotl-02850", "quote": "VITZILOPOCHTLI ICUIC"}]},
+       {"text": "Chimalpahin, cronista cristiano, lo llama «diablo» y tlacatecolotl: es la voz del autor colonial, no la de la tradición antigua.", "sources": [{"passage": "axolotl-03492", "quote": "tlacatecolotl yn Huitzillopochtli"}]}
+     ],
+     "relations": [{"type": "representative", "target": "painal", "text": "Painal es su representante (Wiktionary).", "sources": [{"sense": "sense-wikt-en-painal-f4fd2a79"}]}]},
+    {"id": "quetzalcoatl", "kind": "deity", "name": "Quetzalcóatl", "names": ["Quetzalcoatl", "Quetzalcohuatl"], "tlachia": ["ce acatl quetzalcohuatl"], "epithets": [{"name": "Topiltzin Acxitl Quetzalcohuatl", "sources": [{"passage": "axolotl-05801", "quote": "Topiltzin Acxitl Quetzalcohuatl"}]}, {"name": "Ce Acatl", "sources": [{"tlachia_reading": "inacayo : ce acatl quetzalcohuatl"}]}], "senses": ["sense-wikt-es-quetzalcoatl-e3703d1e"],
+     "attributes": [
+       {"text": "En el Memorial breve, Topiltzin Acxitl Quetzalcóhuatl gobierna en Tollan y en un año Ce Acatl se marcha hacia el oriente.", "sources": [{"passage": "axolotl-04505", "quote": "Topiltzin Acxitl Quetzalcohuatl"}, {"passage": "axolotl-01772", "quote": "Ce Acatl xihuitl mohuicac"}]},
+       {"text": "La Leyenda de los Soles le atribuye haber hecho a los primeros hombres; la traducción da su signo, 7 Viento.", "sources": [{"passage": "axolotl-06982", "quote": "Quetzalcoatl Chicome ecatl itonal"}]},
+       {"text": "Un himno lo llama al amanecer: «tú eres el Señor, tú, Quetzalcóatl».", "sources": [{"passage": "axolotl-02755", "quote": "ti Quetzalcoatl"}]}
+     ]},
+    {"id": "tezcatlipoca", "kind": "deity", "name": "Tezcatlipoca", "names": ["Tezcatlipoca", "Tezcatlipuca"], "tlachia": ["tezcatlipoca"], "senses": ["sense-wikt-es-tezcatlipoca-a692d3fc"],
+     "attributes": [
+       {"text": "Tlachia registra entre sus atavíos el espejo que humea (itezca popoca).", "sources": [{"tlachia_reading": "itezca popoca : tezcatlipoca"}]},
+       {"text": "Chimalpahin lo presenta como dios de los tlacochcalca chalca, aparecido en un magueyal.", "sources": [{"passage": "axolotl-07883", "quote": "Tezcatlipoca, yn inteouh catca yn tlacochcalca chalca"}]},
+       {"text": "Un himno lo invoca como «mi señor Tezcatlipoca».", "sources": [{"passage": "axolotl-08876", "quote": "notecuyo Tezcatlipuca"}]}
+     ]},
+    {"id": "tlaloc", "kind": "deity", "name": "Tláloc", "names": ["Tlaloc", "Tlalloc"], "tlachia": ["tlaloc"], "senses": ["sense-wikt-es-tlaloc-2e0375b7"],
+     "attributes": [
+       {"text": "Tlalocan, «el lugar de Tláloc», es el destino de quienes mueren ahogados, por tormentas o rayos (Wiktionary).", "sources": [{"sense": "sense-wikt-en-tlalocan-f72ba122"}]},
+       {"text": "Un himno lo nombra «blanco Tláloc».", "sources": [{"passage": "axolotl-03632", "quote": "iztac Tlaloc"}]},
+       {"text": "En el folio 4r del Telleriano-Remensis Tlachia registra junto a él los glifos de cerro y agua.", "sources": [{"tlachia_reading": "tepetl : tlaloc"}, {"tlachia_reading": "atl : tlaloc"}]}
+     ],
+     "relations": [{"type": "place", "target": "tlalocan", "text": "Tlalocan es su lugar.", "sources": [{"sense": "sense-wikt-en-tlalocan-f72ba122"}]}]},
+    {"id": "chalchiuhtlicue", "kind": "deity", "name": "Chalchiuhtlicue", "names": ["Chalchiuhtlicue"], "tlachia": ["chalchiuhtlicue"],
+     "attributes": [{"text": "Chimalpahin da el mismo nombre a una mujer, hermana mayor de un señor: no todo pasaje que lo nombra habla de la diosa.", "sources": [{"passage": "axolotl-04060", "quote": "yn ihueltiuh yn Chalchiuhtlicue"}]}]},
+    {"id": "xochiquetzal", "kind": "deity", "name": "Xochiquétzal", "names": ["Xochiquetzal"], "tlachia": ["xochiquetzal"],
+     "attributes": [
+       {"text": "Los Veinte himnos sacros conservan un canto suyo; otro himno la nombra en Cholula.", "sources": [{"passage": "axolotl-00197", "quote": "XOCHIQUETZAL ICUIC"}, {"passage": "axolotl-05078", "quote": "Xochiquetzal quimama on tlatoa Chollola"}]},
+       {"text": "En Trece poetas, xochiquetzal es un elogio («quetzal floreciente»), no la diosa.", "sources": [{"passage": "axolotl-05794", "quote": "xochiquetzal"}]}
+     ]},
+    {"id": "xipe-totec", "kind": "deity", "name": "Xipe Tótec", "names": ["Xipe", "Xippe", "Xipe Totec"],
+     "attributes": [{"text": "Tlacaxipehualiztli, la segunda veintena, le está dedicada (Wiktionary).", "sources": [{"sense": "sense-wikt-en-tlacaxipehualiztli-605a0a80"}]}]},
+    {"id": "mictlantecuhtli", "kind": "deity", "name": "Mictlantecuhtli", "names": ["Mictlantecuhtli", "Mictlantecutli", "Mictlanteuctli"], "tlachia": ["mictlanteuctli"], "senses": ["sense-wikt-en-mictlanteuctli-b7d7284d"],
+     "attributes": [{"text": "Wiktionary lo cuenta entre los Señores de la Noche, igual que las láminas del Telleriano-Remensis en Tlachia.", "sources": [{"sense": "sense-wikt-en-mictlanteuctli-b7d7284d"}, {"tlachia_reading": "yohualteuctli : mictlanteuctli"}]}],
+     "relations": [{"type": "place", "target": "mictlan", "text": "Su nombre dice «señor del Mictlan».", "sources": [{"sense": "sense-wikt-es-mictlan-571ad215"}]}]},
+    {"id": "tlazolteotl", "kind": "deity", "name": "Tlazoltéotl", "names": ["Tlazolteotl", "Tlazolteutl"], "tlachia": ["tlazolteotl", "tlazolteotl-ixcuina"],
+     "attributes": [{"text": "Un himno anuncia su llegada: «ya llegó nuestra Madre, ya llegó la diosa».", "sources": [{"passage": "axolotl-07343", "quote": "yecoc ye teutl Tlazolteutl"}]}]},
+    {"id": "xiuhtecuhtli", "kind": "deity", "name": "Xiuhtecuhtli", "names": ["Xiuhtecuhtli", "Xiuhtecutli", "Xiuhteuctli"], "tlachia": ["xiuhteuctli"],
+     "attributes": [{"text": "Wiktionary lo llama dios del fuego y le dedica la veintena xocotl huetzi.", "sources": [{"wiktionary": "en:xocotl huetzi"}]}]},
+    {"id": "cinteotl", "kind": "deity", "name": "Cintéotl", "names": ["Cinteotl", "Centeotl", "Centeutl", "Cinteutl"], "tlachia": ["cinteotl"], "senses": ["sense-wikt-en-cinteotl-dbb10a3f"],
+     "attributes": [
+       {"text": "Dios del maíz (Wiktionary); la veintena hueytozoztli le está dedicada.", "sources": [{"sense": "sense-wikt-en-cinteotl-dbb10a3f"}, {"wiktionary": "en:hueyi tozoztli"}]},
+       {"text": "En el folio 15r del Telleriano-Remensis, Tlachia registra que carga una mazorca (itlamamal in centli).", "sources": [{"tlachia_reading": "itlamamal in centli : cinteotl"}]}
+     ]},
+    {"id": "tonatiuh", "kind": "deity", "name": "Tonatiuh", "names": ["Tonatiuh", "Tonnatiuh"], "senses": ["sense-tonatiuh"],
+     "attributes": [
+       {"text": "La Leyenda de los Soles cuenta las edades del mundo como Soles, cada uno con su signo; el actual es 4 Movimiento.", "sources": [{"passage": "axolotl-06982", "quote": "Nahui atl in itonal"}, {"passage": "axolotl-10684", "quote": "Nahui ollin in itonal"}]},
+       {"text": "Chimalpahin cuenta que los mexicas tomaron al Sol por dios siguiendo a sus maestros tlaxcaltecas.", "sources": [{"passage": "axolotl-01025", "quote": "oquimoteotique yn Tonatiuh"}]}
+     ],
+     "note": "Tonatiuh también es la palabra común para «sol» y «día», y aparece en «tonatiuh iquizayan / icalaquian» (oriente, poniente). En los Anales de Tlatelolco es además el apodo de Pedro de Alvarado (axolotl-03755). Los pasajes listados incluyen todos esos usos."},
+    {"id": "chicomecoatl", "kind": "deity", "name": "Chicomecóatl", "names": ["Chicomecoatl", "Chicomecouatl"], "senses": ["sense-wikt-es-chicomecoatl-47c58793"], "epithets": [{"name": "Xilonen", "sources": [{"sense": "sense-wikt-en-xilonen-6219c159"}]}],
+     "attributes": [{"text": "Los Veinte himnos sacros conservan su canto y la llaman «amado príncipe» (tlazopilli).", "sources": [{"passage": "axolotl-07264", "quote": "CHICOMECOATL ICUIC"}, {"passage": "axolotl-07172", "quote": "tlazopilli Chicomecoatl"}]}]},
+    {"id": "mixcoatl", "kind": "deity", "name": "Mixcóatl", "names": ["Mixcoatl", "Mixcohuatl", "Mixcouatl"], "senses": ["sense-wikt-es-mixcoatl-45e86975"],
+     "attributes": [{"text": "Chimalpahin cuenta que los citecas le cambiaron el nombre: el envoltorio sagrado que se llamaba Mixcóhuatl pasó a llamarse Citécatl.", "sources": [{"passage": "axolotl-03905", "quote": "ytoca catca Mixcohuatl"}, {"passage": "axolotl-05423", "quote": "aocmo ytoca Mixcohuatl, ye ytoca Citecatl"}]}]},
+    {"id": "coatlicue", "kind": "deity", "name": "Coatlicue", "names": ["Coatlicue", "Cohuatlicue", "Cohuatlycue"], "senses": ["sense-wikt-en-coatlicue-874d4f71"], "epithets": [{"name": "Tocih", "sources": [{"sense": "sense-wikt-en-tocih-24ab6f10"}]}],
+     "attributes": [{"text": "Wiktionary la llama diosa madre; Tocih, «nuestra abuela», es uno de sus nombres.", "sources": [{"sense": "sense-wikt-en-tocih-24ab6f10"}]}]},
+    {"id": "ometeotl", "kind": "deity", "name": "Ometéotl", "names": ["Ometeotl"], "senses": ["sense-wikt-es-ometeotl-e085da65"],
+     "attributes": [{"text": "Un canto lo llama «el inventor de hombres» (teyocoyani); la traducción lo llama Dios de la Dualidad.", "sources": [{"passage": "axolotl-00060", "quote": "Ometeotl in teyocoyani"}, {"passage": "axolotl-05065", "quote": "Ometeotl icuic"}]}]},
+    {"id": "itzpapalotl", "kind": "deity", "name": "Itzpapálotl", "names": ["Itzpapalotl", "Itzpapalotli"], "tlachia": ["itzpapalotl"],
+     "attributes": [{"text": "Un himno la llama «nuestra Madre, Mariposa de Obsidiana» y nombra Tamoanchan.", "sources": [{"passage": "axolotl-07070", "quote": "Itzpapalotli"}]}],
+     "note": "En Wiktionary itzpapalotl es también una mariposa nocturna: el nombre común no es la diosa.",
+     "relations": [{"type": "place", "target": "tamoanchan", "text": "El mismo himno nombra Tamoanchan.", "sources": [{"passage": "axolotl-07070", "quote": "Tamoanchan"}]}]},
+    {"id": "xolotl", "kind": "deity", "name": "Xólotl", "names": ["Xolotl"], "tlachia": ["xolotl"], "note": "En Wiktionary xolotl también significa «criado»; muchos pasajes lo usan así o como nombre de persona."},
+    {"id": "chantico", "kind": "deity", "name": "Chantico", "names": ["Chantico"], "tlachia": ["chantico"]},
+    {"id": "chalchiuhtotolin", "kind": "deity", "name": "Chalchiuhtotolin", "names": ["Chalchiuhtotolin"], "tlachia": ["chalchiuhtotolin"], "senses": ["sense-wikt-es-chalchiuhtotolin-7b41432c"]},
+    {"id": "tepeyollotl", "kind": "deity", "name": "Tepeyóllotl", "names": ["Tepeyollotl"], "tlachia": ["tepeyollotl"]},
+    {"id": "piltzintecuhtli", "kind": "deity", "name": "Piltzintecuhtli", "names": ["Piltzintecuhtli", "Piltzinteuctli"], "tlachia": ["piltzinteuctli"]},
+    {"id": "itztli", "kind": "deity", "name": "Itztli", "names": ["Itztli"], "tlachia": ["itztli"], "search": false, "note": "Itztli es también la palabra común para «obsidiana»: la búsqueda de esa palabra no lleva a esta ficha."},
+    {"id": "painal", "kind": "deity", "name": "Painal", "names": ["Painal", "Paynal"], "senses": ["sense-wikt-en-painal-f4fd2a79"],
+     "attributes": [{"text": "Wiktionary lo describe como representante de Huitzilopochtli.", "sources": [{"sense": "sense-wikt-en-painal-f4fd2a79"}]}],
+     "relations": [{"type": "represents", "target": "huitzilopochtli", "text": "Representa a Huitzilopochtli.", "sources": [{"sense": "sense-wikt-en-painal-f4fd2a79"}]}]},
+    {"id": "tonacacihuatl", "kind": "deity", "name": "Tonacacíhuatl", "names": ["Tonacacihuatl"], "tlachia": ["tonacacihuatl"]},
+    {"id": "huixtocihuatl", "kind": "deity", "name": "Huixtocíhuatl", "names": ["Huixtocihuatl", "Huixtohcihuatl"], "senses": ["sense-wikt-en-huixtohcihuatl-8ee8bfe9"],
+     "attributes": [{"text": "Diosa de la sal y de los salineros (Wiktionary); la veintena tecuilhuitontli le está dedicada.", "sources": [{"sense": "sense-wikt-en-huixtohcihuatl-8ee8bfe9"}, {"sense": "sense-wikt-en-tecuilhuitontli-f023bae6"}]}]},
+    {"id": "itztapaltotec", "kind": "figure", "name": "Itztapaltótec", "names": ["Itztapaltotec"], "tlachia": ["itztapaltotec"]},
+    {"id": "tlalchitonatiuh", "kind": "figure", "name": "Tlalchitonatiuh", "names": ["Tlalchitonatiuh"], "tlachia": ["tlalchitonatiuh"]},
+    {"id": "ixnextli", "kind": "figure", "name": "Ixnextli", "names": ["Ixnextli"], "tlachia": ["ixnextli"]},
+    {"id": "otontecuhtli", "kind": "figure", "name": "Otontecuhtli", "names": ["Otontecuhtli", "Otonteuctli"], "tlachia": ["otonteuctli"]},
+    {"id": "ipalnemohuani", "kind": "epithet", "name": "Ipalnemohuani", "names": ["Ipalnemohuani", "Ipalnemoani", "Ypalnemouani", "Ypalnemoani"], "senses": ["sense-wikt-en-ipalnemohuani-b6516b82"],
+     "attributes": [{"text": "«Aquel por quien se vive» (Wiktionary), el Dador de la Vida de los cantos; el poeta le pregunta dónde vive.", "sources": [{"sense": "sense-wikt-en-ipalnemohuani-b6516b82"}, {"passage": "axolotl-01760", "quote": "noteouh Ipalnemohuani"}]}],
+     "note": "Es un epíteto: los cantos no dicen de qué dios."},
+    {"id": "tloque-nahuaque", "kind": "epithet", "name": "Tloque Nahuaque", "names": ["Tloque Nahuaque", "Tloque Nauaque", "Tloque Naoaque"],
+     "attributes": [{"text": "«El Dueño del Cerca y del Junto», en la traducción de La tinta negra y roja.", "sources": [{"passage": "axolotl-02507", "quote": "in Tloque, Naoaque"}]}],
+     "note": "Es un epíteto: los textos no dicen de qué dios."},
+    {"id": "tlalocan", "kind": "place", "name": "Tlalocan", "names": ["Tlalocan", "Tlallocan"], "senses": ["sense-wikt-en-tlalocan-f72ba122"],
+     "attributes": [{"text": "En un himno, Chicomolotzin «se va a su casa, el Tlalocan».", "sources": [{"passage": "axolotl-04329", "quote": "mochan Tlalocan"}]}],
+     "relations": [{"type": "place_of", "target": "tlaloc", "text": "Es el lugar de Tláloc.", "sources": [{"sense": "sense-wikt-en-tlalocan-f72ba122"}]}]},
+    {"id": "mictlan", "kind": "place", "name": "Mictlan", "names": ["Mictlan", "Miktlan"], "senses": ["sense-wikt-es-mictlan-571ad215"],
+     "attributes": [{"text": "Lugar de los muertos (Wiktionary): «hasta que hayamos ido al Mictlan», dice un poeta.", "sources": [{"sense": "sense-wikt-es-mictlan-571ad215"}, {"passage": "axolotl-06157", "quote": "otiyaque ye Mictlan"}]}]},
+    {"id": "tamoanchan", "kind": "place", "name": "Tamoanchan", "names": ["Tamoanchan", "Tamohuanchan", "Tamooanchan"], "tlachia": ["tamoanchan"],
+     "attributes": [{"text": "Chimalpahin cuenta que los recién llegados dieron ese nombre al lugar donde se asentaron, «nuestra verdadera casa».", "sources": [{"passage": "axolotl-08544", "quote": "oquitocayotico yn imonoyan Tamoanchan"}]}]}
+  ],
+  "readings": {
+    "release_id": "lecturas-mitologia-001",
+    "lessons": [
+      {"id": "mito-soles", "title": "Los Soles de antes", "objective": "Leer cómo la Leyenda de los Soles cuenta las edades del mundo: cada Sol tiene un signo del calendario.", "minutes": 8, "sense_ids": ["sense-tonatiuh"], "cover_sense": "sense-tonatiuh",
+       "reading_tips": ["Busca tonatiuh «sol» y el número con el signo: nahui atl, nahui ollin.", "Pasajes de la Leyenda de los Soles (Códice Chimalpopoca) tal como los trae La tinta negra y roja. Ayudas generadas automáticamente; pendientes de revisión."],
+       "examples": [
+         {"archive_id": "axolotl-06982", "blank": "Tonatiuh", "distractors": ["Metztli", "Citlalin"], "question": "¿Qué signo tuvo el primer Sol?", "answer": "4-Agua", "wrong": ["4-Jaguar", "4-Viento"]},
+         {"archive_id": "axolotl-08351", "blank": "Tonatiuh", "distractors": ["Metztli", "Citlalin"], "question": "¿Cómo se llamaba este Sol?", "answer": "Sol de Jaguar", "wrong": ["Sol de Agua", "Sol de Viento"]},
+         {"archive_id": "axolotl-03878", "blank": "Tonatiuh", "distractors": ["Metztli", "Citlalin"], "question": "¿Qué signo tuvo el tercer Sol?", "answer": "4-Lluvia", "wrong": ["4-Movimiento", "4-Agua"]},
+         {"archive_id": "axolotl-10684", "blank": "Tonatiuh", "distractors": ["Metztli", "Citlalin"], "question": "¿Cuál es el signo del Sol que ahora existe?", "answer": "4-Movimiento", "wrong": ["4-Jaguar", "4-Lluvia"]}
+       ]},
+      {"id": "mito-himnos", "title": "Cantos a los dioses", "objective": "Leer versos de los Veinte himnos sacros que nombran a Tlazoltéotl, Quetzalcóatl y Tláloc.", "minutes": 7, "sense_ids": ["sense-xochitl"], "cover_sense": "sense-xochitl",
+       "reading_tips": ["Los himnos repiten palabras y exclamaciones; busca primero el nombre del dios.", "La traducción es la del archivo (Veinte himnos sacros de los nahuas). Ayudas generadas automáticamente; pendientes de revisión."],
+       "examples": [
+         {"archive_id": "axolotl-07343", "blank": "Xochitl", "distractors": ["Cuicatl", "Atl"], "question": "¿Quién llega, según la traducción?", "answer": "Tlazolteotl", "wrong": ["Tláloc", "Huitzilopochtli"]},
+         {"archive_id": "axolotl-02755", "blank": "Xochitl", "distractors": ["Cuicatl", "Atl"], "question": "¿A quién se dirige el canto al final?", "answer": "Quetzalcóatl", "wrong": ["Tezcatlipoca", "Xochiquetzal"]},
+         {"archive_id": "axolotl-03632", "blank": "Tlaloc", "distractors": ["Tezcatlipoca", "Huitzilopochtli"], "question": "¿Qué color acompaña a Tláloc en la traducción?", "answer": "blanco", "wrong": ["rojo", "azul"]},
+         {"archive_id": "axolotl-05783", "blank": "Tlalocan", "distractors": ["Mictlan", "Tepetl"], "question": "¿Qué hacen los dioses, según la traducción?", "answer": "llueven", "wrong": ["cantan", "duermen"]}
+       ]},
+      {"id": "mito-quetzalcoatl", "title": "Quetzalcóatl deja Tollan", "objective": "Seguir en el Memorial breve de Chimalpahin a Topiltzin Acxitl Quetzalcóatl: su gobierno en Tollan y su partida hacia el oriente.", "minutes": 7, "sense_ids": ["sense-coatl"], "cover_sense": "sense-coatl",
+       "reading_tips": ["coatl «serpiente» está dentro del nombre Quetzalcohuatl.", "Fíjate en los años: Ce Acatl es un nombre del calendario. Ayudas generadas automáticamente; pendientes de revisión."],
+       "examples": [
+         {"archive_id": "axolotl-05801", "blank": "nemi", "distractors": ["cochi", "miqui"], "question": "¿Cuántos años llevaba viviendo en Tollan?", "answer": "25", "wrong": ["43", "11"]},
+         {"archive_id": "axolotl-04505", "blank": "huey", "distractors": ["tepiton", "cualli"], "question": "¿Cuántos años llevaba gobernando?", "answer": "43", "wrong": ["25", "11"]},
+         {"archive_id": "axolotl-01772", "blank": "Acatl", "distractors": ["Tochtli", "Calli"], "question": "¿Hacia dónde se marchó?", "answer": "hacia el oriente", "wrong": ["hacia el poniente", "hacia el norte"]},
+         {"archive_id": "axolotl-05745", "blank": "tonatiuh", "distractors": ["metztli", "citlalin"], "question": "¿Qué nombraron en vano los toltecas?", "answer": "tlatohuani", "wrong": ["sacerdote", "capitán"]}
+       ]},
+      {"id": "mito-huitzilopochtli", "title": "Huitzilopochtli guía a los mexicas", "objective": "Leer en Chimalpahin y los Anales de Tlatelolco cómo aparece Huitzilopochtli, quién lo carga y dónde se edifica su templo.", "minutes": 7, "sense_ids": ["sense-tochtli"], "cover_sense": "sense-tochtli",
+       "reading_tips": ["Su nombre tiene muchas grafías: Huitzillopochtli, Uitzilopochtli, Huitzilopuchtli.", "Chimalpahin escribe como cronista cristiano y lo llama «diablo»; esa es la voz del autor. Ayudas generadas automáticamente; pendientes de revisión."],
+       "examples": [
+         {"archive_id": "axolotl-06028", "blank": "Huitzilopochtli", "distractors": ["Tezcatlipoca", "Quetzalcoatl"], "question": "¿Quién los venía llamando?", "answer": "su dios Huitzilopochtli", "wrong": ["Tezcatlipoca", "los toltecas"]},
+         {"archive_id": "axolotl-02654", "blank": "Tochtli", "distractors": ["Acatl", "Calli"], "question": "¿En qué año fueron llevados como esclavos?", "answer": "1 Tochtli", "wrong": ["1 Acatl", "2 Calli"]},
+         {"archive_id": "axolotl-04318", "blank": "ompa", "distractors": ["campa", "axcan"], "question": "¿Dónde apareció, según dicen los antiguos?", "answer": "Aztlan Auhtlan Colhuacatépec", "wrong": ["Tollan", "Tlalocan"]},
+         {"archive_id": "axolotl-05649", "blank": "tlacatl", "distractors": ["cihuatl", "pilli"], "question": "¿Cuántos teomamaque cargaban a Huitzilopochtli?", "answer": "cuatro", "wrong": ["siete", "veinte"]}
+       ]}
+    ]
+  }
+}
