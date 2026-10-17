@@ -5,8 +5,8 @@ import unittest
 import urllib.request
 from pathlib import Path
 
-from nahuatl_local.morphology import Analyzer, Lexicon, phonemic_key, key_of, readable, PARTICLES
-from nahuatl_local.stems import StemConcordance, GlossHints, WordStudy, es_tokens
+from nahuatl_local.morphology import Analyzer, Lexicon, phonemic_key, key_of, readable, PARTICLES, sentence_initial
+from nahuatl_local.stems import StemConcordance, GlossHints, WordStudy, es_tokens, PENDING_HINTS
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -114,6 +114,48 @@ class ConcordanceAndHintsTests(unittest.TestCase):
         again = GlossHints.from_json(json.loads(json.dumps(h.to_json())))
         self.assertEqual(again.hints('kal', min_support=2), top)
 
+    def test_particles_concord_by_whole_form_only(self):
+        rows = self.rows + [dict(id='p6', iso='nci', nah='cocone tin', es='niños', document='B')]
+        a = Analyzer(lexicon_records())
+        c = StemConcordance(a, rows)
+        best = a.analyze('in', 1)[0]
+        hit = c.lookup('in', stem_key=c.index_key(best))
+        self.assertTrue(hit['whole_form'])
+        self.assertEqual({f['form'] for f in hit['forms']}, {'in'})  # nunca *tin*, aunque comparta la raíz
+        self.assertEqual(hit['stem'], 'in')
+
+    def test_hints_show_nothing_rather_than_noise(self):
+        table = {'poa': [dict(es='nuestra', p=0.3, support=5, dice=0.05), dict(es='relata', p=0.2, support=2, dice=0.1),
+                         dict(es='cuenta', p=0.01, support=9, dice=0.2)],
+                 'itta': [dict(es='vio', p=0.4, support=17, dice=0.2)]}
+        h = GlossHints(table, {}, {}, dict(version='test'))
+        self.assertEqual(h.hints('poa'), [])  # palabra vacía, poco apoyo, asociación mínima
+        self.assertEqual([x['es'] for x in h.hints('itta')], ['vio'])
+
+    def test_faster_ibm1_matches_the_direct_formula(self):
+        a = Analyzer(lexicon_records())
+        h = GlossHints.train(a, self.rows, iterations=3, min_count=1)
+        # Forma directa de IBM-1 con t[(e, f)] (la que reemplaza la versión por casillas).
+        from collections import defaultdict
+        pairs = []
+        for r in self.rows:
+            if r['iso'] == 'nci':
+                nah = [a.best_stem(w) if key_of(w) not in PARTICLES else key_of(w) for w in r['nah'].split()]
+                pairs.append((nah, [k for k, _ in es_tokens(r['es'])]))
+        t = defaultdict(lambda: 1.0)
+        for _ in range(3):
+            count, total = defaultdict(float), defaultdict(float)
+            for nah, es in pairs:
+                for e in es:
+                    z = sum(t[(e, f)] for f in nah + ['∅'])
+                    for f in nah + ['∅']:
+                        count[(e, f)] += t[(e, f)] / z
+                        total[f] += t[(e, f)] / z
+            t = defaultdict(float, {k: c / total[k[1]] for k, c in count.items()})
+        for f, hs in h.table.items():
+            for x in hs:
+                self.assertAlmostEqual(x['p'], round(t[(x['es'], f)], 4), places=4)
+
     def test_spanish_tokens_drop_stopwords(self):
         self.assertEqual([k for k, _ in es_tokens('Veo la casa y las flores')], ['veo', 'casa', 'flor'])
 
@@ -177,6 +219,48 @@ class WordStudyServiceTests(unittest.TestCase):
                 httpd.shutdown(); httpd.server_close()
 
 
+class ProperNameTests(unittest.TestCase):
+    def setUp(self):
+        self.a = Analyzer(lexicon_records())
+
+    def test_listed_names_are_not_possessed(self):
+        best = self.a.analyze('Motecuhçoma', 3)[0]
+        self.assertEqual((best['class_'], best['basis'], best['segmentation']), ('name', 'name_list', 'Motecuhçoma'))
+        self.assertNotIn('2SG.POS', [m['tag'] for m in best['morphemes']])
+        # Segmentación transparente de la lista: se muestra la de las reglas
+        self.assertEqual(self.a.analyze('Mexico', 1)[0]['segmentation'], 'Mexi-co')
+
+    def test_capital_inside_a_sentence_reads_as_name(self):
+        self.assertEqual(self.a.analyze('Ocuilpan', 1, sentence_initial=False)[0]['class_'], 'name')
+        self.assertNotEqual(self.a.analyze('Ocuilpan', 1, sentence_initial=True)[0]['class_'], 'name')
+        alone = self.a.analyze('Ocuilpan', 5)  # palabra suelta: el nombre queda como alternativa
+        self.assertNotEqual(alone[0]['class_'], 'name')
+        self.assertIn('name', [x['class_'] for x in alone])
+        self.assertEqual(self.a.analyze('In', 1, sentence_initial=False)[0]['class_'], 'particle')
+
+    def test_sentence_position_in_glosses(self):
+        text = 'Auh in Ocuilpan. Calli'
+        self.assertEqual([sentence_initial(text, i) for i in (0, 4, 7, 17)], [True, False, False, True])
+        tokens = self.a.gloss_text(text)
+        self.assertEqual([t['best']['class_'] for t in tokens][2], 'name')
+
+
+class StagedWarmupTests(unittest.TestCase):
+    def test_server_answers_before_hints_exist(self):
+        ws = WordStudy(root=ROOT, wait_for_hints=False)
+        a = Analyzer(lexicon_records())
+        ws._core = (a, StemConcordance(a, ConcordanceAndHintsTests.rows))
+        self.assertIs(ws.hints(), PENDING_HINTS)
+        r = ws.word('nocal')
+        self.assertEqual((r['gloss_hints'], r['preparing']), ([], ['gloss_hints']))
+        status = ws.status()
+        self.assertTrue(status['ready'])
+        self.assertFalse(status['complete'])
+        ws._hints = GlossHints({}, {}, {}, dict(version='test'))
+        self.assertEqual(ws.word('nocal')['preparing'], [])
+        self.assertTrue(ws.status()['ready'])
+
+
 class GoldSetTests(unittest.TestCase):
     def test_gold_set_is_well_formed(self):
         gold = json.loads((ROOT / 'evaluation' / 'morphology-gold-v1.json').read_text(encoding='utf-8'))
@@ -184,6 +268,17 @@ class GoldSetTests(unittest.TestCase):
         self.assertEqual(len(words), len(set(words)))
         for item in gold['items']:
             self.assertIn(item['split'], ('dev', 'test'))
+            self.assertEqual(item['segmentation'].replace('-', '').casefold(), item['word'].casefold())
+
+    def test_blind_set_v2_is_frozen(self):
+        import hashlib
+        gold = json.loads((ROOT / 'evaluation' / 'morphology-gold-v2.json').read_text(encoding='utf-8'))
+        test = [i for i in gold['items'] if i['split'] == 'test']
+        digest = hashlib.sha256(json.dumps(test, ensure_ascii=False, sort_keys=True).encode()).hexdigest()
+        self.assertEqual(digest, (ROOT / 'evaluation' / 'morphology-gold-v2.sha256').read_text().split()[0])
+        self.assertGreaterEqual(len(test), 60)
+        self.assertTrue({'name', 'particle', 'word'} <= {i['kind'] for i in test})
+        for item in gold['items']:
             self.assertEqual(item['segmentation'].replace('-', '').casefold(), item['word'].casefold())
 
 

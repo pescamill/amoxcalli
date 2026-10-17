@@ -445,7 +445,7 @@
     "n": 52,
     "top1": 0.154,
     "top3": 0.615,
-    "stem_top1": 0.154,
+    "stem_top1": 0.115,
     "by_split": {
      "dev": {
       "n": 25,
@@ -758,7 +758,7 @@
      {
       "word": "Tenochtitlan",
       "expected": "Tenoch-ti-tlan",
-      "got": "tenoch-titlan",
+      "got": "tenochtitlan",
       "correct": false,
       "in_top3": false,
       "split": "test"
@@ -815,7 +815,7 @@
    },
    "rules+dictionary": {
     "n": 52,
-    "top1": 0.654,
+    "top1": 0.673,
     "top3": 0.808,
     "stem_top1": 0.596,
     "by_split": {
@@ -826,7 +826,7 @@
      },
      "test": {
       "n": 27,
-      "top1": 0.63,
+      "top1": 0.667,
       "top3": 0.741
      }
     },
@@ -928,14 +928,6 @@
       "split": "test"
      },
      {
-      "word": "Mexico",
-      "expected": "Mexi-co",
-      "got": "mexico",
-      "correct": false,
-      "in_top3": true,
-      "split": "test"
-     },
-     {
       "word": "Tenochtitlan",
       "expected": "Tenoch-ti-tlan",
       "got": "tenochtitlan",
@@ -979,9 +971,9 @@
    },
    "rules+corpus_em": {
     "n": 52,
-    "top1": 0.827,
+    "top1": 0.846,
     "top3": 0.981,
-    "stem_top1": 0.788,
+    "stem_top1": 0.75,
     "by_split": {
      "dev": {
       "n": 25,
@@ -990,7 +982,7 @@
      },
      "test": {
       "n": 27,
-      "top1": 0.778,
+      "top1": 0.815,
       "top3": 0.963
      }
     },
@@ -1044,14 +1036,6 @@
       "split": "test"
      },
      {
-      "word": "Tenochtitlan",
-      "expected": "Tenoch-ti-tlan",
-      "got": "tenoch-titlan",
-      "correct": false,
-      "in_top3": true,
-      "split": "test"
-     },
-     {
       "word": "tlaqualli",
       "expected": "tla-qua-l-li",
       "got": "tlaqual-li",
@@ -1071,7 +1055,7 @@
    },
    "full (rules+dictionary+corpus_em)": {
     "n": 52,
-    "top1": 0.846,
+    "top1": 0.885,
     "top3": 0.962,
     "stem_top1": 0.769,
     "by_split": {
@@ -1082,7 +1066,7 @@
      },
      "test": {
       "n": 27,
-      "top1": 0.815,
+      "top1": 0.889,
       "top3": 0.926
      }
     },
@@ -1120,22 +1104,6 @@
       "split": "test"
      },
      {
-      "word": "Mexico",
-      "expected": "Mexi-co",
-      "got": "mexico",
-      "correct": false,
-      "in_top3": true,
-      "split": "test"
-     },
-     {
-      "word": "Tenochtitlan",
-      "expected": "Tenoch-ti-tlan",
-      "got": "tenochtitlan",
-      "correct": false,
-      "in_top3": true,
-      "split": "test"
-     },
-     {
       "word": "tlaqualli",
       "expected": "tla-qua-l-li",
       "got": "tlaqual-li",
@@ -1158,10 +1126,10 @@
    "tokens": 135288,
    "types": 26396,
    "exact_dictionary_tokens": 0.2799,
-   "analyzer_linked_tokens": 0.6025,
-   "analyzer_explained_tokens": 0.8638,
+   "analyzer_linked_tokens": 0.6035,
+   "analyzer_explained_tokens": 0.8627,
    "exact_dictionary_types": 0.0387,
-   "analyzer_linked_types": 0.2658,
+   "analyzer_linked_types": 0.2654,
    "definitions": {
     "exact": "la palabra completa, normalizada, coincide con una forma del diccionario",
     "linked": "el mejor análisis enlaza la raíz con una entrada o con la tabla de partículas",
@@ -1169,12 +1137,12 @@
    }
   },
   "concordance": {
-   "entries_with_hits": 1124,
+   "entries_with_hits": 1102,
    "passages_exact": 10645,
-   "passages_stem": 25350,
-   "entries_gaining": 873,
-   "entries_losing": 84,
-   "passages_only_exact": 1328,
+   "passages_stem": 24648,
+   "entries_gaining": 839,
+   "entries_losing": 92,
+   "passages_only_exact": 1297,
    "median_gain": 2.0,
    "top_gains": [
     {
@@ -1235,8 +1203,8 @@
       "tlahtoa"
      ],
      "exact": 2,
-     "stem_index": 435,
-     "only_stem": 433,
+     "stem_index": 434,
+     "only_stem": 432,
      "only_exact": 0
     },
     {
@@ -1245,8 +1213,8 @@
       "ihtoa"
      ],
      "exact": 1,
-     "stem_index": 413,
-     "only_stem": 412,
+     "stem_index": 412,
+     "only_stem": 411,
      "only_exact": 0
     },
     {
@@ -1255,8 +1223,8 @@
       "mexihcatl"
      ],
      "exact": 0,
-     "stem_index": 312,
-     "only_stem": 312,
+     "stem_index": 308,
+     "only_stem": 308,
      "only_exact": 0
     },
     {
@@ -1295,8 +1263,8 @@
       "tlahtolli"
      ],
      "exact": 21,
-     "stem_index": 284,
-     "only_stem": 263,
+     "stem_index": 283,
+     "only_stem": 262,
      "only_exact": 0
     }
    ],
@@ -1309,24 +1277,24 @@
     "method": "IBM Model 1 (EM), raíz náhuatl → palabra española, con palabra nula",
     "iterations": 8,
     "pairs": 5453,
-    "stems": 4413,
+    "stems": 4425,
     "min_support": 2,
     "analyzer": "nah-morph-1"
    },
    "evaluation": {
-    "evaluable_entries": 101,
+    "evaluable_entries": 100,
     "results": {
      "cooccurrence": {
-      "precision_at_1": 0.188,
-      "hit_at_3": 0.356
+      "precision_at_1": 0.19,
+      "hit_at_3": 0.36
      },
      "dice": {
-      "precision_at_1": 0.228,
-      "hit_at_3": 0.356
+      "precision_at_1": 0.23,
+      "hit_at_3": 0.36
      },
      "ibm1": {
-      "precision_at_1": 0.297,
-      "hit_at_3": 0.386
+      "precision_at_1": 0.3,
+      "hit_at_3": 0.37
      }
     },
     "examples": [
@@ -1576,7 +1544,6 @@
       "molina": "cada tres vezes.",
       "ibm1": [
        "tercera",
-       "vez",
        "primera"
       ],
       "dice": [
@@ -1597,7 +1564,7 @@
       "ibm1": [
        "pie",
        "casa",
-       "estan"
+       "tierra"
       ],
       "dice": [
        "tierra",
@@ -1614,7 +1581,7 @@
     "definition": "Acierto si una palabra propuesta (normalizada) aparece en la definición de Molina de esa entrada. Molina es independiente del corpus paralelo; la coincidencia ortográfica del s. XVI es aproximada."
    }
   },
-  "seconds": 19.8
+  "seconds": 10.3
  },
  "terms": {
   "version": "terms-v1",
@@ -1629,7 +1596,7 @@
     "query_top1": 90.3,
     "same_group": 66.7,
     "spelling_coverage": 98.0,
-    "spelling_coverage_certain": 92.0,
+    "spelling_coverage_certain": 86.0,
     "glyph_coverage": 100.0,
     "spelling_precision_labeled": 100.0,
     "glyph_precision_labeled": 100.0,
@@ -1638,7 +1605,7 @@
     "counts": {
      "spellings_expected": 50,
      "spellings_found": 49,
-     "spellings_found_certain": 46,
+     "spellings_found_certain": 43,
      "negatives": 9,
      "negatives_in_certain": 0,
      "glyphs_expected": 34,
@@ -1653,7 +1620,7 @@
     "query_top1": 96.7,
     "same_group": 85.7,
     "spelling_coverage": 100.0,
-    "spelling_coverage_certain": 96.4,
+    "spelling_coverage_certain": 85.7,
     "glyph_coverage": 100.0,
     "spelling_precision_labeled": 100.0,
     "glyph_precision_labeled": 100.0,
@@ -1662,7 +1629,7 @@
     "counts": {
      "spellings_expected": 28,
      "spellings_found": 28,
-     "spellings_found_certain": 27,
+     "spellings_found_certain": 24,
      "negatives": 9,
      "negatives_in_certain": 0,
      "glyphs_expected": 14,
@@ -1754,11 +1721,11 @@
     "glyph_negatives_listed": [],
     "group_size": {
      "attested": 5,
-     "inflected": 26,
-     "uncertain": 6,
+     "inflected": 23,
+     "uncertain": 9,
      "glyphs": 15,
      "glyphs_uncertain": 4,
-     "passages": 753
+     "passages": 749
     }
    },
    {
@@ -1804,7 +1771,7 @@
     "same_group": true,
     "spellings_expected": 6,
     "spellings_found": 6,
-    "spellings_found_certain": 6,
+    "spellings_found_certain": 5,
     "missing_spellings": [],
     "negatives": 3,
     "negatives_in_certain": [],
@@ -1818,11 +1785,11 @@
     "glyph_negatives_listed": [],
     "group_size": {
      "attested": 8,
-     "inflected": 2,
-     "uncertain": 111,
+     "inflected": 1,
+     "uncertain": 112,
      "glyphs": 0,
      "glyphs_uncertain": 0,
-     "passages": 534
+     "passages": 488
     }
    },
    {
@@ -1862,7 +1829,7 @@
     "same_group": true,
     "spellings_expected": 2,
     "spellings_found": 2,
-    "spellings_found_certain": 2,
+    "spellings_found_certain": 1,
     "missing_spellings": [],
     "negatives": 0,
     "negatives_in_certain": [],
@@ -1876,8 +1843,8 @@
     "glyph_negatives_listed": [],
     "group_size": {
      "attested": 3,
-     "inflected": 2,
-     "uncertain": 9,
+     "inflected": 1,
+     "uncertain": 10,
      "glyphs": 4,
      "glyphs_uncertain": 12,
      "passages": 235
@@ -1940,11 +1907,11 @@
     "glyph_negatives_listed": [],
     "group_size": {
      "attested": 3,
-     "inflected": 6,
-     "uncertain": 18,
+     "inflected": 4,
+     "uncertain": 20,
      "glyphs": 14,
      "glyphs_uncertain": 29,
-     "passages": 60
+     "passages": 41
     }
    },
    {
@@ -2048,7 +2015,7 @@
     "same_group": false,
     "spellings_expected": 3,
     "spellings_found": 3,
-    "spellings_found_certain": 3,
+    "spellings_found_certain": 2,
     "missing_spellings": [],
     "negatives": 0,
     "negatives_in_certain": [],
@@ -2062,11 +2029,11 @@
     "glyph_negatives_listed": [],
     "group_size": {
      "attested": 2,
-     "inflected": 11,
-     "uncertain": 73,
+     "inflected": 10,
+     "uncertain": 74,
      "glyphs": 10,
      "glyphs_uncertain": 21,
-     "passages": 138
+     "passages": 128
     }
    },
    {
@@ -2316,11 +2283,11 @@
     "glyph_negatives_listed": [],
     "group_size": {
      "attested": 6,
-     "inflected": 3,
-     "uncertain": 2,
+     "inflected": 2,
+     "uncertain": 3,
      "glyphs": 6,
      "glyphs_uncertain": 4,
-     "passages": 50
+     "passages": 32
     }
    },
    {
@@ -2368,11 +2335,11 @@
     "glyph_negatives_listed": [],
     "group_size": {
      "attested": 2,
-     "inflected": 3,
-     "uncertain": 10,
+     "inflected": 2,
+     "uncertain": 11,
      "glyphs": 8,
      "glyphs_uncertain": 0,
-     "passages": 24
+     "passages": 23
     }
    },
    {
@@ -2420,11 +2387,11 @@
     "glyph_negatives_listed": [],
     "group_size": {
      "attested": 4,
-     "inflected": 1,
-     "uncertain": 13,
+     "inflected": 0,
+     "uncertain": 14,
      "glyphs": 5,
      "glyphs_uncertain": 0,
-     "passages": 34
+     "passages": 30
     }
    },
    {
@@ -2530,11 +2497,11 @@
     "glyph_negatives_listed": [],
     "group_size": {
      "attested": 1,
-     "inflected": 4,
-     "uncertain": 2,
+     "inflected": 2,
+     "uncertain": 4,
      "glyphs": 9,
      "glyphs_uncertain": 4,
-     "passages": 291
+     "passages": 286
     }
    },
    {
@@ -2857,18 +2824,18 @@
    "claude_accepted": 0,
    "fallbacks": [],
    "valid": 46,
-   "mean_sentences": 2.98,
-   "mean_citations": 3.76,
+   "mean_sentences": 3.0,
+   "mean_citations": 3.78,
    "claude": "not_run: usar --explain claude con credenciales (tiene costo); no se ejecutó en esta medición"
   },
   "explain_model": "extractive",
   "questions": "evidence-questions-v1",
   "split": "all",
   "relevance": "Un pasaje es pertinente si la forma señalada (o, en la línea base, alguna palabra náhuatl del pasaje) contiene la raíz esperada según la clave laxa. Es una aproximación automática.",
-  "build_seconds": 2.29,
+  "build_seconds": 2.26,
   "mean_ms_per_query": {
-   "exact_search": 112.37,
-   "evidence": 49.88
+   "exact_search": 128.51,
+   "evidence": 54.83
   },
   "model_calls": 0,
   "summary": {
@@ -3003,7 +2970,7 @@
      "entry_at1": 92.3,
      "entry_at3": 92.3,
      "passage_hit": 100.0,
-     "passage_precision": 96.4,
+     "passage_precision": 96.3,
      "false_abstention": 0.0,
      "abstention_correct": 33.3
     },
@@ -3051,7 +3018,7 @@
      "entry_at1": 92.3,
      "entry_at3": 92.3,
      "passage_hit": 100.0,
-     "passage_precision": 90.1,
+     "passage_precision": 89.9,
      "false_abstention": 0.0,
      "abstention_correct": null
     },
@@ -4653,8 +4620,8 @@
     "interpreted_as": null,
     "language": "nah",
     "explanation_valid": true,
-    "explanation_sentences": 2,
-    "explanation_citations": 2,
+    "explanation_sentences": 3,
+    "explanation_citations": 3,
     "explanation_method": "extractive",
     "explanation_fallback": null,
     "explanation_model_calls": 0
@@ -5046,8 +5013,8 @@
     "has_entry_expectation": true,
     "entry_at1": true,
     "entry_at3": true,
-    "passages": 9,
-    "relevant": 9,
+    "passages": 7,
+    "relevant": 7,
     "hit": true,
     "top_entry": "tlalli",
     "interpreted_as": null,
@@ -5230,8 +5197,8 @@
    }
   },
   "timing": {
-   "build_seconds": 0.98,
-   "mean_ms_per_query": 10.24
+   "build_seconds": 1.18,
+   "mean_ms_per_query": 10.84
   },
   "results": [
    {
@@ -7504,10 +7471,10 @@
  },
  "timing": {
   "seconds_per_component": {
-   "morphology": 19.8,
-   "terms": 3.5,
-   "evidence": 10.3,
-   "documentary": 2.6
+   "morphology": 10.3,
+   "terms": 3.6,
+   "evidence": 11.3,
+   "documentary": 2.8
   }
  }
 }

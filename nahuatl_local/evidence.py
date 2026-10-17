@@ -47,9 +47,13 @@ class Evidence:
             return
         t = self.terms
         t._build()
-        self.analyzer, self.concordance, self.hints = t.analyzer, t.concordance, t.hints
+        self.analyzer, self.concordance = t.analyzer, t.concordance
         self.rows, self.postings, self.entries, self.lex_loose = t.rows, t.postings, t.entries, t.lex_loose
         self._ready = True
+
+    @property
+    def hints(self):
+        return self.terms.hints
 
     # -- utilidades -----------------------------------------------------------
     def _entry(self, h, how):
@@ -91,7 +95,7 @@ class Evidence:
     def _ask_nah(self, word):
         analyses = self.analyzer.analyze(word, limit=3)
         best = analyses[0] if analyses else None
-        strong = best and best['basis'] in ('dictionary', 'particle_table')
+        strong = best and best['basis'] in ('dictionary', 'particle_table', 'name_list')
         interpreted_as, chosen = None, best
         variants = self._variants(word)
         if not strong:
@@ -125,7 +129,7 @@ class Evidence:
         stem_key = None
         if chosen and chosen['class_'] != 'foreign':
             stem_key = chosen['stem_key']
-            conc = self.concordance.lookup(chosen['word'], limit=24, stem_key=stem_key)
+            conc = self.concordance.lookup(chosen['word'], limit=24, stem_key=self.concordance.index_key(chosen))
             total, forms = conc['total_passages'], conc['forms']
             ranked = sorted(conc['passages'], key=lambda p: len(p['nah']) > SHORT)  # estable: conserva la diversidad
             passages = [self._passage(p['id'], p['form'], 'misma raíz' if p['form'].casefold() != word.casefold() else 'misma forma')
@@ -148,7 +152,7 @@ class Evidence:
                 docs.add((r['iso'], r['document']))
                 other.append(self._passage(rid, w, 'misma palabra' if w.casefold() == word.casefold() else 'otra grafía'))
         hints = []
-        if stem_key and chosen['class_'] not in ('particle', 'foreign'):
+        if stem_key and chosen['class_'] not in ('particle', 'foreign', 'name'):
             hints = [dict(word=h['word'], support=h['support'], p=h['p'], passages=h['passages'])
                      for h in self.hints.hints(stem_key, limit=3, min_support=NAH_HINT_SUPPORT)]
         return dict(analysis=chosen, alternatives=analyses[1:] if chosen is best else analyses[:2],
