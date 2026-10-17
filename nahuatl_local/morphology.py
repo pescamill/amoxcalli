@@ -173,6 +173,47 @@ _PARTICLE_LIST = [
 PARTICLES = {}
 for _surface, _tag, _gloss in _PARTICLE_LIST:
     PARTICLES.setdefault(key_of(_surface), (_surface, _tag, _gloss))
+# Nombres propios frecuentes del archivo clásico: lugares, gobernantes y deidades.
+# Lista breve y abierta; un nombre que no está aquí se reconoce por la mayúscula fuera de
+# inicio de frase (``analyze(..., sentence_initial=False)``). Segmentación solo si es
+# transparente y habitual en las gramáticas (Mexi-co); si no, la forma entera.
+_NAME_LIST = [
+    # lugares
+    ('Mexico', 'lugar', 'Mexi-co'), ('Tenochtitlan', 'lugar', 'Tenoch-ti-tlan'), ('Mictlan', 'lugar', 'Mic-tlan'),
+    ('Tlatelolco', 'lugar', None), ('Tetzcoco', 'lugar', None), ('Tlacopan', 'lugar', None),
+    ('Azcapotzalco', 'lugar', None), ('Xochimilco', 'lugar', None), ('Chalco', 'lugar', None),
+    ('Cholollan', 'lugar', None), ('Tlaxcallan', 'lugar', None), ('Cuauhnahuac', 'lugar', None),
+    ('Coyohuacan', 'lugar', None), ('Colhuacan', 'lugar', None), ('Aztlan', 'lugar', None), ('Tollan', 'lugar', None),
+    ('Tamoanchan', 'lugar', None), ('Tlalocan', 'lugar', None), ('Anahuac', 'lugar', None),
+    ('Huexotzinco', 'lugar', None), ('Chapoltepec', 'lugar', None), ('Coatepec', 'lugar', None),
+    # gobernantes
+    ('Motecuhçoma', 'gobernante', None), ('Moteuczoma', 'gobernante', None), ('Acamapichtli', 'gobernante', None),
+    ('Huitzilihuitl', 'gobernante', None), ('Chimalpopoca', 'gobernante', None), ('Itzcoatl', 'gobernante', None),
+    ('Axayacatl', 'gobernante', None), ('Tiçocic', 'gobernante', None), ('Ahuitzotl', 'gobernante', None),
+    ('Cuitlahuac', 'gobernante', None), ('Cuauhtemoc', 'gobernante', None), ('Moquihuix', 'gobernante', None),
+    ('Nezahualcoyotl', 'gobernante', None), ('Nezahualpilli', 'gobernante', None), ('Tezozomoc', 'gobernante', None),
+    ('Cacamatzin', 'gobernante', None),
+    # deidades
+    ('Quetzalcoatl', 'deidad', None), ('Huitzilopochtli', 'deidad', None), ('Tezcatlipoca', 'deidad', None),
+    ('Tlaloc', 'deidad', None), ('Mictlantecuhtli', 'deidad', None),
+    ('Chalchiuhtlicue', 'deidad', None), ('Coatlicue', 'deidad', None), ('Coyolxauhqui', 'deidad', None),
+    ('Xiuhtecuhtli', 'deidad', None), ('Tlaçolteotl', 'deidad', None), ('Ometeotl', 'deidad', None),
+    ('Xochiquetzal', 'deidad', None), ('Cihuacoatl', 'deidad', None), ('Yacatecuhtli', 'deidad', None),
+    ('Xipe', 'deidad', None), ('Centeotl', 'deidad', None),
+]
+NAMES = {}
+for _surface, _kind, _seg in _NAME_LIST:
+    NAMES.setdefault(key_of(_surface), (_surface, _kind, _seg))
+# Signos tras los que empieza una frase (la mayúscula ahí no indica nombre).
+_SENTENCE_END = '.!?;:¶«“"('
+
+
+def sentence_initial(text, start):
+    """True si la palabra que empieza en ``start`` abre una frase (o el texto)."""
+    before = text[:start].rstrip()
+    return not before or before[-1] in _SENTENCE_END
+
+
 # Préstamos y nombres: letras ajenas a la ortografía náhuatl colonial.
 FOREIGN = re.compile(r'[bdfgjrñ]|s[^a-z]?$|^s|ss')
 
@@ -524,10 +565,14 @@ class Analyzer:
                 seen.add(sig)
                 yield klass, pchain, stem, schain
 
-    def analyze(self, word, limit=5):
-        """Lista ordenada de análisis de ``word`` (texto de la fuente)."""
+    def analyze(self, word, limit=5, sentence_initial=None):
+        """Lista ordenada de análisis de ``word`` (texto de la fuente).
+
+        ``sentence_initial``: False si se sabe que la palabra va dentro de una frase (entonces
+        la mayúscula indica nombre propio), True al inicio, None si no se sabe (palabra suelta).
+        """
         word = word.strip()
-        cache_key = (word, limit)
+        cache_key = (word, limit, sentence_initial if word[:1].isupper() else None)
         if cache_key in self._cache:
             return self._cache[cache_key]
         key, spans = phonemic_key(word)
@@ -547,6 +592,8 @@ class Analyzer:
             h = self.lexicon.whole[key]
             results.append(self._package(word, key, spans, 'particle', [], key, [], 7.0, 'dictionary', h,
                                          particle=dict(lemma=h[0]['written'], tag='PTCL', gloss=h[0]['label'][:80])))
+        if key not in PARTICLES:
+            results += self._names(word, key, spans, sentence_initial)
         scored = []
         for klass, pchain, stem, schain in self.candidates(key):
             score, basis, hits = self._score(key, pchain, schain, stem, klass)
@@ -560,6 +607,24 @@ class Analyzer:
         scored.sort(key=lambda x: (-x[0], len(x[2]) + len(x[4]), x[3]))
         for score, klass, pchain, stem, schain, basis, hits in scored[:limit * 3]:
             results.append(self._package(word, key, spans, klass, pchain, stem, schain, score, basis, hits))
+        # Entradas del diccionario para la forma exacta: el nombre las conserva (Tollan «Tula»), y una
+        # entrada en minúscula (tonatiuh «sol», calli) indica nombre común: la mayúscula sola no basta.
+        exact = list({d['sense_id']: d for x in results if x['class_'] != 'name' for d in x['dictionary']
+                      if key_of(d['written'] or '') == key}.values())
+        for r in results:
+            if r['class_'] != 'name':
+                continue
+            r['dictionary'] = exact[:4]
+            if r['basis'] == 'name_capital' and any((d['written'] or 'x')[:1].islower() for d in exact):
+                r['score'] = -1.0
+        # Un nombre de la lista con segmentación conocida toma la de las reglas (Mexi-co).
+        for r in results:
+            if r['class_'] == 'name' and r.get('_segmentation'):
+                same = next((x for x in results if x['class_'] != 'name' and x['segmentation'].casefold() == r['_segmentation'].casefold()), None)
+                if same:
+                    r.update(morphemes=same['morphemes'], segmentation=same['segmentation'])
+                    r['morphemes'][[m['role'] for m in r['morphemes']].index('stem')].update(tag='NOMBRE', gloss=r['_gloss'])
+            r.pop('_segmentation', None), r.pop('_gloss', None)
         # deduplicar por segmentación visible
         unique, seen = [], set()
         for r in sorted(results, key=lambda r: -r['score']):
@@ -577,6 +642,25 @@ class Analyzer:
                 r['relative_confidence'] = round(math.exp(r['score'] - m) / z, 3)
         self._cache[cache_key] = out
         return out
+
+    def _names(self, word, key, spans, sentence_initial):
+        """Lectura como nombre propio: de la lista breve, o por mayúscula dentro de la frase."""
+        listed = NAMES.get(key)
+        capital = word[:1].isupper()
+        if listed:
+            surface, kind, seg = listed
+            gloss = f'{surface} ({kind})'
+            score, basis = (9.5, 'name_list') if capital or sentence_initial is not None else (6.5, 'name_list')
+        elif capital and sentence_initial is False:
+            seg, gloss, score, basis = None, 'nombre propio', 9.0, 'name_capital'
+        elif capital and sentence_initial is None:
+            seg, gloss, score, basis = None, 'nombre propio', -1.0, 'name_capital'  # solo como alternativa
+        else:
+            return []
+        r = self._package(word, key, spans, 'name', [], key, [], score, basis, [],
+                          particle=dict(lemma=word, tag='NOMBRE', gloss=gloss))
+        r['_segmentation'], r['_gloss'] = seg, gloss
+        return [r]
 
     def best_stem(self, word):
         a = self.analyze(word, limit=1)
@@ -596,7 +680,7 @@ class Analyzer:
                                   surface=surface(pos, pos + len(form))))
             pos += len(form)
         stem_start = pos
-        stem_len = len(stem) if klass not in ('particle', 'foreign') else len(key)
+        stem_len = len(stem) if klass not in ('particle', 'foreign', 'name') else len(key)
         morphemes.append(dict(role='stem', slot='STEM', key=stem, tag='RAÍZ', gloss='',
                               surface=surface(stem_start, stem_start + stem_len)))
         pos += stem_len
@@ -625,11 +709,18 @@ class Analyzer:
         candidatos. Iteraciones siguientes: cada tipo vota solo por la raíz de
         su mejor análisis con los conteos actuales (EM duro).
         """
-        types = Counter(key_of(w) for w in words if w)
+        # Una vez por grafía y por clave: el corpus repite mucho las mismas formas, y los
+        # candidatos de una clave no dependen de los conteos que se reestiman.
+        keys = {}
+        for w in words:
+            if w and w not in keys:
+                keys[w] = key_of(w)
+        types = Counter(keys[w] for w in words if w)
         types.pop('', None)
+        paths = {key: list(self.candidates(key)) for key in types}
         cands = {}
         for key in types:
-            stems = {stem for _, _, stem, _ in self.candidates(key) if len(stem) >= 2}
+            stems = {stem for _, _, stem, _ in paths[key] if len(stem) >= 2}
             cands[key] = stems or {key}
         counts = Counter()
         for key, stems in cands.items():
@@ -645,7 +736,7 @@ class Analyzer:
                 if key in PARTICLES:
                     new[key] += 1
                     continue
-                best, cls = self._best_key(key)
+                best, cls = self._best_key(key, paths[key])
                 new[best] += 1
                 if cls:
                     klass[best][0 if cls == 'N' else 1] += 1
@@ -657,9 +748,9 @@ class Analyzer:
         self._cache = {}
         return history
 
-    def _best_key(self, key):
+    def _best_key(self, key, paths=None):
         best, best_score, best_cls = key, -1e9, None
-        for klass, pchain, stem, schain in self.candidates(key):
+        for klass, pchain, stem, schain in (self.candidates(key) if paths is None else paths):
             score, _, _ = self._score(key, pchain, schain, stem, klass)
             if score > best_score or (score == best_score and len(stem) > len(best)):
                 best, best_score, best_cls = stem, score, _class_of(pchain, schain)
@@ -669,7 +760,7 @@ class Analyzer:
         """Glosa interlineal: una entrada por palabra con su mejor análisis y alternativas."""
         out = []
         for m in WORD.finditer(text):
-            analyses = self.analyze(m.group(0), limit=3)
+            analyses = self.analyze(m.group(0), limit=3, sentence_initial=sentence_initial(text, m.start()))
             out.append(dict(token=m.group(0), start=m.start(), end=m.end(),
                             best=analyses[0] if analyses else None, alternatives=analyses[1:]))
         return out
@@ -688,6 +779,8 @@ NOTES = {
     'rules': 'Segmentación solo por reglas; la raíz no tiene apoyo en el diccionario ni en el archivo.',
     'particle_table': 'Partícula o pronombre frecuente (tabla gramatical del analizador).',
     'loan_or_name': 'Posible préstamo, nombre propio o cifra.',
+    'name_list': 'Nombre propio (lista breve de lugares, gobernantes y deidades del analizador).',
+    'name_capital': 'Probable nombre propio: mayúscula dentro de la frase. Se concuerda por la forma completa.',
 }
 
 

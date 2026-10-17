@@ -1923,7 +1923,7 @@
               ],
               "question": "¿Qué palabra de la traducción corresponde a «calli»?"
             },
-            "context": "Pasaje breve de La tinta negra y roja (antología de poesía náhuatl), elegido automáticamente porque reúne calli con 7 raíces del diccionario. Contexto pendiente de revisión.",
+            "context": "Pasaje breve de La tinta negra y roja (antología de poesía náhuatl), elegido automáticamente porque reúne calli con 6 raíces del diccionario. Contexto pendiente de revisión.",
             "explore_words": [
               "calli"
             ]
@@ -2052,7 +2052,7 @@
         ],
         "title": "Más pasajes con calli"
       },
-      "fingerprint": "3611c6e12978a2d0d3fe6ef61b123c5ae17df3306a5d775baf8151110b9bad14",
+      "fingerprint": "b166e1159bdedf47b49065004040d6714c99fc24bf3069584e0142d16720955f",
       "id": "generated-reading-gen-calli-review",
       "lesson_id": "gen-calli",
       "priority": "P1",
@@ -2646,7 +2646,7 @@
               ],
               "question": "¿Qué palabra de la traducción corresponde a «Tonatiuh»?"
             },
-            "context": "Pasaje breve de La tinta negra y roja (antología de poesía náhuatl), elegido automáticamente porque reúne tonatiuh con 7 raíces del diccionario. Contexto pendiente de revisión.",
+            "context": "Pasaje breve de La tinta negra y roja (antología de poesía náhuatl), elegido automáticamente porque reúne tonatiuh con 6 raíces del diccionario. Contexto pendiente de revisión.",
             "explore_words": [
               "Tonatiuh"
             ]
@@ -2730,7 +2730,7 @@
         ],
         "title": "Más pasajes con tonatiuh"
       },
-      "fingerprint": "ac1f2c9d1d080cefd3db7066928598be8066ccd6f80755769b3af70bff0434a1",
+      "fingerprint": "7c165e22bf0736573fe6a9fef0405a15d4dbc8c6826fb0fbe4a2880bf18a4984",
       "id": "generated-reading-gen-tonatiuh-review",
       "lesson_id": "gen-tonatiuh",
       "priority": "P1",

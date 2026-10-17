@@ -119,12 +119,13 @@ def concordance_recall(analyzer, rows, records, sample_path=None, seed=2026):
             continue
         written = sorted({e['written'] or '' for e in entries})
         exact = set().union(*(word_index.get(comparison(w), set()) for w in written))
-        stem_hits = {rid for rid, _ in conc.index.get(stem, [])}
+        # Partículas y nombres se concuerdan por forma completa (clave «=forma»): también cuentan.
+        stem_hits = {rid for rid, _ in conc.index.get(stem, []) + conc.index.get('=' + stem, [])}
         if not exact and not stem_hits:
             continue
         per_entry.append(dict(stem=stem, written=written, exact=len(exact), stem_index=len(stem_hits),
                               only_stem=len(stem_hits - exact), only_exact=len(exact - stem_hits)))
-        for rid, w in conc.index.get(stem, []):
+        for rid, w in conc.index.get(stem, []) + conc.index.get('=' + stem, []):
             if rid not in exact:
                 sample.append(dict(stem=stem, entry=written[0], form=w, passage=rid))
     random.Random(seed).shuffle(sample)

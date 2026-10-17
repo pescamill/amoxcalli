@@ -6,20 +6,20 @@ Una sola tabla, regenerable con `make eval` (`python -m nahuatl_local.evaluate_a
 
 | Componente | Conjunto | Medida | dev | test | total |
 |---|---|---|---:|---:|---:|
-| Morfología | `evaluation/morphology-gold-v1.json` | Segmentación exacta (top‑1) | 88 % | 82 % | 85 % |
+| Morfología | `evaluation/morphology-gold-v1.json` | Segmentación exacta (top‑1) | 88 % | 89 % | 88 % |
 | Morfología | `evaluation/morphology-gold-v1.json` | Segmentación en top‑3 | 100 % | 93 % | 96 % |
 | Morfología | `evaluation/morphology-gold-v1.json` | Raíz correcta (top‑1) |  |  | 77 % |
-| Morfología | Pasajes `nci` de Axolotl | Palabras con raíz enlazada |  |  | 60.2 % |
+| Morfología | Pasajes `nci` de Axolotl | Palabras con raíz enlazada |  |  | 60.4 % |
 | Morfología | Molina (entradas evaluables) | Pistas de glosa, precisión@1 (IBM‑1) |  |  | 30 % |
 | Índice de términos | `evaluation/term-groups-v1.json` | Consulta → grupo (top‑1) | 96.7 % | 85.7 % | 90.3 % |
-| Índice de términos | `evaluation/term-groups-v1.json` | Grafías seguras | 96.4 % | 86.4 % | 92 % |
+| Índice de términos | `evaluation/term-groups-v1.json` | Grafías seguras | 85.7 % | 86.4 % | 86 % |
 | Índice de términos | `evaluation/term-groups-v1.json` | Glifos | 100 % | 100 % | 100 % |
 | Índice de términos | `evaluation/term-groups-v1.json` | Precisión de grafías (etiquetadas) | 100 % | 100 % | 100 % |
 | Índice de términos | `evaluation/term-groups-v1.json` | Precisión de glifos (etiquetados) | 100 % | 100 % | 100 % |
 | Preguntar | `evaluation/evidence-questions-v1.json` | Entrada top‑1 | 90 % | 92.3 % | 91.7 % |
 | Preguntar | `evaluation/evidence-questions-v1.json` | Entrada top‑3 | 90 % | 92.3 % | 91.7 % |
 | Preguntar | `evaluation/evidence-questions-v1.json` | Con pasaje pertinente | 100 % | 100 % | 100 % |
-| Preguntar | `evaluation/evidence-questions-v1.json` | Precisión de pasajes | 99.2 % | 96.4 % | 97.5 % |
+| Preguntar | `evaluation/evidence-questions-v1.json` | Precisión de pasajes | 99.2 % | 96.3 % | 97.5 % |
 | Preguntar | `evaluation/evidence-questions-v1.json` | Abstención falsa | 0 % | 0 % | 0 % |
 | Preguntar | `evaluation/evidence-questions-v1.json` | Abstención correcta | 100 % | 33.3 % | 60 % |
 | Preguntar | `evaluation/evidence-questions-v1.json` | Explicaciones con citas válidas |  |  | 46/46 |
@@ -38,10 +38,10 @@ Analizador `nah-morph-1` · conjunto `morphology-gold-v1.json` · partición `al
 | Sistema | n | Segmentación exacta (top‑1) | top‑1 dev / test | En top‑3 | Raíz correcta (top‑1) |
 |---|---:|---:|---:|---:|---:|
 | unsegmented_baseline | 52 | 0% | 0% / 0% | 0% | 0% |
-| rules_only | 52 | 15% | 8% / 22% | 62% | 15% |
-| rules+dictionary | 52 | 65% | 68% / 63% | 81% | 60% |
-| rules+corpus_em | 52 | 83% | 88% / 78% | 98% | 79% |
-| full (rules+dictionary+corpus_em) | 52 | 85% | 88% / 82% | 96% | 77% |
+| rules_only | 52 | 15% | 8% / 22% | 62% | 12% |
+| rules+dictionary | 52 | 67% | 68% / 67% | 81% | 60% |
+| rules+corpus_em | 52 | 85% | 88% / 82% | 98% | 75% |
+| full (rules+dictionary+corpus_em) | 52 | 88% | 88% / 89% | 96% | 77% |
 
 Errores del sistema completo:
 
@@ -49,8 +49,6 @@ Errores del sistema completo:
 - `mochiuh` → `mochi-uh` (esperado `mo-chiuh`, dev)
 - `nitlacua` → `ni-tlacua` (esperado `ni-tla-cua`, dev)
 - `quitoque` → `quito-que` (esperado `qu-ito-que`, test)
-- `Mexico` → `mexico` (esperado `Mexi-co`, test)
-- `Tenochtitlan` → `tenochtitlan` (esperado `Tenoch-ti-tlan`, test)
 - `tlaqualli` → `tlaqual-li` (esperado `tla-qua-l-li`, test)
 - `tetlazohtlaliztli` → `tetlazohtlaliz-tli` (esperado `te-tlazohtla-liz-tli`, test)
 
@@ -61,12 +59,12 @@ Errores del sistema completo:
 | Medida | Palabras | Formas distintas |
 |---|---:|---:|
 | Coincidencia exacta con una forma del diccionario | 28.0% | 3.9% |
-| Raíz enlazada por el analizador (diccionario o partícula) | 60.2% | 26.6% |
-| Con al menos un afijo o enlace explicado | 86.4% | — |
+| Raíz enlazada por el analizador (diccionario o partícula) | 60.4% | 26.5% |
+| Con al menos un afijo o enlace explicado | 86.3% | — |
 
 ### 3. Concordancia por raíz
 
-Para 1124 raíces del diccionario (≥4 fonemas) presentes en el corpus: la búsqueda por palabra exacta encuentra 10645 pasajes; el índice por raíz, 25350. 873 entradas ganan pasajes; 84 pierden alguno (1328 pasajes solo por búsqueda exacta).
+Para 1102 raíces del diccionario (≥4 fonemas) presentes en el corpus: la búsqueda por palabra exacta encuentra 10645 pasajes; el índice por raíz, 24648. 839 entradas ganan pasajes; 92 pierden alguno (1297 pasajes solo por búsqueda exacta).
 
 Muestra para revisión humana de precisión: `reports/morphology-review/stem-hits-sample.csv`. Más pasajes no implica más aciertos: la muestra de revisión estima la precisión de los nuevos hallazgos.
 
@@ -77,19 +75,19 @@ Muestra para revisión humana de precisión: `reports/morphology-review/stem-hit
 | ihuan, iuan | 172 | 972 |
 | toca, tocatl | 11 | 683 |
 | ihcuac | 105 | 597 |
-| tlahtoa | 2 | 435 |
-| ihtoa | 1 | 413 |
-| mexihcatl | 0 | 312 |
+| tlahtoa | 2 | 434 |
+| ihtoa | 1 | 412 |
+| mexihcatl | 0 | 308 |
 
 ### 4. Pistas de glosa del corpus paralelo frente a Molina
 
-101 entradas con raíz presente en ≥2 pasajes. Acierto si una palabra propuesta (normalizada) aparece en la definición de Molina de esa entrada. Molina es independiente del corpus paralelo; la coincidencia ortográfica del s. XVI es aproximada.
+100 entradas con raíz presente en ≥2 pasajes. Acierto si una palabra propuesta (normalizada) aparece en la definición de Molina de esa entrada. Molina es independiente del corpus paralelo; la coincidencia ortográfica del s. XVI es aproximada.
 
 | Método | Precisión@1 | Acierto en top‑3 |
 |---|---:|---:|
 | cooccurrence | 19% | 36% |
 | dice | 23% | 36% |
-| ibm1 | 30% | 39% |
+| ibm1 | 30% | 37% |
 
 Ejemplos (IBM‑1):
 
@@ -119,9 +117,9 @@ Escrito antes de construir el índice de términos y antes de mirar sus resultad
 
 | Partición | Términos | Consulta → grupo (top-1) | Mismo grupo | Grafías (cualquier nivel) | Grafías seguras | Glifos | Precisión grafías* | Precisión glifos* | Homógrafos separados |
 |---|---|---|---|---|---|---|---|---|---|
-| dev | 7 | 96.7% de 30 | 85.7% | 100.0% | 96.4% | 100.0% | 100.0% | 100.0% | 100.0% |
+| dev | 7 | 96.7% de 30 | 85.7% | 100.0% | 85.7% | 100.0% | 100.0% | 100.0% | 100.0% |
 | test | 14 | 85.7% de 42 | 57.1% | 95.5% | 86.4% | 100.0% | 100.0% | 100.0% | None% |
-| all | 21 | 90.3% de 72 | 66.7% | 98.0% | 92.0% | 100.0% | 100.0% | 100.0% | 100.0% |
+| all | 21 | 90.3% de 72 | 66.7% | 98.0% | 86.0% | 100.0% | 100.0% | 100.0% | 100.0% |
 
 \* Precisión sobre lo etiquetado: aciertos seguros frente a formas o glifos que el conjunto marca como no seguros y el índice presenta como seguros.
 
@@ -173,7 +171,7 @@ Sistema `evidence-root-v1` · conjunto `evidence-questions-v1` · partición `al
 | exact_search | test | 32 | 42.3% | 42.3% | 75.9% | 84% | 24.1% | 33.3% |
 | exact_search | all | 49 | 38.9% | 38.9% | 75% | 87.8% | 25% | 60% |
 | evidence | dev | 17 | 90% | 90% | 100% | 99.2% | 0% | 100% |
-| evidence | test | 32 | 92.3% | 92.3% | 100% | 96.4% | 0% | 33.3% |
+| evidence | test | 32 | 92.3% | 92.3% | 100% | 96.3% | 0% | 33.3% |
 | evidence | all | 49 | 91.7% | 91.7% | 100% | 97.5% | 0% | 60% |
 
 ### 2. Por tipo de consulta (todas las particiones)
@@ -188,7 +186,7 @@ Sistema `evidence-root-v1` · conjunto `evidence-questions-v1` · partición `al
 
 ### 3. Explicaciones con citas
 
-Redactor `explain-cited-v1` (extractive): 46 de 46 explicaciones pasan la validación de citas (cada frase cita IDs de la evidencia y las formas entre «» aparecen en lo citado); 2.98 frases y 3.76 citas de media. Claude: not_run: usar --explain claude con credenciales (tiene costo); no se ejecutó en esta medición.
+Redactor `explain-cited-v1` (extractive): 46 de 46 explicaciones pasan la validación de citas (cada frase cita IDs de la evidencia y las formas entre «» aparecen en lo citado); 3.0 frases y 3.78 citas de media. Claude: not_run: usar --explain claude con credenciales (tiene costo); no se ejecutó en esta medición.
 
 ### 4. Fallos del sistema con evidencia
 

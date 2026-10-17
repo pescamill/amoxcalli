@@ -54,7 +54,8 @@ UNCERTAIN = dict(other_entry='otra entrada del diccionario tiene esta grafía',
                  corpus_root='raíz sin entrada en el diccionario: asociación del corpus',
                  short_root='raíz breve: puede coincidir con otras palabras',
                  bare_root='raíz sin afijos: puede ser otra palabra (cohua «comprar», cal)',
-                 contains='contiene el término (compuesto o nombre)')
+                 contains='contiene el término (compuesto o nombre)',
+                 name='nombre propio con esta raíz (ytoca Xochitzin): no es una forma del término')
 
 ES_MIN_SUPPORT = 8   # pistas invertidas español → raíz: solo asociaciones con apoyo amplio
 ES_MIN_P = 0.3
@@ -121,7 +122,7 @@ class TermIndex:
         with self._lock:
             if self._ready:
                 return
-            self.analyzer, self.concordance, self.hints = self.word_study._build()
+            self.analyzer, self.concordance = self.word_study.core()
             self.rows = {r['id']: r for r in passages.load(self.root)}
             records = self.records_fn() if self.records_fn else lexicon.load_records(self.root)
             # Archivo: clave laxa → [(pasaje, forma)], una vez por pasaje.
@@ -149,14 +150,6 @@ class TermIndex:
                         if h['sense_id'] not in self.entries:
                             self.entries[h['sense_id']] = h
                             self.lex_loose[loose_key(h['written'] or '')].append(h)
-            # Pistas invertidas: palabra española → [(raíz, p, apoyo)].
-            self.es_to_stem = defaultdict(list)
-            for stem, hints in self.hints.table.items():
-                for h in hints:
-                    if h['support'] >= ES_MIN_SUPPORT and h['p'] >= ES_MIN_P:
-                        self.es_to_stem[h['es']].append(dict(stem_key=stem, p=h['p'], support=h['support']))
-            for hints in self.es_to_stem.values():
-                hints.sort(key=lambda h: (-h['p'] * min(1, h['support'] / 20), h['stem_key']))
             # Grupos del diccionario: entradas del catálogo léxico, con su clave laxa y su raíz.
             self.lexicon = {}
             self.spelling_owner, self.stem_owner = defaultdict(list), defaultdict(list)
@@ -197,6 +190,26 @@ class TermIndex:
             self.documents = {d['id']: d for d in catalog['documents']}
             self.archive_ids = {}  # grupo del archivo → clave laxa
             self._ready = True
+
+    @property
+    def hints(self):
+        """Pistas de glosa del servicio (``PENDING_HINTS`` mientras el servidor las prepara)."""
+        return self.word_study.hints()
+
+    @property
+    def es_to_stem(self):
+        """Pistas invertidas: palabra española → [(raíz, p, apoyo)]; se arma al llegar las pistas."""
+        hints = self.hints
+        if getattr(self, '_es_to_stem_of', None) is not hints:
+            table = defaultdict(list)
+            for stem, hs in hints.table.items():
+                for h in hs:
+                    if h['support'] >= ES_MIN_SUPPORT and h['p'] >= ES_MIN_P:
+                        table[h['es']].append(dict(stem_key=stem, p=h['p'], support=h['support']))
+            for hs in table.values():
+                hs.sort(key=lambda h: (-h['p'] * min(1, h['support'] / 20), h['stem_key']))
+            self._es_to_stem, self._es_to_stem_of = table, hints
+        return self._es_to_stem
 
     # -- detección e índice ---------------------------------------------------
     def detect(self, word):
@@ -313,6 +326,9 @@ class TermIndex:
         inflected, uncertain, seen_keys = [], [], set(keys)
         if stem:
             forms = Counter(w.casefold() for _, w in self.concordance.index.get(stem, []))
+            # Nombres propios con esta raíz (ytoca Xochitzin): se listan aparte, nunca como forma segura.
+            names = {w.casefold() for _, w in self.concordance.names.get(stem, [])} - set(forms)
+            forms.update(names)
             by_key = defaultdict(list)
             for f in forms:
                 by_key[loose_key(f)].append(f)
@@ -322,7 +338,8 @@ class TermIndex:
                 seen_keys.add(k)
                 owners = [o for o in self.spelling_owner.get(k, []) if o != gid]
                 analysis = self.analyzer.analyze(fs[0], limit=3)
-                reason = 'other_entry' if owners else self._certainty(analysis[0], gid, stem, senses) if analysis else 'corpus_root'
+                reason = ('name' if all(f in names for f in fs) else 'other_entry' if owners
+                          else self._certainty(analysis[0], gid, stem, senses) if analysis else 'corpus_root')
                 if reason is None:
                     # Empate exacto con otra lectura de la misma segmentación (te-coua-ni: «mordedor» o
                     # «comprador»): si la otra es verbal, la forma es ambigua y no se presenta como segura.
@@ -366,7 +383,8 @@ class TermIndex:
                  glyphs=glyphs, glyphs_uncertain=glyphs_uncertain,
                  review=entry['review'] if entry else dict(status='archive_only', automatic=True, primary_checked=False))
         g['_certain_keys'] = sorted(certain_keys)
-        self._groups[gid] = g
+        if not self.hints.meta.get('pending'):  # sin pistas todavía: no se guarda incompleto
+            self._groups[gid] = g
         return g
 
     def _contains(self, key, lemma_key, stem_key):
