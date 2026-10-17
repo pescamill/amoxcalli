@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from nahuatl_local.corpus import CorpusStore
 from nahuatl_local.platform import make_server
+from qa_prewarm import prewarm
 
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--baseline', action='store_true')
@@ -20,6 +21,7 @@ with tempfile.TemporaryDirectory() as directory:
     thread = threading.Thread(target=httpd.serve_forever, daemon=True)
     thread.start()
     try:
+        prewarm(f'http://127.0.0.1:{httpd.server_address[1]}')
         environment = dict(os.environ, CORPUS_QA_ORIGIN=f'http://127.0.0.1:{httpd.server_address[1]}')
         if args.baseline:
             environment['READING_CONTINUITY_BASELINE'] = '1'
