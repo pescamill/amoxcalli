@@ -163,6 +163,7 @@ class Evidence:
                          'Pendiente de revisión lingüística.')
 
     def _ask_es(self, word):
+        self.word_study.hints(wait=True)  # español → raíz necesita las pistas: se esperan (la interfaz muestra el avance)
         key = es_key(word)
         entries = [self._entry(h, 'la definición dice «%s»' % word) for h in self.terms.spanish_entries(word)]
         entry_stems = {self.analyzer.best_stem(e['written']) for e in entries if e['written']}

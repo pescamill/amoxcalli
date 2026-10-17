@@ -77,7 +77,14 @@ def make_app(store, word_study=None, explain_writer=None):
     def ask(request):
         try:result=evidence_index.ask(request.arg('q'))
         except ValueError as error:raise Problem(str(error)) from None
-        return request.reply(dict(result,explanation=explain(result),explain_models=['extractive']+(['claude'] if explain_writer else [])))
+        return request.reply(dict(result,explanation=explain(result),explain_models=['extractive']+(['claude'] if explain_writer else []),preparing=word_study.pending()))
+
+    def preparation():
+        # Etapas del arranque en frío: la interfaz muestra «Preparando el análisis…» con este avance.
+        status=word_study.status()
+        stages=status['stages'][:2]+[dict(id='terms',label='Índice de términos',state='ready' if terms._ready else 'building' if status['ready'] else 'pending',seconds=None)]+status['stages'][2:]
+        return dict(status,stages=stages,done=sum(s['state']=='ready' for s in stages),total=len(stages),
+                    complete=all(s['state']=='ready' for s in stages),ready=status['ready'] and terms._ready)
 
     def explanation(request):
         model_name=request.arg('model','extractive')
@@ -115,7 +122,7 @@ def make_app(store, word_study=None, explain_writer=None):
             ('/api/corpus',corpus),('/api/ask/cards',cards),
             ('/api/pictography',lambda r:r.reply(public_catalog(store.public_records()))),
             ('/api/word',word),('/api/ask',ask),('/api/explain',explanation),('/api/gloss',gloss),
-            ('/api/system',lambda r:r.reply(dict(archive=archive.summary))),
+            ('/api/system',lambda r:r.reply(dict(archive=archive.summary,preparation=preparation()))),
             ('/api/learning',lambda r:r.reply(learning.catalog(store.public_records()))),
             ('/api/units',lambda r:r.reply(units.catalog())),('/api/units/examples',unit_examples),
             ('/api/research',research),
@@ -127,17 +134,25 @@ def make_app(store, word_study=None, explain_writer=None):
     router.add('GET','/api/research/',lambda r:r.reply(archive.get(r.tail)),prefix=True)
     router.add('POST','/api/proposals',lambda r:r.reply(store.propose(r.get_person(True),r.body()),201))
     router.add('DELETE','/api/proposals/',withdraw_proposal,prefix=True)
-    return handler(store,router,STATIC)
+    app=handler(store,router,STATIC)
+    # Orden de preparación: lo que pide la primera consulta (palabra, Archivo, Preguntar) antes que las pistas.
+    app.warm=lambda:(word_study.core(),terms._build(),word_study.hints(wait=True))
+    return app
 
 
 def make_server(store,host='127.0.0.1',port=8766,public_origin=None,prewarm=False,explain_model=None):
-    word_study=WordStudy(records_fn=store.public_records)
-    if prewarm:
-        # El primer arranque estima frecuencias y pistas (~1 min); después se usa data/derived/.
-        threading.Thread(target=word_study.warm,daemon=True,name='word-study-warmup').start()
+    # El servidor no espera las pistas de glosa: responde sin ellas (y lo indica) mientras se estiman.
+    word_study=WordStudy(records_fn=store.public_records,wait_for_hints=False)
     # Claude solo redacta si se pide al arrancar: la explicación envía la pregunta y los pasajes citados a Anthropic.
     writer=ClaudeWriter() if explain_model=='claude' else None
-    return Server((host,port),make_app(store,word_study,writer),public_origin)
+    app=make_app(store,word_study,writer)
+    if prewarm:
+        # Primer arranque: análisis listo en segundos; después se reutiliza data/derived/.
+        def warm():
+            try:app.warm()
+            except Exception:pass  # el arranque no debe fallar por el análisis opcional
+        threading.Thread(target=warm,daemon=True,name='analysis-warmup').start()
+    return Server((host,port),app,public_origin)
 
 
 def main():

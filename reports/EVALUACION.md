@@ -9,6 +9,7 @@ Una sola tabla, regenerable con `make eval` (`python -m nahuatl_local.evaluate_a
 | Morfología | `evaluation/morphology-gold-v1.json` | Segmentación exacta (top‑1) | 88 % | 89 % | 88 % |
 | Morfología | `evaluation/morphology-gold-v1.json` | Segmentación en top‑3 | 100 % | 93 % | 96 % |
 | Morfología | `evaluation/morphology-gold-v1.json` | Raíz correcta (top‑1) |  |  | 77 % |
+| Morfología | `evaluation/morphology-gold-v2.json` | Segmentación y clase (top‑1; test ciego) | 89 % | 78 % |  |
 | Morfología | Pasajes `nci` de Axolotl | Palabras con raíz enlazada |  |  | 60.4 % |
 | Morfología | Molina (entradas evaluables) | Pistas de glosa, precisión@1 (IBM‑1) |  |  | 30 % |
 | Índice de términos | `evaluation/term-groups-v1.json` | Consulta → grupo (top‑1) | 96.7 % | 85.7 % | 90.3 % |
@@ -51,6 +52,40 @@ Errores del sistema completo:
 - `quitoque` → `quito-que` (esperado `qu-ito-que`, test)
 - `tlaqualli` → `tlaqual-li` (esperado `tla-qua-l-li`, test)
 - `tetlazohtlaliztli` → `tetlazohtlaliz-tli` (esperado `te-tlazohtla-liz-tli`, test)
+
+### 1b. Prueba v2 (`evaluation/morphology-gold-v2.json`)
+
+dev = todo v1 + familias de error conocidas (se usa para ajustar); test = 91 formas nuevas escritas y congeladas antes de medir (sha256 en `evaluation/morphology-gold-v2.sha256`). Partículas y nombres cuentan solo si además el análisis tiene esa clase.
+
+| Partición | n | Exacta (top‑1) | Palabras | Partículas | Nombres |
+|---|---:|---:|---:|---:|---:|
+| dev | 56 | 89% | 89% de 54 | 100% de 1 | 100% de 1 |
+| test | 91 | 78% | 67% de 58 | 94% de 18 | 100% de 15 |
+
+Nombres del test solo con la regla de mayúscula (sin la lista breve): 100% de 15.
+
+Errores en test:
+
+- `ticochizque` → `ti-cochi-zque` (esperado `ti-cochi-z-que`, word, base dictionary)
+- `titlacua` → `ti-tlacua` (esperado `ti-tla-cua`, word, base dictionary)
+- `quicaquia` → `qui-caquia` (esperado `qui-caqui-a`, word, base rules)
+- `oquito` → `o-quito` (esperado `o-qu-ito`, word, base corpus)
+- `motlalia` → `motla-lia` (esperado `mo-tlalia`, word, base dictionary)
+- `tlaqua` → `tlaqua` (esperado `tla-qua`, word, base dictionary)
+- `ninotlalia` → `ni-no-tla-lia` (esperado `ni-no-tlalia`, word, base corpus)
+- `timotlalia` → `ti-motla-lia` (esperado `ti-mo-tlalia`, word, base dictionary)
+- `teotl` → `teotl` (esperado `teo-tl`, word, base corpus)
+- `atlan` → `atlan` (esperado `a-tlan`, word, base rules)
+- `cuauhtli` → `cuauhtli` (esperado `cuauh-tli`, word, base corpus)
+- `pilli` → `pi-l-li` (esperado `pil-li`, word, base corpus)
+- `tlacuilo` → `tla-cui-lo` (esperado `tla-cuilo`, word, base corpus)
+- `tlatolli` → `tlatol-li` (esperado `tlato-l-li`, word, base dictionary)
+- `xochicuicatl` → `xochicuica-tl` (esperado `xochi-cuica-tl`, word, base dictionary_compound)
+- `nopiltzin` → `no-piltzin` (esperado `no-pil-tzin`, word, base dictionary)
+- `inahuac` → `i-nahua-c` (esperado `i-nahuac`, word, base dictionary)
+- `icpac` → `icpa-c` (esperado `i-cpac`, word, base corpus)
+- `ipan` → `ipan` (esperado `i-pan`, word, base dictionary)
+- `tleica` → `tleica` (esperado `tleica`, particle, base rules)
 
 ### 2. Cobertura del diccionario en el corpus clásico
 

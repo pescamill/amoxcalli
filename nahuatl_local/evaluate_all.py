@@ -153,6 +153,10 @@ def table(report):
     rows.append(('Morfología', gold, 'Segmentación en top‑3', _frac(sp.get('dev', {}).get('top3')),
                  _frac(sp.get('test', {}).get('top3')), _frac(full['top3'])))
     rows.append(('Morfología', gold, 'Raíz correcta (top‑1)', '', '', _frac(full['stem_top1'])))
+    v2 = m.get('gold_v2')
+    if v2:
+        rows.append(('Morfología', '`evaluation/morphology-gold-v2.json`', 'Segmentación y clase (top‑1; test ciego)',
+                     _frac(v2['dev']['top1']), _frac(v2['test']['top1']), ''))
     if 'coverage' in m:
         rows.append(('Morfología', 'Pasajes `nci` de Axolotl', 'Palabras con raíz enlazada', '', '',
                      f"{100 * m['coverage']['analyzer_linked_tokens']:.1f} %"))

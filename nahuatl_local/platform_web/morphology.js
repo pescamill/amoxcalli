@@ -10,12 +10,14 @@ const morphBasis={
  particle_table:'Partícula frecuente',
  corpus:'Raíz recurrente en el archivo',
  rules:'Solo reglas',
- loan_or_name:'Préstamo, nombre o cifra'
+ loan_or_name:'Préstamo, nombre o cifra',
+ name_list:'Nombre propio (lista breve)',
+ name_capital:'Probable nombre propio (mayúscula)'
 };
 const morphCache=new Map();
 async function morphWord(word,exclude){
  const key=word+'\u0000'+(exclude||'');
- if(!morphCache.has(key))morphCache.set(key,api('/api/word?'+new URLSearchParams(exclude?{w:word,exclude}:{w:word})).catch(e=>{morphCache.delete(key);throw e;}));
+ if(!morphCache.has(key))morphCache.set(key,api('/api/word?'+new URLSearchParams(exclude?{w:word,exclude}:{w:word})).then(d=>{if(d.preparing?.length)morphCache.delete(key);return d;},e=>{morphCache.delete(key);throw e;}));
  return morphCache.get(key);
 }
 function morphemeChips(a){
@@ -37,7 +39,8 @@ function wordAnalysisHTML(data){
   <p class="meta"><span class="basis-pill basis-${esc(best.basis)}">${esc(morphBasis[best.basis]||best.basis)}</span> ${esc(best.note)}${typeof best.relative_confidence==='number'&&alternatives.length?` Preferencia frente a las alternativas: ${Math.round(best.relative_confidence*100)} %.`:''}</p>
   ${morphDictionaryHTML(best)}
   ${hints.length?`<div class="gloss-hints"><p><strong>En las traducciones del archivo</strong>, esta raíz suele acompañar a: ${hints.map(h=>`<span class="hint-word">≈ ${esc(h.word)}</span> <span class="meta">(${h.support} pasajes)</span>`).join(', ')}.</p><p class="meta">Asociación estadística entre pasajes alineados (IBM‑1), no una definición. Compruébala en los ejemplos.</p></div>`:''}
-  ${att&&att.total_passages?`<div class="attestations"><p><strong>La raíz <span lang="nci">${esc(att.stem)}</span> aparece en ${att.total_passages} pasajes</strong> en ${att.distinct_forms??att.forms.length} ${(att.distinct_forms??att.forms.length)===1?'forma':'formas'}: ${att.forms.slice(0,8).map(f=>`<button type="button" class="link-button" data-morph-word="${esc(f.form)}" lang="nci">${esc(f.form)}</button> <span class="meta">${f.count}</span>`).join(' · ')}</p>
+  ${hints.length?'':preparingHintsHTML(data)}
+  ${att&&att.total_passages?`<div class="attestations"><p><strong>${att.whole_form?'La forma':'La raíz'} <span lang="nci">${esc(att.stem)}</span> aparece en ${att.total_passages} pasajes</strong> en ${att.distinct_forms??att.forms.length} ${(att.distinct_forms??att.forms.length)===1?'forma':'formas'}: ${att.forms.slice(0,8).map(f=>`<button type="button" class="link-button" data-morph-word="${esc(f.form)}" lang="nci">${esc(f.form)}</button> <span class="meta">${f.count}</span>`).join(' · ')}</p>
    <div class="attestation-list">${att.passages.slice(0,3).map(p=>`<article class="attestation"><p class="meta">${esc(p.document)} · ${esc(p.id)}</p><blockquote lang="nci">${highlightForm(p.nah,p.form)}</blockquote><button type="button" class="link-button" data-preview-translation aria-expanded="false">Mostrar traducción</button><p class="preview-translation" hidden>${esc(p.es)}</p></article>`).join('')}</div>
    <a href="#investigar/${encodeURIComponent(data.word)}">Buscar en el archivo completo →</a></div>`:''}
   ${alternatives.length?`<details class="morph-alternatives"><summary>Otros análisis posibles (${alternatives.length})</summary>${alternatives.map(a=>`<div class="morph-alt">${morphemeChips(a)}<p class="meta">${esc(morphBasis[a.basis]||a.basis)}${a.dictionary?.length?' · '+esc(a.dictionary[0].written)+': '+esc(a.dictionary[0].label.slice(0,60)):''}</p></div>`).join('')}</details>`:''}
