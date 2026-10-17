@@ -69,9 +69,11 @@ function askResultHTML(r){
 async function renderAsk(id){
  const query=decodeHash(id||''),origin=routeReadingOrigin();
  $('content').innerHTML=readingReturnHTML(origin)+heading('Preguntar con evidencia','¿Qué significa? ¿Cómo se dice?','Una palabra náhuatl en cualquier grafía, una palabra en español o el ID de una ficha. La respuesta reúne sus grafías, glifos, entradas del diccionario, pasajes del archivo y las fichas con sus originales; cada resultado dice por qué aparece.')+
-  `<p class="ask-examples">Escribe en la búsqueda de arriba o prueba: ${askExamples.map(q=>`<a href="#preguntar/${encodeURIComponent(q)}">${esc(q)}</a>`).join(' · ')}</p><div id="ask-status" role="status" aria-live="polite"></div><div id="ask-results"></div><div id="ask-cards" aria-live="polite"></div>`;
+  `<p class="ask-examples">Escribe en la búsqueda de arriba o prueba: ${askExamples.map(q=>`<a href="#preguntar/${encodeURIComponent(q)}">${esc(q)}</a>`).join(' · ')}</p><div id="ask-entity" hidden></div><div id="ask-status" role="status" aria-live="polite"></div><div id="ask-results"></div><div id="ask-cards" aria-live="polite"></div>`;
  focusReadingReturn();
  if(!query)return;
+ // Si nombra una deidad, un signo, una veintena o un día, enlaza su ficha (Dioses y calendario).
+ if(typeof fillEntityBanner==='function')fillEntityBanner($('ask-entity'),query);
  // La página pudo cambiar (o cerrarse) mientras llegaba una respuesta: entonces no se toca el documento.
  const current=()=>{try{return route().page==='preguntar'&&decodeHash(route().id||'')===query&&!!$('ask-cards');}catch{return false;}};
  $('ask-status').textContent='Buscando evidencia…';

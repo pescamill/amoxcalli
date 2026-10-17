@@ -14,6 +14,7 @@ from .stems import WordStudy
 from .evidence import Evidence
 from .terms import TermIndex
 from .spelling import Search as SpellingSearch, routes as spelling_routes
+from .entities import routes as entity_routes
 from .units import Units
 from .explain import ClaudeWriter, explain
 from .web import Router, Server, Static, handler
@@ -135,6 +136,8 @@ def make_app(store, word_study=None, explain_writer=None):
             ('/api/proposals',lambda r:r.reply(store.proposals(r.get_person(True))))]:
         router.add('GET',path,function)
     spelling_routes(router,spellings,Problem,person=lambda r:r.get_person(True)['id'])
+    # Dioses y calendario: fichas con procedencia, calendario, lecturas y unidad (grafías no reunidas → buscador de grafías).
+    entity_routes(router,spellings=spellings)
     router.add('GET','/api/research/',lambda r:r.reply(archive.get(r.tail)),prefix=True)
     router.add('POST','/api/proposals',lambda r:r.reply(store.propose(r.get_person(True),r.body()),201))
     router.add('DELETE','/api/proposals/',withdraw_proposal,prefix=True)

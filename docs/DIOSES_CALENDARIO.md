@@ -22,8 +22,9 @@ Florentino que Tlachia trae en sus fichas no se copian. **Sin imágenes generada
 ## Qué genera el módulo
 
 * **Grafías**: el índice de términos da el grupo de cada nombre y sus grafías con la misma clave laxa (`text.loose_key`);
-  las formas flexionadas e inciertas no cuentan. Los nombres de varias palabras (*Tloque Nahuaque*, *xocotl huetzi*) se
-  buscan como frase. Una grafía que llevara a dos fichas detiene la generación. *Itztli* (obsidiana) no lleva a la ficha
+  las formas flexionadas e inciertas no cuentan. Una grafía que las fichas no reúnen pasa por el buscador de grafías
+  ([GRAFIAS.md](GRAFIAS.md)): *Huitzilopoxtli* o *Kwetsalkowatl* llevan a la ficha como «posible grafía», con su
+  motivo y confianza. Los nombres de varias palabras (*Tloque Nahuaque*, *xocotl huetzi*) se buscan como frase. Una grafía que llevara a dos fichas detiene la generación. *Itztli* (obsidiana) no lleva a la ficha
   del Señor de la Noche.
 * **Pasajes**: los del archivo con esas grafías; la ficha muestra hasta 8 pasajes clásicos alternando obras.
 * **Tlachia**: Señores de la Noche (`yohualteuctli : X`), figuras de lámina (`inacayo : X`) y atavíos, con folio e imagen.
@@ -32,6 +33,14 @@ Florentino que Tlachia trae en sus fichas no se copian. **Sin imágenes generada
   del archivo (numeral + signo) dan los pasajes de cada día; son seguros si la traducción da el número.
 * **Veintenas**: posición por ordinal de Wiktionary, por la secuencia de Chimalpahin (axolotl-01746, 02334) o como hueco
   entre dos posiciones con fuente. **Teotleco y nemontemi no tienen fuente abierta para el nombre**: la ficha lo dice.
+
+## Interfaz y API
+
+«Más → Dioses y calendario» (`#dioses`, `platform_web/gods.js`): fichas con fuentes y folios de Tlachia, trecena → día →
+día siguiente, signos, numerales, veintenas, lecturas y la unidad. Preguntar enlaza la ficha si la consulta nombra una
+entidad o un día; Lecturas muestra un bloque. Rutas (`entities.routes`): `/api/entities`, `/api/entities/<id>`,
+`/api/entity-search?q=`, `/api/calendar/day?n=&sign=` (sign de 0 a 19), `/api/calendar/unit`. Prueba DOM:
+`scripts/test-gods-ui.py`.
 
 ## Lecturas, unidad y revisión
 

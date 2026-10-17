@@ -12,7 +12,7 @@ function unitReviewHTML(review){
 }
 function unitKey(unit){return 'unidad:'+unit.id;}
 function unitProgress(unit){
- const edition=state.units.id+':'+unit.practice_version,old=study.lessons[unitKey(unit)];
+ const edition=(unit.edition_id||state.units.id)+':'+unit.practice_version,old=study.lessons[unitKey(unit)];
  const valid=xs=>Array.isArray(xs)?xs.filter(x=>Number.isInteger(x)&&x>=0&&x<unit.exercises.length):[];
  if(old?.edition===edition)return {edition,passed:valid(old.passed),step:Number.isInteger(old.step)?Math.max(0,Math.min(old.step,unit.exercises.length)):0,done:old.done===true};
  return {edition,passed:[],step:0,done:false};
@@ -42,11 +42,13 @@ async function fillUnitsTeaser(slot){
  slot.hidden=false;
 }
 
-function renderUnit(unit){
+// opts.back / backLabel / others: enlaces de vuelta de una unidad servida desde otra sección (Dioses y calendario).
+function renderUnit(unit,opts={}){
+ const back=opts.back||'#unidades',others=opts.others||'#unidades';
  const progress=unitProgress(unit);
  let step=progress.step,onRule=false;
  const record=()=>{progress.step=step;saveUnitProgress(unit,progress);};
- const frame=body=>`<a class="back-link" href="#unidades">← Todas las unidades</a>${heading('Unidad · Náhuatl clásico',unit.title,unit.objective)}${unitReviewHTML(unit.review)}<div class="lesson-progress unit-progress" role="group" aria-label="Pasos de la unidad"><button class="step-button ${onRule?'current':''}" data-unit-step="rule">Regla</button>${unit.exercises.map((e,i)=>`<button class="step-button ${i===step&&!onRule?'current':''}" data-unit-step="${i}" aria-current="${i===step&&!onRule?'step':'false'}">${i+1}${progress.passed.includes(i)?' ✓':''}</button>`).join('')}<button class="step-button ${step===unit.exercises.length&&!onRule?'current':''}" data-unit-step="${unit.exercises.length}">Lectura</button></div>${body}`;
+ const frame=body=>`<a class="back-link" href="${back}">${esc(opts.backLabel||'← Todas las unidades')}</a>${heading('Unidad · Náhuatl clásico',unit.title,unit.objective)}${unitReviewHTML(unit.review)}<div class="lesson-progress unit-progress" role="group" aria-label="Pasos de la unidad"><button class="step-button ${onRule?'current':''}" data-unit-step="rule">Regla</button>${unit.exercises.map((e,i)=>`<button class="step-button ${i===step&&!onRule?'current':''}" data-unit-step="${i}" aria-current="${i===step&&!onRule?'step':'false'}">${i+1}${progress.passed.includes(i)?' ✓':''}</button>`).join('')}<button class="step-button ${step===unit.exercises.length&&!onRule?'current':''}" data-unit-step="${unit.exercises.length}">Lectura</button></div>${body}`;
  const bindSteps=()=>document.querySelectorAll('[data-unit-step]').forEach(b=>b.onclick=()=>{if(b.dataset.unitStep==='rule'){showRule();return;}step=Number(b.dataset.unitStep);record();draw();});
  const showRule=()=>{
   onRule=true;
@@ -60,7 +62,7 @@ function renderUnit(unit){
   onRule=false;
   if(step>=unit.exercises.length)return drawClosing();
   const e=unit.exercises[step],done=progress.passed.includes(step);
-  $('content').innerHTML=frame(`<section class="exercise-card unit-exercise" data-kind="${esc(e.kind)}" data-exercise="${esc(e.id)}"><p class="eyebrow">${esc(unitKinds[e.kind])} · ${step+1} de ${unit.exercises.length} <span class="automatic-tag">Automático</span></p><h2>${esc(e.prompt)}</h2><div class="unit-body"></div><p class="exercise-feedback" role="status"></p><details class="unit-evidence"><summary>De dónde sale la respuesta</summary>${e.evidence.map(ev=>{const p=unitPassage(unit,ev.archive_id);return `<p><span lang="nci">${esc(ev.form)}</span> = ${esc(ev.segmentation)} · la traducción dice «${esc(ev.support)}»${p?' · '+esc(p.document||''):''} · ${esc(ev.archive_id)}</p>`;}).join('')}<p class="meta">Comprobado automáticamente contra el pasaje y el análisis actual. No es una revisión humana.</p></details><div class="entry-actions"><button class="primary" id="unit-next" ${done?'':'disabled'}>${step===unit.exercises.length-1?'Ir a la lectura':'Siguiente'}</button></div></section>`);
+  $('content').innerHTML=frame(`<section class="exercise-card unit-exercise" data-kind="${esc(e.kind)}" data-exercise="${esc(e.id)}"><p class="eyebrow">${esc(unitKinds[e.kind])} · ${step+1} de ${unit.exercises.length} <span class="automatic-tag">Automático</span></p><h2>${esc(e.prompt)}</h2><div class="unit-body"></div><p class="exercise-feedback" role="status"></p><details class="unit-evidence"><summary>De dónde sale la respuesta</summary>${e.evidence.map(ev=>{if(ev.source==='tlachia')return `<p><span lang="nci">${esc(ev.form)}</span> = ${esc(ev.segmentation)} (${esc(ev.support)}) · Tlachia, Telleriano-Remensis f. ${esc(ev.folio)}</p>`;const p=unitPassage(unit,ev.archive_id);return `<p><span lang="nci">${esc(ev.form)}</span> = ${esc(ev.segmentation)} · la traducción dice «${esc(ev.support)}»${p?' · '+esc(p.document||''):''} · ${esc(ev.archive_id)}</p>`;}).join('')}<p class="meta">Comprobado automáticamente contra el pasaje y el análisis actual. No es una revisión humana.</p></details><div class="entry-actions"><button class="primary" id="unit-next" ${done?'':'disabled'}>${step===unit.exercises.length-1?'Ir a la lectura':'Siguiente'}</button></div></section>`);
   bindSteps();$('unit-next').onclick=next;
   const body=$('content').querySelector('.unit-body'),feedback=$('content').querySelector('.exercise-feedback');
   if(done){feedback.textContent='Ya resuelto. '+e.explanation;feedback.className='exercise-feedback correct';}
@@ -107,7 +109,7 @@ function renderUnit(unit){
  };
  const drawClosing=()=>{
   const c=unit.closing,p=unitPassage(unit,c.archive_id);
-  $('content').innerHTML=frame(`<section class="unit-closing"><p class="eyebrow">Lectura breve · un pasaje real del archivo</p><blockquote class="unit-passage"><p lang="nci">${esc(p.nah)}</p><button class="link-button" id="unit-translation" aria-expanded="false">Mostrar traducción</button><p class="unit-translation" hidden>${esc(p.es)}</p>${unitSource(p)}</blockquote><h3>Palabras de esta unidad en el pasaje</h3><ul class="unit-closing-forms">${c.forms.map(f=>`<li><span lang="nci">${esc(f.form)}</span> · ${esc(f.segmentation)} · ${esc(f.gloss)}</li>`).join('')}</ul><p class="meta">Glosas por partes del analizador, no traducciones. ${esc(p.verification)}.</p><div class="entry-actions"><button class="primary" id="unit-finish">${progress.done?'Unidad completada ✓':'Terminar la unidad'}</button><a class="secondary" href="#unidades">Otras unidades</a><a class="secondary" href="#palabras">Repasar mis palabras</a></div></section>`);
+  $('content').innerHTML=frame(`<section class="unit-closing"><p class="eyebrow">Lectura breve · un pasaje real del archivo</p><blockquote class="unit-passage"><p lang="nci">${esc(p.nah)}</p><button class="link-button" id="unit-translation" aria-expanded="false">Mostrar traducción</button><p class="unit-translation" hidden>${esc(p.es)}</p>${unitSource(p)}</blockquote><h3>Palabras de esta unidad en el pasaje</h3><ul class="unit-closing-forms">${c.forms.map(f=>`<li><span lang="nci">${esc(f.form)}</span> · ${esc(f.segmentation)} · ${esc(f.gloss)}</li>`).join('')}</ul><p class="meta">Glosas por partes del analizador, no traducciones. ${esc(p.verification)}.</p><div class="entry-actions"><button class="primary" id="unit-finish">${progress.done?'Unidad completada ✓':'Terminar la unidad'}</button><a class="secondary" href="${others}">Otras unidades</a><a class="secondary" href="#palabras">Repasar mis palabras</a></div></section>`);
   bindSteps();
   $('unit-translation').onclick=()=>{const t=$('content').querySelector('.unit-translation');t.hidden=!t.hidden;$('unit-translation').textContent=t.hidden?'Mostrar traducción':'Ocultar traducción';$('unit-translation').setAttribute('aria-expanded',String(!t.hidden));};
   $('unit-finish').onclick=()=>{

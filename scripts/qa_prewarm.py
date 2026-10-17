@@ -9,7 +9,7 @@ import time
 import urllib.error
 import urllib.request
 
-PATHS = ('/api/corpus', '/api/learning', '/api/units', '/api/word?w=calli', '/api/ask?q=calli',
+PATHS = ('/api/corpus', '/api/learning', '/api/units', '/api/entities', '/api/word?w=calli', '/api/ask?q=calli',
          '/api/terms?q=calli', '/api/ask/cards?q=calli', '/api/research?query=chachalaca&variant=nci')
 
 

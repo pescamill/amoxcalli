@@ -153,20 +153,3 @@ async function fillGodsTeaser(slot){
  slot.hidden=false;
 }
 
-// La sección se registra sola (app.js resuelve renderers al navegar) y añade su aviso a Preguntar y su bloque a
-// Lecturas envolviendo esas vistas: los demás módulos no necesitan conocerla.
-renderers.dioses=id=>renderGods(id);
-pageTitles.dioses='Dioses y calendario';
-{
- const ask=renderers.preguntar,learn=renderers.aprender;
- renderers.preguntar=id=>{
-  const done=ask(id),query=decodeHash(id||''),examples=$('content').querySelector('.ask-examples');
-  if(query&&examples){examples.insertAdjacentHTML('afterend','<div id="ask-entity" hidden></div>');fillEntityBanner($('ask-entity'),query);}
-  return done;
- };
- renderers.aprender=id=>{
-  const done=learn(id),units=$('units-teaser');
-  if(units&&!id){units.insertAdjacentHTML('afterend','<section class="units-teaser gods-teaser" id="gods-teaser" hidden></section>');fillGodsTeaser($('gods-teaser'));}
-  return done;
- };
-}
