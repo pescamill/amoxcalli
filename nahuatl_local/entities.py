@@ -761,8 +761,9 @@ def generate(terms=None, write=True):
 class Entities:
     """Fichas servidas: catálogo ligero, ficha completa con pasajes, búsqueda por grafía y unidad."""
 
-    def __init__(self, path=ENTITIES, recipe=RECIPE, decisions=DECISIONS):
+    def __init__(self, path=ENTITIES, recipe=RECIPE, decisions=DECISIONS, spellings=None):
         self.path, self.recipe, self.decisions = Path(path), Path(recipe), Path(decisions)
+        self.spellings = spellings  # spelling.Search: grafías no reunidas en las fichas (kuetsalkoatl, Huitzilopoxtli)
         self._lock = Lock()
         self._data = None
         self._rows = None
@@ -775,6 +776,7 @@ class Entities:
                     raise ValueError('Fichas de entidades inválidas.')
                 self._data = data
                 self._by_id = {e['id']: e for e in data['entities']}
+                self._group_entity = {g['id']: e['id'] for e in data['entities'] if e['searchable'] for g in e['term_groups']}
                 cal = data['calendar']
                 for group in ('numerals', 'signs', 'trecenas', 'veintenas'):
                     self._by_id.update({x['id']: dict(x, kind=x.get('kind', group[:-1])) for x in cal[group]})
@@ -856,6 +858,21 @@ class Entities:
         if hit:
             e = self._by_id[hit['id']]
             matches.append(dict(id=hit['id'], kind=hit['kind'], name=e['name'], why='misma grafía o grafía variante'))
+        if not matches and self.spellings is not None and len(WORD.findall(query)) == 1:
+            # Grafía que las fichas no reúnen: el buscador de grafías propone la forma atestiguada más cercana
+            # (reglas de perfil, distancia de edición) y, si es de una ficha, se ofrece con su motivo y confianza.
+            try:
+                candidates = self.spellings.search(query, limit=3)['candidates']
+            except ValueError:
+                candidates = []
+            for c in candidates:
+                eid = self._group_entity.get(c['id']) or data['search'].get(phrase_key(c['match']['form'] or ''), {}).get('id')
+                if eid and eid in self._by_id and self._by_id[eid].get('searchable', True):
+                    e = self._by_id[eid]
+                    matches.append(dict(id=eid, kind=e['kind'], name=e['name'], spelling=c['match']['form'],
+                                        confidence=c['match']['confidence']['label'],
+                                        why='posible grafía (confianza %s): %s' % (c['match']['confidence']['label'], c['match']['why'])))
+                    break
         numerals, signs = calendar_tables(dict(numerals=data['calendar']['numerals'], signs=data['calendar']['signs']))
         toks = tokens(query)
         day = parse_calendar_name(toks, 0, numerals, signs) if toks else None
@@ -875,10 +892,10 @@ class Entities:
         return dict(id=unit['edition_id'], units=[unit])
 
 
-def routes(router, service=None):
+def routes(router, service=None, spellings=None):
     """Rutas de la sección: catálogo, ficha, búsqueda por grafía, día del tonalpohualli y unidad."""
     from .community import Problem
-    service = service or Entities()
+    service = service or Entities(spellings=spellings)
 
     def card(request):
         try:

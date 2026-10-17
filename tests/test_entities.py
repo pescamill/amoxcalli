@@ -50,6 +50,16 @@ class EntitiesData(unittest.TestCase):
         self.assertEqual(self.service.search('Ce Acatl')['matches'][-1]['id'], 'dia/1-12')
         self.assertEqual(self.service.search('chiuhcnahui tecpatl')['matches'][0]['id'], 'dia/9-17')
 
+    def test_spelling_search_reaches_the_card(self):
+        from nahuatl_local.spelling import Search
+        from nahuatl_local.terms import TermIndex
+        service = Entities(spellings=Search(TermIndex()))
+        for query, eid in [('Huitzilopoxtli', 'huitzilopochtli'), ('Kwetsalkowatl', 'quetzalcoatl')]:
+            match = service.search(query)['matches'][0]
+            self.assertEqual(match['id'], eid, query)
+            self.assertIn('posible grafía', match['why'])
+        self.assertEqual(service.search('itztli')['matches'], [])
+
     def test_calendar_arithmetic(self):
         self.assertEqual(trecena_of(1, 0), 1)
         self.assertEqual(trecena_of(6, 19), 19)  # 6 Xochitl, lámina 26r: trecena 1 Cuauhtli

@@ -31,6 +31,9 @@ async function open(hash,width=1200){
  // Preguntar con una grafía variante lleva a la misma ficha.
  w.location.hash='#preguntar/Uitzilopochtli';await until(()=>$('.entity-banner a'),'aviso en Preguntar');
  assert.equal($('.entity-banner a').getAttribute('href'),'#dioses/huitzilopochtli');
+ w.location.hash='#preguntar/Huitzilopoxtli';await until(()=>/posible grafía/.test($('.entity-banner')?.textContent||''),'grafía que propone el buscador');
+ assert.equal($('.entity-banner a').getAttribute('href'),'#dioses/huitzilopochtli');
+ assert.match($('.entity-banner').textContent,/posible grafía/);
  // Calendario: trecena, día, día siguiente; la trecena 19 muestra a Xochiquetzal (f. 25v).
  w.location.hash='#dioses/calendario/trecena-19';await until(()=>all('.gods-days li').length===13,'trecena');
  assert.match($('#gods-trecena').textContent,/Xochiqu/);
