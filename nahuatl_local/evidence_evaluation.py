@@ -2,10 +2,11 @@
 
 Uso::
 
-    python3 -m nahuatl_local.evidence_evaluation             # informe completo
-    python3 -m nahuatl_local.evidence_evaluation --split dev  # solo para ajustar
+    make eval                                                  # informe único (reports/EVALUACION.md)
+    python3 -m nahuatl_local.evidence_evaluation --split dev   # solo para ajustar; no escribe
+    python3 -m nahuatl_local.evidence_evaluation --explain claude  # explicaciones con Claude (costo); no escribe
 
-Escribe ``reports/evidence-evaluation.json`` y ``reports/EVIDENCIA_EVALUACION.md``.
+El informe lo escribe el arnés único (``nahuatl_local.evaluate_all``).
 La pertinencia de un pasaje se decide automáticamente (raíz esperada en alguna
 palabra náhuatl del pasaje, por clave laxa). Mide recuperación, no corrección
 lingüística.
@@ -98,7 +99,7 @@ def aggregate(rows):
                 abstention_correct=pct(sum(r['correct'] for r in abst), len(abst)))
 
 
-def run(split='all', write=True, explain_model=None):
+def run(split='all', explain_model=None):
     data = json.loads(QUESTIONS.read_text(encoding='utf-8'))
     questions = [q for q in data['questions'] if split in ('all', q['split'])]
     evidence = Evidence()
@@ -141,10 +142,6 @@ def run(split='all', write=True, explain_model=None):
     report = dict(version=EVIDENCE_VERSION, explanation=explanation, explain_model=explain_model or 'extractive', questions=data['id'], split=split, relevance=data['relevance'],
                   build_seconds=round(build_seconds, 2), mean_ms_per_query=timing, model_calls=0,
                   summary=summary, items=per_item)
-    if write:
-        (ROOT / 'reports' / 'evidence-evaluation.json').write_text(
-            json.dumps(report, ensure_ascii=False, indent=1, sort_keys=True) + '\n', encoding='utf-8')
-        (ROOT / 'reports' / 'EVIDENCIA_EVALUACION.md').write_text(markdown(report), encoding='utf-8')
     return report
 
 
@@ -156,7 +153,7 @@ def markdown(r):
     s = r['summary']
     lines = ['# Evaluación de la consulta con evidencia', '',
              f"Sistema `{r['version']}` · conjunto `{r['questions']}` · partición `{r['split']}`. "
-             'Generado por `python3 -m nahuatl_local.evidence_evaluation`. Cero llamadas a modelos.', '',
+             'Generado por `make eval` (`python3 -m nahuatl_local.evaluate_all`). Cero llamadas a modelos.', '',
              '## 1. Resultado por partición', '',
              '| Sistema | Partición | n | Entrada top‑1 | Entrada top‑3 | Con pasaje pertinente | Precisión de pasajes | Abstención falsa | Abstención correcta |',
              '|---|---|---:|---:|---:|---:|---:|---:|---:|']
@@ -192,20 +189,21 @@ def markdown(r):
         lines.append('- Ninguno.')
     lines += ['', '## Límites', '',
               f"- {r['relevance']}",
-              '- El conjunto es pequeño y lo escribió el equipo técnico; las particiones separan desarrollo de prueba, no sustituyen la revisión de una persona experta.',
-              f"- Construcción de índices: {r['build_seconds']} s (sobre cachés derivados ya presentes). Tiempo medio por consulta: "
-              + ', '.join(f'{k} {v} ms' for k, v in r['mean_ms_per_query'].items()) + '.', '']
+              '- El conjunto es pequeño y lo escribió el equipo técnico; las particiones separan desarrollo de prueba, no sustituyen la revisión de una persona experta.']
+    if r.get('build_seconds') is not None:
+        lines.append(f"- Construcción de índices: {r['build_seconds']} s (sobre cachés derivados ya presentes). Tiempo medio por consulta: "
+                     + ', '.join(f'{k} {v} ms' for k, v in r['mean_ms_per_query'].items()) + '.')
+    lines.append('')
     return '\n'.join(lines)
 
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument('--split', choices=['dev', 'test', 'all'], default='all')
-    p.add_argument('--no-write', action='store_true')
+    p.add_argument('--split', choices=['dev', 'test', 'all'], default='dev')
     p.add_argument('--explain', choices=['extractive', 'claude'], default='extractive',
                    help='claude: redacta cada explicación con la API de Anthropic (envía pasajes y tiene costo).')
     a = p.parse_args()
-    print(markdown(run(a.split, not a.no_write, None if a.explain == 'extractive' else a.explain)))
+    print(markdown(run(a.split, None if a.explain == 'extractive' else a.explain)))
 
 
 if __name__ == '__main__':

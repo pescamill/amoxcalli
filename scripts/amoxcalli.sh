@@ -1,20 +1,20 @@
 #!/usr/bin/env bash
 # Arranque único de Amoxcalli: un proceso sirve la aplicación, Voces (/aportar) y la API.
 #   bash scripts/amoxcalli.sh serve [opciones]   solo biblioteca estándar de Python
-#   bash scripts/amoxcalli.sh setup [opciones]   prepara .venv, dependencias y pesos del modelo local; después sirve
-# Opciones (ambos): --host --port --db --public-origin --disable-model --adapter --explain-model claude
+# Opciones: --host --port --db --public-origin --explain-model claude
 # Detalle: python3 -m nahuatl_local.platform serve --help
+# (El modelo local Qwen3 + LoRA y su «setup» se archivaron en experiments/llm/.)
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
 usage() {
-  sed -n '2,6s/^# \{0,1\}//p' "$0" >&2
+  sed -n '2,5s/^# \{0,1\}//p' "$0" >&2
   exit "$1"
 }
 COMMAND="${1:-}"
 [ $# -gt 0 ] && shift
 case "$COMMAND" in
-  serve|setup) ;;
+  serve) ;;
   -h|--help|help) usage 0 ;;
   *) usage 2 ;;
 esac
@@ -31,15 +31,7 @@ if [ "$EXPECT_PORT" = 1 ] || ! [[ "$PORT" =~ ^[0-9]+$ ]] || [ "$PORT" -lt 1 ] ||
   exit 2
 fi
 
-if [ "$COMMAND" = setup ]; then
-  if [ ! -x .venv/bin/python ]; then "${NAHUATL_PYTHON:-python3}" -m venv .venv; fi
-  if ! .venv/bin/python -c 'import torch,transformers,peft' >/dev/null 2>&1; then
-    if [ "$(uname -s)" = Linux ]; then .venv/bin/python -m pip install 'torch==2.7.1' --index-url https://download.pytorch.org/whl/cpu; fi
-    .venv/bin/python -m pip install -r requirements.txt
-  fi
-  .venv/bin/python -m nahuatl_local.download --only model
-  PYTHON=.venv/bin/python
-elif [ -n "${NAHUATL_PYTHON:-}" ]; then PYTHON="$NAHUATL_PYTHON"
+if [ -n "${NAHUATL_PYTHON:-}" ]; then PYTHON="$NAHUATL_PYTHON"
 elif [ -x .venv/bin/python ]; then PYTHON=.venv/bin/python
 else PYTHON=python3; fi
 

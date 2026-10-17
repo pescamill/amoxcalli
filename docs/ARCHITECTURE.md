@@ -16,9 +16,9 @@ flowchart LR
   C --> AN
   DB --> S["Server (platform.py)"]
   AN --> S
-  C --> E["Evaluations<br/>morphology · evidence · documentary"]
+  C --> E["evaluate_all<br/>morphology · terms · Ask · cards"]
   P --> E
-  B -- "cite file + row hash" --> DOC["documentary_retrieval"]
+  B -- "cite file + row hash" --> DOC["cards (Ask's fichas)"]
   P & PM --> DOC
 ```
 
@@ -48,8 +48,8 @@ Bundles are never edited: they are the evidence cited by file and hash. Correcti
 |---|---|---|
 | Server (`platform.py`, `CorpusStore.public_records()`) | Catalog + this installation's local edits and accepted proposals | `research.Archive` → `passages.load` |
 | Analyzer, concordance, gloss hints, term index, Ask (`stems`, `terms`, `evidence`) | Server: the store; offline/CLI: `lexicon.load_records()` | `passages.load` |
-| `morphology_evaluation`, `evidence_evaluation`, `documentary_retrieval_evaluation` | `lexicon.load_records()` (no private database is opened) | `passages.load` |
-| `documentary_evaluation` / `documentary_retrieval` citations | `lexicon.source_rows`: the bundle row and file that a citation hashes | Raw CSV fields via `passages.original` |
+| `evaluate_all` (morphology, terms, Ask, cards) | `lexicon.load_records()` (no private database is opened) | `passages.load` |
+| `documentary_evaluation` / `cards` citations | `lexicon.source_rows`: the bundle row and file that a citation hashes | Raw CSV fields via `passages.original` |
 
 `tests/test_lexicon.py` asserts that a fresh store publishes exactly the catalog, so "what the server serves" and "what the evaluations measure" differ only by local data. `python -m nahuatl_local.lexicon --migrate DB` backs a local database up (`data/backups/voces-before-lexicon-catalog-v1.sqlite3`), applies pending steps (additive: an update never replaces a local edit), records the catalog it sits on and checks that every previous row survives; it reports edited, local-only and hidden IDs.
 
@@ -68,14 +68,14 @@ Helpers: `strip_marks`, `squash`, `tokens`, `es_key`, `key_of`, `readable`. `tes
 ## 5. Changing data safely
 
 1. New lexical data → a new bundle or editorial release → `python -m nahuatl_local.lexicon` → `python -m nahuatl_local.lexicon --migrate data/community/voces.sqlite3`.
-2. Re-measure what reads it: `python -m nahuatl_local.morphology_evaluation`, `python -m nahuatl_local.evidence_evaluation`, `python -m nahuatl_local.documentary_retrieval_evaluation` (backs up its previous report), then `python -m nahuatl_local.documentary_laboratory`. A change to `documentary_evaluation.py` also requires `python -m nahuatl_local.documentary_evaluation` (rebuilds and validates the battery by reconstruction).
+2. Re-measure what reads it with the single harness: `make eval` (`python -m nahuatl_local.evaluate_all`; `make check` re-measures without writing and fails if a number changed). If the change alters the documentary battery's data or recipe, first `python -m nahuatl_local.documentary_evaluation` (rebuilds and validates the battery by reconstruction; the harness refuses a stale battery).
 3. Any change to `text.py` that alters `phonemic_key` must update the fingerprint in `tests/test_text.py` *after* re-measuring the analyzer.
 
-Measured results live in `reports/` (`MORFOLOGIA_EVALUACION.md`, `EVIDENCIA_EVALUACION.md`, `documentary-retrieval-v1.json`); the before/after comparison of this paradigm change is in `reports/data-paradigm-comparison-2026-10-15.md`.
+Measured results live in `reports/EVALUACION.md` (one table plus per-component detail) and `reports/evaluation.json`; the before/after comparison of this paradigm change is in `reports/data-paradigm-comparison-2026-10-15.md`.
 
 ## 6. Serving
 
-One process serves the app, Voces (`/aportar`) and the API: `bash scripts/amoxcalli.sh serve` (`setup` also installs the local model). `web.py` owns what every route shares — the route table, JSON errors (400/401/403/404/405/500, tracebacks to stderr without query or body), security headers and CSP, allowed hosts, the `Origin` check on writes, static files, and a listen queue of 64. `platform.py` registers the application routes and `community.py` the Voces routes; neither has its own server.
+One process serves the app, Voces (`/aportar`) and the API: `bash scripts/amoxcalli.sh serve`. No machine-learning dependency is imported: the LLM lab is archived in `experiments/llm/`. `web.py` owns what every route shares — the route table, JSON errors (400/401/403/404/405/500, tracebacks to stderr without query or body), security headers and CSP, allowed hosts, the `Origin` check on writes, static files, and a listen queue of 64. `platform.py` registers the application routes and `community.py` the Voces routes; neither has its own server.
 
 ## 7. Term index and the single search (`terms.py`)
 
@@ -83,4 +83,4 @@ A **term group** gathers everything known about one word: the lexical entry (`le
 
 Uncertain spellings are kept apart with their reason and never counted as the term: same written root in a verb or a *tla-/te-* derivative (*tlacualli* for *cualli*, *quicohua* for *coatl*), a root with no dictionary entry, a bare or very short root, a spelling owned by another entry, or a word that merely contains the term (*mixcoatl*, *cihuapilli*).
 
-`TermIndex.search` is the only search: normalize (`parse`: question → word, `fold`) → loose key, then analyzer root → order (`terms.SCORES`; the detected language first). Dictionary (`/api/terms`), Archive (`/api/research`: a resolved word returns the passages of all its certain spellings, otherwise BM25 for phrases), Ask (`/api/ask`, `terms` field) and Documentary lookup (`/api/documentary`: the group's cited records first, then the measured ranking, unchanged) all call it; the browser draws the same block (`platform_web/terms.js`). Measured by `python -m nahuatl_local.term_evaluation` (`evaluation/term-groups-v1.json`, `reports/TERMINOS_EVALUACION.md`).
+`TermIndex.search` is the only search: normalize (`parse`: question → word, `fold`) → loose key, then analyzer root → order (`terms.SCORES`; the detected language first). Dictionary (`/api/terms`), Archive (`/api/research`: a resolved word returns the passages of all its certain spellings, otherwise BM25 for phrases), Ask (`/api/ask`, `terms` field) and Ask's cards (`/api/ask/cards`: literal IDs in the query, then the cited records of the resolved group, or of dictionary spellings mentioned in a longer question; `cards.Cards` has no ranking of its own since the Consultar fichas view and its `DocumentaryIndex` were retired on 16 Oct 2026) all call it; the browser draws the same block (`platform_web/terms.js`). Measured by `make eval` (`evaluation/term-groups-v1.json`; section in `reports/EVALUACION.md`).

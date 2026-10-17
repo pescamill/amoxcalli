@@ -212,6 +212,11 @@ class TermIndex:
             return 'es'  # acento español sin testimonio náhuatl
         return 'es' if es_n > max(3, 2 * nah_n) else 'nah'
 
+    def spelling_owner_of(self, word):
+        """Grupos del diccionario con esta grafía exacta (clave laxa), sin raíz ni español."""
+        self._build()
+        return list(self.spelling_owner.get(loose_key(word), []))
+
     def variants(self, word):
         """Grafías del archivo con la misma clave laxa, por variedad."""
         self._build()
@@ -500,7 +505,7 @@ class TermIndex:
         return self._archive_id(key) if self.postings.get(key) else None
 
     def resolve(self, query):
-        """Grupo principal de una consulta (o None): lo que Archivo y Consultar fichas presentan."""
+        """Grupo principal de una consulta (o None): lo que Archivo y las fichas de Preguntar presentan."""
         try:
             result = self.search(query, limit=1)
         except ValueError:

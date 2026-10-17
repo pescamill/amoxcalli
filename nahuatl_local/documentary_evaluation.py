@@ -18,10 +18,10 @@ from .text import fold, squash
 RECIPE = 'documentary-fields-v1'
 BUNDLES = lexicon.BUNDLE_PATHS
 FIXED = (lexicon.RELEASES, 'corpus/learning-v1.json',
-         'corpus/pictography/catalog.json', axolotl.AXOLOTL,
-         'configs/sources.json', 'nahuatl_local/documentary_evaluation.py', 'docs/EVALUACION_DOCUMENTAL.md')
-# ``passages``, ``lexicon`` y ``text`` no se fijan por hash aquí: ``validate`` reconstruye la
-# batería completa con ellos, de modo que cualquier cambio de comportamiento la invalida.
+         'corpus/pictography/catalog.json', axolotl.AXOLOTL, 'configs/sources.json')
+# Solo datos: el código (este módulo, ``passages``, ``lexicon``, ``text``) y la documentación no se
+# fijan por hash. ``validate`` reconstruye la batería completa, de modo que cualquier cambio de
+# comportamiento la invalida; editar la documentación no.
 UNCERTAINTY = 'Referencia literal del índice local; cotejo primario y juicio lingüístico pendientes.'
 
 
@@ -442,6 +442,8 @@ def load_development(path=None, modality=None, root=ROOT):
 
 
 def main(argv=None):
+    """Reconstruye la batería (tras cambiar datos o receta) o la valida con --check. La medición
+    sobre la batería es parte del arnés único: ``make eval``."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--check', action='store_true', help='Validar sin escribir.')
     args = parser.parse_args(argv)
@@ -451,7 +453,6 @@ def main(argv=None):
     if not report['valid']:
         raise ValueError(', '.join(report['errors']))
     if not args.check:
-        output = public_path(ROOT, 'reports/documentary-evaluation-validation-v1.json')
         if path.exists() and path.read_text(encoding='utf-8') != encoded(battery):
             old = path.read_bytes()
             backup = public_path(ROOT, 'reports/documentary-evaluation-backups/' + hashlib.sha256(old).hexdigest() + '.json')
@@ -460,8 +461,6 @@ def main(argv=None):
                 raise ValueError('Respaldo previo inconsistente; no se sobrescribe.')
             backup.write_bytes(old)
         path.write_text(encoded(battery), encoding='utf-8')
-        output = public_path(ROOT, 'reports/documentary-evaluation-validation-v1.json')
-        output.write_text(encoded(report), encoding='utf-8')
     print(encoded({k: report[k] for k in ('valid', 'counts', 'task_counts', 'overlaps', 'evaluation_sha256')}), end='')
 
 

@@ -25,7 +25,7 @@ Sin raíz con apoyo suficiente, una palabra española muestra pasajes cuya tradu
 .venv/bin/python -m nahuatl_local.evidence_evaluation               # informe completo
 ```
 
-[Informe vigente](../reports/EVIDENCIA_EVALUACION.md); [primera corrida con la prueba](../reports/evidence-evaluation-first-test-run.md). Conjunto: `evaluation/evidence-questions-v1.json`, 17 consultas de desarrollo y 32 de prueba escritas después. Línea base: la búsqueda literal anterior (forma escrita o definición; pasajes con la palabra completa).
+[Informe vigente](../reports/EVALUACION.md#evaluación-de-la-consulta-con-evidencia) (`make eval`); [primera corrida con la prueba](../reports/evidence-evaluation-first-test-run.md). Conjunto: `evaluation/evidence-questions-v1.json`, 17 consultas de desarrollo y 32 de prueba escritas después. Línea base: la búsqueda literal anterior (forma escrita o definición; pasajes con la palabra completa).
 
 En prueba, la entrada esperada aparece primero en 92 % de las consultas (base 42 %), siempre hay al menos un pasaje pertinente (base 76 %) y la precisión de pasajes es 94 % (base 84 %). Las grafías modernas pasan de 0 % a 100 % de entradas correctas. Fallan *atlan* y *michime* (el analizador no los enlaza a *atl* y *michin*) y *pájaro* (asociación débil). *teléfono* y *automóvil* estaban etiquetadas como abstención, pero el archivo sí las traduce en pasajes de Morelos; las etiquetas se conservaron con una nota.
 

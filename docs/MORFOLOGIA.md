@@ -1,6 +1,6 @@
 # Analizar cualquier palabra · morfología, concordancia por raíz y glosa interlineal
 
-Actualización: 14 de octubre de 2026. [Arquitectura (EN)](ARCHITECTURE.md) · [Evaluación](../reports/MORFOLOGIA_EVALUACION.md)
+Actualización: 14 de octubre de 2026. [Arquitectura (EN)](ARCHITECTURE.md) · [Evaluación](../reports/EVALUACION.md#evaluación-del-analizador-morfológico)
 
 ## Para qué sirve
 
@@ -29,7 +29,7 @@ Las pistas «≈» son asociaciones estadísticas (IBM‑1) entre una raíz y la
 2. Una **gramática de posiciones** genera candidatos con prefijos (poseedor; antecesivo, sujeto, direccional, objeto, reflexivo) y sufijos (absolutivo, poseído, plural, relacionales, derivación, tiempo) y restricciones de alomorfía.
 3. La **puntuación** combina evidencia del diccionario (una raíz apoyada solo en entradas de Wiktionary, sin fuente lexicográfica revisada, pesa menos: `SECONDARY_PENALTY`) con concordancia de categoría, frecuencia de la raíz en el corpus (EM duro sobre 26 mil formas), preferencia nominal/verbal aprendida y un coste por afijo.
 
-Detalles, cifras y comparación con líneas base: [ARCHITECTURE.md](ARCHITECTURE.md) y [la evaluación](../reports/MORFOLOGIA_EVALUACION.md).
+Detalles, cifras y comparación con líneas base: [ARCHITECTURE.md](ARCHITECTURE.md) y [la evaluación](../reports/EVALUACION.md#evaluación-del-analizador-morfológico) (`make eval`).
 
 ## Uso
 

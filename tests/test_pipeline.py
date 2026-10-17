@@ -4,18 +4,8 @@ from unittest.mock import patch
 from nahuatl_local import data as data_module
 from nahuatl_local.data import prepare,load_rows,canonical,default_corpus_path
 from nahuatl_local.nahuatl_orthography import storage,comparison,ORTHOGRAPHY_VERSION
-from nahuatl_local.runtime import encode_pair
 from nahuatl_local.retrieval import Index
-class FakeTokenizer:
-    eos_token_id=9
-    def apply_chat_template(self,*args,**kwargs):return [1,2,3]
-    def __call__(self,*args,**kwargs):return {'input_ids':[4,5]}
 class PipelineTests(unittest.TestCase):
-    def test_label_mask_and_no_truncation(self):
-        row={'es':'casa bonita','nah':'test target'}
-        encoded=encode_pair(FakeTokenizer(),row,6)
-        self.assertEqual(encoded['labels'],[-100,-100,-100,4,5,9])
-        self.assertIsNone(encode_pair(FakeTokenizer(),row,5))
     def test_split_and_variant_isolation(self):
         with tempfile.TemporaryDirectory() as folder:
             root=Path(folder);raw=root/'raw.csv'

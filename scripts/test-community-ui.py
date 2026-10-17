@@ -12,7 +12,7 @@ from nahuatl_local.corpus import CorpusStore
 from nahuatl_local.platform import make_server
 
 with tempfile.TemporaryDirectory() as directory:
-    httpd = make_server(CorpusStore(Path(directory) / 'qa.sqlite3'), port=0, model_enabled=False)
+    httpd = make_server(CorpusStore(Path(directory) / 'qa.sqlite3'), port=0)
     thread = threading.Thread(target=httpd.serve_forever, daemon=True)
     thread.start()
     try:

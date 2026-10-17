@@ -11,7 +11,7 @@ Resumen único de los registros de ciclo que se retiraron del árbol el 15 de oc
 
 ## Cronología
 
-**16–23 sep · Corpus y modelo.** Fuentes y decisiones de uso ([FUENTES.md](FUENTES.md)). Axolotl (16.111 pares) vía Comunidad Elotl; preparación clásica separada por obra. Qwen3-0.6B + LoRA, 400 pasos en CPU: NLL de validación 5,40 → 3,79. En 20 frases de prueba, chrF++ 15,4 (base), 16,0 (adaptador), 22,4 (adaptador + RAG) frente a 27,2 de devolver el pasaje más cercano: el generador no es un traductor ([MODEL_CARD.md](../MODEL_CARD.md)).
+**16–23 sep · Corpus y modelo.** Fuentes y decisiones de uso ([FUENTES.md](FUENTES.md)). Axolotl (16.111 pares) vía Comunidad Elotl; preparación clásica separada por obra. Qwen3-0.6B + LoRA, 400 pasos en CPU: NLL de validación 5,40 → 3,79. En 20 frases de prueba, chrF++ 15,4 (base), 16,0 (adaptador), 22,4 (adaptador + RAG) frente a 27,2 de devolver el pasaje más cercano: el generador no es un traductor ([MODEL_CARD.md](../experiments/llm/MODEL_CARD.md)).
 
 **27–29 sep · Una plataforma.** Voces (texto y voz con permisos) se integra en Amoxcalli; catálogo de acepciones, formas, textos, glifos y fuentes en SQLite con migraciones aditivas. Laboratorio visible con pares de entrenamiento, curva y métricas históricas. Continuación de 250 pasos (`continued-unseen`): chrF++ 22,6 → 28,0 en 12 frases de validación. Auditoría de variantes: 2.157 registros sin variante, 1.687 propuestas `nci` sin aplicar. Importación determinista de 499 entradas de Molina vía GDN (sin LLM).
 
@@ -36,7 +36,7 @@ Resumen único de los registros de ciclo que se retiraron del árbol el 15 de oc
 | `docs/PROGRESO_INTERNO.md` (9.600 palabras) | Registro por fecha | Este resumen; el plan en [ROADMAP.md](ROADMAP.md) |
 | `docs/ITERACIONES.md`, `TRABAJO_AUTONOMO.md`, `LEARNING_ITERATION_PLAN.md`, `DIRECCION_APRENDIZAJE.md` | Método de iteración autónoma y planes anteriores | [ROADMAP.md](ROADMAP.md) · [PROPOSITO.md](PROPOSITO.md) |
 | `docs/REVISION_LECTURA.md`, `ESTADO_REVISION_LECTURA.md`, `CANDIDATOS_CONEXIONES_LEXICAS.md`, `AUDITORIA_VARIANTES.md` | Guías de herramientas retiradas | Historial de git |
-| `docs/AUTOTRAIN.md`, `MEJORAR.md`, `ESTADO_MODELO.md`, `PRUEBA_VISUAL_LOCAL.md` | Laboratorio LLM | [MODEL_CARD.md](../MODEL_CARD.md) · [LABORATORIO.md](LABORATORIO.md) · [ROADMAP.md](ROADMAP.md) |
+| `docs/AUTOTRAIN.md`, `MEJORAR.md`, `ESTADO_MODELO.md`, `PRUEBA_VISUAL_LOCAL.md` | Laboratorio LLM | [MODEL_CARD.md](../experiments/llm/MODEL_CARD.md) · [LABORATORIO.md](../experiments/llm/LABORATORIO.md) · [ROADMAP.md](ROADMAP.md) |
 | `reports/iterations/`, `reading-review*/`, `lexical-link-review/`, `learning-audit*/`, `variant-audit-*/`, `tests-*.txt`, `platform-ui-*.txt`, informes `*_2026-*.md` | Evidencia de cada ciclo | Historial de git (`git show 86c217f:reports/...`) |
-| `reports/RESULTADOS.md` | Tabla de generación del 19 sep | [MODEL_CARD.md](../MODEL_CARD.md) |
+| `reports/RESULTADOS.md` | Tabla de generación del 19 sep | [MODEL_CARD.md](../experiments/llm/MODEL_CARD.md) |
 | `reports/documentary-laboratory-display-v1.json` | Evidencia de pantalla con hashes de la interfaz | Suite DOM (`make test-ui`) |

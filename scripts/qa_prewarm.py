@@ -7,8 +7,8 @@ porque solo importa construir los índices.
 import urllib.error
 import urllib.request
 
-PATHS = ('/api/corpus', '/api/learning', '/api/laboratory', '/api/units', '/api/word?w=calli', '/api/ask?q=calli',
-         '/api/terms?q=calli', '/api/documentary?query=calli', '/api/research?query=chachalaca&variant=nci')
+PATHS = ('/api/corpus', '/api/learning', '/api/units', '/api/word?w=calli', '/api/ask?q=calli',
+         '/api/terms?q=calli', '/api/ask/cards?q=calli', '/api/research?query=chachalaca&variant=nci')
 
 
 def prewarm(origin):

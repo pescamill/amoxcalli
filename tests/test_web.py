@@ -47,7 +47,7 @@ class ServerTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.temp = tempfile.TemporaryDirectory()
-        cls.httpd = make_server(CorpusStore(Path(cls.temp.name) / 'web.sqlite3'), port=0, model_enabled=False)
+        cls.httpd = make_server(CorpusStore(Path(cls.temp.name) / 'web.sqlite3'), port=0)
         cls.thread = threading.Thread(target=cls.httpd.serve_forever, daemon=True)
         cls.thread.start()
         cls.port = cls.httpd.server_address[1]
@@ -97,9 +97,9 @@ class ServerTests(unittest.TestCase):
     def test_errors_are_json_with_security_headers(self):
         origin = f'http://127.0.0.1:{self.port}'
         cases = [('GET', '/api/nothing', {}, 404), ('GET', '/project/../../data/community/voces.sqlite3', {}, 404),
-                 ('POST', '/api/proposals/x', {'Origin': origin}, 405), ('GET', '/api/compose', {}, 405),
-                 ('POST', '/api/compose', {'Origin': 'https://attacker.example'}, 403),
-                 ('POST', '/api/compose', {}, 403), ('GET', '/api/bootstrap', {'Host': 'evil.example'}, 403),
+                 ('POST', '/api/proposals/x', {'Origin': origin}, 405), ('GET', '/api/compose', {}, 404),
+                 ('POST', '/api/proposals', {'Origin': 'https://attacker.example'}, 403),
+                 ('POST', '/api/proposals', {}, 403), ('GET', '/api/bootstrap', {'Host': 'evil.example'}, 403),
                  ('GET', '/api/mine', {}, 401), ('GET', '/api/explain?q=agua&model=otro', {}, 400)]
         for method, path, headers, status in cases:
             with self.subTest(method=method, path=path):

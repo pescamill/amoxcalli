@@ -1,23 +1,15 @@
-"""Amoxcalli: la aplicación local (corpus, aprendizaje, investigación, laboratorio y Voces) en un solo servidor."""
+"""Amoxcalli: la aplicación local (corpus, aprendizaje, investigación y Voces) en un solo servidor."""
 import argparse
-import copy
 import hashlib
 import json
 import threading
 from pathlib import Path
 from .community import ASSETS as COMMUNITY_WEB, Problem, ROOT, DEFAULT_DB, text, routes as community_routes
 from .corpus import CorpusStore
-from .text import fold
-from .review import request_bundle, local_review
 from .research import Archive
 from .learning import Learning
-from .laboratory import snapshot as laboratory_snapshot, REPORTS as LAB_REPORTS
-from .documentary_laboratory import public_download as documentary_laboratory_download
-from .visual_preparation import review as visual_preparation_review
-from .training_data import TrainingData, PairProposals
-from .model_status import status as model_status, DEFAULT_ADAPTER
 from .pictography import public_catalog
-from .documentary_retrieval import DocumentaryIndex, PublicSources, digest as documentary_digest, public_path
+from .cards import Cards, digest as records_digest, public_path
 from .stems import WordStudy
 from .evidence import Evidence
 from .terms import TermIndex
@@ -35,86 +27,21 @@ STATIC = Static(WEB, {'/': WEB/'index.html', '/corpus.js': WEB/'app.js',
 INSTALL_HEAD = '<meta name="theme-color" content="#812d37"><meta name="apple-mobile-web-app-capable" content="yes">\n<link rel="manifest" href="/manifest.webmanifest"><link rel="apple-touch-icon" href="/icon-192.png"><script src="/install.js" defer></script>\n'
 
 
-def rule_query(store, value):
-    """Porta las reglas acotadas de Amoxcalli; ninguna salida es validación."""
-    records=store.public_records()
-    q=fold(value.strip()).rstrip('.!?')
-    q=q.removeprefix('yo ')
-
-    def noun(phrase):
-        for article in ('el ','la ','un ','una ','the ','a ','an '):
-            if phrase.startswith(article):
-                phrase=phrase[len(article):];break
-        for r in records.values():
-            if r['kind']=='sense' and r['pos']=='noun' and phrase in [fold(x) for x in [r['label'],*r.get('aliases',[])]]:
-                if phrase in ('flores','arboles','flowers','trees'):
-                    continue
-                # Usa solo el lema histórico heredado por la regla original.
-                f=next((f for f in records.values() if f['kind']=='form' and f.get('sense_id')==r['id'] and f['id'].startswith('lex-')),None)
-                if f:return f
-        return None
-
-    segments=[];status='insufficient';method='lookup'
-    f=noun(q)
-    if f:
-        segments=[dict(text=f['written'],record_ids=[f['id']])];status='lexical'
-    else:
-        for prefix in ('veo ','miro ','i see ','i look at '):
-            if q.startswith(prefix) and (f:=noun(q[len(prefix):])):
-                segments=[dict(text='Niquitta ',record_ids=['grammar-niquitta']),dict(text=f['written']+'.',record_ids=[f['id']])]
-                status='proposal';method='rules';break
-        if not segments:
-            for conj in (' y ',' and '):
-                parts=q.split(conj)
-                if len(parts)==2 and (a:=noun(parts[0])) and (b:=noun(parts[1])):
-                    segments=[dict(text=a['written'],record_ids=[a['id']]),dict(text=' ihuan ',record_ids=['lex-ihuan']),dict(text=b['written'],record_ids=[b['id']])]
-                    status='proposal';method='rules';break
-    return dict(status=status,method=method,segments=segments,
-                note='Palabra asociada a una acepción; revisar el contexto.' if status=='lexical' else
-                'Composición nueva por una regla limitada; no es una cita histórica ni una traducción validada.' if status=='proposal' else
-                'Las reglas disponibles no cubren esta expresión. Consulta palabras o textos por separado.')
-
-
-def term_cards(index,group,passage_ids=()):
-    """Fichas documentales (campos citados) de los registros de un grupo de término, sin volver a clasificar."""
-    # Una acepción ya viaja con su forma en la ficha de la forma; solo se añade si no tiene forma.
-    keys=[('sense',s['id']) for s in group['senses'] if not any(f['sense_id']==s['id'] for f in group['forms'])]
-    keys+=[('form',f['id']) for f in group['forms']]+[('glyph',g['id']) for g in group['glyphs'] if g['source']=='dictionary']
-    keys+=[('elements' if g['source']=='tlachia_element' else 'occurrences',g['id']) for g in group['glyphs'] if g['source']!='dictionary']
-    keys+=[('passage',rid) for rid in passage_ids]
-    cards=[]
-    for kind,rid in dict.fromkeys(keys):
-        entry=index.entries.get(kind+':'+rid)
-        if not entry:continue
-        card=copy.deepcopy(entry);card.update(score=None,match=['term_group'])
-        if kind=='form':
-            form=card['records'][0]
-            card['comparison']=dict(written=form['written'],catalog_normalized=form.get('catalog_normalized'),
-                equal_literal=form['written']==form.get('catalog_normalized') if 'catalog_normalized' in form else None,sense_id=form['sense_id'])
-        cards.append(card)
-    return cards
-
-
-def make_app(store, model_enabled=None, adapter=None, word_study=None, explain_writer=None):
-    """Tabla de rutas de la aplicación: corpus, investigación, laboratorio y Voces."""
+def make_app(store, word_study=None, explain_writer=None):
+    """Tabla de rutas de la aplicación: corpus, investigación y Voces."""
     router=Router()
     community_routes(router,store)
     archive=Archive()
     # Análisis morfológico, concordancia por raíz y pistas de glosa (sin modelo).
     word_study=word_study or WordStudy(records_fn=store.public_records)
-    # Una sola búsqueda de términos para Diccionario, Archivo, Preguntar y Consultar fichas.
+    # Una sola búsqueda de términos para Diccionario, Archivo y Preguntar (también elige sus fichas).
     terms=TermIndex(word_study,records_fn=store.public_records)
     evidence_index=Evidence(word_study,terms=terms)
     learning=Learning(archive)
     # Unidades de gramática: borradores generados, validados contra el análisis y con su estado en la cola editorial.
     units=Units(terms,store.public_records)
-    training_data=TrainingData()
-    pair_proposals=PairProposals(store,training_data)
-    adapter=adapter or DEFAULT_ADAPTER
-    capability=model_status(adapter,model_enabled)
-    model_lock=threading.Lock()
-    model=dict(loaded=None)
-    documentary=dict(cache=None,lock=threading.Lock())
+    # Fichas de Preguntar (campos citados con su procedencia); se reconstruyen si cambian registros o fuentes.
+    cards_cache=dict(value=None,lock=threading.Lock())
 
     def contribute_page(request):
         # Misma sesión, mismos datos y mismos permisos que el corpus.
@@ -122,30 +49,22 @@ def make_app(store, model_enabled=None, adapter=None, word_study=None, explain_w
         return request.reply(page.replace('</head>',INSTALL_HEAD+'<link rel="stylesheet" href="/amoxcalli.css"></head>').encode(),mime='text/html; charset=utf-8')
 
     def corpus(request):
-        data=store.catalog_data();data.update(model_enabled=capability['ready'],model=capability,archive=archive.summary)
+        data=store.catalog_data();data.update(archive=archive.summary)
         return request.reply(data)
 
-    def documentary_search(request):
-        value=text(request.arg('query'),'Consulta',1000)
-        with documentary['lock']:
-            records=store.public_records();signature=documentary_digest(records);cache=documentary['cache']
+    def cards(request):
+        """Fichas de una consulta de Preguntar: IDs que contiene y registros de su grupo de término."""
+        value=text(request.arg('q'),'Consulta',1000)
+        with cards_cache['lock']:
+            records=store.public_records();signature=records_digest(records);cache=cards_cache['value']
             stale=cache is None or cache['signature']!=signature
             if not stale:
                 stale=any(hashlib.sha256(public_path(ROOT,p).read_bytes()).hexdigest()!=h for p,h in cache['index'].sources.hashes.items())
             if stale:
-                cache=documentary['cache']=dict(signature=signature,index=DocumentaryIndex(records))
+                cache=cards_cache['value']=dict(signature=signature,index=Cards(records))
             index=cache['index']
-        response=index.search(value)
-        resolved=terms.resolve(value)
-        if resolved:
-            # Fichas del grupo de término primero (las mismas que muestran las otras vistas), luego el resto.
-            cards=term_cards(index,resolved[0],terms.passage_ids(resolved[0]['id'],first=resolved[1])[:5]);ids={c['kind']+':'+c['id'] for c in cards}
-            rest=[hit for hit in response['results'] if hit['kind']+':'+hit['id'] not in ids]
-            response.update(results=cards+rest,total=response['total']+len(cards)-(len(response['results'])-len(rest)),
-                            abstained=False,status='matches',absence=None,
-                            source_ids=sorted({s for hit in cards+rest for s in hit['source_ids']}))
-        response['term']=resolved[0] if resolved else None
-        return request.reply(response)
+        try:return request.reply(index.lookup(value,terms))
+        except ValueError as error:raise Problem(str(error)) from None
 
     def terms_search(request):
         try:return request.reply(terms.search(request.arg('q'),limit=int(request.arg('limit',5))))
@@ -178,25 +97,6 @@ def make_app(store, model_enabled=None, adapter=None, word_study=None, explain_w
         try:return request.reply(dict(word_study.gloss(source),archive_id=rid or None))
         except ValueError as error:raise Problem(str(error)) from None
 
-    def visual_preparation(request):
-        if request.query_string:raise Problem('El visor admite solo desarrollo, sin parámetros alternativos.')
-        return request.reply(visual_preparation_review())
-
-    def laboratory_context(request):
-        value=text(request.arg('query'),'Consulta',1000,True)
-        return request.reply(dict(passages=archive.context(value)))
-
-    def laboratory_report(request):
-        name=request.tail
-        if name in ('documentary-comparison','documentary-retrieval'):
-            return request.reply(documentary_laboratory_download(name))
-        report=LAB_REPORTS.get(name)
-        if not report or not (ROOT/report).is_file():raise Problem('Informe no disponible.',404)
-        return request.reply(json.loads((ROOT/report).read_text(encoding='utf-8')))
-
-    def training_search(request):
-        return request.reply(training_data.search(**{k:request.arg(k,v) for k,v in [('dataset','seen'),('query',''),('document',''),('offset',0),('limit',20)]}))
-
     def research(request):
         return request.reply(archive.search(**{k:request.arg(k) for k in ('query','variant','document','period')},offset=request.arg('offset',0),limit=request.arg('limit',20),terms=terms))
 
@@ -210,55 +110,12 @@ def make_app(store, model_enabled=None, adapter=None, word_study=None, explain_w
         store.withdraw_proposal(request.get_person(True),request.tail)
         return request.reply({'ok':True})
 
-    def withdraw_pair(request):
-        pair_proposals.withdraw(request.get_person(True),request.tail);return request.reply(dict(ok=True))
-
-    def compose(request):
-        body=request.body();value=text(body.get('text',''),'Consulta',1000,True)
-        result=rule_query(store,value)
-        retrieved=[]
-        if body.get('model',capability['ready']) is True:
-            if not capability['ready']:
-                raise Problem('Prepara el modelo con bash scripts/amoxcalli.sh setup en el servidor. No requiere una API.',503)
-            if not model_lock.acquire(blocking=False):
-                raise Problem('El modelo está ocupado. Inténtalo más tarde.',429)
-            try:
-                from .runtime import load_model,translate
-                if model['loaded'] is None:
-                    import torch
-                    torch.set_num_threads(4)
-                    model['loaded']=load_model(ROOT/'models/base',adapter,'auto')
-                retrieved=archive.context(value)
-                context_in_prompt=body.get('rag',False) is True
-                output=translate(*model['loaded'],value,context=retrieved if context_in_prompt else None,max_new_tokens=128)
-                result=dict(status='proposal',method='local_model',segments=[dict(text=output['text'],record_ids=[])],
-                            note='Borrador pendiente de revisión lingüística. Los pasajes recuperados aportan contexto, no certifican la traducción.',model=capability['name'],seconds=output['seconds'],truncated=output['truncated'],context_in_prompt=context_in_prompt)
-            except Exception:
-                raise Problem('No se pudo ejecutar el modelo local. Revisa sus dependencias y pesos; la consulta del corpus funciona.',503) from None
-            finally:model_lock.release()
-        if result['method']=='local_model':
-            words=fold(' '.join(s['text'] for s in result['segments'])).strip('. ').split()
-            repeated=len(words)>=4 and len(words)%2==0 and words[:len(words)//2]==words[len(words)//2:]
-            result['quality_issues']=(['repeated_phrase'] if repeated else [])+(['length_limit'] if result.get('truncated') else [])
-            if result['quality_issues']:result['note']+=' Se detectó repetición o un límite de longitud; la salida requiere corrección.'
-        cited_ids={i for s in result['segments'] for i in s['record_ids']}
-        evidence=[r for r in store.public_records().values() if r['id'] in cited_ids]
-        draft=dict(input=value,text=''.join(s['text'] for s in result['segments']),related_passages=evidence+retrieved)
-        result['context_passages']=retrieved
-        result.update(review_request=request_bundle(draft),review=local_review(draft))
-        return request.reply(result)
-
     for path,function in [
             ('/aportar',contribute_page),('/aportar/',contribute_page),
-            ('/api/corpus',corpus),('/api/documentary',documentary_search),
+            ('/api/corpus',corpus),('/api/ask/cards',cards),
             ('/api/pictography',lambda r:r.reply(public_catalog(store.public_records()))),
             ('/api/word',word),('/api/ask',ask),('/api/explain',explanation),('/api/gloss',gloss),
-            ('/api/system',lambda r:r.reply(dict(model=capability,archive=archive.summary))),
-            ('/api/laboratory',lambda r:r.reply(laboratory_snapshot(capability,adapter))),
-            ('/api/laboratory/visual-preparation',visual_preparation),('/api/laboratory/context',laboratory_context),
-            ('/api/training-data',training_search),
-            ('/api/training-pairs',lambda r:r.reply(pair_proposals.mine(r.get_person(True)))),
-            ('/api/training-pairs/export',lambda r:r.reply(pair_proposals.export(r.get_person(True)).encode(),mime='text/csv; charset=utf-8')),
+            ('/api/system',lambda r:r.reply(dict(archive=archive.summary))),
             ('/api/learning',lambda r:r.reply(learning.catalog(store.public_records()))),
             ('/api/units',lambda r:r.reply(units.catalog())),('/api/units/examples',unit_examples),
             ('/api/research',research),
@@ -267,24 +124,20 @@ def make_app(store, model_enabled=None, adapter=None, word_study=None, explain_w
             ('/api/corpus/export',lambda r:r.reply(store.export_data())),
             ('/api/proposals',lambda r:r.reply(store.proposals(r.get_person(True))))]:
         router.add('GET',path,function)
-    router.add('GET','/api/laboratory/reports/',laboratory_report,prefix=True)
     router.add('GET','/api/research/',lambda r:r.reply(archive.get(r.tail)),prefix=True)
     router.add('POST','/api/proposals',lambda r:r.reply(store.propose(r.get_person(True),r.body()),201))
-    router.add('POST','/api/training-pairs',lambda r:r.reply(pair_proposals.propose(r.get_person(True),r.body()),201))
-    router.add('POST','/api/compose',compose)
     router.add('DELETE','/api/proposals/',withdraw_proposal,prefix=True)
-    router.add('DELETE','/api/training-pairs/',withdraw_pair,prefix=True)
     return handler(store,router,STATIC)
 
 
-def make_server(store,host='127.0.0.1',port=8766,public_origin=None,model_enabled=None,adapter=None,prewarm=False,explain_model=None):
+def make_server(store,host='127.0.0.1',port=8766,public_origin=None,prewarm=False,explain_model=None):
     word_study=WordStudy(records_fn=store.public_records)
     if prewarm:
         # El primer arranque estima frecuencias y pistas (~1 min); después se usa data/derived/.
         threading.Thread(target=word_study.warm,daemon=True,name='word-study-warmup').start()
     # Claude solo redacta si se pide al arrancar: la explicación envía la pregunta y los pasajes citados a Anthropic.
     writer=ClaudeWriter() if explain_model=='claude' else None
-    return Server((host,port),make_app(store,model_enabled,adapter,word_study,writer),public_origin)
+    return Server((host,port),make_app(store,word_study,writer),public_origin)
 
 
 def main():
@@ -294,9 +147,9 @@ def main():
     serve.add_argument('--host',default='127.0.0.1',help='Interfaz de escucha (por omisión solo este equipo).')
     serve.add_argument('--port',type=int,default=8766)
     serve.add_argument('--public-origin',help='Origen HTTPS de un proxy (https://dominio); se acepta como Host y como Origin de escritura.')
-    serve.add_argument('--enable-model',action='store_true',default=None,help='Comportamiento por omisión: ofrece el modelo local si base, adaptador y dependencias están instalados.')
-    serve.add_argument('--disable-model',action='store_true',help='No ofrece generación con el modelo local aunque esté instalado.')
-    serve.add_argument('--adapter',default=str(ROOT/'outputs/continued-unseen/run/best'),help='Adaptador LoRA del modelo local.')
+    # El modelo local se archivó (experiments/llm/); estas opciones se aceptan y no hacen nada, para no romper arranques guardados.
+    for retired in ('--enable-model','--disable-model'):serve.add_argument(retired,action='store_true',help=argparse.SUPPRESS)
+    serve.add_argument('--adapter',help=argparse.SUPPRESS)
     serve.add_argument('--explain-model',choices=['claude'],help='Activa explicaciones redactadas por Claude (envía la pregunta y los pasajes citados a la API de Anthropic).')
     imp=sub.add_parser('import');imp.add_argument('path');imp.add_argument('--reviewer',required=True);imp.add_argument('--reason',required=True)
     sub.add_parser('queue')
@@ -306,7 +159,7 @@ def main():
     try:
         store=CorpusStore(args.db)
         if args.command=='serve':
-            httpd=make_server(store,args.host,args.port,args.public_origin,False if args.disable_model else args.enable_model,args.adapter,prewarm=True,explain_model=args.explain_model)
+            httpd=make_server(store,args.host,args.port,args.public_origin,prewarm=True,explain_model=args.explain_model)
             print(f'Amoxcalli · http://127.0.0.1:{httpd.server_address[1]} · Voces en /aportar',flush=True)
             try:httpd.serve_forever()
             except KeyboardInterrupt:pass
