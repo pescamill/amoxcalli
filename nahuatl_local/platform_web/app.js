@@ -9,7 +9,19 @@ const statuses={inherited:'Referencia heredada · por cotejar',catalog_checked:'
 const sourceTypes={primary:'Fuente primaria',edition:'Edición',research:'Investigación',catalog:'Catálogo',community:'Testimonio comunitario'};
 const periods={historical:'Histórico',modern:'Contemporáneo',unknown:'Por identificar'};
 const variationNames={historical:'Testimonio histórico',dialectal:'Variación dialectal',orthographic:'Variación ortográfica',unspecified:'Relación por revisar'};
-async function api(url,options={}){const r=await fetch(url,options);const d=await r.json();if(!r.ok)throw Error(d.error||'No se pudo completar la solicitud.');return d;}
+async function api(url,options={}){const slow=preparing.watch(url);try{const r=await fetch(url,options);const d=await r.json();if(!r.ok)throw Error(d.error||'No se pudo completar la solicitud.');return d;}finally{slow&&preparing.done(slow);}}
+// Arranque en frío: si una consulta de análisis tarda, se muestra el avance de /api/system en lugar de una espera muda.
+const preparing={waiting:new Set(),timer:0,poll:0,
+ watch(url){if(!/^\/api\/(word|gloss|ask|research|terms|units|corpus|learning|pictography)\b/.test(url))return null;const t={};this.waiting.add(t);if(!this.timer)this.timer=setTimeout(()=>this.show(),700);return t;},
+ done(t){this.waiting.delete(t);if(!this.waiting.size){clearTimeout(this.timer);clearTimeout(this.poll);this.timer=this.poll=0;if($('preparing'))$('preparing').hidden=true;}},
+ async show(){if(!this.waiting.size)return;const first=$('preparing');if(first&&first.hidden&&!this.poll){first.innerHTML='<strong>Preparando el análisis…</strong><small>Solo la primera vez en esta instalación.</small>';first.hidden=false;}let p;try{p=(await (await fetch('/api/system')).json()).preparation;}catch{}
+  if(!this.waiting.size||!globalThis.document)return;const box=$('preparing');if(!box)return;  // la página pudo cerrarse durante la espera
+  if(p&&!p.ready){const now=p.stages.find(s=>s.state==='building')||p.stages.find(s=>s.state!=='ready');
+   box.innerHTML=`<strong>Preparando el análisis…</strong> <span>${p.done} de ${p.total}${now?' · '+esc(now.label):''}</span><progress max="${p.total}" value="${p.done}"></progress><small>Solo la primera vez en esta instalación.</small>`;box.hidden=false;}
+  else if(p){box.hidden=true;return;}  // ya preparado: la espera era de la consulta, no del arranque
+  this.poll=setTimeout(()=>this.show(),800);}};
+// Respuesta servida antes de que existan las pistas de glosa: se dice, y no se guarda en caché.
+const preparingHintsHTML=d=>d?.preparing?.includes('gloss_hints')?'<p class="meta preparing-hints">Las pistas de las traducciones se están preparando; aparecerán al volver a abrir la palabra.</p>':'';
 function toast(message){$('notice').textContent=message;$('notice').hidden=false;clearTimeout(toast.timer);toast.timer=setTimeout(()=>$('notice').hidden=true,5000);}
 function download(name,value,mime='application/json'){const a=document.createElement('a');const u=URL.createObjectURL(new Blob([typeof value==='string'?value:JSON.stringify(value,null,2)],{type:mime}));a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),1000);}
 function link(url,label){try{const u=new URL(url);if(!['http:','https:'].includes(u.protocol))return '';}catch{return '';}return `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(label)} ↗</a>`;}
@@ -72,6 +84,7 @@ $('export-all').onclick=exportAll;
 // El menú «Más» se cierra al elegir, al pulsar fuera o con Escape.
 document.addEventListener('click',e=>{const more=$('more-menu');if(more.open&&!more.contains(e.target))more.open=false;});
 document.addEventListener('keydown',e=>{const more=$('more-menu');if(e.key==='Escape'&&more.open){more.open=false;more.querySelector('summary').focus();}});
-window.addEventListener('hashchange',render);
+// Hasta que llegan los datos iniciales, un cambio de ruta solo espera: el primer render ya lee la ruta actual.
+window.addEventListener('hashchange',()=>{if(state.booted)render();});
 // Todos los módulos (defer) ya se ejecutaron en DOMContentLoaded.
-document.addEventListener('DOMContentLoaded',()=>reloadData().then(render).catch(e=>{$('loading').textContent='No se pudo abrir el corpus: '+e.message;}));
+document.addEventListener('DOMContentLoaded',()=>reloadData().then(()=>{state.booted=true;return render();}).catch(e=>{$('loading').textContent='No se pudo abrir el corpus: '+e.message;}));

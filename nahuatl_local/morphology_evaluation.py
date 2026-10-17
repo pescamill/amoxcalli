@@ -27,6 +27,8 @@ from .stems import (ROOT, load_records, load_default, StemConcordance, GlossHint
 from .text import es_key, fold
 
 GOLD = ROOT / 'evaluation' / 'morphology-gold-v1.json'
+# v2: dev = todo v1 + familias de error conocidas; test = 91 formas nuevas, ciegas y congeladas (sha256).
+GOLD_V2 = ROOT / 'evaluation' / 'morphology-gold-v2.json'
 
 
 def _seg(a):
@@ -67,6 +69,43 @@ def gold_eval(analyzers, split):
                                     top3=round(sum(r['in_top3'] for r in rs) / len(rs), 3))
         out[name] = dict(n=n, top1=round(top1 / n, 3), top3=round(top3 / n, 3), stem_top1=round(stem1 / n, 3),
                          by_split=by_split, errors=[r for r in rows if not r['correct']])
+    return out
+
+
+def gold_v2_eval(analyzer):
+    """Prueba v2: segmentación exacta y, para partículas y nombres, también la clase del análisis."""
+    from . import morphology
+    items = json.loads(GOLD_V2.read_text(encoding='utf-8'))['items']
+
+    def score(item):
+        got = analyzer.analyze(item['word'], limit=3, sentence_initial=item.get('sentence_initial'))
+        best = got[0] if got else None
+        seg = best['segmentation'] if best else ''
+        kind = item.get('kind', 'word')
+        ok = seg.casefold() == item['segmentation'].casefold() and (
+            kind == 'word' or (best and best['class_'] == kind))
+        return ok, seg, best['basis'] if best else None
+
+    out = {}
+    for split in ('dev', 'test'):
+        rows = [i for i in items if i['split'] == split]
+        res = [(i, *score(i)) for i in rows]
+        by_kind = {}
+        for kind in ('word', 'particle', 'name'):
+            ks = [ok for i, ok, _, _ in res if i.get('kind', 'word') == kind]
+            if ks:
+                by_kind[kind] = dict(n=len(ks), top1=round(sum(ks) / len(ks), 3))
+        out[split] = dict(n=len(res), top1=round(sum(ok for _, ok, _, _ in res) / len(res), 3), by_kind=by_kind,
+                          errors=[dict(word=i['word'], got=seg, expected=i['segmentation'], kind=i.get('kind', 'word'), basis=b)
+                                  for i, ok, seg, b in res if not ok])
+    # Nombres sin la lista breve: solo la regla de mayúscula dentro de la frase.
+    saved = dict(morphology.NAMES)
+    morphology.NAMES.clear(); analyzer._cache = {}
+    try:
+        names = [i for i in items if i['split'] == 'test' and i.get('kind') == 'name']
+        out['test_names_rule_only'] = dict(n=len(names), top1=round(sum(score(i)[0] for i in names) / len(names), 3))
+    finally:
+        morphology.NAMES.update(saved); analyzer._cache = {}
     return out
 
 
@@ -242,7 +281,7 @@ def run(split='all', write_sample=False):
     corpus_only = Analyzer({}); corpus_only.stem_counts = full.stem_counts; corpus_only.stem_class = full.stem_class
     gold = gold_eval({'unsegmented_baseline': None, 'rules_only': rules_only, 'rules+dictionary': rules_dict,
                       'rules+corpus_em': corpus_only, 'full (rules+dictionary+corpus_em)': full}, split)
-    report = dict(analyzer=ANALYZER_VERSION, split=split, gold=gold)
+    report = dict(analyzer=ANALYZER_VERSION, split=split, gold=gold, gold_v2=gold_v2_eval(full))
     if split != 'dev':
         report['coverage'] = coverage(full, rows, records)
         report['concordance'] = concordance_recall(full, rows, records, SAMPLE if write_sample else None)
@@ -267,6 +306,20 @@ def markdown(r):
     if full['errors']:
         lines += ['', 'Errores del sistema completo:', '']
         lines += [f"- `{e['word']}` → `{e['got']}` (esperado `{e['expected']}`, {e['split']})" for e in full['errors']]
+    v2 = r.get('gold_v2')
+    if v2:
+        lines += ['', '## 1b. Prueba v2 (`evaluation/morphology-gold-v2.json`)', '',
+                  'dev = todo v1 + familias de error conocidas (se usa para ajustar); test = 91 formas nuevas escritas y congeladas '
+                  'antes de medir (sha256 en `evaluation/morphology-gold-v2.sha256`). Partículas y nombres cuentan solo si además '
+                  'el análisis tiene esa clase.', '',
+                  '| Partición | n | Exacta (top‑1) | Palabras | Partículas | Nombres |', '|---|---:|---:|---:|---:|---:|']
+        for sp in ('dev', 'test'):
+            k = v2[sp]['by_kind']
+            cell = lambda name: f"{k[name]['top1']:.0%} de {k[name]['n']}" if name in k else '—'
+            lines.append(f"| {sp} | {v2[sp]['n']} | {v2[sp]['top1']:.0%} | {cell('word')} | {cell('particle')} | {cell('name')} |")
+        lines += ['', f"Nombres del test solo con la regla de mayúscula (sin la lista breve): {v2['test_names_rule_only']['top1']:.0%} "
+                      f"de {v2['test_names_rule_only']['n']}.", '', 'Errores en test:', '']
+        lines += [f"- `{e['word']}` → `{e['got']}` (esperado `{e['expected']}`, {e['kind']}, base {e['basis']})" for e in v2['test']['errors']] or ['- ninguno']
     if 'coverage' in r:
         c = r['coverage']
         lines += ['', '## 2. Cobertura del diccionario en el corpus clásico', '',

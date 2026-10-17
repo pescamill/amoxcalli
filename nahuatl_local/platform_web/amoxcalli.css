@@ -93,6 +93,9 @@ textarea{resize:vertical}
 .danger-confirm{background:var(--sand);padding:13px;font-size:14px;margin-top:10px}
 .lab-output{margin:22px 0;border:1px solid var(--line);padding:22px}
 .lab-output .candidate{font:27px/1.6 var(--serif)}
+.preparing{position:fixed;bottom:25px;left:50%;transform:translateX(-50%);z-index:19;display:grid;gap:6px;width:min(420px,calc(100vw - 32px));padding:14px 18px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-left:3px solid var(--ochre);font-size:14px}
+.preparing progress{width:100%;height:6px;accent-color:var(--accent)}
+.preparing small{color:var(--muted)}
 .notice{position:fixed;bottom:25px;left:50%;transform:translateX(-50%);color:var(--surface);padding:15px 23px;z-index:20;max-width:90vw;background:var(--accent);border-radius:0;box-shadow:none}
 [hidden]{display:none!important}
 .muted{color:var(--muted)}

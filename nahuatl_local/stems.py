@@ -19,7 +19,7 @@ import math
 import time
 from collections import Counter, defaultdict
 from pathlib import Path
-from threading import Lock
+from threading import Lock, Thread
 
 from .morphology import Analyzer, WORD, PARTICLES, ANALYZER_VERSION, corpus_words, key_of, readable, sentence_initial
 from . import lexicon, passages
@@ -401,6 +401,9 @@ class WordStudy:
             return self._hints
         wait = self.wait_for_hints if wait is None else wait
         if not wait and self._stages['hints']['state'] != 'failed':
+            if self._stages['hints']['state'] == 'pending' and not self._hints_lock.locked():
+                # Nadie las prepara todavía (servidor sin precalentado): se estiman en segundo plano.
+                Thread(target=self.hints, kwargs=dict(wait=True), daemon=True, name='gloss-hints').start()
             return PENDING_HINTS
         analyzer, _ = self.core()
         with self._hints_lock:

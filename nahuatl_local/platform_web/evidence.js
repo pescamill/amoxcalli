@@ -6,7 +6,7 @@
 const askExamples=['nocal','kuali','tlajtoli','¿cómo se dice mujer?','¿Qué significa xochitl?'];
 const askCache=new Map();
 function askEvidence(query){
- if(!askCache.has(query))askCache.set(query,api('/api/ask?'+new URLSearchParams({q:query})).catch(e=>{askCache.delete(query);throw e;}));
+ if(!askCache.has(query))askCache.set(query,api('/api/ask?'+new URLSearchParams({q:query})).then(d=>{if(d.preparing?.length)askCache.delete(query);return d;},e=>{askCache.delete(query);throw e;}));
  return askCache.get(query);
 }
 const cardsCache=new Map();
@@ -62,7 +62,7 @@ function askResultHTML(r){
  else if(r.passages.length)html+='<h2>Pasajes</h2>';
  html+=r.passages.map(askPassageHTML).join('');
  if(r.other_varieties.length)html+=`<h2>En otras variedades</h2><p class="meta">Misma palabra con otra ortografía; el analizador solo cubre el náhuatl clásico.</p>${r.other_varieties.map(askPassageHTML).join('')}`;
- if(r.gloss_hints?.length)html+=`<h2>Pistas de las traducciones</h2><p>${r.gloss_hints.map(h=>`≈ ${esc(h.word)} (${h.support} pasajes)`).join(' · ')}</p><p class="meta">Palabras frecuentes en las traducciones de pasajes con esta raíz.</p>`;
+ if(!r.gloss_hints?.length)html+=preparingHintsHTML(r);else html+=`<h2>Pistas de las traducciones</h2><p>${r.gloss_hints.map(h=>`≈ ${esc(h.word)} (${h.support} pasajes)`).join(' · ')}</p><p class="meta">Palabras frecuentes en las traducciones de pasajes con esta raíz.</p>`;
  html+=`<p class="ask-note">${esc(r.note)} Sin llamadas a modelos.</p></section>`;
  return html;
 }
