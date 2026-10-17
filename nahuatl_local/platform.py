@@ -13,6 +13,7 @@ from .cards import Cards, digest as records_digest, public_path
 from .stems import WordStudy
 from .evidence import Evidence
 from .terms import TermIndex
+from .spelling import Search as SpellingSearch, routes as spelling_routes
 from .units import Units
 from .explain import ClaudeWriter, explain
 from .web import Router, Server, Static, handler
@@ -37,6 +38,8 @@ def make_app(store, word_study=None, explain_writer=None):
     # Una sola búsqueda de términos para Diccionario, Archivo y Preguntar (también elige sus fichas).
     terms=TermIndex(word_study,records_fn=store.public_records)
     evidence_index=Evidence(word_study,terms=terms)
+    # Grafías: escribir como uno escribe y ver las posibilidades con sus fuentes (sobre el índice de términos).
+    spellings=SpellingSearch(terms)
     learning=Learning(archive)
     # Unidades de gramática: borradores generados, validados contra el análisis y con su estado en la cola editorial.
     units=Units(terms,store.public_records)
@@ -131,12 +134,13 @@ def make_app(store, word_study=None, explain_writer=None):
             ('/api/corpus/export',lambda r:r.reply(store.export_data())),
             ('/api/proposals',lambda r:r.reply(store.proposals(r.get_person(True))))]:
         router.add('GET',path,function)
+    spelling_routes(router,spellings,Problem,person=lambda r:r.get_person(True)['id'])
     router.add('GET','/api/research/',lambda r:r.reply(archive.get(r.tail)),prefix=True)
     router.add('POST','/api/proposals',lambda r:r.reply(store.propose(r.get_person(True),r.body()),201))
     router.add('DELETE','/api/proposals/',withdraw_proposal,prefix=True)
     app=handler(store,router,STATIC)
     # Orden de preparación: lo que pide la primera consulta (palabra, Archivo, Preguntar) antes que las pistas.
-    app.warm=lambda:(word_study.core(),terms._build(),word_study.hints(wait=True))
+    app.warm=lambda:(word_study.core(),terms._build(),spellings._build(),word_study.hints(wait=True))
     return app
 
 

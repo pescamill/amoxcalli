@@ -35,6 +35,7 @@ from . import lexicon, passages
 from .morphology import WORD
 from .passages import LABELS
 from .pictography import public_catalog
+from .spelling import Graph, alternates, symbols
 from .stems import ROOT, WordStudy, es_tokens
 from .text import es_key, fold, loose_key, readable, squash
 
@@ -47,6 +48,7 @@ SCORES = dict(spelling=100, archive=95, label=90, designation=85, inflected=80, 
 LANGUAGE = 200
 STRONG = 80          # a partir de aquí el grupo es la respuesta (Archivo filtra por sus grafías)
 MIN_STEM = 3         # raíces más breves (atl → a) no reúnen formas flexionadas seguras
+RULE_FALLBACK = 0.4  # costo máximo de las reglas de perfil para proponer una grafía no atestiguada
 MIN_CONTAINED = 5    # clave mínima para buscar el término dentro de otras palabras
 UNCERTAIN = dict(other_entry='otra entrada del diccionario tiene esta grafía',
                  verb='forma verbal con la misma raíz escrita (posible homógrafo)',
@@ -55,7 +57,9 @@ UNCERTAIN = dict(other_entry='otra entrada del diccionario tiene esta grafía',
                  short_root='raíz breve: puede coincidir con otras palabras',
                  bare_root='raíz sin afijos: puede ser otra palabra (cohua «comprar», cal)',
                  contains='contiene el término (compuesto o nombre)',
-                 name='nombre propio con esta raíz (ytoca Xochitzin): no es una forma del término')
+                 name='nombre propio con esta raíz (ytoca Xochitzin): no es una forma del término',
+                 spelling='posible otra grafía (asociación del grafo sin confirmar)')
+EDGE = 'otra grafía segura según el grafo de equivalencias'
 
 ES_MIN_SUPPORT = 8   # pistas invertidas español → raíz: solo asociaciones con apoyo amplio
 ES_MIN_P = 0.3
@@ -189,6 +193,8 @@ class TermIndex:
             self.pages = {p['id']: p for p in catalog['pages']}
             self.documents = {d['id']: d for d in catalog['documents']}
             self.archive_ids = {}  # grupo del archivo → clave laxa
+            # Grafo de equivalencias entre grafías (spelling.Graph): sus aristas seguras amplían cada grupo.
+            self.graph = Graph(self.postings, self.rows, self.spelling_owner.keys(), es_tokens=es_tokens)
             self._ready = True
 
     @property
@@ -230,6 +236,15 @@ class TermIndex:
         self._build()
         return list(self.spelling_owner.get(loose_key(word), []))
 
+    def owners(self, lk):
+        """Entradas del diccionario de una clave: la suya o la de otra grafía segura del grafo (y la vía)."""
+        if self.spelling_owner.get(lk):
+            return list(self.spelling_owner[lk]), None
+        for m in self.graph.cluster(lk):
+            if self.spelling_owner.get(m):
+                return list(self.spelling_owner[m]), m
+        return [], None
+
     def variants(self, word):
         """Grafías del archivo con la misma clave laxa, por variedad."""
         self._build()
@@ -269,6 +284,7 @@ class TermIndex:
 
     # -- grupos ---------------------------------------------------------------
     def _archive_id(self, lk):
+        lk = self.graph.cluster(lk)[0]  # una palabra del archivo = un grupo del grafo
         gid = 'term-' + readable(lk)
         self.archive_ids.setdefault(gid, lk)
         return gid
@@ -304,26 +320,41 @@ class TermIndex:
             return self._groups[gid]
         if gid in self.lexicon:
             info = self.lexicon[gid]
-            entry, keys, stem = info['entry'], set(info['keys']), info['stem']
+            entry, stem = info['entry'], info['stem']
+            keys = {m for k in info['keys'] for m in self.graph.cluster(k)}
             senses = {s['id'] for s in entry['senses']}
             source = 'dictionary'
         elif gid in self.archive_ids:
             lk = self.archive_ids[gid]
-            entry, keys, senses, source = None, {lk}, set(), 'archive'
+            entry, keys, senses, source = None, set(self.graph.cluster(lk)), set(), 'archive'
             top = self._surfaces(lk)
             stem = self.analyzer.best_stem(top[0]['form']) if top else None
         else:
             raise KeyError(gid)
         dictionary_spellings = set(entry['spellings']) if entry else set()
         attested = []
+        own = set(info['keys']) if entry else {self.archive_ids[gid]}
         for k in sorted(keys):
+            via = None if k in own else next((e['why'] for m in own for e in self.graph.neighbors.get(m, ())
+                                              if e['status'] == 'certain' and k in (e['a'], e['b'])), EDGE)
             for v in self._surfaces(k):
-                attested.append(dict(v, orthography=orthography(v['form']), dictionary=v['form'] in {s.casefold() for s in dictionary_spellings}))
+                attested.append(dict(v, orthography=orthography(v['form']), dictionary=v['form'] in {s.casefold() for s in dictionary_spellings},
+                                     **({'association': via} if via else {})))
         attested.sort(key=lambda v: (-v['total'], v['form']))
         for s in sorted(dictionary_spellings, key=fold):
             if not any(v['form'] == s.casefold() for v in attested):
                 attested.append(dict(form=s.casefold(), total=0, by_variety={}, orthography=orthography(s), dictionary=True))
         inflected, uncertain, seen_keys = [], [], set(keys)
+        # Otras grafías posibles según el grafo (aristas inciertas): aparte, como los homógrafos.
+        for e in sorted({id(e): e for k in keys for e in self.graph.uncertain(k)}.values(), key=lambda e: (e['a'], e['b'])):
+            k = e['b'] if e['a'] in keys else e['a']
+            if k in seen_keys or not self.postings.get(k):
+                continue
+            seen_keys.add(k)
+            surfaces = self._surfaces(k)
+            uncertain.append(dict(forms=[v['form'] for v in surfaces], total=sum(v['total'] for v in surfaces),
+                                  by_variety=_merge(v['by_variety'] for v in surfaces), segmentation=None, key=k,
+                                  reason='spelling', why=e['why'], other_group=None))
         if stem:
             forms = Counter(w.casefold() for _, w in self.concordance.index.get(stem, []))
             # Nombres propios con esta raíz (ytoca Xochitzin): se listan aparte, nunca como forma segura.
@@ -473,10 +504,11 @@ class TermIndex:
 
         # Náhuatl: misma clave laxa; si no, la raíz del analizador.
         lk = loose_key(word)
-        for gid in self.spelling_owner.get(lk, []):
+        owned, via = self.owners(lk)
+        for gid in owned:
             add(gid, 'nah', SCORES['spelling'], 'misma palabra' if word.casefold() in {s.casefold() for s in self.lexicon[gid]['entry']['spellings']}
-                else 'otra grafía')
-        if not self.spelling_owner.get(lk):
+                else 'otra grafía' if via is None else 'otra grafía (grafo de equivalencias)')
+        if not owned:
             analysis = self.analyzer.analyze(word, limit=1)
             a = analysis[0] if analysis else None
             certain = False
@@ -495,6 +527,14 @@ class TermIndex:
                         add(other, 'nah', SCORES['possible'], 'posible: ' + UNCERTAIN['corpus_root'])
             elif not certain and a and a['class_'] != 'foreign' and len(a['stem_key']) >= MIN_STEM:
                 add(self._stem_group(a['stem_key']), 'nah', SCORES['root_only'], 'misma raíz (sin esta grafía en el archivo)')
+        # Grafía no atestiguada (kuautli, sochitl): otras lecturas por reglas de perfil que sí lo están.
+        # Solo como posibilidad: nunca es la coincidencia principal segura.
+        if not any(side == 'nah' for _, side, _, _ in found.values()) and not self.postings.get(lk):
+            for v, (cost, used) in alternates(symbols(lk), self.graph.table, max_cost=RULE_FALLBACK).items():
+                k = self.graph.by_sym.get(v)
+                if used and k:
+                    add(self._key_group(k), 'nah', SCORES['possible'] - round(10 * cost),
+                        'posible otra grafía: ' + '; '.join(self.graph.table[r][4] for r in used))
         # Español: etiqueta de la acepción, designación de Tlachia, traducciones del corpus.
         key = es_key(word)
         for gid in self.label_index.get(key, ()):
@@ -518,8 +558,9 @@ class TermIndex:
         return sum(len(self.postings.get(k, [])) for k in keys)
 
     def _key_group(self, key):
-        if self.spelling_owner.get(key):
-            return self.spelling_owner[key][0]
+        owned, _ = self.owners(key)
+        if owned:
+            return owned[0]
         return self._archive_id(key) if self.postings.get(key) else None
 
     def resolve(self, query):

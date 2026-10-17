@@ -23,7 +23,7 @@ import sys
 import time
 
 from . import lexicon
-from . import evidence_evaluation, morphology_evaluation, term_evaluation
+from . import evidence_evaluation, morphology_evaluation, spelling_evaluation, term_evaluation
 from .cards import CONFIG as CARDS_CONFIG, Cards, PublicSources
 from .community import ROOT
 from .documentary_evaluation import public_path as battery_path, validate as validate_battery
@@ -32,7 +32,7 @@ from .terms import TermIndex
 REPORT = ROOT / 'reports' / 'evaluation.json'
 MARKDOWN = ROOT / 'reports' / 'EVALUACION.md'
 BATTERY = 'configs/documentary-evaluation-v1.json'
-COMPONENTS = ('morphology', 'terms', 'evidence', 'documentary')
+COMPONENTS = ('morphology', 'terms', 'spelling', 'evidence', 'documentary')
 # Claves que dependen del equipo o de la corrida: se guardan, pero no forman parte de la compuerta.
 VOLATILE = {'seconds', 'build_seconds', 'mean_ms_per_query', 'timing'}
 
@@ -169,6 +169,11 @@ def table(report):
                        ('glyph_coverage', 'Glifos'), ('spelling_precision_labeled', 'Precisión de grafías (etiquetadas)'),
                        ('glyph_precision_labeled', 'Precisión de glifos (etiquetados)')):
         rows.append(('Índice de términos', gold, label, *(_pct(t[s][key]) if s in t else '—' for s in ('dev', 'test', 'all'))))
+    g = report['spelling']['summary']
+    gold = '`evaluation/spelling-search-v1.json`'
+    for key, label in (('top1', 'Palabra buscada en top‑1'), ('top3', 'Palabra buscada en top‑3'),
+                       ('pair_precision', 'Precisión del grafo de grafías'), ('pair_recall', 'Cobertura del grafo de grafías')):
+        rows.append(('Grafías', gold, label, *(_pct(g[s][key]) if s in g else '—' for s in ('dev', 'test', 'all'))))
     e = report['evidence']['summary']['evidence']
     gold = '`evaluation/evidence-questions-v1.json`'
     for key, label in (('entry_at1', 'Entrada top‑1'), ('entry_at3', 'Entrada top‑3'), ('passage_hit', 'Con pasaje pertinente'),
@@ -202,9 +207,11 @@ def markdown(report):
     lines += [f"| {c} | {g} | {m} | {d} | {t} | {a} |" for c, g, m, d, t, a in table(report)]
     lines += ['', 'Detalle por componente: ' + ', '.join(f'[{n}](#{a})' for n, a in (
         ('morfología', 'evaluación-del-analizador-morfológico'), ('términos', 'evaluación-de-grupos-de-término'),
+        ('grafías', 'evaluación-del-buscador-de-grafías'),
         ('Preguntar', 'evaluación-de-la-consulta-con-evidencia'), ('fichas documentales', 'fichas-documentales-preguntar'))) + '.', '']
     lines += [demote(morphology_evaluation.markdown(report['morphology'])),
               demote(term_evaluation.markdown(report['terms'])),
+              demote(spelling_evaluation.markdown(report['spelling'])),
               demote(evidence_evaluation.markdown(report['evidence'])),
               demote(documentary_markdown(report['documentary']))]
     return '\n'.join(lines)
@@ -225,7 +232,7 @@ def run(only=None, split='all', write_sample=False):
     out = {}
     wanted = only or COMPONENTS
     timing = {}
-    terms = TermIndex() if {'terms', 'documentary'} & set(wanted) else None
+    terms = TermIndex() if {'terms', 'spelling', 'documentary'} & set(wanted) else None
     for name in COMPONENTS:
         if name not in wanted:
             continue
@@ -234,6 +241,8 @@ def run(only=None, split='all', write_sample=False):
             out[name] = morphology_evaluation.run(split, write_sample=write_sample)
         elif name == 'terms':
             out[name] = term_evaluation.run(terms, split)
+        elif name == 'spelling':
+            out[name] = spelling_evaluation.run(terms, split)
         elif name == 'evidence':
             out[name] = evidence_evaluation.run(split)
         elif split != 'test':
@@ -260,6 +269,7 @@ def main(argv=None):
         for name in COMPONENTS:
             if name in report:
                 print({'morphology': morphology_evaluation.markdown, 'terms': term_evaluation.markdown,
+                       'spelling': spelling_evaluation.markdown,
                        'evidence': evidence_evaluation.markdown, 'documentary': documentary_markdown}[name](report[name]))
         return
     report = run(write_sample=not args.check)

@@ -1023,3 +1023,27 @@ body.contributor .empty{border:0;padding:46px 30px}
 @media (min-width:761px){
   .review-notice .short{display:none}
 }
+
+/* Grafías (spelling.js): sugerencias bajo la búsqueda global y vista de una palabra */
+.global-search{position:relative}
+.spelling-suggest{position:absolute;left:0;right:0;top:100%;z-index:20;background:var(--surface);border:1px solid var(--line-strong);border-radius:6px;box-shadow:0 8px 24px rgb(0 0 0/.12);max-height:70vh;overflow:auto}
+.spelling-suggest ul{list-style:none;margin:0;padding:0}
+.spelling-option a{display:block;padding:9px 12px;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line)}
+.spelling-option a:hover,.spelling-option.active a{background:var(--highlight)}
+.spelling-option small{display:block;color:var(--muted);font-size:13px;line-height:1.4}
+.spelling-lemma{font-weight:600}
+.spelling-form{color:var(--muted);font-size:14px}
+.spelling-note{margin:0;padding:9px 12px;font-size:13px;color:var(--muted);border-bottom:1px solid var(--line)}
+.spelling-section{margin:0 0 32px}
+.spelling-profiles,.spelling-table{width:100%;border-collapse:collapse;font-size:14px}
+.spelling-profiles th,.spelling-profiles td,.spelling-table th,.spelling-table td{text-align:left;vertical-align:top;padding:7px 8px;border-bottom:1px solid var(--line);overflow-wrap:anywhere}
+.spelling-table small{display:block;color:var(--muted)}
+.spelling-profiles td:nth-child(2){white-space:nowrap;overflow-wrap:normal}
+.spelling-profiles td:nth-child(3){font-size:13px;color:var(--muted)}
+.spelling-limit{font-size:13px;color:var(--muted);border-left:2px solid var(--accent);padding-left:10px}
+.spelling-convert{max-width:420px}
+.spelling-edges{list-style:none;padding:0}
+.spelling-edge{padding:7px 0;border-bottom:1px solid var(--line)}
+.spelling-edge small{display:block;color:var(--muted)}
+.spelling-edge.rejected{opacity:.6}
+@media (max-width:640px){.spelling-table thead{display:none}.spelling-table tr{display:block;border-bottom:1px solid var(--line);padding:6px 0}.spelling-table td{display:block;border:0;padding:2px 0}}
