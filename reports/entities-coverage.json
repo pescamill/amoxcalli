@@ -1,0 +1,123 @@
+{
+  "calendar": {
+    "day_glyphs": 99,
+    "days_with_data": 139,
+    "numerals": 13,
+    "signs": 20,
+    "trecenas": 20,
+    "trecenas_with_tlachia": 10,
+    "veintenas": 18,
+    "veintenas_name_pending": [
+      "teotleco",
+      "nemontemi"
+    ]
+  },
+  "entities": {
+    "deity": 26,
+    "epithet": 2,
+    "figure": 4,
+    "place": 3
+  },
+  "generator": "entities-gen-1",
+  "llm_calls": 0,
+  "network_requests": 0,
+  "readings": [
+    "mito-soles",
+    "mito-himnos",
+    "mito-quetzalcoatl",
+    "mito-huitzilopochtli"
+  ],
+  "schema_version": 1,
+  "search_keys": 130,
+  "spellings": {
+    "chicomecoatl": [
+      "chicomecoatl",
+      "chicomecouatl"
+    ],
+    "huitzilopochtli": [
+      "huitzillopochtli",
+      "huitzilopochtli",
+      "huitzilopuchtli",
+      "uitzilopochtli",
+      "uitzilopuchtli",
+      "vitzilopochtli",
+      "vitzilopuchtli",
+      "huitzillopuchtli"
+    ],
+    "ipalnemohuani": [
+      "ipalnemohuani",
+      "ipalnemoani",
+      "ipalnemmohuani",
+      "ypalnemouani",
+      "ypalnemoani",
+      "ypalnemohuani"
+    ],
+    "mictlan": [
+      "mictlan",
+      "miktlan"
+    ],
+    "mictlantecuhtli": [
+      "mictlantecuhtli",
+      "mictlantecutli"
+    ],
+    "mixcoatl": [
+      "mixcohuatl",
+      "mixcoatl",
+      "mixcouatl"
+    ],
+    "quetzalcoatl": [
+      "quetzalcohuatl",
+      "quetzalcoatl",
+      "quetzalcóatl"
+    ],
+    "tamoanchan": [
+      "tamoanchan",
+      "tamohuanchan",
+      "tamooanchan"
+    ],
+    "tezcatlipoca": [
+      "tezcatlipoca",
+      "tezcatlipuca"
+    ],
+    "tlaloc": [
+      "tlaloc",
+      "tlalloc"
+    ],
+    "tlalocan": [
+      "tlalocan",
+      "tlallocan"
+    ],
+    "tloque-nahuaque": [
+      "tloque nauaque",
+      "tloque nahuaque",
+      "tloquehe nahuaquehe",
+      "tloque naoaque",
+      "tloque navaque",
+      "tloqueh nahuaqueh",
+      "tloquehé nahuaquehé"
+    ],
+    "tonatiuh": [
+      "tonatiuh",
+      "tonnatiuh",
+      "tónnatiuh"
+    ],
+    "xipe-totec": [
+      "xippe",
+      "xipe"
+    ],
+    "xiuhtecuhtli": [
+      "xiuhtecuhtli",
+      "xiuhtecutli"
+    ],
+    "xolotl": [
+      "xollotl",
+      "xolotl"
+    ]
+  },
+  "unit": {
+    "exercises": 8,
+    "id": "calendario"
+  },
+  "with_passages": 26,
+  "with_tlachia": 22
+}
