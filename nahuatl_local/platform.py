@@ -147,7 +147,7 @@ def make_app(store, word_study=None, explain_writer=None):
     return app
 
 
-def make_server(store,host='127.0.0.1',port=8766,public_origin=None,prewarm=False,explain_model=None):
+def make_server(store,host='127.0.0.1',port=8766,public_origin=None,prewarm=False,explain_model=None,demo=False):
     # El servidor no espera las pistas de glosa: responde sin ellas (y lo indica) mientras se estiman.
     word_study=WordStudy(records_fn=store.public_records,wait_for_hints=False)
     # Claude solo redacta si se pide al arrancar: la explicación envía la pregunta y los pasajes citados a Anthropic.
@@ -159,7 +159,7 @@ def make_server(store,host='127.0.0.1',port=8766,public_origin=None,prewarm=Fals
             try:app.warm()
             except Exception:pass  # el arranque no debe fallar por el análisis opcional
         threading.Thread(target=warm,daemon=True,name='analysis-warmup').start()
-    return Server((host,port),app,public_origin)
+    return Server((host,port),app,public_origin,demo)
 
 
 def main():
@@ -169,6 +169,7 @@ def main():
     serve.add_argument('--host',default='127.0.0.1',help='Interfaz de escucha (por omisión solo este equipo).')
     serve.add_argument('--port',type=int,default=8766)
     serve.add_argument('--public-origin',help='Origen HTTPS de un proxy (https://dominio); se acepta como Host y como Origin de escritura.')
+    serve.add_argument('--demo',action='store_true',help='Demostración pública de solo lectura: rechaza aportaciones, perfiles y grabaciones.')
     # El modelo local se archivó (experiments/llm/); estas opciones se aceptan y no hacen nada, para no romper arranques guardados.
     for retired in ('--enable-model','--disable-model'):serve.add_argument(retired,action='store_true',help=argparse.SUPPRESS)
     serve.add_argument('--adapter',help=argparse.SUPPRESS)
@@ -181,7 +182,7 @@ def main():
     try:
         store=CorpusStore(args.db)
         if args.command=='serve':
-            httpd=make_server(store,args.host,args.port,args.public_origin,prewarm=True,explain_model=args.explain_model)
+            httpd=make_server(store,args.host,args.port,args.public_origin,prewarm=True,explain_model=args.explain_model,demo=args.demo)
             print(f'Amoxcalli · http://127.0.0.1:{httpd.server_address[1]} · Voces en /aportar',flush=True)
             try:httpd.serve_forever()
             except KeyboardInterrupt:pass

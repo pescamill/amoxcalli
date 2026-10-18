@@ -142,3 +142,27 @@ class ServerTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+class DemoModeTests(unittest.TestCase):
+    def test_demo_reads_but_never_writes(self):
+        with tempfile.TemporaryDirectory() as directory:
+            db = Path(directory) / 'demo.sqlite3'
+            httpd = make_server(CorpusStore(db), port=0, demo=True)
+            thread = threading.Thread(target=httpd.serve_forever, daemon=True); thread.start()
+            port = httpd.server_address[1]; origin = f'http://127.0.0.1:{port}'
+            try:
+                conn = http.client.HTTPConnection('127.0.0.1', port, timeout=30)
+                conn.request('GET', '/api/learning'); response = conn.getresponse(); response.read()
+                self.assertEqual(response.status, 200)
+                before = db.read_bytes()
+                for method, path in (('POST', '/api/proposals'), ('POST', '/api/profile'), ('DELETE', '/api/proposals/x')):
+                    with self.subTest(method=method, path=path):
+                        conn = http.client.HTTPConnection('127.0.0.1', port, timeout=30)
+                        conn.request(method, path, body=b'{}', headers={'Origin': origin, 'Content-Type': 'application/json'})
+                        response = conn.getresponse(); body = json.loads(response.read())
+                        self.assertEqual(response.status, 403)
+                        self.assertIn('demostración', body['error'])
+                self.assertEqual(db.read_bytes(), before)
+            finally:
+                httpd.shutdown(); httpd.server_close(); thread.join()

@@ -33,6 +33,8 @@ En Windows: `py -m nahuatl_local.platform serve` con las mismas opciones (`--db`
 
 Un recorrido corto: abre **Aprender → Flores y cantos**, oculta el español y pulsa una palabra para ver su análisis (*ni-qu-itta*), su entrada y otros pasajes con la misma raíz. Después escribe *kuali* o *¿cómo se dice mujer?* en **Preguntar**.
 
+Para publicarlo (Docker, Hugging Face Spaces gratis, una máquina virtual) y el modo demostración de solo lectura: [docs/DESPLIEGUE.md](docs/DESPLIEGUE.md).
+
 ## Qué hay
 
 | Espacio | Qué hace |

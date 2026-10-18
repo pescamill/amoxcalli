@@ -118,6 +118,10 @@ def handler(store, router, static):
         def dispatch(self):
             parsed = urlparse(self.path)
             self.query, self.query_string = parse_qs(parsed.query), parsed.query
+            if self.command != 'GET' and self.server.demo:
+                # Demostración pública: no guarda aportaciones, perfiles ni grabaciones de nadie.
+                raise Problem('Esta es una instalación de demostración: no guarda aportaciones ni grabaciones. '
+                              'Para aportar, usa una instalación local de Amoxcalli.', 403)
             if self.command != 'GET':
                 # Rechaza escritura entre sitios y solicitudes sin Origin permitido.
                 expected = self.server.public_origin or f'http://{self.headers.get("Host", "")}'
@@ -154,8 +158,9 @@ class Server(ThreadingHTTPServer):
     # Una página pide ~20 recursos a la vez; macOS descarta conexiones por encima de la cola (5 por omisión).
     request_queue_size = 64
 
-    def __init__(self, address, handler_class, public_origin=None):
+    def __init__(self, address, handler_class, public_origin=None, demo=False):
         super().__init__(address, handler_class)
+        self.demo = demo
         host, port = address[0], self.server_address[1]
         self.public_origin = None
         self.allowed_hosts = {f'localhost:{port}', f'127.0.0.1:{port}', f'{host}:{port}'}
