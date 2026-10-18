@@ -36,7 +36,7 @@ Las claves temáticas organizan la consulta; no se presentan como una taxonomía
 
 La fecha de consulta del lote es el 7 de octubre de 2026. Las comprobaciones son de catálogo, no cotejo del manuscrito ni revisión lingüística especializada. Las páginas HTML completas quedan en caché local ignorada por Git; el índice distribuido conserva su hash y los campos seleccionados.
 
-El léxico mantiene **575 acepciones y 578 formas**, sus imágenes y las 24 palabras representativas de la primera página. Sus referencias contextuales anteriores no se convierten en componentes documentales del índice nuevo.
+Cuando se incorporó este lote, el léxico tenía 575 acepciones y 578 formas; hoy tiene 3.790 acepciones, con el lote de Wiktionary (ver [FUENTES](FUENTES.md)). Se conservan sus imágenes y las 24 palabras representativas de la primera página. Sus referencias contextuales anteriores no se convierten en componentes documentales del índice nuevo.
 
 ## Ampliar por lotes
 
