@@ -1,10 +1,12 @@
 # Ejecutar y publicar Amoxcalli
 
+[English](DEPLOYMENT.md)
+
 Amoxcalli es un solo proceso de Python que usa solo la biblioteca estándar: no hay base de datos externa ni dependencias que instalar para usarlo.
 
 ## 1. En tu computadora
 
-Requisitos: Python 3.10 o más reciente y git.
+Requisitos: Python 3.11 o más reciente y git.
 
 ```bash
 git clone https://github.com/pescamill/amoxcalli.git
