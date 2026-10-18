@@ -2,6 +2,7 @@
 import copy
 import hashlib
 import json
+import re
 from .community import ROOT
 
 
@@ -32,6 +33,11 @@ class Learning:
                     if annotation.get('relation', 'full_word') not in ('full_word', 'observed_form', 'source_variant', 'thematic'):
                         raise ValueError('Relación de lectura inválida.')
                     start = row['nah'].find(annotation['quote'], end)
+                    if annotation.get('relation') == 'full_word' and annotation['quote']:
+                        match = re.compile(r'(?<!\w)' + re.escape(annotation['quote']) + r'(?!\w)').search(row['nah'], end)
+                        if match is None and start >= 0:
+                            raise ValueError('Una palabra completa no puede ser parte interna de otra forma.')
+                        start = match.start() if match else -1
                     if start < 0 or not annotation['quote']:
                         raise ValueError('La anotación no corresponde al texto de la fuente.')
                     if annotation.get('relation')=='full_word' and ((start and (row['nah'][start-1].isalnum() or row['nah'][start-1]=='_')) or (start+len(annotation['quote'])<len(row['nah']) and (row['nah'][start+len(annotation['quote'])].isalnum() or row['nah'][start+len(annotation['quote'])]=='_'))):
@@ -49,6 +55,20 @@ class Learning:
                 if exercise['kind'] == 'cloze' and (not exercise.get('blank') or exercise['blank'] not in row['nah']
                         or exercise['options'][answer] != exercise['blank']):
                     raise ValueError('La clave debe recuperar la forma exacta de la fuente.')
+                words=example.get('explore_words',[])
+                if not isinstance(words,list) or len(words)>12 or any(
+                        not isinstance(word,str) or not word or len(word)>300 or word not in row['nah'] for word in words) or len(set(words))!=len(words):
+                    raise ValueError('Las palabras para explorar deben conservar una forma del pasaje.')
+                comprehension=example.get('comprehension')
+                if comprehension is not None:
+                    if not isinstance(comprehension,dict):raise ValueError('Pregunta de comprensión inválida.')
+                    options=comprehension.get('options');key=comprehension.get('answer')
+                    if (comprehension.get('kind')!='meaning' or not isinstance(options,list) or not 2<=len(options)<=5
+                            or any(not isinstance(o,str) or not o.strip() for o in options) or len(set(options))!=len(options)
+                            or type(key) is not int or not 0<=key<len(options)
+                            or any(not isinstance(comprehension.get(k),str) or not comprehension[k].strip() for k in ('question','explanation'))
+                            or options[key] not in row['es']):
+                        raise ValueError('La comprensión necesita una respuesta citada de la traducción de origen.')
 
     def catalog(self, records):
         result = copy.deepcopy(self.data)

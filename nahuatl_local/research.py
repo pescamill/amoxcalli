@@ -1,28 +1,17 @@
 """Archivo bilingüe local de Axolotl; conserva las filas y etiquetas originales."""
-import csv,json
+import json
 from collections import Counter
 from threading import Lock
 from .community import ROOT,Problem
+from .passages import AXOLOTL,LABELS,load,source
 from .retrieval import Index
 
-LABELS={'nci':'Náhuatl clásico','azz':'Náhuatl de la Sierra de Puebla','nhm':'Náhuatl de Morelos','nhn':'Náhuatl central','nhw':'Náhuatl de la Huasteca occidental','nhe':'Náhuatl de la Huasteca oriental','unknown':'Variedad no indicada'}
 class Archive:
     def __init__(self):
-        self.config=json.loads((ROOT/'configs/sources.json').read_text())['corpus']
-        self.path=ROOT/'corpus/axolotl/axolotl.csv'
-        self.url=f"https://github.com/{self.config['repository']}/blob/{self.config['revision']}/{self.config['path']}"
-        self.rows=[];self.index={};self._bm25=None;self._bm25_lock=Lock()
-        with self.path.open(encoding='utf-8',newline='') as f:
-            for line,fields in enumerate(csv.reader(f),1):
-                if len(fields)<5:continue
-                es,nah,variant,document,iso=fields[:5]
-                if not es.strip() or not nah.strip():continue
-                iso=iso or 'unknown'
-                row=dict(id=f'axolotl-{line:05d}',line=line,es=es,nah=nah,variant=variant,iso=iso,document=document,
-                    variant_label=LABELS.get(iso,variant),period='historical' if iso=='nci' else 'unknown' if iso=='unknown' else 'modern',
-                    locator=f'Axolotl, registro CSV {line}; página de la edición primaria pendiente',
-                    source_url=self.url,verification='Alineación de origen; sin cotejo propio',rights_note=self.config['rights_note'])
-                self.rows.append(row);self.index[row['id']]=row
+        self.config=source(ROOT)
+        self.path=ROOT/AXOLOTL
+        self.url=self.config['url']
+        self.rows=load(ROOT);self.index={r['id']:r for r in self.rows};self._bm25=None;self._bm25_lock=Lock()
         variants=Counter(r['iso'] for r in self.rows);works=Counter(r['document'] for r in self.rows)
         self.summary=dict(total=len(self.rows),works=sum(bool(k) for k in works),citation=self.config['citation'],source_url=self.url,revision=self.config['revision'],
             variants=[dict(id=k,label=LABELS.get(k,k),count=n) for k,n in variants.most_common()],
@@ -40,15 +29,22 @@ class Archive:
                 if self._bm25 is None:self._bm25=Index(rows=self.rows)
         return self._bm25.search(query,k=len(self.rows),variant=variant or None)
 
-    def search(self,query='',variant='',document='',period='',offset=0,limit=20):
+    def search(self,query='',variant='',document='',period='',offset=0,limit=20,terms=None):
+        """Pasajes de una consulta. Con ``terms`` (``terms.TermIndex``), una palabra que la búsqueda única
+        resuelve a un grupo devuelve los pasajes de todas sus grafías seguras; si no, BM25 sobre ambas lenguas."""
         if not isinstance(query,str) or len(query)>300:raise Problem('Busca con hasta 300 caracteres.')
         try:offset=int(offset);limit=int(limit)
         except (TypeError,ValueError):raise Problem('Paginación inválida.')
         if offset<0 or not 1<=limit<=100:raise Problem('Paginación fuera de rango.')
-        candidates=self._ranked(query,variant) if query.strip() else self.rows
+        resolved=terms.resolve(query) if terms is not None and query.strip() else None
+        if resolved:
+            group,word=resolved;candidates=[self.index[rid] for rid in terms.passage_ids(group['id'],first=word)]
+        else:
+            group=None;candidates=self._ranked(query,variant) if query.strip() else self.rows
         rows=[r for r in candidates if (not variant or r['iso']==variant) and
               (not document or r['document']==('' if document=='__unknown__' else document)) and (not period or r['period']==period)]
-        return dict(total=len(rows),offset=offset,limit=limit,results=rows[offset:offset+limit])
+        return dict(total=len(rows),offset=offset,limit=limit,results=rows[offset:offset+limit],term=group,
+                    method='term_group' if group else 'bm25' if query.strip() else 'all')
 
     def context(self,query):
         if not query.strip():return []

@@ -1,0 +1,232 @@
+{
+ "note": "Primera y única medición de la partición test de morphology-gold-v2 (17 oct 2026, commit del analizador 380c14d + arnés). Se conserva aunque el analizador cambie; la cifra vigente está en reports/evaluation.json.",
+ "analyzer": "nah-morph-1",
+ "gold_v2": {
+  "dev": {
+   "n": 56,
+   "top1": 0.893,
+   "by_kind": {
+    "word": {
+     "n": 54,
+     "top1": 0.889
+    },
+    "particle": {
+     "n": 1,
+     "top1": 1.0
+    },
+    "name": {
+     "n": 1,
+     "top1": 1.0
+    }
+   },
+   "errors": [
+    {
+     "word": "tlachihualli",
+     "got": "tlachihual-li",
+     "expected": "tla-chihua-l-li",
+     "kind": "word",
+     "basis": "dictionary"
+    },
+    {
+     "word": "mochiuh",
+     "got": "mochi-uh",
+     "expected": "mo-chiuh",
+     "kind": "word",
+     "basis": "dictionary"
+    },
+    {
+     "word": "nitlacua",
+     "got": "ni-tlacua",
+     "expected": "ni-tla-cua",
+     "kind": "word",
+     "basis": "dictionary"
+    },
+    {
+     "word": "quitoque",
+     "got": "quito-que",
+     "expected": "qu-ito-que",
+     "kind": "word",
+     "basis": "corpus"
+    },
+    {
+     "word": "tlaqualli",
+     "got": "tlaqual-li",
+     "expected": "tla-qua-l-li",
+     "kind": "word",
+     "basis": "dictionary"
+    },
+    {
+     "word": "tetlazohtlaliztli",
+     "got": "tetlazohtlaliz-tli",
+     "expected": "te-tlazohtla-liz-tli",
+     "kind": "word",
+     "basis": "dictionary"
+    }
+   ]
+  },
+  "test": {
+   "n": 91,
+   "top1": 0.78,
+   "by_kind": {
+    "word": {
+     "n": 58,
+     "top1": 0.672
+    },
+    "particle": {
+     "n": 18,
+     "top1": 0.944
+    },
+    "name": {
+     "n": 15,
+     "top1": 1.0
+    }
+   },
+   "errors": [
+    {
+     "word": "ticochizque",
+     "got": "ti-cochi-zque",
+     "expected": "ti-cochi-z-que",
+     "kind": "word",
+     "basis": "dictionary"
+    },
+    {
+     "word": "titlacua",
+     "got": "ti-tlacua",
+     "expected": "ti-tla-cua",
+     "kind": "word",
+     "basis": "dictionary"
+    },
+    {
+     "word": "quicaquia",
+     "got": "qui-caquia",
+     "expected": "qui-caqui-a",
+     "kind": "word",
+     "basis": "rules"
+    },
+    {
+     "word": "oquito",
+     "got": "o-quito",
+     "expected": "o-qu-ito",
+     "kind": "word",
+     "basis": "corpus"
+    },
+    {
+     "word": "motlalia",
+     "got": "motla-lia",
+     "expected": "mo-tlalia",
+     "kind": "word",
+     "basis": "dictionary"
+    },
+    {
+     "word": "tlaqua",
+     "got": "tlaqua",
+     "expected": "tla-qua",
+     "kind": "word",
+     "basis": "dictionary"
+    },
+    {
+     "word": "ninotlalia",
+     "got": "ni-no-tla-lia",
+     "expected": "ni-no-tlalia",
+     "kind": "word",
+     "basis": "corpus"
+    },
+    {
+     "word": "timotlalia",
+     "got": "ti-motla-lia",
+     "expected": "ti-mo-tlalia",
+     "kind": "word",
+     "basis": "dictionary"
+    },
+    {
+     "word": "teotl",
+     "got": "teotl",
+     "expected": "teo-tl",
+     "kind": "word",
+     "basis": "corpus"
+    },
+    {
+     "word": "atlan",
+     "got": "atlan",
+     "expected": "a-tlan",
+     "kind": "word",
+     "basis": "rules"
+    },
+    {
+     "word": "cuauhtli",
+     "got": "cuauhtli",
+     "expected": "cuauh-tli",
+     "kind": "word",
+     "basis": "corpus"
+    },
+    {
+     "word": "pilli",
+     "got": "pi-l-li",
+     "expected": "pil-li",
+     "kind": "word",
+     "basis": "corpus"
+    },
+    {
+     "word": "tlacuilo",
+     "got": "tla-cui-lo",
+     "expected": "tla-cuilo",
+     "kind": "word",
+     "basis": "corpus"
+    },
+    {
+     "word": "tlatolli",
+     "got": "tlatol-li",
+     "expected": "tlato-l-li",
+     "kind": "word",
+     "basis": "dictionary"
+    },
+    {
+     "word": "xochicuicatl",
+     "got": "xochicuica-tl",
+     "expected": "xochi-cuica-tl",
+     "kind": "word",
+     "basis": "dictionary_compound"
+    },
+    {
+     "word": "nopiltzin",
+     "got": "no-piltzin",
+     "expected": "no-pil-tzin",
+     "kind": "word",
+     "basis": "dictionary"
+    },
+    {
+     "word": "inahuac",
+     "got": "i-nahua-c",
+     "expected": "i-nahuac",
+     "kind": "word",
+     "basis": "dictionary"
+    },
+    {
+     "word": "icpac",
+     "got": "icpa-c",
+     "expected": "i-cpac",
+     "kind": "word",
+     "basis": "corpus"
+    },
+    {
+     "word": "ipan",
+     "got": "ipan",
+     "expected": "i-pan",
+     "kind": "word",
+     "basis": "dictionary"
+    },
+    {
+     "word": "tleica",
+     "got": "tleica",
+     "expected": "tleica",
+     "kind": "particle",
+     "basis": "rules"
+    }
+   ]
+  },
+  "test_names_rule_only": {
+   "n": 15,
+   "top1": 1.0
+  }
+ }
+}

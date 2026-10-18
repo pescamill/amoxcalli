@@ -16,7 +16,10 @@ from urllib.parse import parse_qs, urlparse
 from zoneinfo import ZoneInfo
 
 from .community import ROOT
-from .corpus import CorpusStore, editorial_releases, normalize
+from .corpus import CorpusStore, editorial_releases
+from .lexicon import snapshot
+from .passages import AXOLOTL
+from .text import fold
 from .dictionary_import import parse_page
 from .editorial_pipeline import encoded, sha, validate_candidates
 from .glyph_linker import tokens
@@ -95,7 +98,7 @@ def verify(batch,output,date=None):
                 if a.get('type')=='passage_reference':
                     p=a['passage'];row=archive.get(p['id'])
                     if any(p.get(key)!=row.get(key) for key in ('nah','es','iso','line','document')) or p['sha256']!=sha((row['nah']+'\n'+row['es']).encode()):errors.append('changed_passage')
-                    if row['iso']!='nci' or normalize(form['written']) not in tokens(row['nah']) or normalize(reference['reading']) not in tokens(row['nah']) or a.get('matched_term') not in tokens(row['es']):errors.append('unsubstantiated_cooccurrence')
+                    if row['iso']!='nci' or fold(form['written']) not in tokens(row['nah']) or fold(reference['reading']) not in tokens(row['nah']) or a.get('matched_term') not in tokens(row['es']):errors.append('unsubstantiated_cooccurrence')
                     proof.append(dict(archive_id=row['id'],source_hash=p['sha256'],checks=['original_pair','exact_form_token','reference_reading_token','spanish_referent']))
                 elif a.get('type')=='definition_reference':
                     definition=available[g['sense_id']]['definition']
@@ -125,10 +128,6 @@ def verify(batch,output,date=None):
     return dict(state=state,output=str(Path(output).resolve()),states=dict(Counter(c['status'] for c in checks)),primary_review=False,llm_calls=0,network_requests=0)
 
 
-def snapshot(db):
-    return {row[0]:[tuple(r) for r in db.execute('SELECT * FROM "'+row[0]+'"').fetchall()] for row in db.execute("SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%'").fetchall()}
-
-
 def publish(batch,bundle_path,release_id,db_path,release_dir=None,lessons_path=None):
     """Serialize publishers; a committed import can finish registration on retry."""
     if not re.fullmatch(r'[a-z0-9][a-z0-9-]{1,79}',release_id):raise ValueError('ID de publicación inválido.')
@@ -152,7 +151,7 @@ def _publish_locked(batch,bundle_path,release_id,db_path,release_dir,lessons_pat
     manifest,items,groups,baseline=load_batch(batch)
     if bundle.get('batch_manifest_sha256')!=sha((Path(batch)/'manifest.json').read_bytes()):raise ValueError('El lote ensamblado no corresponde a este paquete.')
     inputs=manifest['inputs']
-    paths={'corpus_sha256':ROOT/'corpus/axolotl/axolotl.csv','glyph_rules_sha256':ROOT/'corpus/glyph-link-rules-v7.json','lessons_sha256':Path(lessons_path) if lessons_path else ROOT/'corpus/learning-v1.json'}
+    paths={'corpus_sha256':ROOT/AXOLOTL,'glyph_rules_sha256':ROOT/'corpus/glyph-link-rules-v7.json','lessons_sha256':Path(lessons_path) if lessons_path else ROOT/'corpus/learning-v1.json'}
     if any(sha(path.read_bytes())!=inputs[key] for key,path in paths.items()):raise ValueError('Cambió el corpus, las lecciones o las reglas; prepara un lote nuevo.')
     for page in json.loads((Path(batch)/'sources.json').read_text())['pages']:
         if page.get('state')!='cached' or not page.get('records'):continue

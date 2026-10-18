@@ -53,11 +53,13 @@ class OrthographyTests(unittest.TestCase):
         self.assertGreaterEqual(report['changed'], 2)
 
 
-class GatedRuleDisabledTests(unittest.TestCase):
-    # PENDIENTE: glottal_h está definida pero excluida de COMPARISON_RULE_IDS.
-    @unittest.expectedFailure
-    def test_huel_collapses_to_uel_when_glottal_h_enabled(self):
-        self.assertEqual(comparison('huel'), comparison('uel'))
+class PendingRulesStayOffTests(unittest.TestCase):
+    # Activarlas cambiaría claves de nah-ortho-1 y, con ellas, splits y cifras medidas.
+    def test_pending_rules_are_defined_but_not_applied(self):
+        for rule_id in ('glottal_h', 'qu_to_cu', 'initial_y'):
+            self.assertNotIn(rule_id, COMPARISON_RULE_IDS)
+        self.assertNotEqual(comparison('huel'), comparison('uel'))
+        self.assertNotEqual(comparison('quauitl'), comparison('cuauitl'))
 
 
 if __name__ == '__main__':

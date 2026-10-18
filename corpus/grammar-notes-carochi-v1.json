@@ -1,0 +1,219 @@
+{
+ "schema": "amoxcalli-grammar-notes-1",
+ "id": "grammar-notes-carochi-v1",
+ "consulted": "2026-10-15",
+ "source": {
+  "id": "src-carochi-1645",
+  "label": "Arte de la lengua mexicana con la declaración de todos sus adverbios",
+  "author": "Horacio Carochi, S. J.",
+  "date": "1645",
+  "imprint": "México: Juan Ruyz",
+  "rights": "Dominio público (obra impresa en 1645).",
+  "facsimile": {
+   "url": "https://archive.org/details/artedelalenguam00caro",
+   "pdf": "https://archive.org/download/artedelalenguam00caro/artedelalenguam00caro.pdf",
+   "holder": "Ejemplar de la Roman Catholic Archdiocese of Toronto, digitalizado por University of Toronto (John M. Kelly Library) en Internet Archive; 286 imágenes.",
+   "conditions": "Obra de 1645 en dominio público; Internet Archive la ofrece sin restricciones de acceso. El mismo escaneo figura en Theological Commons (Princeton Theological Seminary, artedelalenguam00caro) con la mención «No Known Copyright».",
+   "locator_convention": "Folios del impreso según su índice: «f. 10r» = folio 10, página 1; «f. 10v» = folio 10, página 2. Se cotejó el índice y los encabezados de capítulo del facsímil; no se reproduce la transcripción OCR de Internet Archive."
+  }
+ },
+ "rights": {
+  "public": true,
+  "training": false,
+  "license": "MIT (texto redactado por el proyecto)",
+  "note": "Notas breves escritas por el proyecto a partir de la lectura del facsímil, con cita de capítulo y folio. No transcriben ni traducen el texto de Carochi ni ediciones modernas (p. ej., Lockhart 2001). Entrenamiento excluido hasta la revisión especializada."
+ },
+ "review": "Redacción del proyecto, pendiente de revisión por una persona especialista en náhuatl clásico.",
+ "notes": [
+  {
+   "id": "absolutivo",
+   "topic": "Sustantivo absoluto: -tl, -tli, -li, -in",
+   "summary": "Un sustantivo sin poseedor lleva un sufijo «absolutivo»: -tl tras vocal (a-tl, cihua-tl), -tli tras consonante (oquich-tli, ten-tli), -li tras l (cal-li, tlal-li) e -in en algunos nombres (mich-in, toch-in). Carochi llama a estas cuatro terminaciones «amisibles» porque desaparecen en el plural, al componer la palabra con otra y cuando el nombre lleva poseedor: calli → nocal «mi casa», calco «en la casa».",
+   "examples": [
+    [
+     "calli",
+     "casa"
+    ],
+    [
+     "nocal",
+     "mi casa"
+    ],
+    [
+     "atl",
+     "agua"
+    ],
+    [
+     "michin",
+     "pez"
+    ]
+   ],
+   "citation": {
+    "book": "Libro I",
+    "chapter": "cap. 2, «De las declinaciones de los nombres», introducción",
+    "folios": "f. 3v–4r"
+   },
+   "units": [
+    "absolutivo"
+   ]
+  },
+  {
+   "id": "posesivos",
+   "topic": "Prefijos posesivos",
+   "summary": "La posesión se marca con prefijos ante el nombre, que pierde el absolutivo: no- «mi», mo- «tu», i- «su (de él o ella)», to- «nuestro», amo- «vuestro», in- (im- ante p y m) «su (de ellos)». Ante vocal, no-, mo- y to- suelen perder la o (n-, m-, t-). Algunos nombres poseídos toman -uh o -hui (cuahuitl → nocuauh «mi palo», teotl → noteouh «mi dios») y lo poseído en plural toma -huan (nopilhuan «mis hijos»). Carochi llama a estos prefijos «semipronombres» de posesión porque siempre van compuestos.",
+   "examples": [
+    [
+     "nocal",
+     "mi casa"
+    ],
+    [
+     "mocal",
+     "tu casa"
+    ],
+    [
+     "ical",
+     "su casa"
+    ],
+    [
+     "tocal",
+     "nuestra casa"
+    ],
+    [
+     "imcal",
+     "su casa (de ellos)"
+    ]
+   ],
+   "citation": {
+    "book": "Libro I",
+    "chapter": "cap. 4, «De los semipronombres y pronombres», § 1 (semipronombres que se componen con nombres)",
+    "folios": "f. 10r–11r"
+   },
+   "units": [
+    "posesivos"
+   ]
+  },
+  {
+   "id": "sujeto",
+   "topic": "Prefijos de sujeto",
+   "summary": "El verbo indica la persona del sujeto con un prefijo: ni- «yo», ti- «tú», sin prefijo «él o ella»; en plural ti- … -h «nosotros», an- … -h «vosotros» y sin prefijo … -h «ellos». Así ti- vale «tú» o, con la marca de plural, «nosotros»; el plural se marca con saltillo (-h) en presente y con -queh en pretérito: nicochi «duermo», ticochih «dormimos», cochih «duermen». Carochi trata estos prefijos con los verbos intransitivos.",
+   "examples": [
+    [
+     "nicochi",
+     "duermo"
+    ],
+    [
+     "ticochi",
+     "duermes"
+    ],
+    [
+     "cochi",
+     "duerme"
+    ],
+    [
+     "ticochih",
+     "dormimos"
+    ]
+   ],
+   "citation": {
+    "book": "Libro I",
+    "chapter": "cap. 4, § 3 (semipronombres de verbos intransitivos)",
+    "folios": "f. 11v–12v"
+   },
+   "units": [
+    "prefijos de sujeto"
+   ]
+  },
+  {
+   "id": "objeto",
+   "topic": "Prefijos de objeto",
+   "summary": "Los verbos transitivos llevan, después del sujeto, un prefijo de objeto: nech- «me», mitz- «te», qui-/c- «lo, la», tech- «nos», amech- «os», quim- (quin-) «los, las». Cuando el objeto no se especifica se usan te- «a alguien» y tla- «algo»; el reflexivo es no-/mo-/to- (nino-, timo-, mo-). Ejemplos: nimitzitta «te veo», niquitta «lo veo», nitlacua «como (algo)». Carochi los presenta con los transitivos y dedica un párrafo aparte a los reflexivos.",
+   "examples": [
+    [
+     "nimitzitta",
+     "te veo"
+    ],
+    [
+     "niquitta",
+     "lo veo"
+    ],
+    [
+     "nitlacua",
+     "como (algo)"
+    ],
+    [
+     "ninotlaloa",
+     "corro (me apresuro)"
+    ]
+   ],
+   "citation": {
+    "book": "Libro I",
+    "chapter": "cap. 4, § 4 (semipronombres de verbos transitivos) y § 5 (verbos reflexivos)",
+    "folios": "f. 12v–14r"
+   },
+   "units": [
+    "prefijos de objeto"
+   ]
+  },
+  {
+   "id": "plurales",
+   "topic": "Plural de los sustantivos",
+   "summary": "Por regla general solo tienen plural los nombres de seres animados. Carochi ordena las declinaciones por la forma del plural: -meh (ichcatl → ichcameh «ovejas»), -tin (oquichtli → oquichtin «varones»), solo el saltillo -h (tlacatl → tlacah «personas», cihuatl → cihuah «mujeres») y -queh en nombres derivados de posesión (-huah, -eh, -yoh). Algunos nombres reduplican la primera sílaba (pilli → pipiltin). La cuarta declinación reúne los nombres con -tzin, -ton, -pol y -pil, que forman el plural a su modo (-tzitzin, -totontin, -popoltin).",
+   "examples": [
+    [
+     "ichcatl / ichcameh",
+     "oveja / ovejas"
+    ],
+    [
+     "tlacatl / tlacah",
+     "persona / personas"
+    ],
+    [
+     "cihuatl / cihuah",
+     "mujer / mujeres"
+    ],
+    [
+     "pilli / pipiltin",
+     "noble / nobles"
+    ]
+   ],
+   "citation": {
+    "book": "Libro I",
+    "chapter": "cap. 2, §§ 1–4 (las cuatro declinaciones) y cap. 3, § 3 (otros plurales de nombres)",
+    "folios": "f. 4r–8v; f. 9r"
+   },
+   "units": [
+    "plurales"
+   ]
+  },
+  {
+   "id": "locativos",
+   "topic": "Locativos: -co, -c, -pan, -tlan y otros",
+   "summary": "El lugar se expresa con posposiciones que se unen al nombre sin absolutivo: -co/-c «en» (calco «en la casa», Mexihco), -pan «sobre, en» (tepepan «sobre el cerro»), -tlan «junto a, entre» (cuauhtlan «en el bosque») y -can «lugar donde» (tlacuacan «donde se come»). Otras, como -pal, -huan o -tloc, se unen solo a los prefijos posesivos (ipal «por medio de él», nohuan «conmigo»). Carochi separa las posposiciones que van con posesivos de las que se componen con nombres.",
+   "examples": [
+    [
+     "calco",
+     "en la casa"
+    ],
+    [
+     "tepepan",
+     "sobre el cerro"
+    ],
+    [
+     "cuauhtlan",
+     "en el bosque"
+    ],
+    [
+     "nohuan",
+     "conmigo"
+    ]
+   ],
+   "citation": {
+    "book": "Libro I",
+    "chapter": "cap. 6, «De las preposiciones», § 1 (con semipronombres) y § 2 (con nombres)",
+    "folios": "f. 17r–18v"
+   },
+   "units": [
+    "locativos"
+   ]
+  }
+ ]
+}

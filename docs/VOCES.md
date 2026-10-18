@@ -1,8 +1,6 @@
-> Actualización de la plataforma unificada: `/aportar` obtiene tareas del archivo completo de 16,111 pares. Las misiones de ejemplo descritas abajo se conservan sólo para compatibilidad del servidor comunitario independiente. El arranque principal es `bash scripts/iniciar.sh`.
-
-> Integración 2026-09-27: Voces forma parte de Scriptorium. `scripts/voces.sh` abre el corpus unificado; entra en «Voces · texto y voz». Consulta [PLATAFORMA.md](PLATAFORMA.md).
-
 # Voces · colaboración de hablantes
+
+Voces forma parte de Amoxcalli en `/aportar` y la sirve el mismo proceso que el resto de la aplicación (arranque: `make demo` o `bash scripts/amoxcalli.sh serve`); reconocer y traducir usan el archivo completo de 16.111 pares. Las misiones de ejemplo descritas abajo quedan en el almacén (`import-tasks`) y en las pruebas. Operación y revisión: [PLATAFORMA.md](PLATAFORMA.md).
 
 App local para reunir juicios de lectura, traducciones propuestas, grabaciones y revisiones entre participantes. El código usa la licencia MIT del proyecto. No requiere descargar el modelo, instalar PyTorch, pagar una API ni crear una cuenta externa. Esta primera versión sirve para un piloto acompañado; la información lingüística necesita revisión antes de entrenar.
 
@@ -11,14 +9,10 @@ App local para reunir juicios de lectura, traducciones propuestas, grabaciones y
 Desde la carpeta `nahuatl-local`, con Python 3.11 o 3.12:
 
 ```bash
-bash scripts/voces.sh
+bash scripts/amoxcalli.sh serve
 ```
 
-Abre **http://127.0.0.1:8766/aportar** en el mismo equipo. Comando equivalente, también útil en Windows:
-
-```bash
-python3 -m nahuatl_local.community serve
-```
+Abre **http://127.0.0.1:8766/aportar** en el mismo equipo. En Windows: `py -m nahuatl_local.platform serve`. Voces no tiene servidor propio; `python3 -m nahuatl_local.community` queda para la administración por consola (`queue`, `import-tasks`, `curate`, `export`, `export-observations`).
 
 El servidor guarda los datos en `data/community/voces.sqlite3`. La base, sus archivos auxiliares y las grabaciones no se incorporan al ZIP distribuido. Conserva una copia de seguridad del directorio de datos con el servidor detenido. Una sesión de participante permanece en su navegador; distintos perfiles de navegador representan participantes distintos. Editar un perfil conserva la identidad y no crea una cuenta nueva.
 
@@ -117,7 +111,7 @@ El JSONL está **preparado para organizar un conjunto de datos**, con campos `es
 Para probar en el mismo equipo, usa perfiles de navegador separados y datos de demostración. Para colaborar desde teléfonos o a distancia, sirve la app detrás de un proxy HTTPS administrado por el proyecto y establece su origen exacto:
 
 ```bash
-python3 -m nahuatl_local.community serve --host 127.0.0.1 --port 8766 --public-origin https://tu-dominio.example
+bash scripts/amoxcalli.sh serve --host 127.0.0.1 --port 8766 --public-origin https://tu-dominio.example
 ```
 
 El proxy debe conservar el encabezado `Host` y terminar TLS. No se despliega ni se contrata hosting con este comando. El código no usa API externa. Una convocatoria pública requiere añadir gestión de invitaciones, recuperación de sesiones, moderación, cuotas de almacenamiento y operación del servidor. El piloto usa sesiones aleatorias con cookie HttpOnly/SameSite, valida origen/Host de las escrituras, limita cargas y mantiene las decisiones de curación fuera de HTTP. `http.server` es un servidor de piloto; no se presenta como infraestructura pública endurecida.

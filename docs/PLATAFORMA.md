@@ -1,10 +1,10 @@
-# Scriptorium: aprender, consultar y aportar
+# Operar una instalación de Amoxcalli
 
-Actualización: 2026-09-29. Español primero. Python y SQLite; no necesita APIs, PyTorch ni un LLM para consultar o aportar.
+Modelo de datos, arranque, revisión, importación y exportación. Qué ofrece la aplicación: [README](../README.md); teléfono y HTTPS: [WEBAPP.md](WEBAPP.md); diseño: [ARCHITECTURE.md](ARCHITECTURE.md). Python y SQLite; no necesita APIs, PyTorch ni un LLM para consultar o aportar.
 
 ## Una plataforma, un corpus
 
-Voces deja de ser una app desconectada. La entrada principal de Scriptorium reúne Aprender, Leer, Diccionario, Mis palabras y Laboratorio. Archivo completo, fichas textuales y fuentes están en «Archivo y herramientas». La escritura, grabación y revisión comunitaria de Voces viven en `/aportar`. Comparten servidor, cookies de sesión y `data/community/voces.sqlite3`.
+Voces deja de ser una app desconectada. La entrada principal de Amoxcalli reúne Aprender, Leer, Diccionario, Preguntar y Mis palabras; el Laboratorio quedó como página histórica. Archivo completo, fichas textuales y fuentes están en «Archivo y herramientas». La escritura, grabación y revisión comunitaria de Voces viven en `/aportar`. Comparten servidor, cookies de sesión y `data/community/voces.sqlite3`.
 
 La unidad léxica es una **acepción**, no una traducción universal. «Árbol» y «madera» tienen IDs distintos; «luna» y «mes» también. Cada acepción puede tener numerosas formas por variante, localidad, época y convención de escritura. `quauitl` y `cuahuitl` muestran una relación ortográfica heredada; no se hacen pasar por dos dialectos modernos.
 
@@ -26,25 +26,25 @@ flowchart TD
 ## Arranque y actualización
 
 ```bash
-bash scripts/plataforma.sh
+bash scripts/amoxcalli.sh serve
 ```
 
-Abre http://127.0.0.1:8766. `bash scripts/voces.sh` es un alias del mismo arranque. Para otra ubicación de la base:
+Abre http://127.0.0.1:8766 (`make demo` prepara antes los análisis derivados). Un solo proceso sirve la aplicación, Voces (`/aportar`) y la API; las opciones están en el [README](../README.md#probarlo). Para otra ubicación de la base:
 
 ```bash
-python3 -m nahuatl_local.platform --db /ruta/mi-corpus.sqlite3 serve
+bash scripts/amoxcalli.sh serve --db /ruta/mi-corpus.sqlite3
 ```
 
-Antes de actualizar una instalación con datos, detén el servidor y copia `data/community/` a un respaldo privado. Conserva tu carpeta `data`; no está incluida en el ZIP. La migración crea únicamente tablas `corpus_*`, no sobrescribe las tablas de Voces ni modifica pesos. La semilla se importa una vez; los registros tienen ID y versión. Los datos de pruebas están en directorios temporales y no se distribuyen.
+Antes de actualizar una instalación con datos, detén el servidor y copia `data/community/` a un respaldo privado. Conserva tu carpeta `data`; no está en el repositorio. La migración crea únicamente tablas `corpus_*`, no sobrescribe las tablas de Voces ni modifica pesos. La semilla se importa una vez; los registros tienen ID y versión. Los datos de pruebas están en directorios temporales y no se distribuyen.
 
-Se recuperó la fuente de Scriptorium en el commit `3e8a7a67f995f92858519c6cffe15e74d0e7c794`. Se portaron sus 17 registros y sus reglas limitadas de composición. `corpus/scriptorium-legacy.json` conserva la procedencia; `corpus/seed.json` es el corpus normalizado. No se trasladó la dependencia del cliente OpenAI. El alojamiento anterior permanece en su versión previa; este paquete es la versión local integrada.
+Se recuperó la fuente de Amoxcalli en el commit `3e8a7a67f995f92858519c6cffe15e74d0e7c794`. Se portaron sus 17 registros y sus reglas limitadas de composición. `corpus/scriptorium-legacy.json` conserva la procedencia; `corpus/seed.json` es el corpus normalizado. No se trasladó la dependencia del cliente OpenAI. El alojamiento anterior permanece en su versión previa; este paquete es la versión local integrada.
 
 ## Catálogo instalado (semilla y migraciones)
 
 | Entidad | Cantidad | Estado |
 |---|---:|---|
-| Acepciones / entradas | 575 | 26 curadas + 549 transcripciones automáticas de Molina/GDN; traducción histórica intacta |
-| Formas | 578 | Paleografía de fuente; grafía normalizada del catálogo en campo separado |
+| Acepciones / entradas | 3.790 | 26 curadas + 549 transcripciones automáticas de Molina/GDN (traducción histórica intacta) + 3.215 de Wiktionary (CC BY-SA, extracción automática) |
+| Formas | 3.978 | Paleografía de fuente; grafía normalizada del catálogo en campo separado |
 | Textos | 3 | Dos fragmentos heredados y una referencia sin transcripción |
 | Referencias glíficas | 140 | 139 entradas con imagen; 24 imágenes distintas, contexto, folio y atribución |
 | Fuentes | 20 | Primarias, ediciones, investigación, catálogos y testimonio comunitario |
@@ -68,23 +68,7 @@ La voz sigue en Voces: grabación, carga, escucha y revisión por variante, con 
 
 El extractor actual permite transcripción **manual**; no realiza OCR, segmentación automática de facsímiles ni reconocimiento de voz. Se pueden añadir después como generadores de propuestas, conservando el documento de origen, el localizador y la corrección humana.
 
-### Acceso desde tu teléfono en la misma red
-
-En una red local de confianza, inicia con la IP local concreta de tu computadora:
-
-```bash
-bash scripts/plataforma.sh --host 192.168.1.25 --port 8766
-```
-
-Sustituye la IP por la tuya y abre `http://192.168.1.25:8766` desde el teléfono. Esto expone la consulta a dispositivos que puedan conectarse a ese servidor; úsalo para un piloto controlado. Los permisos de «consulta» significan visible a quienes accedan a esa instalación, no publicación automática en internet.
-
-Para **grabar directamente con el micrófono desde otro dispositivo**, sirve el proyecto mediante un proxy HTTPS con certificado confiable para el teléfono:
-
-```bash
-bash scripts/plataforma.sh --host 127.0.0.1 --port 8766 --public-origin https://tu-dominio
-```
-
-Configura ese dominio en el proxy y pásalo como `Host`. HTTP local remoto permite usar los formularios y cargar un audio ya grabado, pero los navegadores suelen exigir un contexto seguro para capturar el micrófono. No hace falta una API de voz. La webapp incluye manifiesto de instalación para navegadores compatibles y pantalla de desconexión. No hay sincronización offline: consulta y envío requieren conexión al servidor. Guía: [WEBAPP.md](WEBAPP.md).
+Acceso desde el teléfono, HTTPS y micrófono: [WEBAPP.md](WEBAPP.md).
 
 ## Revisión: responsabilidad del organizador
 
@@ -140,76 +124,26 @@ python3 -m nahuatl_local.platform export --purpose training --period historical 
 
 No se sobrescribe un archivo existente. El exportador de entrenamiento exige: revisión registrada, permiso del registro y de sus fuentes, variante conocida, transcripción/forma válida y, en lo histórico, cotejo primario declarado. Excluye glifos y simples referencias sin texto como pares de traducción. La semilla inicial produce **cero pares habilitados para entrenar**; esto evita heredar permisos no demostrados de catálogos. Las aportaciones propias revisadas pueden habilitarse con sus consentimientos.
 
-Los registros exportados conservan grupo de fuente y, para aportaciones nuevas, grupo seudónimo de hablante. `split` queda en `unassigned`: antes de entrenar se debe separar por obra/hablante, deduplicar, evaluar alineación y evitar contaminación entre conjuntos. No se escriben automáticamente los archivos que consume `autotrain`. Un entrenador futuro debe respetar estos campos y mantener corpus clásico y variantes contemporáneas separados.
+Los registros exportados conservan grupo de fuente y, para aportaciones nuevas, grupo seudónimo de hablante. `split` queda en `unassigned`: antes de entrenar se debe separar por obra/hablante, deduplicar, evaluar alineación y evitar contaminación entre conjuntos. No se escriben automáticamente los archivos de entrenamiento. Un entrenador futuro debe respetar estos campos y mantener corpus clásico y variantes contemporáneas separados.
 
 ## Modelo y revisión humana dentro del ecosistema
 
-Actualización: el modelo se activa automáticamente cuando sus dependencias, base y adaptador están disponibles. `scripts/iniciar.sh` prepara todo. La búsqueda principal consulta el archivo completo, no sólo el léxico editorial. Consulta `ESTADO_MODELO.md` para los resultados reales de esta integración.
-
-El laboratorio porta las reglas limitadas de Scriptorium: palabra aislada, «veo + un objeto singular» y coordinación de dos sustantivos. Toda oración nueva se marca como propuesta. No cubre negación, otros tiempos o número por inferencia.
-
-Para habilitar el modelo existente, instala y descarga primero sus dependencias como indica el README y arranca:
-
-```bash
-bash scripts/plataforma.sh --enable-model --adapter outputs/continued-unseen/run/best
-```
+Desde el 16 de octubre de 2026 la aplicación no ofrece generación: el modelo local (Qwen3-0.6B + LoRA), su instalación (`setup`), la ruta `/api/compose` con las reglas limitadas («veo + un objeto singular», coordinación de dos sustantivos) y las pantallas del Laboratorio se archivaron en [experiments/llm/](../experiments/llm/README.md). La recuperación de pasajes superó a sus borradores (27,2 frente a 22,4 chrF++); `#modelos` muestra solo un resumen histórico. La búsqueda principal consulta el archivo completo, no sólo el léxico editorial. Resultados del modelo: [MODEL_CARD.md](../experiments/llm/MODEL_CARD.md).
 
 La carga es perezosa y local. Se conserva el modelo, entrenamiento y evaluación previos; no se volvió a entrenar durante esta integración. Los splits de entrenamiento y sus comandos se conservan. El CSV íntegro de Axolotl ahora se consulta como archivo separado, con etiquetas y atribuciones de origen. Sus pasajes no se convierten automáticamente en fichas editoriales aprobadas ni en nuevos pares autorizados de entrenamiento.
 
 La ficha de revisión exporta candidato, entrada y evidencias para evaluación humana. Las reglas locales no certifican fidelidad lingüística y no se conectan a servicios de evaluación.
 
-## Ampliación recomendada
-
-El siguiente trabajo es editorial: seleccionar una obra o una variante, registrar su edición y derechos, transcribir un conjunto pequeño con localizadores, pedir revisión a hablantes o especialistas y publicar únicamente las fichas autorizadas. Después se amplía la cobertura. La calidad del corpus beneficia simultáneamente al investigador, al lector y al modelo.
-
-Para reuniones entre varias personas, queda pendiente un despliegue endurecido con cuentas recuperables, roles de revisor, límites de almacenamiento y respaldos administrados. El piloto actual usa sesiones locales de larga duración y no ofrece recuperación de cuenta. La interfaz no debe confundirse con una plataforma pública de producción.
-
-## Actualización de referencias glíficas
-
-El lote `corpus/glyph-links-v2.json` añade cuatro referencias consultadas en VLA (árbol, sol, luna y mes) y la fuente Códice Osuna. Se aplica al primer arranque de esta versión, también sobre bases existentes. Conserva los cinco vínculos anteriores y cualquier edición local con el mismo identificador; repetir el arranque no duplica registros. Total glífico anterior: 57 entidades, incluidas 9 referencias glíficas. No se ha importado el catálogo completo.
-
-El lote `corpus/glyph-images-v4.json` enlaza (no copia) la imagen de cuatro glifos heredados de Scriptorium —flor, agua, casa y árbol florido— desde sus fichas del Visual Lexicon of Aztec Hieroglyphs, con atribución visible a Bodleian Libraries, University of Oxford (MS. Arch. Selden. A. 1) y licencia CC BY-NC-SA 3.0 UK. La webapp las muestra mediante enlace directo (hotlink) con crédito y enlace de retorno; las fichas sin imagen mantienen su referencia; si falla un enlace externo, la interfaz conserva el acceso a la fuente. El relleno es idempotente: añade `image` e `image_credit` solo a glifos ya presentes y no sustituye ediciones locales.
-
 ## Archivo de consulta
 
 `research.py` consulta el CSV íntegro de Axolotl conservando 16,111 pares y sus etiquetas. `/api/research` pagina y filtra; `/api/research/<id>` conserva una referencia estable dentro de la revisión fijada. La fuente editorial `src-axolotl` se añade con una migración que no sobrescribe modificaciones existentes. Este archivo no altera los splits del entrenamiento ni la publicación de aportaciones pendientes.
 
-Las consultas con texto se ordenan con BM25 en español y náhuatl; los filtros y la paginación se aplican sobre los resultados. El campo náhuatl usa las reglas seguras de comparación de `nah-ortho-1`; el español conserva su tokenización. Los resultados muestran el texto original. La navegación sin consulta conserva el orden del archivo. La recuperación de contexto del laboratorio usa el mismo índice, limitada a náhuatl clásico y pasajes breves. Este índice completo no participa en el benchmark reservado, que utiliza solo `train.jsonl`.
+Una palabra que la búsqueda de términos (`terms.TermIndex`) resuelve a un grupo devuelve los pasajes de todas sus grafías seguras (primero la grafía consultada); las frases y las palabras sin grupo se ordenan con BM25 en español y náhuatl; los filtros y la paginación se aplican sobre los resultados. El campo náhuatl usa las reglas seguras de comparación de `nah-ortho-1`; el español conserva su tokenización. Los resultados muestran el texto original. La navegación sin consulta conserva el orden del archivo. La recuperación de contexto del laboratorio usa el mismo índice, limitada a náhuatl clásico y pasajes breves. Este índice completo no participa en el benchmark reservado, que utiliza solo `train.jsonl`.
 
-La política CSP de Scriptorium permite imágenes de `https://aztecglyphs.wired-humanities.org` para los cuatro enlaces aprobados. El servidor de Voces por separado mantiene imágenes locales. Scripts, conexiones y otros orígenes de imágenes conservan sus restricciones. Se comprobó la carga real de agua, casa, flor y árbol florido en el navegador, además del encabezado HTTP.
+La política CSP de Amoxcalli permite imágenes de `https://aztecglyphs.wired-humanities.org` para los cuatro enlaces aprobados. Scripts, conexiones y otros orígenes de imágenes conservan sus restricciones. Se comprobó la carga real de agua, casa, flor y árbol florido en el navegador, además del encabezado HTTP.
 
-Las propuestas de clasificación del archivo se revisan mediante [AUDITORIA_VARIANTES.md](AUDITORIA_VARIANTES.md); la ampliación de las acepciones y el trabajo necesario para una plataforma editorial compartida se describe en [LEXICO_GOBERNANZA.md](LEXICO_GOBERNANZA.md).
+Las propuestas de clasificación del archivo están en `corpus/variant-proposals-v1.json`, pendientes de decisión; la ampliación de las acepciones y el trabajo necesario para una plataforma editorial compartida se describe en [LEXICO_GOBERNANZA.md](LEXICO_GOBERNANZA.md).
 
+## Más guías
 
-## Lectura guiada y diccionario visual · 29 de septiembre de 2026
-
-`corpus/glyph-lexicon-v5.json` amplía el índice con doce acepciones de animales y naturaleza, trece formas (incluida eecatl como grafía aparte) y trece referencias visuales del Códice Mendoza. Reutiliza las fuentes registradas de Molina, Online Nahuatl Dictionary, Códice Mendoza y VLA. Cada palabra nueva tiene una imagen de fuente y contexto específico. Fuego se muestra como **iconografía**, según la clasificación de la ficha; la relación Ecatl/Ehecatl conserva la interpretación del catálogo. No se registra cotejo primario ni se conceden permisos de entrenamiento.
-
-`corpus/glyph-source-images-v5.json` completa las imágenes de árbol, sol, luna y mes mediante una migración separada que conserva ediciones locales. Piedra recibe una referencia del Mendoza aparte de la ficha existente del Xólotl. Ver, y/con y madera siguen sin imagen glífica específica incorporada. La interfaz ofrece los enlaces al catálogo y al folio cuando está localizado. Las imágenes necesitan conexión a sus servidores externos; un fallo conserva la ficha y su enlace.
-
-`corpus/learning-v1.json` selecciona 24 fragmentos de 6 obras, agrupados en 6 lecturas. `/api/learning` conserva la fila de Axolotl y verifica su etiqueta nci, hash y correspondencia literal de las anotaciones. Las ayudas son editoriales y las claves se basan en el texto seleccionado; no se utiliza el LLM como corrector. La traducción y su cotejo siguen pendientes de revisión lingüística. Los glifos y los pasajes alfabéticos proceden de documentos distintos, enlazados por acepción; no se presenta una imagen como escritura de toda la frase.
-
-El cuaderno y las lecturas guardan progreso en `localStorage` del navegador, separado de perfiles y aportaciones de Voces. Cambiar de navegador u origen crea otro cuaderno. Si no se permite almacenamiento, el repaso funciona durante la sesión con un aviso. La revisión de palabras se agenda a 1, 3, 7 y 14 días según lo que la persona marca como recordado; no acredita aprendizaje lingüístico.
-
-
-## Laboratorio visible y continuidad interna
-
-El Laboratorio (`#modelos`) explica la base Qwen y el adaptador LoRA, muestra curva NLL y resultados con sus informes, detecta cambios de hashes respecto a los datos actuales y ofrece controles de generación separados de las reglas y la búsqueda. No entrena al consultar ni incorpora automáticamente palabras o aportaciones. Detalles: [LABORATORIO.md](LABORATORIO.md). El punto de continuación del proyecto es [PROGRESO_INTERNO.md](PROGRESO_INTERNO.md).
-
-
-El laboratorio ahora separa `#modelos/probar`, `#modelos/datos` y `#modelos/progreso`. `/api/training-data` pagina y busca pares de la referencia histórica o preparación actual. `/api/training-pairs` guarda propuestas privadas autenticadas; la exportación incluye solo aceptadas mediante revisión lingüística y de permisos. Se rechazan coincidencias con pares existentes y obras de evaluación. No hay entrenamiento desde estos endpoints.
-
-La migración v6 incorpora 499 entradas de GDN/Molina mediante parser determinista, conservando los 96 registros anteriores íntegros. El paquete incluye exclusivamente `data/training-reference` dentro de `data/`; excluye perfiles, propuestas, audio, respaldos y caché de consultas.
-
-
-### Diccionario: portada y vínculos v7
-
-La página 1 conserva las 24 palabras representativas solicitadas, con referencia visual para cada una. Las otras 551 aparecen por orden alfabético de la forma náhuatl, 48 por página. Buscar o filtrar muestra coincidencias alfabéticas, sin reservar una página vacía. Las imágenes abren la ficha de origen; la evidencia de cada relación se ve en la entrada. Las relaciones de significado, definición y ejemplo no se presentan como escritura de la palabra. El script local `python -m nahuatl_local.glyph_linker` no usa modelo ni red; produce lote validado e informe de cobertura. Hay 139 entradas enlazadas y 436 pendientes de evidencia. Detalles: [LEXICO_GOBERNANZA.md](LEXICO_GOBERNANZA.md).
-
-
-## Publicaciones editoriales por lotes
-
-El [pipeline](EDITORIAL_PIPELINE.md) coteja fuentes cacheadas y publica lotes aditivos con respaldo y prueba de preservación. `corpus/editorial-releases.json` registra archivos versionados y sus hashes; las instalaciones nuevas y existentes los cargan sin sustituir ediciones locales. El lote batch-007-v9 añade 50 entradas, 50 formas y 39 referencias contextuales. La app tiene 1.317 entidades. No cambian los permisos de entrenamiento, los pesos ni las lecciones originales.
-
-
-La ampliación [lecturas-002](../reports/LECTURAS_002_2026-09-30.md) conserva las doce selecciones y claves previas, añade tres recorridos y aclara enlaces temáticos. `practice_version` distingue la edición de ejercicios de las aclaraciones de contenido; cielo/lugares conservan su práctica. El contador de ejemplos es dinámico. [Guía de recetas y publicación](LECTURAS_PIPELINE.md).
+[Laboratorio (histórico)](../experiments/llm/LABORATORIO.md) · [Lecturas por recetas](LECTURAS_PIPELINE.md) · [Pipeline editorial](EDITORIAL_PIPELINE.md) · [Léxico y glifos](LEXICO_GOBERNANZA.md) · [Diccionario pictográfico](DICCIONARIO_PICTOGRAFICO.md) · [Voces](VOCES.md)

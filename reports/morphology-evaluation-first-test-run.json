@@ -1,0 +1,1765 @@
+{
+  "analyzer": "nah-morph-1",
+  "split": "all",
+  "gold": {
+    "unsegmented_baseline": {
+      "n": 52,
+      "top1": 0.0,
+      "top3": 0.0,
+      "stem_top1": 0.0,
+      "errors": [
+        {
+          "word": "niquitta",
+          "expected": "ni-qu-itta",
+          "got": "niquitta",
+          "correct": false,
+          "in_top3": false,
+          "split": "dev"
+        },
+        {
+          "word": "nocal",
+          "expected": "no-cal",
+          "got": "nocal",
+          "correct": false,
+          "in_top3": false,
+          "split": "dev"
+        },
+        {
+          "word": "calco",
+          "expected": "cal-co",
+          "got": "calco",
+          "correct": false,
+          "in_top3": false,
+          "split": "dev"
+        },
+        {
+          "word": "calli",
+          "expected": "cal-li",
+          "got": "calli",
+          "correct": false,
+          "in_top3": false,
+          "split": "dev"
+        },
+        {
+          "word": "tlacatl",
+          "expected": "tlaca-tl",
+          "got": "tlacatl",
+          "correct": false,
+          "in_top3": false,
+          "split": "dev"
+        },
+        {
+          "word": "nicchihua",
+          "expected": "ni-c-chihua",
+          "got": "nicchihua",
+          "correct": false,
+          "in_top3": false,
+          "split": "dev"
+        },
+        {
+          "word": "onicchiuh",
+          "expected": "o-ni-c-chiuh",
+          "got": "onicchiuh",
+          "correct": false,
+          "in_top3": false,
+          "split": "dev"
+        },
+        {
+          "word": "tlachihualli",
+          "expected": "tla-chihua-l-li",
+          "got": "tlachihualli",
+          "correct": false,
+          "in_top3": false,
+          "split": "dev"
+        },
+        {
+          "word": "itoca",
+          "expected": "i-toca",
+          "got": "itoca",
+          "correct": false,
+          "in_top3": false,
+          "split": "dev"
+        },
+        {
+          "word": "mochiuh",
+          "expected": "mo-chiuh",
+          "got": "mochiuh",
+          "correct": false,
+          "in_top3": false,
+          "split": "dev"
+        },
+        {
+          "word": "omoteneuh",
+          "expected": "o-mo-teneuh",
+          "got": "omoteneuh",
+          "correct": false,
+          "in_top3": false,
+          "split": "dev"
+        },
+        {
+          "word": "nitlacua",
+          "expected": "ni-tla-cua",
+          "got": "nitlacua",
+          "correct": false,
+          "in_top3": false,
+          "split": "dev"
+        },
+        {
+          "word": "niquitohua",
+          "expected": "ni-qu-itohua",
+          "got": "niquitohua",
+          "correct": false,
+          "in_top3": false,
+          "split": "dev"
+        },
+        {
+          "word": "tlahtohuani",
+          "expected": "tlahtohua-ni",
+          "got": "tlahtohuani",
+          "correct": false,
+          "in_top3": false,
+          "split": "dev"
+        },
+        {
+          "word": "noxochiuh",
+          "expected": "no-xochi-uh",
+          "got": "noxochiuh",
+          "correct": false,
+          "in_top3": false,
+          "split": "dev"
+        },
+        {
+          "word": "tlalticpac",
+          "expected": "tlal-ti-cpac",
+          "got": "tlalticpac",
+          "correct": false,
+          "in_top3": false,
+          "split": "dev"
+        },
+        {
+          "word": "quichiuh",
+          "expected": "qui-chiuh",
+          "got": "quichiuh",
+          "correct": false,
+          "in_top3": false,
+          "split": "dev"
+        },
+        {
+          "word": "mitoa",
+          "expected": "m-itoa",
+          "got": "mitoa",
+          "correct": false,
+          "in_top3": false,
+          "split": "dev"
+        },
+        {
+          "word": "altepetl",
+          "expected": "altepe-tl",
+          "got": "altepetl",
+          "correct": false,
+          "in_top3": false,
+          "split": "dev"
+        },
+        {
+          "word": "nimitztlazohtla",
+          "expected": "ni-mitz-tlazohtla",
+          "got": "nimitztlazohtla",
+          "correct": false,
+          "in_top3": false,
+          "split": "dev"
+        },
+        {
+          "word": "tinechitta",
+          "expected": "ti-nech-itta",
+          "got": "tinechitta",
+          "correct": false,
+          "in_top3": false,
+          "split": "dev"
+        },
+        {
+          "word": "xochitl",
+          "expected": "xochi-tl",
+          "got": "xochitl",
+          "correct": false,
+          "in_top3": false,
+          "split": "dev"
+        },
+        {
+          "word": "nocuic",
+          "expected": "no-cuic",
+          "got": "nocuic",
+          "correct": false,
+          "in_top3": false,
+          "split": "dev"
+        },
+        {
+          "word": "quimaca",
+          "expected": "qui-maca",
+          "got": "quimaca",
+          "correct": false,
+          "in_top3": false,
+          "split": "dev"
+        },
+        {
+          "word": "tlalli",
+          "expected": "tlal-li",
+          "got": "tlalli",
+          "correct": false,
+          "in_top3": false,
+          "split": "dev"
+        },
+        {
+          "word": "ticochi",
+          "expected": "ti-cochi",
+          "got": "ticochi",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "nicochiz",
+          "expected": "ni-cochi-z",
+          "got": "nicochiz",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "motenehua",
+          "expected": "mo-tenehua",
+          "got": "motenehua",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "quitoa",
+          "expected": "qu-itoa",
+          "got": "quitoa",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "quitoque",
+          "expected": "qu-ito-que",
+          "got": "quitoque",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "tepetl",
+          "expected": "tepe-tl",
+          "got": "tepetl",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "ytoca",
+          "expected": "y-toca",
+          "got": "ytoca",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "ichan",
+          "expected": "i-chan",
+          "got": "ichan",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "nochan",
+          "expected": "no-chan",
+          "got": "nochan",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "tochan",
+          "expected": "to-chan",
+          "got": "tochan",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "quitta",
+          "expected": "qu-itta",
+          "got": "quitta",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "quittaque",
+          "expected": "qu-itta-que",
+          "got": "quittaque",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "tlaxcalli",
+          "expected": "tlaxcal-li",
+          "got": "tlaxcalli",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "atl",
+          "expected": "a-tl",
+          "got": "atl",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "icalpan",
+          "expected": "i-cal-pan",
+          "got": "icalpan",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "tlatoque",
+          "expected": "tlato-que",
+          "got": "tlatoque",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "Mexico",
+          "expected": "Mexi-co",
+          "got": "mexico",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "Tenochtitlan",
+          "expected": "Tenoch-ti-tlan",
+          "got": "tenochtitlan",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "quimacaque",
+          "expected": "qui-maca-que",
+          "got": "quimacaque",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "nechmaca",
+          "expected": "nech-maca",
+          "got": "nechmaca",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "tlaqualli",
+          "expected": "tla-qua-l-li",
+          "got": "tlaqualli",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "ilhuicatl",
+          "expected": "ilhuica-tl",
+          "got": "ilhuicatl",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "ilhuicac",
+          "expected": "ilhuica-c",
+          "got": "ilhuicac",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "nonantzin",
+          "expected": "no-nan-tzin",
+          "got": "nonantzin",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "tetlazohtlaliztli",
+          "expected": "te-tlazohtla-liz-tli",
+          "got": "tetlazohtlaliztli",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "cihuatl",
+          "expected": "cihua-tl",
+          "got": "cihuatl",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "tlatoani",
+          "expected": "tlatoa-ni",
+          "got": "tlatoani",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        }
+      ]
+    },
+    "rules_only": {
+      "n": 52,
+      "top1": 0.154,
+      "top3": 0.615,
+      "stem_top1": 0.154,
+      "errors": [
+        {
+          "word": "niquitta",
+          "expected": "ni-qu-itta",
+          "got": "ni-quitta",
+          "correct": false,
+          "in_top3": false,
+          "split": "dev"
+        },
+        {
+          "word": "nocal",
+          "expected": "no-cal",
+          "got": "nocal",
+          "correct": false,
+          "in_top3": true,
+          "split": "dev"
+        },
+        {
+          "word": "calco",
+          "expected": "cal-co",
+          "got": "calco",
+          "correct": false,
+          "in_top3": true,
+          "split": "dev"
+        },
+        {
+          "word": "calli",
+          "expected": "cal-li",
+          "got": "calli",
+          "correct": false,
+          "in_top3": true,
+          "split": "dev"
+        },
+        {
+          "word": "tlacatl",
+          "expected": "tlaca-tl",
+          "got": "tlacatl",
+          "correct": false,
+          "in_top3": true,
+          "split": "dev"
+        },
+        {
+          "word": "nicchihua",
+          "expected": "ni-c-chihua",
+          "got": "ni-cchihua",
+          "correct": false,
+          "in_top3": false,
+          "split": "dev"
+        },
+        {
+          "word": "onicchiuh",
+          "expected": "o-ni-c-chiuh",
+          "got": "on-icchiuh",
+          "correct": false,
+          "in_top3": false,
+          "split": "dev"
+        },
+        {
+          "word": "tlachihualli",
+          "expected": "tla-chihua-l-li",
+          "got": "tla-chihualli",
+          "correct": false,
+          "in_top3": false,
+          "split": "dev"
+        },
+        {
+          "word": "itoca",
+          "expected": "i-toca",
+          "got": "itoca",
+          "correct": false,
+          "in_top3": true,
+          "split": "dev"
+        },
+        {
+          "word": "mochiuh",
+          "expected": "mo-chiuh",
+          "got": "mochiuh",
+          "correct": false,
+          "in_top3": true,
+          "split": "dev"
+        },
+        {
+          "word": "omoteneuh",
+          "expected": "o-mo-teneuh",
+          "got": "o-moteneuh",
+          "correct": false,
+          "in_top3": true,
+          "split": "dev"
+        },
+        {
+          "word": "nitlacua",
+          "expected": "ni-tla-cua",
+          "got": "ni-tlacua",
+          "correct": false,
+          "in_top3": false,
+          "split": "dev"
+        },
+        {
+          "word": "niquitohua",
+          "expected": "ni-qu-itohua",
+          "got": "ni-quitohua",
+          "correct": false,
+          "in_top3": false,
+          "split": "dev"
+        },
+        {
+          "word": "tlahtohuani",
+          "expected": "tlahtohua-ni",
+          "got": "tlah-tohuani",
+          "correct": false,
+          "in_top3": true,
+          "split": "dev"
+        },
+        {
+          "word": "noxochiuh",
+          "expected": "no-xochi-uh",
+          "got": "no-xochiuh",
+          "correct": false,
+          "in_top3": false,
+          "split": "dev"
+        },
+        {
+          "word": "tlalticpac",
+          "expected": "tlal-ti-cpac",
+          "got": "tlalt-icpac",
+          "correct": false,
+          "in_top3": false,
+          "split": "dev"
+        },
+        {
+          "word": "quichiuh",
+          "expected": "qui-chiuh",
+          "got": "quichiuh",
+          "correct": false,
+          "in_top3": true,
+          "split": "dev"
+        },
+        {
+          "word": "mitoa",
+          "expected": "m-itoa",
+          "got": "mitoa",
+          "correct": false,
+          "in_top3": true,
+          "split": "dev"
+        },
+        {
+          "word": "nimitztlazohtla",
+          "expected": "ni-mitz-tlazohtla",
+          "got": "ni-mitztlazohtla",
+          "correct": false,
+          "in_top3": false,
+          "split": "dev"
+        },
+        {
+          "word": "tinechitta",
+          "expected": "ti-nech-itta",
+          "got": "ti-nechitta",
+          "correct": false,
+          "in_top3": false,
+          "split": "dev"
+        },
+        {
+          "word": "xochitl",
+          "expected": "xochi-tl",
+          "got": "xochitl",
+          "correct": false,
+          "in_top3": true,
+          "split": "dev"
+        },
+        {
+          "word": "nocuic",
+          "expected": "no-cuic",
+          "got": "nocuic",
+          "correct": false,
+          "in_top3": true,
+          "split": "dev"
+        },
+        {
+          "word": "tlalli",
+          "expected": "tlal-li",
+          "got": "tlalli",
+          "correct": false,
+          "in_top3": true,
+          "split": "dev"
+        },
+        {
+          "word": "nicochiz",
+          "expected": "ni-cochi-z",
+          "got": "ni-cochiz",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "quitoa",
+          "expected": "qu-itoa",
+          "got": "quitoa",
+          "correct": false,
+          "in_top3": true,
+          "split": "test"
+        },
+        {
+          "word": "quitoque",
+          "expected": "qu-ito-que",
+          "got": "quito-que",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "tepetl",
+          "expected": "tepe-tl",
+          "got": "tepetl",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "ytoca",
+          "expected": "y-toca",
+          "got": "ytoca",
+          "correct": false,
+          "in_top3": true,
+          "split": "test"
+        },
+        {
+          "word": "ichan",
+          "expected": "i-chan",
+          "got": "ichan",
+          "correct": false,
+          "in_top3": true,
+          "split": "test"
+        },
+        {
+          "word": "nochan",
+          "expected": "no-chan",
+          "got": "nochan",
+          "correct": false,
+          "in_top3": true,
+          "split": "test"
+        },
+        {
+          "word": "tochan",
+          "expected": "to-chan",
+          "got": "tochan",
+          "correct": false,
+          "in_top3": true,
+          "split": "test"
+        },
+        {
+          "word": "quitta",
+          "expected": "qu-itta",
+          "got": "quitta",
+          "correct": false,
+          "in_top3": true,
+          "split": "test"
+        },
+        {
+          "word": "quittaque",
+          "expected": "qu-itta-que",
+          "got": "quitta-que",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "tlaxcalli",
+          "expected": "tlaxcal-li",
+          "got": "tla-xcalli",
+          "correct": false,
+          "in_top3": true,
+          "split": "test"
+        },
+        {
+          "word": "atl",
+          "expected": "a-tl",
+          "got": "atl",
+          "correct": false,
+          "in_top3": true,
+          "split": "test"
+        },
+        {
+          "word": "icalpan",
+          "expected": "i-cal-pan",
+          "got": "ical-pan",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "tlatoque",
+          "expected": "tlato-que",
+          "got": "tla-toque",
+          "correct": false,
+          "in_top3": true,
+          "split": "test"
+        },
+        {
+          "word": "Tenochtitlan",
+          "expected": "Tenoch-ti-tlan",
+          "got": "tenoch-titlan",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "quimacaque",
+          "expected": "qui-maca-que",
+          "got": "quimaca-que",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "tlaqualli",
+          "expected": "tla-qua-l-li",
+          "got": "tla-qualli",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "nonantzin",
+          "expected": "no-nan-tzin",
+          "got": "nonan-tzin",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "tetlazohtlaliztli",
+          "expected": "te-tlazohtla-liz-tli",
+          "got": "tetlazohtlaliz-tli",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "cihuatl",
+          "expected": "cihua-tl",
+          "got": "cihuatl",
+          "correct": false,
+          "in_top3": true,
+          "split": "test"
+        },
+        {
+          "word": "tlatoani",
+          "expected": "tlatoa-ni",
+          "got": "tla-toani",
+          "correct": false,
+          "in_top3": true,
+          "split": "test"
+        }
+      ]
+    },
+    "rules+dictionary": {
+      "n": 52,
+      "top1": 0.385,
+      "top3": 0.75,
+      "stem_top1": 0.385,
+      "errors": [
+        {
+          "word": "tlacatl",
+          "expected": "tlaca-tl",
+          "got": "tlacatl",
+          "correct": false,
+          "in_top3": true,
+          "split": "dev"
+        },
+        {
+          "word": "nicchihua",
+          "expected": "ni-c-chihua",
+          "got": "ni-cchihua",
+          "correct": false,
+          "in_top3": false,
+          "split": "dev"
+        },
+        {
+          "word": "onicchiuh",
+          "expected": "o-ni-c-chiuh",
+          "got": "on-icchiuh",
+          "correct": false,
+          "in_top3": false,
+          "split": "dev"
+        },
+        {
+          "word": "tlachihualli",
+          "expected": "tla-chihua-l-li",
+          "got": "tla-chihualli",
+          "correct": false,
+          "in_top3": false,
+          "split": "dev"
+        },
+        {
+          "word": "itoca",
+          "expected": "i-toca",
+          "got": "itoca",
+          "correct": false,
+          "in_top3": true,
+          "split": "dev"
+        },
+        {
+          "word": "mochiuh",
+          "expected": "mo-chiuh",
+          "got": "mochiuh",
+          "correct": false,
+          "in_top3": true,
+          "split": "dev"
+        },
+        {
+          "word": "omoteneuh",
+          "expected": "o-mo-teneuh",
+          "got": "o-moteneuh",
+          "correct": false,
+          "in_top3": true,
+          "split": "dev"
+        },
+        {
+          "word": "nitlacua",
+          "expected": "ni-tla-cua",
+          "got": "ni-tlacua",
+          "correct": false,
+          "in_top3": false,
+          "split": "dev"
+        },
+        {
+          "word": "niquitohua",
+          "expected": "ni-qu-itohua",
+          "got": "ni-quitohua",
+          "correct": false,
+          "in_top3": false,
+          "split": "dev"
+        },
+        {
+          "word": "tlahtohuani",
+          "expected": "tlahtohua-ni",
+          "got": "tlah-tohuani",
+          "correct": false,
+          "in_top3": true,
+          "split": "dev"
+        },
+        {
+          "word": "quichiuh",
+          "expected": "qui-chiuh",
+          "got": "quichiuh",
+          "correct": false,
+          "in_top3": true,
+          "split": "dev"
+        },
+        {
+          "word": "mitoa",
+          "expected": "m-itoa",
+          "got": "mitoa",
+          "correct": false,
+          "in_top3": true,
+          "split": "dev"
+        },
+        {
+          "word": "nimitztlazohtla",
+          "expected": "ni-mitz-tlazohtla",
+          "got": "ni-mitztlazohtla",
+          "correct": false,
+          "in_top3": false,
+          "split": "dev"
+        },
+        {
+          "word": "quimaca",
+          "expected": "qui-maca",
+          "got": "qui-m-aca",
+          "correct": false,
+          "in_top3": true,
+          "split": "dev"
+        },
+        {
+          "word": "nicochiz",
+          "expected": "ni-cochi-z",
+          "got": "ni-cochiz",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "quitoa",
+          "expected": "qu-itoa",
+          "got": "quitoa",
+          "correct": false,
+          "in_top3": true,
+          "split": "test"
+        },
+        {
+          "word": "quitoque",
+          "expected": "qu-ito-que",
+          "got": "quito-que",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "ytoca",
+          "expected": "y-toca",
+          "got": "ytoca",
+          "correct": false,
+          "in_top3": true,
+          "split": "test"
+        },
+        {
+          "word": "ichan",
+          "expected": "i-chan",
+          "got": "ichan",
+          "correct": false,
+          "in_top3": true,
+          "split": "test"
+        },
+        {
+          "word": "nochan",
+          "expected": "no-chan",
+          "got": "nochan",
+          "correct": false,
+          "in_top3": true,
+          "split": "test"
+        },
+        {
+          "word": "tochan",
+          "expected": "to-chan",
+          "got": "tochan",
+          "correct": false,
+          "in_top3": true,
+          "split": "test"
+        },
+        {
+          "word": "tlaxcalli",
+          "expected": "tlaxcal-li",
+          "got": "tla-xcalli",
+          "correct": false,
+          "in_top3": true,
+          "split": "test"
+        },
+        {
+          "word": "atl",
+          "expected": "a-tl",
+          "got": "atl",
+          "correct": false,
+          "in_top3": true,
+          "split": "test"
+        },
+        {
+          "word": "tlatoque",
+          "expected": "tlato-que",
+          "got": "tla-toque",
+          "correct": false,
+          "in_top3": true,
+          "split": "test"
+        },
+        {
+          "word": "Tenochtitlan",
+          "expected": "Tenoch-ti-tlan",
+          "got": "tenoch-titlan",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "quimacaque",
+          "expected": "qui-maca-que",
+          "got": "qui-m-aca-que",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "nechmaca",
+          "expected": "nech-maca",
+          "got": "nech-m-aca",
+          "correct": false,
+          "in_top3": true,
+          "split": "test"
+        },
+        {
+          "word": "tlaqualli",
+          "expected": "tla-qua-l-li",
+          "got": "tla-qualli",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "nonantzin",
+          "expected": "no-nan-tzin",
+          "got": "nonan-tzin",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "tetlazohtlaliztli",
+          "expected": "te-tlazohtla-liz-tli",
+          "got": "tetlazohtlaliz-tli",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "cihuatl",
+          "expected": "cihua-tl",
+          "got": "cihuatl",
+          "correct": false,
+          "in_top3": true,
+          "split": "test"
+        },
+        {
+          "word": "tlatoani",
+          "expected": "tlatoa-ni",
+          "got": "tla-toani",
+          "correct": false,
+          "in_top3": true,
+          "split": "test"
+        }
+      ]
+    },
+    "rules+corpus_em": {
+      "n": 52,
+      "top1": 0.75,
+      "top3": 0.923,
+      "stem_top1": 0.712,
+      "errors": [
+        {
+          "word": "tlachihualli",
+          "expected": "tla-chihua-l-li",
+          "got": "tlachihual-li",
+          "correct": false,
+          "in_top3": true,
+          "split": "dev"
+        },
+        {
+          "word": "nitlacua",
+          "expected": "ni-tla-cua",
+          "got": "ni-tlacua",
+          "correct": false,
+          "in_top3": true,
+          "split": "dev"
+        },
+        {
+          "word": "niquitohua",
+          "expected": "ni-qu-itohua",
+          "got": "ni-qui-tohua",
+          "correct": false,
+          "in_top3": true,
+          "split": "dev"
+        },
+        {
+          "word": "mitoa",
+          "expected": "m-itoa",
+          "got": "mitoa",
+          "correct": false,
+          "in_top3": true,
+          "split": "dev"
+        },
+        {
+          "word": "tlalli",
+          "expected": "tlal-li",
+          "got": "tlalli",
+          "correct": false,
+          "in_top3": true,
+          "split": "dev"
+        },
+        {
+          "word": "ticochi",
+          "expected": "ti-cochi",
+          "got": "ti-c-ochi",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "nicochiz",
+          "expected": "ni-cochi-z",
+          "got": "ni-c-ochi-z",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "quitoa",
+          "expected": "qu-itoa",
+          "got": "qui-toa",
+          "correct": false,
+          "in_top3": true,
+          "split": "test"
+        },
+        {
+          "word": "quitoque",
+          "expected": "qu-ito-que",
+          "got": "quito-que",
+          "correct": false,
+          "in_top3": true,
+          "split": "test"
+        },
+        {
+          "word": "atl",
+          "expected": "a-tl",
+          "got": "atl",
+          "correct": false,
+          "in_top3": true,
+          "split": "test"
+        },
+        {
+          "word": "Tenochtitlan",
+          "expected": "Tenoch-ti-tlan",
+          "got": "tenoch-titlan",
+          "correct": false,
+          "in_top3": true,
+          "split": "test"
+        },
+        {
+          "word": "tlaqualli",
+          "expected": "tla-qua-l-li",
+          "got": "tla-qual-li",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "tetlazohtlaliztli",
+          "expected": "te-tlazohtla-liz-tli",
+          "got": "tetlazohtlaliz-tli",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        }
+      ]
+    },
+    "full (rules+dictionary+corpus_em)": {
+      "n": 52,
+      "top1": 0.712,
+      "top3": 0.923,
+      "stem_top1": 0.692,
+      "errors": [
+        {
+          "word": "tlachihualli",
+          "expected": "tla-chihua-l-li",
+          "got": "tlachihual-li",
+          "correct": false,
+          "in_top3": true,
+          "split": "dev"
+        },
+        {
+          "word": "nitlacua",
+          "expected": "ni-tla-cua",
+          "got": "ni-tlacua",
+          "correct": false,
+          "in_top3": true,
+          "split": "dev"
+        },
+        {
+          "word": "niquitohua",
+          "expected": "ni-qu-itohua",
+          "got": "ni-qui-tohua",
+          "correct": false,
+          "in_top3": true,
+          "split": "dev"
+        },
+        {
+          "word": "mitoa",
+          "expected": "m-itoa",
+          "got": "mitoa",
+          "correct": false,
+          "in_top3": true,
+          "split": "dev"
+        },
+        {
+          "word": "quimaca",
+          "expected": "qui-maca",
+          "got": "qui-m-aca",
+          "correct": false,
+          "in_top3": true,
+          "split": "dev"
+        },
+        {
+          "word": "ticochi",
+          "expected": "ti-cochi",
+          "got": "ti-c-ochi",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "nicochiz",
+          "expected": "ni-cochi-z",
+          "got": "ni-c-ochi-z",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "quitoa",
+          "expected": "qu-itoa",
+          "got": "qui-toa",
+          "correct": false,
+          "in_top3": true,
+          "split": "test"
+        },
+        {
+          "word": "quitoque",
+          "expected": "qu-ito-que",
+          "got": "quito-que",
+          "correct": false,
+          "in_top3": true,
+          "split": "test"
+        },
+        {
+          "word": "atl",
+          "expected": "a-tl",
+          "got": "atl",
+          "correct": false,
+          "in_top3": true,
+          "split": "test"
+        },
+        {
+          "word": "Tenochtitlan",
+          "expected": "Tenoch-ti-tlan",
+          "got": "tenoch-titlan",
+          "correct": false,
+          "in_top3": true,
+          "split": "test"
+        },
+        {
+          "word": "quimacaque",
+          "expected": "qui-maca-que",
+          "got": "qui-m-aca-que",
+          "correct": false,
+          "in_top3": true,
+          "split": "test"
+        },
+        {
+          "word": "nechmaca",
+          "expected": "nech-maca",
+          "got": "nech-m-aca",
+          "correct": false,
+          "in_top3": true,
+          "split": "test"
+        },
+        {
+          "word": "tlaqualli",
+          "expected": "tla-qua-l-li",
+          "got": "tla-qual-li",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        },
+        {
+          "word": "tetlazohtlaliztli",
+          "expected": "te-tlazohtla-liz-tli",
+          "got": "tetlazohtlaliz-tli",
+          "correct": false,
+          "in_top3": false,
+          "split": "test"
+        }
+      ]
+    }
+  },
+  "coverage": {
+    "tokens": 135288,
+    "types": 26396,
+    "exact_dictionary_tokens": 0.2029,
+    "analyzer_linked_tokens": 0.4278,
+    "analyzer_explained_tokens": 0.8369,
+    "exact_dictionary_types": 0.0077,
+    "analyzer_linked_types": 0.0546,
+    "definitions": {
+      "exact": "la palabra completa, normalizada, coincide con una forma del diccionario",
+      "linked": "el mejor análisis enlaza la raíz con una entrada o con la tabla de partículas",
+      "explained": "enlazada, o con al menos un afijo identificado"
+    }
+  },
+  "concordance": {
+    "entries_with_hits": 125,
+    "passages_exact": 3493,
+    "passages_stem": 6656,
+    "entries_gaining": 108,
+    "entries_losing": 3,
+    "passages_only_exact": 4,
+    "median_gain": 2,
+    "top_gains": [
+      {
+        "stem": "iwan",
+        "written": [
+          "ihuan",
+          "iuan"
+        ],
+        "exact": 172,
+        "stem_index": 1115,
+        "only_stem": 943,
+        "only_exact": 0
+      },
+      {
+        "stem": "xiwi",
+        "written": [
+          "xiuitl"
+        ],
+        "exact": 176,
+        "stem_index": 1075,
+        "only_stem": 899,
+        "only_exact": 0
+      },
+      {
+        "stem": "itta",
+        "written": [
+          "itta"
+        ],
+        "exact": 6,
+        "stem_index": 133,
+        "only_stem": 127,
+        "only_exact": 0
+      },
+      {
+        "stem": "yewa",
+        "written": [
+          "yehua",
+          "yeua"
+        ],
+        "exact": 31,
+        "stem_index": 125,
+        "only_stem": 94,
+        "only_exact": 0
+      },
+      {
+        "stem": "tepe",
+        "written": [
+          "tepetl"
+        ],
+        "exact": 44,
+        "stem_index": 136,
+        "only_stem": 92,
+        "only_exact": 0
+      },
+      {
+        "stem": "onka",
+        "written": [
+          "onca"
+        ],
+        "exact": 70,
+        "stem_index": 155,
+        "only_stem": 85,
+        "only_exact": 0
+      },
+      {
+        "stem": "masewal",
+        "written": [
+          "maceualli"
+        ],
+        "exact": 14,
+        "stem_index": 96,
+        "only_stem": 82,
+        "only_exact": 0
+      },
+      {
+        "stem": "onkan",
+        "written": [
+          "oncan"
+        ],
+        "exact": 838,
+        "stem_index": 907,
+        "only_stem": 69,
+        "only_exact": 0
+      },
+      {
+        "stem": "nakayo",
+        "written": [
+          "nacaayotl",
+          "nacayo",
+          "nacayotl"
+        ],
+        "exact": 2,
+        "stem_index": 50,
+        "only_stem": 48,
+        "only_exact": 0
+      },
+      {
+        "stem": "inteč",
+        "written": [
+          "intech"
+        ],
+        "exact": 35,
+        "stem_index": 82,
+        "only_stem": 47,
+        "only_exact": 0
+      },
+      {
+        "stem": "toto",
+        "written": [
+          "tototl"
+        ],
+        "exact": 18,
+        "stem_index": 62,
+        "only_stem": 44,
+        "only_exact": 0
+      },
+      {
+        "stem": "qawi",
+        "written": [
+          "cuahuitl",
+          "quauitl"
+        ],
+        "exact": 13,
+        "stem_index": 53,
+        "only_stem": 40,
+        "only_exact": 0
+      }
+    ],
+    "review_sample": "reports/morphology-review/stem-hits-sample.csv",
+    "caveat": "Más pasajes no implica más aciertos: la muestra de revisión estima la precisión de los nuevos hallazgos."
+  },
+  "gloss_hints": {
+    "meta": {
+      "version": "gloss-hints-ibm1-v1",
+      "method": "IBM Model 1 (EM), raíz náhuatl → palabra española, con palabra nula",
+      "iterations": 8,
+      "pairs": 5984,
+      "stems": 4443,
+      "min_support": 2,
+      "analyzer": "nah-morph-1"
+    },
+    "evaluation": {
+      "evaluable_entries": 111,
+      "results": {
+        "cooccurrence": {
+          "precision_at_1": 0.225,
+          "hit_at_3": 0.342
+        },
+        "dice": {
+          "precision_at_1": 0.207,
+          "hit_at_3": 0.306
+        },
+        "ibm1": {
+          "precision_at_1": 0.261,
+          "hit_at_3": 0.324
+        }
+      },
+      "examples": [
+        {
+          "stem": "xoči",
+          "entry": "xochitl",
+          "molina": "flor",
+          "ibm1": [
+            "flor"
+          ],
+          "dice": [
+            "flor",
+            "canto",
+            "tabaco"
+          ],
+          "cooccurrence": [
+            "flor",
+            "canto",
+            "tierra"
+          ]
+        },
+        {
+          "stem": "qawi",
+          "entry": "cuahuitl",
+          "molina": "árbol",
+          "ibm1": [
+            "arbol",
+            "piedra",
+            "madera"
+          ],
+          "dice": [
+            "arbol",
+            "piedra",
+            "palo"
+          ],
+          "cooccurrence": [
+            "piedra",
+            "arbol",
+            "casa"
+          ]
+        },
+        {
+          "stem": "xočiqawi",
+          "entry": "xochicuahuitl",
+          "molina": "árbol florido",
+          "ibm1": [
+            "arbol",
+            "pajaro",
+            "anda"
+          ],
+          "dice": [
+            "variado",
+            "cascabel",
+            "atabal"
+          ],
+          "cooccurrence": [
+            "arbol",
+            "pajaro",
+            "quetzal"
+          ]
+        },
+        {
+          "stem": "kal",
+          "entry": "calli",
+          "molina": "casa",
+          "ibm1": [
+            "casa",
+            "calli"
+          ],
+          "dice": [
+            "casa",
+            "calli",
+            "peso"
+          ],
+          "cooccurrence": [
+            "casa",
+            "calli",
+            "ano"
+          ]
+        },
+        {
+          "stem": "tonatiw",
+          "entry": "tonatiuh",
+          "molina": "sol",
+          "ibm1": [
+            "sol",
+            "hacia"
+          ],
+          "dice": [
+            "sol",
+            "hacia",
+            "oriente"
+          ],
+          "cooccurrence": [
+            "sol",
+            "hacia",
+            "casa"
+          ]
+        },
+        {
+          "stem": "meʦ",
+          "entry": "metztli",
+          "molina": "luna",
+          "ibm1": [
+            "mes",
+            "dia",
+            "luna"
+          ],
+          "dice": [
+            "mes",
+            "noventa",
+            "pregon"
+          ],
+          "cooccurrence": [
+            "dia",
+            "mes",
+            "ano"
+          ]
+        },
+        {
+          "stem": "itta",
+          "entry": "itta",
+          "molina": "ver",
+          "ibm1": [
+            "vio",
+            "ver",
+            "vieron"
+          ],
+          "dice": [
+            "vio",
+            "ver",
+            "vieron"
+          ],
+          "cooccurrence": [
+            "ver",
+            "bien",
+            "solo"
+          ]
+        },
+        {
+          "stem": "toč",
+          "entry": "tochtli",
+          "molina": "conejo",
+          "ibm1": [
+            "tochtli"
+          ],
+          "dice": [
+            "tochtli",
+            "sucedio",
+            "ano"
+          ],
+          "cooccurrence": [
+            "tochtli",
+            "ano",
+            "sucedio"
+          ]
+        },
+        {
+          "stem": "masa",
+          "entry": "mazatl",
+          "molina": "venado",
+          "ibm1": [
+            "venado",
+            "conejo",
+            "mazatl"
+          ],
+          "dice": [
+            "venado",
+            "conejo",
+            "ciervo"
+          ],
+          "cooccurrence": [
+            "venado",
+            "conejo",
+            "flecha"
+          ]
+        },
+        {
+          "stem": "toto",
+          "entry": "tototl",
+          "molina": "ave",
+          "ibm1": [
+            "ave",
+            "nuestra",
+            "ponemo"
+          ],
+          "dice": [
+            "ponemo",
+            "ave",
+            "firma"
+          ],
+          "cooccurrence": [
+            "nuestro",
+            "nombre",
+            "ave"
+          ]
+        },
+        {
+          "stem": "mič",
+          "entry": "michin",
+          "molina": "pez",
+          "ibm1": [
+            "hacer"
+          ],
+          "dice": [
+            "hacer",
+            "luego"
+          ],
+          "cooccurrence": [
+            "luego",
+            "hacer",
+            "pudo"
+          ]
+        },
+        {
+          "stem": "koa",
+          "entry": "coatl",
+          "molina": "serpiente",
+          "ibm1": [
+            "serpiente",
+            "coatlan",
+            "comprar"
+          ],
+          "dice": [
+            "serpiente",
+            "coatlan",
+            "comprar"
+          ],
+          "cooccurrence": [
+            "casa",
+            "tierra",
+            "testigo"
+          ]
+        },
+        {
+          "stem": "λal",
+          "entry": "tlalli",
+          "molina": "tierra",
+          "ibm1": [
+            "tierra"
+          ],
+          "dice": [
+            "tierra",
+            "casa",
+            "testigo"
+          ],
+          "cooccurrence": [
+            "tierra",
+            "casa",
+            "ano"
+          ]
+        },
+        {
+          "stem": "eka",
+          "entry": "ehecatl",
+          "molina": "viento",
+          "ibm1": [
+            "ecatzin",
+            "viento"
+          ],
+          "dice": [
+            "ecatzin",
+            "viento",
+            "temillotzin"
+          ],
+          "cooccurrence": [
+            "senor",
+            "ecatzin",
+            "viento"
+          ]
+        },
+        {
+          "stem": "siλal",
+          "entry": "citlalin",
+          "molina": "estrella",
+          "ibm1": [
+            "estrella",
+            "humeo"
+          ],
+          "dice": [
+            "estrella",
+            "humeo",
+            "citlal"
+          ],
+          "cooccurrence": [
+            "estrella",
+            "ano",
+            "alla"
+          ]
+        }
+      ],
+      "definition": "Acierto si una palabra propuesta (normalizada) aparece en la definición de Molina de esa entrada. Molina es independiente del corpus paralelo; la coincidencia ortográfica del s. XVI es aproximada."
+    }
+  },
+  "seconds": 62.9
+}

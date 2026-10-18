@@ -7,18 +7,18 @@ Implementado el 30 de septiembre de 2026. Sustituye la investigación manual rep
 Desde la raíz del proyecto:
 
 ```bash
-.venv/bin/python -m nahuatl_local.editorial_pipeline run --release-id batch-009-v11
+.venv/bin/python -m nahuatl_local.editorial_pipeline run --release-id batch-010-v12
 ```
 
 Este lote ya está preparado y cotejado. El comando vuelve a comprobar la evidencia y el catálogo, sin duplicar ni publicar registros. Para incorporarlo, detener temporalmente el servidor y ejecutar:
 
 ```bash
-.venv/bin/python -m nahuatl_local.editorial_pipeline run --release-id batch-009-v11 --apply
+.venv/bin/python -m nahuatl_local.editorial_pipeline run --release-id batch-010-v12 --apply
 ```
 
 Después, reiniciar la plataforma. `--apply` añade el lote a la base local y a la distribución, con un respaldo 0600 y un informe de preservación. No requiere investigación manual por palabra. Si el lote ya está publicado, devuelve `already_published`; las instalaciones nuevas lo cargan sin reemplazar ediciones locales.
 
-Para otro lote, usar un ID nuevo, por ejemplo `batch-009-v11`. `run` reúne **preparar → cotejar → ensamblar → publicar si se indicó `--apply`**. Por defecto reutiliza la caché; `--fetch` descarga solo páginas ausentes. Las salidas quedan en `reports/editorial-pipeline/ID/` y `editorial/ID-{source-check,accepted}.json`. Un lote ya preparado es inmutable; nuevos datos requieren otro ID.
+Para otro lote, usar un ID nuevo, por ejemplo `batch-010-v12`. `run` reúne **preparar → cotejar → ensamblar → publicar si se indicó `--apply`**. Por defecto reutiliza la caché; `--fetch` descarga solo páginas ausentes. Las salidas quedan en `reports/editorial-pipeline/ID/` y `editorial/ID-{source-check,accepted}.json`. Un lote ya preparado es inmutable; nuevos datos requieren otro ID.
 
 El cotejo automatizado comprueba transcripciones literales y apoyos contextuales explícitos. **No acredita análisis lingüístico, lectura completa del glifo ni cotejo primario.** Las fichas mantienen estos estados pendientes. Las conexiones forma→acepción dentro de un pasaje y las nuevas lecciones permanecen en los paquetes editoriales para revisión.
 
@@ -120,13 +120,20 @@ El importador genérico de la plataforma sigue disponible para aportaciones loca
 
 ## Primera publicación comprobada
 
-[Informe batch-007-v9](../reports/PIPELINE_PUBLICACION_2026-09-30.md): se incorporaron 50 acepciones, sus 50 formas y 39 apoyos visuales contextuales tras cotejo automático de alcance limitado. Se preservaron las 1.178 entidades previas y las tablas privadas. El catálogo actual tiene 1.317 entidades: 575 acepciones, 578 formas y 140 fichas glíficas. Hay 139 acepciones con imagen y 436 pendientes de evidencia; las imágenes siguen siendo 24 referencias documentales distintas.
+Lote batch-007-v9 (paquete en `reports/editorial-pipeline/batch-007/`): se incorporaron 50 acepciones, sus 50 formas y 39 apoyos visuales contextuales tras cotejo automático de alcance limitado. Se preservaron las 1.178 entidades previas y las tablas privadas. El catálogo actual tiene 1.317 entidades: 575 acepciones, 578 formas y 140 fichas glíficas. Hay 139 acepciones con imagen y 436 pendientes de evidencia; las imágenes siguen siendo 24 referencias documentales distintas.
 
 La [preparación batch-007](../reports/editorial-pipeline/batch-007/README.md) conserva el recibo original de las ocho consultas agrupadas: 1.432 filas, 374 entradas elegibles, 50 seleccionadas. La primera página del diccionario conserva las 24 palabras representativas; el resto sigue el alfabeto náhuatl. No se modificaron los 12 pasajes ni sus lecciones.
 
 [Siguiente lote batch-009-v11](../reports/editorial-pipeline/batch-009-v11/README.md): 50 entradas, 4 referencias contextuales, 100 concordancias y paquetes de las seis lecciones / 36 tareas. Está cotejado y ensamblado, **sin publicar**. Excluidas las formas ya incorporadas, las mismas fuentes ofrecen 322 entradas elegibles, 50 seleccionadas y 272 diferidas por límite. Su preparación y cotejo usaron cero red y cero LLM.
 
-La [suite completa](../reports/tests-pipeline-release-full-2026-09-30.txt) ejecutó 175 pruebas: OK, con una falla esperada previamente registrada. Incluye las ocho pruebas de preparación/ensamblado y siete de cotejo/publicación: caché alterada, alcance declarado, preservación de perfiles y ediciones, nueva instalación, integridad de hashes, repetición y recuperación tras interrupción. Las aceptaciones sintéticas solo existen en bases/carpetas temporales. [Pruebas de interfaz](../reports/platform-ui-pipeline-release-2026-09-30.txt).
+Las pruebas `tests/test_editorial_pipeline.py` y `tests/test_editorial_release.py` incluyen las ocho pruebas de preparación/ensamblado y siete de cotejo/publicación: caché alterada, alcance declarado, preservación de perfiles y ediciones, nueva instalación, integridad de hashes, repetición y recuperación tras interrupción. Las aceptaciones sintéticas solo existen en bases/carpetas temporales.
 
 
 La ampliación educativa lecturas-002 cambió el hash de las lecciones. La preparación histórica batch-008-v10 se conserva pero su ensamblado quedó obsoleto; batch-009-v11 la sustituye con los paquetes actuales. El mecanismo rechaza la evidencia vieja en lugar de aplicarla silenciosamente. Para añadir recorridos con pasajes seleccionados y claves exactas, usar el [ensamblador de lecturas](LECTURAS_PIPELINE.md).
+
+
+La mejora de lectura y comprensión del 7 de octubre cambió otra vez el hash de `corpus/learning-v1.json`. `batch-009-v11` se conserva como preparación histórica; no publicarlo contra la selección actual. Los ejemplos de comandos usan un ID nuevo (`batch-010-v12`), todavía sin preparar.
+
+## Diccionario pictográfico · Amoxcalli
+
+La consulta **Glifos** añade un índice documental separado del léxico didáctico: apariciones, zonas, elementos y valores por contexto. No convierte referencias temáticas previas en componentes ni añade sus datos al entrenamiento. [Modelo, lote piloto y comandos de ampliación](DICCIONARIO_PICTOGRAFICO.md). El nombre visible es Amoxcalli; las claves técnicas antiguas conservan compatibilidad y progreso.

@@ -8,6 +8,9 @@ from nahuatl_local.corpus import CorpusStore
 from nahuatl_local.learning import Learning
 from nahuatl_local.research import Archive
 
+# Ediciones históricas: se comprueban contra la selección anterior a la práctica v2 (test_lesson_builder cubre v2).
+PRE_PRACTICA = ROOT / 'tests/fixtures/learning/before-practica-2026-10-16.json'
+
 
 class LearningTests(unittest.TestCase):
     @classmethod
@@ -30,7 +33,7 @@ class LearningTests(unittest.TestCase):
 
     def test_selected_passages_preserve_original_and_only_classical(self):
         data=Learning(self.archive).catalog(self.store.public_records())
-        self.assertEqual(len(data['lessons']),6)
+        self.assertEqual(len(data['lessons']),12)
         ids=[]
         for lesson in data['lessons']:
             for e in lesson['examples']:
@@ -40,7 +43,7 @@ class LearningTests(unittest.TestCase):
                 for a in e['annotations']:
                     raw=e['passage']['nah'].encode('utf-16-le')
                     self.assertEqual(raw[a['start']*2:a['end']*2].decode('utf-16-le'),a['quote'])
-        self.assertEqual(len(set(ids)),24)
+        self.assertEqual(len(set(ids)),48)
         self.assertEqual(data['review_status'],'editorial_draft')
 
     def test_changed_source_mixed_variant_bad_span_and_answer_fail_closed(self):
@@ -51,6 +54,39 @@ class LearningTests(unittest.TestCase):
                  lambda d:d.update(variant='azz')]
         for change in changes:
             with self.subTest(change=change),self.assertRaises(ValueError):self.load_changed(change)
+
+    def test_complete_word_search_skips_earlier_internal_occurrence(self):
+        learning=Learning(self.archive)
+        lesson=next(l for l in learning.data['lessons'] if l['id']=='fuego-viento')
+        example=lesson['examples'][0]
+        row=self.archive.get(example['archive_id'])
+        annotation=example['annotations'][0]
+        self.assertEqual(row['id'],'axolotl-05345')
+        self.assertIn('tletlalito',row['nah'])
+        self.assertGreater(annotation['start'],row['nah'].index('tletlalito'))
+        raw=row['nah'].encode('utf-16-le')
+        self.assertEqual(raw[annotation['start']*2:annotation['end']*2].decode('utf-16-le'),'tletl')
+        # A preceding thematic annotation may end inside the first word. Searching
+        # the original string retains its left boundary and finds the later word.
+        def change(data):
+            e=next(l for l in data['lessons'] if l['id']=='fuego-viento')['examples'][0]
+            e['annotations'].insert(0,dict(quote='tle',sense_id='sense-tletl',relation='thematic',note='Synthetic boundary test.'))
+        changed=self.load_changed(change)
+        e=next(l for l in changed.data['lessons'] if l['id']=='fuego-viento')['examples'][0]
+        self.assertEqual(e['annotations'][1]['start'],annotation['start'])
+
+    def test_new_readings_preserve_every_existing_lesson_and_comprehension(self):
+        before=json.loads((ROOT/'tests/fixtures/learning/before-lecturas-003-2026-10-07.json').read_text())
+        current=json.loads(PRE_PRACTICA.read_text())
+        self.assertEqual(current['lessons'][:len(before['lessons'])],before['lessons'])
+        self.assertEqual([l['id'] for l in current['lessons'][6:]],
+                         ['casas-relatos','animales-relatos','piedra-lena','arboles-cerros','fuego-viento','sol-luna'])
+        for lesson in current['lessons'][6:]:
+            self.assertEqual(lesson['version'],1)
+            self.assertEqual(len(lesson['examples']),4)
+            for example in lesson['examples']:
+                q=example['comprehension'];row=self.archive.get(example['archive_id'])
+                self.assertIn(q['options'][q['answer']],row['es'])
 
     def test_private_or_withdrawn_dependency_hides_lesson(self):
         learning=Learning(self.archive)
@@ -107,9 +143,30 @@ class LearningTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'parte interna'):
             self.load_changed(lambda d:d['lessons'][0]['examples'][2]['annotations'][0].update(quote='xochitl',sense_id='sense-xochitl'))
 
+    def test_context_questions_quote_the_original_translation_and_keep_recognition(self):
+        before=json.loads((ROOT/'tests/fixtures/learning/before-reading-context-2026-10-07.json').read_text())
+        current=Learning(self.archive,PRE_PRACTICA).data
+        for old,new in zip(before['lessons'],current['lessons']):
+            self.assertEqual([(e['archive_id'],e['source_hash'],e['exercise']) for e in old['examples']],
+                             [(e['archive_id'],e['source_hash'],e['exercise']) for e in new['examples']])
+        aves=next(l for l in current['lessons'] if l['id']=='aves')
+        self.assertEqual((aves['version'],aves['practice_version']),(2,1))
+        for example in aves['examples']:
+            question=example['comprehension'];row=self.archive.get(example['archive_id'])
+            self.assertIn(question['options'][question['answer']],row['es'])
+            self.assertTrue(all(word in row['nah'] for word in example['explore_words']))
+        changes=[lambda e:e['comprehension'].update(answer=True),
+                 lambda e:e['comprehension'].update(options=['Una traducción inventada.','Otra invención.']),
+                 lambda e:e.update(explore_words=['palabra ausente']),
+                 lambda e:e.update(explore_words=[{}]),
+                 lambda e:e.update(comprehension=[])]
+        for change in changes:
+            with self.subTest(change=change),self.assertRaises(ValueError):
+                self.load_changed(lambda d:change(next(l for l in d['lessons'] if l['id']=='aves')['examples'][0]))
+
     def test_flor_update_is_append_only_preserves_passages_and_other_lessons(self):
-        original=json.loads((ROOT/'reports/learning-audit-before-flor-v2/learning-v1.json').read_text())
-        current=Learning(self.archive).data
+        original=json.loads((ROOT/'tests/fixtures/learning/before-flor-v2.json').read_text())
+        current=Learning(self.archive,PRE_PRACTICA).data
         self.assertEqual(current['lessons'][0]['version'],2)
         for old,new in zip(original['lessons'],current['lessons']):
             self.assertEqual([(e['archive_id'],e['source_hash']) for e in old['examples']],
@@ -118,7 +175,7 @@ class LearningTests(unittest.TestCase):
         for lesson in current['lessons']:
             for example in lesson['examples']:
                 for a in example['annotations']:a.pop('start');a.pop('end')
-        snapshot=json.loads((ROOT/'reports/learning-before-expansion-2026-09-30/learning-v1.json').read_text())
+        snapshot=json.loads((ROOT/'tests/fixtures/learning/before-expansion-2026-09-30.json').read_text())
         self.assertEqual(snapshot['lessons'][1:],original['lessons'][1:])
         for old,new in zip(snapshot['lessons'],current['lessons']):
             self.assertEqual([e['exercise'] for e in old['examples']],[e['exercise'] for e in new['examples']])

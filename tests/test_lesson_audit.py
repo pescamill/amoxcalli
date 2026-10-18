@@ -25,8 +25,8 @@ class LessonAuditTests(unittest.TestCase):
 
     def test_inventory_distinguishes_images_from_recorded_primary_review(self):
         report=audit(Learning(self.archive),self.records)
-        self.assertEqual((report['lessons'],report['examples'],report['target_senses']),(6,24,12))
-        self.assertEqual(report['visual_coverage'],dict(target_meanings=12,with_image=12,with_recorded_primary_context=0))
+        self.assertEqual((report['lessons'],report['examples'],report['target_senses']),(12,48,20))
+        self.assertEqual(report['visual_coverage'],dict(target_meanings=20,with_image=20,with_recorded_primary_context=0))
         self.assertEqual({r['written'] for r in report['missing_annotated_forms']},{'NIQUITTA','xochitli','tlacuilolcalli'})
         ids=[f['id'] for f in report['findings']]
         self.assertEqual(len(ids),len(set(ids)))
@@ -34,7 +34,7 @@ class LessonAuditTests(unittest.TestCase):
         self.assertNotIn('batch-water-land',ids)
         self.assertGreater(len(report['works']),1)
         self.assertIn('word-sense-cuicatl-glyph-scope',ids)
-        self.assertEqual(sum(p['annotation_example_counts'].get('sense-metztli',0) for p in report['packets']),1)
+        self.assertEqual(sum(p['annotation_example_counts'].get('sense-metztli',0) for p in report['packets']),3)
 
     def test_custom_lesson_and_missing_dependency_are_audited_not_hidden(self):
         learning=Learning(self.archive)

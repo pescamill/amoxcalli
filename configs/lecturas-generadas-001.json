@@ -1,0 +1,964 @@
+{
+  "generated_by": {
+    "analyzer": "nah-morph-1",
+    "llm_calls": 0,
+    "module": "nahuatl_local.units",
+    "network_requests": 0,
+    "version": "units-gen-1"
+  },
+  "lesson_updates": [],
+  "lessons": [
+    {
+      "cover_glyph": "glyph-tepetl-mdz32r",
+      "examples": [
+        {
+          "annotations": [
+            {
+              "note": "Palabra completa registrada en el diccionario: tepetl «cerro». La traducción del registro dice «cerros». Ayuda generada automáticamente; pendiente de revisión.",
+              "quote": "tepetl",
+              "relation": "full_word",
+              "sense_id": "sense-tepetl"
+            },
+            {
+              "note": "Palabra completa registrada en el diccionario: calli «casa». Ayuda generada automáticamente; pendiente de revisión.",
+              "quote": "calli",
+              "relation": "full_word",
+              "sense_id": "sense-calli"
+            }
+          ],
+          "archive_id": "axolotl-15030",
+          "cloze": {
+            "blank": "tepetl",
+            "distractors": [
+              "atl",
+              "calli"
+            ]
+          },
+          "comprehension": {
+            "answer": 1,
+            "explanation": "La traducción del archivo dice «cerros». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+            "kind": "meaning",
+            "options": [
+              "canto",
+              "cerros",
+              "agua"
+            ],
+            "question": "¿Qué palabra de la traducción corresponde a «tepetl»?"
+          },
+          "context": "Pasaje breve de Tercera Relación (Libro las ocho relaciones), elegido automáticamente porque reúne tepetl con 3 raíces del diccionario. Contexto pendiente de revisión.",
+          "explore_words": [
+            "tepetl"
+          ]
+        },
+        {
+          "annotations": [
+            {
+              "note": "Palabra completa registrada en el diccionario: tepetl «cerro». La traducción del registro dice «montaña». Ayuda generada automáticamente; pendiente de revisión.",
+              "quote": "tepetl",
+              "relation": "full_word",
+              "sense_id": "sense-tepetl"
+            }
+          ],
+          "archive_id": "axolotl-05538",
+          "cloze": {
+            "blank": "tepetl",
+            "distractors": [
+              "calli",
+              "cuicatl"
+            ]
+          },
+          "comprehension": {
+            "answer": 0,
+            "explanation": "La traducción del archivo dice «montaña». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+            "kind": "meaning",
+            "options": [
+              "montaña",
+              "tierra",
+              "casa"
+            ],
+            "question": "¿Qué palabra de la traducción corresponde a «tepetl»?"
+          },
+          "context": "Pasaje breve de La tinta negra y roja (antología de poesía náhuatl), elegido automáticamente porque reúne tepetl con 4 raíces del diccionario. Contexto pendiente de revisión.",
+          "explore_words": [
+            "tepetl"
+          ]
+        },
+        {
+          "annotations": [
+            {
+              "note": "Palabra completa registrada en el diccionario: tepetl «cerro». La traducción del registro dice «cerros». Ayuda generada automáticamente; pendiente de revisión.",
+              "quote": "tepetl",
+              "relation": "full_word",
+              "sense_id": "sense-tepetl"
+            }
+          ],
+          "archive_id": "axolotl-01443",
+          "cloze": {
+            "blank": "tepetl",
+            "distractors": [
+              "cuicatl",
+              "tlalli"
+            ]
+          },
+          "comprehension": {
+            "answer": 0,
+            "explanation": "La traducción del archivo dice «cerros». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+            "kind": "meaning",
+            "options": [
+              "cerros",
+              "casa",
+              "agua"
+            ],
+            "question": "¿Qué palabra de la traducción corresponde a «tepetl»?"
+          },
+          "context": "Pasaje breve de Vida económica de Tenochtitlan, elegido automáticamente porque reúne tepetl con 4 raíces del diccionario. Contexto pendiente de revisión.",
+          "explore_words": [
+            "tepetl"
+          ]
+        },
+        {
+          "annotations": [
+            {
+              "note": "Palabra completa registrada en el diccionario: tepetl «cerro». La traducción del registro dice «cerro». Ayuda generada automáticamente; pendiente de revisión.",
+              "quote": "tepetl",
+              "relation": "full_word",
+              "sense_id": "sense-tepetl"
+            }
+          ],
+          "archive_id": "axolotl-05025",
+          "cloze": {
+            "blank": "tepetl",
+            "distractors": [
+              "tlalli",
+              "tonatiuh"
+            ]
+          },
+          "comprehension": {
+            "answer": 1,
+            "explanation": "La traducción del archivo dice «cerro». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+            "kind": "meaning",
+            "options": [
+              "agua",
+              "cerro",
+              "casa"
+            ],
+            "question": "¿Qué palabra de la traducción corresponde a «tepetl»?"
+          },
+          "context": "Pasaje breve de Tercera Relación (Libro las ocho relaciones), elegido automáticamente porque reúne tepetl con 1 raíces del diccionario. Contexto pendiente de revisión.",
+          "explore_words": [
+            "tepetl"
+          ]
+        }
+      ],
+      "id": "gen-tepetl",
+      "minutes": 6,
+      "objective": "Leer tepetl «cerro» en cuatro pasajes breves que aún no estaban en las lecturas; cada uno la reúne con otras palabras del diccionario.",
+      "reading_tips": [
+        "Busca tepetl como palabra completa; el diccionario la registra como «cerro».",
+        "Las ayudas de esta lectura se generaron automáticamente desde el archivo y el analizador; están pendientes de revisión."
+      ],
+      "sense_ids": [
+        "sense-tepetl"
+      ],
+      "title": "Más pasajes con tepetl"
+    },
+    {
+      "cover_glyph": "glyph-calli",
+      "examples": [
+        {
+          "annotations": [
+            {
+              "note": "Palabra completa registrada en el diccionario: calli «casa». La traducción del registro dice «Casa». Ayuda generada automáticamente; pendiente de revisión.",
+              "quote": "calli",
+              "relation": "full_word",
+              "sense_id": "sense-calli"
+            }
+          ],
+          "archive_id": "axolotl-09353",
+          "cloze": {
+            "blank": "calli",
+            "distractors": [
+              "atl",
+              "cuicatl"
+            ]
+          },
+          "comprehension": {
+            "answer": 2,
+            "explanation": "La traducción del archivo dice «Casa». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+            "kind": "meaning",
+            "options": [
+              "agua",
+              "canto",
+              "Casa"
+            ],
+            "question": "¿Qué palabra de la traducción corresponde a «calli»?"
+          },
+          "context": "Pasaje breve de La tinta negra y roja (antología de poesía náhuatl), elegido automáticamente porque reúne calli con 6 raíces del diccionario. Contexto pendiente de revisión.",
+          "explore_words": [
+            "calli"
+          ]
+        },
+        {
+          "annotations": [
+            {
+              "note": "Palabra completa registrada en el diccionario: calli «casa». La traducción del registro dice «Casa». Ayuda generada automáticamente; pendiente de revisión.",
+              "quote": "Calli",
+              "relation": "full_word",
+              "sense_id": "sense-calli"
+            }
+          ],
+          "archive_id": "axolotl-07681",
+          "cloze": {
+            "blank": "Calli",
+            "distractors": [
+              "Cuicatl",
+              "Tepetl"
+            ]
+          },
+          "comprehension": {
+            "answer": 2,
+            "explanation": "La traducción del archivo dice «Casa». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+            "kind": "meaning",
+            "options": [
+              "canto",
+              "agua",
+              "Casa"
+            ],
+            "question": "¿Qué palabra de la traducción corresponde a «Calli»?"
+          },
+          "context": "Pasaje breve de Vida económica de Tenochtitlan, elegido automáticamente porque reúne calli con 5 raíces del diccionario. Contexto pendiente de revisión.",
+          "explore_words": [
+            "Calli"
+          ]
+        },
+        {
+          "annotations": [
+            {
+              "note": "Palabra completa registrada en el diccionario: calli «casa». La traducción del registro dice «casa». Ayuda generada automáticamente; pendiente de revisión.",
+              "quote": "calli",
+              "relation": "full_word",
+              "sense_id": "sense-calli"
+            },
+            {
+              "note": "Palabra completa registrada en el diccionario: tonatiuh «sol». Ayuda generada automáticamente; pendiente de revisión.",
+              "quote": "tonatiuh",
+              "relation": "full_word",
+              "sense_id": "sense-tonatiuh"
+            },
+            {
+              "note": "Palabra completa registrada en el diccionario: tonatiuh «sol». Ayuda generada automáticamente; pendiente de revisión.",
+              "quote": "tonatiuh",
+              "relation": "full_word",
+              "sense_id": "sense-tonatiuh"
+            }
+          ],
+          "archive_id": "axolotl-06117",
+          "cloze": {
+            "blank": "calli",
+            "distractors": [
+              "tepetl",
+              "tlalli"
+            ]
+          },
+          "comprehension": {
+            "answer": 1,
+            "explanation": "La traducción del archivo dice «casa». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+            "kind": "meaning",
+            "options": [
+              "canto",
+              "casa",
+              "agua"
+            ],
+            "question": "¿Qué palabra de la traducción corresponde a «calli»?"
+          },
+          "context": "Pasaje breve de Documentos nauas de la Ciudad de México del siglo XVI, elegido automáticamente porque reúne calli con 3 raíces del diccionario. Contexto pendiente de revisión.",
+          "explore_words": [
+            "calli"
+          ]
+        },
+        {
+          "annotations": [
+            {
+              "note": "Palabra completa registrada en el diccionario: calli «casa». La traducción del registro dice «casa». Ayuda generada automáticamente; pendiente de revisión.",
+              "quote": "calli",
+              "relation": "full_word",
+              "sense_id": "sense-calli"
+            }
+          ],
+          "archive_id": "axolotl-04818",
+          "cloze": {
+            "blank": "calli",
+            "distractors": [
+              "tlalli",
+              "tonatiuh"
+            ]
+          },
+          "comprehension": {
+            "answer": 0,
+            "explanation": "La traducción del archivo dice «casa». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+            "kind": "meaning",
+            "options": [
+              "casa",
+              "agua",
+              "canto"
+            ],
+            "question": "¿Qué palabra de la traducción corresponde a «calli»?"
+          },
+          "context": "Pasaje breve de Documentos nauas de la Ciudad de México del siglo XVI, elegido automáticamente porque reúne calli con 5 raíces del diccionario. Contexto pendiente de revisión.",
+          "explore_words": [
+            "calli"
+          ]
+        }
+      ],
+      "id": "gen-calli",
+      "minutes": 6,
+      "objective": "Leer calli «casa» en cuatro pasajes breves que aún no estaban en las lecturas; cada uno la reúne con otras palabras del diccionario.",
+      "reading_tips": [
+        "Busca calli como palabra completa; el diccionario la registra como «casa».",
+        "Las ayudas de esta lectura se generaron automáticamente desde el archivo y el analizador; están pendientes de revisión."
+      ],
+      "sense_ids": [
+        "sense-calli"
+      ],
+      "title": "Más pasajes con calli"
+    },
+    {
+      "cover_glyph": "glyph-atl",
+      "examples": [
+        {
+          "annotations": [
+            {
+              "note": "Palabra completa registrada en el diccionario: atl «agua». La traducción del registro dice «agua». Ayuda generada automáticamente; pendiente de revisión.",
+              "quote": "atl",
+              "relation": "full_word",
+              "sense_id": "sense-atl"
+            }
+          ],
+          "archive_id": "axolotl-12053",
+          "cloze": {
+            "blank": "atl",
+            "distractors": [
+              "calli",
+              "cuicatl"
+            ]
+          },
+          "comprehension": {
+            "answer": 1,
+            "explanation": "La traducción del archivo dice «agua». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+            "kind": "meaning",
+            "options": [
+              "casa",
+              "agua",
+              "canto"
+            ],
+            "question": "¿Qué palabra de la traducción corresponde a «atl»?"
+          },
+          "context": "Pasaje breve de Vida económica de Tenochtitlan, elegido automáticamente porque reúne atl con 9 raíces del diccionario. Contexto pendiente de revisión.",
+          "explore_words": [
+            "atl"
+          ]
+        },
+        {
+          "annotations": [
+            {
+              "note": "Palabra completa registrada en el diccionario: calli «casa». Ayuda generada automáticamente; pendiente de revisión.",
+              "quote": "Calli",
+              "relation": "full_word",
+              "sense_id": "sense-calli"
+            },
+            {
+              "note": "Palabra completa registrada en el diccionario: atl «agua». La traducción del registro dice «agua». Ayuda generada automáticamente; pendiente de revisión.",
+              "quote": "atl",
+              "relation": "full_word",
+              "sense_id": "sense-atl"
+            }
+          ],
+          "archive_id": "axolotl-08258",
+          "cloze": {
+            "blank": "atl",
+            "distractors": [
+              "cuicatl",
+              "tepetl"
+            ]
+          },
+          "comprehension": {
+            "answer": 0,
+            "explanation": "La traducción del archivo dice «agua». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+            "kind": "meaning",
+            "options": [
+              "agua",
+              "canto",
+              "casa"
+            ],
+            "question": "¿Qué palabra de la traducción corresponde a «atl»?"
+          },
+          "context": "Pasaje breve de Anales de Tlatelolco, elegido automáticamente porque reúne atl con 5 raíces del diccionario. Contexto pendiente de revisión.",
+          "explore_words": [
+            "atl"
+          ]
+        },
+        {
+          "annotations": [
+            {
+              "note": "Palabra completa registrada en el diccionario: atl «agua». La traducción del registro dice «agua». Ayuda generada automáticamente; pendiente de revisión.",
+              "quote": "atl",
+              "relation": "full_word",
+              "sense_id": "sense-atl"
+            }
+          ],
+          "archive_id": "axolotl-07232",
+          "cloze": {
+            "blank": "atl",
+            "distractors": [
+              "tepetl",
+              "tlalli"
+            ]
+          },
+          "comprehension": {
+            "answer": 2,
+            "explanation": "La traducción del archivo dice «agua». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+            "kind": "meaning",
+            "options": [
+              "casa",
+              "canto",
+              "agua"
+            ],
+            "question": "¿Qué palabra de la traducción corresponde a «atl»?"
+          },
+          "context": "Pasaje breve de Veinte himnos sacros de los Nahuas, elegido automáticamente porque reúne atl con 7 raíces del diccionario. Contexto pendiente de revisión.",
+          "explore_words": [
+            "atl"
+          ]
+        },
+        {
+          "annotations": [
+            {
+              "note": "Palabra completa registrada en el diccionario: atl «agua». La traducción del registro dice «Agua». Ayuda generada automáticamente; pendiente de revisión.",
+              "quote": "Atl",
+              "relation": "full_word",
+              "sense_id": "sense-atl"
+            }
+          ],
+          "archive_id": "axolotl-04966",
+          "cloze": {
+            "blank": "Atl",
+            "distractors": [
+              "Tlalli",
+              "Tonatiuh"
+            ]
+          },
+          "comprehension": {
+            "answer": 0,
+            "explanation": "La traducción del archivo dice «Agua». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+            "kind": "meaning",
+            "options": [
+              "Agua",
+              "canto",
+              "casa"
+            ],
+            "question": "¿Qué palabra de la traducción corresponde a «Atl»?"
+          },
+          "context": "Pasaje breve de Veinte himnos sacros de los Nahuas, elegido automáticamente porque reúne atl con 7 raíces del diccionario. Contexto pendiente de revisión.",
+          "explore_words": [
+            "Atl"
+          ]
+        }
+      ],
+      "id": "gen-atl",
+      "minutes": 6,
+      "objective": "Leer atl «agua» en cuatro pasajes breves que aún no estaban en las lecturas; cada uno la reúne con otras palabras del diccionario.",
+      "reading_tips": [
+        "Busca atl como palabra completa; el diccionario la registra como «agua».",
+        "Las ayudas de esta lectura se generaron automáticamente desde el archivo y el analizador; están pendientes de revisión."
+      ],
+      "sense_ids": [
+        "sense-atl"
+      ],
+      "title": "Más pasajes con atl"
+    },
+    {
+      "cover_glyph": "glyph-tlalli-mdz32r",
+      "examples": [
+        {
+          "annotations": [
+            {
+              "note": "Palabra completa registrada en el diccionario: calli «casa». Ayuda generada automáticamente; pendiente de revisión.",
+              "quote": "Calli",
+              "relation": "full_word",
+              "sense_id": "sense-calli"
+            },
+            {
+              "note": "Palabra completa registrada en el diccionario: tlalli «tierra». La traducción del registro dice «tierra». Ayuda generada automáticamente; pendiente de revisión.",
+              "quote": "tlalli",
+              "relation": "full_word",
+              "sense_id": "sense-tlalli"
+            }
+          ],
+          "archive_id": "axolotl-12752",
+          "cloze": {
+            "blank": "tlalli",
+            "distractors": [
+              "atl",
+              "calli"
+            ]
+          },
+          "comprehension": {
+            "answer": 2,
+            "explanation": "La traducción del archivo dice «tierra». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+            "kind": "meaning",
+            "options": [
+              "agua",
+              "casa",
+              "tierra"
+            ],
+            "question": "¿Qué palabra de la traducción corresponde a «tlalli»?"
+          },
+          "context": "Pasaje breve de Anales de Tlatelolco, elegido automáticamente porque reúne tlalli con 5 raíces del diccionario. Contexto pendiente de revisión.",
+          "explore_words": [
+            "tlalli"
+          ]
+        },
+        {
+          "annotations": [
+            {
+              "note": "Palabra completa registrada en el diccionario: tonatiuh «sol». Ayuda generada automáticamente; pendiente de revisión.",
+              "quote": "tonatiuh",
+              "relation": "full_word",
+              "sense_id": "sense-tonatiuh"
+            },
+            {
+              "note": "Palabra completa registrada en el diccionario: tlalli «tierra». La traducción del registro dice «tierra». Ayuda generada automáticamente; pendiente de revisión.",
+              "quote": "tlalli",
+              "relation": "full_word",
+              "sense_id": "sense-tlalli"
+            }
+          ],
+          "archive_id": "axolotl-02178",
+          "cloze": {
+            "blank": "tlalli",
+            "distractors": [
+              "calli",
+              "cuicatl"
+            ]
+          },
+          "comprehension": {
+            "answer": 0,
+            "explanation": "La traducción del archivo dice «tierra». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+            "kind": "meaning",
+            "options": [
+              "tierra",
+              "casa",
+              "agua"
+            ],
+            "question": "¿Qué palabra de la traducción corresponde a «tlalli»?"
+          },
+          "context": "Pasaje breve de Vida económica de Tenochtitlan, elegido automáticamente porque reúne tlalli con 4 raíces del diccionario. Contexto pendiente de revisión.",
+          "explore_words": [
+            "tlalli"
+          ]
+        },
+        {
+          "annotations": [
+            {
+              "note": "Forma del pasaje con la raíz de tepetl «cerro»; el analizador propone tepe-titlan. Ayuda generada automáticamente; pendiente de revisión.",
+              "quote": "tepetitlan",
+              "relation": "observed_form",
+              "sense_id": "sense-tepetl"
+            },
+            {
+              "note": "Palabra completa registrada en el diccionario: tlalli «tierra». La traducción del registro dice «tierra». Ayuda generada automáticamente; pendiente de revisión.",
+              "quote": "Tlalli",
+              "relation": "full_word",
+              "sense_id": "sense-tlalli"
+            }
+          ],
+          "archive_id": "axolotl-12425",
+          "cloze": {
+            "blank": "Tlalli",
+            "distractors": [
+              "Cuicatl",
+              "Tepetl"
+            ]
+          },
+          "comprehension": {
+            "answer": 0,
+            "explanation": "La traducción del archivo dice «tierra». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+            "kind": "meaning",
+            "options": [
+              "tierra",
+              "agua",
+              "casa"
+            ],
+            "question": "¿Qué palabra de la traducción corresponde a «Tlalli»?"
+          },
+          "context": "Pasaje breve de Veinte himnos sacros de los Nahuas, elegido automáticamente porque reúne tlalli con 4 raíces del diccionario. Contexto pendiente de revisión.",
+          "explore_words": [
+            "Tlalli"
+          ]
+        },
+        {
+          "annotations": [
+            {
+              "note": "Palabra completa registrada en el diccionario: tlalli «tierra». La traducción del registro dice «tierras». Ayuda generada automáticamente; pendiente de revisión.",
+              "quote": "tlalli",
+              "relation": "full_word",
+              "sense_id": "sense-tlalli"
+            }
+          ],
+          "archive_id": "axolotl-02192",
+          "cloze": {
+            "blank": "tlalli",
+            "distractors": [
+              "tepetl",
+              "tonatiuh"
+            ]
+          },
+          "comprehension": {
+            "answer": 1,
+            "explanation": "La traducción del archivo dice «tierras». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+            "kind": "meaning",
+            "options": [
+              "casa",
+              "tierras",
+              "agua"
+            ],
+            "question": "¿Qué palabra de la traducción corresponde a «tlalli»?"
+          },
+          "context": "Pasaje breve de Tercera Relación (Libro las ocho relaciones), elegido automáticamente porque reúne tlalli con 5 raíces del diccionario. Contexto pendiente de revisión.",
+          "explore_words": [
+            "tlalli"
+          ]
+        }
+      ],
+      "id": "gen-tlalli",
+      "minutes": 6,
+      "objective": "Leer tlalli «tierra» en cuatro pasajes breves que aún no estaban en las lecturas; cada uno la reúne con otras palabras del diccionario.",
+      "reading_tips": [
+        "Busca tlalli como palabra completa; el diccionario la registra como «tierra».",
+        "Las ayudas de esta lectura se generaron automáticamente desde el archivo y el analizador; están pendientes de revisión."
+      ],
+      "sense_ids": [
+        "sense-tlalli"
+      ],
+      "title": "Más pasajes con tlalli"
+    },
+    {
+      "cover_glyph": "glyph-link-v7-sense-cuicatl",
+      "examples": [
+        {
+          "annotations": [
+            {
+              "note": "Palabra completa registrada en el diccionario: xochitl «flor». Ayuda generada automáticamente; pendiente de revisión.",
+              "quote": "xochitl",
+              "relation": "full_word",
+              "sense_id": "sense-xochitl"
+            },
+            {
+              "note": "Palabra completa registrada en el diccionario: cuicatl «canto». La traducción del registro dice «cantos». Ayuda generada automáticamente; pendiente de revisión.",
+              "quote": "cuicatl",
+              "relation": "full_word",
+              "sense_id": "sense-cuicatl"
+            }
+          ],
+          "archive_id": "axolotl-04343",
+          "cloze": {
+            "blank": "cuicatl",
+            "distractors": [
+              "atl",
+              "calli"
+            ]
+          },
+          "comprehension": {
+            "answer": 0,
+            "explanation": "La traducción del archivo dice «cantos». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+            "kind": "meaning",
+            "options": [
+              "cantos",
+              "agua",
+              "casa"
+            ],
+            "question": "¿Qué palabra de la traducción corresponde a «cuicatl»?"
+          },
+          "context": "Pasaje breve de Trece Poetas del Mundo Azteca, elegido automáticamente porque reúne cuicatl con 6 raíces del diccionario. Contexto pendiente de revisión.",
+          "explore_words": [
+            "cuicatl"
+          ]
+        },
+        {
+          "annotations": [
+            {
+              "note": "Palabra completa registrada en el diccionario: xochitl «flor». Ayuda generada automáticamente; pendiente de revisión.",
+              "quote": "xochitl",
+              "relation": "full_word",
+              "sense_id": "sense-xochitl"
+            },
+            {
+              "note": "Palabra completa registrada en el diccionario: cuicatl «canto». La traducción del registro dice «cantos». Ayuda generada automáticamente; pendiente de revisión.",
+              "quote": "cuicatl",
+              "relation": "full_word",
+              "sense_id": "sense-cuicatl"
+            }
+          ],
+          "archive_id": "axolotl-08907",
+          "cloze": {
+            "blank": "cuicatl",
+            "distractors": [
+              "calli",
+              "tepetl"
+            ]
+          },
+          "comprehension": {
+            "answer": 1,
+            "explanation": "La traducción del archivo dice «cantos». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+            "kind": "meaning",
+            "options": [
+              "agua",
+              "cantos",
+              "cerro"
+            ],
+            "question": "¿Qué palabra de la traducción corresponde a «cuicatl»?"
+          },
+          "context": "Pasaje breve de Trece Poetas del Mundo Azteca, elegido automáticamente porque reúne cuicatl con 5 raíces del diccionario. Contexto pendiente de revisión.",
+          "explore_words": [
+            "cuicatl"
+          ]
+        },
+        {
+          "annotations": [
+            {
+              "note": "Palabra completa registrada en el diccionario: cuicatl «canto». La traducción del registro dice «canto». Ayuda generada automáticamente; pendiente de revisión.",
+              "quote": "cuicatl",
+              "relation": "full_word",
+              "sense_id": "sense-cuicatl"
+            }
+          ],
+          "archive_id": "axolotl-03001",
+          "cloze": {
+            "blank": "cuicatl",
+            "distractors": [
+              "tepetl",
+              "tlalli"
+            ]
+          },
+          "comprehension": {
+            "answer": 1,
+            "explanation": "La traducción del archivo dice «canto». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+            "kind": "meaning",
+            "options": [
+              "casa",
+              "canto",
+              "cerro"
+            ],
+            "question": "¿Qué palabra de la traducción corresponde a «cuicatl»?"
+          },
+          "context": "Pasaje breve de La tinta negra y roja (antología de poesía náhuatl), elegido automáticamente porque reúne cuicatl con 5 raíces del diccionario. Contexto pendiente de revisión.",
+          "explore_words": [
+            "cuicatl"
+          ]
+        },
+        {
+          "annotations": [
+            {
+              "note": "Palabra completa registrada en el diccionario: cuicatl «canto». La traducción del registro dice «canto». Ayuda generada automáticamente; pendiente de revisión.",
+              "quote": "cuicatl",
+              "relation": "full_word",
+              "sense_id": "sense-cuicatl"
+            }
+          ],
+          "archive_id": "axolotl-01884",
+          "cloze": {
+            "blank": "cuicatl",
+            "distractors": [
+              "tlalli",
+              "tonatiuh"
+            ]
+          },
+          "comprehension": {
+            "answer": 1,
+            "explanation": "La traducción del archivo dice «canto». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+            "kind": "meaning",
+            "options": [
+              "casa",
+              "canto",
+              "agua"
+            ],
+            "question": "¿Qué palabra de la traducción corresponde a «cuicatl»?"
+          },
+          "context": "Pasaje breve de Tercera Relación (Libro las ocho relaciones), elegido automáticamente porque reúne cuicatl con 4 raíces del diccionario. Contexto pendiente de revisión.",
+          "explore_words": [
+            "cuicatl"
+          ]
+        }
+      ],
+      "id": "gen-cuicatl",
+      "minutes": 6,
+      "objective": "Leer cuicatl «canto» en cuatro pasajes breves que aún no estaban en las lecturas; cada uno la reúne con otras palabras del diccionario.",
+      "reading_tips": [
+        "Busca cuicatl como palabra completa; el diccionario la registra como «canto».",
+        "Las ayudas de esta lectura se generaron automáticamente desde el archivo y el analizador; están pendientes de revisión."
+      ],
+      "sense_ids": [
+        "sense-cuicatl"
+      ],
+      "title": "Más pasajes con cuicatl"
+    },
+    {
+      "cover_glyph": "glyph-tonatiuh-mdz34r",
+      "examples": [
+        {
+          "annotations": [
+            {
+              "note": "Palabra completa registrada en el diccionario: tonatiuh «sol». La traducción del registro dice «Sol». Ayuda generada automáticamente; pendiente de revisión.",
+              "quote": "Tonatiuh",
+              "relation": "full_word",
+              "sense_id": "sense-tonatiuh"
+            },
+            {
+              "note": "Forma del pasaje con la raíz de ehecatl «viento»; el analizador propone eca-tl. Ayuda generada automáticamente; pendiente de revisión.",
+              "quote": "ecatl",
+              "relation": "observed_form",
+              "sense_id": "sense-ehecatl"
+            }
+          ],
+          "archive_id": "axolotl-07237",
+          "cloze": {
+            "blank": "Tonatiuh",
+            "distractors": [
+              "Atl",
+              "Calli"
+            ]
+          },
+          "comprehension": {
+            "answer": 2,
+            "explanation": "La traducción del archivo dice «Sol». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+            "kind": "meaning",
+            "options": [
+              "agua",
+              "casa",
+              "Sol"
+            ],
+            "question": "¿Qué palabra de la traducción corresponde a «Tonatiuh»?"
+          },
+          "context": "Pasaje breve de La tinta negra y roja (antología de poesía náhuatl), elegido automáticamente porque reúne tonatiuh con 8 raíces del diccionario. Contexto pendiente de revisión.",
+          "explore_words": [
+            "Tonatiuh"
+          ]
+        },
+        {
+          "annotations": [
+            {
+              "note": "Palabra completa registrada en el diccionario: tonatiuh «sol». La traducción del registro dice «Sol». Ayuda generada automáticamente; pendiente de revisión.",
+              "quote": "Tonatiuh",
+              "relation": "full_word",
+              "sense_id": "sense-tonatiuh"
+            }
+          ],
+          "archive_id": "axolotl-02237",
+          "cloze": {
+            "blank": "Tonatiuh",
+            "distractors": [
+              "Calli",
+              "Cuicatl"
+            ]
+          },
+          "comprehension": {
+            "answer": 0,
+            "explanation": "La traducción del archivo dice «Sol». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+            "kind": "meaning",
+            "options": [
+              "Sol",
+              "agua",
+              "casa"
+            ],
+            "question": "¿Qué palabra de la traducción corresponde a «Tonatiuh»?"
+          },
+          "context": "Pasaje breve de La tinta negra y roja (antología de poesía náhuatl), elegido automáticamente porque reúne tonatiuh con 6 raíces del diccionario. Contexto pendiente de revisión.",
+          "explore_words": [
+            "Tonatiuh"
+          ]
+        },
+        {
+          "annotations": [
+            {
+              "note": "Palabra completa registrada en el diccionario: tonatiuh «sol». La traducción del registro dice «sol». Ayuda generada automáticamente; pendiente de revisión.",
+              "quote": "tonatiuh",
+              "relation": "full_word",
+              "sense_id": "sense-tonatiuh"
+            }
+          ],
+          "archive_id": "axolotl-00536",
+          "cloze": {
+            "blank": "tonatiuh",
+            "distractors": [
+              "cuicatl",
+              "tepetl"
+            ]
+          },
+          "comprehension": {
+            "answer": 1,
+            "explanation": "La traducción del archivo dice «sol». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+            "kind": "meaning",
+            "options": [
+              "casa",
+              "sol",
+              "agua"
+            ],
+            "question": "¿Qué palabra de la traducción corresponde a «tonatiuh»?"
+          },
+          "context": "Pasaje breve de Vida económica de Tenochtitlan, elegido automáticamente porque reúne tonatiuh con 5 raíces del diccionario. Contexto pendiente de revisión.",
+          "explore_words": [
+            "tonatiuh"
+          ]
+        },
+        {
+          "annotations": [
+            {
+              "note": "Palabra completa registrada en el diccionario: tonatiuh «sol». La traducción del registro dice «sol». Ayuda generada automáticamente; pendiente de revisión.",
+              "quote": "tonatiuh",
+              "relation": "full_word",
+              "sense_id": "sense-tonatiuh"
+            }
+          ],
+          "archive_id": "axolotl-01929",
+          "cloze": {
+            "blank": "tonatiuh",
+            "distractors": [
+              "tepetl",
+              "tlalli"
+            ]
+          },
+          "comprehension": {
+            "answer": 2,
+            "explanation": "La traducción del archivo dice «sol». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+            "kind": "meaning",
+            "options": [
+              "agua",
+              "casa",
+              "sol"
+            ],
+            "question": "¿Qué palabra de la traducción corresponde a «tonatiuh»?"
+          },
+          "context": "Pasaje breve de Vida económica de Tenochtitlan, elegido automáticamente porque reúne tonatiuh con 5 raíces del diccionario. Contexto pendiente de revisión.",
+          "explore_words": [
+            "tonatiuh"
+          ]
+        }
+      ],
+      "id": "gen-tonatiuh",
+      "minutes": 6,
+      "objective": "Leer tonatiuh «sol» en cuatro pasajes breves que aún no estaban en las lecturas; cada uno la reúne con otras palabras del diccionario.",
+      "reading_tips": [
+        "Busca tonatiuh como palabra completa; el diccionario la registra como «sol».",
+        "Las ayudas de esta lectura se generaron automáticamente desde el archivo y el analizador; están pendientes de revisión."
+      ],
+      "sense_ids": [
+        "sense-tonatiuh"
+      ],
+      "title": "Más pasajes con tonatiuh"
+    }
+  ],
+  "note": "Receta generada automáticamente: selección por cobertura de raíces y ayudas redactadas por plantilla. Solo se publica tras revisión.",
+  "release_id": "lecturas-generadas-001",
+  "review_status": "editorial_draft",
+  "schema_version": 1
+}

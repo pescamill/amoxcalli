@@ -1,96 +1,109 @@
-# amoxcalli · Scriptorium
+# Amoxcalli
 
 [Español](../README.md)
 
-**Learn Nahuatl by reading: find a word, recognize it in another passage, and follow it back to its source.**
+**Learn to read Classical Nahuatl through sourced examples: understand a passage, compare it, and return to the document.**
 
-Scriptorium brings short readings, a dictionary, documented glyph references and a bilingual archive into a local application. It starts with Classical Nahuatl. The wider archive preserves variety labels without treating all Nahuatl varieties as interchangeable. The aim is to give words context: where they appear, how they are written, what their sources support and what remains uncertain.
+Amoxcalli brings together guided readings, short grammar units, a word analyzer, a spelling search (classical, modern and regional spellings), a sourced dictionary, documented glyphs, cards on deities and the calendar, and a bilingual archive of 16,111 passages. Every result says where it comes from: a dictionary entry, an archive passage, a pictographic record or a rule. **Without evidence, the app abstains.** Everything runs without an LLM, on the Python standard library.
 
-`amoxcalli` is the repository for this work in progress. Reading, search, practice and contributions already work. Linguistic review, primary-source checks and trials with learners are still needed. The model laboratory exposes experiments and their failures; generated translations are currently poor.
+**Status (17 October 2026).** You can read, practise, analyze words, search in any spelling, browse deities and the calendar, and contribute. Automatic content (reading help, Wiktionary entries, new units and readings) is labelled as such and **awaits linguistic review**. Still missing: checking against primary sources and a trial with beginners — the collaborations we are looking for ([pilot proposal](PILOTO_INSTITUCIONAL.md), [purpose](PROPOSITO.md), both in Spanish). The current plan is [ROADMAP.md](ROADMAP.md).
 
 ## Try it
 
-With Python 3.11 or later, from the project directory:
+With Python 3.11+ and git:
 
 ```bash
-bash scripts/plataforma.sh
+git clone https://github.com/pescamill/amoxcalli.git
+cd amoxcalli
+make demo
 ```
 
-Open [http://127.0.0.1:8766](http://127.0.0.1:8766). Reading, dictionary, archive and contribution features use Python's standard library. The interface is Spanish-first.
+Open <http://127.0.0.1:8766>. The first time, `make demo` builds the derived analysis caches (about a minute) and starts the server; meanwhile the app shows «Preparando el análisis…». Afterwards it starts in seconds. One process serves the app, Voces (`/aportar`) and the API:
 
-A small expedition: open **Flores y cantos**, hide the Spanish and click a familiar form. Save the word, find another example in the archive, then return to the exercise. Or try **Aves** and see what changes between a bird in poetry and birds in a narrative. Following these threads is part of the fun.
+```bash
+bash scripts/amoxcalli.sh serve [options]   # stops an earlier server on the same port
+```
 
-## What you can use it for
-
-| Space | Current use |
+| Option | Effect |
 | --- | --- |
-| **Aprender / Leer** | Guided readings, contextual word help, optional Spanish and exercises that preserve source spelling; browse the selected passages and notes. |
-| **Diccionario** | Look up senses and historical forms, inspect documented visual references and follow citations. The first page keeps 24 representative entries; the rest sorts alphabetically in Nahuatl. |
-| **Mis palabras** | Save words and practise at spaced intervals. Progress belongs to the current browser; no account is required. |
-| **Archivo y herramientas** | Search Spanish or Nahuatl, filter by work, variety or period, inspect sources and prepare exports with rights notes. |
-| **Laboratorio** | Try example retrieval, limited lexical rules or experimental generation; inspect Spanish/Nahuatl training pairs and model reports. |
-| **Aportar · Voces** | Propose text, voice, translations, forms and connections; record variety and permissions, review or withdraw contributions. |
+| `--host`, `--port` | Interface and port (default `127.0.0.1:8766`). Phone on the same network: [WEBAPP.md](WEBAPP.md) (ES). |
+| `--demo` | Public read-only demo: everything can be browsed, but no profiles, contributions or recordings are stored. |
+| `--public-origin https://domain` | Behind an HTTPS proxy: accept that Host and require it as the Origin of writes. |
+| `--db path` | Local database of profiles, contributions and proposals (default `data/community/voces.sqlite3`). Goes before `serve`. |
+| `--explain-model claude` | Claude-written explanations in Ask; sends the question and the cited passages to the Anthropic API. Without it, nothing leaves the machine. |
 
-Uses include personal study, textual research, preparing reading activities, collaborative editing and exploring model training. Classroom effectiveness still needs testing with people. The app is installable through the browser; mobile installation and microphone access require HTTPS. The local server must remain running, and the offline screen does not queue submissions. See the [installation guide](WEBAPP.md).
+On Windows or without `make`: `py -m nahuatl_local.platform serve` with the same options.
 
-## Current content and open questions
-
-Inventory incorporated on **30 September 2026**:
-
-- **6 guided readings / 24 passages / 6 works**: flowers; Sun and Moon; land, house and hill; water and land; flowers and songs; birds.
-- **575 dictionary entries/senses**: 26 curated and 549 automatically transcribed Molina/GDN entries, with 578 written forms.
-- **140 visual-reference records**: 139 entries have source images, using 24 distinct documentary image URLs; 436 entries still need visual evidence.
-- **16,111 Axolotl bilingual pairs**, with 33 identified works and original variety labels.
-- **650 pairs actually visited by the historical adapter**, available in the training-data viewer.
-- **5,462 pairs in the current Classical Nahuatl preparation**: 2,161 training, 2,049 validation and 1,252 test, split by work. Existing weights were trained on an earlier preparation.
-- **36 reading-review tasks**: 1 resolved editorially, 4 blocked and 31 open. Primary-context checks for the target senses remain pending.
-
-A visual link may show a whole-word glyph, a component, iconography or related contextual evidence. These are labelled separately. A source illustration does not establish how an entire sentence was written. Historical dictionary transcriptions also need interpretation; they are not automatically modern definitions or morphological analyses.
-
-The [latest reading report](../reports/LECTURAS_002_2026-09-30.md) records changes and preservation checks. The previous local full run executed 179 tests with one expected failure for a disabled orthographic feature; six groups of interface checks passed. These establish technical behaviour, not philological correctness.
-
-## Growing in batches
-
-The [editorial pipeline](EDITORIAL_PIPELINE.md) gathers candidates from cached sources, prepares up to 50 entries and 100 concordances, verifies transcriptions and dependencies, separates exceptions and produces a reviewable proposal. Publication adds records with backups and preservation checks. Extraction and linking use scripts without LLM calls.
-
-The [reading builder](LECTURAS_PIPELINE.md) uses explicit recipes: passage IDs, selected forms, notes and known distractors. It checks source hashes, connections and source-exact exercise answers. Selection and linguistic judgement remain editorial work.
+With Docker (an image of about 230 MB, in demo mode):
 
 ```bash
-python3 -m nahuatl_local.lesson_audit
-python3 -m nahuatl_local.editorial_release --help
-python3 -m nahuatl_local.lesson_builder --help
+docker build -t amoxcalli .
+docker run -p 7860:7860 amoxcalli
 ```
 
-`batch-007-v9` is incorporated. `batch-009-v11` is prepared and verified but unpublished; reproducing its source comparison requires the local source-page cache. The earlier `batch-008-v10` became stale when the readings changed.
+**Hosting it for free** (Hugging Face Spaces, a virtual machine or Cloud Run), step by step: [DEPLOYMENT.md](DEPLOYMENT.md). With every index built the server uses about 760 MB of RAM, so a plan needs at least 1 GB.
 
-The next useful growth is more good contexts and fewer mistaken connections: expand readings through repeatable recipes, resolve ambiguities against primary sources, add images where evidence exists, and test whether learners understand the activities. The [iteration plan](LEARNING_ITERATION_PLAN.md) and [progress record](PROGRESO_INTERNO.md) retain decisions and open work.
+**A five-minute tour:** open **Lecturas → Reconocer una flor**, click *NIQUITTA* (*ni-qu-itta*, "I-it-see") and show the interlinear gloss. Type *kuali* in the search box: *cualli* appears with its spellings by variety and its sources. Ask *¿cómo se dice mujer?* ("how do you say woman?") in **Preguntar** and click the citations in the explanation. Open **Más → Dioses y calendario** and search for *Huitzilopoxtli*.
 
-## What happened to the LLM?
+The interface is in Spanish.
 
-It is **Qwen3-0.6B adapted with LoRA**, with 1,146,880 trainable parameters: a 400-step pilot, a failed continuation and a corrected 250-step continuation. No base model was pretrained from scratch. It can repeat words, invent forms or alter meaning.
+## What is there
 
-The laboratory shows training pairs, loss curves, outputs and historical metrics. Lower loss or a higher chrF++ on a small sample does not establish faithful translation. Results from different samples and preparations remain separate. Editing readings, expanding the dictionary or saving proposed pairs does not train the model.
+| Space | What it does |
+| --- | --- |
+| **Lecturas** (readings) | 12 guided readings (48 real passages from 10 works): hideable translation, exercises on the passage's own spelling, 28 comprehension questions keyed to the original translation. Every word can be analyzed and there is an interlinear gloss, also during exercises (only the missing word is hidden). Printable workshop sheet. |
+| **Unidades de gramática** (under «Más») | 4 short grammar units (absolutive, possessives, locatives, subject and object) with matching, morpheme identification, word building and translation of short passages; spaced review with examples. Automatic drafts whose answers are backed by the passage and the analysis. |
+| **Word analysis** | Segmentation in the source spelling, dictionary entry, passages sharing the root and parallel-corpus hints, each with its basis (dictionary, corpus, rules or proper name). [Guide](MORFOLOGIA.md) (ES). |
+| **Search in any spelling** | Type a word the way you write it (*kuali*, *kualli*, *qualli*, *cuali*, or with a typo) and see the possibilities at once, with sources, even when that exact spelling is not in the archive. Colonial, ACK and SEP/INALI profiles plus regional features. **It relates spellings; it does not impose a standard.** [Guide](GRAFIAS.md) (ES). |
+| **Preguntar** (ask) | A word in any spelling, a Spanish question or a record ID: analysis, entries and passages with the reason for each, a short explanation in which every sentence cites its evidence, and the records with their originals. Abstains without evidence. [Guide](EVIDENCIA.md) (ES). |
+| **Dictionary and Glyphs** | 3,790 senses: 26 curated, 549 automatic Molina transcriptions via GDN and 3,215 Wiktionary lemmas (CC BY-SA, automatic extraction). 480 pictographic occurrences from 21 Tlachia folios. Each term gathers its spellings, passages by variety and glyphs with their scope (whole word, component or related meaning). Grammar notes from Carochi (1645). [Guide](DICCIONARIO_PICTOGRAFICO.md) (ES) · [sources](FUENTES.md) (ES). |
+| **Dioses y calendario** (under «Más») | 26 deities plus figures, epithets and places, every datum with its source; the tonalpohualli (20 day signs with their Telleriano-Remensis glyph, 13 numerals, 20 trecenas) and the 18 veintenas. Name spellings lead to the same card. Four mythology readings and a calendar unit await review. [Guide](DIOSES_CALENDARIO.md) (ES). |
+| **Archivo completo** (under «Más») | 16,111 Axolotl pairs (about 6,000 Classical Nahuatl and 10,000 from present-day varieties) with their variety and work labels; one search for words, spellings and phrases. |
+| **Mis palabras** (my words) | Notebook and spaced review in the browser, no account; keeps the source passage. |
+| **Aportar · Voces** (contribute) | Propose text, voice, forms and connections with separate publication and training permissions; everything stays pending review and can be withdrawn. [Guide](VOCES.md) (ES). |
+| **Laboratorio (histórico)** (under «Más») | What was tried with an experimental translator (Qwen3-0.6B + LoRA), its numbers and why it was retired. The code is archived in [experiments/llm/](../experiments/llm/README.md); the app loads no machine-learning dependencies. |
 
-For optional local generation, use Python 3.11/3.12:
+## Numbers and where they come from
+
+One evaluation produces them all: `make eval` regenerates [reports/EVALUACION.md](../reports/EVALUACION.md) and `make check` re-measures and fails if a number changed without being regenerated. `dev` is used for tuning; `test` only for measuring.
+
+| Measurement | Result (test) |
+| --- | --- |
+| Morphological segmentation, blind test v2 (91 forms written before measuring) | 78% exact (words 67%, particles 94%, proper names 100%); 89% on set v1 |
+| Classical corpus tokens linked to a dictionary root | 60.4% (28.0% by exact match; 41.8% before Wiktionary) |
+| Spelling search (`spelling-search-v1`) | Intended word first 94.2%, in the top three 97.1%; no wrong associations |
+| Term index (`term-groups-v1`) | Query → correct group 90.5%; glyphs with their scope 100% |
+| Preguntar (32 queries) | Correct entry first 92.3% vs 42% for exact search; always with a relevant passage |
+| Records in Preguntar (123 documentary queries) | 780 of 790 fields exact |
+| LoRA translator, historical (chrF++) | 22.4 with context vs 27.2 for returning the nearest passage: **not a translator**; retired |
+
+These are technical checks on small team-written sets; they do not replace review by an expert or show that anyone learns.
+
+## Collaborate
+
+We are looking for people to review readings and entries, teachers to try a reading in an accompanied workshop, speakers of present-day varieties who want their way of writing recognized, and institutions willing to let us use their sources. With speakers, community, variety, goals, credit and permissions are agreed first. A concrete question also helps: passage ID, problem, source and proposal. [How to contribute](../CONTRIBUTING.md) (ES).
+
+## Development
 
 ```bash
-bash scripts/iniciar.sh --enable-model
+npm ci --ignore-scripts   # jsdom, only for the interface tests
+make test                 # Python and interface tests
+make eval                 # regenerate the evaluation table
+make check                # re-measure and check the published numbers are current
 ```
 
-The first run installs dependencies and downloads the pinned base (~1.5 GB). Experimental `best` adapters are included; the base and optimizer states are excluded. Reports can be inspected without loading weights. This checkout cannot exactly resume the historical optimizer state.
+CI ([.github/workflows/ci.yml](../.github/workflows/ci.yml)) runs `make check` and `make test` on a clean clone. An interface-only change is verified by the interface tests and moves no number; a change to data, the analyzer, indexes or evaluation sets does (`make eval`). Design: [ARCHITECTURE.md](ARCHITECTURE.md). History: [HISTORIA.md](HISTORIA.md) (ES).
 
-A useful next experiment is to review alignments, then compare retrieval, the base and the adapter on the same held-out phrases. See the [model card](../MODEL_CARD.md), [model status](ESTADO_MODELO.md), [laboratory guide](LABORATORIO.md), [improvement guide](MEJORAR.md) and [staged training guide](AUTOTRAIN.md).
+| Folder | Contents |
+| --- | --- |
+| `corpus/` | Distributed content: Axolotl archive, readings, lexical catalogue, glyphs, entities, editorial batches |
+| `editorial/` | Editorial decisions and proposals (readings and units under review) |
+| `evaluation/`, `configs/` | Frozen evaluation sets and configurations |
+| `nahuatl_local/` | Server, analysis and scripts (Python stdlib); `platform_web/` is the interface |
+| `reports/` | Only current, regenerable reports ([index](../reports/README.md)) |
+| `docs/` | Guides, mostly in Spanish; in English: this file, [DEPLOYMENT.md](DEPLOYMENT.md), [ARCHITECTURE.md](ARCHITECTURE.md), [ROADMAP.md](ROADMAP.md) |
+| `experiments/llm/` | The archived LLM laboratory |
 
-## Contributions, code and rights
+## Licences and sources
 
-Voces records independent publication and training permissions for text and audio. Manual or CSV training-pair proposals remain pending review. Profiles, recordings, submissions, SQLite databases and local backups are excluded from Git. Preserve and back up `data/community/` when updating; saved words and reading progress live in browser storage. See [Voces](VOCES.md) and the [architecture guide](PLATAFORMA.md).
-
-The application uses Python, SQLite and HTML/CSS/JavaScript. Optional generation uses PyTorch, Transformers and PEFT; no external inference API is required.
-
-```bash
-python3 -m unittest discover -s tests
-```
-
-Some training and editorial integration checks require extra dependencies, prepared data or cached source pages, as described in their guides.
-
-Original code and documentation use [MIT](../LICENSE). Qwen uses Apache-2.0; Elotl's distribution declares MPL-2.0. Rights in each underlying work, edition and translation need separate review. Texts, images and derived adapters are not relicensed as MIT. Images are linked with source attribution; no generated images are added. See [sources](FUENTES.md) and [third-party notices](../THIRD_PARTY_NOTICES.md) before reusing or redistributing content.
+Original code and documentation: [MIT](../LICENSE). Third-party texts, images and data keep their own terms and are not relicensed as MIT: the Axolotl corpus (Elotl distribution, MPL-2.0), Wiktionary entries (CC BY-SA 4.0, attributed on every card), Molina's Vocabulario via the Gran Diccionario Náhuatl (UNAM) and the Tlachia catalogue (UNAM; images load from its site, with attribution). No generated images. The wider Gran Diccionario Náhuatl and the Florentine Codex await permission ([draft letters](permisos/)). See [FUENTES.md](FUENTES.md) and [THIRD_PARTY_NOTICES.md](../THIRD_PARTY_NOTICES.md).
