@@ -1,0 +1,631 @@
+{
+  "generated_by": {
+    "llm_calls": 0,
+    "module": "nahuatl_local.entities",
+    "network_requests": 0,
+    "version": "entities-gen-1"
+  },
+  "lesson_updates": [],
+  "lessons": [
+    {
+      "cover_glyph": "glyph-tonatiuh-mdz34r",
+      "examples": [
+        {
+          "annotations": [
+            {
+              "note": "Deidad: Quetzalcóatl. Ficha en Dioses y calendario. Ayuda generada; pendiente de revisión.",
+              "quote": "Quetzalcoatl",
+              "relation": "full_word",
+              "sense_id": "sense-wikt-es-quetzalcoatl-e3703d1e"
+            },
+            {
+              "note": "Palabra completa registrada en el diccionario: Tonatiuh «sol». Ayuda generada; pendiente de revisión.",
+              "quote": "Tonatiuh",
+              "relation": "full_word",
+              "sense_id": "sense-tonatiuh"
+            }
+          ],
+          "archive_id": "axolotl-06982",
+          "cloze": {
+            "blank": "Tonatiuh",
+            "distractors": [
+              "Metztli",
+              "Citlalin"
+            ]
+          },
+          "comprehension": {
+            "answer": 0,
+            "explanation": "La traducción del archivo dice «4-Agua». Comprobación automática; la interpretación está pendiente de revisión.",
+            "kind": "meaning",
+            "options": [
+              "4-Agua",
+              "4-Jaguar",
+              "4-Viento"
+            ],
+            "question": "¿Qué signo tuvo el primer Sol?"
+          },
+          "context": "Pasaje de La tinta negra y roja (antología de poesía náhuatl) que nombra a Quetzalcóatl, Tonatiuh. Selección del proyecto para esta lectura; contexto pendiente de revisión.",
+          "explore_words": [
+            "Tonatiuh"
+          ]
+        },
+        {
+          "annotations": [
+            {
+              "note": "Palabra completa registrada en el diccionario: Tonatiuh «sol». Ayuda generada; pendiente de revisión.",
+              "quote": "Tonatiuh",
+              "relation": "full_word",
+              "sense_id": "sense-tonatiuh"
+            }
+          ],
+          "archive_id": "axolotl-08351",
+          "cloze": {
+            "blank": "Tonatiuh",
+            "distractors": [
+              "Metztli",
+              "Citlalin"
+            ]
+          },
+          "comprehension": {
+            "answer": 1,
+            "explanation": "La traducción del archivo dice «Sol de Jaguar». Comprobación automática; la interpretación está pendiente de revisión.",
+            "kind": "meaning",
+            "options": [
+              "Sol de Viento",
+              "Sol de Jaguar",
+              "Sol de Agua"
+            ],
+            "question": "¿Cómo se llamaba este Sol?"
+          },
+          "context": "Pasaje de La tinta negra y roja (antología de poesía náhuatl) que nombra a Tonatiuh. Selección del proyecto para esta lectura; contexto pendiente de revisión.",
+          "explore_words": [
+            "Tonatiuh"
+          ]
+        },
+        {
+          "annotations": [
+            {
+              "note": "Palabra completa registrada en el diccionario: Tonatiuh «sol». Ayuda generada; pendiente de revisión.",
+              "quote": "Tonatiuh",
+              "relation": "full_word",
+              "sense_id": "sense-tonatiuh"
+            }
+          ],
+          "archive_id": "axolotl-03878",
+          "cloze": {
+            "blank": "Tonatiuh",
+            "distractors": [
+              "Metztli",
+              "Citlalin"
+            ]
+          },
+          "comprehension": {
+            "answer": 1,
+            "explanation": "La traducción del archivo dice «4-Lluvia». Comprobación automática; la interpretación está pendiente de revisión.",
+            "kind": "meaning",
+            "options": [
+              "4-Movimiento",
+              "4-Lluvia",
+              "4-Agua"
+            ],
+            "question": "¿Qué signo tuvo el tercer Sol?"
+          },
+          "context": "Pasaje de La tinta negra y roja (antología de poesía náhuatl) que nombra a Tonatiuh. Selección del proyecto para esta lectura; contexto pendiente de revisión.",
+          "explore_words": [
+            "Tonatiuh"
+          ]
+        },
+        {
+          "annotations": [
+            {
+              "note": "Palabra completa registrada en el diccionario: Tonatiuh «sol». Ayuda generada; pendiente de revisión.",
+              "quote": "Tonatiuh",
+              "relation": "full_word",
+              "sense_id": "sense-tonatiuh"
+            },
+            {
+              "note": "Deidad: Quetzalcóatl. Ficha en Dioses y calendario. Ayuda generada; pendiente de revisión.",
+              "quote": "Quetzalcoatl",
+              "relation": "full_word",
+              "sense_id": "sense-wikt-es-quetzalcoatl-e3703d1e"
+            }
+          ],
+          "archive_id": "axolotl-10684",
+          "cloze": {
+            "blank": "Tonatiuh",
+            "distractors": [
+              "Metztli",
+              "Citlalin"
+            ]
+          },
+          "comprehension": {
+            "answer": 0,
+            "explanation": "La traducción del archivo dice «4-Movimiento». Comprobación automática; la interpretación está pendiente de revisión.",
+            "kind": "meaning",
+            "options": [
+              "4-Movimiento",
+              "4-Lluvia",
+              "4-Jaguar"
+            ],
+            "question": "¿Cuál es el signo del Sol que ahora existe?"
+          },
+          "context": "Pasaje de La tinta negra y roja (antología de poesía náhuatl) que nombra a Tonatiuh, Quetzalcóatl. Selección del proyecto para esta lectura; contexto pendiente de revisión.",
+          "explore_words": [
+            "Tonatiuh"
+          ]
+        }
+      ],
+      "id": "mito-soles",
+      "minutes": 8,
+      "objective": "Leer cómo la Leyenda de los Soles cuenta las edades del mundo: cada Sol tiene un signo del calendario.",
+      "reading_tips": [
+        "Busca tonatiuh «sol» y el número con el signo: nahui atl, nahui ollin.",
+        "Pasajes de la Leyenda de los Soles (Códice Chimalpopoca) tal como los trae La tinta negra y roja. Ayudas generadas automáticamente; pendientes de revisión."
+      ],
+      "sense_ids": [
+        "sense-tonatiuh"
+      ],
+      "title": "Los Soles de antes"
+    },
+    {
+      "cover_glyph": "glyph-xochitl",
+      "examples": [
+        {
+          "annotations": [
+            {
+              "note": "Palabra completa registrada en el diccionario: Xochitl «flor». Ayuda generada; pendiente de revisión.",
+              "quote": "Xochitl",
+              "relation": "full_word",
+              "sense_id": "sense-xochitl"
+            }
+          ],
+          "archive_id": "axolotl-07343",
+          "cloze": {
+            "blank": "Xochitl",
+            "distractors": [
+              "Cuicatl",
+              "Atl"
+            ]
+          },
+          "comprehension": {
+            "answer": 2,
+            "explanation": "La traducción del archivo dice «Tlazolteotl». Comprobación automática; la interpretación está pendiente de revisión.",
+            "kind": "meaning",
+            "options": [
+              "Tláloc",
+              "Huitzilopochtli",
+              "Tlazolteotl"
+            ],
+            "question": "¿Quién llega, según la traducción?"
+          },
+          "context": "Pasaje de Veinte himnos sacros de los Nahuas que nombra a Tlazoltéotl. Selección del proyecto para esta lectura; contexto pendiente de revisión.",
+          "explore_words": [
+            "Xochitl"
+          ]
+        },
+        {
+          "annotations": [
+            {
+              "note": "Palabra completa registrada en el diccionario: Xochitl «flor». Ayuda generada; pendiente de revisión.",
+              "quote": "Xochitl",
+              "relation": "full_word",
+              "sense_id": "sense-xochitl"
+            },
+            {
+              "note": "Deidad: Quetzalcóatl. Ficha en Dioses y calendario. Ayuda generada; pendiente de revisión.",
+              "quote": "Quetzalcoatl",
+              "relation": "full_word",
+              "sense_id": "sense-wikt-es-quetzalcoatl-e3703d1e"
+            }
+          ],
+          "archive_id": "axolotl-02755",
+          "cloze": {
+            "blank": "Xochitl",
+            "distractors": [
+              "Cuicatl",
+              "Atl"
+            ]
+          },
+          "comprehension": {
+            "answer": 1,
+            "explanation": "La traducción del archivo dice «Quetzalcóatl». Comprobación automática; la interpretación está pendiente de revisión.",
+            "kind": "meaning",
+            "options": [
+              "Xochiquetzal",
+              "Quetzalcóatl",
+              "Tezcatlipoca"
+            ],
+            "question": "¿A quién se dirige el canto al final?"
+          },
+          "context": "Pasaje de Veinte himnos sacros de los Nahuas que nombra a Quetzalcóatl. Selección del proyecto para esta lectura; contexto pendiente de revisión.",
+          "explore_words": [
+            "Xochitl"
+          ]
+        },
+        {
+          "annotations": [
+            {
+              "note": "Palabra completa registrada en el diccionario: Tlaloc «Tláloc». Ayuda generada; pendiente de revisión.",
+              "quote": "Tlaloc",
+              "relation": "full_word",
+              "sense_id": "sense-wikt-es-tlaloc-2e0375b7"
+            }
+          ],
+          "archive_id": "axolotl-03632",
+          "cloze": {
+            "blank": "Tlaloc",
+            "distractors": [
+              "Tezcatlipoca",
+              "Huitzilopochtli"
+            ]
+          },
+          "comprehension": {
+            "answer": 2,
+            "explanation": "La traducción del archivo dice «blanco». Comprobación automática; la interpretación está pendiente de revisión.",
+            "kind": "meaning",
+            "options": [
+              "azul",
+              "rojo",
+              "blanco"
+            ],
+            "question": "¿Qué color acompaña a Tláloc en la traducción?"
+          },
+          "context": "Pasaje de Veinte himnos sacros de los Nahuas que nombra a Tláloc. Selección del proyecto para esta lectura; contexto pendiente de revisión.",
+          "explore_words": [
+            "Tlaloc"
+          ]
+        },
+        {
+          "annotations": [
+            {
+              "note": "Palabra completa registrada en el diccionario: Tlalocan «\"the place of Tlaloc\", the Aztec rain god; a paradise where the souls of those who died from drowning, storms, and lightning strikes are believed to reside in». Ayuda generada; pendiente de revisión.",
+              "quote": "Tlalocan",
+              "relation": "full_word",
+              "sense_id": "sense-wikt-en-tlalocan-f72ba122"
+            }
+          ],
+          "archive_id": "axolotl-05783",
+          "cloze": {
+            "blank": "Tlalocan",
+            "distractors": [
+              "Mictlan",
+              "Tepetl"
+            ]
+          },
+          "comprehension": {
+            "answer": 0,
+            "explanation": "La traducción del archivo dice «llueven». Comprobación automática; la interpretación está pendiente de revisión.",
+            "kind": "meaning",
+            "options": [
+              "llueven",
+              "cantan",
+              "duermen"
+            ],
+            "question": "¿Qué hacen los dioses, según la traducción?"
+          },
+          "context": "Pasaje de Veinte himnos sacros de los Nahuas que nombra a Tlalocan. Selección del proyecto para esta lectura; contexto pendiente de revisión.",
+          "explore_words": [
+            "Tlalocan"
+          ]
+        }
+      ],
+      "id": "mito-himnos",
+      "minutes": 7,
+      "objective": "Leer versos de los Veinte himnos sacros que nombran a Tlazoltéotl, Quetzalcóatl y Tláloc.",
+      "reading_tips": [
+        "Los himnos repiten palabras y exclamaciones; busca primero el nombre del dios.",
+        "La traducción es la del archivo (Veinte himnos sacros de los nahuas). Ayudas generadas automáticamente; pendientes de revisión."
+      ],
+      "sense_ids": [
+        "sense-xochitl"
+      ],
+      "title": "Cantos a los dioses"
+    },
+    {
+      "cover_glyph": "glyph-coatl-mdz7v",
+      "examples": [
+        {
+          "annotations": [
+            {
+              "note": "Palabra completa registrada en el diccionario: nemi «Vivir». Ayuda generada; pendiente de revisión.",
+              "quote": "nemi",
+              "relation": "full_word",
+              "sense_id": "sense-wikt-es-nemi-8a784bca"
+            }
+          ],
+          "archive_id": "axolotl-05801",
+          "cloze": {
+            "blank": "nemi",
+            "distractors": [
+              "cochi",
+              "miqui"
+            ]
+          },
+          "comprehension": {
+            "answer": 2,
+            "explanation": "La traducción del archivo dice «25». Comprobación automática; la interpretación está pendiente de revisión.",
+            "kind": "meaning",
+            "options": [
+              "11",
+              "43",
+              "25"
+            ],
+            "question": "¿Cuántos años llevaba viviendo en Tollan?"
+          },
+          "context": "Pasaje de Memorial Breve (Libro las ocho relaciones) que nombra a Quetzalcóatl. Selección del proyecto para esta lectura; contexto pendiente de revisión.",
+          "explore_words": [
+            "nemi"
+          ]
+        },
+        {
+          "annotations": [
+            {
+              "note": "Palabra completa registrada en el diccionario: huey «Grande». Ayuda generada; pendiente de revisión.",
+              "quote": "huey",
+              "relation": "full_word",
+              "sense_id": "sense-wikt-es-huey-46e63d62"
+            }
+          ],
+          "archive_id": "axolotl-04505",
+          "cloze": {
+            "blank": "huey",
+            "distractors": [
+              "tepiton",
+              "cualli"
+            ]
+          },
+          "comprehension": {
+            "answer": 1,
+            "explanation": "La traducción del archivo dice «43». Comprobación automática; la interpretación está pendiente de revisión.",
+            "kind": "meaning",
+            "options": [
+              "11",
+              "43",
+              "25"
+            ],
+            "question": "¿Cuántos años llevaba gobernando?"
+          },
+          "context": "Pasaje de Memorial Breve (Libro las ocho relaciones) que nombra a Quetzalcóatl. Selección del proyecto para esta lectura; contexto pendiente de revisión.",
+          "explore_words": [
+            "huey"
+          ]
+        },
+        {
+          "annotations": [
+            {
+              "note": "Palabra completa registrada en el diccionario: Acatl «Caña, carrizo». Ayuda generada; pendiente de revisión.",
+              "quote": "Acatl",
+              "relation": "full_word",
+              "sense_id": "sense-wikt-es-acatl-5b2ecf1e"
+            },
+            {
+              "note": "Deidad: Tonatiuh. Ficha en Dioses y calendario. Ayuda generada; pendiente de revisión.",
+              "quote": "tonatiuh",
+              "relation": "full_word",
+              "sense_id": "sense-tonatiuh"
+            }
+          ],
+          "archive_id": "axolotl-01772",
+          "cloze": {
+            "blank": "Acatl",
+            "distractors": [
+              "Tochtli",
+              "Calli"
+            ]
+          },
+          "comprehension": {
+            "answer": 1,
+            "explanation": "La traducción del archivo dice «hacia el oriente». Comprobación automática; la interpretación está pendiente de revisión.",
+            "kind": "meaning",
+            "options": [
+              "hacia el norte",
+              "hacia el oriente",
+              "hacia el poniente"
+            ],
+            "question": "¿Hacia dónde se marchó?"
+          },
+          "context": "Pasaje de Memorial Breve (Libro las ocho relaciones) que nombra a Quetzalcóatl, Tonatiuh. Selección del proyecto para esta lectura; contexto pendiente de revisión.",
+          "explore_words": [
+            "Acatl"
+          ]
+        },
+        {
+          "annotations": [
+            {
+              "note": "Palabra completa registrada en el diccionario: tonatiuh «sol». Ayuda generada; pendiente de revisión.",
+              "quote": "tonatiuh",
+              "relation": "full_word",
+              "sense_id": "sense-tonatiuh"
+            }
+          ],
+          "archive_id": "axolotl-05745",
+          "cloze": {
+            "blank": "tonatiuh",
+            "distractors": [
+              "metztli",
+              "citlalin"
+            ]
+          },
+          "comprehension": {
+            "answer": 0,
+            "explanation": "La traducción del archivo dice «tlatohuani». Comprobación automática; la interpretación está pendiente de revisión.",
+            "kind": "meaning",
+            "options": [
+              "tlatohuani",
+              "sacerdote",
+              "capitán"
+            ],
+            "question": "¿Qué nombraron en vano los toltecas?"
+          },
+          "context": "Pasaje de Memorial Breve (Libro las ocho relaciones) que nombra a Quetzalcóatl, Tonatiuh. Selección del proyecto para esta lectura; contexto pendiente de revisión.",
+          "explore_words": [
+            "tonatiuh"
+          ]
+        }
+      ],
+      "id": "mito-quetzalcoatl",
+      "minutes": 7,
+      "objective": "Seguir en el Memorial breve de Chimalpahin a Topiltzin Acxitl Quetzalcóatl: su gobierno en Tollan y su partida hacia el oriente.",
+      "reading_tips": [
+        "coatl «serpiente» está dentro del nombre Quetzalcohuatl.",
+        "Fíjate en los años: Ce Acatl es un nombre del calendario. Ayudas generadas automáticamente; pendientes de revisión."
+      ],
+      "sense_ids": [
+        "sense-coatl"
+      ],
+      "title": "Quetzalcóatl deja Tollan"
+    },
+    {
+      "cover_glyph": "glyph-tochtli-mdz46r",
+      "examples": [
+        {
+          "annotations": [
+            {
+              "note": "Palabra completa registrada en el diccionario: Huitzilopochtli «Huitzilopochtli». Ayuda generada; pendiente de revisión.",
+              "quote": "Huitzilopochtli",
+              "relation": "full_word",
+              "sense_id": "sense-wikt-es-huitzilopochtli-b57f17ea"
+            }
+          ],
+          "archive_id": "axolotl-06028",
+          "cloze": {
+            "blank": "Huitzilopochtli",
+            "distractors": [
+              "Tezcatlipoca",
+              "Quetzalcoatl"
+            ]
+          },
+          "comprehension": {
+            "answer": 0,
+            "explanation": "La traducción del archivo dice «su dios Huitzilopochtli». Comprobación automática; la interpretación está pendiente de revisión.",
+            "kind": "meaning",
+            "options": [
+              "su dios Huitzilopochtli",
+              "los toltecas",
+              "Tezcatlipoca"
+            ],
+            "question": "¿Quién los venía llamando?"
+          },
+          "context": "Pasaje de Cuarta Relación (Libro las ocho relaciones) que nombra a Huitzilopochtli. Selección del proyecto para esta lectura; contexto pendiente de revisión.",
+          "explore_words": [
+            "Huitzilopochtli"
+          ]
+        },
+        {
+          "annotations": [
+            {
+              "note": "Palabra completa registrada en el diccionario: Tochtli «conejo». Ayuda generada; pendiente de revisión.",
+              "quote": "Tochtli",
+              "relation": "full_word",
+              "sense_id": "sense-tochtli"
+            }
+          ],
+          "archive_id": "axolotl-02654",
+          "cloze": {
+            "blank": "Tochtli",
+            "distractors": [
+              "Acatl",
+              "Calli"
+            ]
+          },
+          "comprehension": {
+            "answer": 1,
+            "explanation": "La traducción del archivo dice «1 Tochtli». Comprobación automática; la interpretación está pendiente de revisión.",
+            "kind": "meaning",
+            "options": [
+              "2 Calli",
+              "1 Tochtli",
+              "1 Acatl"
+            ],
+            "question": "¿En qué año fueron llevados como esclavos?"
+          },
+          "context": "Pasaje de Anales de Tlatelolco que nombra a Huitzilopochtli. Selección del proyecto para esta lectura; contexto pendiente de revisión.",
+          "explore_words": [
+            "Tochtli"
+          ]
+        },
+        {
+          "annotations": [
+            {
+              "note": "Palabra completa registrada en el diccionario: ompa «Allá». Ayuda generada; pendiente de revisión.",
+              "quote": "ompa",
+              "relation": "full_word",
+              "sense_id": "sense-wikt-es-ompa-6d086894"
+            }
+          ],
+          "archive_id": "axolotl-04318",
+          "cloze": {
+            "blank": "ompa",
+            "distractors": [
+              "campa",
+              "axcan"
+            ]
+          },
+          "comprehension": {
+            "answer": 2,
+            "explanation": "La traducción del archivo dice «Aztlan Auhtlan Colhuacatépec». Comprobación automática; la interpretación está pendiente de revisión.",
+            "kind": "meaning",
+            "options": [
+              "Tlalocan",
+              "Tollan",
+              "Aztlan Auhtlan Colhuacatépec"
+            ],
+            "question": "¿Dónde apareció, según dicen los antiguos?"
+          },
+          "context": "Pasaje de Tercera Relación (Libro las ocho relaciones) que nombra a Huitzilopochtli. Selección del proyecto para esta lectura; contexto pendiente de revisión.",
+          "explore_words": [
+            "ompa"
+          ]
+        },
+        {
+          "annotations": [
+            {
+              "note": "Palabra completa registrada en el diccionario: tlacatl «Hombre». Ayuda generada; pendiente de revisión.",
+              "quote": "tlacatl",
+              "relation": "full_word",
+              "sense_id": "sense-wikt-es-tlacatl-a681dbd7"
+            }
+          ],
+          "archive_id": "axolotl-05649",
+          "cloze": {
+            "blank": "tlacatl",
+            "distractors": [
+              "cihuatl",
+              "pilli"
+            ]
+          },
+          "comprehension": {
+            "answer": 0,
+            "explanation": "La traducción del archivo dice «cuatro». Comprobación automática; la interpretación está pendiente de revisión.",
+            "kind": "meaning",
+            "options": [
+              "cuatro",
+              "veinte",
+              "siete"
+            ],
+            "question": "¿Cuántos teomamaque cargaban a Huitzilopochtli?"
+          },
+          "context": "Pasaje de Tercera Relación (Libro las ocho relaciones) que nombra a Huitzilopochtli. Selección del proyecto para esta lectura; contexto pendiente de revisión.",
+          "explore_words": [
+            "tlacatl"
+          ]
+        }
+      ],
+      "id": "mito-huitzilopochtli",
+      "minutes": 7,
+      "objective": "Leer en Chimalpahin y los Anales de Tlatelolco cómo aparece Huitzilopochtli, quién lo carga y dónde se edifica su templo.",
+      "reading_tips": [
+        "Su nombre tiene muchas grafías: Huitzillopochtli, Uitzilopochtli, Huitzilopuchtli.",
+        "Chimalpahin escribe como cronista cristiano y lo llama «diablo»; esa es la voz del autor. Ayudas generadas automáticamente; pendientes de revisión."
+      ],
+      "sense_ids": [
+        "sense-tochtli"
+      ],
+      "title": "Huitzilopochtli guía a los mexicas"
+    }
+  ],
+  "note": "Receta de lecturas de mitología: pasajes elegidos por el proyecto, ayudas por plantilla. Solo se publica tras revisión.",
+  "release_id": "lecturas-mitologia-001",
+  "review_status": "editorial_draft",
+  "schema_version": 1
+}

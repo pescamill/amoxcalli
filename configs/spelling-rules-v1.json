@@ -1,0 +1,11021 @@
+{
+ "version": "spelling-rules-v1",
+ "gate": {
+  "split": "dev",
+  "gold": "spelling-search-v1",
+  "max_disagree": 0.25,
+  "min_support": 4
+ },
+ "active": [
+  "final_tl",
+  "z_tz",
+  "aligned"
+ ],
+ "rules": [
+  {
+   "id": "coda_w",
+   "label": "u tras vocal = w en coda (kuautli = cuauhtli)"
+  },
+  {
+   "id": "final_tl",
+   "label": "-t final = -tl (Sierra de Puebla y otras variedades)"
+  },
+  {
+   "id": "tl_t",
+   "label": "tl = t también dentro de la palabra (Sierra de Puebla: metsti, pajti)"
+  },
+  {
+   "id": "tl_typo",
+   "label": "lt por tl al final (error de tecleo)"
+  },
+  {
+   "id": "z_tz",
+   "label": "z/s ante consonante = tz (meztli = metztli)"
+  },
+  {
+   "id": "s_x",
+   "label": "s o sh = x (sochitl, shochitl = xochitl)"
+  },
+  {
+   "id": "x_ch",
+   "label": "x = ch (toxtli = tochtli)"
+  },
+  {
+   "id": "e_i",
+   "label": "e = i (sintli = centli)"
+  },
+  {
+   "id": "y_glide",
+   "label": "y entre i y vocal (quiyahuitl = quiahuitl)"
+  },
+  {
+   "id": "n_m",
+   "label": "n = m ante p o m"
+  },
+  {
+   "id": "mined_n_t",
+   "label": "n = t (minada: nechmacaz/techmakas, nicneltilia/ticneltilia)"
+  },
+  {
+   "id": "mined_k_t",
+   "label": "k = t (minada: acico/acito, quicuazque/ticuazque)"
+  },
+  {
+   "id": "mined_a_s_end",
+   "label": "a = s al final (minada: ihtoua/ihtos, ixnextia/ixnextis)"
+  },
+  {
+   "id": "mined_e_o",
+   "label": "e = o (minada: hematl/omatl, exihuitl/oxihuitl)"
+  },
+  {
+   "id": "mined_m_t",
+   "label": "m = t (minada: mocuic/tocuic, momac/tomac)"
+  },
+  {
+   "id": "mined_a_o_end",
+   "label": "a = o al final (minada: antonia/antonio, azcapotzalca/azcapotzalco)"
+  },
+  {
+   "id": "mined_a_e",
+   "label": "a = e (minada: balthazar/baltesar, dias/diez)"
+  },
+  {
+   "id": "mined_a_e_end",
+   "label": "a = e al final (minada: acolhuaca/acolhuaque, coluaca/culhuaque)"
+  },
+  {
+   "id": "mined_a_i",
+   "label": "a = i (minada: amixpantzinco/ymixpantzinco, amoyollotzin/immoyollotzin)"
+  },
+  {
+   "id": "mined_i_o_end",
+   "label": "i = o al final (minada: acocalli/acocallo, akolij/akoloj)"
+  },
+  {
+   "id": "mined_i_y",
+   "label": "i = y (minada: iaxca/yaxca, yquizaian/yquizayan)"
+  },
+  {
+   "id": "mined_k_λ",
+   "label": "k = λ (minada: ical/itlal, incalcohual/intlalcoual)"
+  },
+  {
+   "id": "mined_a_o",
+   "label": "a = o (minada: amaca/amoca, ateno/ojtenoj)"
+  },
+  {
+   "id": "mined_b_w",
+   "label": "b = w (minada: albaceas/alvaceas, escribano/escrivano)"
+  },
+  {
+   "id": "mined_d_t",
+   "label": "d = t (minada: alcalde/alcalte, margarida/margarita)"
+  },
+  {
+   "id": "mined_e_o_end",
+   "label": "e = o al final (minada: acique/acico, quilpillique/quilpillico)"
+  },
+  {
+   "id": "mined_i_o",
+   "label": "i = o (minada: icceppa/occeppa, ynepantla/unepantla)"
+  },
+  {
+   "id": "mined_k_λ_end",
+   "label": "k = λ al final (minada: atoyac/atoyatl, ilhuicac/ilhuicatl)"
+  },
+  {
+   "id": "mined_k_s",
+   "label": "k = s (minada: arcobispo/arçobispo, bapticta/baptista)"
+  },
+  {
+   "id": "mined_k_s_end",
+   "label": "k = s al final (minada: qualoc/qualoz, nicmacac/nicmacaz)"
+  },
+  {
+   "id": "mined_l_r",
+   "label": "l = r (minada: descalços/descarços, calmenitas/carmenitas)"
+  },
+  {
+   "id": "aligned",
+   "label": "las traducciones alineadas confirman una regla de perfil"
+  }
+ ],
+ "mined_rules": [
+  {
+   "id": "mined_n_t",
+   "a": "n",
+   "b": "t",
+   "context": "any",
+   "cost": 0.5,
+   "support": 32,
+   "varieties": {
+    "nci": 44,
+    "unknown": 7,
+    "nhm": 6,
+    "nhw": 5
+   },
+   "examples": [
+    {
+     "a": "nechmacaz",
+     "b": "techmakas",
+     "shared": [
+      "dara",
+      "peso"
+     ]
+    },
+    {
+     "a": "nicneltilia",
+     "b": "ticneltilia",
+     "shared": [
+      "firma"
+     ]
+    },
+    {
+     "a": "nicpiazquia",
+     "b": "ticpiazquiah",
+     "shared": [
+      "tendria"
+     ]
+    },
+    {
+     "a": "nicpie",
+     "b": "ticpie",
+     "shared": [
+      "justicia"
+     ]
+    },
+    {
+     "a": "nicuicanitl",
+     "b": "ticuicanitl",
+     "shared": [
+      "cantor"
+     ]
+    }
+   ],
+   "label": "n = t (minada: nechmacaz/techmakas, nicneltilia/ticneltilia)",
+   "status": "rejected"
+  },
+  {
+   "id": "mined_k_t",
+   "a": "k",
+   "b": "t",
+   "context": "any",
+   "cost": 0.5,
+   "support": 14,
+   "varieties": {
+    "nci": 13,
+    "unknown": 10,
+    "nhw": 3,
+    "nhm": 2
+   },
+   "examples": [
+    {
+     "a": "acico",
+     "b": "acito",
+     "shared": [
+      "llegaron"
+     ]
+    },
+    {
+     "a": "quicuazque",
+     "b": "ticuazque",
+     "shared": [
+      "comer"
+     ]
+    },
+    {
+     "a": "quimanillico",
+     "b": "quimanillito",
+     "shared": [
+      "procesion"
+     ]
+    },
+    {
+     "a": "quimoquixtilico",
+     "b": "quimoquixtilito",
+     "shared": [
+      "iglesia",
+      "portal",
+      "santo"
+     ]
+    },
+    {
+     "a": "quinonotzaco",
+     "b": "quinnonotzato",
+     "shared": [
+      "hablar"
+     ]
+    }
+   ],
+   "label": "k = t (minada: acico/acito, quicuazque/ticuazque)",
+   "status": "rejected"
+  },
+  {
+   "id": "mined_a_s_end",
+   "a": "a",
+   "b": "s",
+   "context": "end",
+   "cost": 0.5,
+   "support": 11,
+   "varieties": {
+    "nhe": 16,
+    "nhn": 4,
+    "nci": 2
+   },
+   "examples": [
+    {
+     "a": "ihtoua",
+     "b": "ihtos",
+     "shared": [
+      "libre"
+     ]
+    },
+    {
+     "a": "ixnextia",
+     "b": "ixnextis",
+     "shared": [
+      "cualquier",
+      "demostrar",
+      "establecera"
+     ]
+    },
+    {
+     "a": "quimocohuia",
+     "b": "quimocohuiz",
+     "shared": [
+      "peso"
+     ]
+    },
+    {
+     "a": "quiixnextia",
+     "b": "quiixnextis",
+     "shared": [
+      "articulo",
+      "comision",
+      "iii"
+     ]
+    },
+    {
+     "a": "mohuicxitia",
+     "b": "mohuicxitiz",
+     "shared": [
+      "cocer"
+     ]
+    }
+   ],
+   "label": "a = s al final (minada: ihtoua/ihtos, ixnextia/ixnextis)",
+   "status": "rejected"
+  },
+  {
+   "id": "mined_e_o",
+   "a": "e",
+   "b": "o",
+   "context": "any",
+   "cost": 0.5,
+   "support": 11,
+   "varieties": {
+    "nci": 19,
+    "unknown": 3
+   },
+   "examples": [
+    {
+     "a": "hematl",
+     "b": "omatl",
+     "shared": [
+      "ancho",
+      "braza",
+      "largo"
+     ]
+    },
+    {
+     "a": "exihuitl",
+     "b": "oxihuitl",
+     "shared": [
+      "durante"
+     ]
+    },
+    {
+     "a": "marqués",
+     "b": "marcos",
+     "shared": [
+      "don"
+     ]
+    },
+    {
+     "a": "temac",
+     "b": "tomac",
+     "shared": [
+      "mano"
+     ]
+    },
+    {
+     "a": "tenantzin",
+     "b": "tonantzin",
+     "shared": [
+      "madre"
+     ]
+    }
+   ],
+   "label": "e = o (minada: hematl/omatl, exihuitl/oxihuitl)",
+   "status": "rejected"
+  },
+  {
+   "id": "mined_m_t",
+   "a": "m",
+   "b": "t",
+   "context": "any",
+   "cost": 0.5,
+   "support": 11,
+   "varieties": {
+    "nci": 18,
+    "nhm": 2,
+    "azz": 1,
+    "unknown": 1
+   },
+   "examples": [
+    {
+     "a": "mocuic",
+     "b": "tocuic",
+     "shared": [
+      "canto"
+     ]
+    },
+    {
+     "a": "momac",
+     "b": "tomac",
+     "shared": [
+      "mano"
+     ]
+    },
+    {
+     "a": "monanhuan",
+     "b": "tonanuan",
+     "shared": [
+      "madr",
+      "padr"
+     ]
+    },
+    {
+     "a": "monantzin",
+     "b": "tonantzin",
+     "shared": [
+      "madre"
+     ]
+    },
+    {
+     "a": "monahuac",
+     "b": "tonahuac",
+     "shared": [
+      "lado"
+     ]
+    }
+   ],
+   "label": "m = t (minada: mocuic/tocuic, momac/tomac)",
+   "status": "rejected"
+  },
+  {
+   "id": "mined_a_o_end",
+   "a": "a",
+   "b": "o",
+   "context": "end",
+   "cost": 0.5,
+   "support": 9,
+   "varieties": {
+    "nci": 12,
+    "unknown": 4,
+    "azz": 2
+   },
+   "examples": [
+    {
+     "a": "antonia",
+     "b": "antonio",
+     "shared": [
+      "san"
+     ]
+    },
+    {
+     "a": "azcapotzalca",
+     "b": "azcapotzalco",
+     "shared": [
+      "azcapotzalco"
+     ]
+    },
+    {
+     "a": "atzaqualca",
+     "b": "atzaqualco",
+     "shared": [
+      "sebastian"
+     ]
+    },
+    {
+     "a": "fresca",
+     "b": "fresco",
+     "shared": [
+      "fresca"
+     ]
+    },
+    {
+     "a": "quicauhtia",
+     "b": "quicauhtiuh",
+     "shared": [
+      "dejo"
+     ]
+    }
+   ],
+   "label": "a = o al final (minada: antonia/antonio, azcapotzalca/azcapotzalco)",
+   "status": "rejected"
+  },
+  {
+   "id": "mined_a_e",
+   "a": "a",
+   "b": "e",
+   "context": "any",
+   "cost": 0.5,
+   "support": 7,
+   "varieties": {
+    "nci": 6,
+    "nhm": 2,
+    "unknown": 2,
+    "nhe": 2
+   },
+   "examples": [
+    {
+     "a": "balthazar",
+     "b": "baltesar",
+     "shared": [
+      "baltazar",
+      "don",
+      "juan"
+     ]
+    },
+    {
+     "a": "dias",
+     "b": "diez",
+     "shared": [
+      "mil",
+      "quiniento"
+     ]
+    },
+    {
+     "a": "inaluayo",
+     "b": "inelhuayo",
+     "shared": [
+      "raic",
+      "raiz"
+     ]
+    },
+    {
+     "a": "miactin",
+     "b": "miectin",
+     "shared": [
+      "mucho"
+     ]
+    },
+    {
+     "a": "miyak",
+     "b": "miyec",
+     "shared": [
+      "mucha"
+     ]
+    }
+   ],
+   "label": "a = e (minada: balthazar/baltesar, dias/diez)",
+   "status": "rejected"
+  },
+  {
+   "id": "mined_a_e_end",
+   "a": "a",
+   "b": "e",
+   "context": "end",
+   "cost": 0.5,
+   "support": 6,
+   "varieties": {
+    "nci": 10,
+    "nhm": 1,
+    "unknown": 1
+   },
+   "examples": [
+    {
+     "a": "acolhuaca",
+     "b": "acolhuaque",
+     "shared": [
+      "acolhuacan"
+     ]
+    },
+    {
+     "a": "coluaca",
+     "b": "culhuaque",
+     "shared": [
+      "colhuacan"
+     ]
+    },
+    {
+     "a": "coyoaca",
+     "b": "coyohuaque",
+     "shared": [
+      "mexica"
+     ]
+    },
+    {
+     "a": "nauhxiuhtica",
+     "b": "nauhxiuhtique",
+     "shared": [
+      "cuatro"
+     ]
+    },
+    {
+     "a": "nicpia",
+     "b": "nicpie",
+     "shared": [
+      "tengo"
+     ]
+    }
+   ],
+   "label": "a = e al final (minada: acolhuaca/acolhuaque, coluaca/culhuaque)",
+   "status": "rejected"
+  },
+  {
+   "id": "mined_a_i",
+   "a": "a",
+   "b": "i",
+   "context": "any",
+   "cost": 0.5,
+   "support": 6,
+   "varieties": {
+    "nci": 7,
+    "nhe": 2,
+    "unknown": 1,
+    "nhm": 1
+   },
+   "examples": [
+    {
+     "a": "amixpantzinco",
+     "b": "ymixpantzinco",
+     "shared": [
+      "maria"
+     ]
+    },
+    {
+     "a": "amoyollotzin",
+     "b": "immoyollotzin",
+     "shared": [
+      "corazon"
+     ]
+    },
+    {
+     "a": "imatzin",
+     "b": "immitzin",
+     "shared": [
+      "mano"
+     ]
+    },
+    {
+     "a": "sehcanoc",
+     "b": "sequinoc",
+     "shared": [
+      "articulo",
+      "ley"
+     ]
+    },
+    {
+     "a": "cenmatl",
+     "b": "cenmitl",
+     "shared": [
+      "ancho",
+      "braza",
+      "largo"
+     ]
+    }
+   ],
+   "label": "a = i (minada: amixpantzinco/ymixpantzinco, amoyollotzin/immoyollotzin)",
+   "status": "rejected"
+  },
+  {
+   "id": "mined_i_o_end",
+   "a": "i",
+   "b": "o",
+   "context": "end",
+   "cost": 0.5,
+   "support": 6,
+   "varieties": {
+    "nci": 7,
+    "azz": 2,
+    "nhe": 2,
+    "nhm": 1
+   },
+   "examples": [
+    {
+     "a": "acocalli",
+     "b": "acocallo",
+     "shared": [
+      "alto",
+      "aposento"
+     ]
+    },
+    {
+     "a": "akolij",
+     "b": "akoloj",
+     "shared": [
+      "ajonjoli"
+     ]
+    },
+    {
+     "a": "itualli",
+     "b": "ithuallo",
+     "shared": [
+      "patio"
+     ]
+    },
+    {
+     "a": "tequichihuali",
+     "b": "tequichihualo",
+     "shared": [
+      "ley"
+     ]
+    },
+    {
+     "a": "tlacualli",
+     "b": "tlacualo",
+     "shared": [
+      "comida"
+     ]
+    }
+   ],
+   "label": "i = o al final (minada: acocalli/acocallo, akolij/akoloj)",
+   "status": "rejected"
+  },
+  {
+   "id": "mined_i_y",
+   "a": "i",
+   "b": "y",
+   "context": "any",
+   "cost": 0.5,
+   "support": 6,
+   "varieties": {
+    "nci": 10,
+    "unknown": 1,
+    "azz": 1
+   },
+   "examples": [
+    {
+     "a": "iaxca",
+     "b": "yaxca",
+     "shared": [
+      "propiedad"
+     ]
+    },
+    {
+     "a": "yquizaian",
+     "b": "yquizayan",
+     "shared": [
+      "sale"
+     ]
+    },
+    {
+     "a": "ihueltiuh",
+     "b": "yueltiuh",
+     "shared": [
+      "hermana",
+      "mayor"
+     ]
+    },
+    {
+     "a": "ihuitl",
+     "b": "hyuitl",
+     "shared": [
+      "pluma"
+     ]
+    },
+    {
+     "a": "mochiuaia",
+     "b": "mochihuaya",
+     "shared": [
+      "hacia"
+     ]
+    }
+   ],
+   "label": "i = y (minada: iaxca/yaxca, yquizaian/yquizayan)",
+   "status": "review"
+  },
+  {
+   "id": "mined_k_λ",
+   "a": "k",
+   "b": "λ",
+   "context": "any",
+   "cost": 0.5,
+   "support": 6,
+   "varieties": {
+    "nci": 6,
+    "nhe": 6
+   },
+   "examples": [
+    {
+     "a": "ical",
+     "b": "itlal",
+     "shared": [
+      "testigo"
+     ]
+    },
+    {
+     "a": "incalcohual",
+     "b": "intlalcoual",
+     "shared": [
+      "comprada"
+     ]
+    },
+    {
+     "a": "caltlanahuatili",
+     "b": "tlaltlanahuatili",
+     "shared": [
+      "federal"
+     ]
+    },
+    {
+     "a": "caltlanahuatilmeh",
+     "b": "tlaltlanahuatilmeh",
+     "shared": [
+      "articulo",
+      "ley"
+     ]
+    },
+    {
+     "a": "caltlanahuatiloyan",
+     "b": "tlaltlanahuatiloyan",
+     "shared": [
+      "articulo",
+      "estado",
+      "ley"
+     ]
+    }
+   ],
+   "label": "k = λ (minada: ical/itlal, incalcohual/intlalcoual)",
+   "status": "rejected"
+  },
+  {
+   "id": "mined_a_o",
+   "a": "a",
+   "b": "o",
+   "context": "any",
+   "cost": 0.5,
+   "support": 5,
+   "varieties": {
+    "nhe": 4,
+    "nhm": 2,
+    "nci": 2,
+    "nhw": 1
+   },
+   "examples": [
+    {
+     "a": "amaca",
+     "b": "amoca",
+     "shared": [
+      "nadie"
+     ]
+    },
+    {
+     "a": "ateno",
+     "b": "ojtenoj",
+     "shared": [
+      "orilla"
+     ]
+    },
+    {
+     "a": "quiitas",
+     "b": "quiihtos",
+     "shared": [
+      "articulo",
+      "ley"
+     ]
+    },
+    {
+     "a": "macac",
+     "b": "macoc",
+     "shared": [
+      "dio"
+     ]
+    },
+    {
+     "a": "moitas",
+     "b": "moihtos",
+     "shared": [
+      "articulo",
+      "federacion",
+      "termino"
+     ]
+    }
+   ],
+   "label": "a = o (minada: amaca/amoca, ateno/ojtenoj)",
+   "status": "rejected"
+  },
+  {
+   "id": "mined_b_w",
+   "a": "b",
+   "b": "w",
+   "context": "any",
+   "cost": 0.5,
+   "support": 5,
+   "varieties": {
+    "nci": 5,
+    "nhn": 2,
+    "nhm": 2,
+    "unknown": 1
+   },
+   "examples": [
+    {
+     "a": "albaceas",
+     "b": "alvaceas",
+     "shared": [
+      "albacea"
+     ]
+    },
+    {
+     "a": "escribano",
+     "b": "escrivano",
+     "shared": [
+      "escribano",
+      "escrivano",
+      "francisco"
+     ]
+    },
+    {
+     "a": "rebolúsion",
+     "b": "revolución",
+     "shared": [
+      "revolucion"
+     ]
+    },
+    {
+     "a": "sentabo",
+     "b": "centavo",
+     "shared": [
+      "centavo"
+     ]
+    },
+    {
+     "a": "juebes",
+     "b": "jueves",
+     "shared": [
+      "juev"
+     ]
+    }
+   ],
+   "label": "b = w (minada: albaceas/alvaceas, escribano/escrivano)",
+   "status": "review"
+  },
+  {
+   "id": "mined_d_t",
+   "a": "d",
+   "b": "t",
+   "context": "any",
+   "cost": 0.5,
+   "support": 5,
+   "varieties": {
+    "nci": 8,
+    "unknown": 2
+   },
+   "examples": [
+    {
+     "a": "alcalde",
+     "b": "alcalte",
+     "shared": [
+      "alcalde"
+     ]
+    },
+    {
+     "a": "margarida",
+     "b": "margarita",
+     "shared": [
+      "margarita"
+     ]
+    },
+    {
+     "a": "pedro",
+     "b": "petro",
+     "shared": [
+      "pedro"
+     ]
+    },
+    {
+     "a": "pedronilla",
+     "b": "petronila",
+     "shared": [
+      "petronila"
+     ]
+    },
+    {
+     "a": "zorida",
+     "b": "zorita",
+     "shared": [
+      "zorita"
+     ]
+    }
+   ],
+   "label": "d = t (minada: alcalde/alcalte, margarida/margarita)",
+   "status": "review"
+  },
+  {
+   "id": "mined_e_o_end",
+   "a": "e",
+   "b": "o",
+   "context": "end",
+   "cost": 0.5,
+   "support": 5,
+   "varieties": {
+    "nci": 8,
+    "unknown": 2
+   },
+   "examples": [
+    {
+     "a": "acique",
+     "b": "acico",
+     "shared": [
+      "llegaron"
+     ]
+    },
+    {
+     "a": "quilpillique",
+     "b": "quilpillico",
+     "shared": [
+      "antiguo",
+      "ataron",
+      "mexica"
+     ]
+    },
+    {
+     "a": "quimotlalilique",
+     "b": "quimotlallilico",
+     "shared": [
+      "sacramento",
+      "santisimo"
+     ]
+    },
+    {
+     "a": "conitoque",
+     "b": "conitoco",
+     "shared": [
+      "dixeron"
+     ]
+    },
+    {
+     "a": "oacique",
+     "b": "oacico",
+     "shared": [
+      "llegaron"
+     ]
+    }
+   ],
+   "label": "e = o al final (minada: acique/acico, quilpillique/quilpillico)",
+   "status": "rejected"
+  },
+  {
+   "id": "mined_i_o",
+   "a": "i",
+   "b": "o",
+   "context": "any",
+   "cost": 0.5,
+   "support": 5,
+   "varieties": {
+    "nci": 8,
+    "nhm": 2
+   },
+   "examples": [
+    {
+     "a": "icceppa",
+     "b": "occeppa",
+     "shared": [
+      "vez"
+     ]
+    },
+    {
+     "a": "ynepantla",
+     "b": "unepantla",
+     "shared": [
+      "enmedio"
+     ]
+    },
+    {
+     "a": "inimequez",
+     "b": "inomequez",
+     "shared": [
+      "alta",
+      "hombr",
+      "milpa"
+     ]
+    },
+    {
+     "a": "itenco",
+     "b": "hotenco",
+     "shared": [
+      "orilla"
+     ]
+    },
+    {
+     "a": "quintlalli",
+     "b": "contlalli",
+     "shared": [
+      "puso"
+     ]
+    }
+   ],
+   "label": "i = o (minada: icceppa/occeppa, ynepantla/unepantla)",
+   "status": "rejected"
+  },
+  {
+   "id": "mined_k_λ_end",
+   "a": "k",
+   "b": "λ",
+   "context": "end",
+   "cost": 0.5,
+   "support": 5,
+   "varieties": {
+    "nci": 10
+   },
+   "examples": [
+    {
+     "a": "atoyac",
+     "b": "atoyatl",
+     "shared": [
+      "rio"
+     ]
+    },
+    {
+     "a": "ilhuicac",
+     "b": "ilhuicatl",
+     "shared": [
+      "cielo",
+      "dio",
+      "nuestro"
+     ]
+    },
+    {
+     "a": "cemanahuac",
+     "b": "cemanahuatl",
+     "shared": [
+      "mundo"
+     ]
+    },
+    {
+     "a": "chapoltepec",
+     "b": "chapoltepetl",
+     "shared": [
+      "chapoltepec"
+     ]
+    },
+    {
+     "a": "chicomoztoc",
+     "b": "chicomoztotl",
+     "shared": [
+      "chicomoztoc",
+      "quinehuayan"
+     ]
+    }
+   ],
+   "label": "k = λ al final (minada: atoyac/atoyatl, ilhuicac/ilhuicatl)",
+   "status": "rejected"
+  },
+  {
+   "id": "mined_k_s",
+   "a": "k",
+   "b": "s",
+   "context": "any",
+   "cost": 0.5,
+   "support": 4,
+   "varieties": {
+    "unknown": 4,
+    "nhe": 2,
+    "nci": 1,
+    "nhn": 1
+   },
+   "examples": [
+    {
+     "a": "arcobispo",
+     "b": "arçobispo",
+     "shared": [
+      "arzobispo",
+      "don",
+      "fray"
+     ]
+    },
+    {
+     "a": "bapticta",
+     "b": "baptista",
+     "shared": [
+      "bautista"
+     ]
+    },
+    {
+     "a": "mectli",
+     "b": "meztli",
+     "shared": [
+      "mes"
+     ]
+    },
+    {
+     "a": "tlatzquitoqueh",
+     "b": "tlatzquitoseh",
+     "shared": [
+      "articulo",
+      "federal"
+     ]
+    }
+   ],
+   "label": "k = s (minada: arcobispo/arçobispo, bapticta/baptista)",
+   "status": "rejected"
+  },
+  {
+   "id": "mined_k_s_end",
+   "a": "k",
+   "b": "s",
+   "context": "end",
+   "cost": 0.5,
+   "support": 4,
+   "varieties": {
+    "unknown": 5,
+    "nci": 3
+   },
+   "examples": [
+    {
+     "a": "qualoc",
+     "b": "qualoz",
+     "shared": [
+      "sol"
+     ]
+    },
+    {
+     "a": "nicmacac",
+     "b": "nicmacaz",
+     "shared": [
+      "peso"
+     ]
+    },
+    {
+     "a": "tzatzihuac",
+     "b": "tzatzihuaz",
+     "shared": [
+      "pregon"
+     ]
+    },
+    {
+     "a": "tlayahualoloc",
+     "b": "tlayahualoloz",
+     "shared": [
+      "procesion"
+     ]
+    }
+   ],
+   "label": "k = s al final (minada: qualoc/qualoz, nicmacac/nicmacaz)",
+   "status": "rejected"
+  },
+  {
+   "id": "mined_l_r",
+   "a": "l",
+   "b": "r",
+   "context": "any",
+   "cost": 0.5,
+   "support": 4,
+   "varieties": {
+    "unknown": 5,
+    "nci": 3
+   },
+   "examples": [
+    {
+     "a": "descalços",
+     "b": "descarços",
+     "shared": [
+      "descalzo",
+      "religioso"
+     ]
+    },
+    {
+     "a": "calmenitas",
+     "b": "carmenitas",
+     "shared": [
+      "carmelita",
+      "descalzo"
+     ]
+    },
+    {
+     "a": "catalina",
+     "b": "catharina",
+     "shared": [
+      "catalina",
+      "santa"
+     ]
+    },
+    {
+     "a": "maltin",
+     "b": "martin",
+     "shared": [
+      "martin"
+     ]
+    }
+   ],
+   "label": "l = r (minada: descalços/descarços, calmenitas/carmenitas)",
+   "status": "review"
+  }
+ ],
+ "pairs": [
+  {
+   "a": "jabón",
+   "b": "japón",
+   "cost": 1.0,
+   "shared": [
+    "japon",
+    "japones",
+    "mexico"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "adam",
+   "b": "adán",
+   "cost": 0.4,
+   "shared": [
+    "adan",
+    "eva",
+    "nuestro"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "agustin",
+   "b": "augustín",
+   "cost": 0.7,
+   "shared": [
+    "agustin"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "agostina",
+   "b": "augustina",
+   "cost": 0.7,
+   "shared": [
+    "agustina"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ayhtic",
+   "b": "atlitic",
+   "cost": 1.0,
+   "shared": [
+    "isla"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "aihuiyan",
+   "b": "ihuiyan",
+   "cost": 0.7,
+   "shared": [
+    "tranquilidad"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "acan",
+   "b": "aoccan",
+   "cost": 0.7,
+   "shared": [
+    "ninguna",
+    "parte"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "aquino",
+   "b": "xaquin",
+   "cost": 1.0,
+   "shared": [
+    "toma"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "acocalli",
+   "b": "acocallo",
+   "cost": 0.8,
+   "shared": [
+    "alto",
+    "aposento"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "akolij",
+   "b": "akolin",
+   "cost": 0.8,
+   "shared": [
+    "ajonjoli",
+    "come"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "akolij",
+   "b": "akoloj",
+   "cost": 0.8,
+   "shared": [
+    "ajonjoli"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "acolmiçi",
+   "b": "acolmiztli",
+   "cost": 1.0,
+   "shared": [
+    "solicito"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "acolnauacaçi",
+   "b": "acolnauacatzi",
+   "cost": 0.35,
+   "shared": [
+    "acolnahuacatzin",
+    "engendraron",
+    "tuvieron"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "acolhuaca",
+   "b": "acolhuacan",
+   "cost": 0.8,
+   "shared": [
+    "acolhuacan"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "acolhuaca",
+   "b": "acolhuaque",
+   "cost": 0.8,
+   "shared": [
+    "acolhuacan"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "acolhuacan",
+   "b": "culhuacan",
+   "cost": 0.7,
+   "shared": [
+    "tlatohuani"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "aqualtin",
+   "b": "cualtin",
+   "cost": 0.7,
+   "shared": [
+    "repite"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "alcalde",
+   "b": "alcaldes",
+   "cost": 1.0,
+   "shared": [
+    "don"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "amaca",
+   "b": "amoca",
+   "cost": 0.7,
+   "shared": [
+    "nadie"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "amelel",
+   "b": "melel",
+   "cost": 0.7,
+   "shared": [
+    "disgusto"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "amixpantzinco",
+   "b": "ymixpantzinco",
+   "cost": 0.8,
+   "shared": [
+    "maria"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "amopilhuan",
+   "b": "mopilhuan",
+   "cost": 0.7,
+   "shared": [
+    "hijo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "amopilhuan",
+   "b": "namopilhuan",
+   "cost": 0.8,
+   "shared": [
+    "hijo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "amoyollotzin",
+   "b": "immoyollotzin",
+   "cost": 0.8,
+   "shared": [
+    "corazon"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "amoyollotzin",
+   "b": "moyollotzin",
+   "cost": 0.7,
+   "shared": [
+    "corazon"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "animan",
+   "b": "ianima",
+   "cost": 1.0,
+   "shared": [
+    "anima"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "animan",
+   "b": "ianiman",
+   "cost": 0.7,
+   "shared": [
+    "anima"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "animan",
+   "b": "nanima",
+   "cost": 1.0,
+   "shared": [
+    "anima",
+    "mando"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "animan",
+   "b": "naniman",
+   "cost": 0.8,
+   "shared": [
+    "anima",
+    "mando"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ante",
+   "b": "sant",
+   "cost": 1.0,
+   "shared": [
+    "francisco"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "antocnihuan",
+   "b": "antocnihuané",
+   "cost": 0.7,
+   "shared": [
+    "amigo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "antonia",
+   "b": "antonio",
+   "cost": 0.7,
+   "shared": [
+    "san"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "aocac",
+   "b": "tocac",
+   "cost": 1.0,
+   "shared": [
+    "nadie"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "apanecatl",
+   "b": "tlapanecatl",
+   "cost": 1.0,
+   "shared": [
+    "tezcacohuacatl"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "arcobispo",
+   "b": "arçobispo",
+   "cost": 1.0,
+   "shared": [
+    "arzobispo",
+    "don",
+    "fray"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ašan",
+   "b": "aškan",
+   "cost": 1.0,
+   "shared": [
+    "ahora"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "acique",
+   "b": "acico",
+   "cost": 0.8,
+   "shared": [
+    "llegaron"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "acique",
+   "b": "oacique",
+   "cost": 0.7,
+   "shared": [
+    "llegaron"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "acico",
+   "b": "acito",
+   "cost": 1.0,
+   "shared": [
+    "llegaron"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "acico",
+   "b": "oacico",
+   "cost": 0.7,
+   "shared": [
+    "llegaron"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "asis",
+   "b": "asiseh",
+   "cost": 0.7,
+   "shared": [
+    "articulo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "acizque",
+   "b": "tacizque",
+   "cost": 1.0,
+   "shared": [
+    "llegar"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "aškan",
+   "b": "naškan",
+   "cost": 0.8,
+   "shared": [
+    "ahora",
+    "llama"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "azcapoçalco",
+   "b": "azcapotzalco",
+   "cost": 0.35,
+   "shared": [
+    "azcapotzalco"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "azcapotzalca",
+   "b": "azcapotzalco",
+   "cost": 0.7,
+   "shared": [
+    "azcapotzalco"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ateno",
+   "b": "ojtenoj",
+   "cost": 0.7,
+   "shared": [
+    "orilla"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "atentlipa",
+   "b": "atentlipan",
+   "cost": 0.8,
+   "shared": [
+    "acxoteca",
+    "ribera"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ateucuitlatl",
+   "b": "teocuitlatl",
+   "cost": 0.7,
+   "shared": [
+    "oro"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "atitla",
+   "b": "atitlan",
+   "cost": 0.8,
+   "shared": [
+    "agua"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "atol",
+   "b": "atolli",
+   "cost": 0.7,
+   "shared": [
+    "atole"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "atomat",
+   "b": "tomat",
+   "cost": 0.7,
+   "shared": [
+    "tomate"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "atoyac",
+   "b": "atoyatl",
+   "cost": 1.0,
+   "shared": [
+    "rio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "auitzotzi",
+   "b": "ahuitzotzin",
+   "cost": 0.8,
+   "shared": [
+    "ahuitzotzin"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "axan",
+   "b": "axca",
+   "cost": 1.0,
+   "shared": [
+    "ahora"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "axan",
+   "b": "axcan",
+   "cost": 1.0,
+   "shared": [
+    "ahora"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "axayaca",
+   "b": "axayacatl",
+   "cost": 1.0,
+   "shared": [
+    "axayacatl"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "axca",
+   "b": "axcam",
+   "cost": 1.0,
+   "shared": [
+    "ahora"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "axca",
+   "b": "axcan",
+   "cost": 0.8,
+   "shared": [
+    "ahora"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "axcam",
+   "b": "axcan",
+   "cost": 0.4,
+   "shared": [
+    "ahora"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "axcayotl",
+   "b": "tlacayotl",
+   "cost": 1.0,
+   "shared": [
+    "podran"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "axcual",
+   "b": "axcuali",
+   "cost": 0.7,
+   "shared": [
+    "articulo",
+    "autoridad"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "axcuali",
+   "b": "macuali",
+   "cost": 1.0,
+   "shared": [
+    "articulo",
+    "ley"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "atzaqualca",
+   "b": "atzaqualco",
+   "cost": 0.7,
+   "shared": [
+    "sebastian"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "atzaqualco",
+   "b": "tzaqualco",
+   "cost": 0.7,
+   "shared": [
+    "san",
+    "sebastian"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "atzin",
+   "b": "natzin",
+   "cost": 0.8,
+   "shared": [
+    "agua"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "balthazar",
+   "b": "baltesar",
+   "cost": 0.8,
+   "shared": [
+    "baltazar",
+    "don",
+    "juan"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "bautista",
+   "b": "baptista",
+   "cost": 1.0,
+   "shared": [
+    "bautista",
+    "juan",
+    "san"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "bapticta",
+   "b": "baptista",
+   "cost": 1.0,
+   "shared": [
+    "bautista"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "bartolomé",
+   "b": "bartolomen",
+   "cost": 0.8,
+   "shared": [
+    "bartolome",
+    "don"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "dias",
+   "b": "diez",
+   "cost": 0.8,
+   "shared": [
+    "mil",
+    "quiniento"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "doctor",
+   "b": "dotor",
+   "cost": 1.0,
+   "shared": [
+    "doctor"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "doña",
+   "b": "monja",
+   "cost": 1.0,
+   "shared": [
+    "dona",
+    "hija"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "eilhuitl",
+   "b": "exihuitl",
+   "cost": 1.0,
+   "shared": [
+    "tre"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "eilhuitl",
+   "b": "ilhuitl",
+   "cost": 0.7,
+   "shared": [
+    "dia"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "eilhuitl",
+   "b": "yeylhuitl",
+   "cost": 0.3,
+   "shared": [
+    "dia",
+    "tre"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "eyntin",
+   "b": "yeyntin",
+   "cost": 0.3,
+   "shared": [
+    "tre"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "elis",
+   "b": "eliseh",
+   "cost": 0.7,
+   "shared": [
+    "ley"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "elis",
+   "b": "ueli",
+   "cost": 1.0,
+   "shared": [
+    "articulo",
+    "ley",
+    "podra"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "elis",
+   "b": "huelis",
+   "cost": 0.5,
+   "shared": [
+    "articulo",
+    "caso",
+    "ley"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "eliseh",
+   "b": "huelis",
+   "cost": 1.0,
+   "shared": [
+    "constitucion",
+    "ley"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "eliseh",
+   "b": "hueliseh",
+   "cost": 0.5,
+   "shared": [
+    "ley"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "hematl",
+   "b": "maytl",
+   "cost": 1.0,
+   "shared": [
+    "ancho",
+    "braza",
+    "largo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "hematl",
+   "b": "omatl",
+   "cost": 0.8,
+   "shared": [
+    "ancho",
+    "braza",
+    "largo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "hematl",
+   "b": "cematl",
+   "cost": 1.0,
+   "shared": [
+    "braza",
+    "puerta"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "hematl",
+   "b": "yematl",
+   "cost": 0.3,
+   "shared": [
+    "braza",
+    "largo",
+    "tre"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "epohualli",
+   "b": "pohualli",
+   "cost": 0.7,
+   "shared": [
+    "sesenta"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "epohualli",
+   "b": "yepohualli",
+   "cost": 0.3,
+   "shared": [
+    "sesenta"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "epohualxihuitl",
+   "b": "yepohualxihuitl",
+   "cost": 0.3,
+   "shared": [
+    "durante",
+    "goberno",
+    "murio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "hermano",
+   "b": "hermanos",
+   "cost": 1.0,
+   "shared": [
+    "atienden",
+    "capa",
+    "hermano"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "hernan",
+   "b": "serna",
+   "cost": 1.0,
+   "shared": [
+    "perez"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "hernando",
+   "b": "fernando",
+   "cost": 1.0,
+   "shared": [
+    "don"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "jerónimo",
+   "b": "geronimo",
+   "cost": 1.0,
+   "shared": [
+    "francisco"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "escrivano",
+   "b": "nescrivano",
+   "cost": 0.8,
+   "shared": [
+    "escribano",
+    "escrivano",
+    "testigo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "jesucristo",
+   "b": "jesuchristo",
+   "cost": 1.0,
+   "shared": [
+    "jesucristo",
+    "nuestro"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "españoles",
+   "b": "spañoles",
+   "cost": 0.7,
+   "shared": [
+    "espanol"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "espiritu",
+   "b": "spíritu",
+   "cost": 0.7,
+   "shared": [
+    "agustin",
+    "espiritu",
+    "padre"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "estado",
+   "b": "estados",
+   "cost": 1.0,
+   "shared": [
+    "estado",
+    "secretario"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "estagas",
+   "b": "estacas",
+   "cost": 1.0,
+   "shared": [
+    "estaca"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "estaca",
+   "b": "estacas",
+   "cost": 1.0,
+   "shared": [
+    "estaca"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "eztli",
+   "b": "yestli",
+   "cost": 0.3,
+   "shared": [
+    "sangre"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "etetl",
+   "b": "yetetl",
+   "cost": 0.3,
+   "shared": [
+    "tre"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "etic",
+   "b": "yetic",
+   "cost": 0.3,
+   "shared": [
+    "carga",
+    "pesada"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "exihuitl",
+   "b": "oxihuitl",
+   "cost": 0.8,
+   "shared": [
+    "durante"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "exihuitl",
+   "b": "cexiuitl",
+   "cost": 1.0,
+   "shared": [
+    "durante"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "exihuitl",
+   "b": "yexihuitl",
+   "cost": 0.3,
+   "shared": [
+    "durante",
+    "tre"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "expa",
+   "b": "ceppa",
+   "cost": 1.0,
+   "shared": [
+    "vez"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "expa",
+   "b": "yexpa",
+   "cost": 0.3,
+   "shared": [
+    "tre"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "felipe",
+   "b": "phelipe",
+   "cost": 1.0,
+   "shared": [
+    "don",
+    "felipe",
+    "rey"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "francisco",
+   "b": "franciso",
+   "cost": 1.0,
+   "shared": [
+    "san"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "fresca",
+   "b": "fresco",
+   "cost": 0.7,
+   "shared": [
+    "fresca"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "fuerza",
+   "b": "fuerzas",
+   "cost": 1.0,
+   "shared": [
+    "fuerza"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "gano",
+   "b": "cano",
+   "cost": 1.0,
+   "shared": [
+    "cano"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "gobernador",
+   "b": "governador",
+   "cost": 1.0,
+   "shared": [
+    "don",
+    "gobernador",
+    "juez"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "gonsalo",
+   "b": "goçalo",
+   "cost": 0.8,
+   "shared": [
+    "gonzalo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ianima",
+   "b": "ianiman",
+   "cost": 0.8,
+   "shared": [
+    "anima",
+    "difunta"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ianima",
+   "b": "nanima",
+   "cost": 1.0,
+   "shared": [
+    "anima"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ianiman",
+   "b": "naniman",
+   "cost": 1.0,
+   "shared": [
+    "anima",
+    "haga"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "iaxca",
+   "b": "ixica",
+   "cost": 1.0,
+   "shared": [
+    "bien"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "iaxca",
+   "b": "taxca",
+   "cost": 1.0,
+   "shared": [
+    "bien"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "yfirmatzin",
+   "b": "infirmatzin",
+   "cost": 0.8,
+   "shared": [
+    "miguel"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ical",
+   "b": "itlal",
+   "cost": 1.0,
+   "shared": [
+    "testigo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "icampa",
+   "b": "micampa",
+   "cost": 1.0,
+   "shared": [
+    "detra"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ihcaz",
+   "b": "tihcaz",
+   "cost": 1.0,
+   "shared": [
+    "pie",
+    "vivira"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "iquey",
+   "b": "icce",
+   "cost": 1.0,
+   "shared": [
+    "cuarto",
+    "primero",
+    "segundo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "iquey",
+   "b": "icyey",
+   "cost": 0.3,
+   "shared": [
+    "cuarto",
+    "primero",
+    "segundo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "iquiahuac",
+   "b": "quiyahuac",
+   "cost": 1.0,
+   "shared": [
+    "frente"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ijkino",
+   "b": "ihquinon",
+   "cost": 0.8,
+   "shared": [
+    "articulo",
+    "ley"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "icnahuilhuitl",
+   "b": "ycnauhxiuitl",
+   "cost": 1.0,
+   "shared": [
+    "cuarto"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "icomilhuitl",
+   "b": "chicomilhuitl",
+   "cost": 1.0,
+   "shared": [
+    "dia"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "iconde",
+   "b": "conde",
+   "cost": 0.7,
+   "shared": [
+    "conde",
+    "virrey"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ycoppa",
+   "b": "iyopa",
+   "cost": 1.0,
+   "shared": [
+    "vez"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "icoton",
+   "b": "coton",
+   "cost": 0.7,
+   "shared": [
+    "camisa",
+    "ropa"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "icceppa",
+   "b": "occeppa",
+   "cost": 0.8,
+   "shared": [
+    "vez"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "icualan",
+   "b": "quallan",
+   "cost": 0.7,
+   "shared": [
+    "enojo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "icuic",
+   "b": "incuic",
+   "cost": 0.8,
+   "shared": [
+    "canto"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ycxitlantzinco",
+   "b": "ixitlantzinco",
+   "cost": 1.0,
+   "shared": [
+    "pie"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ilama",
+   "b": "nilama",
+   "cost": 0.8,
+   "shared": [
+    "anciana",
+    "anciano"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ilhui",
+   "b": "kiilui",
+   "cost": 1.0,
+   "shared": [
+    "dijo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ilhuicac",
+   "b": "ilhuicatl",
+   "cost": 1.0,
+   "shared": [
+    "cielo",
+    "dio",
+    "nuestro"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ilhuiuh",
+   "b": "ilhuitl",
+   "cost": 1.0,
+   "shared": [
+    "dia",
+    "fiesta"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ymac",
+   "b": "inmac",
+   "cost": 0.8,
+   "shared": [
+    "mano"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "imaman",
+   "b": "maman",
+   "cost": 0.7,
+   "shared": [
+    "mama"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "imacehualhuan",
+   "b": "inmacehualhuan",
+   "cost": 0.8,
+   "shared": [
+    "macehual"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ymatica",
+   "b": "ynmatica",
+   "cost": 0.8,
+   "shared": [
+    "mano"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ymahuiztililonime",
+   "b": "mahuiztililonime",
+   "cost": 0.7,
+   "shared": [
+    "alcald",
+    "magnifico"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "imatzin",
+   "b": "immitzin",
+   "cost": 0.8,
+   "shared": [
+    "mano"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "imiquiliztzin",
+   "b": "ymiquillitzin",
+   "cost": 1.0,
+   "shared": [
+    "muerte"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "imiuh",
+   "b": "inmiuh",
+   "cost": 0.8,
+   "shared": [
+    "flecha"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "imihiyo",
+   "b": "mihiyo",
+   "cost": 0.7,
+   "shared": [
+    "aliento"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "immolhuil",
+   "b": "molhuil",
+   "cost": 0.7,
+   "shared": [
+    "ere",
+    "merecimiento"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "immomatzin",
+   "b": "momatzin",
+   "cost": 0.7,
+   "shared": [
+    "mano",
+    "pie"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "immoyollo",
+   "b": "moyollo",
+   "cost": 0.7,
+   "shared": [
+    "corazon"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "immoyollotzin",
+   "b": "moyollotzin",
+   "cost": 0.7,
+   "shared": [
+    "corazon",
+    "rostro"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "inaluayo",
+   "b": "inelhuayo",
+   "cost": 0.8,
+   "shared": [
+    "raic",
+    "raiz"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "inan",
+   "b": "inana",
+   "cost": 0.7,
+   "shared": [
+    "madre"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "innanhuan",
+   "b": "intahuan",
+   "cost": 1.0,
+   "shared": [
+    "padr"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "inauhcampayxti",
+   "b": "nauhcampaixti",
+   "cost": 0.7,
+   "shared": [
+    "cuatro"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "inekwtli",
+   "b": "nekwtli",
+   "cost": 0.7,
+   "shared": [
+    "pulque"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ynepantla",
+   "b": "unepantla",
+   "cost": 0.8,
+   "shared": [
+    "enmedio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "inimequez",
+   "b": "inomequez",
+   "cost": 0.8,
+   "shared": [
+    "alta",
+    "hombr",
+    "milpa"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "incalcohual",
+   "b": "intlalcoual",
+   "cost": 1.0,
+   "shared": [
+    "comprada"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ynquisició",
+   "b": "ynquisición",
+   "cost": 0.8,
+   "shared": [
+    "inquisicion",
+    "oficio",
+    "santo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "inconeuh",
+   "b": "noconeuh",
+   "cost": 1.0,
+   "shared": [
+    "hija"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "incuic",
+   "b": "nocuic",
+   "cost": 1.0,
+   "shared": [
+    "canto"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "inmac",
+   "b": "nomac",
+   "cost": 1.0,
+   "shared": [
+    "mano"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ynmatica",
+   "b": "nomatica",
+   "cost": 1.0,
+   "shared": [
+    "mano"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "inmiuh",
+   "b": "nomiuh",
+   "cost": 1.0,
+   "shared": [
+    "flecha"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "inpampa",
+   "b": "chinampa",
+   "cost": 1.0,
+   "shared": [
+    "mexico"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "inpilhuan",
+   "b": "ipilhuan",
+   "cost": 0.8,
+   "shared": [
+    "hijo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "inpilhuan",
+   "b": "nopilhuan",
+   "cost": 1.0,
+   "shared": [
+    "hijo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "inpiltzin",
+   "b": "ypiltzin",
+   "cost": 0.8,
+   "shared": [
+    "hijo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "inselti",
+   "b": "iselti",
+   "cost": 0.8,
+   "shared": [
+    "ejercicio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "intahuan",
+   "b": "itahuan",
+   "cost": 0.8,
+   "shared": [
+    "padr"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "intatzin",
+   "b": "itatzin",
+   "cost": 0.8,
+   "shared": [
+    "padre"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "intatzin",
+   "b": "notahtzin",
+   "cost": 1.0,
+   "shared": [
+    "padre"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "intequih",
+   "b": "itequih",
+   "cost": 0.8,
+   "shared": [
+    "articulo",
+    "ejercicio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "inteouh",
+   "b": "iteouh",
+   "cost": 0.8,
+   "shared": [
+    "dio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "inteouh",
+   "b": "noteouh",
+   "cost": 1.0,
+   "shared": [
+    "dio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "intechpohui",
+   "b": "itechpohui",
+   "cost": 0.8,
+   "shared": [
+    "articulo",
+    "constitucion",
+    "estado"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "inhuellitzin",
+   "b": "ihuelitzin",
+   "cost": 0.8,
+   "shared": [
+    "licencia"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "inhueltiuh",
+   "b": "ihueltiuh",
+   "cost": 0.8,
+   "shared": [
+    "hermana",
+    "mayor"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "inxiuh",
+   "b": "ixiuh",
+   "cost": 0.8,
+   "shared": [
+    "ataron",
+    "mexica"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "inyollo",
+   "b": "iyolo",
+   "cost": 0.8,
+   "shared": [
+    "corazon"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "inyollo",
+   "b": "noyollo",
+   "cost": 1.0,
+   "shared": [
+    "corazon"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "inchimal",
+   "b": "ichimal",
+   "cost": 0.8,
+   "shared": [
+    "escudo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "intzonteco",
+   "b": "intzontecon",
+   "cost": 0.8,
+   "shared": [
+    "cabeza"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "intzonteco",
+   "b": "itzonteco",
+   "cost": 0.8,
+   "shared": [
+    "cabeza"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "intzontecon",
+   "b": "itzontecon",
+   "cost": 0.8,
+   "shared": [
+    "cabeza"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "intzotzoma",
+   "b": "itzotzoma",
+   "cost": 0.8,
+   "shared": [
+    "ropa"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "yntlan",
+   "b": "itlan",
+   "cost": 0.8,
+   "shared": [
+    "junto"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "intlanahuatil",
+   "b": "itlanahuatil",
+   "cost": 0.8,
+   "shared": [
+    "ley"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "intlahtocatzin",
+   "b": "itlahtocatzin",
+   "cost": 0.8,
+   "shared": [
+    "rey"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "intlatol",
+   "b": "itlatol",
+   "cost": 0.8,
+   "shared": [
+    "palabra"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "intlahtollo",
+   "b": "itlahtollo",
+   "cost": 0.8,
+   "shared": [
+    "historia"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "intlahuiz",
+   "b": "itlahuiz",
+   "cost": 0.8,
+   "shared": [
+    "divisa",
+    "insignia"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ipapan",
+   "b": "papan",
+   "cost": 0.7,
+   "shared": [
+    "papa"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ipehuayan",
+   "b": "ipeuhyan",
+   "cost": 0.7,
+   "shared": [
+    "principio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ypial",
+   "b": "xipil",
+   "cost": 1.0,
+   "shared": [
+    "nauhyoteuctli",
+    "totoltecatl",
+    "tzompachtli"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ipilhua",
+   "b": "ipilhuan",
+   "cost": 0.8,
+   "shared": [
+    "hijo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ipiltzi",
+   "b": "ypiltzin",
+   "cost": 0.8,
+   "shared": [
+    "hijo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "icihcan",
+   "b": "iciuhcan",
+   "cost": 0.5,
+   "shared": [
+    "pronto"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ysla",
+   "b": "pilla",
+   "cost": 1.0,
+   "shared": [
+    "fray"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "istak",
+   "b": "iztaqueh",
+   "cost": 0.7,
+   "shared": [
+    "blanca",
+    "blanco"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "iztatl",
+   "b": "izhuatl",
+   "cost": 1.0,
+   "shared": [
+    "sal"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "yztlacatiz",
+   "b": "niztlacati",
+   "cost": 1.0,
+   "shared": [
+    "testigo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "yztlacatiz",
+   "b": "niztlacatiz",
+   "cost": 0.8,
+   "shared": [
+    "dixo",
+    "testigo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "yztlacatiz",
+   "b": "tiztlacatiz",
+   "cost": 1.0,
+   "shared": [
+    "jurado"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "itequichihualis",
+   "b": "tequichihualis",
+   "cost": 0.7,
+   "shared": [
+    "articulo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "itenco",
+   "b": "hotenco",
+   "cost": 0.8,
+   "shared": [
+    "orilla"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "iteuh",
+   "b": "iteouh",
+   "cost": 0.7,
+   "shared": [
+    "dio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ytestamento",
+   "b": "testamento",
+   "cost": 0.7,
+   "shared": [
+    "testamento"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "iteyo",
+   "b": "teyo",
+   "cost": 0.7,
+   "shared": [
+    "semilla"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ihtoua",
+   "b": "ihtos",
+   "cost": 1.0,
+   "shared": [
+    "libre"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ythoallo",
+   "b": "ithuallo",
+   "cost": 0.3,
+   "shared": [
+    "aposento",
+    "patio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ytocayocam",
+   "b": "itocayocan",
+   "cost": 0.4,
+   "shared": [
+    "llamado"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "itomines",
+   "b": "tomines",
+   "cost": 0.7,
+   "shared": [
+    "tomin"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "itualli",
+   "b": "ithuallo",
+   "cost": 0.8,
+   "shared": [
+    "patio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ithualco",
+   "b": "ithuallo",
+   "cost": 1.0,
+   "shared": [
+    "patio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "iuelti",
+   "b": "ihueltiuh",
+   "cost": 0.7,
+   "shared": [
+    "hermana"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ihuical",
+   "b": "ihuicpa",
+   "cost": 1.0,
+   "shared": [
+    "articulo",
+    "ley"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ihuitl",
+   "b": "iivitla",
+   "cost": 0.7,
+   "shared": [
+    "pluma"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "iuhcan",
+   "b": "ohuican",
+   "cost": 1.0,
+   "shared": [
+    "lugar"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ixquichi",
+   "b": "yxquichin",
+   "cost": 0.8,
+   "shared": [
+    "cruz"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ixmati",
+   "b": "quixmati",
+   "cost": 1.0,
+   "shared": [
+    "conoce"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ixnesi",
+   "b": "ixnesis",
+   "cost": 1.0,
+   "shared": [
+    "articulo",
+    "ley"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ixnesis",
+   "b": "ixnesiseh",
+   "cost": 0.7,
+   "shared": [
+    "constitucion",
+    "ley"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ixnextia",
+   "b": "ixnextis",
+   "cost": 1.0,
+   "shared": [
+    "cualquier",
+    "demostrar",
+    "establecera"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ixnextia",
+   "b": "quiixnextia",
+   "cost": 1.0,
+   "shared": [
+    "articulo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ixpan",
+   "b": "ixtlan",
+   "cost": 1.0,
+   "shared": [
+    "delante"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "iixui",
+   "b": "yxhuiuh",
+   "cost": 0.7,
+   "shared": [
+    "nieto"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ixtlahuatlacah",
+   "b": "ixtlahuatlacatl",
+   "cost": 1.0,
+   "shared": [
+    "campesino"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "iyoca",
+   "b": "iyocan",
+   "cost": 0.8,
+   "shared": [
+    "solo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "iyolo",
+   "b": "yollo",
+   "cost": 0.7,
+   "shared": [
+    "corazon"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ichinanyo",
+   "b": "ychinayo",
+   "cost": 0.8,
+   "shared": [
+    "camellon"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "itzintla",
+   "b": "itzintlan",
+   "cost": 0.8,
+   "shared": [
+    "debajo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "itzonteco",
+   "b": "itzontecon",
+   "cost": 0.8,
+   "shared": [
+    "cabeza"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "itzonteco",
+   "b": "tzonteco",
+   "cost": 0.7,
+   "shared": [
+    "cabeza"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "itlanahuatil",
+   "b": "tlanahuatil",
+   "cost": 0.7,
+   "shared": [
+    "articulo",
+    "ley"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ytlanequiliztica",
+   "b": "tlanequiliztica",
+   "cost": 0.7,
+   "shared": [
+    "voluntad"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "itlatqui",
+   "b": "tlatqui",
+   "cost": 0.7,
+   "shared": [
+    "bien"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "itlahtlacol",
+   "b": "tlahtlacol",
+   "cost": 0.7,
+   "shared": [
+    "objeto"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "callaquico",
+   "b": "ocallaquico",
+   "cost": 0.7,
+   "shared": [
+    "ciudad"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "calaquiz",
+   "b": "calaquiseh",
+   "cost": 0.7,
+   "shared": [
+    "caso"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "kaltsintaj",
+   "b": "kaltsintan",
+   "cost": 0.8,
+   "shared": [
+    "pie"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "caltlanahuatili",
+   "b": "tlaltlanahuatili",
+   "cost": 1.0,
+   "shared": [
+    "federal"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "caltlanahuatilmeh",
+   "b": "tlaltlanahuatilmeh",
+   "cost": 1.0,
+   "shared": [
+    "articulo",
+    "ley"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "caltlanahuatiloyan",
+   "b": "tlaltlanahuatiloyan",
+   "cost": 1.0,
+   "shared": [
+    "articulo",
+    "estado",
+    "ley"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "campana",
+   "b": "campanas",
+   "cost": 1.0,
+   "shared": [
+    "campana"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "capitá",
+   "b": "capitán",
+   "cost": 0.8,
+   "shared": [
+    "capitan"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "capoli",
+   "b": "kapolin",
+   "cost": 0.8,
+   "shared": [
+    "capulin"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "carrancista",
+   "b": "carrancistas",
+   "cost": 1.0,
+   "shared": [
+    "carrancista"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "castilla",
+   "b": "castillan",
+   "cost": 0.8,
+   "shared": [
+    "castilla"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "cavallero",
+   "b": "cavalleros",
+   "cost": 1.0,
+   "shared": [
+    "caballero"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "cavallo",
+   "b": "cahuayo",
+   "cost": 0.9,
+   "shared": [
+    "caballo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "catli",
+   "b": "catlia",
+   "cost": 0.7,
+   "shared": [
+    "podra"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quezquintin",
+   "b": "ocquezquintin",
+   "cost": 0.7,
+   "shared": [
+    "cuanto"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quetzal",
+   "b": "quetzalli",
+   "cost": 0.7,
+   "shared": [
+    "pluma",
+    "quetzal"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ki'to",
+   "b": "quito",
+   "cost": 1.0,
+   "shared": [
+    "dijo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ki'to",
+   "b": "oki'to",
+   "cost": 0.7,
+   "shared": [
+    "dijo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ki'to",
+   "b": "oquito",
+   "cost": 1.0,
+   "shared": [
+    "dijo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quicauh",
+   "b": "quincauh",
+   "cost": 0.8,
+   "shared": [
+    "dejo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "kikauato",
+   "b": "quincahuato",
+   "cost": 0.8,
+   "shared": [
+    "dejar"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quicauhtia",
+   "b": "quicauhtiuh",
+   "cost": 0.7,
+   "shared": [
+    "dejo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quicauhtia",
+   "b": "quincauhtia",
+   "cost": 0.8,
+   "shared": [
+    "dejo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quiquetz",
+   "b": "oquiquetz",
+   "cost": 0.7,
+   "shared": [
+    "mano"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quiquixtique",
+   "b": "oquiquixtique",
+   "cost": 0.7,
+   "shared": [
+    "sacaron"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quiquixtis",
+   "b": "quiquixtiseh",
+   "cost": 0.7,
+   "shared": [
+    "ley"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quicoaz",
+   "b": "niccohuaz",
+   "cost": 1.0,
+   "shared": [
+    "comprar"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "kikuajke",
+   "b": "oquicuaque",
+   "cost": 0.7,
+   "shared": [
+    "comieron"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quicualitas",
+   "b": "quicualitaseh",
+   "cost": 0.7,
+   "shared": [
+    "articulo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quicualmatis",
+   "b": "quicualmatiseh",
+   "cost": 0.7,
+   "shared": [
+    "podra"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quicuazque",
+   "b": "quizazque",
+   "cost": 1.0,
+   "shared": [
+    "hijo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quicuazque",
+   "b": "ticuazque",
+   "cost": 1.0,
+   "shared": [
+    "comer"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "kikuiaj",
+   "b": "kiichkua",
+   "cost": 1.0,
+   "shared": [
+    "dicen"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quicuique",
+   "b": "oquicuique",
+   "cost": 0.7,
+   "shared": [
+    "antiguo",
+    "tomaron"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quicuitiaya",
+   "b": "oquicuitiaya",
+   "cost": 0.7,
+   "shared": [
+    "hombr"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quilpillique",
+   "b": "quilpillico",
+   "cost": 0.8,
+   "shared": [
+    "antiguo",
+    "ataron",
+    "mexica"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "kiilui",
+   "b": "oquilhui",
+   "cost": 0.7,
+   "shared": [
+    "dijo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quimacaque",
+   "b": "oquimacaque",
+   "cost": 0.7,
+   "shared": [
+    "dieron"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quimanillico",
+   "b": "quimanillito",
+   "cost": 1.0,
+   "shared": [
+    "procesion"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quimictia",
+   "b": "oquimicti",
+   "cost": 1.0,
+   "shared": [
+    "muerte"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quimictique",
+   "b": "quinmictique",
+   "cost": 0.8,
+   "shared": [
+    "mataron",
+    "mexica"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quimilhui",
+   "b": "quimilhuia",
+   "cost": 0.7,
+   "shared": [
+    "dijo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quimilhui",
+   "b": "kinilui",
+   "cost": 0.4,
+   "shared": [
+    "dijo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quimilhui",
+   "b": "oquimilhui",
+   "cost": 0.7,
+   "shared": [
+    "dijo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quimilhuia",
+   "b": "oquimilhui",
+   "cost": 1.0,
+   "shared": [
+    "dijo",
+    "mexica"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quimilhuique",
+   "b": "oquimilhuique",
+   "cost": 0.7,
+   "shared": [
+    "dijeron"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quimittac",
+   "b": "oquimittac",
+   "cost": 0.7,
+   "shared": [
+    "vio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quimitalhui",
+   "b": "oquimitalhui",
+   "cost": 0.7,
+   "shared": [
+    "dijo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quimocaquilti",
+   "b": "oquimocaquilti",
+   "cost": 0.7,
+   "shared": [
+    "juez"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quimoquixtilico",
+   "b": "quimoquixtilito",
+   "cost": 1.0,
+   "shared": [
+    "iglesia",
+    "portal",
+    "santo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quimocohuia",
+   "b": "quimocohuiz",
+   "cost": 1.0,
+   "shared": [
+    "peso"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quimolhuilih",
+   "b": "quimolhuilia",
+   "cost": 0.7,
+   "shared": [
+    "dijo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quimolhuilih",
+   "b": "oquimolhuili",
+   "cost": 0.7,
+   "shared": [
+    "dijo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quimolhuilia",
+   "b": "oquimolhuili",
+   "cost": 1.0,
+   "shared": [
+    "dijo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quimomaquilli",
+   "b": "quinmomaquilli",
+   "cost": 0.8,
+   "shared": [
+    "dio",
+    "don"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quimomaquilli",
+   "b": "oquimomaquilli",
+   "cost": 0.7,
+   "shared": [
+    "don"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quimoneltilili",
+   "b": "quimoneltililia",
+   "cost": 0.7,
+   "shared": [
+    "escribano"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quimocihuahuati",
+   "b": "quimocihuauhti",
+   "cost": 0.7,
+   "shared": [
+    "mujer",
+    "tomo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quimochihuilli",
+   "b": "quimochihuilia",
+   "cost": 0.7,
+   "shared": [
+    "dio",
+    "nuestro"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quimochihuilli",
+   "b": "quinmochihuilli",
+   "cost": 0.8,
+   "shared": [
+    "creo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quimochihuilli",
+   "b": "oquimochihuilli",
+   "cost": 0.7,
+   "shared": [
+    "dio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quimochihuilia",
+   "b": "oquimochihuilli",
+   "cost": 1.0,
+   "shared": [
+    "dio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quimochihuillique",
+   "b": "quimochihuilizque",
+   "cost": 1.0,
+   "shared": [
+    "justicia"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quimotlalili",
+   "b": "oquimotlalili",
+   "cost": 0.7,
+   "shared": [
+    "nombre",
+    "paso"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quimotlalilique",
+   "b": "quimotlallilico",
+   "cost": 0.8,
+   "shared": [
+    "sacramento",
+    "santisimo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quimotlalilique",
+   "b": "oquimotlalilique",
+   "cost": 0.7,
+   "shared": [
+    "firmaron",
+    "nombr"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quinec",
+   "b": "oquinec",
+   "cost": 0.7,
+   "shared": [
+    "quiso"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quinequia",
+   "b": "oquinequia",
+   "cost": 0.7,
+   "shared": [
+    "queria",
+    "querian"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quinextis",
+   "b": "quinextiseh",
+   "cost": 0.7,
+   "shared": [
+    "responsabilidad"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quinextis",
+   "b": "quiixnextis",
+   "cost": 1.0,
+   "shared": [
+    "articulo",
+    "ley"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quinextiseh",
+   "b": "quiixnextiseh",
+   "cost": 1.0,
+   "shared": [
+    "refiere"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quinmomaquilli",
+   "b": "oquimomaquilli",
+   "cost": 1.0,
+   "shared": [
+    "don"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quinonotzaco",
+   "b": "quinnonotzato",
+   "cost": 1.0,
+   "shared": [
+    "hablar"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quinnotz",
+   "b": "oquinnotz",
+   "cost": 0.7,
+   "shared": [
+    "hablo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quintocatlaliseh",
+   "b": "quitocatlaliseh",
+   "cost": 0.8,
+   "shared": [
+    "articulo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quinhualhuicac",
+   "b": "quinhualhuicaque",
+   "cost": 0.7,
+   "shared": [
+    "consigo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quinhualhuicac",
+   "b": "quihualhuicac",
+   "cost": 0.8,
+   "shared": [
+    "consigo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quinhualyacan",
+   "b": "quinhualyacana",
+   "cost": 0.7,
+   "shared": [
+    "tlatohuani"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quinhuicac",
+   "b": "quinhuicaque",
+   "cost": 0.7,
+   "shared": [
+    "consigo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quinhuicaque",
+   "b": "quihuicaque",
+   "cost": 0.8,
+   "shared": [
+    "llevaban",
+    "llevaron"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quinhuicaque",
+   "b": "oquihuicaque",
+   "cost": 1.0,
+   "shared": [
+    "llevaron"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quinchiuh",
+   "b": "quichiuh",
+   "cost": 0.8,
+   "shared": [
+    "tuvo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quinchiuh",
+   "b": "oquinchiuh",
+   "cost": 0.7,
+   "shared": [
+    "hijo",
+    "llamo",
+    "tuvo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quintlalli",
+   "b": "quitlalli",
+   "cost": 0.8,
+   "shared": [
+    "puso"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quintlalli",
+   "b": "contlalli",
+   "cost": 0.8,
+   "shared": [
+    "puso"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quintlalli",
+   "b": "oquitlali",
+   "cost": 1.0,
+   "shared": [
+    "puso"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quipano",
+   "b": "quipanos",
+   "cost": 1.0,
+   "shared": [
+    "articulo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quipanos",
+   "b": "quiixpanos",
+   "cost": 1.0,
+   "shared": [
+    "articulo",
+    "tribunal"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quipias",
+   "b": "quipiaseh",
+   "cost": 0.7,
+   "shared": [
+    "articulo",
+    "ley"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quipiaya",
+   "b": "oquipiaya",
+   "cost": 0.7,
+   "shared": [
+    "tenia"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "kipixtó",
+   "b": "kipixtok",
+   "cost": 1.0,
+   "shared": [
+    "tenia"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "kipoyeli",
+   "b": "kipoyelia",
+   "cost": 0.7,
+   "shared": [
+    "come",
+    "sal"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quizaquiuh",
+   "b": "oquiçaco",
+   "cost": 1.0,
+   "shared": [
+    "salir"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quiçaco",
+   "b": "quiçato",
+   "cost": 1.0,
+   "shared": [
+    "llegaron"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quiselis",
+   "b": "quiseliseh",
+   "cost": 0.7,
+   "shared": [
+    "articulo",
+    "constitucion",
+    "ley"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quizque",
+   "b": "oquizque",
+   "cost": 0.7,
+   "shared": [
+    "salieron"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quittac",
+   "b": "oquittac",
+   "cost": 0.7,
+   "shared": [
+    "vio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "kiitako",
+   "b": "kiitato",
+   "cost": 1.0,
+   "shared": [
+    "ver"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "kitameui",
+   "b": "kitameuia",
+   "cost": 0.7,
+   "shared": [
+    "brota"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quiitas",
+   "b": "quiihtos",
+   "cost": 0.7,
+   "shared": [
+    "articulo",
+    "ley"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quittatiuh",
+   "b": "kiitato",
+   "cost": 0.7,
+   "shared": [
+    "ver"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quittaya",
+   "b": "oquitaya",
+   "cost": 0.7,
+   "shared": [
+    "veia"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "kitekili",
+   "b": "kitekilia",
+   "cost": 0.7,
+   "shared": [
+    "echa"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quitequihuis",
+   "b": "quitequihuiseh",
+   "cost": 0.7,
+   "shared": [
+    "publico"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quito",
+   "b": "mihto",
+   "cost": 1.0,
+   "shared": [
+    "dijo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quito",
+   "b": "oquito",
+   "cost": 0.7,
+   "shared": [
+    "dijo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quihtohuaya",
+   "b": "oquitoaya",
+   "cost": 0.7,
+   "shared": [
+    "decian"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quitocayotique",
+   "b": "oquitocayotique",
+   "cost": 0.7,
+   "shared": [
+    "nombre"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quitocahtlalis",
+   "b": "quitocatlaliseh",
+   "cost": 0.7,
+   "shared": [
+    "articulo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quitoque",
+   "b": "oquitoque",
+   "cost": 0.7,
+   "shared": [
+    "dijeron"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quiihtos",
+   "b": "quiihtoseh",
+   "cost": 0.7,
+   "shared": [
+    "articulo",
+    "constitucion",
+    "ley"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "kiuik",
+   "b": "quihuica",
+   "cost": 0.7,
+   "shared": [
+    "lleva"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quihuicaque",
+   "b": "oquihuicaque",
+   "cost": 0.7,
+   "shared": [
+    "llevaron"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quiixnextia",
+   "b": "quiixnextis",
+   "cost": 1.0,
+   "shared": [
+    "articulo",
+    "comision",
+    "iii"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quiixnextis",
+   "b": "quiixnextiseh",
+   "cost": 0.7,
+   "shared": [
+    "articulo",
+    "derecho",
+    "iii"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quixohua",
+   "b": "quixohuac",
+   "cost": 1.0,
+   "shared": [
+    "palacio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quiixpanos",
+   "b": "quiixpanoseh",
+   "cost": 0.7,
+   "shared": [
+    "articulo",
+    "ley",
+    "tribunal"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quiixtlalis",
+   "b": "quiixtlaliseh",
+   "cost": 0.7,
+   "shared": [
+    "articulo",
+    "ley"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quiixtlalis",
+   "b": "quitlaliz",
+   "cost": 1.0,
+   "shared": [
+    "caso"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quiixtlaliseh",
+   "b": "quitlalizque",
+   "cost": 1.0,
+   "shared": [
+    "podran"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quiyauh",
+   "b": "oquiyauh",
+   "cost": 0.7,
+   "shared": [
+    "llovio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "kichijke",
+   "b": "quichiuhque",
+   "cost": 0.5,
+   "shared": [
+    "hicieron"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quichihuas",
+   "b": "quichihuaseh",
+   "cost": 0.7,
+   "shared": [
+    "articulo",
+    "caso",
+    "ley"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quichiuhque",
+   "b": "oquichiuhque",
+   "cost": 0.7,
+   "shared": [
+    "hicieron"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quitlalli",
+   "b": "oquitlali",
+   "cost": 0.7,
+   "shared": [
+    "puso"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quitlallique",
+   "b": "oquitlallique",
+   "cost": 0.7,
+   "shared": [
+    "pusieron"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quitlalcahuia",
+   "b": "oquitlalcahui",
+   "cost": 1.0,
+   "shared": [
+    "cuerpo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quitlepanitas",
+   "b": "quitlepanitaseh",
+   "cost": 0.7,
+   "shared": [
+    "podran"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "clérigo",
+   "b": "clérigos",
+   "cost": 1.0,
+   "shared": [
+    "clerigo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "cofradía",
+   "b": "cofradías",
+   "cost": 1.0,
+   "shared": [
+    "cofradia",
+    "rosario"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "cocone",
+   "b": "nokone",
+   "cost": 1.0,
+   "shared": [
+    "hijo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "cocone",
+   "b": "tokone",
+   "cost": 1.0,
+   "shared": [
+    "hijo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "colivacan",
+   "b": "culhuacan",
+   "cost": 0.7,
+   "shared": [
+    "colhuacan"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "coluaca",
+   "b": "culhuacan",
+   "cost": 0.8,
+   "shared": [
+    "colhuacan"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "coluaca",
+   "b": "culhuaque",
+   "cost": 0.8,
+   "shared": [
+    "colhuacan"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "commissario",
+   "b": "conmissario",
+   "cost": 0.8,
+   "shared": [
+    "comisario",
+    "fray",
+    "provincial"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "conan",
+   "b": "oconan",
+   "cost": 0.7,
+   "shared": [
+    "tomo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "conitoque",
+   "b": "conitoco",
+   "cost": 0.8,
+   "shared": [
+    "dixeron"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "conmocaquilti",
+   "b": "oconmocaquiti",
+   "cost": 1.0,
+   "shared": [
+    "governador"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "consejero",
+   "b": "consejeros",
+   "cost": 1.0,
+   "shared": [
+    "consejero",
+    "electoral",
+    "magistrado"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "coroz",
+   "b": "cruz",
+   "cost": 0.7,
+   "shared": [
+    "cruz"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "kosauia",
+   "b": "cozahuic",
+   "cost": 1.0,
+   "shared": [
+    "amarillo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "coyoaca",
+   "b": "coyohuaque",
+   "cost": 0.8,
+   "shared": [
+    "mexica"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "coyoueuezi",
+   "b": "coyoueuetzi",
+   "cost": 0.35,
+   "shared": [
+    "coyohuehuetzin",
+    "topantemoctzin"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "coyolli",
+   "b": "oyohualli",
+   "cost": 1.0,
+   "shared": [
+    "cascabel"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "crucifixo",
+   "b": "crucifixos",
+   "cost": 1.0,
+   "shared": [
+    "crucifijo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "cuacualaca",
+   "b": "cuacualacaz",
+   "cost": 1.0,
+   "shared": [
+    "hervir",
+    "pone"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quaquapiçauac",
+   "b": "quaquapitzauac",
+   "cost": 0.35,
+   "shared": [
+    "cuacuauhpitzahuac"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quaquauhçi",
+   "b": "quaquauhtzi",
+   "cost": 0.35,
+   "shared": [
+    "cuacuauhpitzahuac"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "cualcan",
+   "b": "ocualcan",
+   "cost": 0.7,
+   "shared": [
+    "temprano"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quallo",
+   "b": "qualoc",
+   "cost": 1.0,
+   "shared": [
+    "sol"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quallo",
+   "b": "qualoz",
+   "cost": 1.0,
+   "shared": [
+    "comido",
+    "sol"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "qualoc",
+   "b": "qualoz",
+   "cost": 1.0,
+   "shared": [
+    "sol"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "qualoc",
+   "b": "oqualoc",
+   "cost": 0.7,
+   "shared": [
+    "sol"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "kuatini",
+   "b": "cuauhtin",
+   "cost": 1.0,
+   "shared": [
+    "arbol"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "cuahuic",
+   "b": "quauhtli",
+   "cost": 1.0,
+   "shared": [
+    "aguila"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quauhnahuaca",
+   "b": "quauhnauacatl",
+   "cost": 1.0,
+   "shared": [
+    "cuauhnahuaca"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quauhtemoctzi",
+   "b": "quauhtemoctzin",
+   "cost": 0.8,
+   "shared": [
+    "cuauhtemoctzin"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "cuauhtin",
+   "b": "cuauhtzin",
+   "cost": 0.7,
+   "shared": [
+    "milpa"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quauhtitla",
+   "b": "cuauhtitlan",
+   "cost": 0.8,
+   "shared": [
+    "cuauhtitlan"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quauhtlahto",
+   "b": "cuauhtlahtohua",
+   "cost": 0.7,
+   "shared": [
+    "cuauhtlato"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quauhtlahto",
+   "b": "ocuauhtlahto",
+   "cost": 0.7,
+   "shared": [
+    "caudillo",
+    "cuauhtlato"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "cuauhtlahtohua",
+   "b": "ocuauhtlahto",
+   "cost": 1.0,
+   "shared": [
+    "cuauhtlato"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "quauhtlatoaçi",
+   "b": "quauhtlatouatzi",
+   "cost": 0.35,
+   "shared": [
+    "cuauhtlatoatzin"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "cuauhtlatollo",
+   "b": "quauhtlahtolloc",
+   "cost": 1.0,
+   "shared": [
+    "cuauhtlatoque",
+    "gobierno"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "kuento",
+   "b": "kuentos",
+   "cost": 1.0,
+   "shared": [
+    "cuento"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "cuicani",
+   "b": "cuicanitl",
+   "cost": 1.0,
+   "shared": [
+    "cantor"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "cuicaya",
+   "b": "ocuicaya",
+   "cost": 0.7,
+   "shared": [
+    "hacian",
+    "llevaban"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "cuitlahuaca",
+   "b": "cuitlauacatl",
+   "cost": 1.0,
+   "shared": [
+    "cuitlahuaca"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "cuitlaxcoinanacatl",
+   "b": "cuitlaxcolnanacatl",
+   "cost": 1.0,
+   "shared": [
+    "hongo",
+    "tripa"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "licenciado",
+   "b": "licenciados",
+   "cost": 1.0,
+   "shared": [
+    "licenciado"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "licenciado",
+   "b": "liceciado",
+   "cost": 0.8,
+   "shared": [
+    "licenciado"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "luys",
+   "b": "luis",
+   "cost": 0.3,
+   "shared": [
+    "lui"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "lunes",
+   "b": "lopez",
+   "cost": 1.0,
+   "shared": [
+    "don"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "madalena",
+   "b": "magdalena",
+   "cost": 1.0,
+   "shared": [
+    "madalena"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "magistrado",
+   "b": "magistrados",
+   "cost": 1.0,
+   "shared": [
+    "magistrado",
+    "suprema"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "maytl",
+   "b": "omatl",
+   "cost": 1.0,
+   "shared": [
+    "ancho",
+    "braza",
+    "largo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "macac",
+   "b": "macoc",
+   "cost": 0.7,
+   "shared": [
+    "dio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "macoc",
+   "b": "macoque",
+   "cost": 0.7,
+   "shared": [
+    "dio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "macoc",
+   "b": "machoc",
+   "cost": 1.0,
+   "shared": [
+    "maria"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "macoc",
+   "b": "omacoc",
+   "cost": 0.7,
+   "shared": [
+    "dio",
+    "testigo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "macoque",
+   "b": "macozque",
+   "cost": 1.0,
+   "shared": [
+    "san"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "macoque",
+   "b": "omacoc",
+   "cost": 1.0,
+   "shared": [
+    "dio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "macoque",
+   "b": "omacoque",
+   "cost": 0.7,
+   "shared": [
+    "posesion"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "macuil",
+   "b": "macuilli",
+   "cost": 0.7,
+   "shared": [
+    "cinco"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "macuilli",
+   "b": "ommacuilli",
+   "cost": 0.7,
+   "shared": [
+    "cinco"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "malacatepec",
+   "b": "malacachtepec",
+   "cost": 1.0,
+   "shared": [
+    "alta",
+    "milpa"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "malintzin",
+   "b": "malitzin",
+   "cost": 0.8,
+   "shared": [
+    "malintzin"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "malti",
+   "b": "maltia",
+   "cost": 0.7,
+   "shared": [
+    "bana"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "mamá",
+   "b": "maman",
+   "cost": 0.8,
+   "shared": [
+    "mama"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "maria",
+   "b": "marta",
+   "cost": 1.0,
+   "shared": [
+    "santa"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "mariana",
+   "b": "marianan",
+   "cost": 0.8,
+   "shared": [
+    "mariana",
+    "mes",
+    "mil"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "marqués",
+   "b": "marcos",
+   "cost": 0.8,
+   "shared": [
+    "don"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "macehualti",
+   "b": "macehualtin",
+   "cost": 0.8,
+   "shared": [
+    "natural"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "matía",
+   "b": "mathías",
+   "cost": 1.0,
+   "shared": [
+    "febrero",
+    "matia"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "maxitico",
+   "b": "omaxitico",
+   "cost": 0.7,
+   "shared": [
+    "don",
+    "llego",
+    "mexico"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "machiztic",
+   "b": "machiztico",
+   "cost": 0.7,
+   "shared": [
+    "mexico",
+    "supo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "machiztico",
+   "b": "omachiztico",
+   "cost": 0.7,
+   "shared": [
+    "espana",
+    "mexico",
+    "noticia"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "matlatzinca",
+   "b": "matlatzincatl",
+   "cost": 1.0,
+   "shared": [
+    "matlatzinca"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "medio",
+   "b": "melio",
+   "cost": 1.0,
+   "shared": [
+    "medio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "mectli",
+   "b": "meztli",
+   "cost": 1.0,
+   "shared": [
+    "mes"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "mectli",
+   "b": "metztli",
+   "cost": 1.0,
+   "shared": [
+    "mes"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "melchior",
+   "b": "melchor",
+   "cost": 0.7,
+   "shared": [
+    "melchior"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "merino",
+   "b": "merinos",
+   "cost": 1.0,
+   "shared": [
+    "merino"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "metro",
+   "b": "metros",
+   "cost": 1.0,
+   "shared": [
+    "metro"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "mexica",
+   "b": "mexicaé",
+   "cost": 0.7,
+   "shared": [
+    "mexica"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "mexica",
+   "b": "mexicatl",
+   "cost": 1.0,
+   "shared": [
+    "mexica"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "mexicaé",
+   "b": "mexicatl",
+   "cost": 1.0,
+   "shared": [
+    "mexica"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "metsti",
+   "b": "metztin",
+   "cost": 0.8,
+   "shared": [
+    "mes"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "miaque",
+   "b": "micque",
+   "cost": 0.7,
+   "shared": [
+    "mucho"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "miaque",
+   "b": "omicque",
+   "cost": 1.0,
+   "shared": [
+    "mucho"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "miactin",
+   "b": "miectin",
+   "cost": 0.8,
+   "shared": [
+    "mucho"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "mieccan",
+   "b": "miecpa",
+   "cost": 1.0,
+   "shared": [
+    "mucha"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "mieccan",
+   "b": "miecpan",
+   "cost": 1.0,
+   "shared": [
+    "mucha"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "miecpa",
+   "b": "miecpan",
+   "cost": 0.8,
+   "shared": [
+    "mucha",
+    "vec"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "miecpan",
+   "b": "miyecpa",
+   "cost": 1.0,
+   "shared": [
+    "mucha",
+    "vec"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "micque",
+   "b": "omicque",
+   "cost": 0.7,
+   "shared": [
+    "mucho",
+    "murieron"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "miquico",
+   "b": "omiquico",
+   "cost": 0.7,
+   "shared": [
+    "durante",
+    "goberno",
+    "murio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "mictilloc",
+   "b": "mictiloque",
+   "cost": 0.7,
+   "shared": [
+    "muerto",
+    "sacrificado"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "mictiloque",
+   "b": "omictiloque",
+   "cost": 0.7,
+   "shared": [
+    "muerto"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "milaj",
+   "b": "milpa",
+   "cost": 1.0,
+   "shared": [
+    "milpa"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "mimientaj",
+   "b": "pimienta",
+   "cost": 1.0,
+   "shared": [
+    "pimienta"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "mimicque",
+   "b": "mimiquez",
+   "cost": 1.0,
+   "shared": [
+    "muerto"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ministro",
+   "b": "ministros",
+   "cost": 1.0,
+   "shared": [
+    "articulo",
+    "corte",
+    "ministro"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "missa",
+   "b": "misas",
+   "cost": 1.0,
+   "shared": [
+    "misa"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "mihto",
+   "b": "omito",
+   "cost": 0.7,
+   "shared": [
+    "dijo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "miyak",
+   "b": "miyake",
+   "cost": 0.7,
+   "shared": [
+    "mucha"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "miyak",
+   "b": "miyec",
+   "cost": 0.8,
+   "shared": [
+    "mucha"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "michi",
+   "b": "michin",
+   "cost": 0.8,
+   "shared": [
+    "pescado"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "mohuecahuilis",
+   "b": "mocahuilis",
+   "cost": 0.7,
+   "shared": [
+    "caso",
+    "comision",
+    "republica"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "mohuicac",
+   "b": "mohuicaque",
+   "cost": 0.7,
+   "shared": [
+    "mexico"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "mohuicac",
+   "b": "omohuicac",
+   "cost": 0.7,
+   "shared": [
+    "don",
+    "mexico",
+    "partio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "mohuicaque",
+   "b": "omohuicac",
+   "cost": 1.0,
+   "shared": [
+    "mexico"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "mohuicxitia",
+   "b": "mohuicxitiz",
+   "cost": 1.0,
+   "shared": [
+    "cocer"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "moilui",
+   "b": "oquilhui",
+   "cost": 1.0,
+   "shared": [
+    "dijo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "moitas",
+   "b": "moihtohua",
+   "cost": 1.0,
+   "shared": [
+    "articulo",
+    "federacion"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "moitas",
+   "b": "moihtos",
+   "cost": 0.7,
+   "shared": [
+    "articulo",
+    "federacion",
+    "termino"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "moihtohua",
+   "b": "moihtos",
+   "cost": 1.0,
+   "shared": [
+    "articulo",
+    "constitucion",
+    "federacion"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "moihtohua",
+   "b": "omoihtoh",
+   "cost": 1.0,
+   "shared": [
+    "ley"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "moihtos",
+   "b": "mochihtos",
+   "cost": 1.0,
+   "shared": [
+    "articulo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "moihtos",
+   "b": "omoihtoh",
+   "cost": 1.0,
+   "shared": [
+    "ley"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "moixcotona",
+   "b": "moixcotonas",
+   "cost": 1.0,
+   "shared": [
+    "articulo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "moixtlalia",
+   "b": "moixtlalis",
+   "cost": 1.0,
+   "shared": [
+    "articulo",
+    "constitucion",
+    "ley"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "mocallaqui",
+   "b": "omocallaqui",
+   "cost": 0.7,
+   "shared": [
+    "iglesia"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "mocallaquico",
+   "b": "mocallaquito",
+   "cost": 1.0,
+   "shared": [
+    "entro"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "mocallaquico",
+   "b": "ocallaquico",
+   "cost": 1.0,
+   "shared": [
+    "ciudad"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "mocallaquico",
+   "b": "omocallaquico",
+   "cost": 0.7,
+   "shared": [
+    "don",
+    "entro",
+    "mexico"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "mocauhque",
+   "b": "omocauhque",
+   "cost": 0.7,
+   "shared": [
+    "quedaron"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "moquiuiçi",
+   "b": "moquiuitzi",
+   "cost": 0.35,
+   "shared": [
+    "moquihuitzin"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "moquixti",
+   "b": "omoquixti",
+   "cost": 0.7,
+   "shared": [
+    "ciudad",
+    "don",
+    "mexico"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "moquixtia",
+   "b": "moquixtis",
+   "cost": 1.0,
+   "shared": [
+    "articulo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "moquixtilia",
+   "b": "omoquixtili",
+   "cost": 1.0,
+   "shared": [
+    "ajo",
+    "pone",
+    "sal"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "moquixtiliz",
+   "b": "omoquixtili",
+   "cost": 1.0,
+   "shared": [
+    "cebolla"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "mocnin",
+   "b": "nocnin",
+   "cost": 0.4,
+   "shared": [
+    "hermano"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "mococohua",
+   "b": "omococo",
+   "cost": 1.0,
+   "shared": [
+    "enfermo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "mocoltzin",
+   "b": "nocoltzin",
+   "cost": 0.4,
+   "shared": [
+    "abuelo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "mocuachhuia",
+   "b": "omocuachhui",
+   "cost": 1.0,
+   "shared": [
+    "agrega",
+    "mover"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "mocuep",
+   "b": "omocuep",
+   "cost": 0.7,
+   "shared": [
+    "regreso"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "mocuepque",
+   "b": "omocuepque",
+   "cost": 0.7,
+   "shared": [
+    "regresaron"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "mocuic",
+   "b": "nocuic",
+   "cost": 0.4,
+   "shared": [
+    "canto",
+    "flor"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "mocuic",
+   "b": "tocuic",
+   "cost": 1.0,
+   "shared": [
+    "canto"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "momac",
+   "b": "nomac",
+   "cost": 0.4,
+   "shared": [
+    "mano"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "momac",
+   "b": "tomac",
+   "cost": 1.0,
+   "shared": [
+    "mano"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "momamal",
+   "b": "omomamal",
+   "cost": 0.7,
+   "shared": [
+    "dedico"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "momanaco",
+   "b": "omomanaco",
+   "cost": 0.7,
+   "shared": [
+    "epidemia"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "momachtia",
+   "b": "omomatia",
+   "cost": 1.0,
+   "shared": [
+    "nino"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "momiquilli",
+   "b": "omomiquilli",
+   "cost": 0.7,
+   "shared": [
+    "murio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "momiquillico",
+   "b": "momiquillito",
+   "cost": 1.0,
+   "shared": [
+    "goberno",
+    "murio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "momiquillico",
+   "b": "omomiquillico",
+   "cost": 0.7,
+   "shared": [
+    "durante",
+    "goberno",
+    "murio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "momiquillito",
+   "b": "omomiquilito",
+   "cost": 0.7,
+   "shared": [
+    "murio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "momiquillitzino",
+   "b": "omomiquilitzino",
+   "cost": 0.7,
+   "shared": [
+    "murio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "monja",
+   "b": "monjas",
+   "cost": 1.0,
+   "shared": [
+    "monasterio",
+    "monja"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "monanhuan",
+   "b": "tonanuan",
+   "cost": 1.0,
+   "shared": [
+    "madr",
+    "padr"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "monantzin",
+   "b": "nonantzin",
+   "cost": 0.4,
+   "shared": [
+    "madre"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "monantzin",
+   "b": "tonantzin",
+   "cost": 1.0,
+   "shared": [
+    "madre"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "monasterio",
+   "b": "monasterios",
+   "cost": 1.0,
+   "shared": [
+    "monasterio",
+    "monja"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "monahuac",
+   "b": "tonahuac",
+   "cost": 1.0,
+   "shared": [
+    "lado"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "monexitih",
+   "b": "monexti",
+   "cost": 0.7,
+   "shared": [
+    "aparecio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "monexitih",
+   "b": "omonexti",
+   "cost": 1.0,
+   "shared": [
+    "aparecio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "monexti",
+   "b": "omonexti",
+   "cost": 0.7,
+   "shared": [
+    "aparecio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "monechicos",
+   "b": "monechicoseh",
+   "cost": 0.7,
+   "shared": [
+    "articulo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "moncel",
+   "b": "mocel",
+   "cost": 0.8,
+   "shared": [
+    "ana",
+    "mocel"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "mopapan",
+   "b": "nopapan",
+   "cost": 0.4,
+   "shared": [
+    "papa"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "mopialia",
+   "b": "mopialis",
+   "cost": 1.0,
+   "shared": [
+    "articulo",
+    "iii"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "mopialis",
+   "b": "mopialiseh",
+   "cost": 0.7,
+   "shared": [
+    "articulo",
+    "caso",
+    "federal"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "mopilhuan",
+   "b": "nopilhuan",
+   "cost": 0.4,
+   "shared": [
+    "hijo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "mopilhuan",
+   "b": "topilhuan",
+   "cost": 1.0,
+   "shared": [
+    "hijo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "mosoa",
+   "b": "mosoas",
+   "cost": 1.0,
+   "shared": [
+    "tiende"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "mota",
+   "b": "moya",
+   "cost": 1.0,
+   "shared": [
+    "don"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "motamachiuh",
+   "b": "omotamachiuh",
+   "cost": 0.7,
+   "shared": [
+    "ancho",
+    "braza",
+    "estaca"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "motataca",
+   "b": "motatacac",
+   "cost": 1.0,
+   "shared": [
+    "canal"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "motauan",
+   "b": "totauan",
+   "cost": 1.0,
+   "shared": [
+    "madr",
+    "padr"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "motahtzin",
+   "b": "notahtzin",
+   "cost": 0.4,
+   "shared": [
+    "padre"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "motahtzin",
+   "b": "totatzin",
+   "cost": 1.0,
+   "shared": [
+    "padre"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "moteylhui",
+   "b": "moteylhuia",
+   "cost": 0.7,
+   "shared": [
+    "testigo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "motequihuia",
+   "b": "motequihuis",
+   "cost": 1.0,
+   "shared": [
+    "funcion",
+    "respectiva"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "motecuhçomazi",
+   "b": "motecuhçomatzi",
+   "cost": 0.35,
+   "shared": [
+    "moteuczomatzin"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "motemachtilli",
+   "b": "omotemachtilli",
+   "cost": 0.7,
+   "shared": [
+    "predico"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "moteouh",
+   "b": "noteouh",
+   "cost": 0.4,
+   "shared": [
+    "dio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "moteouh",
+   "b": "toteouh",
+   "cost": 1.0,
+   "shared": [
+    "dio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "moteci",
+   "b": "omotez",
+   "cost": 1.0,
+   "shared": [
+    "ajo",
+    "manteca"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "motetequi",
+   "b": "omotetec",
+   "cost": 1.0,
+   "shared": [
+    "cazuela",
+    "cebolla",
+    "sal"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "motomines",
+   "b": "notomines",
+   "cost": 0.4,
+   "shared": [
+    "digo",
+    "peso"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "motozcatlan",
+   "b": "notozcatlan",
+   "cost": 0.4,
+   "shared": [
+    "garganta",
+    "seno"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "moxillan",
+   "b": "noxillan",
+   "cost": 0.4,
+   "shared": [
+    "seno"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "moxochiuh",
+   "b": "noxochiuh",
+   "cost": 0.4,
+   "shared": [
+    "flor"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "moxochiuh",
+   "b": "toxochiuh",
+   "cost": 1.0,
+   "shared": [
+    "flor"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "moyecti",
+   "b": "omoyecti",
+   "cost": 0.7,
+   "shared": [
+    "acequia",
+    "limpiar"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "moyetzticatca",
+   "b": "omoyetzticatca",
+   "cost": 0.7,
+   "shared": [
+    "don",
+    "mexico"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "moyollo",
+   "b": "noyollo",
+   "cost": 0.4,
+   "shared": [
+    "corazon"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "moyollo",
+   "b": "toyollo",
+   "cost": 1.0,
+   "shared": [
+    "corazon"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "moyollotzin",
+   "b": "noyollotzin",
+   "cost": 0.4,
+   "shared": [
+    "corazon"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "mochipa",
+   "b": "nochipa",
+   "cost": 0.4,
+   "shared": [
+    "siempre"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "mochihuaco",
+   "b": "omochihuaco",
+   "cost": 0.7,
+   "shared": [
+    "don"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "mochihuaya",
+   "b": "omochihuaya",
+   "cost": 0.7,
+   "shared": [
+    "hacia"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "mochiuhtzino",
+   "b": "omochiuhtzino",
+   "cost": 0.7,
+   "shared": [
+    "arzobispo",
+    "don"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "mochiuhtzinoco",
+   "b": "mochiuhtzinoto",
+   "cost": 1.0,
+   "shared": [
+    "don",
+    "peru"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "mochiuhtzinoco",
+   "b": "omochiuhtzinoco",
+   "cost": 0.7,
+   "shared": [
+    "espana"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "motlacatilli",
+   "b": "omotlacatili",
+   "cost": 0.7,
+   "shared": [
+    "nacido",
+    "nacio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "motlacatillitzino",
+   "b": "omotlacatillitzino",
+   "cost": 0.7,
+   "shared": [
+    "dio",
+    "jesucristo",
+    "nacimiento"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "motlalilia",
+   "b": "motlaliliz",
+   "cost": 1.0,
+   "shared": [
+    "agregan"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "motlallito",
+   "b": "omotlallito",
+   "cost": 0.7,
+   "shared": [
+    "asentaron"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "motlanahuatilli",
+   "b": "motlanahuatillia",
+   "cost": 0.7,
+   "shared": [
+    "miguel"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "motlanahuatilli",
+   "b": "omotlanahuatilli",
+   "cost": 0.7,
+   "shared": [
+    "mando",
+    "miguel"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "motlanahuatillia",
+   "b": "omotlanahuatilli",
+   "cost": 1.0,
+   "shared": [
+    "miguel",
+    "paso"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "motlapo",
+   "b": "omotlapo",
+   "cost": 0.7,
+   "shared": [
+    "abrio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "motlatocantlali",
+   "b": "motlahtocatlalli",
+   "cost": 0.8,
+   "shared": [
+    "ensenoreo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "motlatocantlali",
+   "b": "omotlahtocatlalli",
+   "cost": 1.0,
+   "shared": [
+    "ensenoreo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "motlahtocatilli",
+   "b": "omotlahtocatilli",
+   "cost": 0.7,
+   "shared": [
+    "arzobispo",
+    "goberno"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "motlahtocatlalli",
+   "b": "omotlahtocatlalli",
+   "cost": 0.7,
+   "shared": [
+    "ensenoreo",
+    "tlatohuani"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "namatl",
+   "b": "nanmatl",
+   "cost": 0.8,
+   "shared": [
+    "ancho",
+    "braza",
+    "largo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "namatl",
+   "b": "onmatl",
+   "cost": 1.0,
+   "shared": [
+    "ancho",
+    "braza",
+    "largo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nanima",
+   "b": "naniman",
+   "cost": 0.8,
+   "shared": [
+    "anima",
+    "mando"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nappa",
+   "b": "nauhpa",
+   "cost": 0.5,
+   "shared": [
+    "cuatro",
+    "vec"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "napohualli",
+   "b": "nauhpohualli",
+   "cost": 0.5,
+   "shared": [
+    "ochenta"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "napohualli",
+   "b": "onpohualli",
+   "cost": 1.0,
+   "shared": [
+    "peso"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nahuilhuitl",
+   "b": "nauhxihuitl",
+   "cost": 1.0,
+   "shared": [
+    "cuatro"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nauinti",
+   "b": "nahuintin",
+   "cost": 0.8,
+   "shared": [
+    "cuatro"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nauhxiuhtica",
+   "b": "nauhxiuhtique",
+   "cost": 0.8,
+   "shared": [
+    "cuatro"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nekwtli",
+   "b": "neuhtli",
+   "cost": 1.0,
+   "shared": [
+    "pulque"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nemia",
+   "b": "onemia",
+   "cost": 0.7,
+   "shared": [
+    "hombr"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nemico",
+   "b": "onemico",
+   "cost": 0.7,
+   "shared": [
+    "vivir"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "necico",
+   "b": "onecico",
+   "cost": 0.7,
+   "shared": [
+    "juez",
+    "mes"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "necitiuh",
+   "b": "onnecitiuh",
+   "cost": 0.7,
+   "shared": [
+    "aparecera",
+    "segun"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nezque",
+   "b": "onezque",
+   "cost": 0.7,
+   "shared": [
+    "aparecieron",
+    "estrella"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nechmaca",
+   "b": "nechmacaz",
+   "cost": 1.0,
+   "shared": [
+    "peso"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nechmacaz",
+   "b": "techmakas",
+   "cost": 1.0,
+   "shared": [
+    "dara",
+    "peso"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "niauh",
+   "b": "niaz",
+   "cost": 1.0,
+   "shared": [
+    "voy"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "niquiza",
+   "b": "oniquiz",
+   "cost": 1.0,
+   "shared": [
+    "derribaba",
+    "derribada"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nicmaca",
+   "b": "nicmacac",
+   "cost": 1.0,
+   "shared": [
+    "ancho",
+    "largo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nicmaca",
+   "b": "nicmacaz",
+   "cost": 1.0,
+   "shared": [
+    "doy"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nicmacac",
+   "b": "nicmacaz",
+   "cost": 1.0,
+   "shared": [
+    "peso"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nicnequi",
+   "b": "nijneki",
+   "cost": 1.0,
+   "shared": [
+    "quiero"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nicneltilia",
+   "b": "ticneltilia",
+   "cost": 1.0,
+   "shared": [
+    "firma"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nicpia",
+   "b": "nicpie",
+   "cost": 0.8,
+   "shared": [
+    "tengo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nicpia",
+   "b": "nipia",
+   "cost": 1.0,
+   "shared": [
+    "tengo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nicpiazquia",
+   "b": "ticpiazquiah",
+   "cost": 1.0,
+   "shared": [
+    "tendria"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nicpie",
+   "b": "ticpie",
+   "cost": 1.0,
+   "shared": [
+    "justicia"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nictema",
+   "b": "nictemaz",
+   "cost": 1.0,
+   "shared": [
+    "peso"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nicuicanitl",
+   "b": "ticuicanitl",
+   "cost": 1.0,
+   "shared": [
+    "cantor"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nicchihua",
+   "b": "nichihua",
+   "cost": 1.0,
+   "shared": [
+    "hago"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nictlalia",
+   "b": "tictlalia",
+   "cost": 1.0,
+   "shared": [
+    "nombre"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nima",
+   "b": "niman",
+   "cost": 0.8,
+   "shared": [
+    "luego"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nimitznamaquiltia",
+   "b": "timitznamaquiltia",
+   "cost": 1.0,
+   "shared": [
+    "vos"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "niztlacati",
+   "b": "niztlacatiz",
+   "cost": 1.0,
+   "shared": [
+    "juramento",
+    "testigo",
+    "verdad"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nihualla",
+   "b": "onihualla",
+   "cost": 0.7,
+   "shared": [
+    "venido"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nihualla",
+   "b": "onhuala",
+   "cost": 1.0,
+   "shared": [
+    "venido"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "niwi",
+   "b": "nihuitz",
+   "cost": 1.0,
+   "shared": [
+    "vengo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nijuikas",
+   "b": "tijuikas",
+   "cost": 1.0,
+   "shared": [
+    "llevar"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "niyauh",
+   "b": "niyas",
+   "cost": 1.0,
+   "shared": [
+    "voy"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nichane",
+   "b": "tichane",
+   "cost": 1.0,
+   "shared": [
+    "sepan"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nitlanahuatia",
+   "b": "titlanahuatia",
+   "cost": 1.0,
+   "shared": [
+    "escribano",
+    "magestad"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nitlahtohua",
+   "b": "titlahtohua",
+   "cost": 1.0,
+   "shared": [
+    "hablando"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "noventa",
+   "b": "ochenta",
+   "cost": 1.0,
+   "shared": [
+    "mil",
+    "quiniento"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "noeve",
+   "b": "nueve",
+   "cost": 0.3,
+   "shared": [
+    "mil",
+    "nueve",
+    "quiniento"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "noueuetlal",
+   "b": "tohuehuetlal",
+   "cost": 1.0,
+   "shared": [
+    "pedazo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nofirma",
+   "b": "tofirma",
+   "cost": 1.0,
+   "shared": [
+    "nombre"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nohuian",
+   "b": "nochin",
+   "cost": 1.0,
+   "shared": [
+    "toda"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "noviembre",
+   "b": "novienbre",
+   "cost": 0.4,
+   "shared": [
+    "mexico",
+    "noviembre"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nohquia",
+   "b": "nochia",
+   "cost": 1.0,
+   "shared": [
+    "ley"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nokone",
+   "b": "noconen",
+   "cost": 0.8,
+   "shared": [
+    "hijo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nokone",
+   "b": "tokone",
+   "cost": 1.0,
+   "shared": [
+    "hijo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "noconitoa",
+   "b": "noconitua",
+   "cost": 0.3,
+   "shared": [
+    "digo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nocuic",
+   "b": "tocuic",
+   "cost": 1.0,
+   "shared": [
+    "canto"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nomac",
+   "b": "noman",
+   "cost": 1.0,
+   "shared": [
+    "mano"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nomac",
+   "b": "tomac",
+   "cost": 1.0,
+   "shared": [
+    "mano"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nomatica",
+   "b": "tomatica",
+   "cost": 1.0,
+   "shared": [
+    "mano"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nombrado",
+   "b": "nonbrado",
+   "cost": 0.4,
+   "shared": [
+    "cruzate",
+    "escribano",
+    "nombrado"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nonacayo",
+   "b": "tonacayo",
+   "cost": 1.0,
+   "shared": [
+    "cuerpo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nonan",
+   "b": "tonan",
+   "cost": 1.0,
+   "shared": [
+    "madre"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nonantzin",
+   "b": "tonantzin",
+   "cost": 1.0,
+   "shared": [
+    "madre"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nonemilis",
+   "b": "tonemiliz",
+   "cost": 1.0,
+   "shared": [
+    "vida"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nonohualca",
+   "b": "nonoalco",
+   "cost": 0.7,
+   "shared": [
+    "teotlixca"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nojpal",
+   "b": "nohpalli",
+   "cost": 0.7,
+   "shared": [
+    "nopal"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nopapá",
+   "b": "nopapan",
+   "cost": 0.8,
+   "shared": [
+    "papa"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nopilhua",
+   "b": "nopilhuan",
+   "cost": 0.8,
+   "shared": [
+    "hijo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nopilhuan",
+   "b": "nopilhuane",
+   "cost": 0.7,
+   "shared": [
+    "hijo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nopilhuan",
+   "b": "topilhuan",
+   "cost": 1.0,
+   "shared": [
+    "hijo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nopiltzin",
+   "b": "nopiltzine",
+   "cost": 0.7,
+   "shared": [
+    "mio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "nota",
+   "b": "tota",
+   "cost": 1.0,
+   "shared": [
+    "madre",
+    "padre"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "notahtzin",
+   "b": "nottatzine",
+   "cost": 0.7,
+   "shared": [
+    "padre"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "notahtzin",
+   "b": "totatzin",
+   "cost": 1.0,
+   "shared": [
+    "padre"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "notecu",
+   "b": "noteuh",
+   "cost": 1.0,
+   "shared": [
+    "dio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "notecu",
+   "b": "noteouh",
+   "cost": 1.0,
+   "shared": [
+    "dio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "noteuh",
+   "b": "noteouh",
+   "cost": 0.7,
+   "shared": [
+    "dio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "noteouh",
+   "b": "toteouh",
+   "cost": 1.0,
+   "shared": [
+    "dio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "notoca",
+   "b": "totoca",
+   "cost": 1.0,
+   "shared": [
+    "nombre"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "noxochiuh",
+   "b": "toxochiuh",
+   "cost": 1.0,
+   "shared": [
+    "flor"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "noxhuihoan",
+   "b": "noxuiuan",
+   "cost": 0.3,
+   "shared": [
+    "nieto"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "noxuiuan",
+   "b": "toxhuihuan",
+   "cost": 1.0,
+   "shared": [
+    "nieto"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "noyol",
+   "b": "noyollo",
+   "cost": 0.7,
+   "shared": [
+    "corazon"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "noyollo",
+   "b": "toyollo",
+   "cost": 1.0,
+   "shared": [
+    "corazon"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "noyollocacopa",
+   "b": "toyollocacopa",
+   "cost": 1.0,
+   "shared": [
+    "voluntad"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "notlazin",
+   "b": "notlatzin",
+   "cost": 0.35,
+   "shared": [
+    "tio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "notlaçottatzin",
+   "b": "totlaçotatzin",
+   "cost": 1.0,
+   "shared": [
+    "padre",
+    "querido",
+    "san"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ohualla",
+   "b": "yohuala",
+   "cost": 0.3,
+   "shared": [
+    "llego"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ohuallaque",
+   "b": "huallaque",
+   "cost": 0.3,
+   "shared": [
+    "vinieron"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ohuallathuic",
+   "b": "huallathuic",
+   "cost": 0.3,
+   "shared": [
+    "amanecer"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ohuallehuaque",
+   "b": "huallehuaque",
+   "cost": 0.3,
+   "shared": [
+    "partieron"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ohualquizque",
+   "b": "hualquizque",
+   "cost": 0.3,
+   "shared": [
+    "salieron"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ohualmohuicac",
+   "b": "hualmohuicac",
+   "cost": 0.3,
+   "shared": [
+    "don",
+    "llego",
+    "mexico"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ohualmohuicaque",
+   "b": "hualmohuicaque",
+   "cost": 0.3,
+   "shared": [
+    "vinieron"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ohualnenenque",
+   "b": "hualnenenque",
+   "cost": 0.3,
+   "shared": [
+    "aztlan",
+    "caminando",
+    "venir"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ohualnentiaque",
+   "b": "hualnentiaque",
+   "cost": 0.3,
+   "shared": [
+    "caminando",
+    "mientra"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ohualnez",
+   "b": "hualnez",
+   "cost": 0.3,
+   "shared": [
+    "cielo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ohualtemoque",
+   "b": "hualtemoque",
+   "cost": 0.3,
+   "shared": [
+    "bajaron"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "joana",
+   "b": "juana",
+   "cost": 0.3,
+   "shared": [
+    "juana"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "oacique",
+   "b": "oacico",
+   "cost": 0.8,
+   "shared": [
+    "llegaron"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "oacico",
+   "b": "onacico",
+   "cost": 0.8,
+   "shared": [
+    "llegaron"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "oacito",
+   "b": "onacito",
+   "cost": 0.8,
+   "shared": [
+    "llegar"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "judicatura",
+   "b": "judicaturas",
+   "cost": 1.0,
+   "shared": [
+    "judicatura",
+    "magistrado"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "oki'to",
+   "b": "oquito",
+   "cost": 1.0,
+   "shared": [
+    "dijo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "oquicac",
+   "b": "oquittac",
+   "cost": 1.0,
+   "shared": [
+    "dijo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "oquiquixtique",
+   "b": "oquinquixtique",
+   "cost": 0.8,
+   "shared": [
+    "sacaron"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "oquinhualhuicac",
+   "b": "oquihualhuicac",
+   "cost": 0.8,
+   "shared": [
+    "llego"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "oquinhuicaya",
+   "b": "oquihuicaya",
+   "cost": 0.8,
+   "shared": [
+    "llevaban"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "oquito",
+   "b": "omito",
+   "cost": 1.0,
+   "shared": [
+    "dijo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "oquihualhuicac",
+   "b": "oquihualhuicaque",
+   "cost": 0.7,
+   "shared": [
+    "llego"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "oquichti",
+   "b": "oquichtin",
+   "cost": 0.8,
+   "shared": [
+    "varon"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "oksi",
+   "b": "oksik",
+   "cost": 1.0,
+   "shared": [
+    "come"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "octubre",
+   "b": "otubre",
+   "cost": 1.0,
+   "shared": [
+    "octubre"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "omaca",
+   "b": "omacatl",
+   "cost": 1.0,
+   "shared": [
+    "acatl",
+    "ataron"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ommacuilli",
+   "b": "onmacuilli",
+   "cost": 0.8,
+   "shared": [
+    "cinco"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "omatl",
+   "b": "onmatl",
+   "cost": 0.8,
+   "shared": [
+    "ancho",
+    "braza",
+    "largo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "omcam",
+   "b": "ompam",
+   "cost": 1.0,
+   "shared": [
+    "tepeteopan"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "omomiquilli",
+   "b": "onmomiquilli",
+   "cost": 0.8,
+   "shared": [
+    "murio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "omomiquillico",
+   "b": "omomiquilito",
+   "cost": 1.0,
+   "shared": [
+    "murio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "omomiquillico",
+   "b": "onmomiquillico",
+   "cost": 0.8,
+   "shared": [
+    "durante",
+    "murio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "omonanahoatitia",
+   "b": "omonanahuatitia",
+   "cost": 0.3,
+   "shared": [
+    "dexo",
+    "mandado",
+    "vieja"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "omopehualti",
+   "b": "onmopehualti",
+   "cost": 0.8,
+   "shared": [
+    "don",
+    "partio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "omotlallico",
+   "b": "onmotlallico",
+   "cost": 0.8,
+   "shared": [
+    "altar",
+    "erigieron",
+    "establecerse"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "omotlanahoatilique",
+   "b": "omotlanahuatilique",
+   "cost": 0.3,
+   "shared": [
+    "mandaron"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "omotlahtocatlalli",
+   "b": "onmotlahtocatlalli",
+   "cost": 0.8,
+   "shared": [
+    "ensenoreo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ompeuh",
+   "b": "opeuh",
+   "cost": 1.0,
+   "shared": [
+    "comenzo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "onehuaque",
+   "b": "onpeuhque",
+   "cost": 1.0,
+   "shared": [
+    "partieron"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "onicpiaya",
+   "b": "oticpiaya",
+   "cost": 1.0,
+   "shared": [
+    "tenia"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "onihualla",
+   "b": "onhuala",
+   "cost": 0.7,
+   "shared": [
+    "venido"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "onxihuitl",
+   "b": "oxihuitl",
+   "cost": 0.8,
+   "shared": [
+    "durante"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "opanoc",
+   "b": "yopanoc",
+   "cost": 0.3,
+   "shared": [
+    "paso"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "opahpacohuac",
+   "b": "pahpacohuac",
+   "cost": 0.7,
+   "shared": [
+    "fiesta"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "opachiuh",
+   "b": "pachiuh",
+   "cost": 0.7,
+   "shared": [
+    "satisfecho"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "opehque",
+   "b": "oyeque",
+   "cost": 1.0,
+   "shared": [
+    "zapatista"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "opehque",
+   "b": "peuhque",
+   "cost": 1.0,
+   "shared": [
+    "empezaron"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "opeuhque",
+   "b": "peuhque",
+   "cost": 0.7,
+   "shared": [
+    "comenzaron"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "opoliuh",
+   "b": "poliuh",
+   "cost": 0.7,
+   "shared": [
+    "ciudad",
+    "perecio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ordinario",
+   "b": "ordinarios",
+   "cost": 1.0,
+   "shared": [
+    "ordinario"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ocelotl",
+   "b": "ocelotli",
+   "cost": 0.7,
+   "shared": [
+    "aguila"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ohtequitl",
+   "b": "tequitl",
+   "cost": 0.7,
+   "shared": [
+    "articulo",
+    "ley"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "otemoc",
+   "b": "temoc",
+   "cost": 0.7,
+   "shared": [
+    "bajo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "hotenco",
+   "b": "ojtenoj",
+   "cost": 1.0,
+   "shared": [
+    "camino",
+    "orilla"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "otia'ke",
+   "b": "otiahqueh",
+   "cost": 1.0,
+   "shared": [
+    "fuimo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "otia'ke",
+   "b": "otiyaque",
+   "cost": 1.0,
+   "shared": [
+    "fuimo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "oticaque",
+   "b": "ticcacque",
+   "cost": 0.7,
+   "shared": [
+    "alcald"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "otiquittaque",
+   "b": "tiquitaque",
+   "cost": 0.7,
+   "shared": [
+    "vimo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "otiquittaque",
+   "b": "tiquittazque",
+   "cost": 1.0,
+   "shared": [
+    "ver"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "otococ",
+   "b": "tococ",
+   "cost": 0.7,
+   "shared": [
+    "cuerpo",
+    "sepultado"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "otomi",
+   "b": "otomitl",
+   "cost": 1.0,
+   "shared": [
+    "capitan",
+    "otomi"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ocholoque",
+   "b": "cholloque",
+   "cost": 0.7,
+   "shared": [
+    "huyeron"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "otzatzihuac",
+   "b": "tzatzihuac",
+   "cost": 0.7,
+   "shared": [
+    "pregon"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "otlacat",
+   "b": "tlacat",
+   "cost": 0.7,
+   "shared": [
+    "nacio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "otlacatque",
+   "b": "tlacatque",
+   "cost": 0.7,
+   "shared": [
+    "hijo",
+    "nacido",
+    "nacieron"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "otlamico",
+   "b": "tlamico",
+   "cost": 0.7,
+   "shared": [
+    "mes",
+    "termino"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "otlamomotlac",
+   "b": "otlamomotlaque",
+   "cost": 0.7,
+   "shared": [
+    "piedra"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "otlananquilli",
+   "b": "tlananquilli",
+   "cost": 0.7,
+   "shared": [
+    "peso",
+    "pregono"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "otlanahuati",
+   "b": "tlanahuati",
+   "cost": 0.7,
+   "shared": [
+    "ordeno"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "otlapacho",
+   "b": "tlaapacho",
+   "cost": 0.7,
+   "shared": [
+    "goberno"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "otlahtocatico",
+   "b": "tlahtocatico",
+   "cost": 0.7,
+   "shared": [
+    "don",
+    "virrey"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "otlathuic",
+   "b": "tlathuic",
+   "cost": 0.7,
+   "shared": [
+    "amanecio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "otlayahualloque",
+   "b": "tlayahualloque",
+   "cost": 0.7,
+   "shared": [
+    "cofradia",
+    "procesion",
+    "salieron"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "otlayahualloque",
+   "b": "tlayahuallozque",
+   "cost": 1.0,
+   "shared": [
+    "procesion"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "otlayahualoloc",
+   "b": "tlayahualoloc",
+   "cost": 0.7,
+   "shared": [
+    "hizo",
+    "procesion"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "otlatlacoltiloc",
+   "b": "tlatlacoltiloc",
+   "cost": 0.7,
+   "shared": [
+    "casado"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "otlatlanilloc",
+   "b": "tlatlaniloc",
+   "cost": 0.7,
+   "shared": [
+    "preguntado"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "otlecoque",
+   "b": "tlecoque",
+   "cost": 0.7,
+   "shared": [
+    "subieron"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "otlica",
+   "b": "otlihpa",
+   "cost": 1.0,
+   "shared": [
+    "camino"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "otlihpa",
+   "b": "ohtlipan",
+   "cost": 0.8,
+   "shared": [
+    "camino"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "palio",
+   "b": "paulo",
+   "cost": 1.0,
+   "shared": [
+    "santo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "papa",
+   "b": "papan",
+   "cost": 0.8,
+   "shared": [
+    "papa"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "patlaoac",
+   "b": "patlahuac",
+   "cost": 0.3,
+   "shared": [
+    "ancho",
+    "braza",
+    "largo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "peso",
+   "b": "pesos",
+   "cost": 1.0,
+   "shared": [
+    "peso"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "picawak",
+   "b": "pitzahuac",
+   "cost": 1.0,
+   "shared": [
+    "delgado"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "pilokichpiltsi",
+   "b": "pilokichpiitsi",
+   "cost": 0.6,
+   "shared": [
+    "nino"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "piome",
+   "b": "pitzome",
+   "cost": 1.0,
+   "shared": [
+    "gallina"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "pipilti",
+   "b": "pipiltin",
+   "cost": 0.8,
+   "shared": [
+    "principal"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "pipiltzitzinti",
+   "b": "pipiltzitzintin",
+   "cost": 0.8,
+   "shared": [
+    "nino"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "poerta",
+   "b": "puerta",
+   "cost": 0.3,
+   "shared": [
+    "puerta"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "posesio",
+   "b": "posesion",
+   "cost": 0.8,
+   "shared": [
+    "francisco",
+    "posesion"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "profeta",
+   "b": "propheta",
+   "cost": 1.0,
+   "shared": [
+    "diluvio",
+    "noe",
+    "profeta"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "provincia",
+   "b": "provincias",
+   "cost": 1.0,
+   "shared": [
+    "provincia"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "rebolúsio",
+   "b": "rebolúsion",
+   "cost": 0.8,
+   "shared": [
+    "revolucion",
+    "salir",
+    "vino"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "sala",
+   "b": "salas",
+   "cost": 1.0,
+   "shared": [
+    "sala"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "salome",
+   "b": "salomen",
+   "cost": 0.8,
+   "shared": [
+    "maria",
+    "salome"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "sanc",
+   "b": "sanct",
+   "cost": 1.0,
+   "shared": [
+    "san"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "sanc",
+   "b": "sant",
+   "cost": 1.0,
+   "shared": [
+    "san"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "sanct",
+   "b": "sancta",
+   "cost": 0.7,
+   "shared": [
+    "san"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "sanct",
+   "b": "sancto",
+   "cost": 0.7,
+   "shared": [
+    "san"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "sanct",
+   "b": "sant",
+   "cost": 1.0,
+   "shared": [
+    "san"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "sancta",
+   "b": "sancto",
+   "cost": 0.7,
+   "shared": [
+    "san"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "sancta",
+   "b": "santa",
+   "cost": 1.0,
+   "shared": [
+    "maria",
+    "santa"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "sanctiago",
+   "b": "santiago",
+   "cost": 1.0,
+   "shared": [
+    "santiago"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "sanctíssimo",
+   "b": "santisimo",
+   "cost": 1.0,
+   "shared": [
+    "sacramento",
+    "santisimo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "sancto",
+   "b": "sanctos",
+   "cost": 1.0,
+   "shared": [
+    "santo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "sancto",
+   "b": "santo",
+   "cost": 1.0,
+   "shared": [
+    "santo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "sanctos",
+   "b": "santos",
+   "cost": 1.0,
+   "shared": [
+    "santo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "santo",
+   "b": "santos",
+   "cost": 1.0,
+   "shared": [
+    "santo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "satepa",
+   "b": "zatepan",
+   "cost": 0.8,
+   "shared": [
+    "despue"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "seis",
+   "b": "cehuiz",
+   "cost": 0.5,
+   "shared": [
+    "dia"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "sehcanoc",
+   "b": "sequinoc",
+   "cost": 0.8,
+   "shared": [
+    "articulo",
+    "ley"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "secretario",
+   "b": "secretarios",
+   "cost": 1.0,
+   "shared": [
+    "articulo",
+    "ejercicio",
+    "ministro"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "selik",
+   "b": "celtic",
+   "cost": 1.0,
+   "shared": [
+    "tierno"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "cemanahuac",
+   "b": "cemanahuatl",
+   "cost": 1.0,
+   "shared": [
+    "mundo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "cematl",
+   "b": "cenmatl",
+   "cost": 0.8,
+   "shared": [
+    "braza"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "cematl",
+   "b": "yematl",
+   "cost": 1.0,
+   "shared": [
+    "atra",
+    "braza"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "semilla",
+   "b": "semiya",
+   "cost": 0.9,
+   "shared": [
+    "semilla"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "cenmatl",
+   "b": "cenmitl",
+   "cost": 0.8,
+   "shared": [
+    "ancho",
+    "braza",
+    "largo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "sentabo",
+   "b": "sentabos",
+   "cost": 1.0,
+   "shared": [
+    "centavo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "cenyohual",
+   "b": "ceyohual",
+   "cost": 0.8,
+   "shared": [
+    "noche",
+    "toda"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "septiembre",
+   "b": "setiembre",
+   "cost": 1.0,
+   "shared": [
+    "mes",
+    "septiembre"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "sesenta",
+   "b": "setenta",
+   "cost": 1.0,
+   "shared": [
+    "mes",
+    "mil",
+    "quiniento"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "setiembre",
+   "b": "setienbre",
+   "cost": 0.4,
+   "shared": [
+    "dia",
+    "mes",
+    "septiembre"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "cexiuitl",
+   "b": "yexihuitl",
+   "cost": 1.0,
+   "shared": [
+    "durante"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "cexiuhtique",
+   "b": "yexiuhtique",
+   "cost": 1.0,
+   "shared": [
+    "partieron",
+    "quedaron"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "sierra",
+   "b": "sierras",
+   "cost": 1.0,
+   "shared": [
+    "justo",
+    "secretario",
+    "sierra"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "cicitlalti",
+   "b": "cicitlaltin",
+   "cost": 0.8,
+   "shared": [
+    "aparecieron",
+    "eclipse",
+    "estrella"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "cihua",
+   "b": "cihuatl",
+   "cost": 1.0,
+   "shared": [
+    "mujer"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "cihuatzitzinti",
+   "b": "cihuatzitzintin",
+   "cost": 0.8,
+   "shared": [
+    "mujer"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "suli",
+   "b": "zollin",
+   "cost": 0.8,
+   "shared": [
+    "codornic"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tamal",
+   "b": "tamalli",
+   "cost": 0.7,
+   "shared": [
+    "hoja",
+    "tamal"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "teamaco",
+   "b": "temaco",
+   "cost": 0.7,
+   "shared": [
+    "cacao",
+    "tabaco"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "teamaco",
+   "b": "tetlamaco",
+   "cost": 1.0,
+   "shared": [
+    "gente"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tequipanos",
+   "b": "tequipanoseh",
+   "cost": 0.7,
+   "shared": [
+    "constitucion",
+    "ejercicio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tequipanohtos",
+   "b": "tequipanohtoseh",
+   "cost": 0.7,
+   "shared": [
+    "federal",
+    "ministro"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tekitise",
+   "b": "tequitizque",
+   "cost": 1.0,
+   "shared": [
+    "trabajar"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tequihuacayotl",
+   "b": "tequihuecayotl",
+   "cost": 0.8,
+   "shared": [
+    "articulo",
+    "federacion",
+    "parrafo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tequichihua",
+   "b": "tequichihuas",
+   "cost": 1.0,
+   "shared": [
+    "articulo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tequichihuali",
+   "b": "tequichihualis",
+   "cost": 1.0,
+   "shared": [
+    "articulo",
+    "constitucion",
+    "union"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tequichihuali",
+   "b": "tequichihualo",
+   "cost": 0.8,
+   "shared": [
+    "ley"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tequichihuali",
+   "b": "tequichihuani",
+   "cost": 1.0,
+   "shared": [
+    "articulo",
+    "caso",
+    "constitucion"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tequichihuaneh",
+   "b": "tequichihuaseh",
+   "cost": 1.0,
+   "shared": [
+    "ejercicio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tequichihuas",
+   "b": "tequichihuaseh",
+   "cost": 0.7,
+   "shared": [
+    "ejercicio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tecpa",
+   "b": "tecpatl",
+   "cost": 1.0,
+   "shared": [
+    "tecpatl"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tecpanecah",
+   "b": "tepaneca",
+   "cost": 1.0,
+   "shared": [
+    "tepaneca"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tecpayoca",
+   "b": "tecpayocan",
+   "cost": 0.8,
+   "shared": [
+    "tecpayocan"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "teuctla",
+   "b": "teuctli",
+   "cost": 0.8,
+   "shared": [
+    "principe"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "temac",
+   "b": "tomac",
+   "cost": 0.8,
+   "shared": [
+    "mano"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "temactilis",
+   "b": "temactiliseh",
+   "cost": 0.7,
+   "shared": [
+    "ejecutivo",
+    "union"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "temactilis",
+   "b": "tematiltis",
+   "cost": 1.0,
+   "shared": [
+    "articulo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "temilotzi",
+   "b": "temilotzin",
+   "cost": 0.8,
+   "shared": [
+    "temillotzin"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tenantzin",
+   "b": "tonantzin",
+   "cost": 0.8,
+   "shared": [
+    "madre"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tenahuac",
+   "b": "tonahuac",
+   "cost": 0.8,
+   "shared": [
+    "lado"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tenayoca",
+   "b": "tenayocan",
+   "cost": 0.8,
+   "shared": [
+    "tenayocan"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tenochca",
+   "b": "tenochcatl",
+   "cost": 1.0,
+   "shared": [
+    "tenochca"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tenochtitla",
+   "b": "tenochtitlan",
+   "cost": 0.8,
+   "shared": [
+    "tenochtitlan"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "teohua",
+   "b": "teopa",
+   "cost": 1.0,
+   "shared": [
+    "sacerdote"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tehoantin",
+   "b": "tehuantin",
+   "cost": 0.3,
+   "shared": [
+    "alcald"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "teoithualco",
+   "b": "teuthualco",
+   "cost": 0.7,
+   "shared": [
+    "sagrado"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "teocuitla",
+   "b": "teocuitlatl",
+   "cost": 1.0,
+   "shared": [
+    "oro"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "teopa",
+   "b": "teopan",
+   "cost": 0.8,
+   "shared": [
+    "iglesia"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "teopixque",
+   "b": "tepixque",
+   "cost": 0.7,
+   "shared": [
+    "francisco"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tepaneca",
+   "b": "tepanecatl",
+   "cost": 1.0,
+   "shared": [
+    "tepaneca"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tepetl",
+   "b": "tepetli",
+   "cost": 0.7,
+   "shared": [
+    "cerro"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tepilhuan",
+   "b": "topilhuan",
+   "cost": 0.8,
+   "shared": [
+    "hijo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tezontlalnamacoya",
+   "b": "tezontlalnamacoyan",
+   "cost": 0.8,
+   "shared": [
+    "tezontlalnamacoyan"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "teçoçomocçi",
+   "b": "teçoçomoctzi",
+   "cost": 0.35,
+   "shared": [
+    "tezozomoctzin"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "teçoçomoctzi",
+   "b": "teçoçomoctzin",
+   "cost": 0.8,
+   "shared": [
+    "tezozomoctzin"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "testamento",
+   "b": "testamentos",
+   "cost": 1.0,
+   "shared": [
+    "testamento"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "testigo",
+   "b": "testigos",
+   "cost": 1.0,
+   "shared": [
+    "testigo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "testigo",
+   "b": "testico",
+   "cost": 1.0,
+   "shared": [
+    "testigo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tetta",
+   "b": "tota",
+   "cost": 0.8,
+   "shared": [
+    "padre"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tetahuan",
+   "b": "totauan",
+   "cost": 0.8,
+   "shared": [
+    "padr"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tetatzin",
+   "b": "totatzin",
+   "cost": 0.8,
+   "shared": [
+    "padre"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "teteu",
+   "b": "teteoé",
+   "cost": 0.7,
+   "shared": [
+    "dios"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "teuhctlato",
+   "b": "teuhctlahtohua",
+   "cost": 0.7,
+   "shared": [
+    "teuctlato"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "teyo",
+   "b": "teyoua",
+   "cost": 0.7,
+   "shared": [
+    "semilla"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "teyollo",
+   "b": "toyollo",
+   "cost": 0.8,
+   "shared": [
+    "corazon"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "techyahuallotoc",
+   "b": "techyahuallotoque",
+   "cost": 0.7,
+   "shared": [
+    "alrededor"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tiaz",
+   "b": "ticquaz",
+   "cost": 1.0,
+   "shared": [
+    "ira"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tiazque",
+   "b": "ticuazque",
+   "cost": 1.0,
+   "shared": [
+    "vamo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tihcaz",
+   "b": "ticquaz",
+   "cost": 0.9,
+   "shared": [
+    "vivira"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tiquintayocoli",
+   "b": "xiquintayocoli",
+   "cost": 1.0,
+   "shared": [
+    "hijo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ticnequi",
+   "b": "tijneki",
+   "cost": 1.0,
+   "shared": [
+    "queremo",
+    "quier"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "timacehualti",
+   "b": "timacehualtin",
+   "cost": 0.8,
+   "shared": [
+    "espanol",
+    "natural"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tiçaapa",
+   "b": "tiçaapan",
+   "cost": 0.8,
+   "shared": [
+    "mexica",
+    "tizaapan"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tixpa",
+   "b": "tixpan",
+   "cost": 0.8,
+   "shared": [
+    "justicia"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "titlakuas",
+   "b": "titlakuase",
+   "cost": 0.7,
+   "shared": [
+    "comer"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "titlakuase",
+   "b": "titlakwaske",
+   "cost": 1.0,
+   "shared": [
+    "comer"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tofirma",
+   "b": "tofirmas",
+   "cost": 1.0,
+   "shared": [
+    "escribano",
+    "firma",
+    "nombre"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tocal",
+   "b": "totlal",
+   "cost": 1.0,
+   "shared": [
+    "justicia",
+    "nuestra"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tocnihuan",
+   "b": "tocnihuané",
+   "cost": 0.7,
+   "shared": [
+    "amigo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tullam",
+   "b": "tullan",
+   "cost": 0.4,
+   "shared": [
+    "tollan"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "toltitla",
+   "b": "tultitlan",
+   "cost": 0.8,
+   "shared": [
+    "toltitlan"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tomi",
+   "b": "tomin",
+   "cost": 0.8,
+   "shared": [
+    "dinero"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tomillo",
+   "b": "tomiyoj",
+   "cost": 0.9,
+   "shared": [
+    "tomillo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tona",
+   "b": "tonal",
+   "cost": 0.6,
+   "shared": [
+    "dia"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tona",
+   "b": "tonaz",
+   "cost": 1.0,
+   "shared": [
+    "sol"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tonal",
+   "b": "tonalli",
+   "cost": 0.7,
+   "shared": [
+    "dia"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tonalli",
+   "b": "tonili",
+   "cost": 0.8,
+   "shared": [
+    "dia"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tonan",
+   "b": "tochan",
+   "cost": 1.0,
+   "shared": [
+    "nuestra"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "totecuioua",
+   "b": "totecuiyo",
+   "cost": 1.0,
+   "shared": [
+    "nuestro"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "totoni",
+   "b": "totonqui",
+   "cost": 1.0,
+   "shared": [
+    "hongo",
+    "pone"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "totonik",
+   "b": "totonqui",
+   "cost": 0.6,
+   "shared": [
+    "caliente"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tochintecuhtli",
+   "b": "tochinteuhctli",
+   "cost": 1.0,
+   "shared": [
+    "huexotla",
+    "tochinteuctli"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tres",
+   "b": "treze",
+   "cost": 0.7,
+   "shared": [
+    "mil",
+    "quiniento"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "huallehuaque",
+   "b": "hualpeuhque",
+   "cost": 1.0,
+   "shared": [
+    "partieron"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ualmotlali",
+   "b": "ualmotlalia",
+   "cost": 0.7,
+   "shared": [
+    "asento"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "hualolimque",
+   "b": "huallolinque",
+   "cost": 0.4,
+   "shared": [
+    "aztlan",
+    "movieron",
+    "venir"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "juárez",
+   "b": "xuarez",
+   "cost": 1.0,
+   "shared": [
+    "francisco",
+    "juan"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "we'ka",
+   "b": "huehca",
+   "cost": 1.0,
+   "shared": [
+    "lejo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "huecapa",
+   "b": "huecapan",
+   "cost": 0.8,
+   "shared": [
+    "articulo",
+    "camara"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "huecahuac",
+   "b": "huecahuaque",
+   "cost": 0.7,
+   "shared": [
+    "tiempo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "ueli",
+   "b": "huelis",
+   "cost": 1.0,
+   "shared": [
+    "articulo",
+    "ley",
+    "podra"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "huelis",
+   "b": "hueliseh",
+   "cost": 0.7,
+   "shared": [
+    "articulo",
+    "ley",
+    "podran"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "vezino",
+   "b": "vezinos",
+   "cost": 1.0,
+   "shared": [
+    "vecino"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "huehuey",
+   "b": "uejueyi",
+   "cost": 0.3,
+   "shared": [
+    "grand"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "huehuentzin",
+   "b": "huehuetzin",
+   "cost": 0.8,
+   "shared": [
+    "anciano"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "huexotzinca",
+   "b": "uexotzincatl",
+   "cost": 1.0,
+   "shared": [
+    "huexotzinca"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "uicoc",
+   "b": "huicoque",
+   "cost": 0.7,
+   "shared": [
+    "llevado"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "huicci",
+   "b": "huicciz",
+   "cost": 1.0,
+   "shared": [
+    "cebolla",
+    "cocer",
+    "sal"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "uiziliuitl",
+   "b": "huitzillihuitl",
+   "cost": 0.35,
+   "shared": [
+    "huitzilihuitl"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "huitzilla",
+   "b": "huitzillan",
+   "cost": 0.8,
+   "shared": [
+    "ana",
+    "huitzilan",
+    "sancta"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "uitzilopochca",
+   "b": "huitzillopochco",
+   "cost": 0.7,
+   "shared": [
+    "huitzilopochco"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "xaltoca",
+   "b": "xaltocan",
+   "cost": 0.8,
+   "shared": [
+    "xaltocan"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "xochimila",
+   "b": "xochimilan",
+   "cost": 0.8,
+   "shared": [
+    "jardin"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "xochimila",
+   "b": "xochimilli",
+   "cost": 0.8,
+   "shared": [
+    "jardin"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "xochimilcah",
+   "b": "xochmilca",
+   "cost": 0.7,
+   "shared": [
+    "xochimilca"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "xochimilco",
+   "b": "xochmilco",
+   "cost": 0.7,
+   "shared": [
+    "xochimilco"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "xochimilcopa",
+   "b": "xochmilcopa",
+   "cost": 0.7,
+   "shared": [
+    "hacia",
+    "xochimilco"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "xochitecutl",
+   "b": "xochitecutli",
+   "cost": 0.7,
+   "shared": [
+    "aguila",
+    "ocelote",
+    "tepeteopan"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "xochitl",
+   "b": "xochitli",
+   "cost": 0.7,
+   "shared": [
+    "flor"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "xochmilca",
+   "b": "xochmilcatl",
+   "cost": 1.0,
+   "shared": [
+    "xochimilca"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "yancuic",
+   "b": "yancuique",
+   "cost": 0.7,
+   "shared": [
+    "nuevo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "yancuic",
+   "b": "yencuic",
+   "cost": 0.8,
+   "shared": [
+    "nuevo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "yancuica",
+   "b": "yancuican",
+   "cost": 0.8,
+   "shared": [
+    "primera",
+    "vez"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "yaomic",
+   "b": "yaomicque",
+   "cost": 0.7,
+   "shared": [
+    "refugiandose",
+    "sacrificada",
+    "tozpanxochtzin"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "yeylhuitl",
+   "b": "yexihuitl",
+   "cost": 1.0,
+   "shared": [
+    "tre"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "yectla",
+   "b": "yectli",
+   "cost": 0.8,
+   "shared": [
+    "canto"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "yexiuhtica",
+   "b": "yexiuhtique",
+   "cost": 0.8,
+   "shared": [
+    "tre"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "yohuac",
+   "b": "youal",
+   "cost": 1.0,
+   "shared": [
+    "noche"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "youal",
+   "b": "yohualli",
+   "cost": 0.7,
+   "shared": [
+    "noche"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "chalca",
+   "b": "chalcatl",
+   "cost": 1.0,
+   "shared": [
+    "chalca"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "chalchihuitl",
+   "b": "chalchiuhtli",
+   "cost": 0.6,
+   "shared": [
+    "jad",
+    "quetzal"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "chapoltepec",
+   "b": "chapoltepetl",
+   "cost": 1.0,
+   "shared": [
+    "chapoltepec"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "chicomoztoc",
+   "b": "chicomoztoca",
+   "cost": 0.7,
+   "shared": [
+    "aztlan",
+    "chicomoztoc"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "chicomoztoc",
+   "b": "chicomoztotl",
+   "cost": 1.0,
+   "shared": [
+    "chicomoztoc",
+    "quinehuayan"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "chicuhnapohualli",
+   "b": "chiconpohualli",
+   "cost": 0.7,
+   "shared": [
+    "ciento"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "chiconxihuitl",
+   "b": "chicoxihuitl",
+   "cost": 0.8,
+   "shared": [
+    "colhuacan",
+    "durante",
+    "goberno"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "chicuace",
+   "b": "chicuacen",
+   "cost": 0.8,
+   "shared": [
+    "sei"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "chicue",
+   "b": "chicuey",
+   "cost": 0.7,
+   "shared": [
+    "ocho"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "chicuey",
+   "b": "chicueyi",
+   "cost": 0.3,
+   "shared": [
+    "ocho"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "chihualloc",
+   "b": "chihualloque",
+   "cost": 0.7,
+   "shared": [
+    "creado"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "chihuas",
+   "b": "chihuase",
+   "cost": 0.7,
+   "shared": [
+    "entidad",
+    "ley"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "chichiltik",
+   "b": "chichiltiqueh",
+   "cost": 0.7,
+   "shared": [
+    "rojo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "chichimeca",
+   "b": "chichimecatl",
+   "cost": 1.0,
+   "shared": [
+    "chichimeca"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "chollola",
+   "b": "chollolan",
+   "cost": 0.8,
+   "shared": [
+    "cholula"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tzapotla",
+   "b": "tzapotlan",
+   "cost": 0.8,
+   "shared": [
+    "tzapotlan"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tzatzihuac",
+   "b": "tzatzihuaz",
+   "cost": 1.0,
+   "shared": [
+    "pregon"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tzilli",
+   "b": "tzillin",
+   "cost": 0.8,
+   "shared": [
+    "comenzaron"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tzinitzca",
+   "b": "tzinitzcan",
+   "cost": 0.8,
+   "shared": [
+    "pluma",
+    "tzinitzcan"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tlacamo",
+   "b": "tlacazo",
+   "cost": 1.0,
+   "shared": [
+    "verdad"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tlacateuçi",
+   "b": "tlacateutzi",
+   "cost": 0.35,
+   "shared": [
+    "tlacateotzin"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tlacopa",
+   "b": "tlacopan",
+   "cost": 0.8,
+   "shared": [
+    "cort",
+    "tlacopan"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tlacualli",
+   "b": "tlacualo",
+   "cost": 0.8,
+   "shared": [
+    "comida"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tlacualo",
+   "b": "tlacualoc",
+   "cost": 1.0,
+   "shared": [
+    "tabaco"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tlallolin",
+   "b": "tlallolini",
+   "cost": 0.7,
+   "shared": [
+    "fuerte"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tlaltlanahuatilmeh",
+   "b": "tlatlanahuatilmeh",
+   "cost": 0.6,
+   "shared": [
+    "constitucion",
+    "federal"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tlanahuatil",
+   "b": "tlanahuatili",
+   "cost": 0.7,
+   "shared": [
+    "articulo",
+    "estado",
+    "ley"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tlanahuatil",
+   "b": "tlanahuatis",
+   "cost": 1.0,
+   "shared": [
+    "podran"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tlantilolco",
+   "b": "tlatilulco",
+   "cost": 0.8,
+   "shared": [
+    "tlatelolco"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tlantocanti",
+   "b": "tlatocanti",
+   "cost": 0.8,
+   "shared": [
+    "gobierno",
+    "tlatelolco"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tlantocat",
+   "b": "tlahtocat",
+   "cost": 0.8,
+   "shared": [
+    "goberno"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tlapalli",
+   "b": "tlapallo",
+   "cost": 0.8,
+   "shared": [
+    "color",
+    "tinta"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tlasencahuali",
+   "b": "tlasencahuani",
+   "cost": 1.0,
+   "shared": [
+    "articulo",
+    "constitucion",
+    "ley"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tlacintla",
+   "b": "tlatzintla",
+   "cost": 0.35,
+   "shared": [
+    "abajo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tlaškal",
+   "b": "tlaškali",
+   "cost": 0.7,
+   "shared": [
+    "tortilla"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tlaskamati",
+   "b": "tlazohcamati",
+   "cost": 0.7,
+   "shared": [
+    "gracia"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tlatemactilis",
+   "b": "tlatemactiliseh",
+   "cost": 0.7,
+   "shared": [
+    "articulo",
+    "ley",
+    "termino"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tlatilulca",
+   "b": "tlatilulcatl",
+   "cost": 1.0,
+   "shared": [
+    "tlatelolca"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tlatilulca",
+   "b": "tlatilulco",
+   "cost": 0.7,
+   "shared": [
+    "tlatelolco"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tlatquiz",
+   "b": "tlathuiz",
+   "cost": 1.0,
+   "shared": [
+    "dios",
+    "tomara",
+    "venid"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tlahtohuani",
+   "b": "tlahtohuanié",
+   "cost": 0.7,
+   "shared": [
+    "tlatohuani"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tlatoca",
+   "b": "tlahtocan",
+   "cost": 0.8,
+   "shared": [
+    "articulo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tlatoca",
+   "b": "tlatocpa",
+   "cost": 1.0,
+   "shared": [
+    "articulo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tlahtocan",
+   "b": "tlatocpa",
+   "cost": 1.0,
+   "shared": [
+    "articulo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tlatocanti",
+   "b": "tlahtocati",
+   "cost": 0.8,
+   "shared": [
+    "gobernando",
+    "llevaba"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tlahtocat",
+   "b": "tlahtocati",
+   "cost": 0.7,
+   "shared": [
+    "tlatohuani"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tlahtocatico",
+   "b": "tlahtocatito",
+   "cost": 1.0,
+   "shared": [
+    "goberno"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tlahtol",
+   "b": "tlahtolli",
+   "cost": 0.7,
+   "shared": [
+    "articulo"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tlathui",
+   "b": "tlathuiz",
+   "cost": 1.0,
+   "shared": [
+    "dios"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tlaxillacalpa",
+   "b": "tlaxillacalpan",
+   "cost": 0.8,
+   "shared": [
+    "barrio",
+    "tlaxilacalli"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tlaxcalla",
+   "b": "tlaxcallan",
+   "cost": 0.8,
+   "shared": [
+    "tlaxcala",
+    "tlaxcallan"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tlayahualloque",
+   "b": "tlayahuallozque",
+   "cost": 1.0,
+   "shared": [
+    "procesion"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tlayahualoloc",
+   "b": "tlayahualoloz",
+   "cost": 1.0,
+   "shared": [
+    "procesion"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tlachcuititla",
+   "b": "tlachcuititlan",
+   "cost": 0.8,
+   "shared": [
+    "barrio",
+    "yndio"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tlatzitzillica",
+   "b": "tlatzitzillicac",
+   "cost": 1.0,
+   "shared": [
+    "azotea",
+    "campana",
+    "fogata"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tlatzquitoqueh",
+   "b": "tlatzquitoseh",
+   "cost": 1.0,
+   "shared": [
+    "articulo",
+    "federal"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tlahtlacolchihqueh",
+   "b": "tlahtlacolchihquetl",
+   "cost": 1.0,
+   "shared": [
+    "delincuencia",
+    "delito",
+    "organizada"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tliltic",
+   "b": "tliltique",
+   "cost": 0.7,
+   "shared": [
+    "negro"
+   ],
+   "status": "review"
+  },
+  {
+   "a": "tlotlitecuhtli",
+   "b": "tlotliteuhctli",
+   "cost": 1.0,
+   "shared": [
+    "tlotliteuctli"
+   ],
+   "status": "review"
+  }
+ ],
+ "trail": [
+  {
+   "rule": "coda_w",
+   "before": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 66.7,
+    "false_merges": 0
+   },
+   "after": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 66.7,
+    "false_merges": 0
+   },
+   "disagree_rate": 0.25,
+   "edges_with_translations": 12,
+   "decision": "review"
+  },
+  {
+   "rule": "final_tl",
+   "before": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 66.7,
+    "false_merges": 0
+   },
+   "after": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 73.3,
+    "false_merges": 0
+   },
+   "disagree_rate": 0.125,
+   "edges_with_translations": 24,
+   "decision": "active"
+  },
+  {
+   "rule": "tl_t",
+   "before": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 73.3,
+    "false_merges": 0
+   },
+   "after": {
+    "queries": 42,
+    "top1": 90.5,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "disagree_rate": 0.364,
+   "edges_with_translations": 77,
+   "decision": "review"
+  },
+  {
+   "rule": "tl_typo",
+   "before": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 73.3,
+    "false_merges": 0
+   },
+   "after": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 73.3,
+    "false_merges": 0
+   },
+   "disagree_rate": null,
+   "edges_with_translations": 0,
+   "decision": "review"
+  },
+  {
+   "rule": "z_tz",
+   "before": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 73.3,
+    "false_merges": 0
+   },
+   "after": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "disagree_rate": 0.154,
+   "edges_with_translations": 13,
+   "decision": "active"
+  },
+  {
+   "rule": "s_x",
+   "before": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "after": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "disagree_rate": 0.167,
+   "edges_with_translations": 30,
+   "decision": "review"
+  },
+  {
+   "rule": "x_ch",
+   "before": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "after": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "disagree_rate": 0.667,
+   "edges_with_translations": 6,
+   "decision": "rejected"
+  },
+  {
+   "rule": "e_i",
+   "before": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "after": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "disagree_rate": 0.559,
+   "edges_with_translations": 143,
+   "decision": "rejected"
+  },
+  {
+   "rule": "y_glide",
+   "before": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "after": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "disagree_rate": 0.296,
+   "edges_with_translations": 71,
+   "decision": "review"
+  },
+  {
+   "rule": "n_m",
+   "before": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "after": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "disagree_rate": 0.219,
+   "edges_with_translations": 32,
+   "decision": "review"
+  },
+  {
+   "rule": "mined_n_t",
+   "before": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "after": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "disagree_rate": 0.557,
+   "edges_with_translations": 185,
+   "decision": "rejected"
+  },
+  {
+   "rule": "mined_k_t",
+   "before": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "after": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "disagree_rate": 0.681,
+   "edges_with_translations": 113,
+   "decision": "rejected"
+  },
+  {
+   "rule": "mined_a_s_end",
+   "before": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "after": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "disagree_rate": 0.644,
+   "edges_with_translations": 87,
+   "decision": "rejected"
+  },
+  {
+   "rule": "mined_e_o",
+   "before": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "after": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "disagree_rate": 0.708,
+   "edges_with_translations": 96,
+   "decision": "rejected"
+  },
+  {
+   "rule": "mined_m_t",
+   "before": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "after": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "disagree_rate": 0.652,
+   "edges_with_translations": 69,
+   "decision": "rejected"
+  },
+  {
+   "rule": "mined_a_o_end",
+   "before": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "after": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "disagree_rate": 0.663,
+   "edges_with_translations": 86,
+   "decision": "rejected"
+  },
+  {
+   "rule": "mined_a_e",
+   "before": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "after": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "disagree_rate": 0.675,
+   "edges_with_translations": 151,
+   "decision": "rejected"
+  },
+  {
+   "rule": "mined_a_e_end",
+   "before": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "after": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "disagree_rate": 0.642,
+   "edges_with_translations": 53,
+   "decision": "rejected"
+  },
+  {
+   "rule": "mined_a_i",
+   "before": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "after": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "disagree_rate": 0.822,
+   "edges_with_translations": 180,
+   "decision": "rejected"
+  },
+  {
+   "rule": "mined_i_o_end",
+   "before": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "after": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "disagree_rate": 0.721,
+   "edges_with_translations": 43,
+   "decision": "rejected"
+  },
+  {
+   "rule": "mined_i_y",
+   "before": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "after": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "disagree_rate": 0.357,
+   "edges_with_translations": 28,
+   "decision": "review"
+  },
+  {
+   "rule": "mined_k_λ",
+   "before": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "after": {
+    "queries": 42,
+    "top1": 92.9,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 92.3,
+    "pair_recall": 80.0,
+    "false_merges": 1
+   },
+   "disagree_rate": 0.756,
+   "edges_with_translations": 82,
+   "decision": "rejected"
+  },
+  {
+   "rule": "mined_a_o",
+   "before": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "after": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "disagree_rate": 0.725,
+   "edges_with_translations": 193,
+   "decision": "rejected"
+  },
+  {
+   "rule": "mined_b_w",
+   "before": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "after": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "disagree_rate": 0.067,
+   "edges_with_translations": 15,
+   "decision": "review"
+  },
+  {
+   "rule": "mined_d_t",
+   "before": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "after": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "disagree_rate": 0.2,
+   "edges_with_translations": 35,
+   "decision": "review"
+  },
+  {
+   "rule": "mined_e_o_end",
+   "before": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "after": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "disagree_rate": 0.611,
+   "edges_with_translations": 36,
+   "decision": "rejected"
+  },
+  {
+   "rule": "mined_i_o",
+   "before": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "after": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "disagree_rate": 0.75,
+   "edges_with_translations": 172,
+   "decision": "rejected"
+  },
+  {
+   "rule": "mined_k_λ_end",
+   "before": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "after": {
+    "queries": 42,
+    "top1": 92.9,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 92.3,
+    "pair_recall": 80.0,
+    "false_merges": 1
+   },
+   "disagree_rate": 0.71,
+   "edges_with_translations": 31,
+   "decision": "rejected"
+  },
+  {
+   "rule": "mined_k_s",
+   "before": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "after": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "disagree_rate": 0.723,
+   "edges_with_translations": 101,
+   "decision": "rejected"
+  },
+  {
+   "rule": "mined_k_s_end",
+   "before": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "after": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "disagree_rate": 0.667,
+   "edges_with_translations": 48,
+   "decision": "rejected"
+  },
+  {
+   "rule": "mined_l_r",
+   "before": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "after": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "disagree_rate": 0.211,
+   "edges_with_translations": 19,
+   "decision": "review"
+  },
+  {
+   "rule": "aligned",
+   "before": {
+    "queries": 42,
+    "top1": 88.1,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 80.0,
+    "false_merges": 0
+   },
+   "after": {
+    "queries": 42,
+    "top1": 90.5,
+    "top3": 97.6,
+    "pairs": 21,
+    "pair_precision": 100.0,
+    "pair_recall": 86.7,
+    "false_merges": 0
+   },
+   "disagree_rate": null,
+   "edges_with_translations": 0,
+   "decision": "active"
+  }
+ ]
+}

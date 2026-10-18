@@ -19,12 +19,13 @@ coincidir equivalencias seguras (ç/tz, v/u y marcas diacríticas). Se aplica so
 a los tokens del índice y de la consulta; los pasajes y su procedencia conservan
 el texto original. El campo ``es`` conserva su tokenización española.
 """
-import math,re
+import math
 from collections import Counter
 from .data import load_rows
 from .nahuatl_orthography import comparison
+from .text import tokens as words
 STOP=set('el la los las un una de del en a y que por con para se su es al lo'.split())
-def tokens(text,stop=STOP):return [w for w in re.findall(r'\w+',text.lower()) if w not in stop]
+def tokens(text,stop=STOP):return [w for w in words(text,keep_accents=True) if w not in stop]
 def nah_tokens(text):return tokens(comparison(text),())
 class Index:
     def __init__(self,path=None,rows=None):

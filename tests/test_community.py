@@ -8,7 +8,9 @@ import urllib.request
 import wave
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
-from nahuatl_local.community import Problem, Store, server
+from nahuatl_local.community import Problem, Store
+from nahuatl_local.corpus import CorpusStore
+from nahuatl_local.platform import make_server
 
 
 def profile(variant='inali-04'):
@@ -157,7 +159,8 @@ class CommunityTests(unittest.TestCase):
         with self.store.db() as db:self.assertIsNone(db.execute("SELECT id FROM tasks WHERE id='new'").fetchone())
 
     def test_http_session_and_origin_protection(self):
-        httpd=server(self.store,port=0);thread=threading.Thread(target=httpd.serve_forever,daemon=True);thread.start()
+        # Voces no tiene servidor propio: la aplicación única la sirve en /aportar.
+        httpd=make_server(CorpusStore(self.root/'http.sqlite3'),port=0);thread=threading.Thread(target=httpd.serve_forever,daemon=True);thread.start()
         origin='http://127.0.0.1:'+str(httpd.server_address[1])
         try:
             req=urllib.request.Request(origin+'/api/profile',json.dumps(profile()).encode(),{'Content-Type':'application/json','Origin':origin})

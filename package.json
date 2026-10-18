@@ -1,0 +1,11 @@
+{
+  "name": "amoxcalli-ui-checks",
+  "private": true,
+  "scripts": {
+    "test:ui": "python3 scripts/test-platform-ui.py",
+    "test:offline": "node tests/pwa_worker.cjs"
+  },
+  "devDependencies": {
+    "jsdom": "26.1.0"
+  }
+}

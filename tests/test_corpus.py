@@ -7,7 +7,8 @@ import threading
 import unittest
 from nahuatl_local.community import Store, Problem
 from nahuatl_local.corpus import CorpusStore, editorial_releases
-from nahuatl_local.platform import make_server, rule_query
+from nahuatl_local.platform import make_server
+from nahuatl_local.pictography import load_catalog
 
 
 class CorpusTests(unittest.TestCase):
@@ -29,7 +30,7 @@ class CorpusTests(unittest.TestCase):
         self.assertEqual(again.person(self.token)['id'],self.person['id'])
         legacy=json.loads((Path(__file__).resolve().parents[1]/'corpus/scriptorium-legacy.json').read_text())['corpus']
         self.assertTrue({r['id'] for r in legacy}.issubset(again.records()))
-        self.assertEqual(len(again.records()),1317)
+        self.assertEqual(len(again.records()),7934)
         self.assertEqual(len(Store(self.path).catalog['tasks']),12)
         self.assertTrue(again.records()['glyph-atl']['image'].startswith('https://aztecglyphs'))
 
@@ -45,13 +46,15 @@ class CorpusTests(unittest.TestCase):
         r=copy.deepcopy(recs['glyph-atl']);r['image']='javascript:alert(1)'
         with self.assertRaises(Problem):self.store.validate(r,recs)
         again=CorpusStore(self.path)
-        self.assertEqual(len(again.records()),1317)
+        self.assertEqual(len(again.records()),7934)
         self.assertEqual(again.records()['glyph-atl']['image'],recs['glyph-atl']['image'])
 
     def test_senses_spelling_and_missing_modern_coverage(self):
-        self.assertTrue({'lex-cuahuitl','form-quauitl','lex-xochicuahuitl'} <= {r['id'] for r in self.store.search('arbol',kind='form')['results']})
-        self.assertEqual(self.store.search('quauitl',kind='form')['results'][0]['written'],'quauitl')
-        self.assertEqual(self.store.search('',kind='form',period='modern')['total'],0)
+        # La búsqueda vive en terms.TermIndex (tests/test_terms.py); aquí, los datos que la sostienen.
+        recs=self.store.public_records()
+        self.assertEqual({recs[i]['sense_id'] for i in ('lex-cuahuitl','form-quauitl')},{'sense-cuahuitl'})
+        self.assertEqual(recs['form-quauitl']['written'],'quauitl')
+        self.assertFalse([r for r in recs.values() if r['kind']=='form' and r.get('period')=='modern'])
         self.assertNotEqual(self.store.records()['sense-madera']['id'],self.store.records()['sense-cuahuitl']['id'])
         self.assertTrue(any(r['kind']=='glyph' and r['sense_id']=='sense-madera' for r in self.store.records().values()))
 
@@ -76,7 +79,7 @@ class CorpusTests(unittest.TestCase):
             db.execute("DELETE FROM corpus_history WHERE record_id='glyph-cuahuitl-mdz7v'")
             db.execute("DELETE FROM corpus_records WHERE id='glyph-cuahuitl-mdz7v'")
         again=CorpusStore(self.path)
-        self.assertEqual(len(again.records()),1317)
+        self.assertEqual(len(again.records()),7934)
         self.assertEqual(again.records()['glyph-metztli-osu14v']['context'],'Nota de la persona editora')
         self.assertEqual(again.records()['glyph-metztli-osu14v']['version'],3)
         self.assertEqual(again.records()['glyph-metztli-osu14v']['sense_id'],'sense-mes')
@@ -152,53 +155,48 @@ class CorpusTests(unittest.TestCase):
         with self.assertRaises(Problem):self.store.decide(id,'accepted','QA','sin derechos')
         self.assertNotIn(id,self.store.records())
 
-    def test_rules_ported_without_faking_general_translation(self):
-        self.assertEqual(rule_query(self.store,'Veo una flor.')['status'],'proposal')
-        self.assertEqual(rule_query(self.store,'El sol y la luna')['status'],'proposal')
-        self.assertEqual(rule_query(self.store,'No veo tres casas mañana')['status'],'insufficient')
-
     def test_http_shared_origin_session_and_no_admin_route(self):
-        server=make_server(self.store,port=0,model_enabled=False);thread=threading.Thread(target=server.serve_forever,daemon=True);thread.start()
+        server=make_server(self.store,port=0);thread=threading.Thread(target=server.serve_forever,daemon=True);thread.start()
         port=server.server_address[1];conn=http.client.HTTPConnection('127.0.0.1',port)
         def req(method,path,body=None,**headers):
             conn.request(method,path,body=json.dumps(body) if body is not None else None,headers=headers);r=conn.getresponse();return r.status,r.read()
         try:
             conn.request('GET','/')
             response=conn.getresponse();policy=response.getheader('Content-Security-Policy');response.read()
-            self.assertIn("img-src 'self' data: https://aztecglyphs.wired-humanities.org;",policy)
+            self.assertIn("img-src 'self' data: https://aztecglyphs.wired-humanities.org https://tlachia.iib.unam.mx;",policy)
             self.assertIn("script-src 'self';",policy)
             self.assertIn("connect-src 'self';",policy)
             self.assertNotIn('*',policy)
             self.assertEqual(req('GET','/')[0],200);self.assertEqual(req('GET','/aportar')[0],200)
             self.assertEqual(req('GET','/api/proposals')[0],401)
-            self.assertEqual(req('GET','/learning.js')[0],200)
-            self.assertEqual(req('GET','/learning.css')[0],200)
-            self.assertEqual(req('GET','/laboratory.js')[0],200)
-            self.assertEqual(req('GET','/laboratory.css')[0],200)
-            status,lab=req('GET','/api/laboratory');self.assertEqual(status,200);lab=json.loads(lab)
-            self.assertFalse(lab['model']['ready'])
-            self.assertEqual(lab['training']['completed_steps'],250)
-            self.assertFalse(lab['training']['current_data_matches'])
-            self.assertTrue(lab['retrieval']['current_data_matches'])
-            self.assertEqual(req('GET','/api/laboratory/reports/training')[0],200)
-            self.assertEqual(req('GET','/api/laboratory/reports/state.pt')[0],404)
-            self.assertEqual(req('GET','/training-data.js')[0],200)
-            status,payload=req('GET','/api/training-data');self.assertEqual(status,200)
-            self.assertEqual(json.loads(payload)['total'],650)
-            self.assertEqual(req('GET','/api/training-pairs')[0],401)
-            self.assertEqual(req('GET','/api/laboratory/context?query=flor')[0],200)
+            self.assertEqual(req('GET','/reading.js')[0],200)
+            self.assertEqual(req('GET','/amoxcalli.css')[0],200)
+            for retired in ('/corpus.css','/minimal.css','/edition.css','/learning.css','/learning.js'):self.assertEqual(req('GET',retired)[0],404)  # una sola hoja de estilos
+            self.assertEqual(req('GET','/pictography.js')[0],200)
+            status,payload=req('GET','/api/pictography');self.assertEqual(status,200)
+            catalog = load_catalog()
+            expected_glyphs = sum(row['kind'] == 'glyph' for row in catalog['occurrences'])
+            self.assertEqual(json.loads(payload)['summary']['glyphs'], expected_glyphs)
+            self.assertEqual(req('GET','/project.js')[0],200)
+            for path,phrase in [('/project/purpose.md','Propósito actual'),('/project/pilot.md','No enviada'),('/project/contributing.md','Mejorar Amoxcalli')]:
+                status,payload=req('GET',path);self.assertEqual(status,200)
+                self.assertIn(phrase,payload.decode())
+            for path in ('/project/../../data/community/voces.sqlite3','/project/PROGRESO_INTERNO.md'):
+                self.assertIn(req('GET',path)[0],(401,404))
+            # El laboratorio del LLM está archivado (experiments/llm/): solo queda su página histórica estática.
+            self.assertEqual(req('GET','/lab-history.js')[0],200)
+            for retired in ('/laboratory.js','/training-data.js','/documentary.js','/api/laboratory','/api/training-data',
+                            '/api/training-pairs','/api/laboratory/context?query=flor','/api/documentary?query=atl'):
+                self.assertEqual(req('GET',retired)[0],404,retired)
             status,payload=req('GET','/api/learning');self.assertEqual(status,200)
-            self.assertEqual(sum(len(l['examples']) for l in json.loads(payload)['lessons']),24)
+            self.assertEqual(sum(len(l['examples']) for l in json.loads(payload)['lessons']),48)
             headers={'Cookie':'voces_session='+self.token,'Origin':f'http://127.0.0.1:{port}'}
             self.assertEqual(req('GET','/api/proposals',**headers)[0],200)
-            self.assertEqual(req('POST','/api/compose',{'text':'agua'},Origin='https://attacker.example')[0],403)
-            status,payload=req('POST','/api/compose',{'text':'agua'},**headers)
-            self.assertEqual(status,200);self.assertIn('review_request',json.loads(payload));self.assertNotIn('jev_request',json.loads(payload))
+            self.assertEqual(req('POST','/api/compose',{'text':'agua'},**headers)[0],404)
             status,payload=req('GET','/manifest.webmanifest');self.assertEqual(status,200)
             manifest=json.loads(payload);self.assertEqual(manifest['scope'],'/');self.assertEqual(manifest['display'],'standalone')
             for item in manifest['icons']:self.assertEqual(req('GET',item['src'])[0],200)
             self.assertEqual(req('GET','/sw.js')[0],200);self.assertEqual(req('GET','/offline.html')[0],200)
-            self.assertEqual(req('POST','/api/compose',{'text':'agua','model':True},**headers)[0],503)
             self.assertEqual(req('POST','/api/review',{},**headers)[0],404)
         finally:conn.close();server.shutdown();server.server_close();thread.join()
 

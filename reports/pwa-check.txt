@@ -1,1 +1,0 @@
-PASS: offline navigation fallback; no cached corpus, profiles, submissions or external requests; scoped cache cleanup

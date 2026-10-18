@@ -1,0 +1,12 @@
+{
+  "release_id": "tlachia-pilot-v1",
+  "exceptions": [],
+  "counts": {
+    "documents": 3,
+    "pages": 3,
+    "zones": 21,
+    "elements": 61,
+    "occurrences": 60
+  },
+  "scope": "Extracción literal de catálogo; no cotejo del manuscrito ni revisión lingüística."
+}

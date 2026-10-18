@@ -13,7 +13,7 @@ from urllib.parse import urlencode
 from urllib.request import urlopen
 from zoneinfo import ZoneInfo
 from .community import ROOT
-from .corpus import normalize
+from .text import fold
 
 FIELDS=('pk','paleografia','grafiaNormalizada','traduccion','fuente')
 STRING=r"'((?:\\.|[^'\\])*)'"
@@ -51,8 +51,8 @@ def bundle_from_pages(pages,excluded=(),limit=600):
             if not written.isalpha():rejected['entry_with_prefix_or_punctuation']+=1;continue
             if '\ufffd' in written+gloss or len(written)>300 or len(gloss)>300:rejected['format_or_length']+=1;continue
             if re.match(r'^(idem|id[eé]m|lo mesmo)',gloss,re.I):rejected['cross_reference']+=1;continue
-            key=(normalize(head),normalize(gloss))
-            if normalize(head) in excluded or key in seen:rejected['already_catalogued']+=1;continue
+            key=(fold(head),fold(gloss))
+            if fold(head) in excluded or key in seen:rejected['already_catalogued']+=1;continue
             if len(records)//2>=limit:rejected['batch_limit']+=1;continue
             seen.add(key);pk=e['pk'];sid='sense-gdn-m2-'+pk;entry='https://gdn.iib.unam.mx/contexto/'+pk
             rights=dict(public=True,training=False,note='Referencia y transcripción breve de entrada histórica de Molina (1571), vía GDN, UNAM. Conservar atribución; derechos de la edición digital no auditados para entrenamiento.')
@@ -96,7 +96,7 @@ def main():
     if not 1<=a.limit<=4000:raise ValueError('Límite 1–4000 entradas por lote.')
     excluded=set()
     for name in ('seed.json','glyph-lexicon-v5.json'):
-        excluded.update(normalize(r['written']) for r in json.loads((ROOT/'corpus'/name).read_text())['records'] if r['kind']=='form')
+        excluded.update(fold(r['written']) for r in json.loads((ROOT/'corpus'/name).read_text())['records'] if r['kind']=='form')
     pages=harvest(a.cache,a.letters,a.per_letter);bundle,report=bundle_from_pages(pages,excluded,a.limit)
     if not bundle['records']:raise ValueError('No hay entradas seguras para incorporar.')
     report.update(date=str(datetime.now(ZoneInfo('America/Mexico_City')).date()),source='GDN / Molina_2',pages=[dict(url=url,sha256=hashlib.sha256(raw).hexdigest()) for raw,url in pages])

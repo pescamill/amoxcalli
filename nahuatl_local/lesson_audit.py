@@ -9,7 +9,8 @@ from pathlib import Path
 import tempfile
 
 from .community import ROOT
-from .corpus import CorpusStore, normalize
+from .corpus import CorpusStore
+from .text import fold
 from .learning import Learning
 from .research import Archive
 
@@ -27,7 +28,7 @@ def audit(learning, records):
         findings.append(finding)
     forms=[r for r in records.values() if r['kind']=='form']
     glyphs=[r for r in records.values() if r['kind']=='glyph']
-    words={normalize(f['written']) for f in forms}
+    words={fold(f['written']) for f in forms}
     missing=[];works=Counter();exercise_types=Counter();targets=set()
     for lesson in data['lessons']:
         if not re.fullmatch(r'[a-zA-Z0-9][a-zA-Z0-9_-]*',lesson['id']):
@@ -79,14 +80,14 @@ def audit(learning, records):
         lid=packet['id']
         for e in packet['examples']:
             for a in e['annotations']:
-                if not any(normalize(f['written']) == normalize(a['quote']) and f['sense_id'] == a['sense_id'] for f in forms):
+                if not any(fold(f['written']) == fold(a['quote']) and f['sense_id'] == a['sense_id'] for f in forms):
                     # A source-bound form candidate, not an invented lemma or meaning.
                     candidate=dict(written=a['quote'],archive_id=e['archive_id'],linked_sense_id=a['sense_id'],note=a['note'])
                     missing.append(candidate)
                     issue('form-'+e['archive_id']+'-'+a['sense_id'],'P1',lid,
                           'Revisar forma sin ficha: '+a['quote'],candidate,
                           'Determinar con evidencia si corresponde crear entrada del compuesto, añadir una forma a una acepción o conservar solo una comparación temática. Registrar fuente/localizador; no deducir morfología ni una acepción nueva automáticamente.')
-    cuicatl_examples=[dict(archive_id=e['archive_id'],nah=e['nah'],es=e['es']) for p in packets for e in p['examples'] if 'cuicatl' in normalize(e['nah'])]
+    cuicatl_examples=[dict(archive_id=e['archive_id'],nah=e['nah'],es=e['es']) for p in packets for e in p['examples'] if 'cuicatl' in fold(e['nah'])]
     if 'cuicatl' not in words and cuicatl_examples:
         issue('entry-candidate-cuicatl','P1',None,'Preparar la entrada de cuicatl con fuente léxica',
               dict(written='cuicatl',examples=cuicatl_examples,exact_form_record_found=False),

@@ -1,211 +1,179 @@
-"""Scriptorium: corpus, investigación y extractor Voces en un solo servidor local."""
+"""Amoxcalli: la aplicación local (corpus, aprendizaje, investigación y Voces) en un solo servidor."""
 import argparse
+import hashlib
 import json
 import threading
-from http.server import ThreadingHTTPServer
 from pathlib import Path
-from urllib.parse import urlparse, parse_qs
-from .community import handler as community_handler, Problem, ROOT, DEFAULT_DB, text
-from .corpus import CorpusStore, normalize
-from .review import request_bundle, local_review
+from .community import ASSETS as COMMUNITY_WEB, Problem, ROOT, DEFAULT_DB, text, routes as community_routes
+from .corpus import CorpusStore
 from .research import Archive
 from .learning import Learning
-from .laboratory import snapshot as laboratory_snapshot, REPORTS as LAB_REPORTS
-from .training_data import TrainingData, PairProposals
-from .model_status import status as model_status, DEFAULT_ADAPTER
+from .pictography import public_catalog
+from .cards import Cards, digest as records_digest, public_path
+from .stems import WordStudy
+from .evidence import Evidence
+from .terms import TermIndex
+from .spelling import Search as SpellingSearch, routes as spelling_routes
+from .entities import routes as entity_routes
+from .units import Units
+from .explain import ClaudeWriter, explain
+from .web import Router, Server, Static, handler
 
 WEB = Path(__file__).with_name('platform_web')
-INSTALL_HEAD = '<meta name="theme-color" content="#174b3d"><meta name="apple-mobile-web-app-capable" content="yes">\n<link rel="manifest" href="/manifest.webmanifest"><link rel="apple-touch-icon" href="/icon-192.png"><link rel="stylesheet" href="/install.css"><script src="/install.js" defer></script>\n'
+# La página principal usa /corpus.js (su app.js) y /amoxcalli.css; /app.js, /style.css y /favicon.svg son de Voces.
+STATIC = Static(WEB, {'/': WEB/'index.html', '/corpus.js': WEB/'app.js',
+                      '/app.js': COMMUNITY_WEB/'app.js', '/style.css': COMMUNITY_WEB/'style.css',
+                      '/favicon.svg': COMMUNITY_WEB/'favicon.svg',
+                      '/project/purpose.md': ROOT/'docs/PROPOSITO.md', '/project/pilot.md': ROOT/'docs/PILOTO_INSTITUCIONAL.md',
+                      '/project/contributing.md': ROOT/'CONTRIBUTING.md'})
+INSTALL_HEAD = '<meta name="theme-color" content="#812d37"><meta name="apple-mobile-web-app-capable" content="yes">\n<link rel="manifest" href="/manifest.webmanifest"><link rel="apple-touch-icon" href="/icon-192.png"><script src="/install.js" defer></script>\n'
 
 
-def rule_query(store, value):
-    """Porta las reglas acotadas de Scriptorium; ninguna salida es validación."""
-    records=store.public_records()
-    q=normalize(value.strip()).rstrip('.!?')
-    q=q.removeprefix('yo ')
-
-    def noun(phrase):
-        for article in ('el ','la ','un ','una ','the ','a ','an '):
-            if phrase.startswith(article):
-                phrase=phrase[len(article):];break
-        for r in records.values():
-            if r['kind']=='sense' and r['pos']=='noun' and phrase in [normalize(x) for x in [r['label'],*r.get('aliases',[])]]:
-                if phrase in ('flores','arboles','flowers','trees'):
-                    continue
-                # Usa solo el lema histórico heredado por la regla original.
-                f=next((f for f in records.values() if f['kind']=='form' and f.get('sense_id')==r['id'] and f['id'].startswith('lex-')),None)
-                if f:return f
-        return None
-
-    segments=[];status='insufficient';method='lookup'
-    f=noun(q)
-    if f:
-        segments=[dict(text=f['written'],record_ids=[f['id']])];status='lexical'
-    else:
-        for prefix in ('veo ','miro ','i see ','i look at '):
-            if q.startswith(prefix) and (f:=noun(q[len(prefix):])):
-                segments=[dict(text='Niquitta ',record_ids=['grammar-niquitta']),dict(text=f['written']+'.',record_ids=[f['id']])]
-                status='proposal';method='rules';break
-        if not segments:
-            for conj in (' y ',' and '):
-                parts=q.split(conj)
-                if len(parts)==2 and (a:=noun(parts[0])) and (b:=noun(parts[1])):
-                    segments=[dict(text=a['written'],record_ids=[a['id']]),dict(text=' ihuan ',record_ids=['lex-ihuan']),dict(text=b['written'],record_ids=[b['id']])]
-                    status='proposal';method='rules';break
-    return dict(status=status,method=method,segments=segments,
-                note='Palabra asociada a una acepción; revisar el contexto.' if status=='lexical' else
-                'Composición nueva por una regla limitada; no es una cita histórica ni una traducción validada.' if status=='proposal' else
-                'Las reglas disponibles no cubren esta expresión. Consulta palabras o textos por separado.')
-
-
-def make_handler(store, model_enabled=None, adapter=None):
-    base=community_handler(store)
+def make_app(store, word_study=None, explain_writer=None):
+    """Tabla de rutas de la aplicación: corpus, investigación y Voces."""
+    router=Router()
+    community_routes(router,store)
     archive=Archive()
+    # Análisis morfológico, concordancia por raíz y pistas de glosa (sin modelo).
+    word_study=word_study or WordStudy(records_fn=store.public_records)
+    # Una sola búsqueda de términos para Diccionario, Archivo y Preguntar (también elige sus fichas).
+    terms=TermIndex(word_study,records_fn=store.public_records)
+    evidence_index=Evidence(word_study,terms=terms)
+    # Grafías: escribir como uno escribe y ver las posibilidades con sus fuentes (sobre el índice de términos).
+    spellings=SpellingSearch(terms)
     learning=Learning(archive)
-    training_data=TrainingData()
-    pair_proposals=PairProposals(store,training_data)
-    adapter=adapter or DEFAULT_ADAPTER
-    capability=model_status(adapter,model_enabled)
-    model_lock=threading.Lock()
-    loaded=None
+    # Unidades de gramática: borradores generados, validados contra el análisis y con su estado en la cola editorial.
+    units=Units(terms,store.public_records)
+    # Fichas de Preguntar (campos citados con su procedencia); se reconstruyen si cambian registros o fuentes.
+    cards_cache=dict(value=None,lock=threading.Lock())
 
-    class Handler(base):
-        # Solo el catálogo glífico aprobado puede servir imágenes externas.
-        content_security_policy = base.content_security_policy.replace(
-            "img-src 'self' data:",
-            "img-src 'self' data: https://aztecglyphs.wired-humanities.org")
+    def contribute_page(request):
+        # Misma sesión, mismos datos y mismos permisos que el corpus.
+        page=(COMMUNITY_WEB/'index.html').read_text()
+        return request.reply(page.replace('</head>',INSTALL_HEAD+'<link rel="stylesheet" href="/amoxcalli.css"></head>').encode(),mime='text/html; charset=utf-8')
 
-        def dispatch(self):
-            nonlocal loaded
-            parsed=urlparse(self.path);path=parsed.path
-            static={'/':('index.html','text/html; charset=utf-8'),
-                    '/corpus.js':('app.js','text/javascript; charset=utf-8'),
-                    '/corpus.css':('style.css','text/css; charset=utf-8'),
-                    '/minimal.css':('minimal.css','text/css; charset=utf-8'),
-                    '/learning.css':('learning.css','text/css; charset=utf-8'),
-                    '/learning.js':('learning.js','text/javascript; charset=utf-8'),
-                    '/laboratory.js':('laboratory.js','text/javascript; charset=utf-8'),
-                    '/laboratory.css':('laboratory.css','text/css; charset=utf-8'),
-                    '/training-data.js':('training-data.js','text/javascript; charset=utf-8'),
-                    '/manifest.webmanifest':('manifest.webmanifest','application/manifest+json'),
-                    '/install.js':('install.js','text/javascript; charset=utf-8'),
-                    '/install.css':('install.css','text/css; charset=utf-8'),
-                    '/sw.js':('sw.js','text/javascript; charset=utf-8'),
-                    '/offline.html':('offline.html','text/html; charset=utf-8'),
-                    '/offline.css':('offline.css','text/css; charset=utf-8'),
-                    '/icon-192.png':('icon-192.png','image/png'),
-                    '/icon-512.png':('icon-512.png','image/png')}
-            if self.command=='GET':
-                if path in static:
-                    name,mime=static[path];return self.reply((WEB/name).read_bytes(),mime=mime)
-                if path in ('/aportar','/aportar/'):
-                    # Misma sesión, mismos datos y mismos permisos que el corpus.
-                    page=(Path(__file__).with_name('community_web')/'index.html').read_text()
-                    return self.reply(page.replace('</head>',INSTALL_HEAD+'<link rel="stylesheet" href="/minimal.css"></head>').encode(),mime='text/html; charset=utf-8')
-                if path=='/api/corpus':
-                    data=store.catalog_data();data.update(model_enabled=capability['ready'],model=capability,archive=archive.summary)
-                    return self.reply(data)
-                if path=='/api/system':return self.reply(dict(model=capability,archive=archive.summary))
-                if path=='/api/laboratory':return self.reply(laboratory_snapshot(capability,adapter))
-                if path=='/api/laboratory/context':
-                    q=parse_qs(parsed.query);value=text(q.get('query',[''])[0],'Consulta',1000,True)
-                    return self.reply(dict(passages=archive.context(value)))
-                if path=='/api/training-data':
-                    q=parse_qs(parsed.query)
-                    return self.reply(training_data.search(**{k:q.get(k,[v])[0] for k,v in [('dataset','seen'),('query',''),('document',''),('offset',0),('limit',20)]}))
-                if path=='/api/training-pairs':return self.reply(pair_proposals.mine(self.get_person(True)))
-                if path=='/api/training-pairs/export':return self.reply(pair_proposals.export(self.get_person(True)).encode(),mime='text/csv; charset=utf-8')
-                if path.startswith('/api/laboratory/reports/'):
-                    report=LAB_REPORTS.get(path.rsplit('/',1)[1])
-                    if not report or not (ROOT/report).is_file():raise Problem('Informe no disponible.',404)
-                    return self.reply(json.loads((ROOT/report).read_text(encoding='utf-8')))
-                if path=='/api/learning':return self.reply(learning.catalog(store.public_records()))
-                if path=='/api/research':
-                    q=parse_qs(parsed.query)
-                    return self.reply(archive.search(**{k:q.get(k,[''])[0] for k in ('query','variant','document','period')},offset=q.get('offset',[0])[0],limit=q.get('limit',[20])[0]))
-                if path.startswith('/api/research/'):return self.reply(archive.get(path.rsplit('/',1)[1]))
-                if path=='/archive.csv':return self.reply(archive.path.read_bytes(),mime='text/csv; charset=utf-8')
-                if path=='/api/task':
-                    q=parse_qs(parsed.query);mode=q.get('mode',['recognize'])[0]
-                    if mode in ('recognize','translate'):return self.reply(archive.task(store,mode,self.get_person(True),q.get('after',[''])[0]))
-                if path=='/api/search':
-                    q=parse_qs(parsed.query)
-                    return self.reply(store.search(**{k:q.get(k,[''])[0] for k in ('query','kind','period','variant')}))
-                if path=='/api/corpus/export':
-                    return self.reply(store.export_data())
-                if path=='/api/proposals':
-                    return self.reply(store.proposals(self.get_person(True)))
-            if path in ('/api/proposals','/api/compose','/api/training-pairs') or path.startswith(('/api/proposals/','/api/training-pairs/')):
-                origin=self.headers.get('Origin','')
-                expected=self.server.public_origin or f'http://{self.headers.get("Host","")}'
-                if origin!=expected:
-                    raise Problem('Origen de envío no permitido.',403)
-                if path=='/api/training-pairs' and self.command=='POST':
-                    return self.reply(pair_proposals.propose(self.get_person(True),self.body()),201)
-                if path.startswith('/api/training-pairs/') and self.command=='DELETE':
-                    pair_proposals.withdraw(self.get_person(True),path.rsplit('/',1)[1]);return self.reply(dict(ok=True))
-                if path=='/api/proposals' and self.command=='POST':
-                    return self.reply(store.propose(self.get_person(True),self.body()),201)
-                if path.startswith('/api/proposals/') and self.command=='DELETE':
-                    store.withdraw_proposal(self.get_person(True),path.rsplit('/',1)[1])
-                    return self.reply({'ok':True})
-                if path=='/api/compose' and self.command=='POST':
-                    body=self.body();value=text(body.get('text',''),'Consulta',1000,True)
-                    result=rule_query(store,value)
-                    retrieved=[]
-                    if body.get('model',capability['ready']) is True:
-                        if not capability['ready']:
-                            raise Problem('Prepara el modelo con bash scripts/iniciar.sh en el servidor. No requiere una API.',503)
-                        if not model_lock.acquire(blocking=False):
-                            raise Problem('El modelo está ocupado. Inténtalo más tarde.',429)
-                        try:
-                            from .runtime import load_model,translate
-                            if loaded is None:
-                                import torch
-                                torch.set_num_threads(4)
-                                loaded=load_model(ROOT/'models/base',adapter,'auto')
-                            retrieved=archive.context(value)
-                            context_in_prompt=body.get('rag',False) is True
-                            output=translate(*loaded,value,context=retrieved if context_in_prompt else None,max_new_tokens=128)
-                            result=dict(status='proposal',method='local_model',segments=[dict(text=output['text'],record_ids=[])],
-                                        note='Borrador pendiente de revisión lingüística. Los pasajes recuperados aportan contexto, no certifican la traducción.',model=capability['name'],seconds=output['seconds'],truncated=output['truncated'],context_in_prompt=context_in_prompt)
-                        except Exception:
-                            raise Problem('No se pudo ejecutar el modelo local. Revisa sus dependencias y pesos; la consulta del corpus funciona.',503) from None
-                        finally:model_lock.release()
-                    if result['method']=='local_model':
-                        words=normalize(' '.join(s['text'] for s in result['segments'])).strip('. ').split()
-                        repeated=len(words)>=4 and len(words)%2==0 and words[:len(words)//2]==words[len(words)//2:]
-                        result['quality_issues']=(['repeated_phrase'] if repeated else [])+(['length_limit'] if result.get('truncated') else [])
-                        if result['quality_issues']:result['note']+=' Se detectó repetición o un límite de longitud; la salida requiere corrección.'
-                    cited_ids={i for s in result['segments'] for i in s['record_ids']}
-                    evidence=[r for r in store.public_records().values() if r['id'] in cited_ids]
-                    draft=dict(input=value,text=''.join(s['text'] for s in result['segments']),related_passages=evidence+retrieved)
-                    result['context_passages']=retrieved
-                    result.update(review_request=request_bundle(draft),review=local_review(draft))
-                    return self.reply(result)
-                raise Problem('Método no permitido.',405)
-            return super().dispatch()
-    return Handler
+    def corpus(request):
+        data=store.catalog_data();data.update(archive=archive.summary)
+        return request.reply(data)
+
+    def cards(request):
+        """Fichas de una consulta de Preguntar: IDs que contiene y registros de su grupo de término."""
+        value=text(request.arg('q'),'Consulta',1000)
+        with cards_cache['lock']:
+            records=store.public_records();signature=records_digest(records);cache=cards_cache['value']
+            stale=cache is None or cache['signature']!=signature
+            if not stale:
+                stale=any(hashlib.sha256(public_path(ROOT,p).read_bytes()).hexdigest()!=h for p,h in cache['index'].sources.hashes.items())
+            if stale:
+                cache=cards_cache['value']=dict(signature=signature,index=Cards(records))
+            index=cache['index']
+        try:return request.reply(index.lookup(value,terms))
+        except ValueError as error:raise Problem(str(error)) from None
+
+    def terms_search(request):
+        try:return request.reply(terms.search(request.arg('q'),limit=int(request.arg('limit',5))))
+        except ValueError as error:raise Problem(str(error)) from None
+
+    def word(request):
+        try:return request.reply(word_study.word(request.arg('w'),request.arg('exclude') or None))
+        except ValueError as error:raise Problem(str(error)) from None
+
+    def ask(request):
+        try:result=evidence_index.ask(request.arg('q'))
+        except ValueError as error:raise Problem(str(error)) from None
+        return request.reply(dict(result,explanation=explain(result),explain_models=['extractive']+(['claude'] if explain_writer else []),preparing=word_study.pending()))
+
+    def preparation():
+        # Etapas del arranque en frío: la interfaz muestra «Preparando el análisis…» con este avance.
+        status=word_study.status()
+        stages=status['stages'][:2]+[dict(id='terms',label='Índice de términos',state='ready' if terms._ready else 'building' if status['ready'] else 'pending',seconds=None)]+status['stages'][2:]
+        return dict(status,stages=stages,done=sum(s['state']=='ready' for s in stages),total=len(stages),
+                    complete=all(s['state']=='ready' for s in stages),ready=status['ready'] and terms._ready)
+
+    def explanation(request):
+        model_name=request.arg('model','extractive')
+        if model_name not in ('extractive','claude'):raise Problem('Modelo de explicación desconocido.')
+        if model_name=='claude' and not explain_writer:raise Problem('La explicación con Claude no está activada en este servidor (--explain-model claude).')
+        try:result=evidence_index.ask(request.arg('q'))
+        except ValueError as error:raise Problem(str(error)) from None
+        return request.reply(explain(result,explain_writer if model_name=='claude' else None))
+
+    def unit_examples(request):
+        try:return request.reply(units.examples(request.arg('sense')))
+        except KeyError:raise Problem('Acepción no encontrada.',404) from None
+
+    def gloss(request):
+        rid=request.arg('id')
+        source=archive.get(rid)['nah'] if rid else request.arg('text')
+        try:return request.reply(dict(word_study.gloss(source),archive_id=rid or None))
+        except ValueError as error:raise Problem(str(error)) from None
+
+    def research(request):
+        return request.reply(archive.search(**{k:request.arg(k) for k in ('query','variant','document','period')},offset=request.arg('offset',0),limit=request.arg('limit',20),terms=terms))
+
+    def task(request):
+        # Recordar y traducir usan el archivo completo; escuchar y revisar, las aportaciones de Voces.
+        mode=request.arg('mode','recognize');person=request.get_person(True)
+        source=(lambda *args:archive.task(store,*args)) if mode in ('recognize','translate') else store.task
+        return request.reply(source(mode,person,request.arg('after')))
+
+    def withdraw_proposal(request):
+        store.withdraw_proposal(request.get_person(True),request.tail)
+        return request.reply({'ok':True})
+
+    for path,function in [
+            ('/aportar',contribute_page),('/aportar/',contribute_page),
+            ('/api/corpus',corpus),('/api/ask/cards',cards),
+            ('/api/pictography',lambda r:r.reply(public_catalog(store.public_records()))),
+            ('/api/word',word),('/api/ask',ask),('/api/explain',explanation),('/api/gloss',gloss),
+            ('/api/system',lambda r:r.reply(dict(archive=archive.summary,preparation=preparation()))),
+            ('/api/learning',lambda r:r.reply(learning.catalog(store.public_records()))),
+            ('/api/units',lambda r:r.reply(units.catalog())),('/api/units/examples',unit_examples),
+            ('/api/research',research),
+            ('/archive.csv',lambda r:r.reply(archive.path.read_bytes(),mime='text/csv; charset=utf-8')),
+            ('/api/task',task),('/api/terms',terms_search),
+            ('/api/corpus/export',lambda r:r.reply(store.export_data())),
+            ('/api/proposals',lambda r:r.reply(store.proposals(r.get_person(True))))]:
+        router.add('GET',path,function)
+    spelling_routes(router,spellings,Problem,person=lambda r:r.get_person(True)['id'])
+    # Dioses y calendario: fichas con procedencia, calendario, lecturas y unidad (grafías no reunidas → buscador de grafías).
+    entity_routes(router,spellings=spellings)
+    router.add('GET','/api/research/',lambda r:r.reply(archive.get(r.tail)),prefix=True)
+    router.add('POST','/api/proposals',lambda r:r.reply(store.propose(r.get_person(True),r.body()),201))
+    router.add('DELETE','/api/proposals/',withdraw_proposal,prefix=True)
+    app=handler(store,router,STATIC)
+    # Orden de preparación: lo que pide la primera consulta (palabra, Archivo, Preguntar) antes que las pistas.
+    app.warm=lambda:(word_study.core(),terms._build(),spellings._build(),word_study.hints(wait=True))
+    return app
 
 
-def make_server(store,host='127.0.0.1',port=8766,public_origin=None,model_enabled=None,adapter=None):
-    httpd=ThreadingHTTPServer((host,port),make_handler(store,model_enabled,adapter))
-    actual=httpd.server_address[1]
-    httpd.public_origin=None
-    httpd.allowed_hosts={f'localhost:{actual}',f'127.0.0.1:{actual}',f'{host}:{actual}'}
-    if public_origin:
-        p=urlparse(public_origin)
-        if p.scheme!='https' or not p.hostname or p.path not in ('','/') or p.query or p.fragment or p.username:
-            httpd.server_close();raise Problem('--public-origin requiere un origen HTTPS sin ruta.')
-        httpd.public_origin=public_origin.rstrip('/')
-        httpd.allowed_hosts.add(p.netloc)
-    return httpd
+def make_server(store,host='127.0.0.1',port=8766,public_origin=None,prewarm=False,explain_model=None,demo=False):
+    # El servidor no espera las pistas de glosa: responde sin ellas (y lo indica) mientras se estiman.
+    word_study=WordStudy(records_fn=store.public_records,wait_for_hints=False)
+    # Claude solo redacta si se pide al arrancar: la explicación envía la pregunta y los pasajes citados a Anthropic.
+    writer=ClaudeWriter() if explain_model=='claude' else None
+    app=make_app(store,word_study,writer)
+    if prewarm:
+        # Primer arranque: análisis listo en segundos; después se reutiliza data/derived/.
+        def warm():
+            try:app.warm()
+            except Exception:pass  # el arranque no debe fallar por el análisis opcional
+        threading.Thread(target=warm,daemon=True,name='analysis-warmup').start()
+    return Server((host,port),app,public_origin,demo)
 
 
 def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--db',type=Path,default=DEFAULT_DB)
     sub=p.add_subparsers(dest='command',required=True)
-    serve=sub.add_parser('serve');serve.add_argument('--host',default='127.0.0.1');serve.add_argument('--port',type=int,default=8766);serve.add_argument('--public-origin');serve.add_argument('--enable-model',action='store_true',default=None);serve.add_argument('--disable-model',action='store_true');serve.add_argument('--adapter',default=str(ROOT/'outputs/continued-unseen/run/best'))
+    serve=sub.add_parser('serve',help='Sirve la aplicación, Voces (/aportar) y la API en un solo proceso.')
+    serve.add_argument('--host',default='127.0.0.1',help='Interfaz de escucha (por omisión solo este equipo).')
+    serve.add_argument('--port',type=int,default=8766)
+    serve.add_argument('--public-origin',help='Origen HTTPS de un proxy (https://dominio); se acepta como Host y como Origin de escritura.')
+    serve.add_argument('--demo',action='store_true',help='Demostración pública de solo lectura: rechaza aportaciones, perfiles y grabaciones.')
+    # El modelo local se archivó (experiments/llm/); estas opciones se aceptan y no hacen nada, para no romper arranques guardados.
+    for retired in ('--enable-model','--disable-model'):serve.add_argument(retired,action='store_true',help=argparse.SUPPRESS)
+    serve.add_argument('--adapter',help=argparse.SUPPRESS)
+    serve.add_argument('--explain-model',choices=['claude'],help='Activa explicaciones redactadas por Claude (envía la pregunta y los pasajes citados a la API de Anthropic).')
     imp=sub.add_parser('import');imp.add_argument('path');imp.add_argument('--reviewer',required=True);imp.add_argument('--reason',required=True)
     sub.add_parser('queue')
     review=sub.add_parser('review');review.add_argument('id');review.add_argument('--decision',choices=['accepted','rejected'],required=True);review.add_argument('--reviewer',required=True);review.add_argument('--reason',required=True);review.add_argument('--primary-checked',action='store_true');review.add_argument('--rights-checked',action='store_true')
@@ -214,8 +182,8 @@ def main():
     try:
         store=CorpusStore(args.db)
         if args.command=='serve':
-            httpd=make_server(store,args.host,args.port,args.public_origin,False if args.disable_model else args.enable_model,args.adapter)
-            print(f'Scriptorium · http://127.0.0.1:{httpd.server_address[1]} · Voces en /aportar',flush=True)
+            httpd=make_server(store,args.host,args.port,args.public_origin,prewarm=True,explain_model=args.explain_model,demo=args.demo)
+            print(f'Amoxcalli · http://127.0.0.1:{httpd.server_address[1]} · Voces en /aportar',flush=True)
             try:httpd.serve_forever()
             except KeyboardInterrupt:pass
             finally:httpd.server_close()

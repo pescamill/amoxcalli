@@ -12,11 +12,23 @@ Sin dependencias (solo stdlib). Distingue dos modos:
 
 Las reglas se declaran una sola vez en ``RULES``; ``STORAGE_RULE_IDS`` y
 ``COMPARISON_RULE_IDS`` fijan el orden de aplicación por modo.
+
+Lugar en el proyecto: ``nah-ortho-1`` está congelada. Su versión y sus reglas se
+registran en ``data/prepared/manifest.json`` y en los informes del banco de
+pruebas; cambiarla invalidaría particiones y cifras ya publicadas. Sirve para
+limpiar texto que se persiste (``storage``) y como clave de deduplicación y del
+BM25 del archivo (``comparison``). No es una clave de consulta léxica: para eso
+están ``text.fold``, ``text.phonemic_key`` y ``text.loose_key``. Nota: aquí
+``ç→tz``; el analizador (``text.phonemic_key``) usa ``ç→s`` como GDN. La
+discrepancia está documentada en ``docs/ARCHITECTURE.md`` y se resolverá con una
+``nah-ortho-2`` revisada, no modificando esta versión.
 """
 import argparse
 import collections
 import re
 import unicodedata
+
+from .text import strip_marks
 
 ORTHOGRAPHY_VERSION = 'nah-ortho-1'
 
@@ -96,9 +108,8 @@ def _apply(rule, text):
             out = text.casefold()
             return out, 1 if out != text else 0
         if op == 'strip_marks':
-            decomposed = unicodedata.normalize('NFD', text)
-            out = ''.join(c for c in decomposed if unicodedata.category(c) != 'Mn')
-            return out, len(decomposed) - len(out)
+            out = strip_marks(text)
+            return out, len(unicodedata.normalize('NFD', text)) - len(out)
         raise ValueError('operación unicode desconocida: %r' % (op,))
     if kind == 'regex':
         out, count = re.subn(rule.pattern, rule.replacement, text)

@@ -5,7 +5,8 @@ import tempfile
 import unittest
 
 from nahuatl_local.community import ROOT, Problem
-from nahuatl_local.corpus import CorpusStore, editorial_releases, normalize
+from nahuatl_local.corpus import CorpusStore, editorial_releases
+from nahuatl_local.text import fold
 from nahuatl_local.glyph_linker import build_bundle, tokens
 from nahuatl_local.research import Archive
 
@@ -27,7 +28,8 @@ class GlyphLinkerTests(unittest.TestCase):
     def test_repeat_is_identical_and_never_changes_original_records(self):
         excluded = {r['id'] for r in self.bundle['records']}
         # Reproduce v7 against its original catalogue, before the flor v8 batch.
-        excluded.update(r['id'] for r in json.loads((ROOT/'corpus/flor-lexicon-v8.json').read_text())['records'])
+        for later in ('corpus/flor-lexicon-v8.json', 'corpus/wiktionary-lexicon-v12.json'):
+            excluded.update(r['id'] for r in json.loads((ROOT/later).read_text())['records'])
         for release,bundle in editorial_releases():excluded.update(r['id'] for r in bundle['records'])
         base = {k:v for k,v in self.records.items() if k not in excluded}
         snapshot = copy.deepcopy(base)
@@ -61,9 +63,9 @@ class GlyphLinkerTests(unittest.TestCase):
             self.assertEqual(a['passage']['nah'],row['nah'])
             self.assertEqual(a['passage']['es'],row['es'])
             self.assertEqual(row['iso'],'nci')
-            self.assertIn(normalize(self.records[a['reference_form_id']]['written']),tokens(row['nah']))
+            self.assertIn(fold(self.records[a['reference_form_id']]['written']),tokens(row['nah']))
             ref=self.records[a['reference_glyph_id']]
-            self.assertIn(normalize(ref['reading']),tokens(row['nah']))
+            self.assertIn(fold(ref['reading']),tokens(row['nah']))
             self.assertIn(a['matched_term'],tokens(row['es']))
         self.assertNotIn('glyph-link-v7-sense-gdn-m2-161535',self.records)  # Titi ≠ normalized i.
 

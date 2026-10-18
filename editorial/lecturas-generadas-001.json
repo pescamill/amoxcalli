@@ -1,0 +1,2969 @@
+{
+  "base_sha256": "7462f977d93c44478e4bc04a4b20a7e353eb7a4054d585e874164ba5f62d13f1",
+  "config_sha256": "962c472dc58f928c48dc113955e540a346b41ecd050f3c45fb2db9b8f72c2548",
+  "learning": {
+    "id": "lectura-clasica-v1",
+    "lessons": [
+      {
+        "cover_glyph": "glyph-xochitl",
+        "examples": [
+          {
+            "annotations": [
+              {
+                "glyph_id": "glyph-related-itta-mh716r",
+                "note": "El registro traduce NIQUITTA como «contemplo». Se consulta itta como ayuda editorial; el análisis de esta forma sigue pendiente. La imagen de Tlachia es una comparación de significado, no la escritura de NIQUITTA ni de itta.",
+                "quote": "NIQUITTA",
+                "relation": "observed_form",
+                "sense_id": "sense-itta"
+              },
+              {
+                "glyph_id": "glyph-xochitl",
+                "note": "La traducción del registro permite reconocer la flor en esta frase.",
+                "quote": "XOCHITL",
+                "relation": "full_word",
+                "sense_id": "sense-xochitl"
+              }
+            ],
+            "archive_id": "axolotl-05338",
+            "context": "El registro contiene un título de la antología. Un título también sirve para comenzar a reconocer palabras.",
+            "exercise": {
+              "answer": 1,
+              "blank": "",
+              "explanation": "La traducción de este registro dice «CONTEMPLO UNA FLOR». Relaciona XOCHITL con la entrada flor.",
+              "kind": "meaning",
+              "options": [
+                "Una casa",
+                "Una flor",
+                "La luna"
+              ],
+              "question": "¿Qué se contempla en el título?"
+            },
+            "source_hash": "f1c36531ccb1fe098d6d746850f275e68184c6958aec66fc7257e701850aa6a0"
+          },
+          {
+            "annotations": [
+              {
+                "glyph_id": "glyph-xochitl",
+                "note": "Aquí aparece junto a cuicatl. Conserva el contexto poético; una definición aislada no explica todo el título.",
+                "quote": "xochitl",
+                "relation": "full_word",
+                "sense_id": "sense-xochitl"
+              },
+              {
+                "note": "Molina registra cuicatl como canto o canción. En este título aparece junto a xochitl; el español presenta el conjunto como poesía. La consulta léxica no reemplaza ese contexto.",
+                "quote": "cuicatl",
+                "relation": "full_word",
+                "sense_id": "sense-cuicatl"
+              }
+            ],
+            "archive_id": "axolotl-06231",
+            "context": "Un título donde aparecen flor y canto. El título español los presenta dentro del tema de la poesía.",
+            "exercise": {
+              "answer": 2,
+              "blank": "xochitl",
+              "explanation": "El registro escribe «xochitl». «ixochiuh» (i-xochi-uh) tiene la misma raíz con otros afijos. «xochicuahuitl» significa «árbol florido». Consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "ixochiuh",
+                "xochicuahuitl",
+                "xochitl"
+              ],
+              "question": "Completa con la palabra que aparece en la fuente: Tenonotzaliztli itechpa in ___, in cuicatl"
+            },
+            "source_hash": "2a489a884db3830fb815a27b3541d5c7fb4b20d8fe60abf6690242185f86cb84"
+          },
+          {
+            "annotations": [
+              {
+                "glyph_id": "glyph-cacahuaxochitl-mh885v",
+                "note": "Consulta la entrada de Cacahuaxochitl completa. La referencia visual procede de un nombre personal en otro documento, no de este poema. El nombre tradicional «flor de cacao» no acredita una identificación botánica.",
+                "quote": "Cacahuaxochitl",
+                "relation": "full_word",
+                "sense_id": "sense-cacahuaxochitl"
+              }
+            ],
+            "archive_id": "axolotl-10445",
+            "context": "Un nombre floral conservado como palabra completa. La traducción heredada dice «Las flores de cacao»; ese nombre no basta para identificar la especie de la planta ni para deducir el número gramatical.",
+            "exercise": {
+              "answer": 0,
+              "blank": "",
+              "explanation": "La fuente escribe Cacahuaxochitl. Se consulta su entrada propia: no se reemplaza el nombre completo por xochitl, aunque comparta el tema de las flores.",
+              "kind": "meaning",
+              "options": [
+                "Cacahuaxochitl",
+                "xochitl",
+                "cuicatl"
+              ],
+              "question": "¿Qué palabra completa conserva este registro?"
+            },
+            "source_hash": "3a0a95bde0f3de104ec7524820cc393c71a7e7903de3dc5b30b10a2e76e07a11"
+          },
+          {
+            "annotations": [
+              {
+                "glyph_id": "glyph-xochitl",
+                "note": "La fuente escribe xochitli en este fragmento. Se conserva esa grafía; el enlace al lema xochitl es una ayuda editorial pendiente de cotejo.",
+                "quote": "xochitli",
+                "relation": "source_variant",
+                "sense_id": "sense-xochitl"
+              },
+              {
+                "note": "Aquí el registro traduce «cantos». La forma cuicatl se conserva intacta; no se infiere el número gramatical a partir de la traducción española.",
+                "quote": "cuicatl",
+                "relation": "full_word",
+                "sense_id": "sense-cuicatl"
+              }
+            ],
+            "archive_id": "axolotl-13493",
+            "context": "Reconoce flor y canto y presta atención a la grafía exacta: este fragmento escribe xochitli.",
+            "exercise": {
+              "answer": 2,
+              "blank": "xochitli",
+              "explanation": "El registro escribe «xochitli». «xochicuahuitl» significa «árbol florido». «tototl» significa «ave». Consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "xochicuahuitl",
+                "tototl",
+                "xochitli"
+              ],
+              "question": "¿Qué forma escribe este pasaje para las flores? Conserva su grafía exacta."
+            },
+            "source_hash": "912969456978af58aaac6779b3146967239d44e28332e82a7816d6205ebd5b22"
+          }
+        ],
+        "id": "flor",
+        "minutes": 7,
+        "objective": "Reconocer xochitl y cuicatl, distinguir una palabra completa y conservar la grafía del pasaje.",
+        "practice_version": 3,
+        "sense_ids": [
+          "sense-xochitl",
+          "sense-itta",
+          "sense-cuicatl",
+          "sense-cacahuaxochitl"
+        ],
+        "title": "Reconocer una flor",
+        "version": 3
+      },
+      {
+        "cover_glyph": "glyph-tonatiuh-mdz34r",
+        "examples": [
+          {
+            "annotations": [
+              {
+                "note": "El registro traduce Tonatiuh como Sol.",
+                "quote": "Tonatiuh",
+                "sense_id": "sense-tonatiuh"
+              },
+              {
+                "note": "En este fragmento enlaza Sol y Luna; el español utiliza «y».",
+                "quote": "ihuan",
+                "sense_id": "sense-ihuan"
+              },
+              {
+                "note": "Aquí el sentido es Luna. La acepción mes se mantiene en otra ficha.",
+                "quote": "Metztli",
+                "sense_id": "sense-metztli"
+              }
+            ],
+            "archive_id": "axolotl-11087",
+            "context": "Un fragmento que enumera dos referentes del cielo.",
+            "exercise": {
+              "answer": 0,
+              "blank": "",
+              "explanation": "La traducción dice «al Sol y a la Luna». Aquí metztli corresponde a luna.",
+              "kind": "meaning",
+              "options": [
+                "Sol y luna",
+                "Agua y piedra",
+                "Casa y árbol"
+              ],
+              "question": "¿Qué dos referentes aparecen?"
+            },
+            "source_hash": "effbf81987d7a97c126b4a8330d625aa2540026428a4b34a6bc51bbb7c664c6a"
+          },
+          {
+            "annotations": [
+              {
+                "note": "Reconoce Sol dentro de la expresión completa; no presupongas que cada palabra española tiene una palabra náhuatl separada.",
+                "quote": "tonatiuh",
+                "sense_id": "sense-tonatiuh"
+              }
+            ],
+            "archive_id": "axolotl-00455",
+            "context": "La traducción conserva una expresión de orientación con el rostro del Sol. Lee el fragmento completo.",
+            "exercise": {
+              "answer": 1,
+              "blank": "tonatiuh",
+              "explanation": "El registro escribe «tonatiuh». «itonatiuh» (i-tonatiuh) tiene la misma raíz con otros afijos. «metztli» significa «luna». Consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "itonatiuh",
+                "tonatiuh",
+                "metztli"
+              ],
+              "question": "Completa con la forma exacta de la fuente: in ___ ixcopa itztiaque,"
+            },
+            "source_hash": "795e3e07e6408d11c748272f63a260d09db333debb29b32626691ffba71412c3"
+          },
+          {
+            "annotations": [
+              {
+                "note": "Aquí tonatiuh aparece en el contexto de un relato cosmológico, según la traducción del registro.",
+                "quote": "tonatiuh",
+                "sense_id": "sense-tonatiuh"
+              }
+            ],
+            "archive_id": "axolotl-05922",
+            "context": "El fragmento pertenece a un relato sobre los soles. «Segundo Sol» es una referencia de ese relato.",
+            "exercise": {
+              "answer": 2,
+              "blank": "",
+              "explanation": "El registro español dice «Segundo Sol» y añade su signo. La pregunta comprueba la comprensión de este fragmento.",
+              "kind": "meaning",
+              "options": [
+                "Al Primero",
+                "Al Quinto",
+                "Al Segundo"
+              ],
+              "question": "¿A qué Sol se refiere la traducción?"
+            },
+            "source_hash": "7589adeaa8ec0b06df15bbe3e96a916884a34955ad5d7555b7c7d1dc5215ddf4"
+          },
+          {
+            "annotations": [
+              {
+                "note": "La traducción del título conserva Sol. Reconoce la palabra aunque el contexto sea distinto.",
+                "quote": "Tonatiuh",
+                "sense_id": "sense-tonatiuh"
+              }
+            ],
+            "archive_id": "axolotl-11885",
+            "context": "Ejemplo nuevo: un título sobre la atención al Sol durante el día y la noche.",
+            "exercise": {
+              "answer": 0,
+              "blank": "",
+              "explanation": "La traducción presenta cómo servían al Sol a diversas horas del día y de la noche.",
+              "kind": "meaning",
+              "options": [
+                "De servir al Sol en distintos momentos",
+                "De construir una casa",
+                "De buscar piedras"
+              ],
+              "question": "¿De qué trata este título?"
+            },
+            "source_hash": "6f43aac6b55ba5f70cdba21a78ad94f9309fef9386f848e5d2138f1478e44ec9"
+          }
+        ],
+        "id": "cielo",
+        "minutes": 7,
+        "objective": "Reconocer tonatiuh en distintos contextos y compararlo con Metztli en el fragmento que reúne ambos.",
+        "practice_version": 2,
+        "reading_tips": [
+          "Los cuatro fragmentos hablan del Sol; solo uno menciona también a la Luna (metztli).",
+          "Aquí metztli quiere decir «luna». La misma palabra también puede significar «mes», pero ese sentido no aparece en esta lectura."
+        ],
+        "sense_ids": [
+          "sense-tonatiuh",
+          "sense-metztli",
+          "sense-ihuan"
+        ],
+        "title": "El Sol y un encuentro con la Luna",
+        "version": 3
+      },
+      {
+        "cover_glyph": "glyph-tepetl-mdz32r",
+        "examples": [
+          {
+            "annotations": [
+              {
+                "note": "En este fragmento, la traducción utiliza tierra. La ficha reúne también terreno y parcela.",
+                "quote": "tlalli",
+                "sense_id": "sense-tlalli"
+              }
+            ],
+            "archive_id": "axolotl-03471",
+            "context": "Un fragmento que menciona la tierra recibida. El sujeto y la acción se leen en la traducción completa.",
+            "exercise": {
+              "answer": 1,
+              "blank": "",
+              "explanation": "El español del registro comienza «en esta tierra que os da…». Reconoce tlalli en el contexto.",
+              "kind": "meaning",
+              "options": [
+                "Una estrella",
+                "La tierra",
+                "Un conejo"
+              ],
+              "question": "¿Qué se da en este fragmento?"
+            },
+            "source_hash": "92dc85996497376bb59f2327a1d9d6a3a8dec1802207dacb427882888a889a76"
+          },
+          {
+            "annotations": [
+              {
+                "note": "La fuente escribe tlacuilolcalli y traduce «En la casa de las pinturas». Calli es una consulta temática sobre casa; la imagen de calli no escribe el compuesto completo. Su análisis específico sigue pendiente.",
+                "quote": "tlacuilolcalli",
+                "relation": "thematic",
+                "sense_id": "sense-calli"
+              }
+            ],
+            "archive_id": "axolotl-12969",
+            "context": "Título o fragmento con una palabra compuesta. El corpus da la traducción completa.",
+            "exercise": {
+              "answer": 2,
+              "blank": "",
+              "explanation": "El registro traduce «En la casa de las pinturas». La palabra compuesta se conserva entera.",
+              "kind": "meaning",
+              "options": [
+                "La casa del viento",
+                "La casa del agua",
+                "La casa de las pinturas"
+              ],
+              "question": "¿Qué casa presenta la traducción?"
+            },
+            "source_hash": "a10e122963fc25aaf113776ec4e232da7778efb09ec55d4dc4bb9220fb2fea0a"
+          },
+          {
+            "annotations": [
+              {
+                "note": "La traducción usa montes. Consulta cerro o montaña como acepción de referencia.",
+                "quote": "tepetl",
+                "sense_id": "sense-tepetl"
+              }
+            ],
+            "archive_id": "axolotl-14900",
+            "context": "Un fragmento sobre búsqueda de montes.",
+            "exercise": {
+              "answer": 0,
+              "blank": "tepetl",
+              "explanation": "El registro escribe «tepetl». «itepetzin» (i-tepe-tzin) tiene la misma raíz con otros afijos. «tlalli» significa «tierra». Consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "tepetl",
+                "itepetzin",
+                "tlalli"
+              ],
+              "question": "Completa la forma del texto: quitztihui in ___,"
+            },
+            "source_hash": "30597c16adf72203499273683c8c5e74fda47aa769106bcbf624b8097b3f687c"
+          },
+          {
+            "annotations": [
+              {
+                "note": "La traducción utiliza tierra.",
+                "quote": "tlalli",
+                "sense_id": "sense-tlalli"
+              },
+              {
+                "note": "Este registro traduce el conjunto como «la tierra, la ciudad». Se consulta la ficha de cerro como referencia léxica contextual; este enlace no convierte ciudad en una equivalencia aislada de tepetl.",
+                "quote": "tepetl",
+                "relation": "thematic",
+                "sense_id": "sense-tepetl"
+              }
+            ],
+            "archive_id": "axolotl-16052",
+            "context": "Ejemplo nuevo que muestra por qué hay que leer la traducción en contexto, además de consultar el diccionario.",
+            "exercise": {
+              "answer": 1,
+              "blank": "",
+              "explanation": "El corpus traduce «la tierra, la ciudad». Una equivalencia de diccionario por sí sola no basta para explicar toda expresión.",
+              "kind": "meaning",
+              "options": [
+                "Flor y canto",
+                "Tierra y ciudad",
+                "Sol y luna"
+              ],
+              "question": "¿Qué dos referentes presenta el español de este registro?"
+            },
+            "source_hash": "c6bf6abd34a08589ad26560a82e5343a9138182509b31ea42d7cac7ad6cd22bc"
+          }
+        ],
+        "id": "lugares",
+        "minutes": 8,
+        "objective": "Reconocer palabras de lugares y observar cuándo la traducción necesita contexto.",
+        "practice_version": 2,
+        "reading_tips": [
+          "tlacuilolcalli es una palabra compuesta que contiene calli («casa»): toda la palabra se traduce «casa de las pinturas», no solo «casa».",
+          "Un fragmento traduce tlalli, tepetl como «la tierra, la ciudad». Esa traducción vale para ese contexto: tepetl no significa siempre «ciudad»."
+        ],
+        "sense_ids": [
+          "sense-tlalli",
+          "sense-calli",
+          "sense-tepetl"
+        ],
+        "title": "Reconocer tierra, casa y cerro",
+        "version": 3
+      },
+      {
+        "cover_glyph": "glyph-atl",
+        "examples": [
+          {
+            "annotations": [
+              {
+                "glyph_id": "glyph-atl",
+                "note": "El registro menciona agua. Conserva la frase completa para saber qué se dice de ella. La imagen viene de otro documento.",
+                "quote": "atl",
+                "relation": "full_word",
+                "sense_id": "sense-atl"
+              }
+            ],
+            "archive_id": "axolotl-04153",
+            "context": "El relato menciona la adoración del Agua. Lee ese contexto religioso sin sustituir la frase por una lista de palabras.",
+            "exercise": {
+              "answer": 0,
+              "blank": "atl",
+              "explanation": "El registro escribe «atl». «tlalli» significa «tierra». «tepetl» significa «cerro». Consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "atl",
+                "tlalli",
+                "tepetl"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "source_hash": "c3a35c61f2345b8c993c602f093a37ca789fa0ff16db6afbf3babfcf8689000c"
+          },
+          {
+            "annotations": [
+              {
+                "glyph_id": "glyph-atl",
+                "note": "El registro menciona agua. Conserva la frase completa para saber qué se dice de ella. La imagen viene de otro documento.",
+                "quote": "atl",
+                "relation": "full_word",
+                "sense_id": "sense-atl"
+              }
+            ],
+            "archive_id": "axolotl-01923",
+            "context": "La voz poética habla al señor Cuauhtencoztli y menciona hacer correr el agua. Conserva el nombre propio y la traducción de origen.",
+            "exercise": {
+              "answer": 1,
+              "blank": "atl",
+              "explanation": "El registro escribe «atl». «tlalli» significa «tierra». «tetl» significa «piedra». Consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "tlalli",
+                "atl",
+                "tetl"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "source_hash": "0a72c9b463f333296b23942e074f827dd3e1384242daeb44efc888bb1c8b4daf"
+          },
+          {
+            "annotations": [
+              {
+                "glyph_id": "glyph-tlalli-mdz32r",
+                "note": "La ficha ofrece tierra como referencia. La traducción española de este pasaje conserva su propio contexto y número.",
+                "quote": "tlalli",
+                "relation": "full_word",
+                "sense_id": "sense-tlalli"
+              }
+            ],
+            "archive_id": "axolotl-00833",
+            "context": "Una exclamación poética sobre la permanencia de la tierra. Reconoce la palabra sin inferir cómo se construye toda la oración.",
+            "exercise": {
+              "answer": 2,
+              "blank": "tlalli",
+              "explanation": "El registro escribe «tlalli». «notlal» (no-tlal) tiene la misma raíz con otros afijos. «tepetl» significa «cerro». Consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "notlal",
+                "tepetl",
+                "tlalli"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "source_hash": "b445800c2d2d440ac1302e8342a185b0e084e934c2805b500ac5c8b45011bdf7"
+          },
+          {
+            "annotations": [
+              {
+                "glyph_id": "glyph-tlalli-mdz32r",
+                "note": "La ficha ofrece tierra como referencia. La traducción española de este pasaje conserva su propio contexto y número.",
+                "quote": "tlalli",
+                "relation": "full_word",
+                "sense_id": "sense-tlalli"
+              }
+            ],
+            "archive_id": "axolotl-01325",
+            "context": "El relato sitúa a sus hablantes en tierras que fueron de Mexico Tenochtitlan. La traducción utiliza el plural tierras; conserva esa información en su contexto.",
+            "exercise": {
+              "answer": 0,
+              "blank": "tlalli",
+              "explanation": "El registro escribe «tlalli». «totlal» (to-tlal) tiene la misma raíz con otros afijos. «atl» significa «agua». Consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "tlalli",
+                "totlal",
+                "atl"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "source_hash": "977519a9155c1db3051f8c1acc423dad7586d8ba950e5e8982069e7ba49b25f7"
+          }
+        ],
+        "id": "agua-tierra",
+        "minutes": 7,
+        "objective": "Reconocer atl y tlalli en poesía y relatos, conservando el sentido de cada fragmento.",
+        "practice_version": 2,
+        "reading_tips": [
+          "Una palabra conocida ayuda a orientarte; la traducción completa cuenta qué sucede.",
+          "La imagen del glifo viene de otro documento; no ilustra estos relatos."
+        ],
+        "sense_ids": [
+          "sense-atl",
+          "sense-tlalli"
+        ],
+        "title": "Agua y tierra en sus contextos",
+        "version": 2
+      },
+      {
+        "cover_glyph": "glyph-xochitl",
+        "examples": [
+          {
+            "annotations": [
+              {
+                "glyph_id": "glyph-xochitl",
+                "note": "Consulta flor como referencia léxica. Lee también la traducción del fragmento; el plural español no se convierte automáticamente en una regla gramatical.",
+                "quote": "xochitl",
+                "relation": "full_word",
+                "sense_id": "sense-xochitl"
+              },
+              {
+                "glyph_id": "glyph-link-v7-sense-cuicatl",
+                "note": "Molina registra canto o canción. La imagen de xochitl ilustra un ejemplo que reúne flores y cantos; no escribe cuicatl.",
+                "quote": "cuicatl",
+                "relation": "full_word",
+                "sense_id": "sense-cuicatl"
+              }
+            ],
+            "archive_id": "axolotl-13428",
+            "context": "El registro reúne flores y cantos. La traducción mantiene ambos referentes; no los reemplazamos por una definición universal de poesía.",
+            "exercise": {
+              "answer": 0,
+              "blank": "cuicatl",
+              "explanation": "El registro escribe «cuicatl». «icuicatzin» (i-cuica-tzin) tiene la misma raíz con otros afijos. «cuicani» (cuica-ni) tiene la misma raíz con otros afijos. Consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "cuicatl",
+                "icuicatzin",
+                "cuicani"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "source_hash": "5c17a4312de2b191c7294882953f6cb4f6ab868a665c0f44bf1a13ef6aff95d8"
+          },
+          {
+            "annotations": [
+              {
+                "glyph_id": "glyph-xochitl",
+                "note": "Consulta flor como referencia léxica. Lee también la traducción del fragmento; el plural español no se convierte automáticamente en una regla gramatical.",
+                "quote": "xochitl",
+                "relation": "full_word",
+                "sense_id": "sense-xochitl"
+              },
+              {
+                "glyph_id": "glyph-link-v7-sense-cuicatl",
+                "note": "Molina registra canto o canción. La imagen de xochitl ilustra un ejemplo que reúne flores y cantos; no escribe cuicatl.",
+                "quote": "cuicatl",
+                "relation": "full_word",
+                "sense_id": "sense-cuicatl"
+              }
+            ],
+            "archive_id": "axolotl-05366",
+            "context": "La exclamación poética vuelve a reunir flores y cantos. Atiende a la puntuación y a la traducción conservadas.",
+            "exercise": {
+              "answer": 1,
+              "blank": "xochitl",
+              "explanation": "El registro escribe «xochitl». «ixochiuh» (i-xochi-uh) tiene la misma raíz con otros afijos. «xochitzin» (xochi-tzin) tiene la misma raíz con otros afijos. Consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "ixochiuh",
+                "xochitl",
+                "xochitzin"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "source_hash": "c2e2d786332031ff1c0445d1b4253c8bbfafda6dcbe0d4187143210577a3565d"
+          },
+          {
+            "annotations": [
+              {
+                "glyph_id": "glyph-xochitl",
+                "note": "Consulta flor como referencia léxica. Lee también la traducción del fragmento; el plural español no se convierte automáticamente en una regla gramatical.",
+                "quote": "xochitl",
+                "relation": "full_word",
+                "sense_id": "sense-xochitl"
+              },
+              {
+                "glyph_id": "glyph-link-v7-sense-cuicatl",
+                "note": "Molina registra canto o canción. La imagen de xochitl ilustra un ejemplo que reúne flores y cantos; no escribe cuicatl.",
+                "quote": "cuicatl",
+                "relation": "full_word",
+                "sense_id": "sense-cuicatl"
+              }
+            ],
+            "archive_id": "axolotl-02623",
+            "context": "El verso dice derrama flores, alegra el canto. La ayuda identifica los referentes; no analiza automáticamente los verbos.",
+            "exercise": {
+              "answer": 2,
+              "blank": "cuicatl",
+              "explanation": "El registro escribe «cuicatl». «icuicatzin» (i-cuica-tzin) tiene la misma raíz con otros afijos. «cuicani» (cuica-ni) tiene la misma raíz con otros afijos. Consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "icuicatzin",
+                "cuicani",
+                "cuicatl"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "source_hash": "a6b882c63f3952c2a665f0ac9f612b2048627477803632cc273a67d508557be2"
+          },
+          {
+            "annotations": [
+              {
+                "glyph_id": "glyph-xochitl",
+                "note": "Consulta flor como referencia léxica. Lee también la traducción del fragmento; el plural español no se convierte automáticamente en una regla gramatical.",
+                "quote": "xochitl",
+                "relation": "full_word",
+                "sense_id": "sense-xochitl"
+              }
+            ],
+            "archive_id": "axolotl-09215",
+            "context": "Un fragmento de Nican Mopohua traducido como de variadas flores. Es un fragmento breve, no una oración completa ni una traducción palabra por palabra.",
+            "exercise": {
+              "answer": 0,
+              "blank": "xochitl",
+              "explanation": "El registro escribe «xochitl». «xochitzin» (xochi-tzin) tiene la misma raíz con otros afijos. «moxochiuh» (mo-xochi-uh) tiene la misma raíz con otros afijos. Consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "xochitl",
+                "xochitzin",
+                "moxochiuh"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "source_hash": "4bafa89d7af43d28a32cb5ed0cfea29f3396b0e281e071bbcac48c9d1f3db8f6"
+          }
+        ],
+        "id": "flores-cantos",
+        "minutes": 6,
+        "objective": "Reconocer xochitl y cuicatl en nuevos versos y distinguir el texto poético de una glosa de diccionario.",
+        "practice_version": 2,
+        "reading_tips": [
+          "Lee «flores» y «cantos» dentro del verso: traducir una palabra suelta no explica todo el poema.",
+          "El español puede decir «flores» aunque el náhuatl escriba xochitl: la forma escrita y el número de la traducción no siempre coinciden."
+        ],
+        "sense_ids": [
+          "sense-xochitl",
+          "sense-cuicatl"
+        ],
+        "title": "Flores y cantos más allá del título",
+        "version": 2
+      },
+      {
+        "cover_glyph": "glyph-tototl-mdz46r",
+        "examples": [
+          {
+            "annotations": [
+              {
+                "glyph_id": "glyph-tototl-mdz46r",
+                "note": "Consulta ave como referencia léxica; observa si el español de este registro habla de un ave o de aves. No deduzcas una regla de número solo con esta comparación.",
+                "quote": "tototl",
+                "relation": "full_word",
+                "sense_id": "sense-tototl"
+              }
+            ],
+            "archive_id": "axolotl-14546",
+            "comprehension": {
+              "answer": 0,
+              "explanation": "La traducción del corpus dice «Por allí anda el ave, parlotea y canta». La respuesta corresponde a este fragmento, no a una glosa aislada.",
+              "kind": "meaning",
+              "options": [
+                "Por allí anda el ave, parlotea y canta",
+                "Por allí vuela el ave, busca agua y descansa",
+                "Por allí duerme el ave, calla y se esconde"
+              ],
+              "question": "Según la traducción del poema, ¿qué hace el ave?"
+            },
+            "context": "El ave anda, parlotea y canta en el poema, según la traducción. No se identifica una especie a partir del glifo de referencia.",
+            "exercise": {
+              "answer": 0,
+              "blank": "tototl",
+              "explanation": "El registro escribe «tototl». «itototzin» (i-toto-tzin) tiene la misma raíz con otros afijos. «mazatl» significa «venado». Consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "tototl",
+                "itototzin",
+                "mazatl"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "explore_words": [
+              "chachalaca",
+              "tlatohua"
+            ],
+            "source_hash": "2c93ffac76b923ab5d31dad8640725f453866880ac9a79326b9012394bd8f43d"
+          },
+          {
+            "annotations": [
+              {
+                "glyph_id": "glyph-tototl-mdz46r",
+                "note": "Consulta ave como referencia léxica; observa si el español de este registro habla de un ave o de aves. No deduzcas una regla de número solo con esta comparación.",
+                "quote": "tototl",
+                "relation": "full_word",
+                "sense_id": "sense-tototl"
+              }
+            ],
+            "archive_id": "axolotl-14253",
+            "comprehension": {
+              "answer": 1,
+              "explanation": "La traducción del corpus dice «aves, pescados y ranas». La respuesta corresponde a este fragmento, no a una glosa aislada.",
+              "kind": "meaning",
+              "options": [
+                "maíz, frijol y chile",
+                "aves, pescados y ranas",
+                "mantas, plumas y cacao"
+              ],
+              "question": "Según este relato, ¿qué llevaban tenochcas y tlatelolcas?"
+            },
+            "context": "El relato enumera aves, pescados y ranas llevados por tenochcas y tlatelolcas. La lectura destaca únicamente tototl.",
+            "exercise": {
+              "answer": 1,
+              "blank": "tototl",
+              "explanation": "El registro escribe «tototl». «itototzin» (i-toto-tzin) tiene la misma raíz con otros afijos. «mazatl» significa «venado». Consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "itototzin",
+                "tototl",
+                "mazatl"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "explore_words": [
+              "michi",
+              "cuiatl"
+            ],
+            "source_hash": "fac136e3a0457c008c312b42641cd4622684ed4dbe5477b8515b3ed1b388a49e"
+          },
+          {
+            "annotations": [
+              {
+                "glyph_id": "glyph-tototl-mdz46r",
+                "note": "Consulta ave como referencia léxica; observa si el español de este registro habla de un ave o de aves. No deduzcas una regla de número solo con esta comparación.",
+                "quote": "tototl",
+                "relation": "full_word",
+                "sense_id": "sense-tototl"
+              }
+            ],
+            "archive_id": "axolotl-08856",
+            "comprehension": {
+              "answer": 2,
+              "explanation": "La traducción del corpus dice «en Azcapotzalco». La respuesta corresponde a este fragmento, no a una glosa aislada.",
+              "kind": "meaning",
+              "options": [
+                "en Tlatelolco",
+                "en Tenochtitlan",
+                "en Azcapotzalco"
+              ],
+              "question": "¿A qué lugar llevaban lo que enumera el fragmento?"
+            },
+            "context": "El relato incluye una lista de animales y materiales, dentro de acciones realizadas en Azcapotzalco. Los nombres propios y el resto de la lista mantienen su escritura original.",
+            "exercise": {
+              "answer": 2,
+              "blank": "tototl",
+              "explanation": "El registro escribe «tototl». «itototzin» (i-toto-tzin) tiene la misma raíz con otros afijos. «mazatl» significa «venado». Consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "itototzin",
+                "mazatl",
+                "tototl"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "explore_words": [
+              "michi",
+              "tletlalito"
+            ],
+            "source_hash": "ff72fa785c95318cf04dddf607259f2c16866c8702f9457edbfc7618d9aca789"
+          },
+          {
+            "annotations": [
+              {
+                "glyph_id": "glyph-tototl-mdz46r",
+                "note": "Consulta ave como referencia léxica; observa si el español de este registro habla de un ave o de aves. No deduzcas una regla de número solo con esta comparación.",
+                "quote": "tototl",
+                "relation": "full_word",
+                "sense_id": "sense-tototl"
+              }
+            ],
+            "archive_id": "axolotl-00751",
+            "comprehension": {
+              "answer": 0,
+              "explanation": "La traducción del corpus dice «con sus flechas y sus arcos». La respuesta corresponde a este fragmento, no a una glosa aislada.",
+              "kind": "meaning",
+              "options": [
+                "con sus flechas y sus arcos",
+                "con sus redes y sus trampas",
+                "con sus lanzas y sus escudos"
+              ],
+              "question": "Según la traducción, ¿con qué cazaban?"
+            },
+            "context": "El relato describe el sustento y la caza de los chichimecas totolimpanecas. Reconoce tototl como palabra separada; las letras del nombre propio no se tratan como otra aparición de la palabra.",
+            "exercise": {
+              "answer": 0,
+              "blank": "tototl",
+              "explanation": "El registro escribe «tototl». «itototzin» (i-toto-tzin) tiene la misma raíz con otros afijos. «michin» significa «pez». Consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "tototl",
+                "itototzin",
+                "michin"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "explore_words": [
+              "cohuatl"
+            ],
+            "source_hash": "3542b019692cbcac4ccdc9ac5cba0f50e69e5c7766e8051e06520ee09079b237"
+          }
+        ],
+        "id": "aves",
+        "minutes": 8,
+        "objective": "Reconocer tototl y comparar el contexto del ave poética con las aves de los relatos.",
+        "practice_version": 2,
+        "reading_tips": [
+          "El mismo término aparece en poesía y en relatos históricos; lee qué papel tiene en cada fragmento.",
+          "En los relatos también aparecen michi y cohuatl. Se muestran tal como las escribió el documento; la app no las cambia por otra palabra del diccionario."
+        ],
+        "sense_ids": [
+          "sense-tototl"
+        ],
+        "title": "Un ave en poesía, aves en relatos",
+        "version": 3
+      },
+      {
+        "cover_glyph": "glyph-calli",
+        "examples": [
+          {
+            "annotations": [
+              {
+                "glyph_id": "glyph-calli",
+                "note": "La referencia es un elemento de edificio en Apancalecan, Mendoza 13r, propuesto por catálogo secundario. No es una ilustración de esta casa ni la escritura de la oración.",
+                "quote": "calli",
+                "relation": "full_word",
+                "sense_id": "sense-calli"
+              }
+            ],
+            "archive_id": "axolotl-02051",
+            "comprehension": {
+              "answer": 0,
+              "explanation": "La traducción de origen dice «horadaron la pared trasera de la casa». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+              "kind": "meaning",
+              "options": [
+                "horadaron la pared trasera de la casa",
+                "saltaron por el techo de la casa",
+                "salieron por la puerta del patio"
+              ],
+              "question": "¿Por dónde escaparon los mexicas?"
+            },
+            "context": "Los mexicas abren una salida en la pared trasera y escapan, según el relato.",
+            "exercise": {
+              "answer": 0,
+              "blank": "calli",
+              "explanation": "El registro escribe «calli». «ical» (i-cal) tiene la misma raíz con otros afijos. «tepetl» significa «cerro». Consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "calli",
+                "ical",
+                "tepetl"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "source_hash": "f7be34105ce8c8032e2b3e26a48e0ffe10118e86004c67c5bb933630b96798aa"
+          },
+          {
+            "annotations": [
+              {
+                "glyph_id": "glyph-calli",
+                "note": "La referencia es un elemento de edificio en Apancalecan, Mendoza 13r, propuesto por catálogo secundario. No es una ilustración de esta casa ni la escritura de la oración.",
+                "quote": "Calli",
+                "relation": "full_word",
+                "sense_id": "sense-calli"
+              }
+            ],
+            "archive_id": "axolotl-10674",
+            "comprehension": {
+              "answer": 1,
+              "explanation": "La traducción de origen dice «Destechadas están las casas». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+              "kind": "meaning",
+              "options": [
+                "Quemadas están las casas",
+                "Destechadas están las casas",
+                "Inundadas están las casas"
+              ],
+              "question": "¿Cómo están las casas en la traducción?"
+            },
+            "context": "El fragmento describe casas dañadas junto a caminos con dardos rotos. Conserva la repetición Calli/calli del original.",
+            "exercise": {
+              "answer": 1,
+              "blank": "Calli",
+              "explanation": "El registro escribe «Calli». «Ical» (i-cal) tiene la misma raíz con otros afijos. «Tepetl» significa «cerro». Consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "Ical",
+                "Calli",
+                "Tepetl"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "source_hash": "c3e1e5b76c1dd48f5547ad6dca650ef81bb5508635de2629509a07d4b90cc98b"
+          },
+          {
+            "annotations": [
+              {
+                "glyph_id": "glyph-calli",
+                "note": "La referencia es un elemento de edificio en Apancalecan, Mendoza 13r, propuesto por catálogo secundario. No es una ilustración de esta casa ni la escritura de la oración.",
+                "quote": "calli",
+                "relation": "full_word",
+                "sense_id": "sense-calli"
+              }
+            ],
+            "archive_id": "axolotl-03625",
+            "comprehension": {
+              "answer": 2,
+              "explanation": "La traducción de origen dice «carta de venta». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+              "kind": "meaning",
+              "options": [
+                "testamento",
+                "mapa del barrio",
+                "carta de venta"
+              ],
+              "question": "¿Qué documento confirma la declaración?"
+            },
+            "context": "Una declaración sobre una casa remite a la carta de venta como confirmación. No convertimos el testimonio en una regla jurídica.",
+            "exercise": {
+              "answer": 2,
+              "blank": "calli",
+              "explanation": "El registro escribe «calli». «nocal» (no-cal) tiene la misma raíz con otros afijos. «tlalli» significa «tierra». Consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "nocal",
+                "tlalli",
+                "calli"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "source_hash": "0206b31a47eb39c95f1d50f1f6bd49302df33de9dedcbf0911deb938674a58c6"
+          },
+          {
+            "annotations": [
+              {
+                "glyph_id": "glyph-calli",
+                "note": "La referencia es un elemento de edificio en Apancalecan, Mendoza 13r, propuesto por catálogo secundario. No es una ilustración de esta casa ni la escritura de la oración.",
+                "quote": "calli",
+                "relation": "full_word",
+                "sense_id": "sense-calli"
+              }
+            ],
+            "archive_id": "axolotl-01900",
+            "comprehension": {
+              "answer": 0,
+              "explanation": "La traducción de origen dice «la dicha casa y tierra». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+              "kind": "meaning",
+              "options": [
+                "la dicha casa y tierra",
+                "la dicha casa y huerta",
+                "el dicho solar y camino"
+              ],
+              "question": "¿Qué afirma haber vendido?"
+            },
+            "context": "La persona pide que se dé posesión de una casa y tierra que afirma haber vendido. La traducción conserva su grafía histórica.",
+            "exercise": {
+              "answer": 0,
+              "blank": "calli",
+              "explanation": "El registro escribe «calli». «tocal» (to-cal) tiene la misma raíz con otros afijos. «tepetl» significa «cerro». Consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "calli",
+                "tocal",
+                "tepetl"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "source_hash": "0522a9cb3d0bcc9c42b4c71ad79f6decfe12c3d6ac13da5e231c924856ea4522"
+          }
+        ],
+        "id": "casas-relatos",
+        "minutes": 8,
+        "objective": "Reconocer calli en episodios sobre casas y distinguir una acción narrada de una declaración de posesión.",
+        "practice_version": 2,
+        "reading_tips": [
+          "Aquí calli quiere decir casa o edificio. Calli también es el nombre de un día del calendario, pero ese uso no aparece en esta lectura.",
+          "Las traducciones conservan el español antiguo y su ortografía. Lee la frase completa para entender qué pasa con la casa."
+        ],
+        "sense_ids": [
+          "sense-calli"
+        ],
+        "title": "Casas, salida y posesión",
+        "version": 2
+      },
+      {
+        "cover_glyph": "glyph-mazatl-mdz13v",
+        "examples": [
+          {
+            "annotations": [
+              {
+                "glyph_id": "glyph-mazatl-mdz13v",
+                "note": "La referencia es una cabeza de venado en el topónimo Mazatlan, Mendoza 13v. No identifica la especie ni representa este episodio.",
+                "quote": "mazatl",
+                "relation": "full_word",
+                "sense_id": "sense-mazatl"
+              }
+            ],
+            "archive_id": "axolotl-10995",
+            "comprehension": {
+              "answer": 0,
+              "explanation": "La traducción de origen dice «la piel de un venado». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+              "kind": "meaning",
+              "options": [
+                "la piel de un venado",
+                "la pluma de un ave",
+                "el colmillo de un jaguar"
+              ],
+              "question": "¿Qué objeto menciona el verso?"
+            },
+            "context": "El verso menciona una piel de venado usada para hacer reverencia a Axayácatl. El texto español conserva palabras juntas.",
+            "exercise": {
+              "answer": 0,
+              "blank": "mazatl",
+              "explanation": "El registro escribe «mazatl». «mazatlan» (maza-tlan) tiene la misma raíz con otros afijos. «tochtli» significa «conejo». Consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "mazatl",
+                "mazatlan",
+                "tochtli"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "source_hash": "2971f9509a5d5b66bf4754e60c4df66cf6726316a1288994bddfe2cba970ab11"
+          },
+          {
+            "annotations": [
+              {
+                "glyph_id": "glyph-mazatl-mdz13v",
+                "note": "La referencia es una cabeza de venado en el topónimo Mazatlan, Mendoza 13v. No identifica la especie ni representa este episodio.",
+                "quote": "mazatl",
+                "relation": "full_word",
+                "sense_id": "sense-mazatl"
+              }
+            ],
+            "archive_id": "axolotl-06302",
+            "comprehension": {
+              "answer": 1,
+              "explanation": "La traducción de origen dice «el venado que quieren». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+              "kind": "meaning",
+              "options": [
+                "el conejo que buscan",
+                "el venado que quieren",
+                "la serpiente que piden"
+              ],
+              "question": "¿Qué dicen no haber hallado?"
+            },
+            "context": "Los hablantes dicen no haber encontrado el venado buscado y haber apresado a dos personas. Conserva la negación y el contraste del relato.",
+            "exercise": {
+              "answer": 1,
+              "blank": "mazatl",
+              "explanation": "El registro escribe «mazatl». «mazatlan» (maza-tlan) tiene la misma raíz con otros afijos. «tochtli» significa «conejo». Consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "mazatlan",
+                "mazatl",
+                "tochtli"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "source_hash": "7a42011e26125615db936f1abdd8569e50c9fe684e45fe6ae1b3185b58ade591"
+          },
+          {
+            "annotations": [
+              {
+                "glyph_id": "glyph-coatl-mdz7v",
+                "note": "La referencia procede del topónimo Coaixtlahuacan, Mendoza 7v. No representa las culebras de este relato ni todos los usos calendáricos de la forma.",
+                "quote": "coatl",
+                "relation": "full_word",
+                "sense_id": "sense-coatl"
+              }
+            ],
+            "archive_id": "axolotl-15614",
+            "comprehension": {
+              "answer": 2,
+              "explanation": "La traducción de origen dice «culebras, conejos, venados». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+              "kind": "meaning",
+              "options": [
+                "pescados, ranas, aves",
+                "maíz, frijol, calabaza",
+                "culebras, conejos, venados"
+              ],
+              "question": "¿Qué alimentos enumera la traducción?"
+            },
+            "context": "La lista describe vestimenta y alimentación; la forma coatl aparece entre los alimentos. No convertimos toda la lista en entradas nuevas.",
+            "exercise": {
+              "answer": 2,
+              "blank": "coatl",
+              "explanation": "El registro escribe «coatl». «coatlan» (coa-tlan) tiene la misma raíz con otros afijos. «michin» significa «pez». Consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "coatlan",
+                "michin",
+                "coatl"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "source_hash": "26bcc1d5e1563128131936c537babb57633b42865396e0382eba45b11859d7a3"
+          },
+          {
+            "annotations": [
+              {
+                "glyph_id": "glyph-michin-mdz46r",
+                "note": "La referencia procede de Michapan, Mendoza 46r. No identifica el tamaño o la especie del pez del relato.",
+                "quote": "michin",
+                "relation": "full_word",
+                "sense_id": "sense-michin"
+              }
+            ],
+            "archive_id": "axolotl-06005",
+            "comprehension": {
+              "answer": 0,
+              "explanation": "La traducción de origen dice «Nadie sabe». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+              "kind": "meaning",
+              "options": [
+                "Nadie sabe",
+                "Todos saben",
+                "Algunos vieron"
+              ],
+              "question": "¿Qué grado de certeza expresa el comienzo?"
+            },
+            "context": "El relato dice que nadie sabe qué pasó con Temillotzin y enumera posibilidades. No afirma que un pez lo devoró.",
+            "exercise": {
+              "answer": 0,
+              "blank": "michin",
+              "explanation": "El registro escribe «michin». «mazatl» significa «venado». «tototl» significa «ave». Consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "michin",
+                "mazatl",
+                "tototl"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "source_hash": "a811f4fbd510f4229f7d567a5496968b4bf1a6f89a49b4498c73411d7ad7ff03"
+          }
+        ],
+        "id": "animales-relatos",
+        "minutes": 8,
+        "objective": "Reconocer mazatl, coatl y michin y explicar el papel de cada animal en su relato sin identificar especies.",
+        "practice_version": 2,
+        "reading_tips": [
+          "Los animales aparecen en situaciones distintas: una piel de venado, una lista de alimentos, algo que nadie sabe con certeza. Fíjate en cuál es cuál.",
+          "Un fragmento escribe cohuatl y el diccionario usa coatl. Te mostramos la palabra tal como está en el documento, sin corregirla."
+        ],
+        "sense_ids": [
+          "sense-mazatl",
+          "sense-coatl",
+          "sense-michin"
+        ],
+        "title": "Venados, culebras y un pez",
+        "version": 2
+      },
+      {
+        "cover_glyph": "glyph-tetl-mdz48r",
+        "examples": [
+          {
+            "annotations": [
+              {
+                "glyph_id": "glyph-tetl-mdz48r",
+                "note": "La referencia es un elemento de piedra de un topónimo, Mendoza 48r. No representa estas piedras ni explica las medidas o la expresión del pasaje.",
+                "quote": "tetl",
+                "relation": "full_word",
+                "sense_id": "sense-tetl"
+              }
+            ],
+            "archive_id": "axolotl-15430",
+            "comprehension": {
+              "answer": 0,
+              "explanation": "La traducción de origen dice «una braza de piedra». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+              "kind": "meaning",
+              "options": [
+                "una braza de piedra",
+                "una braza de madera",
+                "una olla de cacao"
+              ],
+              "question": "¿Qué se declara enterrado?"
+            },
+            "context": "Una declaración menciona piedra enterrada en un cercado y su herencia. No se deduce un sistema de medidas a partir de la palabra.",
+            "exercise": {
+              "answer": 0,
+              "blank": "tetl",
+              "explanation": "El registro escribe «tetl». «tepetl» significa «cerro». «tlalli» significa «tierra». Consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "tetl",
+                "tepetl",
+                "tlalli"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "source_hash": "94b4a16366c977a15c77db07864a4ac501374c61c804a1725a46d1976bcf1b44"
+          },
+          {
+            "annotations": [
+              {
+                "glyph_id": "glyph-tetl-mdz48r",
+                "note": "La referencia es un elemento de piedra de un topónimo, Mendoza 48r. No representa estas piedras ni explica las medidas o la expresión del pasaje.",
+                "quote": "tetl",
+                "relation": "full_word",
+                "sense_id": "sense-tetl"
+              }
+            ],
+            "archive_id": "axolotl-01669",
+            "comprehension": {
+              "answer": 1,
+              "explanation": "La traducción de origen dice «no abia cosa alguna dello». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+              "kind": "meaning",
+              "options": [
+                "todo estaba en su lugar",
+                "no abia cosa alguna dello",
+                "abia otra casa en el sitio"
+              ],
+              "question": "¿Qué encontraron al volver?"
+            },
+            "context": "Un testimonio cuenta que dejaron materiales y un aposento en Zoquipan, y al volver faltaba todo.",
+            "exercise": {
+              "answer": 1,
+              "blank": "tetl",
+              "explanation": "El registro escribe «tetl». «tlalli» significa «tierra». «tepetl» significa «cerro». Consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "tlalli",
+                "tetl",
+                "tepetl"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "source_hash": "fed7e8e3a31cfa07c86d5d01c301a19d2081f6adff67d37398ce02a2e1569188"
+          },
+          {
+            "annotations": [
+              {
+                "glyph_id": "glyph-related-madera-mh487r",
+                "note": "La comparación visual muestra Tlecuauh completo, Matrícula de Huexotzinco 487r: el catálogo identifica una tabla en el compuesto de madera y fuego. No escribe únicamente cuahuitl ni representa la leña o el palo de este pasaje.",
+                "quote": "cuahuitl",
+                "relation": "full_word",
+                "sense_id": "sense-madera"
+              }
+            ],
+            "archive_id": "axolotl-04424",
+            "comprehension": {
+              "answer": 2,
+              "explanation": "La traducción de origen dice «la leña, el carbón». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+              "kind": "meaning",
+              "options": [
+                "la cal, la arena",
+                "el maíz, el frijol",
+                "la leña, el carbón"
+              ],
+              "question": "¿Qué materiales se disponen junto a los recipientes?"
+            },
+            "context": "Se disponen recipientes, leña y carbón en una casa. La anotación consulta material leñoso por la traducción de este registro.",
+            "exercise": {
+              "answer": 2,
+              "blank": "cuahuitl",
+              "explanation": "El registro escribe «cuahuitl». «xochicuahuitl» significa «árbol florido». «tetl» significa «piedra». Consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "xochicuahuitl",
+                "tetl",
+                "cuahuitl"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "source_hash": "4556b3f1ceb17c5f22c66bd8edd4ed07e614deaf475889e78a9ef62b17701291"
+          },
+          {
+            "annotations": [
+              {
+                "glyph_id": "glyph-related-madera-mh487r",
+                "note": "La comparación visual muestra Tlecuauh completo, Matrícula de Huexotzinco 487r: el catálogo identifica una tabla en el compuesto de madera y fuego. No escribe únicamente cuahuitl ni representa la leña o el palo de este pasaje.",
+                "quote": "cuahuitl",
+                "relation": "full_word",
+                "sense_id": "sense-madera"
+              }
+            ],
+            "archive_id": "axolotl-13052",
+            "comprehension": {
+              "answer": 0,
+              "explanation": "La traducción de origen dice «dentro de la piedra y del palo». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+              "kind": "meaning",
+              "options": [
+                "dentro de la piedra y del palo",
+                "dentro del agua y del cerro",
+                "encima de la casa y del camino"
+              ],
+              "question": "¿Dónde dice el pasaje que está mirando?"
+            },
+            "context": "El pasaje dice que el señor mira dentro de la piedra y del palo. Conserva el contexto y no lo reemplaces por una explicación literal de materiales.",
+            "exercise": {
+              "answer": 0,
+              "blank": "cuahuitl",
+              "explanation": "El registro escribe «cuahuitl». «xochicuahuitl» significa «árbol florido». «tepetl» significa «cerro». Consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "cuahuitl",
+                "xochicuahuitl",
+                "tepetl"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "source_hash": "e2f2f5a75f1a4fa471d16e80104afe863871a6349472cfefafe58526d91061e2"
+          }
+        ],
+        "id": "piedra-lena",
+        "minutes": 8,
+        "objective": "Reconocer tetl y cuahuitl en contextos materiales y distinguir esos referentes de la expresión piedra y palo.",
+        "practice_version": 2,
+        "reading_tips": [
+          "Aquí cuahuitl quiere decir madera o leña. En la lectura de árboles la misma palabra se lee como «árbol».",
+          "«Dentro de la piedra y del palo» es una expresión: lee el fragmento completo para entenderla. La imagen del glifo muestra la palabra, no explica la expresión."
+        ],
+        "sense_ids": [
+          "sense-tetl",
+          "sense-madera"
+        ],
+        "title": "Piedra, leña y un palo",
+        "version": 2
+      },
+      {
+        "cover_glyph": "glyph-cuahuitl-mdz7v",
+        "examples": [
+          {
+            "annotations": [
+              {
+                "glyph_id": "glyph-cuahuitl-mdz7v",
+                "note": "La referencia es un árbol separado de Cuauhnahuac, Mendoza 7v. No identifica la especie ni representa los árboles de este relato.",
+                "quote": "quauitl",
+                "relation": "full_word",
+                "sense_id": "sense-cuahuitl"
+              }
+            ],
+            "archive_id": "axolotl-01138",
+            "comprehension": {
+              "answer": 0,
+              "explanation": "La traducción de origen dice «para que nosotros podamos seguir el camino». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+              "kind": "meaning",
+              "options": [
+                "para que nosotros podamos seguir el camino",
+                "para que nadie pueda seguir el camino",
+                "para que los árboles vuelvan a crecer"
+              ],
+              "question": "¿Para qué piden dejar señales?"
+            },
+            "context": "Los hablantes piden dejar señales mediante árboles y piedras para poder seguir un camino.",
+            "exercise": {
+              "answer": 0,
+              "blank": "quauitl",
+              "explanation": "El registro escribe «quauitl». «xochicuahuitl» significa «árbol florido». «tepetl» significa «cerro». Consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "quauitl",
+                "xochicuahuitl",
+                "tepetl"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "source_hash": "befeeb0acd29dd33ffd560e79c79bb1f7c32d137374437e22b49c25e1818a356"
+          },
+          {
+            "annotations": [
+              {
+                "glyph_id": "glyph-cuahuitl-mdz7v",
+                "note": "La referencia es un árbol separado de Cuauhnahuac, Mendoza 7v. No identifica la especie ni representa los árboles de este relato.",
+                "quote": "cuahuitl",
+                "relation": "full_word",
+                "sense_id": "sense-cuahuitl"
+              }
+            ],
+            "archive_id": "axolotl-12972",
+            "comprehension": {
+              "answer": 1,
+              "explanation": "La traducción de origen dice «los desarraigan». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+              "kind": "meaning",
+              "options": [
+                "los queman",
+                "los desarraigan",
+                "los siembran"
+              ],
+              "question": "¿Qué ocurre con los árboles?"
+            },
+            "context": "La traducción habla de grandes árboles arrastrados y desarraigados, y de angustia durante varios días.",
+            "exercise": {
+              "answer": 1,
+              "blank": "cuahuitl",
+              "explanation": "El registro escribe «cuahuitl». «xochicuahuitl» significa «árbol florido». «tepetl» significa «cerro». Consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "xochicuahuitl",
+                "cuahuitl",
+                "tepetl"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "source_hash": "daabee099c09682555c8b4d6293ea5d9cad2fd237b02458da3e63293717bef51"
+          },
+          {
+            "annotations": [
+              {
+                "glyph_id": "glyph-cuahuitl-mdz7v",
+                "note": "La referencia es un árbol separado de Cuauhnahuac, Mendoza 7v. No identifica la especie ni representa los árboles de este relato.",
+                "quote": "cuahuitl",
+                "relation": "full_word",
+                "sense_id": "sense-cuahuitl"
+              }
+            ],
+            "archive_id": "axolotl-11726",
+            "comprehension": {
+              "answer": 2,
+              "explanation": "La traducción de origen dice «entre las piedras, entre los árboles». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+              "kind": "meaning",
+              "options": [
+                "entre las casas, entre los caminos",
+                "entre las flores, entre los cantos",
+                "entre las piedras, entre los árboles"
+              ],
+              "question": "¿Qué lugares enumera la traducción?"
+            },
+            "context": "El pasaje presenta lugares posibles para acostarse, entre piedras y árboles, junto a una advertencia. Conserva la posibilidad expresada en español.",
+            "exercise": {
+              "answer": 2,
+              "blank": "cuahuitl",
+              "explanation": "El registro escribe «cuahuitl». «xochicuahuitl» significa «árbol florido». «calli» significa «casa». Consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "xochicuahuitl",
+                "calli",
+                "cuahuitl"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "source_hash": "cd05e51c5b5130e9b1b9a5796e281bc3489e8bcde6403ad61032b2555bda1247"
+          },
+          {
+            "annotations": [
+              {
+                "glyph_id": "glyph-tepetl-mdz32r",
+                "note": "La referencia es un cerro extraído de Ocotepec, Mendoza 32r. No representa el cerro nombrado en este fragmento.",
+                "quote": "tepetl",
+                "relation": "full_word",
+                "sense_id": "sense-tepetl"
+              }
+            ],
+            "archive_id": "axolotl-13930",
+            "comprehension": {
+              "answer": 0,
+              "explanation": "La traducción de origen dice «sobre el cerro». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+              "kind": "meaning",
+              "options": [
+                "sobre el cerro",
+                "junto al río",
+                "dentro de la cueva"
+              ],
+              "question": "¿Dónde encendieron su fuego?"
+            },
+            "context": "Se narra el encendido de fuego sobre un cerro y se explica el nombre Tonallitlatlayan. No se analiza ese nombre por subcadenas.",
+            "exercise": {
+              "answer": 0,
+              "blank": "tepetl",
+              "explanation": "El registro escribe «tepetl». «itepetzin» (i-tepe-tzin) tiene la misma raíz con otros afijos. «tlalli» significa «tierra». Consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "tepetl",
+                "itepetzin",
+                "tlalli"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "source_hash": "684e62529589f2a5cad910650bcb8a84615352a2573f6cd32f178ea4991993e1"
+          }
+        ],
+        "id": "arboles-cerros",
+        "minutes": 8,
+        "objective": "Reconocer quauitl, cuahuitl y tepetl al leer un camino, árboles arrastrados y un lugar de asentamiento.",
+        "practice_version": 2,
+        "reading_tips": [
+          "Verás quauitl y cuahuitl: son dos maneras de escribir la misma palabra en documentos distintos. No es una regla para cambiar letras en otras palabras.",
+          "Los nombres de lugar se dejan completos. La imagen de un cerro viene de otro documento: no muestra este lugar."
+        ],
+        "sense_ids": [
+          "sense-cuahuitl",
+          "sense-tepetl"
+        ],
+        "title": "Árboles, señales y cerros",
+        "version": 2
+      },
+      {
+        "cover_glyph": "glyph-tletl-mdz13r",
+        "examples": [
+          {
+            "annotations": [
+              {
+                "glyph_id": "glyph-tletl-mdz13r",
+                "note": "La referencia es una llama de una escena de conquista, Mendoza 13r, clasificada como iconografía. No escribe la oración ni ilustra el rito descrito aquí.",
+                "quote": "tletl",
+                "relation": "full_word",
+                "sense_id": "sense-tletl"
+              }
+            ],
+            "archive_id": "axolotl-05345",
+            "comprehension": {
+              "answer": 0,
+              "explanation": "La traducción de origen dice «cuatro días». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+              "kind": "meaning",
+              "options": [
+                "cuatro días",
+                "cinco días",
+                "cuatro años"
+              ],
+              "question": "¿Cuánto tiempo mantuvo ardiendo el fuego?"
+            },
+            "context": "Ixcuecuénotl mantiene un fuego nuevo encendido en Tepantonco; el pasaje también contiene un año calendárico que no se anota como animal.",
+            "exercise": {
+              "answer": 0,
+              "blank": "tletl",
+              "explanation": "El registro escribe «tletl». «ehecatl» significa «viento». «atl» significa «agua». Consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "tletl",
+                "ehecatl",
+                "atl"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "source_hash": "fe2af3b97118054c04a68b9bdd9074eee9097478bb67cae076073b01e25b8a76"
+          },
+          {
+            "annotations": [
+              {
+                "glyph_id": "glyph-tletl-mdz13r",
+                "note": "La referencia es una llama de una escena de conquista, Mendoza 13r, clasificada como iconografía. No escribe la oración ni ilustra el rito descrito aquí.",
+                "quote": "tletl",
+                "relation": "full_word",
+                "sense_id": "sense-tletl"
+              }
+            ],
+            "archive_id": "axolotl-06073",
+            "comprehension": {
+              "answer": 1,
+              "explanation": "La traducción de origen dice «hacen la imagen del fuego». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+              "kind": "meaning",
+              "options": [
+                "hacen la imagen del agua",
+                "hacen la imagen del fuego",
+                "hacen la imagen del sol"
+              ],
+              "question": "¿Qué hacen al pintar el papel?"
+            },
+            "context": "El relato describe el dibujo de una figura en papel como imagen del fuego, no una llama material.",
+            "exercise": {
+              "answer": 1,
+              "blank": "tletl",
+              "explanation": "El registro escribe «tletl». «ehecatl» significa «viento». «atl» significa «agua». Consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "ehecatl",
+                "tletl",
+                "atl"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "source_hash": "a5d507ef40d9fa21ac2e2c6a4458858921661de56fb758615839a92ef6195ec5"
+          },
+          {
+            "annotations": [
+              {
+                "glyph_id": "glyph-ehecatl-mdz12r",
+                "note": "La referencia muestra una cabeza asociada a Ehecatl en Ecatepec, Mendoza 12r; la ficha se titula Ecatl y discute esa relación. Se usa para comparar el referente viento; no es la imagen de este pasaje.",
+                "quote": "ehecatl",
+                "relation": "full_word",
+                "sense_id": "sense-ehecatl"
+              }
+            ],
+            "archive_id": "axolotl-03579",
+            "comprehension": {
+              "answer": 2,
+              "explanation": "La traducción de origen dice «sed y de hambre». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+              "kind": "meaning",
+              "options": [
+                "frío y de cansancio",
+                "miedo y de tristeza",
+                "sed y de hambre"
+              ],
+              "question": "¿Qué casi hace perecer a uno en este lugar?"
+            },
+            "context": "La traducción menciona el ardor del sol y del viento junto a sed y hambre. Conserva ese conjunto de afirmaciones.",
+            "exercise": {
+              "answer": 2,
+              "blank": "ehecatl",
+              "explanation": "El registro escribe «ehecatl». «iehecatzin» (i-eheca-tzin) tiene la misma raíz con otros afijos. «tletl» significa «fuego». Consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "iehecatzin",
+                "tletl",
+                "ehecatl"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "source_hash": "ab26c0802557289b1510e6bc534f740b73b6a20acea1f9bf3bd8e56eba145f14"
+          },
+          {
+            "annotations": [
+              {
+                "glyph_id": "glyph-ehecatl-mdz12r",
+                "note": "La referencia muestra una cabeza asociada a Ehecatl en Ecatepec, Mendoza 12r; la ficha se titula Ecatl y discute esa relación. Se usa para comparar el referente viento; no es la imagen de este pasaje.",
+                "quote": "ehecatl",
+                "relation": "full_word",
+                "sense_id": "sense-ehecatl"
+              }
+            ],
+            "archive_id": "axolotl-10466",
+            "comprehension": {
+              "answer": 0,
+              "explanation": "La traducción de origen dice «como de obsidianas». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+              "kind": "meaning",
+              "options": [
+                "como de obsidianas",
+                "como de plumas",
+                "como de flores"
+              ],
+              "question": "¿Con qué compara el pasaje el viento?"
+            },
+            "context": "El pasaje compara el viento con obsidianas en una descripción de llanto y abatimiento. No sustituimos la comparación por una definición del viento.",
+            "exercise": {
+              "answer": 0,
+              "blank": "ehecatl",
+              "explanation": "El registro escribe «ehecatl». «iehecatzin» (i-eheca-tzin) tiene la misma raíz con otros afijos. «tletl» significa «fuego». Consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "ehecatl",
+                "iehecatzin",
+                "tletl"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "source_hash": "ec4dc5237883a56007b77418f712d69075c8689a72b5cd209e5560fdd1714fd0"
+          }
+        ],
+        "id": "fuego-viento",
+        "minutes": 8,
+        "objective": "Reconocer tletl y ehecatl en acciones y descripciones, conservando el alcance ritual o figurado de cada pasaje.",
+        "practice_version": 2,
+        "reading_tips": [
+          "En un fragmento se pinta el fuego en papel; en otro se mantiene un fuego encendido. Son dos cosas distintas.",
+          "Ehecatl es «viento» y también el nombre de un dios. Lee el contexto: no cada viento es el dios."
+        ],
+        "sense_ids": [
+          "sense-tletl",
+          "sense-ehecatl"
+        ],
+        "title": "Un fuego y dos contextos del viento",
+        "version": 2
+      },
+      {
+        "cover_glyph": "glyph-tonatiuh-mdz34r",
+        "examples": [
+          {
+            "annotations": [
+              {
+                "glyph_id": "glyph-tonatiuh-mdz34r",
+                "note": "La referencia es un disco solar, Mendoza 34r, usado también en Tonatiuhco. No representa este eclipse, rumbo o relato de creación.",
+                "quote": "tonatiuh",
+                "relation": "full_word",
+                "sense_id": "sense-tonatiuh"
+              }
+            ],
+            "archive_id": "axolotl-02027",
+            "comprehension": {
+              "answer": 0,
+              "explanation": "La traducción de origen dice «las estrellas». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+              "kind": "meaning",
+              "options": [
+                "las estrellas",
+                "las nubes",
+                "el arcoíris"
+              ],
+              "question": "¿Qué se vio durante el eclipse?"
+            },
+            "context": "Un relato registra un eclipse de sol y la aparición de estrellas. La anotación no cambia cicitlaltin por otra forma.",
+            "exercise": {
+              "answer": 0,
+              "blank": "tonatiuh",
+              "explanation": "El registro escribe «tonatiuh». «itonatiuh» (i-tonatiuh) tiene la misma raíz con otros afijos. «metztli» significa «luna». Consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "tonatiuh",
+                "itonatiuh",
+                "metztli"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "source_hash": "5ea4916ee340fe3f17c095963ef41add17dcc4e1492c542950f58b9d6bff9b9f"
+          },
+          {
+            "annotations": [
+              {
+                "glyph_id": "glyph-tonatiuh-mdz34r",
+                "note": "La referencia es un disco solar, Mendoza 34r, usado también en Tonatiuhco. No representa este eclipse, rumbo o relato de creación.",
+                "quote": "tonatiuh",
+                "relation": "full_word",
+                "sense_id": "sense-tonatiuh"
+              }
+            ],
+            "archive_id": "axolotl-04888",
+            "comprehension": {
+              "answer": 1,
+              "explanation": "La traducción de origen dice «hacia la salida del sol». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+              "kind": "meaning",
+              "options": [
+                "hacia la puesta del sol",
+                "hacia la salida del sol",
+                "hacia el rumbo del norte"
+              ],
+              "question": "¿Hacia dónde se realiza la acción?"
+            },
+            "context": "El pasaje describe una acción hacia la salida del sol y conserva el nombre español del rumbo.",
+            "exercise": {
+              "answer": 1,
+              "blank": "tonatiuh",
+              "explanation": "El registro escribe «tonatiuh». «itonatiuh» (i-tonatiuh) tiene la misma raíz con otros afijos. «metztli» significa «luna». Consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "itonatiuh",
+                "tonatiuh",
+                "metztli"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "source_hash": "c003105c5070af362db9c446dfea17d46183a65606e94b094c60c72a621f49ed"
+          },
+          {
+            "annotations": [
+              {
+                "glyph_id": "glyph-metztli-fcbk11f214v",
+                "note": "La referencia es un elemento lunar separado de Temetztli, Florentino libro 11, 214v. Aquí se consulta Luna por el contexto; no se extrapola a la acepción mes.",
+                "quote": "metztli",
+                "relation": "full_word",
+                "sense_id": "sense-metztli"
+              }
+            ],
+            "archive_id": "axolotl-09427",
+            "comprehension": {
+              "answer": 2,
+              "explanation": "La traducción de origen dice «en el primer cielo». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+              "kind": "meaning",
+              "options": [
+                "en el octavo cielo",
+                "en el cuarto cielo",
+                "en el primer cielo"
+              ],
+              "question": "¿Dónde sitúa a la Luna?"
+            },
+            "context": "El relato cristiano de creación sitúa estrellas, Luna y Sol en distintos cielos. Es la distribución que afirma este fragmento, no una explicación astronómica.",
+            "exercise": {
+              "answer": 2,
+              "blank": "metztli",
+              "explanation": "El registro escribe «metztli». «imetzpan» (i-metz-pan) tiene la misma raíz con otros afijos. «citlalin» significa «estrella». Consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "imetzpan",
+                "citlalin",
+                "metztli"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "source_hash": "f166961b52412c33408bcd578cda8b5d8e3ff3b894861c66330b650d1d329be9"
+          },
+          {
+            "annotations": [
+              {
+                "glyph_id": "glyph-metztli-fcbk11f214v",
+                "note": "La referencia es un elemento lunar separado de Temetztli, Florentino libro 11, 214v. Aquí se consulta Luna por el contexto; no se extrapola a la acepción mes.",
+                "quote": "metztli",
+                "relation": "full_word",
+                "sense_id": "sense-metztli"
+              }
+            ],
+            "archive_id": "axolotl-14327",
+            "comprehension": {
+              "answer": 0,
+              "explanation": "La traducción de origen dice «durante la noche». Comprueba la respuesta en este fragmento completo; no se propone una traducción nueva.",
+              "kind": "meaning",
+              "options": [
+                "durante la noche",
+                "durante el día",
+                "al amanecer"
+              ],
+              "question": "¿Cuándo dice que alumbra la Luna?"
+            },
+            "context": "El relato de creación distingue la gran luminaria solar de la pequeña lunar; conserva la traducción completa y su marco religioso.",
+            "exercise": {
+              "answer": 0,
+              "blank": "metztli",
+              "explanation": "El registro escribe «metztli». «imetzpan» (i-metz-pan) tiene la misma raíz con otros afijos. «metztitlan» (metz-titlan) tiene la misma raíz con otros afijos. Consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "metztli",
+                "imetzpan",
+                "metztitlan"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "source_hash": "89259691ca9dd8208b0a53975d70e2723ec5833acd36d74412f80decfca05b7f"
+          }
+        ],
+        "id": "sol-luna",
+        "minutes": 10,
+        "objective": "Reconocer tonatiuh y metztli como cuerpos celestes y comparar un eclipse, un rumbo y dos pasajes de creación.",
+        "practice_version": 2,
+        "reading_tips": [
+          "metztli puede significar «luna» o «mes». En estos fragmentos la traducción habla de la Luna.",
+          "Dos fragmentos cuentan la creación desde una mirada cristiana y son largos. Lee la traducción antes de responder dónde se colocan el Sol y la Luna."
+        ],
+        "sense_ids": [
+          "sense-tonatiuh",
+          "sense-metztli"
+        ],
+        "title": "El Sol y la Luna en los relatos",
+        "version": 2
+      },
+      {
+        "cover_glyph": "glyph-tepetl-mdz32r",
+        "examples": [
+          {
+            "annotations": [
+              {
+                "note": "Palabra completa registrada en el diccionario: tepetl «cerro». La traducción del registro dice «cerros». Ayuda generada automáticamente; pendiente de revisión.",
+                "quote": "tepetl",
+                "relation": "full_word",
+                "sense_id": "sense-tepetl"
+              },
+              {
+                "note": "Palabra completa registrada en el diccionario: calli «casa». Ayuda generada automáticamente; pendiente de revisión.",
+                "quote": "calli",
+                "relation": "full_word",
+                "sense_id": "sense-calli"
+              }
+            ],
+            "archive_id": "axolotl-15030",
+            "comprehension": {
+              "answer": 1,
+              "explanation": "La traducción del archivo dice «cerros». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+              "kind": "meaning",
+              "options": [
+                "canto",
+                "cerros",
+                "agua"
+              ],
+              "question": "¿Qué palabra de la traducción corresponde a «tepetl»?"
+            },
+            "context": "Pasaje breve de Tercera Relación (Libro las ocho relaciones), elegido automáticamente porque reúne tepetl con 3 raíces del diccionario. Contexto pendiente de revisión.",
+            "exercise": {
+              "answer": 0,
+              "blank": "tepetl",
+              "explanation": "El registro escribe «tepetl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "tepetl",
+                "atl",
+                "calli"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "explore_words": [
+              "tepetl"
+            ],
+            "source_hash": "e7487c5ad22191da18d5fa63339313700fc582f1c6da0e8f5b9cc8bf5e071493"
+          },
+          {
+            "annotations": [
+              {
+                "note": "Palabra completa registrada en el diccionario: tepetl «cerro». La traducción del registro dice «montaña». Ayuda generada automáticamente; pendiente de revisión.",
+                "quote": "tepetl",
+                "relation": "full_word",
+                "sense_id": "sense-tepetl"
+              }
+            ],
+            "archive_id": "axolotl-05538",
+            "comprehension": {
+              "answer": 0,
+              "explanation": "La traducción del archivo dice «montaña». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+              "kind": "meaning",
+              "options": [
+                "montaña",
+                "tierra",
+                "casa"
+              ],
+              "question": "¿Qué palabra de la traducción corresponde a «tepetl»?"
+            },
+            "context": "Pasaje breve de La tinta negra y roja (antología de poesía náhuatl), elegido automáticamente porque reúne tepetl con 4 raíces del diccionario. Contexto pendiente de revisión.",
+            "exercise": {
+              "answer": 1,
+              "blank": "tepetl",
+              "explanation": "El registro escribe «tepetl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "calli",
+                "tepetl",
+                "cuicatl"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "explore_words": [
+              "tepetl"
+            ],
+            "source_hash": "84add3f7524ef408363a81af33f3dfaf306cb6b34f0c92be274eeea1080a0263"
+          },
+          {
+            "annotations": [
+              {
+                "note": "Palabra completa registrada en el diccionario: tepetl «cerro». La traducción del registro dice «cerros». Ayuda generada automáticamente; pendiente de revisión.",
+                "quote": "tepetl",
+                "relation": "full_word",
+                "sense_id": "sense-tepetl"
+              }
+            ],
+            "archive_id": "axolotl-01443",
+            "comprehension": {
+              "answer": 0,
+              "explanation": "La traducción del archivo dice «cerros». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+              "kind": "meaning",
+              "options": [
+                "cerros",
+                "casa",
+                "agua"
+              ],
+              "question": "¿Qué palabra de la traducción corresponde a «tepetl»?"
+            },
+            "context": "Pasaje breve de Vida económica de Tenochtitlan, elegido automáticamente porque reúne tepetl con 4 raíces del diccionario. Contexto pendiente de revisión.",
+            "exercise": {
+              "answer": 2,
+              "blank": "tepetl",
+              "explanation": "El registro escribe «tepetl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "cuicatl",
+                "tlalli",
+                "tepetl"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "explore_words": [
+              "tepetl"
+            ],
+            "source_hash": "ce964efc50d7c863049f8cc3302d15d5fede6918c8b6698e784bbcbe949f4f64"
+          },
+          {
+            "annotations": [
+              {
+                "note": "Palabra completa registrada en el diccionario: tepetl «cerro». La traducción del registro dice «cerro». Ayuda generada automáticamente; pendiente de revisión.",
+                "quote": "tepetl",
+                "relation": "full_word",
+                "sense_id": "sense-tepetl"
+              }
+            ],
+            "archive_id": "axolotl-05025",
+            "comprehension": {
+              "answer": 1,
+              "explanation": "La traducción del archivo dice «cerro». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+              "kind": "meaning",
+              "options": [
+                "agua",
+                "cerro",
+                "casa"
+              ],
+              "question": "¿Qué palabra de la traducción corresponde a «tepetl»?"
+            },
+            "context": "Pasaje breve de Tercera Relación (Libro las ocho relaciones), elegido automáticamente porque reúne tepetl con 1 raíces del diccionario. Contexto pendiente de revisión.",
+            "exercise": {
+              "answer": 0,
+              "blank": "tepetl",
+              "explanation": "El registro escribe «tepetl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "tepetl",
+                "tlalli",
+                "tonatiuh"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "explore_words": [
+              "tepetl"
+            ],
+            "source_hash": "f0be36bb4f897bcf86dbd79f3fb7aa9c34b9f634e7f60e7ba45dd9ced4518d3f"
+          }
+        ],
+        "id": "gen-tepetl",
+        "minutes": 6,
+        "objective": "Leer tepetl «cerro» en cuatro pasajes breves que aún no estaban en las lecturas; cada uno la reúne con otras palabras del diccionario.",
+        "reading_tips": [
+          "Busca tepetl como palabra completa; el diccionario la registra como «cerro».",
+          "Las ayudas de esta lectura se generaron automáticamente desde el archivo y el analizador; están pendientes de revisión."
+        ],
+        "sense_ids": [
+          "sense-tepetl"
+        ],
+        "title": "Más pasajes con tepetl",
+        "version": 1
+      },
+      {
+        "cover_glyph": "glyph-calli",
+        "examples": [
+          {
+            "annotations": [
+              {
+                "note": "Palabra completa registrada en el diccionario: calli «casa». La traducción del registro dice «Casa». Ayuda generada automáticamente; pendiente de revisión.",
+                "quote": "calli",
+                "relation": "full_word",
+                "sense_id": "sense-calli"
+              }
+            ],
+            "archive_id": "axolotl-09353",
+            "comprehension": {
+              "answer": 2,
+              "explanation": "La traducción del archivo dice «Casa». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+              "kind": "meaning",
+              "options": [
+                "agua",
+                "canto",
+                "Casa"
+              ],
+              "question": "¿Qué palabra de la traducción corresponde a «calli»?"
+            },
+            "context": "Pasaje breve de La tinta negra y roja (antología de poesía náhuatl), elegido automáticamente porque reúne calli con 6 raíces del diccionario. Contexto pendiente de revisión.",
+            "exercise": {
+              "answer": 0,
+              "blank": "calli",
+              "explanation": "El registro escribe «calli». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "calli",
+                "atl",
+                "cuicatl"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "explore_words": [
+              "calli"
+            ],
+            "source_hash": "4fc09253eaa2df2d28e1839a9b9af342c7fc573068112be546bd187c4fe5b776"
+          },
+          {
+            "annotations": [
+              {
+                "note": "Palabra completa registrada en el diccionario: calli «casa». La traducción del registro dice «Casa». Ayuda generada automáticamente; pendiente de revisión.",
+                "quote": "Calli",
+                "relation": "full_word",
+                "sense_id": "sense-calli"
+              }
+            ],
+            "archive_id": "axolotl-07681",
+            "comprehension": {
+              "answer": 2,
+              "explanation": "La traducción del archivo dice «Casa». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+              "kind": "meaning",
+              "options": [
+                "canto",
+                "agua",
+                "Casa"
+              ],
+              "question": "¿Qué palabra de la traducción corresponde a «Calli»?"
+            },
+            "context": "Pasaje breve de Vida económica de Tenochtitlan, elegido automáticamente porque reúne calli con 5 raíces del diccionario. Contexto pendiente de revisión.",
+            "exercise": {
+              "answer": 1,
+              "blank": "Calli",
+              "explanation": "El registro escribe «Calli». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "Cuicatl",
+                "Calli",
+                "Tepetl"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "explore_words": [
+              "Calli"
+            ],
+            "source_hash": "8009592e40258b0b9ea53c0d6874faa87ebe39795b972f0002093fc60f5e5018"
+          },
+          {
+            "annotations": [
+              {
+                "note": "Palabra completa registrada en el diccionario: calli «casa». La traducción del registro dice «casa». Ayuda generada automáticamente; pendiente de revisión.",
+                "quote": "calli",
+                "relation": "full_word",
+                "sense_id": "sense-calli"
+              },
+              {
+                "note": "Palabra completa registrada en el diccionario: tonatiuh «sol». Ayuda generada automáticamente; pendiente de revisión.",
+                "quote": "tonatiuh",
+                "relation": "full_word",
+                "sense_id": "sense-tonatiuh"
+              },
+              {
+                "note": "Palabra completa registrada en el diccionario: tonatiuh «sol». Ayuda generada automáticamente; pendiente de revisión.",
+                "quote": "tonatiuh",
+                "relation": "full_word",
+                "sense_id": "sense-tonatiuh"
+              }
+            ],
+            "archive_id": "axolotl-06117",
+            "comprehension": {
+              "answer": 1,
+              "explanation": "La traducción del archivo dice «casa». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+              "kind": "meaning",
+              "options": [
+                "canto",
+                "casa",
+                "agua"
+              ],
+              "question": "¿Qué palabra de la traducción corresponde a «calli»?"
+            },
+            "context": "Pasaje breve de Documentos nauas de la Ciudad de México del siglo XVI, elegido automáticamente porque reúne calli con 3 raíces del diccionario. Contexto pendiente de revisión.",
+            "exercise": {
+              "answer": 2,
+              "blank": "calli",
+              "explanation": "El registro escribe «calli». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "tepetl",
+                "tlalli",
+                "calli"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "explore_words": [
+              "calli"
+            ],
+            "source_hash": "2c0bef02beefbddf1b007a6692dc91df3e6a04c7b5c25427a16a4b9c12403619"
+          },
+          {
+            "annotations": [
+              {
+                "note": "Palabra completa registrada en el diccionario: calli «casa». La traducción del registro dice «casa». Ayuda generada automáticamente; pendiente de revisión.",
+                "quote": "calli",
+                "relation": "full_word",
+                "sense_id": "sense-calli"
+              }
+            ],
+            "archive_id": "axolotl-04818",
+            "comprehension": {
+              "answer": 0,
+              "explanation": "La traducción del archivo dice «casa». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+              "kind": "meaning",
+              "options": [
+                "casa",
+                "agua",
+                "canto"
+              ],
+              "question": "¿Qué palabra de la traducción corresponde a «calli»?"
+            },
+            "context": "Pasaje breve de Documentos nauas de la Ciudad de México del siglo XVI, elegido automáticamente porque reúne calli con 5 raíces del diccionario. Contexto pendiente de revisión.",
+            "exercise": {
+              "answer": 0,
+              "blank": "calli",
+              "explanation": "El registro escribe «calli». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "calli",
+                "tlalli",
+                "tonatiuh"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "explore_words": [
+              "calli"
+            ],
+            "source_hash": "eeb77d47eee597c691cfc87a5325368ef8dad9e9c4fb0d7e95ba5df72ad3b0e1"
+          }
+        ],
+        "id": "gen-calli",
+        "minutes": 6,
+        "objective": "Leer calli «casa» en cuatro pasajes breves que aún no estaban en las lecturas; cada uno la reúne con otras palabras del diccionario.",
+        "reading_tips": [
+          "Busca calli como palabra completa; el diccionario la registra como «casa».",
+          "Las ayudas de esta lectura se generaron automáticamente desde el archivo y el analizador; están pendientes de revisión."
+        ],
+        "sense_ids": [
+          "sense-calli"
+        ],
+        "title": "Más pasajes con calli",
+        "version": 1
+      },
+      {
+        "cover_glyph": "glyph-atl",
+        "examples": [
+          {
+            "annotations": [
+              {
+                "note": "Palabra completa registrada en el diccionario: atl «agua». La traducción del registro dice «agua». Ayuda generada automáticamente; pendiente de revisión.",
+                "quote": "atl",
+                "relation": "full_word",
+                "sense_id": "sense-atl"
+              }
+            ],
+            "archive_id": "axolotl-12053",
+            "comprehension": {
+              "answer": 1,
+              "explanation": "La traducción del archivo dice «agua». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+              "kind": "meaning",
+              "options": [
+                "casa",
+                "agua",
+                "canto"
+              ],
+              "question": "¿Qué palabra de la traducción corresponde a «atl»?"
+            },
+            "context": "Pasaje breve de Vida económica de Tenochtitlan, elegido automáticamente porque reúne atl con 9 raíces del diccionario. Contexto pendiente de revisión.",
+            "exercise": {
+              "answer": 0,
+              "blank": "atl",
+              "explanation": "El registro escribe «atl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "atl",
+                "calli",
+                "cuicatl"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "explore_words": [
+              "atl"
+            ],
+            "source_hash": "438f7daba956eb225a5dbc6bebde2381795dd7be6f78ba09c38dee58464a116a"
+          },
+          {
+            "annotations": [
+              {
+                "note": "Palabra completa registrada en el diccionario: calli «casa». Ayuda generada automáticamente; pendiente de revisión.",
+                "quote": "Calli",
+                "relation": "full_word",
+                "sense_id": "sense-calli"
+              },
+              {
+                "note": "Palabra completa registrada en el diccionario: atl «agua». La traducción del registro dice «agua». Ayuda generada automáticamente; pendiente de revisión.",
+                "quote": "atl",
+                "relation": "full_word",
+                "sense_id": "sense-atl"
+              }
+            ],
+            "archive_id": "axolotl-08258",
+            "comprehension": {
+              "answer": 0,
+              "explanation": "La traducción del archivo dice «agua». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+              "kind": "meaning",
+              "options": [
+                "agua",
+                "canto",
+                "casa"
+              ],
+              "question": "¿Qué palabra de la traducción corresponde a «atl»?"
+            },
+            "context": "Pasaje breve de Anales de Tlatelolco, elegido automáticamente porque reúne atl con 5 raíces del diccionario. Contexto pendiente de revisión.",
+            "exercise": {
+              "answer": 1,
+              "blank": "atl",
+              "explanation": "El registro escribe «atl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "cuicatl",
+                "atl",
+                "tepetl"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "explore_words": [
+              "atl"
+            ],
+            "source_hash": "4b19fe18fae305cbfa86da0a771930a3f76b4b54e905312daf3d039a1dadda35"
+          },
+          {
+            "annotations": [
+              {
+                "note": "Palabra completa registrada en el diccionario: atl «agua». La traducción del registro dice «agua». Ayuda generada automáticamente; pendiente de revisión.",
+                "quote": "atl",
+                "relation": "full_word",
+                "sense_id": "sense-atl"
+              }
+            ],
+            "archive_id": "axolotl-07232",
+            "comprehension": {
+              "answer": 2,
+              "explanation": "La traducción del archivo dice «agua». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+              "kind": "meaning",
+              "options": [
+                "casa",
+                "canto",
+                "agua"
+              ],
+              "question": "¿Qué palabra de la traducción corresponde a «atl»?"
+            },
+            "context": "Pasaje breve de Veinte himnos sacros de los Nahuas, elegido automáticamente porque reúne atl con 7 raíces del diccionario. Contexto pendiente de revisión.",
+            "exercise": {
+              "answer": 2,
+              "blank": "atl",
+              "explanation": "El registro escribe «atl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "tepetl",
+                "tlalli",
+                "atl"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "explore_words": [
+              "atl"
+            ],
+            "source_hash": "72d2d20080dcb68294044365fb5ce9c455f8d5176f5874b5851322184a06d3fd"
+          },
+          {
+            "annotations": [
+              {
+                "note": "Palabra completa registrada en el diccionario: atl «agua». La traducción del registro dice «Agua». Ayuda generada automáticamente; pendiente de revisión.",
+                "quote": "Atl",
+                "relation": "full_word",
+                "sense_id": "sense-atl"
+              }
+            ],
+            "archive_id": "axolotl-04966",
+            "comprehension": {
+              "answer": 0,
+              "explanation": "La traducción del archivo dice «Agua». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+              "kind": "meaning",
+              "options": [
+                "Agua",
+                "canto",
+                "casa"
+              ],
+              "question": "¿Qué palabra de la traducción corresponde a «Atl»?"
+            },
+            "context": "Pasaje breve de Veinte himnos sacros de los Nahuas, elegido automáticamente porque reúne atl con 7 raíces del diccionario. Contexto pendiente de revisión.",
+            "exercise": {
+              "answer": 0,
+              "blank": "Atl",
+              "explanation": "El registro escribe «Atl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "Atl",
+                "Tlalli",
+                "Tonatiuh"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "explore_words": [
+              "Atl"
+            ],
+            "source_hash": "051d2ee6a4bd7acb16b33732639ccb8e93ddc93a55358dd9bafd60199f228476"
+          }
+        ],
+        "id": "gen-atl",
+        "minutes": 6,
+        "objective": "Leer atl «agua» en cuatro pasajes breves que aún no estaban en las lecturas; cada uno la reúne con otras palabras del diccionario.",
+        "reading_tips": [
+          "Busca atl como palabra completa; el diccionario la registra como «agua».",
+          "Las ayudas de esta lectura se generaron automáticamente desde el archivo y el analizador; están pendientes de revisión."
+        ],
+        "sense_ids": [
+          "sense-atl"
+        ],
+        "title": "Más pasajes con atl",
+        "version": 1
+      },
+      {
+        "cover_glyph": "glyph-tlalli-mdz32r",
+        "examples": [
+          {
+            "annotations": [
+              {
+                "note": "Palabra completa registrada en el diccionario: calli «casa». Ayuda generada automáticamente; pendiente de revisión.",
+                "quote": "Calli",
+                "relation": "full_word",
+                "sense_id": "sense-calli"
+              },
+              {
+                "note": "Palabra completa registrada en el diccionario: tlalli «tierra». La traducción del registro dice «tierra». Ayuda generada automáticamente; pendiente de revisión.",
+                "quote": "tlalli",
+                "relation": "full_word",
+                "sense_id": "sense-tlalli"
+              }
+            ],
+            "archive_id": "axolotl-12752",
+            "comprehension": {
+              "answer": 2,
+              "explanation": "La traducción del archivo dice «tierra». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+              "kind": "meaning",
+              "options": [
+                "agua",
+                "casa",
+                "tierra"
+              ],
+              "question": "¿Qué palabra de la traducción corresponde a «tlalli»?"
+            },
+            "context": "Pasaje breve de Anales de Tlatelolco, elegido automáticamente porque reúne tlalli con 5 raíces del diccionario. Contexto pendiente de revisión.",
+            "exercise": {
+              "answer": 0,
+              "blank": "tlalli",
+              "explanation": "El registro escribe «tlalli». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "tlalli",
+                "atl",
+                "calli"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "explore_words": [
+              "tlalli"
+            ],
+            "source_hash": "c42643911fbb5ad0dbcf9b1d96e8dc256cd5bea4199ed1b3337b190d17cb067b"
+          },
+          {
+            "annotations": [
+              {
+                "note": "Palabra completa registrada en el diccionario: tonatiuh «sol». Ayuda generada automáticamente; pendiente de revisión.",
+                "quote": "tonatiuh",
+                "relation": "full_word",
+                "sense_id": "sense-tonatiuh"
+              },
+              {
+                "note": "Palabra completa registrada en el diccionario: tlalli «tierra». La traducción del registro dice «tierra». Ayuda generada automáticamente; pendiente de revisión.",
+                "quote": "tlalli",
+                "relation": "full_word",
+                "sense_id": "sense-tlalli"
+              }
+            ],
+            "archive_id": "axolotl-02178",
+            "comprehension": {
+              "answer": 0,
+              "explanation": "La traducción del archivo dice «tierra». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+              "kind": "meaning",
+              "options": [
+                "tierra",
+                "casa",
+                "agua"
+              ],
+              "question": "¿Qué palabra de la traducción corresponde a «tlalli»?"
+            },
+            "context": "Pasaje breve de Vida económica de Tenochtitlan, elegido automáticamente porque reúne tlalli con 4 raíces del diccionario. Contexto pendiente de revisión.",
+            "exercise": {
+              "answer": 1,
+              "blank": "tlalli",
+              "explanation": "El registro escribe «tlalli». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "calli",
+                "tlalli",
+                "cuicatl"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "explore_words": [
+              "tlalli"
+            ],
+            "source_hash": "c5bcf7206af92b6e33d1bf3d20177dc4dc076bfe433f25882950257870b46001"
+          },
+          {
+            "annotations": [
+              {
+                "note": "Forma del pasaje con la raíz de tepetl «cerro»; el analizador propone tepe-titlan. Ayuda generada automáticamente; pendiente de revisión.",
+                "quote": "tepetitlan",
+                "relation": "observed_form",
+                "sense_id": "sense-tepetl"
+              },
+              {
+                "note": "Palabra completa registrada en el diccionario: tlalli «tierra». La traducción del registro dice «tierra». Ayuda generada automáticamente; pendiente de revisión.",
+                "quote": "Tlalli",
+                "relation": "full_word",
+                "sense_id": "sense-tlalli"
+              }
+            ],
+            "archive_id": "axolotl-12425",
+            "comprehension": {
+              "answer": 0,
+              "explanation": "La traducción del archivo dice «tierra». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+              "kind": "meaning",
+              "options": [
+                "tierra",
+                "agua",
+                "casa"
+              ],
+              "question": "¿Qué palabra de la traducción corresponde a «Tlalli»?"
+            },
+            "context": "Pasaje breve de Veinte himnos sacros de los Nahuas, elegido automáticamente porque reúne tlalli con 4 raíces del diccionario. Contexto pendiente de revisión.",
+            "exercise": {
+              "answer": 2,
+              "blank": "Tlalli",
+              "explanation": "El registro escribe «Tlalli». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "Cuicatl",
+                "Tepetl",
+                "Tlalli"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "explore_words": [
+              "Tlalli"
+            ],
+            "source_hash": "aa526cb698082d2b63131b703b058b9ae03397bf7e1b8245c91b1b8d4062ba0c"
+          },
+          {
+            "annotations": [
+              {
+                "note": "Palabra completa registrada en el diccionario: tlalli «tierra». La traducción del registro dice «tierras». Ayuda generada automáticamente; pendiente de revisión.",
+                "quote": "tlalli",
+                "relation": "full_word",
+                "sense_id": "sense-tlalli"
+              }
+            ],
+            "archive_id": "axolotl-02192",
+            "comprehension": {
+              "answer": 1,
+              "explanation": "La traducción del archivo dice «tierras». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+              "kind": "meaning",
+              "options": [
+                "casa",
+                "tierras",
+                "agua"
+              ],
+              "question": "¿Qué palabra de la traducción corresponde a «tlalli»?"
+            },
+            "context": "Pasaje breve de Tercera Relación (Libro las ocho relaciones), elegido automáticamente porque reúne tlalli con 5 raíces del diccionario. Contexto pendiente de revisión.",
+            "exercise": {
+              "answer": 0,
+              "blank": "tlalli",
+              "explanation": "El registro escribe «tlalli». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "tlalli",
+                "tepetl",
+                "tonatiuh"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "explore_words": [
+              "tlalli"
+            ],
+            "source_hash": "f672899eed3e88c692f646d4e8ff8842eafed3031133be71c837462fe4804d55"
+          }
+        ],
+        "id": "gen-tlalli",
+        "minutes": 6,
+        "objective": "Leer tlalli «tierra» en cuatro pasajes breves que aún no estaban en las lecturas; cada uno la reúne con otras palabras del diccionario.",
+        "reading_tips": [
+          "Busca tlalli como palabra completa; el diccionario la registra como «tierra».",
+          "Las ayudas de esta lectura se generaron automáticamente desde el archivo y el analizador; están pendientes de revisión."
+        ],
+        "sense_ids": [
+          "sense-tlalli"
+        ],
+        "title": "Más pasajes con tlalli",
+        "version": 1
+      },
+      {
+        "cover_glyph": "glyph-link-v7-sense-cuicatl",
+        "examples": [
+          {
+            "annotations": [
+              {
+                "note": "Palabra completa registrada en el diccionario: xochitl «flor». Ayuda generada automáticamente; pendiente de revisión.",
+                "quote": "xochitl",
+                "relation": "full_word",
+                "sense_id": "sense-xochitl"
+              },
+              {
+                "note": "Palabra completa registrada en el diccionario: cuicatl «canto». La traducción del registro dice «cantos». Ayuda generada automáticamente; pendiente de revisión.",
+                "quote": "cuicatl",
+                "relation": "full_word",
+                "sense_id": "sense-cuicatl"
+              }
+            ],
+            "archive_id": "axolotl-04343",
+            "comprehension": {
+              "answer": 0,
+              "explanation": "La traducción del archivo dice «cantos». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+              "kind": "meaning",
+              "options": [
+                "cantos",
+                "agua",
+                "casa"
+              ],
+              "question": "¿Qué palabra de la traducción corresponde a «cuicatl»?"
+            },
+            "context": "Pasaje breve de Trece Poetas del Mundo Azteca, elegido automáticamente porque reúne cuicatl con 6 raíces del diccionario. Contexto pendiente de revisión.",
+            "exercise": {
+              "answer": 0,
+              "blank": "cuicatl",
+              "explanation": "El registro escribe «cuicatl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "cuicatl",
+                "atl",
+                "calli"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "explore_words": [
+              "cuicatl"
+            ],
+            "source_hash": "97a73db11b1f1aedb74d4240e03ca5794cc6bbf761fde6bbc34c20b89fbf71c7"
+          },
+          {
+            "annotations": [
+              {
+                "note": "Palabra completa registrada en el diccionario: xochitl «flor». Ayuda generada automáticamente; pendiente de revisión.",
+                "quote": "xochitl",
+                "relation": "full_word",
+                "sense_id": "sense-xochitl"
+              },
+              {
+                "note": "Palabra completa registrada en el diccionario: cuicatl «canto». La traducción del registro dice «cantos». Ayuda generada automáticamente; pendiente de revisión.",
+                "quote": "cuicatl",
+                "relation": "full_word",
+                "sense_id": "sense-cuicatl"
+              }
+            ],
+            "archive_id": "axolotl-08907",
+            "comprehension": {
+              "answer": 1,
+              "explanation": "La traducción del archivo dice «cantos». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+              "kind": "meaning",
+              "options": [
+                "agua",
+                "cantos",
+                "cerro"
+              ],
+              "question": "¿Qué palabra de la traducción corresponde a «cuicatl»?"
+            },
+            "context": "Pasaje breve de Trece Poetas del Mundo Azteca, elegido automáticamente porque reúne cuicatl con 5 raíces del diccionario. Contexto pendiente de revisión.",
+            "exercise": {
+              "answer": 1,
+              "blank": "cuicatl",
+              "explanation": "El registro escribe «cuicatl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "calli",
+                "cuicatl",
+                "tepetl"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "explore_words": [
+              "cuicatl"
+            ],
+            "source_hash": "13c6cbaa4e8ae8cae660dc9cb4c1850cf5f3b347041f33a47ade2ee495dc15ea"
+          },
+          {
+            "annotations": [
+              {
+                "note": "Palabra completa registrada en el diccionario: cuicatl «canto». La traducción del registro dice «canto». Ayuda generada automáticamente; pendiente de revisión.",
+                "quote": "cuicatl",
+                "relation": "full_word",
+                "sense_id": "sense-cuicatl"
+              }
+            ],
+            "archive_id": "axolotl-03001",
+            "comprehension": {
+              "answer": 1,
+              "explanation": "La traducción del archivo dice «canto». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+              "kind": "meaning",
+              "options": [
+                "casa",
+                "canto",
+                "cerro"
+              ],
+              "question": "¿Qué palabra de la traducción corresponde a «cuicatl»?"
+            },
+            "context": "Pasaje breve de La tinta negra y roja (antología de poesía náhuatl), elegido automáticamente porque reúne cuicatl con 5 raíces del diccionario. Contexto pendiente de revisión.",
+            "exercise": {
+              "answer": 2,
+              "blank": "cuicatl",
+              "explanation": "El registro escribe «cuicatl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "tepetl",
+                "tlalli",
+                "cuicatl"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "explore_words": [
+              "cuicatl"
+            ],
+            "source_hash": "04686a437a3ba3c3c4fd227692b09ffa9794cf50e8b7f3750238f8250f756f02"
+          },
+          {
+            "annotations": [
+              {
+                "note": "Palabra completa registrada en el diccionario: cuicatl «canto». La traducción del registro dice «canto». Ayuda generada automáticamente; pendiente de revisión.",
+                "quote": "cuicatl",
+                "relation": "full_word",
+                "sense_id": "sense-cuicatl"
+              }
+            ],
+            "archive_id": "axolotl-01884",
+            "comprehension": {
+              "answer": 1,
+              "explanation": "La traducción del archivo dice «canto». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+              "kind": "meaning",
+              "options": [
+                "casa",
+                "canto",
+                "agua"
+              ],
+              "question": "¿Qué palabra de la traducción corresponde a «cuicatl»?"
+            },
+            "context": "Pasaje breve de Tercera Relación (Libro las ocho relaciones), elegido automáticamente porque reúne cuicatl con 4 raíces del diccionario. Contexto pendiente de revisión.",
+            "exercise": {
+              "answer": 0,
+              "blank": "cuicatl",
+              "explanation": "El registro escribe «cuicatl». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "cuicatl",
+                "tlalli",
+                "tonatiuh"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "explore_words": [
+              "cuicatl"
+            ],
+            "source_hash": "4614d323ad51d44aff33087971e46203e7552d9d35b4d188f411463829be5b23"
+          }
+        ],
+        "id": "gen-cuicatl",
+        "minutes": 6,
+        "objective": "Leer cuicatl «canto» en cuatro pasajes breves que aún no estaban en las lecturas; cada uno la reúne con otras palabras del diccionario.",
+        "reading_tips": [
+          "Busca cuicatl como palabra completa; el diccionario la registra como «canto».",
+          "Las ayudas de esta lectura se generaron automáticamente desde el archivo y el analizador; están pendientes de revisión."
+        ],
+        "sense_ids": [
+          "sense-cuicatl"
+        ],
+        "title": "Más pasajes con cuicatl",
+        "version": 1
+      },
+      {
+        "cover_glyph": "glyph-tonatiuh-mdz34r",
+        "examples": [
+          {
+            "annotations": [
+              {
+                "note": "Palabra completa registrada en el diccionario: tonatiuh «sol». La traducción del registro dice «Sol». Ayuda generada automáticamente; pendiente de revisión.",
+                "quote": "Tonatiuh",
+                "relation": "full_word",
+                "sense_id": "sense-tonatiuh"
+              },
+              {
+                "note": "Forma del pasaje con la raíz de ehecatl «viento»; el analizador propone eca-tl. Ayuda generada automáticamente; pendiente de revisión.",
+                "quote": "ecatl",
+                "relation": "observed_form",
+                "sense_id": "sense-ehecatl"
+              }
+            ],
+            "archive_id": "axolotl-07237",
+            "comprehension": {
+              "answer": 2,
+              "explanation": "La traducción del archivo dice «Sol». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+              "kind": "meaning",
+              "options": [
+                "agua",
+                "casa",
+                "Sol"
+              ],
+              "question": "¿Qué palabra de la traducción corresponde a «Tonatiuh»?"
+            },
+            "context": "Pasaje breve de La tinta negra y roja (antología de poesía náhuatl), elegido automáticamente porque reúne tonatiuh con 8 raíces del diccionario. Contexto pendiente de revisión.",
+            "exercise": {
+              "answer": 0,
+              "blank": "Tonatiuh",
+              "explanation": "El registro escribe «Tonatiuh». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "Tonatiuh",
+                "Atl",
+                "Calli"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "explore_words": [
+              "Tonatiuh"
+            ],
+            "source_hash": "5ff0bea8b1d016648116743a6ebb44a257362f10384396e7bbe03435c05b330f"
+          },
+          {
+            "annotations": [
+              {
+                "note": "Palabra completa registrada en el diccionario: tonatiuh «sol». La traducción del registro dice «Sol». Ayuda generada automáticamente; pendiente de revisión.",
+                "quote": "Tonatiuh",
+                "relation": "full_word",
+                "sense_id": "sense-tonatiuh"
+              }
+            ],
+            "archive_id": "axolotl-02237",
+            "comprehension": {
+              "answer": 0,
+              "explanation": "La traducción del archivo dice «Sol». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+              "kind": "meaning",
+              "options": [
+                "Sol",
+                "agua",
+                "casa"
+              ],
+              "question": "¿Qué palabra de la traducción corresponde a «Tonatiuh»?"
+            },
+            "context": "Pasaje breve de La tinta negra y roja (antología de poesía náhuatl), elegido automáticamente porque reúne tonatiuh con 6 raíces del diccionario. Contexto pendiente de revisión.",
+            "exercise": {
+              "answer": 1,
+              "blank": "Tonatiuh",
+              "explanation": "El registro escribe «Tonatiuh». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "Calli",
+                "Tonatiuh",
+                "Cuicatl"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "explore_words": [
+              "Tonatiuh"
+            ],
+            "source_hash": "f224fef40868b8f02130975ec26c74c07b0988bef851318617ee1764b59f4942"
+          },
+          {
+            "annotations": [
+              {
+                "note": "Palabra completa registrada en el diccionario: tonatiuh «sol». La traducción del registro dice «sol». Ayuda generada automáticamente; pendiente de revisión.",
+                "quote": "tonatiuh",
+                "relation": "full_word",
+                "sense_id": "sense-tonatiuh"
+              }
+            ],
+            "archive_id": "axolotl-00536",
+            "comprehension": {
+              "answer": 1,
+              "explanation": "La traducción del archivo dice «sol». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+              "kind": "meaning",
+              "options": [
+                "casa",
+                "sol",
+                "agua"
+              ],
+              "question": "¿Qué palabra de la traducción corresponde a «tonatiuh»?"
+            },
+            "context": "Pasaje breve de Vida económica de Tenochtitlan, elegido automáticamente porque reúne tonatiuh con 5 raíces del diccionario. Contexto pendiente de revisión.",
+            "exercise": {
+              "answer": 2,
+              "blank": "tonatiuh",
+              "explanation": "El registro escribe «tonatiuh». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "cuicatl",
+                "tepetl",
+                "tonatiuh"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "explore_words": [
+              "tonatiuh"
+            ],
+            "source_hash": "90dedfea388e67c87b7fa5dfa9b448c524e741b0942c86cbfd3a29593b7eab59"
+          },
+          {
+            "annotations": [
+              {
+                "note": "Palabra completa registrada en el diccionario: tonatiuh «sol». La traducción del registro dice «sol». Ayuda generada automáticamente; pendiente de revisión.",
+                "quote": "tonatiuh",
+                "relation": "full_word",
+                "sense_id": "sense-tonatiuh"
+              }
+            ],
+            "archive_id": "axolotl-01929",
+            "comprehension": {
+              "answer": 2,
+              "explanation": "La traducción del archivo dice «sol». Comprobación automática de procedencia; la interpretación está pendiente de revisión.",
+              "kind": "meaning",
+              "options": [
+                "agua",
+                "casa",
+                "sol"
+              ],
+              "question": "¿Qué palabra de la traducción corresponde a «tonatiuh»?"
+            },
+            "context": "Pasaje breve de Vida económica de Tenochtitlan, elegido automáticamente porque reúne tonatiuh con 5 raíces del diccionario. Contexto pendiente de revisión.",
+            "exercise": {
+              "answer": 0,
+              "blank": "tonatiuh",
+              "explanation": "El registro escribe «tonatiuh». Recupera esa grafía exacta; consulta la traducción completa para situarla en su contexto.",
+              "kind": "cloze",
+              "options": [
+                "tonatiuh",
+                "tepetl",
+                "tlalli"
+              ],
+              "question": "Recupera la forma que aparece en el fragmento original."
+            },
+            "explore_words": [
+              "tonatiuh"
+            ],
+            "source_hash": "0510fc062148fce7c7076f9405ef41a28f34c92fd2aa593e1f373114c2b878ba"
+          }
+        ],
+        "id": "gen-tonatiuh",
+        "minutes": 6,
+        "objective": "Leer tonatiuh «sol» en cuatro pasajes breves que aún no estaban en las lecturas; cada uno la reúne con otras palabras del diccionario.",
+        "reading_tips": [
+          "Busca tonatiuh como palabra completa; el diccionario la registra como «sol».",
+          "Las ayudas de esta lectura se generaron automáticamente desde el archivo y el analizador; están pendientes de revisión."
+        ],
+        "sense_ids": [
+          "sense-tonatiuh"
+        ],
+        "title": "Más pasajes con tonatiuh",
+        "version": 1
+      }
+    ],
+    "note": "Piloto editorial local. Traducciones heredadas de Axolotl y ayudas redactadas para la lectura; revisión lingüística y cotejo de páginas primarias pendientes.",
+    "review_status": "editorial_draft",
+    "schema_version": 1,
+    "source_id": "src-axolotl",
+    "variant": "nci",
+    "variant_label": "Náhuatl clásico",
+    "version": 1
+  },
+  "release_id": "lecturas-generadas-001",
+  "schema_version": 1,
+  "summary": {
+    "added_examples": 24,
+    "added_lessons": 6,
+    "clarified_lessons": [],
+    "examples": 72,
+    "lessons": 18,
+    "linguistic_certification": false,
+    "llm_calls": 0,
+    "network_requests": 0,
+    "original_passages_and_answers_preserved": true,
+    "original_passages_and_keys_preserved": true,
+    "practice_versions": {},
+    "primary_review": false
+  }
+}

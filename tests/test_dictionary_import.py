@@ -35,7 +35,8 @@ class DictionaryImportTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             s=CorpusStore(Path(tmp)/'dictionary.sqlite3');before=s.records()
             s.import_bundle(b,'Parser','QA',migration_key='qa-gdn')
-            self.assertTrue(all(s.records()[i]==r for i,r in before.items()))
+            after=s.records()  # una sola lectura: comparar dentro del bucle era cuadrático
+            self.assertTrue(all(after[i]==r for i,r in before.items()))
             r=copy.deepcopy(s.records()[b['records'][0]['id']]);r.update(label='Edición local',expected_version=r['version'])
             s.import_bundle(dict(schema_version=1,records=[r]),'Editora','QA')
             s.import_bundle(b,'Parser','Otro lote',migration_key='qa-gdn-new')

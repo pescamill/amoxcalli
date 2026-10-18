@@ -52,6 +52,18 @@ La interfaz cuenta los ejemplos de cada lectura y del lector completo dinámicam
 
 ## Estado de la primera expansión
 
-Se añadieron agua/tierra, flores/cantos y aves: 3 recorridos / 12 pasajes. La app reúne 6 recorridos / 24 pasajes de 6 obras. Las 12 selecciones y claves previas se conservaron, junto con la práctica guardada. [Informe](../reports/LECTURAS_002_2026-09-30.md).
+Se añadieron agua/tierra, flores/cantos y aves: 3 recorridos / 12 pasajes. La app reúne 6 recorridos / 24 pasajes de 6 obras. Las 12 selecciones y claves previas se conservaron, junto con la práctica guardada.
 
 Son lecturas editoriales con revisión primaria y lingüística pendiente. El mecanismo valida citas y referencias; no acredita interpretación semántica, análisis gramatical ni eficacia con principiantes. Los permisos de entrenamiento y las reservas de evaluación siguen separados.
+
+
+## Comprensión y palabras para explorar
+
+Las recetas pueden incluir `comprehension` (`kind=meaning`, pregunta, opciones, índice de respuesta y explicación) y `explore_words`. La respuesta correcta debe ser una cita literal de la traducción española del registro; las formas para explorar deben aparecer en su texto náhuatl. Esto comprueba procedencia, no calidad pedagógica o lingüística. Para añadirlos a un ejemplo existente, usar `lesson_updates[].example_updates[]` con `archive_id`; no se reemplazan ni el pasaje ni la clave de reconocimiento. La receta [reading-context-2026-10-07](../configs/reading-context-2026-10-07.json) muestra cuatro ejemplos de Aves. Se conserva `practice_version=1`; la interfaz registra la comprensión aparte y mantiene el reconocimiento previo.
+
+## Práctica v2: distractores plausibles
+
+`lesson_updates[].exercise_updates[]` cambia las opciones de un ejemplo sin tocar el pasaje, la respuesta ni la forma del hueco: `distractors` sustituye a las opciones incorrectas del hueco y `comprehension_distractors` a las de la pregunta de contexto. Cada distractor del hueco debe ser una forma flexionada de la misma raíz atestiguada en el archivo (grupo de término del hueco, con su segmentación) o una forma del diccionario, y no puede aparecer en el pasaje; la explicación se genera con esos datos (««itototzin» (i-toto-tzin) tiene la misma raíz…», ««mazatl» significa «venado»»). Como cambian las claves, la lectura sube `practice_version`: el progreso guardado de la edición anterior de esa lectura no se aplica a las opciones nuevas; las palabras guardadas, los fragmentos y los repasos se conservan.
+
+La receta [practica-2026-10-16](../configs/practica-2026-10-16.json) revisó los 40 huecos y las 36 preguntas de contexto de las 12 lecturas y reescribió las claves de lectura en lenguaje de estudiante. La interfaz muestra todas las opciones de comprensión con mayúscula inicial y sin punto final, para que la cita de la traducción no se distinga por su formato. Al publicarla cambió el hash de `corpus/learning-v1.json`, entrada fija de la batería documental; la nueva medición dio resultados idénticos salvo hashes y tiempos ([comparación](../reports/documentary-remeasure-practica-2026-10-16.txt)).
+

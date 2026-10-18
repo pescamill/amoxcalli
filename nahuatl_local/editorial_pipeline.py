@@ -16,9 +16,12 @@ from urllib.parse import urlencode
 from urllib.request import urlopen
 
 from .community import ROOT
-from .corpus import CorpusStore, normalize
+from .corpus import CorpusStore
+from .passages import AXOLOTL
+from .text import fold
 from .dictionary_import import parse_page, bundle_from_pages
 from .glyph_linker import build_bundle
+from .morphology import SECONDARY_SOURCES
 from .learning import Learning
 from .lesson_audit import audit, fingerprint, merge_decisions, render_markdown
 from .lexicon_candidates import mine_candidates, written_tokens
@@ -88,14 +91,14 @@ def public_catalog(path=None):
 def annotation_candidates(learning,records):
     forms=defaultdict(set)
     for r in records.values():
-        if r['kind']=='form':forms[normalize(r['written'])].add(r['sense_id'])
+        if r['kind']=='form':forms[fold(r['written'])].add(r['sense_id'])
     result=[]
     for lesson in learning.data['lessons']:
         for example in lesson['examples']:
             row=learning.archive.get(example['archive_id'])
             for word,start,end in written_tokens(row['nah']):
                 if any(a['start']<=len(row['nah'][:start].encode('utf-16-le'))//2<a['end'] for a in example['annotations']):continue
-                result.append(dict(lesson_id=lesson['id'],archive_id=row['id'],source_hash=example['source_hash'],written=word,start=start,end=end,index_units='unicode_code_points',candidate_sense_ids=sorted(forms[normalize(word)]),status='ambiguous_match' if len(forms[normalize(word)])>1 else 'exact_form_candidate' if forms[normalize(word)] else 'unmatched_source_form'))
+                result.append(dict(lesson_id=lesson['id'],archive_id=row['id'],source_hash=example['source_hash'],written=word,start=start,end=end,index_units='unicode_code_points',candidate_sense_ids=sorted(forms[fold(word)]),status='ambiguous_match' if len(forms[fold(word)])>1 else 'exact_form_candidate' if forms[fold(word)] else 'unmatched_source_form'))
     return result
 
 
@@ -124,11 +127,11 @@ def review_groups(items):
 def lexical_priorities(forms,occurrences,lesson_forms):
     priorities=[]
     for sid,form in forms.items():
-        written=normalize(form['written']);head=normalize(form['catalog_normalized'])
+        written=fold(form['written']);head=fold(form['catalog_normalized'])
         priorities.append(dict(sense_id=sid,written=form['written'],normalized=form['catalog_normalized'],
             in_current_lessons=written in lesson_forms,exact_corpus_occurrences=occurrences[written],
             catalog_head_occurrences=occurrences[head],catalog_head_differs=written!=head))
-    priorities.sort(key=lambda item:(not item['in_current_lessons'],-item['exact_corpus_occurrences'],normalize(item['written']),item['sense_id']))
+    priorities.sort(key=lambda item:(not item['in_current_lessons'],-item['exact_corpus_occurrences'],fold(item['written']),item['sense_id']))
     return priorities
 
 
@@ -181,12 +184,12 @@ def prepare(config_path,lessons_path,output,catalog_path=None,fetch=False,decisi
     if stored.get('schema_version')!=1 or not isinstance(stored.get('decisions'),dict):raise ValueError('Decisiones editoriales inválidas.')
     queue=merge_decisions(report['findings'],stored['decisions'])
     pages,sources,requests=source_pages(config,fetch)
-    excluded={normalize(r.get('catalog_normalized',r['written'])) for r in records.values() if r['kind']=='form'}
-    excluded.update(normalize(r['written']) for r in records.values() if r['kind']=='form')
+    excluded={fold(r.get('catalog_normalized',r['written'])) for r in records.values() if r['kind']=='form'}
+    excluded.update(fold(r['written']) for r in records.values() if r['kind']=='form')
     lexical,extraction=bundle_from_pages(pages,excluded,4000)
     forms={r['sense_id']:r for r in lexical['records'] if r['kind']=='form'}
-    occurrences=Counter(normalize(word) for row in archive.rows if row['iso']=='nci' for word,_,_ in written_tokens(row['nah']))
-    lesson_forms={normalize(word) for lesson in learning.data['lessons'] for e in lesson['examples'] for word,_,_ in written_tokens(archive.get(e['archive_id'])['nah'])}
+    occurrences=Counter(fold(word) for row in archive.rows if row['iso']=='nci' for word,_,_ in written_tokens(row['nah']))
+    lesson_forms={fold(word) for lesson in learning.data['lessons'] for e in lesson['examples'] for word,_,_ in written_tokens(archive.get(e['archive_id'])['nah'])}
     priorities=lexical_priorities(forms,occurrences,lesson_forms)
     chosen={item['sense_id'] for item in priorities[:limit]}
     lexical['records']=[r for r in lexical['records'] if r.get('sense_id',r['id']) in chosen]
@@ -196,11 +199,14 @@ def prepare(config_path,lessons_path,output,catalog_path=None,fetch=False,decisi
     merged=validate_candidates(lexical['records'],records)
     rules=json.loads((ROOT/'corpus/glyph-link-rules-v7.json').read_text())
     visual,coverage=build_bundle(merged,rules,archive.rows)
-    visual['records']=[r for r in visual['records'] if r['id'] not in merged]
+    # Las acepciones de fuentes secundarias (Wiktionary) no entran en este lote: llevan su propia
+    # licencia y revisión, y barrerlas aquí desbordaría el límite del lote (139 → 522 registros).
+    visual['records']=[r for r in visual['records'] if r['id'] not in merged
+                       and merged.get(r.get('sense_id'),{}).get('import_source') not in SECONDARY_SOURCES]
     validate_candidates(lexical['records']+visual['records'],records)
     with tempfile.TemporaryDirectory() as directory:
         seed=Path(directory)/'public-catalog.json';seed.write_bytes(encoded(dict(schema_version=1,records=list(records.values()))))
-        concordance=mine_candidates(ROOT/'corpus/axolotl/axolotl.csv',seed_path=seed,limit=concordance_limit)
+        concordance=mine_candidates(ROOT/AXOLOTL,seed_path=seed,limit=concordance_limit)
     concordance['seed_exclusions']['path']='selected_public_catalog';concordance['seed_exclusions']['sha256']=sha(encoded(records))
     items=review_items(lexical,visual);groups=review_groups(items)
     # Prefixes organize source requests; they are not inferred roots or lemmas.
@@ -237,7 +243,7 @@ def assemble(batch,decisions,output,lessons_path=ROOT/'corpus/learning-v1.json',
     records=public_catalog(catalog_path)
     if sha(encoded(records))!=manifest['inputs']['catalog_sha256'] or sha(Path(lessons_path).read_bytes())!=manifest['inputs']['lessons_sha256']:
         raise ValueError('El catálogo o las lecciones cambiaron desde la preparación; prepara un lote nuevo.')
-    if sha((ROOT/'corpus/axolotl/axolotl.csv').read_bytes())!=manifest['inputs']['corpus_sha256'] or sha((ROOT/'corpus/glyph-link-rules-v7.json').read_bytes())!=manifest['inputs'].get('glyph_rules_sha256'):
+    if sha((ROOT/AXOLOTL).read_bytes())!=manifest['inputs']['corpus_sha256'] or sha((ROOT/'corpus/glyph-link-rules-v7.json').read_bytes())!=manifest['inputs'].get('glyph_rules_sha256'):
         raise ValueError('Cambió el corpus o las reglas glíficas; prepara un lote nuevo.')
     stored=json.loads(Path(decisions).read_text())
     if stored.get('schema_version')!=1 or not isinstance(stored.get('items'),dict):raise ValueError('Decisiones de pipeline inválidas.')

@@ -1,0 +1,1149 @@
+{
+ "id": "morphology-gold-v2",
+ "status": "Borrador del equipo (Andrews 2003; Launey 1992; Carochi 1645), escrito el 16 oct 2026 antes de ver las salidas del analizador para estas formas. La partición test se congeló con su SHA-256 (evaluation/morphology-gold-v2.sha256). Pendiente de revisión especializada. No se usa para entrenar.",
+ "format": "segmentation: morfemas separados por guiones en la grafía de la palabra. kind: word | particle | name. Para particle y name la segmentación esperada es la forma completa y además se mide la clase (base «particle» o «name»). sentence_initial indica si el token va al inicio de frase (por omisión, no).",
+ "protocol": "'dev' reúne todo v1 (su test dejó de ser ciego al fijar SECONDARY_PENALTY) y las familias de error conocidas; se usa para ajustar reglas. 'test' (forma nueva, ciega) se mide una vez por versión y no se usa para decidir reglas. Un nombre cuenta solo si el analizador lo marca como nombre. Los nombres del test van con mayúscula fuera de inicio de frase, así que miden esa regla; la lista breve de lugares, gobernantes y deidades cubre el inicio de frase y las minúsculas y no se amplía con formas de este test.",
+ "items": [
+  {
+   "split": "dev",
+   "word": "niquitta",
+   "segmentation": "ni-qu-itta",
+   "gloss": "yo lo veo",
+   "origin": "v1-dev"
+  },
+  {
+   "split": "dev",
+   "word": "nocal",
+   "segmentation": "no-cal",
+   "gloss": "mi casa",
+   "origin": "v1-dev"
+  },
+  {
+   "split": "dev",
+   "word": "calco",
+   "segmentation": "cal-co",
+   "gloss": "en la casa",
+   "origin": "v1-dev"
+  },
+  {
+   "split": "dev",
+   "word": "calli",
+   "segmentation": "cal-li",
+   "gloss": "casa",
+   "origin": "v1-dev"
+  },
+  {
+   "split": "dev",
+   "word": "tlacatl",
+   "segmentation": "tlaca-tl",
+   "gloss": "persona",
+   "origin": "v1-dev"
+  },
+  {
+   "split": "dev",
+   "word": "nicchihua",
+   "segmentation": "ni-c-chihua",
+   "gloss": "yo lo hago",
+   "origin": "v1-dev"
+  },
+  {
+   "split": "dev",
+   "word": "onicchiuh",
+   "segmentation": "o-ni-c-chiuh",
+   "gloss": "yo lo hice",
+   "origin": "v1-dev"
+  },
+  {
+   "split": "dev",
+   "word": "tlachihualli",
+   "segmentation": "tla-chihua-l-li",
+   "gloss": "cosa hecha",
+   "origin": "v1-dev"
+  },
+  {
+   "split": "dev",
+   "word": "itoca",
+   "segmentation": "i-toca",
+   "gloss": "su nombre",
+   "origin": "v1-dev"
+  },
+  {
+   "split": "dev",
+   "word": "mochiuh",
+   "segmentation": "mo-chiuh",
+   "gloss": "se hizo, sucedió",
+   "origin": "v1-dev"
+  },
+  {
+   "split": "dev",
+   "word": "omoteneuh",
+   "segmentation": "o-mo-teneuh",
+   "gloss": "se mencionó",
+   "origin": "v1-dev"
+  },
+  {
+   "split": "dev",
+   "word": "nitlacua",
+   "segmentation": "ni-tla-cua",
+   "gloss": "yo como (algo)",
+   "origin": "v1-dev"
+  },
+  {
+   "split": "dev",
+   "word": "niquitohua",
+   "segmentation": "ni-qu-itohua",
+   "gloss": "yo lo digo",
+   "origin": "v1-dev"
+  },
+  {
+   "split": "dev",
+   "word": "tlahtohuani",
+   "segmentation": "tlahtohua-ni",
+   "gloss": "el que habla; gobernante",
+   "origin": "v1-dev"
+  },
+  {
+   "split": "dev",
+   "word": "noxochiuh",
+   "segmentation": "no-xochi-uh",
+   "gloss": "mi flor",
+   "origin": "v1-dev"
+  },
+  {
+   "split": "dev",
+   "word": "tlalticpac",
+   "segmentation": "tlal-ti-cpac",
+   "gloss": "sobre la tierra",
+   "origin": "v1-dev"
+  },
+  {
+   "split": "dev",
+   "word": "quichiuh",
+   "segmentation": "qui-chiuh",
+   "gloss": "lo hizo",
+   "origin": "v1-dev"
+  },
+  {
+   "split": "dev",
+   "word": "mitoa",
+   "segmentation": "m-itoa",
+   "gloss": "se dice",
+   "origin": "v1-dev"
+  },
+  {
+   "split": "dev",
+   "word": "altepetl",
+   "segmentation": "altepe-tl",
+   "gloss": "pueblo, ciudad",
+   "origin": "v1-dev"
+  },
+  {
+   "split": "dev",
+   "word": "nimitztlazohtla",
+   "segmentation": "ni-mitz-tlazohtla",
+   "gloss": "yo te amo",
+   "origin": "v1-dev"
+  },
+  {
+   "split": "dev",
+   "word": "tinechitta",
+   "segmentation": "ti-nech-itta",
+   "gloss": "tú me ves",
+   "origin": "v1-dev"
+  },
+  {
+   "split": "dev",
+   "word": "xochitl",
+   "segmentation": "xochi-tl",
+   "gloss": "flor",
+   "origin": "v1-dev"
+  },
+  {
+   "split": "dev",
+   "word": "nocuic",
+   "segmentation": "no-cuic",
+   "gloss": "mi canto",
+   "origin": "v1-dev"
+  },
+  {
+   "split": "dev",
+   "word": "quimaca",
+   "segmentation": "qui-maca",
+   "gloss": "se lo da",
+   "origin": "v1-dev"
+  },
+  {
+   "split": "dev",
+   "word": "tlalli",
+   "segmentation": "tlal-li",
+   "gloss": "tierra",
+   "origin": "v1-dev"
+  },
+  {
+   "split": "dev",
+   "word": "ticochi",
+   "segmentation": "ti-cochi",
+   "gloss": "tú duermes",
+   "origin": "v1-test"
+  },
+  {
+   "split": "dev",
+   "word": "nicochiz",
+   "segmentation": "ni-cochi-z",
+   "gloss": "yo dormiré",
+   "origin": "v1-test"
+  },
+  {
+   "split": "dev",
+   "word": "motenehua",
+   "segmentation": "mo-tenehua",
+   "gloss": "se nombra",
+   "origin": "v1-test"
+  },
+  {
+   "split": "dev",
+   "word": "quitoa",
+   "segmentation": "qu-itoa",
+   "gloss": "lo dice",
+   "origin": "v1-test"
+  },
+  {
+   "split": "dev",
+   "word": "quitoque",
+   "segmentation": "qu-ito-que",
+   "gloss": "lo dijeron",
+   "origin": "v1-test"
+  },
+  {
+   "split": "dev",
+   "word": "tepetl",
+   "segmentation": "tepe-tl",
+   "gloss": "cerro",
+   "origin": "v1-test"
+  },
+  {
+   "split": "dev",
+   "word": "ytoca",
+   "segmentation": "y-toca",
+   "gloss": "su nombre",
+   "origin": "v1-test"
+  },
+  {
+   "split": "dev",
+   "word": "ichan",
+   "segmentation": "i-chan",
+   "gloss": "su casa, su hogar",
+   "origin": "v1-test"
+  },
+  {
+   "split": "dev",
+   "word": "nochan",
+   "segmentation": "no-chan",
+   "gloss": "mi casa, mi hogar",
+   "origin": "v1-test"
+  },
+  {
+   "split": "dev",
+   "word": "tochan",
+   "segmentation": "to-chan",
+   "gloss": "nuestra casa",
+   "origin": "v1-test"
+  },
+  {
+   "split": "dev",
+   "word": "quitta",
+   "segmentation": "qu-itta",
+   "gloss": "lo ve",
+   "origin": "v1-test"
+  },
+  {
+   "split": "dev",
+   "word": "quittaque",
+   "segmentation": "qu-itta-que",
+   "gloss": "lo vieron",
+   "origin": "v1-test"
+  },
+  {
+   "split": "dev",
+   "word": "tlaxcalli",
+   "segmentation": "tlaxcal-li",
+   "gloss": "tortilla",
+   "origin": "v1-test"
+  },
+  {
+   "split": "dev",
+   "word": "atl",
+   "segmentation": "a-tl",
+   "gloss": "agua",
+   "origin": "v1-test"
+  },
+  {
+   "split": "dev",
+   "word": "icalpan",
+   "segmentation": "i-cal-pan",
+   "gloss": "en su casa",
+   "origin": "v1-test"
+  },
+  {
+   "split": "dev",
+   "word": "tlatoque",
+   "segmentation": "tlato-que",
+   "gloss": "gobernantes",
+   "origin": "v1-test"
+  },
+  {
+   "split": "dev",
+   "word": "Mexico",
+   "segmentation": "Mexi-co",
+   "gloss": "en México",
+   "origin": "v1-test"
+  },
+  {
+   "split": "dev",
+   "word": "Tenochtitlan",
+   "segmentation": "Tenoch-ti-tlan",
+   "gloss": "junto al nopal de piedra",
+   "origin": "v1-test"
+  },
+  {
+   "split": "dev",
+   "word": "quimacaque",
+   "segmentation": "qui-maca-que",
+   "gloss": "se lo dieron",
+   "origin": "v1-test"
+  },
+  {
+   "split": "dev",
+   "word": "nechmaca",
+   "segmentation": "nech-maca",
+   "gloss": "me lo da",
+   "origin": "v1-test"
+  },
+  {
+   "split": "dev",
+   "word": "tlaqualli",
+   "segmentation": "tla-qua-l-li",
+   "gloss": "comida",
+   "origin": "v1-test"
+  },
+  {
+   "split": "dev",
+   "word": "ilhuicatl",
+   "segmentation": "ilhuica-tl",
+   "gloss": "cielo",
+   "origin": "v1-test"
+  },
+  {
+   "split": "dev",
+   "word": "ilhuicac",
+   "segmentation": "ilhuica-c",
+   "gloss": "en el cielo",
+   "origin": "v1-test"
+  },
+  {
+   "split": "dev",
+   "word": "nonantzin",
+   "segmentation": "no-nan-tzin",
+   "gloss": "mi madre (reverencial)",
+   "origin": "v1-test"
+  },
+  {
+   "split": "dev",
+   "word": "tetlazohtlaliztli",
+   "segmentation": "te-tlazohtla-liz-tli",
+   "gloss": "amor a otros",
+   "origin": "v1-test"
+  },
+  {
+   "split": "dev",
+   "word": "cihuatl",
+   "segmentation": "cihua-tl",
+   "gloss": "mujer",
+   "origin": "v1-test"
+  },
+  {
+   "split": "dev",
+   "word": "tlatoani",
+   "segmentation": "tlatoa-ni",
+   "gloss": "gobernante",
+   "origin": "v1-test"
+  },
+  {
+   "split": "dev",
+   "word": "Motecuhçoma",
+   "segmentation": "Motecuhçoma",
+   "gloss": "Motecuhzoma (gobernante)",
+   "kind": "name",
+   "origin": "v2-errores-conocidos"
+  },
+  {
+   "split": "dev",
+   "word": "mictlan",
+   "segmentation": "mic-tlan",
+   "gloss": "lugar de los muertos",
+   "kind": "word",
+   "origin": "v2-errores-conocidos"
+  },
+  {
+   "split": "dev",
+   "word": "tlaca",
+   "segmentation": "tlaca",
+   "gloss": "personas (plural de tlacatl)",
+   "kind": "word",
+   "origin": "v2-errores-conocidos"
+  },
+  {
+   "split": "dev",
+   "word": "in",
+   "segmentation": "in",
+   "gloss": "partícula: el, la, lo que",
+   "kind": "particle",
+   "origin": "v2-errores-conocidos"
+  },
+  {
+   "split": "test",
+   "word": "nicochi",
+   "segmentation": "ni-cochi",
+   "gloss": "yo duermo",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "ticochizque",
+   "segmentation": "ti-cochi-z-que",
+   "gloss": "dormiremos",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "titlacua",
+   "segmentation": "ti-tla-cua",
+   "gloss": "tú comes (algo)",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "quimictique",
+   "segmentation": "qui-micti-que",
+   "gloss": "lo mataron",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "nimitzitta",
+   "segmentation": "ni-mitz-itta",
+   "gloss": "yo te veo",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "quinitta",
+   "segmentation": "quin-itta",
+   "gloss": "los ve",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "tiquitta",
+   "segmentation": "ti-qu-itta",
+   "gloss": "tú lo ves",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "quipohua",
+   "segmentation": "qui-pohua",
+   "gloss": "lo cuenta, lo lee",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "niccaqui",
+   "segmentation": "ni-c-caqui",
+   "gloss": "yo lo oigo",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "quicaquia",
+   "segmentation": "qui-caqui-a",
+   "gloss": "lo oía",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "oquichiuh",
+   "segmentation": "o-qui-chiuh",
+   "gloss": "lo hizo",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "oquito",
+   "segmentation": "o-qu-ito",
+   "gloss": "lo dijo",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "nemi",
+   "segmentation": "nemi",
+   "gloss": "vive",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "nemiz",
+   "segmentation": "nemi-z",
+   "gloss": "vivirá",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "mochihua",
+   "segmentation": "mo-chihua",
+   "gloss": "se hace",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "motlalia",
+   "segmentation": "mo-tlalia",
+   "gloss": "se sienta, se asienta",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "quitlazohtla",
+   "segmentation": "qui-tlazohtla",
+   "gloss": "lo ama",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "tlaqua",
+   "segmentation": "tla-qua",
+   "gloss": "come (algo)",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "cuica",
+   "segmentation": "cuica",
+   "gloss": "canta",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "cuicaya",
+   "segmentation": "cuica-ya",
+   "gloss": "cantaba",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "nicuica",
+   "segmentation": "ni-cuica",
+   "gloss": "yo canto",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "choca",
+   "segmentation": "choca",
+   "gloss": "llora",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "quiza",
+   "segmentation": "quiza",
+   "gloss": "sale",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "oquiz",
+   "segmentation": "o-quiz",
+   "gloss": "salió",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "ninotlalia",
+   "segmentation": "ni-no-tlalia",
+   "gloss": "me siento",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "timotlalia",
+   "segmentation": "ti-mo-tlalia",
+   "gloss": "te sientas",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "teotl",
+   "segmentation": "teo-tl",
+   "gloss": "dios",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "ichpochtli",
+   "segmentation": "ichpoch-tli",
+   "gloss": "doncella",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "telpochtli",
+   "segmentation": "telpoch-tli",
+   "gloss": "joven",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "tochtli",
+   "segmentation": "toch-tli",
+   "gloss": "conejo",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "coatl",
+   "segmentation": "coa-tl",
+   "gloss": "serpiente",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "mazatl",
+   "segmentation": "maza-tl",
+   "gloss": "venado",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "noma",
+   "segmentation": "no-ma",
+   "gloss": "mi mano",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "icihuauh",
+   "segmentation": "i-cihua-uh",
+   "gloss": "su esposa",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "inan",
+   "segmentation": "i-nan",
+   "gloss": "su madre",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "ytatzin",
+   "segmentation": "y-ta-tzin",
+   "gloss": "su padre (reverencial)",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "tocal",
+   "segmentation": "to-cal",
+   "gloss": "nuestra casa",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "amocal",
+   "segmentation": "amo-cal",
+   "gloss": "vuestra casa",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "incal",
+   "segmentation": "in-cal",
+   "gloss": "su casa (de ellos)",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "calpan",
+   "segmentation": "cal-pan",
+   "gloss": "en las casas",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "tepeticpac",
+   "segmentation": "tepe-ti-cpac",
+   "gloss": "sobre el cerro",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "atlan",
+   "segmentation": "a-tlan",
+   "gloss": "en el agua, junto al agua",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "tetl",
+   "segmentation": "te-tl",
+   "gloss": "piedra",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "cuahuitl",
+   "segmentation": "cuahui-tl",
+   "gloss": "árbol",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "cuauhtli",
+   "segmentation": "cuauh-tli",
+   "gloss": "águila",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "ocelotl",
+   "segmentation": "ocelo-tl",
+   "gloss": "jaguar",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "pilli",
+   "segmentation": "pil-li",
+   "gloss": "noble; niño",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "cihuame",
+   "segmentation": "cihua-me",
+   "gloss": "mujeres",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "tlamatini",
+   "segmentation": "tla-mati-ni",
+   "gloss": "sabio",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "tlacuilo",
+   "segmentation": "tla-cuilo",
+   "gloss": "pintor, escribano",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "tlatolli",
+   "segmentation": "tlato-l-li",
+   "gloss": "palabra",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "cuicatl",
+   "segmentation": "cuica-tl",
+   "gloss": "canto",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "xochicuicatl",
+   "segmentation": "xochi-cuica-tl",
+   "gloss": "canto florido",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "nopiltzin",
+   "segmentation": "no-pil-tzin",
+   "gloss": "mi hijo (reverencial)",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "inahuac",
+   "segmentation": "i-nahuac",
+   "gloss": "junto a él",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "itlan",
+   "segmentation": "i-tlan",
+   "gloss": "junto a él, entre ellos",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "icpac",
+   "segmentation": "i-cpac",
+   "gloss": "sobre él",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "ipan",
+   "segmentation": "i-pan",
+   "gloss": "sobre él, en él",
+   "kind": "word",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "ca",
+   "segmentation": "ca",
+   "gloss": "enfático: es que",
+   "kind": "particle",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "auh",
+   "segmentation": "auh",
+   "gloss": "y, pues",
+   "kind": "particle",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "ihuan",
+   "segmentation": "ihuan",
+   "gloss": "y, con",
+   "kind": "particle",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "amo",
+   "segmentation": "amo",
+   "gloss": "no",
+   "kind": "particle",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "ma",
+   "segmentation": "ma",
+   "gloss": "exhortativo: ojalá, que",
+   "kind": "particle",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "ye",
+   "segmentation": "ye",
+   "gloss": "ya",
+   "kind": "particle",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "ic",
+   "segmentation": "ic",
+   "gloss": "con eso, por eso",
+   "kind": "particle",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "inic",
+   "segmentation": "inic",
+   "gloss": "para que; de modo que",
+   "kind": "particle",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "intla",
+   "segmentation": "intla",
+   "gloss": "si (condicional)",
+   "kind": "particle",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "ompa",
+   "segmentation": "ompa",
+   "gloss": "allá",
+   "kind": "particle",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "nican",
+   "segmentation": "nican",
+   "gloss": "aquí",
+   "kind": "particle",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "axcan",
+   "segmentation": "axcan",
+   "gloss": "ahora",
+   "kind": "particle",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "niman",
+   "segmentation": "niman",
+   "gloss": "luego",
+   "kind": "particle",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "quenin",
+   "segmentation": "quenin",
+   "gloss": "cómo",
+   "kind": "particle",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "tleica",
+   "segmentation": "tleica",
+   "gloss": "por qué",
+   "kind": "particle",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "aço",
+   "segmentation": "aço",
+   "gloss": "quizá",
+   "kind": "particle",
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "Quetzalcoatl",
+   "segmentation": "Quetzalcoatl",
+   "gloss": "deidad",
+   "kind": "name",
+   "sentence_initial": false,
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "Huitzilopochtli",
+   "segmentation": "Huitzilopochtli",
+   "gloss": "deidad",
+   "kind": "name",
+   "sentence_initial": false,
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "Tezcatlipoca",
+   "segmentation": "Tezcatlipoca",
+   "gloss": "deidad",
+   "kind": "name",
+   "sentence_initial": false,
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "Tlaloc",
+   "segmentation": "Tlaloc",
+   "gloss": "deidad",
+   "kind": "name",
+   "sentence_initial": false,
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "Cuauhtemoc",
+   "segmentation": "Cuauhtemoc",
+   "gloss": "gobernante",
+   "kind": "name",
+   "sentence_initial": false,
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "Nezahualcoyotl",
+   "segmentation": "Nezahualcoyotl",
+   "gloss": "gobernante",
+   "kind": "name",
+   "sentence_initial": false,
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "Itzcoatl",
+   "segmentation": "Itzcoatl",
+   "gloss": "gobernante",
+   "kind": "name",
+   "sentence_initial": false,
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "Axayacatl",
+   "segmentation": "Axayacatl",
+   "gloss": "gobernante",
+   "kind": "name",
+   "sentence_initial": false,
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "Ahuitzotl",
+   "segmentation": "Ahuitzotl",
+   "gloss": "gobernante",
+   "kind": "name",
+   "sentence_initial": false,
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "Tlacopan",
+   "segmentation": "Tlacopan",
+   "gloss": "lugar",
+   "kind": "name",
+   "sentence_initial": false,
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "Tetzcoco",
+   "segmentation": "Tetzcoco",
+   "gloss": "lugar",
+   "kind": "name",
+   "sentence_initial": false,
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "Azcapotzalco",
+   "segmentation": "Azcapotzalco",
+   "gloss": "lugar",
+   "kind": "name",
+   "sentence_initial": false,
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "Cholollan",
+   "segmentation": "Cholollan",
+   "gloss": "lugar",
+   "kind": "name",
+   "sentence_initial": false,
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "Xochimilco",
+   "segmentation": "Xochimilco",
+   "gloss": "lugar",
+   "kind": "name",
+   "sentence_initial": false,
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "Tlatelolco",
+   "segmentation": "Tlatelolco",
+   "gloss": "lugar",
+   "kind": "name",
+   "sentence_initial": false,
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "Auh",
+   "segmentation": "auh",
+   "gloss": "y, pues (inicio de frase)",
+   "kind": "particle",
+   "sentence_initial": true,
+   "origin": "v2-ciega"
+  },
+  {
+   "split": "test",
+   "word": "Niman",
+   "segmentation": "niman",
+   "gloss": "luego (inicio de frase)",
+   "kind": "particle",
+   "sentence_initial": true,
+   "origin": "v2-ciega"
+  }
+ ]
+}
