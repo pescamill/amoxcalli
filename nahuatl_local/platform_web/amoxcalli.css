@@ -1090,3 +1090,4 @@ body.contributor .empty{border:0;padding:46px 30px}
   .gods-glyphs{grid-template-columns:repeat(2,minmax(0,1fr))}
   .gods-pager a{flex:1 1 40%;text-align:center}
 }
+.report-link{font-size:12px;white-space:nowrap}

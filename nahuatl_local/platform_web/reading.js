@@ -18,7 +18,7 @@ function annotatedPassage(example,cloze=false){
  if(mask&&!mask.done&&typeof clickableWords!=='function')html=html.replace(esc(example.exercise.blank),'_____');
  return html;
 }
-function passageSource(example){const r=example.passage;return `<details class="reading-source"><summary>Fuente, contexto y estado de revisión</summary><p><strong>${esc(r.document)}</strong> · ${esc(r.variant_label)}</p><p>${esc(example.context)}</p><p class="meta">${esc(r.locator)} · ${esc(r.id)}</p><p class="meta">${esc(r.verification)}.</p>${link(r.source_url,'Distribución del corpus')}<p><a href="#extraer/${esc(r.id)}">Aportar un cotejo de este pasaje →</a></p><p class="meta">${esc(r.rights_note)}</p></details>`;}
+function passageSource(example){const r=example.passage;return `<details class="reading-source"><summary>Fuente, contexto y estado de revisión</summary><p><strong>${esc(r.document)}</strong> · ${esc(r.variant_label)}</p><p>${esc(example.context)}</p><p class="meta">${esc(r.locator)} · ${esc(r.id)}</p><p class="meta">${esc(r.verification)}.</p>${link(r.source_url,'Distribución del corpus')}<p><a href="#extraer/${esc(r.id)}">Aportar un cotejo de este pasaje →</a> · ${reportLink(r.id)}</p><p class="meta">${esc(r.rights_note)}</p></details>`;}
 // Resolve navigation IDs only against source-checked public learning data.
 // This context neither filters the archive nor changes study storage.
 function resolveReadingOrigin(mode,lessonId,passageId){
