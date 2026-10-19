@@ -40,6 +40,8 @@ async function until(fn){for(let i=0;i<100;i++){if(fn())return;await delay(30)}t
  const missing=await w.fetch(audioUrl);assert.equal(missing.status,404);
  console.log('PASS: withdrawal removes the active audio and updates progress');
  const records=await (await w.fetch('/api/mine')).json();assert.equal(records.contributions.filter(c=>c.status==='withdrawn').length,1);assert.equal(records.contributions.find(c=>c.status==='pending').answer.train_text,false);
+ // El retiro termina de refrescar lista y tarea (su finally reactiva el botón) antes de cerrar la ventana.
+ await until(()=>!$('#confirm-withdraw').disabled);
  assert.deepEqual(errors,[]);console.log('PASS: no application JavaScript errors');
  dom.window.close();
 })().catch(e=>{console.error(e);process.exit(1)});

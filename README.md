@@ -6,42 +6,39 @@
 
 Amoxcalli reúne lecturas guiadas, unidades de gramática, un analizador de palabras, un buscador de grafías (clásica, moderna y de cada variedad), un diccionario con fuentes, glifos documentados, fichas de dioses y del calendario, y un archivo bilingüe de 16.111 pasajes. Cada resultado dice de dónde viene: una entrada del diccionario, un pasaje del archivo, una ficha pictográfica o una regla. **Sin evidencia, la aplicación se abstiene.** Todo funciona sin LLM y con la biblioteca estándar de Python.
 
-**Estado (17 de octubre de 2026).** Se puede leer, practicar, analizar palabras, buscar en cualquier grafía, consultar dioses y calendario, y aportar. Lo automático (ayudas, entradas de Wiktionary, unidades y lecturas nuevas) está marcado como tal y **pendiente de revisión lingüística**. Faltan el cotejo con fuentes primarias y la prueba con principiantes: son las colaboraciones que buscamos ([propuesta de piloto](docs/PILOTO_INSTITUCIONAL.md), [propósito](docs/PROPOSITO.md)). El plan vigente es [docs/ROADMAP.md](docs/ROADMAP.md).
+**Estado (18 de octubre de 2026).** Se distribuye como descarga para usar en tu computadora. Se puede leer, practicar, analizar palabras, buscar en cualquier grafía, consultar dioses y calendario, y aportar. Lo automático (ayudas, entradas de Wiktionary, unidades y lecturas nuevas) está marcado como tal y **pendiente de revisión lingüística**. Faltan el cotejo con fuentes primarias y la prueba con principiantes: son las colaboraciones que buscamos ([propuesta de piloto](docs/PILOTO_INSTITUCIONAL.md), [propósito](docs/PROPOSITO.md)). El plan vigente es [docs/ROADMAP.md](docs/ROADMAP.md).
 
-## Probarlo
+## Descargar y usar
 
-Con Python 3.11 o posterior y git:
+Amoxcalli se usa en tu computadora: no necesita internet ni cuenta, y lo que guardes se queda en tu equipo.
+
+1. Instala **Python 3.11 o más reciente** desde <https://www.python.org/downloads/> (en Windows, marca «Add python.exe to PATH»).
+2. Descarga la última versión: [**Descargar Amoxcalli (.zip)**](https://github.com/pescamill/amoxcalli/releases/latest) y descomprímela.
+3. Haz doble clic en **`Abrir Amoxcalli.command`** (macOS) o **`Abrir Amoxcalli.bat`** (Windows). Se abre en tu navegador en <http://127.0.0.1:8766>; la primera vez prepara el análisis durante un minuto. Deja abierta la ventana negra mientras lo usas.
+
+En macOS, la primera vez puede aparecer un aviso de «desarrollador no identificado»: haz clic derecho sobre el archivo → **Abrir** → **Abrir**.
+
+Desde la terminal (Linux, o si prefieres):
 
 ```bash
 git clone https://github.com/pescamill/amoxcalli.git
 cd amoxcalli
-make demo
+make demo        # o: python3 -m nahuatl_local.platform serve --open
 ```
 
-Abre <http://127.0.0.1:8766>. La primera vez, `make demo` prepara los análisis derivados (alrededor de un minuto) y arranca el servidor; mientras tanto la aplicación muestra «Preparando el análisis…». Después arranca en segundos. Un solo proceso sirve la aplicación, Voces (`/aportar`) y la API:
+<details><summary>Opciones del servidor</summary>
 
-```bash
-bash scripts/amoxcalli.sh serve [opciones]   # detiene un servidor previo en el mismo puerto
-```
+`bash scripts/amoxcalli.sh serve [opciones]` (o `python3 -m nahuatl_local.platform serve [opciones]`):
 
 | Opción | Efecto |
 | --- | --- |
+| `--open` | Abre la aplicación en el navegador al arrancar. |
 | `--host`, `--port` | Interfaz y puerto (por omisión `127.0.0.1:8766`). Para el teléfono en la misma red: [docs/WEBAPP.md](docs/WEBAPP.md). |
-| `--demo` | Demostración pública de solo lectura: se puede consultar todo, pero no se guardan perfiles, aportaciones ni grabaciones. |
-| `--public-origin https://dominio` | Detrás de un proxy HTTPS: acepta ese Host y lo exige como Origin de escritura. |
 | `--db ruta` | Base local de perfiles, aportaciones y propuestas (por omisión `data/community/voces.sqlite3`). Va antes de `serve`. |
 | `--explain-model claude` | Explicaciones redactadas por Claude en Preguntar; envía la pregunta y los pasajes citados a la API de Anthropic. Sin esta opción, nada sale del equipo. |
+| `--demo`, `--public-origin` | Para instalarlo en un servidor público: [docs/DESPLIEGUE.md](docs/DESPLIEGUE.md). |
 
-En Windows o sin `make`: `py -m nahuatl_local.platform serve` con las mismas opciones.
-
-Con Docker (imagen de unos 230 MB, en modo demostración):
-
-```bash
-docker build -t amoxcalli .
-docker run -p 7860:7860 amoxcalli
-```
-
-**Publicarlo gratis** (Hugging Face Spaces, una máquina virtual o Cloud Run) paso a paso: [docs/DESPLIEGUE.md](docs/DESPLIEGUE.md). Con todos los índices construidos usa unos 760 MB de RAM: hace falta un plan de al menos 1 GB.
+</details>
 
 **Un recorrido de cinco minutos:** abre **Lecturas → Reconocer una flor**, pulsa *NIQUITTA* (*ni-qu-itta*, «yo-lo-veo») y muestra la glosa interlineal. Escribe *kuali* en la búsqueda: aparece *cualli* con sus grafías por variedad y sus fuentes. Pregunta *¿cómo se dice mujer?* en **Preguntar** y pulsa las citas de la explicación. Abre **Más → Dioses y calendario** y busca *Huitzilopoxtli*.
 
