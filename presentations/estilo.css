@@ -1,0 +1,144 @@
+/* Estilo de los materiales de presentación de Amoxcalli (diapositivas y hoja de una página).
+   Sin fuentes ni scripts externos: se abren sin conexión, como la aplicación. */
+:root {
+  --papel: #f5efe3;
+  --hoja: #fffcf5;
+  --tinta: #2b2620;
+  --suave: #6b6156;
+  --grana: #7d2531;
+  --ocre: #c1913f;
+  --ocre-claro: #efe4cc;
+  --verde: #3f6b57;
+  --linea: #d8ccb6;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --sans: "Avenir Next", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #2b2620; color: var(--tinta); font-family: var(--sans); }
+
+/* ---------- Diapositivas ---------- */
+.deck { display: flex; flex-direction: column; align-items: center; gap: 2vh; padding: 2vh 0; }
+.slide {
+  --w: min(96vw, calc(96vh * 16 / 9));
+  width: var(--w); height: calc(var(--w) * 9 / 16);
+  font-size: calc(var(--w) / 80);
+  background: var(--papel); position: relative; overflow: hidden;
+  display: grid; grid-template-rows: auto minmax(0, 1fr) auto; padding: 3.2em 4em 2.2em;
+  box-shadow: 0 0.4em 2em rgba(0,0,0,.35);
+}
+.slide::before { /* greca discreta, como el encabezado de la aplicación */
+  content: ""; position: absolute; inset: 0 0 auto 0; height: .55em;
+  background: repeating-linear-gradient(90deg, var(--grana) 0 1.2em, var(--ocre) 1.2em 1.5em, var(--grana) 1.5em 2.7em, var(--ocre-claro) 2.7em 3em);
+}
+.slide header .eyebrow { font: 700 .8em/1 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--grana); margin: 0 0 .5em; }
+.slide h1, .slide h2 { font-family: var(--serif); font-weight: 700; margin: 0; line-height: 1.08; letter-spacing: -.01em; }
+.slide h1 { font-size: 3.6em; }
+.slide h2 { font-size: 2.3em; }
+.slide .body { min-height: 0; margin-top: 1.4em; overflow: hidden; }
+.slide p, .slide li { font-size: 1.12em; line-height: 1.45; margin: 0 0 .55em; }
+.slide ul { padding-left: 1.1em; margin: 0; }
+.slide li::marker { color: var(--grana); }
+.slide footer { display: flex; justify-content: space-between; align-items: end; font-size: .78em; color: var(--suave); border-top: 1px solid var(--linea); padding-top: .6em; margin-top: 1em; }
+.slide footer .n { font-variant-numeric: tabular-nums; }
+.nci { font-family: var(--serif); font-style: italic; }
+strong { font-weight: 700; }
+.muted { color: var(--suave); }
+.small { font-size: .9em !important; }
+
+.two { display: grid; grid-template-columns: 38% 1fr; grid-template-rows: minmax(0, 1fr); gap: 2.4em; height: 100%; min-height: 0; }
+.two > * { min-height: 0; }
+.two.even { grid-template-columns: 1fr 1fr; }
+.two.wide-text { grid-template-columns: 46% 1fr; }
+.stack { display: grid; gap: 1em; min-height: 0; height: 100%; }
+.stack.rows-2 { grid-template-rows: minmax(0, 1fr) minmax(0, 1fr); }
+.stack.rows-3-2 { grid-template-rows: minmax(0, 3fr) minmax(0, 2fr); }
+
+.shot { margin: 0; min-height: 0; height: 100%; display: flex; flex-direction: column; }
+.shot .frame { flex: 1; min-height: 0; border: 1px solid var(--linea); border-radius: .5em; overflow: hidden; background: #f5efe3; box-shadow: 0 .3em 1em rgba(60,40,20,.12); }
+.shot img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top left; }
+.shot img.contain { object-fit: contain; object-position: center; }
+.shot img.fit { object-fit: contain; object-position: left top; }
+.shot figcaption { font-size: .78em; color: var(--suave); margin-top: .45em; line-height: 1.3; }
+
+.note { border-left: .3em solid var(--ocre); background: var(--ocre-claro); padding: .7em 1em; border-radius: 0 .4em .4em 0; }
+.note.green { border-color: var(--verde); background: #e3ebe4; }
+.note p:last-child { margin-bottom: 0; }
+.tag { display: inline-block; border: 1px dashed var(--ocre); color: var(--grana); border-radius: 1em; padding: .1em .7em; font-size: .85em; background: var(--ocre-claro); }
+
+.cards { display: grid; gap: 1em; }
+.cards.three { grid-template-columns: repeat(3, 1fr); }
+.cards.two { grid-template-columns: repeat(2, 1fr); }
+.card { background: var(--hoja); border: 1px solid var(--linea); border-top: .3em solid var(--grana); border-radius: .4em; padding: 1em 1.2em; }
+.card h3 { font-family: var(--serif); font-size: 1.35em; margin: 0 0 .4em; line-height: 1.15; }
+.card p, .card li { font-size: 1em; }
+.card .ask { color: var(--grana); font-weight: 700; }
+
+table.metrics { width: 100%; border-collapse: collapse; font-size: 1em; }
+table.metrics th, table.metrics td { text-align: left; padding: .42em .6em; border-bottom: 1px solid var(--linea); vertical-align: top; line-height: 1.3; }
+table.metrics th { font-size: .8em; text-transform: uppercase; letter-spacing: .08em; color: var(--suave); }
+table.metrics td.num { font-family: var(--serif); font-size: 1.3em; font-weight: 700; color: var(--grana); white-space: nowrap; }
+table.metrics tr.weak td.num { color: var(--suave); }
+
+.cover { grid-template-rows: 1fr auto; }
+.cover .two { grid-template-columns: 1fr 34%; align-items: stretch; }
+.cover .lead { font-family: var(--serif); font-size: 1.7em; line-height: 1.3; max-width: 30em; margin-top: .6em; }
+.cover .facts { display: flex; gap: 2.2em; margin-top: 2em; }
+.cover .facts div { border-top: .25em solid var(--ocre); padding-top: .4em; }
+.cover .facts b { display: block; font-family: var(--serif); font-size: 2.2em; color: var(--grana); }
+.cover .facts span { font-size: .95em; color: var(--suave); }
+
+/* Navegación en pantalla: una diapositiva a la vez con ← → o clic; ?todas muestra la lista. */
+body.present .deck { height: 100vh; justify-content: center; padding: 0; }
+body.present .slide { display: none; }
+body.present .slide.on { display: grid; }
+.hint { position: fixed; right: 1em; bottom: .6em; color: #bdb3a4; font: 12px var(--sans); }
+body:not(.present) .hint { display: none; }
+
+@media print {
+  @page { size: letter; margin: 0; }
+  @page diapositiva { size: 16in 9in; margin: 0; }
+  html, body { background: var(--papel); }
+  .deck { display: block; padding: 0; }
+  .slide, body.present .slide { page: diapositiva; display: grid !important; --w: 16in; width: 16in; height: 9in; font-size: calc(16in / 80); box-shadow: none; page-break-after: always; break-after: page; }
+  .hint { display: none; }
+}
+
+/* ---------- Hoja de una página ---------- */
+.sheet { width: 8.5in; min-height: 11in; margin: 2vh auto; background: var(--papel); padding: .45in .55in .35in; font-size: 9.3pt; line-height: 1.36; position: relative; }
+.sheet::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 6px; background: repeating-linear-gradient(90deg, var(--grana) 0 18px, var(--ocre) 18px 22px, var(--grana) 22px 40px, var(--ocre-claro) 40px 44px); }
+.sheet h1 { font-family: var(--serif); font-size: 30pt; margin: 0; line-height: 1; }
+.sheet .sub { font-family: var(--serif); font-size: 12.5pt; margin: .25em 0 .6em; color: var(--tinta); }
+.sheet h2 { font-family: var(--serif); font-size: 12pt; color: var(--grana); margin: .75em 0 .3em; }
+.sheet p, .sheet li { margin: 0 0 .35em; }
+.sheet ul, .sheet ol { padding-left: 1.15em; margin: 0; }
+.sheet .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1.6em; }
+.sheet .facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: .8em; margin: .4em 0 .2em; }
+.sheet .facts div { border-top: 3px solid var(--ocre); padding-top: .25em; font-size: 9pt; color: var(--suave); }
+.sheet .facts b { display: block; font-family: var(--serif); font-size: 17pt; color: var(--grana); }
+.sheet .shots { display: grid; grid-template-columns: 1fr 1fr; gap: .8em; margin: .6em 0 .1em; }
+.sheet .shots figure { margin: 0; }
+.sheet .shots img { width: 100%; height: 1.6in; object-fit: cover; object-position: top left; border: 1px solid var(--linea); border-radius: 4px; display: block; }
+.sheet .shots figcaption { font-size: 8pt; color: var(--suave); margin-top: .2em; }
+.sheet .note { font-size: 9.4pt; margin-top: .6em; }
+.sheet code { font-size: 9pt; background: var(--ocre-claro); padding: 0 .25em; border-radius: 3px; }
+.sheet footer { margin-top: .8em; font-size: 8.4pt; color: var(--suave); border-top: 1px solid var(--linea); padding-top: .4em; }
+@media print {
+  .sheet { margin: 0; width: 8.5in; height: 11in; overflow: hidden; }
+  .sheet-page { background: var(--papel); }
+}
+@media screen and (max-width: 860px) {
+  .sheet { width: auto; min-height: 0; margin: 0; padding: 24px 16px; }
+  .sheet .cols, .sheet .shots { grid-template-columns: 1fr; }
+  .sheet .facts { grid-template-columns: 1fr 1fr; }
+}
+/* Diapositivas solo de texto: letra más grande. */
+.roomy .card { padding: 1.3em 1.5em; }
+.roomy .card h3 { font-size: 1.6em; }
+.roomy .card p, .roomy .card li { font-size: 1.25em; }
+.roomy .note p { font-size: 1.25em; }
+.strip { display: flex; flex-wrap: wrap; gap: .5em .9em; align-items: baseline; margin-top: 1.2em; }
+.strip .label { font-size: 1.1em; color: var(--suave); margin-right: .3em; }
+.strip span.form { font-family: var(--serif); font-size: 1.55em; font-style: italic; }
+.strip span.form small { font-family: var(--sans); font-style: normal; font-size: .55em; color: var(--suave); margin-left: .2em; }
+/* Cuando el cuerpo de la diapositiva es la rejilla, ocupa su pista (no 100 % más el margen). */
+.slide .body.two { height: auto; }
