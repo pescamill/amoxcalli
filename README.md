@@ -41,7 +41,7 @@ docker build -t amoxcalli .
 docker run -p 7860:7860 amoxcalli
 ```
 
-**Publicarlo gratis** (Hugging Face Spaces, una máquina virtual o Cloud Run) paso a paso: [docs/DESPLIEGUE.md](docs/DESPLIEGUE.md). Con todos los índices construidos usa unos 760 MB de RAM: hace falta un plan de al menos 1 GB.
+**Publicarlo** paso a paso (Google Cloud Run, gratis con poco tráfico; Hugging Face Spaces con PRO; una máquina virtual): [docs/DESPLIEGUE.md](docs/DESPLIEGUE.md). Con todos los índices construidos usa unos 760 MB de RAM: hace falta un plan de al menos 1 GB.
 
 **Un recorrido de cinco minutos:** abre **Lecturas → Reconocer una flor**, pulsa *NIQUITTA* (*ni-qu-itta*, «yo-lo-veo») y muestra la glosa interlineal. Escribe *kuali* en la búsqueda: aparece *cualli* con sus grafías por variedad y sus fuentes. Pregunta *¿cómo se dice mujer?* en **Preguntar** y pulsa las citas de la explicación. Abre **Más → Dioses y calendario** y busca *Huitzilopoxtli*.
 

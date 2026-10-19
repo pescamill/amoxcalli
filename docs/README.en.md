@@ -41,7 +41,7 @@ docker build -t amoxcalli .
 docker run -p 7860:7860 amoxcalli
 ```
 
-**Hosting it for free** (Hugging Face Spaces, a virtual machine or Cloud Run), step by step: [DEPLOYMENT.md](DEPLOYMENT.md). With every index built the server uses about 760 MB of RAM, so a plan needs at least 1 GB.
+**Hosting it**, step by step (Google Cloud Run, free with low traffic; Hugging Face Spaces with PRO; a virtual machine): [DEPLOYMENT.md](DEPLOYMENT.md). With every index built the server uses about 760 MB of RAM, so a plan needs at least 1 GB.
 
 **A five-minute tour:** open **Lecturas → Reconocer una flor**, click *NIQUITTA* (*ni-qu-itta*, "I-it-see") and show the interlinear gloss. Type *kuali* in the search box: *cualli* appears with its spellings by variety and its sources. Ask *¿cómo se dice mujer?* ("how do you say woman?") in **Preguntar** and click the citations in the explanation. Open **Más → Dioses y calendario** and search for *Huitzilopoxtli*.
 
