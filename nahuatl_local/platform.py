@@ -169,6 +169,7 @@ def main():
     serve.add_argument('--host',default='127.0.0.1',help='Interfaz de escucha (por omisión solo este equipo).')
     serve.add_argument('--port',type=int,default=8766)
     serve.add_argument('--public-origin',help='Origen HTTPS de un proxy (https://dominio); se acepta como Host y como Origin de escritura.')
+    serve.add_argument('--open',action='store_true',help='Abre la aplicación en el navegador al arrancar (lo usan los lanzadores de doble clic).')
     serve.add_argument('--demo',action='store_true',help='Demostración pública de solo lectura: rechaza aportaciones, perfiles y grabaciones.')
     # El modelo local se archivó (experiments/llm/); estas opciones se aceptan y no hacen nada, para no romper arranques guardados.
     for retired in ('--enable-model','--disable-model'):serve.add_argument(retired,action='store_true',help=argparse.SUPPRESS)
@@ -183,7 +184,11 @@ def main():
         store=CorpusStore(args.db)
         if args.command=='serve':
             httpd=make_server(store,args.host,args.port,args.public_origin,prewarm=True,explain_model=args.explain_model,demo=args.demo)
-            print(f'Amoxcalli · http://127.0.0.1:{httpd.server_address[1]} · Voces en /aportar',flush=True)
+            url=f'http://127.0.0.1:{httpd.server_address[1]}'
+            print(f'Amoxcalli · {url} · Voces en /aportar',flush=True)
+            if args.open:
+                import webbrowser
+                threading.Timer(0.5,webbrowser.open,args=(url,)).start()
             try:httpd.serve_forever()
             except KeyboardInterrupt:pass
             finally:httpd.server_close()

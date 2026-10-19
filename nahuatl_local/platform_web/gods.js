@@ -20,7 +20,7 @@ function godsSource(s){
  return `<li class="gods-source">${where}${quote}<small>${esc(s.license||'')}${s.attribution?' · '+esc(s.attribution):''}${s.automatic?' · extracción automática':''}</small></li>`;
 }
 function godsSources(list,label='Fuentes'){return list?.length?`<details class="gods-sources"><summary>${esc(label)} · ${list.length}</summary><ul>${list.map(godsSource).join('')}</ul></details>`:'';}
-function godsPassage(r){return `<article class="research-passage gods-passage"><div class="passage-meta"><span>${esc(r.variant_label)}</span><span>${esc(r.document||'Obra no indicada')}</span><span>${esc(r.id)}</span></div><p class="nah-passage" lang="nci">${r.form?askHighlightSafe(r.nah,r.form):esc(r.nah)}</p><p class="spanish-passage">${esc(r.es)}</p><p class="meta">${esc(r.verification)}</p></article>`;}
+function godsPassage(r){return `<article class="research-passage gods-passage"><div class="passage-meta"><span>${esc(r.variant_label)}</span><span>${esc(r.document||'Obra no indicada')}</span><span>${esc(r.id)}</span></div><p class="nah-passage" lang="nci">${r.form?askHighlightSafe(r.nah,r.form):esc(r.nah)}</p><p class="spanish-passage">${esc(r.es)}</p><p class="meta">${esc(r.verification)} · ${reportLink(r.id)}</p></article>`;}
 function askHighlightSafe(text,form){const i=text.indexOf(form);return i<0?esc(text):`${esc(text.slice(0,i))}<mark>${esc(form)}</mark>${esc(text.slice(i+form.length))}`;}
 function godsImage(row,caption){return row?.image&&typeof pictographicImage==='function'?pictographicImage(row,caption):'';}
 function godsNav(view){
@@ -105,7 +105,7 @@ async function renderGodsCard(eid){
  if(e.id.startsWith('trecena-')){location.hash='#dioses/calendario/'+e.id;return;}
  const g=state.gods,figurePages=e.tlachia.filter(t=>t.role==='figure'),lords=e.tlachia.filter(t=>t.role==='night_lord'),attire=e.tlachia.filter(t=>t.role==='attire');
  const trecenas=g.calendar.trecenas.filter(t=>t.figures.includes(e.id)),veintenas=g.calendar.veintenas.filter(v=>v.dedication?.target===e.id);
- $('content').innerHTML=back+heading(e.kind_label,e.name,(o=>o.length?'También: '+o.join(', '):'')(e.names.filter(x=>norm(x)!==norm(e.name))))+godsReview(e.review)
+ $('content').innerHTML=back+heading(e.kind_label,e.name,(o=>o.length?'También: '+o.join(', '):'')(e.names.filter(x=>norm(x)!==norm(e.name))))+godsReview(e.review)+` <span class="gods-report">${reportLink(e.id)}</span>`
   +`<div class="gods-columns"><section class="gods-section"><h2>Qué dicen las fuentes</h2>${e.attributes.length?`<ul class="gods-attributes">${e.attributes.map(a=>`<li><p>${esc(a.text)} ${a.written_by==='template'?'<span class="automatic-tag">Automático</span>':''}</p>${godsSources(a.sources)}</li>`).join('')}</ul>`:''}
 ${e.senses.length?`<h3>En el diccionario</h3><ul class="gods-attributes">${e.senses.map(s=>`<li>${esc(s.gloss)}${godsSources([s],'Fuente')}</li>`).join('')}</ul>`:''}
 ${e.epithets.length?`<h3>Otros nombres</h3><ul class="gods-attributes">${e.epithets.map(x=>`<li lang="nci">${esc(x.name)}${godsSources(x.sources,'Fuente')}</li>`).join('')}</ul>`:''}

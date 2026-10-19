@@ -6,42 +6,39 @@
 
 Amoxcalli brings together guided readings, short grammar units, a word analyzer, a spelling search (classical, modern and regional spellings), a sourced dictionary, documented glyphs, cards on deities and the calendar, and a bilingual archive of 16,111 passages. Every result says where it comes from: a dictionary entry, an archive passage, a pictographic record or a rule. **Without evidence, the app abstains.** Everything runs without an LLM, on the Python standard library.
 
-**Status (17 October 2026).** You can read, practise, analyze words, search in any spelling, browse deities and the calendar, and contribute. Automatic content (reading help, Wiktionary entries, new units and readings) is labelled as such and **awaits linguistic review**. Still missing: checking against primary sources and a trial with beginners — the collaborations we are looking for ([pilot proposal](PILOTO_INSTITUCIONAL.md), [purpose](PROPOSITO.md), both in Spanish). The current plan is [ROADMAP.md](ROADMAP.md).
+**Status (18 October 2026).** Distributed as a download to use on your own computer. You can read, practise, analyze words, search in any spelling, browse deities and the calendar, and contribute. Automatic content (reading help, Wiktionary entries, new units and readings) is labelled as such and **awaits linguistic review**. Still missing: checking against primary sources and a trial with beginners — the collaborations we are looking for ([pilot proposal](PILOTO_INSTITUCIONAL.md), [purpose](PROPOSITO.md), both in Spanish). The current plan is [ROADMAP.md](ROADMAP.md).
 
-## Try it
+## Download and use
 
-With Python 3.11+ and git:
+Amoxcalli runs on your own computer: no internet or account needed, and whatever you save stays on your machine.
+
+1. Install **Python 3.11 or newer** from <https://www.python.org/downloads/> (on Windows, tick "Add python.exe to PATH").
+2. Download the latest release: [**Download Amoxcalli (.zip)**](https://github.com/pescamill/amoxcalli/releases/latest) and unzip it.
+3. Double-click **`Abrir Amoxcalli.command`** (macOS) or **`Abrir Amoxcalli.bat`** (Windows). It opens in your browser at <http://127.0.0.1:8766>; the first time it prepares the analysis for about a minute. Keep the black window open while you use it.
+
+On macOS the first launch may show an "unidentified developer" warning: right-click the file → **Open** → **Open**.
+
+From a terminal (Linux, or if you prefer):
 
 ```bash
 git clone https://github.com/pescamill/amoxcalli.git
 cd amoxcalli
-make demo
+make demo        # or: python3 -m nahuatl_local.platform serve --open
 ```
 
-Open <http://127.0.0.1:8766>. The first time, `make demo` builds the derived analysis caches (about a minute) and starts the server; meanwhile the app shows «Preparando el análisis…». Afterwards it starts in seconds. One process serves the app, Voces (`/aportar`) and the API:
+<details><summary>Server options</summary>
 
-```bash
-bash scripts/amoxcalli.sh serve [options]   # stops an earlier server on the same port
-```
+`bash scripts/amoxcalli.sh serve [options]` (or `python3 -m nahuatl_local.platform serve [options]`):
 
 | Option | Effect |
 | --- | --- |
+| `--open` | Open the app in the browser on start. |
 | `--host`, `--port` | Interface and port (default `127.0.0.1:8766`). Phone on the same network: [WEBAPP.md](WEBAPP.md) (ES). |
-| `--demo` | Public read-only demo: everything can be browsed, but no profiles, contributions or recordings are stored. |
-| `--public-origin https://domain` | Behind an HTTPS proxy: accept that Host and require it as the Origin of writes. |
 | `--db path` | Local database of profiles, contributions and proposals (default `data/community/voces.sqlite3`). Goes before `serve`. |
 | `--explain-model claude` | Claude-written explanations in Ask; sends the question and the cited passages to the Anthropic API. Without it, nothing leaves the machine. |
+| `--demo`, `--public-origin` | For installing it on a public server: [DEPLOYMENT.md](DEPLOYMENT.md). |
 
-On Windows or without `make`: `py -m nahuatl_local.platform serve` with the same options.
-
-With Docker (an image of about 230 MB, in demo mode):
-
-```bash
-docker build -t amoxcalli .
-docker run -p 7860:7860 amoxcalli
-```
-
-**Hosting it for free** (Hugging Face Spaces, a virtual machine or Cloud Run), step by step: [DEPLOYMENT.md](DEPLOYMENT.md). With every index built the server uses about 760 MB of RAM, so a plan needs at least 1 GB.
+</details>
 
 **A five-minute tour:** open **Lecturas → Reconocer una flor**, click *NIQUITTA* (*ni-qu-itta*, "I-it-see") and show the interlinear gloss. Type *kuali* in the search box: *cualli* appears with its spellings by variety and its sources. Ask *¿cómo se dice mujer?* ("how do you say woman?") in **Preguntar** and click the citations in the explanation. Open **Más → Dioses y calendario** and search for *Huitzilopoxtli*.
 
