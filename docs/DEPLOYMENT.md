@@ -46,15 +46,41 @@ Measured on 17 October 2026: with every index built the server uses about **760 
 
 | Option | Fits | Notes |
 |---|---|---|
-| **Hugging Face Spaces (Docker, CPU basic)** | Yes, recommended | Free, HTTPS and a public URL; enough memory. Sleeps after a while without visits and wakes when opened (a few seconds once the image is built). Ephemeral disk: use `--demo`. |
 | Oracle Cloud "Always Free" (virtual machine) | Yes | Always on, plenty of memory; more steps (install Docker or Python, open the port, set up HTTPS). |
-| Google Cloud Run (free tier) | Yes, with care | Scales to zero and bills by use; needs a billing account. Set 1 GiB of memory. |
+| **Google Cloud Run (free tier)** | Yes, recommended | Scales to zero: no visits, no usage; a low-traffic demo fits the monthly free tier. Needs an account with billing enabled. Tutorial below. |
+| Hugging Face Spaces (Docker) | Paid only | Since October 2026, Docker Spaces, even on CPU basic, require the PRO subscription (about USD 9 a month). With PRO it is the simplest option: tutorial below. |
 | 512 MB free plans (Render, Koyeb and similar) | No | The server runs out of memory while building its indexes. |
 | GitHub Pages or other static hosting | No | Amoxcalli needs its Python server for analysis and search. |
 
-## 5. Tutorial: Hugging Face Spaces
+## 5. Tutorial: Google Cloud Run (free with low traffic)
 
-1. Create an account at <https://huggingface.co> and a new **Space**: SDK **Docker**, blank template, **CPU basic** hardware (free). Decide whether it is public or private: a public Space publishes the project's code and data.
+1. Create an account at <https://cloud.google.com>, a project, and enable billing (the free tier covers a low-traffic demo; you can set a budget alert at USD 1).
+2. Install the `gcloud` tool (<https://cloud.google.com/sdk/docs/install>) and log in:
+
+   ```bash
+   gcloud auth login
+   gcloud config set project YOUR_PROJECT
+   ```
+
+3. From the project folder, build and publish the container:
+
+   ```bash
+   gcloud run deploy amoxcalli --source . --region us-central1 --allow-unauthenticated --memory 1Gi
+   ```
+
+4. Copy the URL it prints (`https://amoxcalli-….run.app`) and give it to the server:
+
+   ```bash
+   gcloud run services update amoxcalli --region us-central1 --set-env-vars AMOXCALLI_PUBLIC_ORIGIN=https://amoxcalli-XXXX.run.app
+   ```
+
+5. Open the URL. The first visit after a quiet period takes a few seconds to wake up.
+
+To update it, repeat step 3.
+
+## 6. Tutorial: Hugging Face Spaces (requires PRO)
+
+1. Create an account at <https://huggingface.co> and a new **Space**: SDK **Docker**, blank template, **CPU basic** hardware (with the PRO subscription). Decide whether it is public or private: a public Space publishes the project's code and data.
 2. Install the tool and log in (it asks for a write token from your account):
 
    ```bash
@@ -77,7 +103,7 @@ Measured on 17 October 2026: with every index built the server uses about **760 
 
 To update it, repeat step 3.
 
-## 6. Tutorial: any server with Docker
+## 7. Tutorial: any server with Docker
 
 On a virtual machine (Oracle Cloud, a VPS or your own computer) with Docker:
 
