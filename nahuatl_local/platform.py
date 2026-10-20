@@ -3,6 +3,7 @@ import argparse
 import hashlib
 import json
 import threading
+from collections import OrderedDict
 from pathlib import Path
 from .community import ASSETS as COMMUNITY_WEB, Problem, ROOT, DEFAULT_DB, text, routes as community_routes
 from .corpus import CorpusStore
@@ -12,6 +13,7 @@ from .pictography import public_catalog
 from .cards import Cards, digest as records_digest, public_path
 from .stems import WordStudy
 from .evidence import Evidence
+from .topics import TopicIndex
 from .terms import TermIndex
 from .spelling import Search as SpellingSearch, routes as spelling_routes
 from .entities import routes as entity_routes
@@ -41,6 +43,8 @@ def make_app(store, word_study=None, explain_writer=None):
     evidence_index=Evidence(word_study,terms=terms)
     # Grafías: escribir como uno escribe y ver las posibilidades con sus fuentes (sobre el índice de términos).
     spellings=SpellingSearch(terms)
+    # Preguntar por tema: lecturas, fichas, unidades, notas y obras relacionadas con una frase (sin modelo).
+    topics=TopicIndex(terms)
     learning=Learning(archive)
     # Unidades de gramática: borradores generados, validados contra el análisis y con su estado en la cola editorial.
     units=Units(terms,store.public_records)
@@ -78,10 +82,38 @@ def make_app(store, word_study=None, explain_writer=None):
         try:return request.reply(word_study.word(request.arg('w'),request.arg('exclude') or None))
         except ValueError as error:raise Problem(str(error)) from None
 
+    # Respuestas recientes: el contenido no cambia mientras el servidor corre, así que una consulta repetida
+    # (una demo, un taller con varias personas) se responde al instante y sin ocupar el intérprete.
+    ask_cache=dict(items=OrderedDict(),lock=threading.Lock())
+
     def ask(request):
-        try:result=evidence_index.ask(request.arg('q'))
-        except ValueError as error:raise Problem(str(error)) from None
-        return request.reply(dict(result,explanation=explain(result),explain_models=['extractive']+(['claude'] if explain_writer else []),preparing=word_study.pending()))
+        query=request.arg('q')
+        key=query.strip() if isinstance(query,str) else query
+        with ask_cache['lock']:
+            hit=ask_cache['items'].get(key)
+            if hit is not None:ask_cache['items'].move_to_end(key)
+        if hit is not None and not word_study.pending():return request.reply(hit)
+        value=_ask(query)
+        if not value.get('preparing'):
+            with ask_cache['lock']:
+                ask_cache['items'][key]=value
+                if len(ask_cache['items'])>512:ask_cache['items'].popitem(last=False)
+        return request.reply(value)
+
+    def _ask(query):
+        try:result=evidence_index.ask(query)
+        except ValueError:
+            # Una frase o una pregunta («dioses de la lluvia», «¿quién fue Quetzalcóatl?»): búsqueda por tema.
+            try:return dict(topics.search(query),preparing=word_study.pending())
+            except ValueError as error:raise Problem(str(error)) from None
+        # Una sola palabra: su respuesta de siempre y, además, las lecturas, fichas y obras donde aparece como tema.
+        try:
+            topic=topics.search(query)
+            related=None if topic['abstained'] else dict(interpreted=topic['interpreted'],
+                groups=[g for g in topic['groups'] if g['id'] not in ('passages','senses')])
+        except ValueError:related=None
+        return dict(result,explanation=explain(result),explain_models=['extractive']+(['claude'] if explain_writer else []),
+                    preparing=word_study.pending(),related=related)
 
     def preparation():
         # Etapas del arranque en frío: la interfaz muestra «Preparando el análisis…» con este avance.
@@ -143,7 +175,7 @@ def make_app(store, word_study=None, explain_writer=None):
     router.add('DELETE','/api/proposals/',withdraw_proposal,prefix=True)
     app=handler(store,router,STATIC)
     # Orden de preparación: lo que pide la primera consulta (palabra, Archivo, Preguntar) antes que las pistas.
-    app.warm=lambda:(word_study.core(),terms._build(),spellings._build(),word_study.hints(wait=True))
+    app.warm=lambda:(word_study.core(),terms._build(),spellings._build(),word_study.hints(wait=True),topics._build())
     return app
 
 

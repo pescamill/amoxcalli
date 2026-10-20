@@ -3,7 +3,19 @@
 // (campos originales con procedencia: forma/normalización, acepción, pasaje, glifo), también por ID.
 // Recuperación por raíz y por grafía laxa; no se usa un LLM ni se inventa una traducción.
 
-const askExamples=['nocal','kuali','tlajtoli','¿cómo se dice mujer?','¿Qué significa xochitl?'];
+const askExamples=['nocal','kuali','¿cómo se dice mujer?','¿qué dice sobre el calendario?','dioses de la lluvia','¿quién fue Quetzalcóatl?'];
+// Búsqueda por tema: lecturas, fichas, unidades, notas y obras, cada una con su motivo.
+function topicItemHTML(it){
+ const title=it.href?`<a href="${esc(it.href)}">${esc(it.title)}</a>`:esc(it.title);
+ return `<li class="topic-item" data-topic-id="${esc(it.id)}"><p class="topic-head"><span class="pill">${esc(it.label)}</span> <strong>${title}</strong></p>${it.kind==='passage'?`<p class="nah-passage" lang="nci">${esc(it.nah)}</p>`:''}${it.snippet?`<p class="topic-snippet">${esc(it.snippet)}</p>`:''}${it.kind==='work'?`<p class="meta">${esc(String(it.passages))} pasajes · ${esc(it.variety)}</p>`:''}<p class="ask-why">${esc(it.why)}${it.review?' · '+esc(it.review):''}</p></li>`;
+}
+function topicGroupsHTML(groups){return (groups||[]).map(g=>`<section class="topic-group"><h2>${esc(g.label)}</h2><ul class="topic-list">${g.items.map(topicItemHTML).join('')}</ul></section>`).join('');}
+function topicResultHTML(r){
+ if(r.abstained)return `<section class="ask-result ask-abstained"><h2>Sin contenido relacionado</h2><p>${esc(r.reason)}</p><a href="#investigar/${encodeURIComponent(r.query)}">Buscar «${esc(r.query)}» en el archivo completo →</a></section>`;
+ const ex=r.interpreted.expansions||[];
+ return `<section class="ask-result topic-result"><p class="ask-understood">Tema: <strong>${esc(r.interpreted.terms.join(', '))}</strong>${ex.length?` · también pasajes con la raíz que el corpus paralelo traduce así (${ex.map(e=>esc(e.word)).join(', ')})`:''}</p>${topicGroupsHTML(r.groups)}<p class="ask-note">${esc(r.note)} Sin llamadas a modelos.</p></section>`;
+}
+function relatedHTML(related){return related&&related.groups.length?`<section class="topic-related"><h2>También en lecturas, fichas y obras</h2>${topicGroupsHTML(related.groups)}</section>`:'';}
 const askCache=new Map();
 function askEvidence(query){
  if(!askCache.has(query))askCache.set(query,api('/api/ask?'+new URLSearchParams({q:query})).then(d=>{if(d.preparing?.length)askCache.delete(query);return d;},e=>{askCache.delete(query);throw e;}));
@@ -68,7 +80,7 @@ function askResultHTML(r){
 }
 async function renderAsk(id){
  const query=decodeHash(id||''),origin=routeReadingOrigin();
- $('content').innerHTML=readingReturnHTML(origin)+heading('Preguntar con evidencia','¿Qué significa? ¿Cómo se dice?','Una palabra náhuatl en cualquier grafía, una palabra en español o el ID de una ficha. La respuesta reúne sus grafías, glifos, entradas del diccionario, pasajes del archivo y las fichas con sus originales; cada resultado dice por qué aparece.')+
+ $('content').innerHTML=readingReturnHTML(origin)+heading('Preguntar con evidencia','¿Qué significa? ¿Cómo se dice? ¿Qué hay sobre…?','Una palabra náhuatl en cualquier grafía, una palabra en español, una pregunta sobre un tema (los dioses, el calendario, las flores) o el ID de una ficha. La respuesta reúne sus grafías, glifos, entradas del diccionario, pasajes del archivo y las fichas con sus originales; cada resultado dice por qué aparece.')+
   `<p class="ask-examples">Escribe en la búsqueda de arriba o prueba: ${askExamples.map(q=>`<a href="#preguntar/${encodeURIComponent(q)}">${esc(q)}</a>`).join(' · ')}</p><div id="ask-entity" hidden></div><div id="ask-status" role="status" aria-live="polite"></div><div id="ask-results"></div><div id="ask-cards" aria-live="polite"></div>`;
  focusReadingReturn();
  if(!query)return;
@@ -83,7 +95,9 @@ async function renderAsk(id){
  try{
   const r=await askEvidence(query);
   if(!current())return;
-  $('ask-status').textContent='';$('ask-results').innerHTML=askResultHTML(r);preserveReadingLinks($('ask-results'),origin);bindAskResult($('ask-results'),query);answered=true;
+  // Un tema sin contenido relacionado no es una respuesta: las fichas (si las hay) toman su lugar.
+  const topicAbstained=r.mode==='topic'&&r.abstained;
+  $('ask-status').textContent=topicAbstained?r.reason:'';$('ask-results').innerHTML=r.mode==='topic'?(topicAbstained?'':topicResultHTML(r)):askResultHTML(r)+relatedHTML(r.related);preserveReadingLinks($('ask-results'),origin);bindAskResult($('ask-results'),query);answered=!topicAbstained;
  }catch(e){if(current())$('ask-status').textContent=e.message;}
  // Las fichas se pintan al llegar, sin retener la página (render no las espera).
  cards.then(data=>{

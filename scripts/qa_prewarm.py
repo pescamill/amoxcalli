@@ -10,7 +10,8 @@ import urllib.error
 import urllib.request
 
 PATHS = ('/api/corpus', '/api/learning', '/api/units', '/api/entities', '/api/word?w=calli', '/api/ask?q=calli',
-         '/api/terms?q=calli', '/api/ask/cards?q=calli', '/api/research?query=chachalaca&variant=nci')
+         '/api/terms?q=calli', '/api/ask/cards?q=calli', '/api/research?query=chachalaca&variant=nci',
+         '/api/ask?q=dioses%20de%20la%20lluvia')
 
 
 def prewarm(origin):
