@@ -28,11 +28,14 @@ Una sola tabla, regenerable con `make eval` (`python -m nahuatl_local.evaluate_a
 | Preguntar | `evaluation/evidence-questions-v1.json` | Abstención falsa | 0 % | 0 % | 0 % |
 | Preguntar | `evaluation/evidence-questions-v1.json` | Abstención correcta | 100 % | 33.3 % | 60 % |
 | Preguntar | `evaluation/evidence-questions-v1.json` | Explicaciones con citas válidas |  |  | 46/46 |
+| Preguntar por tema | `evaluation/topic-questions-v1.json` | Tema: elemento esperado en primer lugar | 100 % | 80 % |  |
+| Preguntar por tema | `evaluation/topic-questions-v1.json` | Tema: elemento esperado entre los 5 primeros | 100 % | 95 % |  |
+| Preguntar por tema | `evaluation/topic-questions-v1.json` | Tema: abstención correcta | 100 % | 100 % |  |
 | Fichas documentales | `configs/documentary-evaluation-v1.json` | Consultas completas | 121/123 | reserva sin usar |  |
 | Fichas documentales | `configs/documentary-evaluation-v1.json` | Citas válidas | 121/121 | reserva sin usar |  |
 | Fichas documentales | `configs/documentary-evaluation-v1.json` | Campos de referencia exactos | 780/790 | reserva sin usar |  |
 
-Detalle por componente: [morfología](#evaluación-del-analizador-morfológico), [términos](#evaluación-de-grupos-de-término), [grafías](#evaluación-del-buscador-de-grafías), [Preguntar](#evaluación-de-la-consulta-con-evidencia), [fichas documentales](#fichas-documentales-preguntar).
+Detalle por componente: [morfología](#evaluación-del-analizador-morfológico), [términos](#evaluación-de-grupos-de-término), [grafías](#evaluación-del-buscador-de-grafías), [Preguntar](#evaluación-de-la-consulta-con-evidencia), [tema](#búsqueda-por-tema), [fichas documentales](#fichas-documentales-preguntar).
 
 ## Evaluación del analizador morfológico
 
@@ -280,6 +283,19 @@ Redactor `explain-cited-v1` (extractive): 46 de 46 explicaciones pasan la valida
 
 - Un pasaje es pertinente si la forma señalada (o, en la línea base, alguna palabra náhuatl del pasaje) contiene la raíz esperada según la clave laxa. Es una aproximación automática.
 - El conjunto es pequeño y lo escribió el equipo técnico; las particiones separan desarrollo de prueba, no sustituyen la revisión de una persona experta.
+
+### Búsqueda por tema
+
+`topics-v1` · conjunto `topic-questions-v1` (escrito antes de construir la búsqueda). Acierto: un elemento esperado entre los 5 primeros.
+
+| Partición | n | Primer lugar | Entre los 5 primeros | Abstención correcta |
+|---|---:|---:|---:|---:|
+| dev | 9 | 100.0 % | 100.0 % | 100.0 % |
+| test | 21 | 80.0 % | 95.0 % | 100.0 % |
+
+Fallos:
+
+- `pájaros en la poesía` (test): lesson-draft:gen-cuicatl
 
 ## Fichas documentales (Preguntar)
 

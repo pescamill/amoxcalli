@@ -23,7 +23,8 @@ import sys
 import time
 
 from . import lexicon
-from . import evidence_evaluation, morphology_evaluation, spelling_evaluation, term_evaluation
+from . import evidence_evaluation, morphology_evaluation, spelling_evaluation, term_evaluation, topic_evaluation
+from .topics import TopicIndex
 from .cards import CONFIG as CARDS_CONFIG, Cards, PublicSources
 from .community import ROOT
 from .documentary_evaluation import public_path as battery_path, validate as validate_battery
@@ -32,9 +33,9 @@ from .terms import TermIndex
 REPORT = ROOT / 'reports' / 'evaluation.json'
 MARKDOWN = ROOT / 'reports' / 'EVALUACION.md'
 BATTERY = 'configs/documentary-evaluation-v1.json'
-COMPONENTS = ('morphology', 'terms', 'spelling', 'evidence', 'documentary')
+COMPONENTS = ('morphology', 'terms', 'spelling', 'evidence', 'topics', 'documentary')
 # Claves que dependen del equipo o de la corrida: se guardan, pero no forman parte de la compuerta.
-VOLATILE = {'seconds', 'build_seconds', 'mean_ms_per_query', 'timing'}
+VOLATILE = {'seconds', 'build_seconds', 'mean_ms_per_query', 'mean_ms', 'timing'}
 
 
 # ---------------------------------------------------------------------------
@@ -182,6 +183,12 @@ def table(report):
         rows.append(('Preguntar', gold, label, *(_pct(e[s][key]) if s in e else '—' for s in ('dev', 'test', 'all'))))
     x = report['evidence']['explanation']
     rows.append(('Preguntar', gold, 'Explicaciones con citas válidas', '', '', f"{x['valid']}/{x['items']}"))
+    if 'topics' in report:
+        tp = report['topics']['summary']
+        gold = '`evaluation/topic-questions-v1.json`'
+        for key, label in (('at1', 'Tema: elemento esperado en primer lugar'), ('at5', 'Tema: elemento esperado entre los 5 primeros'),
+                           ('abstention', 'Tema: abstención correcta')):
+            rows.append(('Preguntar por tema', gold, label, *(_pct(tp[s][key]) if s in tp else '—' for s in ('dev', 'test')), ''))
     d = report['documentary']['summary']['all']
     gold = f'`{BATTERY}`'
     rows.append(('Fichas documentales', gold, 'Consultas completas', f"{d['complete']}/{d['queries']}", 'reserva sin usar', ''))
@@ -208,11 +215,13 @@ def markdown(report):
     lines += ['', 'Detalle por componente: ' + ', '.join(f'[{n}](#{a})' for n, a in (
         ('morfología', 'evaluación-del-analizador-morfológico'), ('términos', 'evaluación-de-grupos-de-término'),
         ('grafías', 'evaluación-del-buscador-de-grafías'),
-        ('Preguntar', 'evaluación-de-la-consulta-con-evidencia'), ('fichas documentales', 'fichas-documentales-preguntar'))) + '.', '']
+        ('Preguntar', 'evaluación-de-la-consulta-con-evidencia'), ('tema', 'búsqueda-por-tema'),
+        ('fichas documentales', 'fichas-documentales-preguntar'))) + '.', '']
     lines += [demote(morphology_evaluation.markdown(report['morphology'])),
               demote(term_evaluation.markdown(report['terms'])),
               demote(spelling_evaluation.markdown(report['spelling'])),
               demote(evidence_evaluation.markdown(report['evidence'])),
+              demote(topic_evaluation.markdown(report['topics'])) if 'topics' in report else '',
               demote(documentary_markdown(report['documentary']))]
     return '\n'.join(lines)
 
@@ -232,7 +241,7 @@ def run(only=None, split='all', write_sample=False):
     out = {}
     wanted = only or COMPONENTS
     timing = {}
-    terms = TermIndex() if {'terms', 'spelling', 'documentary'} & set(wanted) else None
+    terms = TermIndex() if {'terms', 'spelling', 'topics', 'documentary'} & set(wanted) else None
     for name in COMPONENTS:
         if name not in wanted:
             continue
@@ -245,6 +254,8 @@ def run(only=None, split='all', write_sample=False):
             out[name] = spelling_evaluation.run(terms, split)
         elif name == 'evidence':
             out[name] = evidence_evaluation.run(split)
+        elif name == 'topics':
+            out[name] = topic_evaluation.run(split, TopicIndex(terms))
         elif split != 'test':
             out[name] = documentary(terms)
         timing[name] = round(time.perf_counter() - t0, 1)
@@ -270,7 +281,8 @@ def main(argv=None):
             if name in report:
                 print({'morphology': morphology_evaluation.markdown, 'terms': term_evaluation.markdown,
                        'spelling': spelling_evaluation.markdown,
-                       'evidence': evidence_evaluation.markdown, 'documentary': documentary_markdown}[name](report[name]))
+                       'evidence': evidence_evaluation.markdown, 'topics': topic_evaluation.markdown,
+                       'documentary': documentary_markdown}[name](report[name]))
         return
     report = run(write_sample=not args.check)
     report = dict(schema_version=1, generated_by='python -m nahuatl_local.evaluate_all', **report)

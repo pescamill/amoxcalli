@@ -1809,7 +1809,7 @@
     "definition": "Acierto si una palabra propuesta (normalizada) aparece en la definición de Molina de esa entrada. Molina es independiente del corpus paralelo; la coincidencia ortográfica del s. XVI es aproximada."
    }
   },
-  "seconds": 10.0
+  "seconds": 10.9
  },
  "terms": {
   "version": "terms-v1",
@@ -3433,10 +3433,10 @@
   "questions": "evidence-questions-v1",
   "split": "all",
   "relevance": "Un pasaje es pertinente si la forma señalada (o, en la línea base, alguna palabra náhuatl del pasaje) contiene la raíz esperada según la clave laxa. Es una aproximación automática.",
-  "build_seconds": 3.59,
+  "build_seconds": 3.79,
   "mean_ms_per_query": {
-   "exact_search": 117.1,
-   "evidence": 48.36
+   "exact_search": 124.18,
+   "evidence": 53.85
   },
   "model_calls": 0,
   "summary": {
@@ -5736,6 +5736,451 @@
    }
   ]
  },
+ "topics": {
+  "version": "topics-v1",
+  "questions": "topic-questions-v1",
+  "summary": {
+   "dev": {
+    "n": 9,
+    "at1": 100.0,
+    "at5": 100.0,
+    "abstention": 100.0
+   },
+   "test": {
+    "n": 21,
+    "at1": 80.0,
+    "at5": 95.0,
+    "abstention": 100.0
+   }
+  },
+  "items": [
+   {
+    "id": "d01",
+    "split": "dev",
+    "query": "calendario",
+    "abstain_item": false,
+    "at1": true,
+    "at5": true,
+    "top": [
+     "calendar-unit:calendario",
+     "axolotl-11595",
+     "calendar:xiuhpohualli",
+     "calendar:tonalpohualli",
+     "sense:sense-wikt-es-tonalamatl-ecb83cca"
+    ]
+   },
+   {
+    "id": "d02",
+    "split": "dev",
+    "query": "dioses",
+    "abstain_item": false,
+    "at1": true,
+    "at5": true,
+    "top": [
+     "lesson-draft:mito-himnos",
+     "entity:chicomecoatl",
+     "entity:tlalocan",
+     "axolotl-08953",
+     "axolotl-09193"
+    ]
+   },
+   {
+    "id": "d03",
+    "split": "dev",
+    "query": "Tlaloc",
+    "abstain_item": false,
+    "at1": true,
+    "at5": true,
+    "top": [
+     "entity:tlaloc",
+     "sense:sense-wikt-es-tlaloc-2e0375b7",
+     "axolotl-14154",
+     "axolotl-11127",
+     "axolotl-03632"
+    ]
+   },
+   {
+    "id": "d04",
+    "split": "dev",
+    "query": "casa",
+    "abstain_item": false,
+    "at1": true,
+    "at5": true,
+    "top": [
+     "lesson:casas-relatos",
+     "lesson:lugares",
+     "sign:signo-calli",
+     "note:absolutivo",
+     "axolotl-01865"
+    ]
+   },
+   {
+    "id": "d05",
+    "split": "dev",
+    "query": "gramática del objeto",
+    "abstain_item": false,
+    "at1": true,
+    "at5": true,
+    "top": [
+     "note:objeto",
+     "unit:sujeto-objeto"
+    ]
+   },
+   {
+    "id": "d06",
+    "split": "dev",
+    "query": "poesía náhuatl",
+    "abstain_item": false,
+    "at1": true,
+    "at5": true,
+    "top": [
+     "work:La tinta negra y roja (antología de poesía náhuatl)",
+     "axolotl-15097",
+     "lesson-draft:mito-soles",
+     "lesson-draft:gen-tonatiuh",
+     "lesson:flores-cantos"
+    ]
+   },
+   {
+    "id": "d07",
+    "split": "dev",
+    "query": "serpiente",
+    "abstain_item": false,
+    "at1": true,
+    "at5": true,
+    "top": [
+     "sign:signo-coatl",
+     "sense:sense-wikt-es-chichicoatl-4b74e746",
+     "sense:sense-coatl",
+     "sense:sense-wikt-es-coaiztlactli-27378cae",
+     "sense:sense-wikt-es-coanacatl-ab30b6d7"
+    ]
+   },
+   {
+    "id": "d08",
+    "split": "dev",
+    "query": "viento",
+    "abstain_item": false,
+    "at1": true,
+    "at5": true,
+    "top": [
+     "lesson:fuego-viento",
+     "sign:signo-ehecatl",
+     "axolotl-05096",
+     "axolotl-07237",
+     "sense:sense-ehecatl"
+    ]
+   },
+   {
+    "id": "d09",
+    "split": "dev",
+    "query": "programación en javascript",
+    "abstain_item": true,
+    "correct": true,
+    "top": []
+   },
+   {
+    "id": "t01",
+    "split": "test",
+    "query": "¿qué dice sobre el calendario?",
+    "abstain_item": false,
+    "at1": true,
+    "at5": true,
+    "top": [
+     "calendar-unit:calendario",
+     "axolotl-11595",
+     "calendar:xiuhpohualli",
+     "calendar:tonalpohualli",
+     "sense:sense-wikt-es-tonalamatl-ecb83cca"
+    ]
+   },
+   {
+    "id": "t02",
+    "split": "test",
+    "query": "dioses de la lluvia",
+    "abstain_item": false,
+    "at1": true,
+    "at5": true,
+    "top": [
+     "entity:tlalocan",
+     "entity:cinteotl",
+     "axolotl-08200",
+     "lesson-draft:mito-soles",
+     "entity:tamoanchan"
+    ]
+   },
+   {
+    "id": "t03",
+    "split": "test",
+    "query": "¿quién fue Quetzalcóatl?",
+    "abstain_item": false,
+    "at1": true,
+    "at5": true,
+    "top": [
+     "entity:quetzalcoatl",
+     "sense:sense-wikt-es-quetzalcoatl-e3703d1e",
+     "lesson-draft:mito-quetzalcoatl",
+     "axolotl-02755",
+     "axolotl-11766"
+    ]
+   },
+   {
+    "id": "t04",
+    "split": "test",
+    "query": "Quetzalcóatl deja Tollan",
+    "abstain_item": false,
+    "at1": true,
+    "at5": true,
+    "top": [
+     "lesson-draft:mito-quetzalcoatl",
+     "entity:quetzalcoatl",
+     "axolotl-13067",
+     "axolotl-12482",
+     "axolotl-11875"
+    ]
+   },
+   {
+    "id": "t05",
+    "split": "test",
+    "query": "lecturas sobre flores",
+    "abstain_item": false,
+    "at1": true,
+    "at5": true,
+    "top": [
+     "lesson:flores-cantos",
+     "lesson:flor",
+     "sign:signo-xochitl",
+     "axolotl-07877",
+     "axolotl-12677"
+    ]
+   },
+   {
+    "id": "t06",
+    "split": "test",
+    "query": "pájaros en la poesía",
+    "abstain_item": false,
+    "at1": false,
+    "at5": false,
+    "top": [
+     "lesson-draft:gen-cuicatl"
+    ]
+   },
+   {
+    "id": "t07",
+    "split": "test",
+    "query": "el sol y la luna",
+    "abstain_item": false,
+    "at1": true,
+    "at5": true,
+    "top": [
+     "lesson:cielo",
+     "lesson:sol-luna",
+     "axolotl-11087",
+     "axolotl-05233",
+     "axolotl-03906"
+    ]
+   },
+   {
+    "id": "t08",
+    "split": "test",
+    "query": "dios del fuego",
+    "abstain_item": false,
+    "at1": false,
+    "at5": true,
+    "top": [
+     "lesson:fuego-viento",
+     "entity:xiuhtecuhtli",
+     "entity:huitzilopochtli",
+     "entity:mictlantecuhtli",
+     "entity:tloque-nahuaque"
+    ]
+   },
+   {
+    "id": "t09",
+    "split": "test",
+    "query": "diosa del maíz",
+    "abstain_item": false,
+    "at1": true,
+    "at5": true,
+    "top": [
+     "entity:cinteotl",
+     "entity:tlalocan"
+    ]
+   },
+   {
+    "id": "t10",
+    "split": "test",
+    "query": "el lugar de los muertos",
+    "abstain_item": false,
+    "at1": true,
+    "at5": true,
+    "top": [
+     "entity:mictlan",
+     "sense:sense-wikt-es-mictlan-571ad215",
+     "axolotl-10909",
+     "axolotl-09506",
+     "entity:mictlantecuhtli"
+    ]
+   },
+   {
+    "id": "t11",
+    "split": "test",
+    "query": "los días del tonalpohualli",
+    "abstain_item": false,
+    "at1": true,
+    "at5": true,
+    "top": [
+     "calendar:tonalpohualli",
+     "calendar-unit:calendario",
+     "sign:signo-acatl",
+     "sign:signo-atl",
+     "sign:signo-calli"
+    ]
+   },
+   {
+    "id": "t12",
+    "split": "test",
+    "query": "las veintenas del año",
+    "abstain_item": false,
+    "at1": true,
+    "at5": true,
+    "top": [
+     "calendar:xiuhpohualli",
+     "veintena:veintena-atemoztli",
+     "veintena:veintena-atlcahualo",
+     "veintena:veintena-ochpaniztli",
+     "veintena:veintena-tecuilhuitontli"
+    ]
+   },
+   {
+    "id": "t13",
+    "split": "test",
+    "query": "prefijos posesivos",
+    "abstain_item": false,
+    "at1": true,
+    "at5": true,
+    "top": [
+     "note:posesivos",
+     "note:locativos"
+    ]
+   },
+   {
+    "id": "t14",
+    "split": "test",
+    "query": "plural de los sustantivos",
+    "abstain_item": false,
+    "at1": true,
+    "at5": true,
+    "top": [
+     "note:plurales",
+     "note:absolutivo",
+     "unit:absolutivo",
+     "note:sujeto",
+     "note:posesivos"
+    ]
+   },
+   {
+    "id": "t15",
+    "split": "test",
+    "query": "cómo se forman los nombres de lugar",
+    "abstain_item": false,
+    "at1": false,
+    "at5": true,
+    "top": [
+     "note:plurales",
+     "note:locativos",
+     "axolotl-10046",
+     "lesson:arboles-cerros",
+     "axolotl-01962"
+    ]
+   },
+   {
+    "id": "t16",
+    "split": "test",
+    "query": "Anales de Tlatelolco",
+    "abstain_item": false,
+    "at1": true,
+    "at5": true,
+    "top": [
+     "work:Anales de Tlatelolco",
+     "entity:huitzilopochtli",
+     "lesson-draft:mito-huitzilopochtli",
+     "entity:tonatiuh",
+     "lesson-draft:gen-atl"
+    ]
+   },
+   {
+    "id": "t17",
+    "split": "test",
+    "query": "himnos a los dioses",
+    "abstain_item": false,
+    "at1": true,
+    "at5": true,
+    "top": [
+     "lesson-draft:mito-himnos",
+     "entity:chicomecoatl",
+     "entity:itzpapalotl",
+     "entity:xochiquetzal",
+     "entity:ometeotl"
+    ]
+   },
+   {
+    "id": "t18",
+    "split": "test",
+    "query": "los soles de antes",
+    "abstain_item": false,
+    "at1": false,
+    "at5": true,
+    "top": [
+     "lesson:cielo",
+     "lesson:sol-luna",
+     "lesson-draft:mito-soles",
+     "entity:tonatiuh",
+     "lesson-draft:gen-tonatiuh"
+    ]
+   },
+   {
+    "id": "t19",
+    "split": "test",
+    "query": "Huitzilopochtli y los mexicas",
+    "abstain_item": false,
+    "at1": true,
+    "at5": true,
+    "top": [
+     "entity:huitzilopochtli",
+     "lesson-draft:mito-huitzilopochtli",
+     "axolotl-01508",
+     "axolotl-03321",
+     "axolotl-14669"
+    ]
+   },
+   {
+    "id": "t20",
+    "split": "test",
+    "query": "lecturas sobre el agua",
+    "abstain_item": false,
+    "at1": true,
+    "at5": true,
+    "top": [
+     "lesson:agua-tierra",
+     "sign:signo-atl",
+     "axolotl-01095",
+     "axolotl-12740",
+     "axolotl-05549"
+    ]
+   },
+   {
+    "id": "t21",
+    "split": "test",
+    "query": "criptomonedas y bolsa de valores",
+    "abstain_item": true,
+    "correct": true,
+    "top": []
+   }
+  ],
+  "build_seconds": 2.47,
+  "mean_ms": 15.4
+ },
  "documentary": {
   "method": "cards-v1",
   "battery": {
@@ -5798,8 +6243,8 @@
    }
   },
   "timing": {
-   "build_seconds": 0.99,
-   "mean_ms_per_query": 9.55
+   "build_seconds": 1.13,
+   "mean_ms_per_query": 11.61
   },
   "results": [
    {
@@ -8072,11 +8517,12 @@
  },
  "timing": {
   "seconds_per_component": {
-   "morphology": 10.1,
-   "terms": 4.8,
+   "morphology": 10.9,
+   "terms": 5.2,
    "spelling": 0.6,
-   "evidence": 11.8,
-   "documentary": 2.5
+   "evidence": 12.6,
+   "topics": 3.0,
+   "documentary": 2.8
   }
  }
 }
