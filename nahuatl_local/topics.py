@@ -17,6 +17,7 @@ intención (*dioses*, *calendario*, *lecturas*, *gramática*, *libro*) dan prior
 contenido. Un resultado debe contener la mayor parte de la consulta; si nada lo hace, se abstiene.
 Cada resultado dice por qué aparece y enlaza a su lugar en la aplicación.
 """
+import functools
 import json
 import math
 import re
@@ -81,6 +82,11 @@ def _read(path):
     return json.loads(path.read_text(encoding='utf-8')) if path.is_file() else None
 
 
+@functools.lru_cache(maxsize=200_000)
+def _loose(word):
+    return loose_key(word)
+
+
 def _clip(text, terms, limit=220):
     """La frase del texto que contiene más términos de la consulta, recortada."""
     text = re.sub(r'\s+', ' ', text or '').strip()
@@ -88,7 +94,7 @@ def _clip(text, terms, limit=220):
         return ''
     sentences = re.split(r'(?<=[.;:!?])\s+', text)
     def hits(s):
-        keys = {k for k, _ in es_tokens(s)} | {'n:' + loose_key(w) for w in WORD.findall(s)}
+        keys = {k for k, _ in es_tokens(s)} | {'n:' + _loose(w) for w in WORD.findall(s)}
         return len(keys & terms)
     best = max(sentences, key=hits)
     return best if len(best) <= limit else best[:limit].rsplit(' ', 1)[0] + '…'
@@ -361,12 +367,21 @@ class TopicIndex:
         if not ranked:
             return self._empty(query, words, intents, 'Ningún contenido reúne la mayor parte de la consulta.')
         terms = {k for _, keys in groups for k in keys}
-        items = [self._item(self.docs[i], score, matched[i], terms) for score, i in ranked[:200]]
-        top = items[:limit]
+        # Solo se arman (con su fragmento) los resultados que se muestran: los primeros y los de cada grupo.
+        shown, per_kind = [], Counter()
+        caps = {gid: (6 if gid in ('passages', 'senses') else 5) for gid, _, _ in GROUPS}
+        group_of = {k: gid for gid, _, kinds in GROUPS for k in kinds}
+        for k, (score, i) in enumerate(ranked):
+            gid = group_of[self.docs[i].kind]
+            if k < limit or per_kind[gid] < caps[gid]:
+                shown.append((k, score, i))
+                per_kind[gid] += 1
+        built = {k: self._item(self.docs[i], score, matched[i], terms) for k, score, i in shown}
+        top = [built[k] for k in sorted(built) if k < limit]
         grouped = []
-        rank = {it['id']: k for k, it in enumerate(items)}
+        rank = {it['id']: k for k, it in built.items()}
         for gid, label, kinds in GROUPS:
-            rows = [it for it in items if it['kind'] in kinds][:6 if gid in ('passages', 'senses') else 5]
+            rows = [built[k] for k in sorted(built) if built[k]['kind'] in kinds][:caps[gid]]
             if rows:
                 grouped.append(dict(id=gid, label=label, items=rows))
         # El grupo con el resultado más pertinente va primero (una ficha antes que las lecturas, si es lo mejor).
