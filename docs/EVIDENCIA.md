@@ -52,3 +52,11 @@ bash scripts/amoxcalli.sh serve --explain-model claude   # usa ANTHROPIC_API_KEY
 El validador acepta una explicación solo si cada frase cita IDs de la evidencia mostrada y las formas entre «» aparecen en lo citado. Si la explicación de Claude no pasa la validación, si el modelo declina o si falta el paquete o la credencial, se muestra la extractiva con el motivo. En la medición, las 46 explicaciones extractivas del conjunto pasan la validación (2,9 frases y 3,7 citas de media). Claude no se ha medido todavía; para hacerlo (envía pasajes y tiene costo): `.venv/bin/python -m nahuatl_local.evidence_evaluation --explain claude`.
 
 Endpoints: `GET /api/ask?q=…` (incluye la explicación extractiva) y `GET /api/explain?q=…&model=claude`.
+
+## Preguntar por tema
+
+Desde el 19 de octubre de 2026 Preguntar acepta frases y preguntas, no solo una palabra (hasta 300 caracteres). Una frase como *¿qué dice sobre el calendario?*, *dioses de la lluvia* o *¿quién fue Quetzalcóatl?* busca en todo el contenido (`nahuatl_local/topics.py`): lecturas publicadas y propuestas en revisión, unidades de gramática, notas de Carochi, fichas de dioses, lugares, signos y veintenas, la estructura del calendario, las obras del archivo, sus pasajes y el diccionario. Una sola palabra conserva su respuesta y suma «También en lecturas, fichas y obras».
+
+Cómo ordena, sin modelo: BM25 sobre el español plegado y sobre las palabras nahuas por clave laxa (así *Quetzalcóatl* encuentra *Quetzalcohuatl*); los títulos pesan más; la consulta se amplía con la raíz que el corpus paralelo asocia a cada palabra española; las palabras de intención (*dioses*, *calendario*, *lecturas*, *gramática*, *libro*) priorizan ese tipo de contenido y cuentan como cubiertas por él. Un resultado debe contener la mayor parte de la consulta; si nada lo hace, se abstiene. Cada resultado indica qué coincide y su estado de revisión, y los grupos se ordenan por su mejor resultado.
+
+Medición (`make eval`, conjunto `evaluation/topic-questions-v1.json`, escrito antes de construir la búsqueda): en prueba, el elemento esperado aparece entre los 5 primeros en el 95 % y en primer lugar en el 80 %; las abstenciones son correctas. Falla *pájaros en la poesía*: la lectura dice «ave» y no hay datos que unan sinónimos. La primera medición se conserva en `reports/topic-evaluation-first-test-run.md`.
