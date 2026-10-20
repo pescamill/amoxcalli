@@ -126,10 +126,13 @@ class EvidenceEndpointTests(unittest.TestCase):
                 base = f'http://127.0.0.1:{httpd.server_address[1]}'
                 r = json.load(urllib.request.urlopen(base + '/api/ask?q=nocal'))
                 self.assertEqual(r['entries'][0]['written'], 'calli')
+                # Una frase ya no es un error: se responde con la búsqueda por tema.
+                phrase = json.load(urllib.request.urlopen(base + '/api/ask?q=dos%20palabras'))
+                self.assertEqual(phrase['mode'], 'topic')
                 with self.assertRaises(urllib.error.HTTPError) as err:
-                    urllib.request.urlopen(base + '/api/ask?q=dos%20palabras')
+                    urllib.request.urlopen(base + '/api/ask?q=' + 'x' * 301)
                 self.assertEqual(err.exception.code, 400)
-                self.assertIn('sola palabra', json.load(err.exception)['error'])
+                self.assertIn('300', json.load(err.exception)['error'])
                 self.assertIn('renderAsk', urllib.request.urlopen(base + '/evidence.js').read().decode())
             finally:
                 httpd.shutdown(); httpd.server_close()
