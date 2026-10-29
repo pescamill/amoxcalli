@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Amoxcalli · reel Aclarar</title>
+<style>
+  /* 1080×1920, 32 s, rendered frame by frame through window.render(t). Content stays inside y 220–1560.
+     The passage, the six options, the labels and the comparison are the ones Amoxcalli really shows
+     (axolotl-00602, aclarar.js, aclaraciones.py triage); the figure of speakers is INEGI, Censo 2020. */
+  :root {
+    --paper: #f6f0e2; --surface: #fffdf6; --sand: #eee5d2; --ink: #302921; --ink-2: #4f4436; --muted: #685b4b; --line: #d3c5ad;
+    --accent: #812d37; --accent-dark: #64202c; --ochre: #c99538; --gold: #e6c977; --gold-soft: #f0e2b6; --jade: #3d6252; --jade-soft: #8fb8a3;
+    --night: #1d1814; --night-2: #2a231d; --night-line: #44392f; --night-ink: #f6f0e2; --night-muted: #b5a68f; --rose: #e9a0a6;
+    --serif: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+    --sans: "Avenir Next", Avenir, "Segoe UI", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--night); }
+  body { font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+  #stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; }
+  .scene { position: absolute; inset: 0; opacity: 0; padding: 0 84px; display: flex; flex-direction: column; justify-content: center; }
+  .dark { background: var(--night); color: var(--night-ink); }
+  .paper { background: var(--paper); color: var(--ink); }
+  .wine { background: var(--accent); color: #fff; }
+  .greca { position: absolute; left: 0; right: 0; height: 36px; background: url("../sitio/img/borde.svg") repeat-x left center; background-size: 216px 36px; }
+  .greca.top { top: 150px; } .greca.bottom { bottom: 260px; }
+  .kicker { font: 700 30px/1 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--accent); margin-bottom: 30px; }
+  .dark .kicker { color: var(--rose); }
+  .h2 { font: 600 80px/1.06 var(--serif); letter-spacing: -.02em; }
+  .lead { font: 400 40px/1.4 var(--sans); color: var(--ink-2); margin-top: 26px; }
+  .dark .lead { color: var(--night-muted); }
+
+  /* 1 · hook */
+  #s1 { align-items: center; text-align: center; }
+  #s1 .src { font: 500 30px/1.3 var(--sans); color: var(--night-muted); margin-bottom: 56px; }
+  #s1 .nah { font: 400 84px/1.3 var(--serif); }
+  #s1 .nah span { display: inline-block; padding: 0 10px; }
+  #s1 .q { font: italic 600 92px/1.1 var(--serif); color: var(--rose); margin-top: 90px; }
+
+  /* 2 · one tap */
+  #s2 .passage { font: 400 52px/1.35 var(--serif); color: var(--ink-2); }
+  #s2 .passage .hl { background: var(--gold-soft); padding: 0 8px; }
+  .btnlink { display: inline-block; margin-top: 26px; font: 600 38px/1 var(--sans); color: var(--accent); border-bottom: 3px solid var(--accent); padding-bottom: 8px; position: relative; }
+  .ripple { position: absolute; left: 50%; top: 50%; width: 40px; height: 40px; margin: -20px 0 0 -20px; border-radius: 50%; background: rgba(129,45,55,.28); opacity: 0; }
+  .dialog { margin-top: 44px; background: var(--surface); border: 2px solid var(--line); border-top: 8px solid var(--accent); padding: 40px 40px 44px; box-shadow: 0 30px 80px rgba(48,41,33,.18); }
+  .dialog .dk { font: 700 26px/1 var(--sans); letter-spacing: .14em; color: var(--accent); }
+  .dialog h3 { font: 600 66px/1.05 var(--serif); margin: 14px 0 26px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 14px; }
+  .chip { font: 500 31px/1.2 var(--sans); padding: 14px 22px; border: 2px solid var(--line); border-radius: 999px; background: var(--sand); color: var(--ink); }
+  .chip.on { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .field { margin-top: 26px; padding: 20px 24px; border: 2px solid var(--line); background: #fff; font: 500 36px/1.3 var(--sans); min-height: 84px; }
+  .caret { display: inline-block; width: 4px; height: 40px; background: var(--ink); vertical-align: -6px; margin-left: 3px; }
+  .basis { margin-top: 22px; display: flex; gap: 14px; align-items: center; font: 600 30px/1 var(--sans); }
+
+  /* 3 · the app fills the rest */
+  #s3 .ctx { display: flex; flex-direction: column; gap: 20px; margin-top: 40px; }
+  .ctx div { display: flex; align-items: center; gap: 24px; padding: 26px 30px; background: var(--surface); border: 2px solid var(--line); font: 500 38px/1.25 var(--sans); }
+  .ctx b { flex: none; width: 60px; height: 60px; display: grid; place-items: center; background: var(--jade); color: #fff; font: 700 34px/1 var(--sans); }
+  .ctx code { font: 600 36px/1 ui-monospace, Menlo, monospace; color: var(--accent); }
+  .safe { margin-top: 46px; padding: 30px 34px; background: var(--sand); border-left: 8px solid var(--accent); font: 500 38px/1.4 var(--sans); }
+  .safe strong { display: block; font: 600 50px/1.15 var(--serif); margin-bottom: 8px; }
+
+  /* 4 · arrives sorted */
+  .issue { margin-top: 30px; background: var(--night-2); border: 2px solid var(--night-line); padding: 36px 38px; box-shadow: 0 30px 80px rgba(0,0,0,.4); }
+  .issue .title { font: 600 40px/1.25 var(--sans); }
+  .issue .title small { color: var(--night-muted); font-weight: 500; }
+  .labels { display: flex; gap: 12px; margin-top: 20px; flex-wrap: wrap; }
+  .label { font: 700 28px/1 var(--sans); padding: 10px 18px; border-radius: 999px; color: #fff; }
+  .label.a { background: var(--accent); } .label.b { background: #8a6a2a; }
+  .checks { margin-top: 28px; display: grid; gap: 14px; }
+  .check { font: 500 34px/1.3 var(--sans); color: var(--night-ink); }
+  .check i { font-style: normal; color: var(--jade-soft); font-weight: 700; margin-right: 12px; }
+  .cmp { margin-top: 26px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .cmp div { background: #3b3128; border: 2px solid var(--night-line); padding: 20px 22px; font: italic 400 30px/1.35 var(--serif); color: var(--night-ink); }
+  .cmp div small { display: block; font: 700 22px/1 var(--sans); font-style: normal; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+  #s4 .human { margin-top: 44px; font: 600 54px/1.15 var(--serif); }
+  #s4 .human small { display: block; font: 500 34px/1.35 var(--sans); color: var(--night-muted); margin-top: 12px; }
+
+  /* 5 · why it is useful */
+  .why { display: flex; gap: 30px; align-items: flex-start; margin-top: 44px; }
+  .why .n { flex: none; width: 84px; height: 84px; display: grid; place-items: center; background: var(--accent); color: #fff; font: 600 46px/1 var(--serif); }
+  .why b { display: block; font: 600 54px/1.12 var(--serif); }
+  .why p { font: 400 36px/1.35 var(--sans); color: var(--muted); margin-top: 10px; }
+
+  /* 6 · social responsibility */
+  #s6 .h2 { font-size: 92px; }
+  #s6 .alive { margin-top: 30px; font: 500 40px/1.4 var(--sans); color: var(--night-muted); }
+  #s6 .alive b { color: var(--rose); font: 600 60px/1 var(--serif); }
+  .rules { list-style: none; margin-top: 44px; display: grid; gap: 18px; }
+  .rules li { display: flex; gap: 22px; align-items: baseline; padding: 22px 28px; background: var(--night-2); border: 2px solid var(--night-line); border-left: 8px solid var(--jade-soft); }
+  .rules b { font: 600 42px/1.15 var(--serif); }
+  .rules span { font: 400 30px/1.3 var(--sans); color: var(--night-muted); }
+
+  /* 7 · close */
+  #s7 { align-items: center; text-align: center; }
+  #s7 .word { font: 600 168px/1 var(--serif); letter-spacing: -.03em; }
+  #s7 .tagline { font: italic 400 60px/1.3 var(--serif); margin-top: 26px; opacity: .95; }
+  #s7 .url { font: 700 44px/1 var(--sans); margin-top: 80px; padding: 26px 34px; background: #fff; color: var(--accent); }
+  #s7 .bio { font: 600 38px/1 var(--sans); margin-top: 30px; opacity: .9; }
+  #s7 .by { font: 400 34px/1.3 var(--sans); margin-top: 120px; opacity: .85; }
+</style>
+</head>
+<body>
+<div id="stage">
+
+  <section class="scene dark" id="s1">
+    <p class="src">Documentos nauas de la Ciudad de México, siglo XVI</p>
+    <p class="nah"><span>ce</span> <span>tlacatl</span> <span>quimotlalcoualtocayan</span> <span id="h1">cihuatzintli</span></p>
+    <p class="q">¿Y si algo<br>no te cuadra?</p>
+  </section>
+
+  <section class="scene paper" id="s2">
+    <div class="greca top"></div>
+    <p class="kicker">Un toque</p>
+    <p class="passage">… quimotlalcoualtocayan <span class="hl">cihuatzintli</span> amo nicmati …</p>
+    <div><span class="btnlink" id="tap">Aclarar o corregir<span class="ripple"></span></span></div>
+    <div class="dialog" id="dlg">
+      <div class="dk">ACLARAR · AXOLOTL-00602</div>
+      <h3>¿Qué no cuadra?</h3>
+      <div class="chips">
+        <span class="chip">La traducción</span><span class="chip">El análisis</span><span class="chip">La grafía</span>
+        <span class="chip">La fuente</span><span class="chip">En mi variante se dice distinto</span><span class="chip" id="duda">Tengo una duda</span>
+      </div>
+      <div class="field" id="note"></div>
+      <div class="basis" id="basis">Cómo lo sabes <span class="chip on">Estudio náhuatl clásico</span></div>
+    </div>
+  </section>
+
+  <section class="scene paper" id="s3">
+    <p class="kicker">La app pone el resto</p>
+    <p class="h2">Tú solo eliges qué pasa.</p>
+    <div class="ctx">
+      <div><b>✓</b><span>El pasaje: <code>axolotl-00602</code></span></div>
+      <div><b>✓</b><span>El texto que estabas viendo</span></div>
+      <div><b>✓</b><span>La pantalla y la versión</span></div>
+    </div>
+    <div class="safe" id="safe"><strong>Se queda en tu computadora.</strong>Tú decides si lo compartes. No pedimos nombre, correo ni ubicación.</div>
+  </section>
+
+  <section class="scene dark" id="s4">
+    <p class="kicker">Si la compartes, llega ordenada</p>
+    <div class="issue">
+      <div class="title">[Aclaración] axolotl-00602 <small>· tengo una duda</small></div>
+      <div class="labels"><span class="label a">aclaración</span><span class="label b">duda</span></div>
+      <div class="checks">
+        <div class="check"><i>✓</i>El pasaje existe en el corpus</div>
+        <div class="check"><i>✓</i>Junto al registro actual</div>
+        <div class="check"><i>✓</i>Sin repetidas abiertas</div>
+      </div>
+      <div class="cmp"><div><small>Registro</small>… cihuatzintli amo nicmati …</div><div><small>Pregunta</small>¿Por qué cihuatzintli y no cihuatl?</div></div>
+    </div>
+    <p class="human" id="human">Una persona la coteja con la fuente.<small>Nada se corrige solo. Si se confirma, queda en el historial.</small></p>
+  </section>
+
+  <section class="scene paper" id="s5">
+    <div class="greca top"></div>
+    <p class="kicker">¿Para qué sirve?</p>
+    <div class="why"><span class="n">1</span><div><b>Preguntar sin miedo.</b><p>Quien aprende no necesita saber la respuesta: una duda bien ubicada ya ayuda.</p></div></div>
+    <div class="why"><span class="n">2</span><div><b>Corregir con la fuente.</b><p>Quien sabe deja su cita en un minuto, y revisarla toma minutos, no horas.</p></div></div>
+    <div class="why"><span class="n">3</span><div><b>Mejorar para todos.</b><p>Cada aclaración confirmada mejora la lectura de quien venga después.</p></div></div>
+  </section>
+
+  <section class="scene dark" id="s6">
+    <p class="kicker">Responsabilidad</p>
+    <p class="h2">No rescatamos: acompañamos.</p>
+    <p class="alive">El náhuatl está vivo: <b id="hab">0</b><br>personas lo hablan hoy (INEGI, 2020).</p>
+    <ul class="rules">
+      <li><b>Primero el permiso</b><span>nada entrena modelos sin tu sí</span></li>
+      <li><b>Lo tuyo es tuyo</b><span>descárgalo o retíralo</span></li>
+      <li><b>Sin datos personales</b><span>ni nombre ni correo</span></li>
+      <li><b>Cada fuente, con su crédito</b><span>y su licencia</span></li>
+      <li><b>La comunidad decide</b><span>sobre su variante</span></li>
+    </ul>
+  </section>
+
+  <section class="scene wine" id="s7">
+    <div class="greca top"></div>
+    <div class="word">Amoxcalli</div>
+    <div class="tagline">Lee, duda, aclara.</div>
+    <div class="url">pescamill.github.io/amoxcalli</div>
+    <div class="bio">Link en la bio</div>
+    <div class="by">Hecho por <b>Pablo Escamilla</b></div>
+  </section>
+</div>
+
+<script>
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const prog = (t, a, b) => clamp((t - a) / (b - a));
+const outCubic = x => 1 - Math.pow(1 - x, 3);
+const outExpo = x => (x >= 1 ? 1 : 1 - Math.pow(2, -10 * x));
+const outBack = x => { const c = 1.7, c3 = c + 1; return 1 + c3 * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+const fmt = n => Math.round(n).toLocaleString("es-MX");
+
+function rev(el, t, a, d = .55, dy = 50) {
+  const p = outCubic(prog(t, a, a + d));
+  el.style.opacity = p;
+  el.style.transform = `translateY(${(1 - p) * dy}px)`;
+}
+function pop(el, t, a, d = .5) {
+  const p = prog(t, a, a + d);
+  el.style.opacity = clamp(p * 3);
+  el.style.transform = `scale(${.6 + .4 * outBack(p)})`;
+}
+function mark(el, t, a, color = "#e6c977") {
+  el.style.backgroundImage = `linear-gradient(${color}, ${color})`;
+  el.style.backgroundRepeat = "no-repeat";
+  el.style.backgroundSize = `${outCubic(prog(t, a, a + .4)) * 100}% 100%`;
+  el.style.color = prog(t, a, a + .4) > .5 ? "#302921" : "";
+}
+function type(el, text, t, a, cps = 18, until = 99) {
+  const n = Math.floor(clamp((t - a) * cps, 0, text.length));
+  const caret = t >= a && t < until && (n < text.length || Math.floor(t * 2.4) % 2 === 0);
+  el.innerHTML = text.slice(0, n) + (caret ? '<span class="caret"></span>' : "");
+}
+
+const S = { s1: [0, 3.4], s2: [3.2, 9.8], s3: [9.6, 13.8], s4: [13.6, 19.2], s5: [19.0, 23.4], s6: [23.2, 28.8], s7: [28.6, 32.0] };
+window.DURATION = 32.0;
+
+function frameScene(id, t) {
+  const [a, b] = S[id], el = $("#" + id);
+  const on = t >= a && t <= b;
+  el.style.opacity = on ? (id === "s1" ? 1 : outCubic(prog(t, a, a + .2))) : 0;
+  el.style.visibility = on ? "visible" : "hidden";
+  el.style.transform = `scale(${1.035 - .035 * outCubic(prog(t, a, a + .6))})`;
+  return on;
+}
+
+const DRAW = {
+  s1(t) {
+    rev($("#s1 .src"), t, .1, .5, 20);
+    $$("#s1 .nah span").forEach((el, i) => rev(el, t, .3 + i * .2, .5, 50));
+    mark($("#h1"), t, 1.3);
+    rev($("#s1 .q"), t, 1.9, .6, 40);
+  },
+  s2(t) {
+    rev($("#s2 .kicker"), t, 3.35); rev($("#s2 .passage"), t, 3.5, .5, 30);
+    rev($("#tap"), t, 3.8, .4, 20);
+    const r = $("#tap .ripple"), p = prog(t, 4.4, 5.0);
+    r.style.opacity = p > 0 && p < 1 ? 1 - p : 0; r.style.transform = `scale(${1 + p * 9})`;
+    rev($("#dlg"), t, 4.7, .5, 80);
+    $$("#s2 .chip:not(#basis .chip)").forEach((el, i) => pop(el, t, 5.1 + i * .1, .4));
+    $("#duda").classList.toggle("on", t >= 6.2);
+    rev($("#note"), t, 6.4, .35, 20);
+    type($("#note"), "¿Por qué cihuatzintli y no cihuatl?", t, 6.6, 20, 8.7);
+    rev($("#basis"), t, 8.5, .4, 20);
+  },
+  s3(t) {
+    rev($("#s3 .kicker"), t, 9.75); rev($("#s3 .h2"), t, 9.9);
+    $$("#s3 .ctx div").forEach((el, i) => rev(el, t, 10.4 + i * .3, .45, 40));
+    $$("#s3 .ctx b").forEach((el, i) => pop(el, t, 10.6 + i * .3, .4));
+    rev($("#safe"), t, 11.8, .55, 40);
+  },
+  s4(t) {
+    rev($("#s4 .kicker"), t, 13.75);
+    rev($("#s4 .issue"), t, 13.95, .5, 70);
+    $$("#s4 .label").forEach((el, i) => pop(el, t, 14.5 + i * .25, .4));
+    $$("#s4 .check").forEach((el, i) => rev(el, t, 15.0 + i * .35, .4, 20));
+    $$("#s4 .cmp div").forEach((el, i) => rev(el, t, 16.0 + i * .25, .45, 30));
+    rev($("#human"), t, 17.0, .55, 30);
+  },
+  s5(t) {
+    rev($("#s5 .kicker"), t, 19.15);
+    $$("#s5 .why").forEach((el, i) => rev(el, t, 19.35 + i * .8, .5, 50));
+  },
+  s6(t) {
+    rev($("#s6 .kicker"), t, 23.35); rev($("#s6 .h2"), t, 23.5, .6);
+    rev($("#s6 .alive"), t, 24.2, .5, 30);
+    $("#hab").textContent = fmt(1651958 * outExpo(prog(t, 24.3, 25.5)));
+    $$("#s6 .rules li").forEach((el, i) => rev(el, t, 25.3 + i * .3, .45, 30));
+  },
+  s7(t) {
+    const w = $("#s7 .word"), p = outBack(prog(t, 28.7, 29.4));
+    w.style.opacity = clamp(prog(t, 28.7, 29.0)); w.style.transform = `scale(${.8 + .2 * p})`;
+    rev($("#s7 .tagline"), t, 29.2, .55, 40);
+    pop($("#s7 .url"), t, 29.8, .5);
+    rev($("#s7 .bio"), t, 30.3, .5, 30);
+    rev($("#s7 .by"), t, 30.6, .5, 20);
+  },
+};
+
+window.render = t => { for (const id of Object.keys(S)) if (frameScene(id, t)) DRAW[id](t); };
+window.ready = document.fonts.ready.then(() => { window.render(0); return true; });
+
+const fixed = new URLSearchParams(location.search).get("t");
+if (fixed !== null) window.ready.then(() => window.render(Number(fixed)));
+else if (!navigator.webdriver) {
+  const t0 = performance.now();
+  const loop = () => { window.render(((performance.now() - t0) / 1000) % window.DURATION); requestAnimationFrame(loop); };
+  window.ready.then(loop);
+}
+</script>
+</body>
+</html>

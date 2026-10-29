@@ -1,6 +1,7 @@
 """Render the reel to MP4, frame by frame, with Chrome and ffmpeg (needs Playwright and ffmpeg).
 
     python promo/render.py                 → promo/amoxcalli-reel.mp4 (1080×1920, 30 fps)
+    python promo/render.py --pagina aclarar.html --salida promo/amoxcalli-aclarar.mp4 → el reel de «Aclarar»
     python promo/render.py --fotos 2,15,27 → PNG stills of those seconds, to check a scene
 """
 
@@ -16,6 +17,7 @@ HERE = Path(__file__).resolve().parent
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--fps", type=int, default=30)
+    ap.add_argument("--pagina", default="reel.html", help="animación dentro de promo/")
     ap.add_argument("--fotos", help="segundos separados por coma")
     ap.add_argument("--salida", default=str(HERE / "amoxcalli-reel.mp4"))
     ap.add_argument("--carpeta-fotos", default=str(HERE / "fotos"))
@@ -24,7 +26,7 @@ def main():
     with sync_playwright() as pw:
         browser = pw.chromium.launch(channel="chrome")
         page = browser.new_page(viewport={"width": 1080, "height": 1920}, device_scale_factor=1)
-        page.goto((HERE / "reel.html").as_uri())
+        page.goto((HERE / args.pagina).as_uri())
         page.evaluate("window.ready")
         page.wait_for_timeout(300)
         if args.fotos:
