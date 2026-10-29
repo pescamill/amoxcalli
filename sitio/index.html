@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amoxcalli</title>
+<meta name="description" content="Aprende a leer náhuatl clásico con pasajes reales: cada palabra se analiza, cada respuesta cita su fuente y, sin evidencia, Amoxcalli se abstiene. Gratis y en tu computadora.">
+<meta property="og:title" content="Amoxcalli: leer náhuatl clásico, palabra por palabra">
+<meta property="og:description" content="Lecturas guiadas, diccionario, glifos y 16,111 pasajes bilingües. Cada respuesta dice de dónde viene.">
+<meta property="og:image" content="https://pescamill.github.io/amoxcalli/img/og.png">
+<meta property="og:url" content="https://pescamill.github.io/amoxcalli/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="img/icono.png">
+<style>
+:root {
+  --paper: #f6f0e2; --surface: #fffdf6; --sand: #eee5d2; --ink: #302921; --ink-2: #4f4436; --muted: #685b4b;
+  --line: #d3c5ad; --accent: #812d37; --accent-hover: #64202c; --accent-ink: #fff; --ochre: #c99538; --jade: #3d6252;
+  --highlight: #eadba9; --code-bg: #302921; --code-ink: #f6f0e2;
+  --shadow: 0 1px 2px rgba(48,41,33,.05), 0 10px 28px rgba(48,41,33,.08);
+  --serif: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --sans: "Avenir Next", Avenir, "Segoe UI", Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #1a1612; --surface: #231e19; --sand: #2c251f; --ink: #f2eadb; --ink-2: #dacfbd; --muted: #a89a86;
+    --line: #3a3129; --accent: #e08a92; --accent-hover: #eca3aa; --accent-ink: #24100f; --ochre: #d9a84d; --jade: #8fb8a3;
+    --highlight: #4a3d22; --code-bg: #0f0d0b; --code-ink: #f2eadb; --shadow: 0 0 0 1px rgba(255,255,255,.04);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #1a1612; --surface: #231e19; --sand: #2c251f; --ink: #f2eadb; --ink-2: #dacfbd; --muted: #a89a86;
+  --line: #3a3129; --accent: #e08a92; --accent-hover: #eca3aa; --accent-ink: #24100f; --ochre: #d9a84d; --jade: #8fb8a3;
+  --highlight: #4a3d22; --code-bg: #0f0d0b; --code-ink: #f2eadb; --shadow: 0 0 0 1px rgba(255,255,255,.04);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.65 var(--sans); }
+a { color: var(--accent); }
+img { max-width: 100%; height: auto; display: block; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.1; margin: 0; letter-spacing: -.02em; }
+h2 { font-size: clamp(30px, 5vw, 42px); }
+h3 { font-size: 24px; }
+p { margin: 0; }
+.eyebrow { font: 700 12px/1.4 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+.muted { color: var(--muted); }
+.border { height: 12px; background: url("img/borde.svg") repeat-x left center; background-size: 72px 12px; }
+
+header.top { padding: 18px 0 14px; }
+header.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.brand { color: var(--accent); text-decoration: none; font: 600 30px/1 var(--serif); letter-spacing: -.02em; }
+.brand small { display: block; font: 700 11px/1.3 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-top: 6px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 46px; padding: 0 20px;
+  font: 600 15px/1 var(--sans); text-decoration: none; border: 1px solid var(--line); color: var(--accent); background: var(--surface); cursor: pointer; }
+.btn:hover { border-color: var(--accent); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.btn.primary:hover { background: var(--accent-hover); }
+.btn svg { width: 18px; height: 18px; }
+
+.hero { padding: 48px 0 56px; }
+.hero h1 { font-size: clamp(42px, 8vw, 76px); margin: 14px 0 20px; max-width: 12em; }
+.hero h1 em { font-style: italic; color: var(--accent); }
+.lede { font-size: 20px; color: var(--ink-2); max-width: 36em; }
+.cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+.facts { display: flex; flex-wrap: wrap; gap: 6px 20px; margin: 22px 0 0; font-size: 15px; color: var(--muted); padding: 0; list-style: none; }
+.facts li::before { content: "✓"; color: var(--jade); font-weight: 700; margin-right: 6px; }
+.browser { margin-top: 44px; border: 1px solid var(--line); background: var(--surface); box-shadow: 0 30px 60px rgba(48,41,33,.16); }
+.browser .bar { display: flex; align-items: center; gap: 6px; padding: 10px 14px; border-bottom: 1px solid var(--line); background: var(--sand); }
+.browser .bar i { width: 10px; height: 10px; border-radius: 50%; background: var(--line); }
+.browser .bar span { margin-left: 10px; font: 13px var(--mono); color: var(--muted); }
+
+.numbers { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--surface); }
+.numbers dl { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 0; }
+.numbers div { padding: 24px 16px; border-left: 1px solid var(--line); }
+.numbers div:first-child { border-left: 0; }
+.numbers dd { margin: 0; font: 600 36px/1.1 var(--serif); color: var(--accent); }
+.numbers dt { color: var(--muted); font-size: 15px; margin-top: 4px; }
+
+section.block { padding: 76px 0; }
+.section-head { max-width: 42em; margin-bottom: 36px; }
+.section-head p { margin-top: 12px; color: var(--ink-2); font-size: 18px; }
+
+.feature { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 44px; align-items: center; padding: 32px 0; }
+.feature + .feature { border-top: 1px solid var(--line); }
+.feature:nth-of-type(even) .shots { order: -1; }
+.feature .text p { margin-top: 12px; color: var(--ink-2); }
+.feature .ask { margin-top: 18px; padding: 12px 16px; border-left: 3px solid var(--ochre); background: var(--sand); font: italic 19px/1.45 var(--serif); color: var(--ink); }
+.shots { display: flex; gap: 14px; justify-content: center; align-items: flex-start; }
+.shot { width: min(100%, 320px); border: 1px solid var(--line); box-shadow: var(--shadow); background: var(--surface); }
+.shots.pair .shot { width: calc(50% - 7px); }
+
+.get { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.tabs { display: inline-flex; gap: 4px; padding: 4px; background: var(--sand); margin-bottom: 18px; }
+.tabs button { min-height: 42px; padding: 0 18px; border: 0; background: transparent; color: var(--ink-2); font: 600 15px var(--sans); cursor: pointer; }
+.tabs button[aria-selected="true"] { background: var(--surface); color: var(--accent); box-shadow: 0 1px 3px rgba(48,41,33,.14); }
+.steps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; counter-reset: s; }
+.steps li { counter-increment: s; padding: 22px; border: 1px solid var(--line); background: var(--paper); }
+.steps li::before { content: counter(s); display: grid; place-items: center; width: 32px; height: 32px; background: var(--accent); color: var(--accent-ink);
+  font: 600 16px var(--serif); margin-bottom: 12px; }
+.steps b { display: block; margin-bottom: 4px; }
+.steps span { color: var(--ink-2); font-size: 16px; }
+.steps code, .req code { font: 14px var(--mono); background: var(--sand); padding: 1px 5px; }
+.cmd { display: flex; align-items: stretch; background: var(--code-bg); color: var(--code-ink); overflow: hidden; margin-top: 12px; }
+.cmd code { flex: 1; min-width: 0; padding: 14px 16px; font: 14px/1.5 var(--mono); overflow-x: auto; white-space: pre; background: none; }
+.cmd button { flex: none; border: 0; padding: 0 16px; background: var(--accent); color: var(--accent-ink); font: 600 14px var(--sans); cursor: pointer; min-width: 88px; }
+.req { margin-top: 18px; font-size: 15px; color: var(--muted); }
+
+.two { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; }
+.card { padding: 26px; border: 1px solid var(--line); background: var(--surface); border-top: 3px solid var(--accent); }
+.card.no { border-top-color: var(--ochre); }
+.card h3 { margin-bottom: 12px; }
+.card ul { margin: 0; padding-left: 20px; color: var(--ink-2); }
+.card li + li { margin-top: 8px; }
+.sources { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; padding: 0; list-style: none; }
+.sources li { padding: 6px 12px; border: 1px solid var(--line); background: var(--surface); font-size: 15px; }
+
+.help { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; padding: 0; margin: 0; list-style: none; }
+.help li { padding: 20px; border: 1px solid var(--line); background: var(--surface); }
+.help b { display: block; font: 600 20px/1.2 var(--serif); margin-bottom: 6px; }
+.help span { color: var(--ink-2); font-size: 16px; }
+
+footer { padding: 0 0 56px; }
+footer .wrap { display: flex; flex-wrap: wrap; gap: 16px 32px; justify-content: space-between; align-items: center; padding-top: 40px; }
+footer .by { font: 600 23px/1.2 var(--serif); }
+footer nav { display: flex; flex-wrap: wrap; gap: 8px; }
+
+@media (max-width: 860px) {
+  .feature, .two { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .feature:nth-of-type(even) .shots { order: 0; }
+  .shots.pair { flex-direction: column; align-items: center; }
+  .shots.pair .shot, .shot { width: min(100%, 360px); }
+  .numbers dl, .help { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .numbers div:nth-child(3) { border-left: 0; }
+  .numbers div:nth-child(n+3) { border-top: 1px solid var(--line); }
+  .steps { grid-template-columns: minmax(0, 1fr); }
+  section.block { padding: 54px 0; }
+  .hero { padding-top: 28px; }
+}
+@media (max-width: 460px) {
+  .top .btn span { display: none; }
+  .numbers dd { font-size: 29px; }
+  .help { grid-template-columns: minmax(0, 1fr); }
+  .tabs { display: flex; }
+  .tabs button { flex: 1; padding: 0 8px; }
+  .cmd { flex-direction: column; }
+  .cmd button { min-height: 44px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./">Amoxcalli<small>Lecturas de náhuatl clásico</small></a>
+    <a class="btn" href="https://github.com/pescamill/amoxcalli">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+      <span>Código en GitHub</span>
+    </a>
+  </div>
+  <div class="wrap"><div class="border" style="margin-top:16px"></div></div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Amoxcalli · «casa de libros»</p>
+      <h1>Leer náhuatl clásico, <em>palabra por palabra.</em></h1>
+      <p class="lede">Pasajes reales de códices y crónicas, con su traducción, el análisis de cada palabra y el diccionario a un clic. Cada respuesta dice de dónde viene; sin evidencia, Amoxcalli se abstiene.</p>
+      <div class="cta">
+        <a class="btn primary" href="#descargar">Descargar gratis</a>
+        <a class="btn" href="#que-hace">Ver qué hace</a>
+      </div>
+      <ul class="facts">
+        <li>Gratis y de código abierto</li><li>Sin internet ni cuenta</li><li>Lo tuyo se queda en tu computadora</li><li>Funciona sin modelos de lenguaje</li>
+      </ul>
+      <figure class="browser" style="margin-left:0;margin-right:0;margin-bottom:0">
+        <div class="bar" aria-hidden="true"><i></i><i></i><i></i><span>127.0.0.1:8766</span></div>
+        <img src="img/escritorio.jpg" alt="Amoxcalli abierto en la lectura «Reconocer una flor»: el pasaje NIQUITTA IN XOCHITL con sus palabras resaltadas y, a un lado, las palabras de la lectura con su glifo" width="1600" height="938">
+      </figure>
+    </div>
+  </section>
+
+  <section class="numbers" aria-label="Lo que contiene">
+    <div class="wrap">
+      <dl>
+        <div><dd>16,111</dd><dt>pasajes bilingües del archivo</dt></div>
+        <div><dd>3,790</dd><dt>acepciones en el diccionario</dt></div>
+        <div><dd>480</dd><dt>apariciones de glifos en 21 láminas</dt></div>
+        <div><dd>12</dd><dt>lecturas guiadas</dt></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="block" id="que-hace">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Qué hace</p>
+        <h2>Comprender un fragmento, contrastarlo y volver al documento.</h2>
+        <p>Las capturas son de Amoxcalli funcionando en una computadora.</p>
+      </div>
+
+      <article class="feature">
+        <div class="text">
+          <h3>Lecturas guiadas</h3>
+          <p>Doce lecturas con 48 pasajes de diez obras. Toca cualquier palabra para ver cómo se arma, abre la glosa interlineal o la traducción original, y practica con ejercicios sobre la grafía del propio pasaje.</p>
+          <p class="ask">NIQUITTA → ni-qu-itta, «yo-lo-veo»</p>
+        </div>
+        <div class="shots"><img class="shot" src="img/lectura.jpg" alt="Pasaje NIQUITTA IN XOCHITL con glosa interlineal: NI-QU-ITTA, 1SG.S-3SG.O-RAÍZ, ver; XOCHI-TL, RAÍZ-ABS, flor" loading="lazy" width="760" height="1480"></div>
+      </article>
+
+      <article class="feature">
+        <div class="text">
+          <h3>Busca como escribes</h3>
+          <p>Colonial, moderna, de cada variedad o con un error: escribe <em>kuali</em>, <em>qualli</em> o <em>cuali</em> y llegas a <em>cualli</em>, con sus grafías, sus formas y los pasajes donde aparece. Relaciona las grafías; no impone un estándar.</p>
+          <p class="ask">«kuali» → cualli, «bueno», en 488 pasajes</p>
+        </div>
+        <div class="shots"><img class="shot" src="img/grafia.jpg" alt="Ficha de cualli: bueno, 488 pasajes por variedad y sus grafías cualli, kuali, cuali, qualli, kwali" loading="lazy" width="760" height="1444"></div>
+      </article>
+
+      <article class="feature">
+        <div class="text">
+          <h3>Pregunta, y mira la evidencia</h3>
+          <p>Pregunta en español o en náhuatl. La explicación se arma solo con lo que hay en el diccionario y el archivo: cada frase lleva su cita y cada cita abre el pasaje original con su traducción.</p>
+          <p class="ask">«¿Cómo se dice mujer?» → cihuatl, con tres pasajes que lo respaldan</p>
+        </div>
+        <div class="shots pair">
+          <img class="shot" src="img/explicacion.jpg" alt="Explicación armada con la evidencia: cihuatl se define como mujer, con la cita del diccionario y tres pasajes" loading="lazy" width="760" height="724">
+          <img class="shot" src="img/pasaje.jpg" alt="Pasaje de los Documentos nauas de la Ciudad de México del siglo XVI con la palabra cihuatzintli resaltada y su traducción" loading="lazy" width="760" height="950">
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="block get" id="descargar">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Descargar</p>
+        <h2>Descarga, descomprime y abre.</h2>
+        <p>Funciona sin internet: se abre en tu navegador, pero todo corre en tu computadora.</p>
+      </div>
+
+      <div class="tabs" role="tablist" aria-label="Sistema operativo">
+        <button role="tab" aria-controls="pasos" data-os="mac">Mac</button>
+        <button role="tab" aria-controls="pasos" data-os="win">Windows</button>
+        <button role="tab" aria-controls="pasos" data-os="linux">Linux</button>
+      </div>
+      <ol class="steps" id="pasos" role="tabpanel"></ol>
+      <p class="req">Ocupa unos 20 MB. La primera vez prepara el análisis durante un minuto.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Alcances y límites</p>
+        <h2>Lo que hace y lo que no.</h2>
+      </div>
+      <div class="two">
+        <div class="card">
+          <h3>Sí hace</h3>
+          <ul>
+            <li>Analiza cada palabra en la grafía de su fuente y explica en qué se basa: diccionario, corpus o reglas.</li>
+            <li>Reúne grafías coloniales, modernas y de cada variedad en una misma búsqueda.</li>
+            <li>Muestra glifos, dioses y calendario con la lámina o el documento de donde salen.</li>
+            <li>Guarda tus palabras y te las repasa, sin cuenta y sin salir de tu equipo.</li>
+          </ul>
+        </div>
+        <div class="card no">
+          <h3>No hace</h3>
+          <ul>
+            <li>No traduce: probamos un traductor automático, no superó a buscar el pasaje más parecido y se retiró.</li>
+            <li>No inventa: si no hay evidencia, lo dice y no responde.</li>
+            <li>No sustituye a una persona experta: las ayudas automáticas esperan revisión lingüística.</li>
+            <li>No demuestra que alguien aprenda: falta probarlo con principiantes.</li>
+          </ul>
+        </div>
+      </div>
+      <ul class="sources" aria-label="Fuentes">
+        <li>Corpus Axolotl</li><li>Gran Diccionario Náhuatl (Molina)</li><li>Wiktionary</li><li>Tlachia (UNAM)</li><li>Carochi, 1645</li><li>Códice Telleriano-Remensis</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block get">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Colaborar</p>
+        <h2>Buscamos quien lo ponga a prueba.</h2>
+        <p>Una duda concreta también ayuda: el pasaje, qué observas y tu fuente.</p>
+      </div>
+      <ul class="help">
+        <li><b>Revisar</b><span>Lecturas y entradas, con la fuente en la mano.</span></li>
+        <li><b>Enseñar</b><span>Probar una lectura en un taller acompañado.</span></li>
+        <li><b>Hablar</b><span>Que tu variedad y tu forma de escribir se reconozcan, con permisos acordados.</span></li>
+        <li><b>Abrir fuentes</b><span>Instituciones que permitan usar sus documentos.</span></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><div class="border"></div></div>
+  <div class="wrap">
+    <div>
+      <p class="by">Hecho por Pablo Escamilla</p>
+      <p class="muted">Ingeniero de Software en GDL.</p>
+    </div>
+    <nav>
+      <a class="btn" href="https://github.com/pescamill">GitHub</a>
+      <a class="btn" href="https://github.com/pescamill/amoxcalli/issues/new?template=correccion.yml">Reportar un error</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+const ZIP = "https://github.com/pescamill/amoxcalli/releases/latest";
+const PY = '<a href="https://www.python.org/downloads/">Python 3.11 o más reciente</a>';
+const OS = {
+  mac: [
+    ["Instala Python", `Descarga ${PY} e instálalo.`],
+    ["Descarga Amoxcalli", `Baja el <a href="${ZIP}">.zip de la última versión</a> y descomprímelo.`],
+    ["Ábrelo", "Doble clic en <code>Abrir Amoxcalli.command</code>. Si macOS avisa de un desarrollador no identificado: clic derecho → Abrir."],
+  ],
+  win: [
+    ["Instala Python", `Descarga ${PY} y marca «Add python.exe to PATH» al instalar.`],
+    ["Descarga Amoxcalli", `Baja el <a href="${ZIP}">.zip de la última versión</a> y descomprímelo.`],
+    ["Ábrelo", "Doble clic en <code>Abrir Amoxcalli.bat</code> y deja abierta la ventana negra mientras lo usas."],
+  ],
+  linux: [
+    ["Ten Python 3.11+", "Viene en casi todas las distribuciones recientes; revisa con <code>python3 --version</code>."],
+    ["Clona y abre", '<div class="cmd"><code id="cmd">git clone https://github.com/pescamill/amoxcalli.git\ncd amoxcalli && make demo</code><button type="button" id="copy">Copiar</button></div>'],
+    ["Úsalo", "Se abre en <code>http://127.0.0.1:8766</code>. Para salir, Ctrl + C en la terminal."],
+  ],
+};
+const tabs = [...document.querySelectorAll("[data-os]")];
+function pick(os) {
+  tabs.forEach(t => { const on = t.dataset.os === os; t.setAttribute("aria-selected", on); t.tabIndex = on ? 0 : -1; });
+  document.getElementById("pasos").innerHTML = OS[os].map(([b, s]) => `<li><b>${b}</b><span>${s}</span></li>`).join("");
+  const copy = document.getElementById("copy");
+  if (copy) copy.onclick = async () => {
+    try { await navigator.clipboard.writeText(document.getElementById("cmd").textContent); } catch {}
+    copy.textContent = "Copiado"; setTimeout(() => (copy.textContent = "Copiar"), 1800);
+  };
+}
+tabs.forEach((t, i) => {
+  t.onclick = () => pick(t.dataset.os);
+  t.onkeydown = e => {
+    const d = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
+    if (d) { const n = tabs[(i + d + tabs.length) % tabs.length]; n.focus(); pick(n.dataset.os); }
+  };
+});
+const ua = navigator.userAgent;
+pick(/Windows/.test(ua) ? "win" : /Linux/.test(ua) && !/Android/.test(ua) ? "linux" : "mac");
+</script>
+</body>
+</html>

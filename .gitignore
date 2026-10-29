@@ -27,6 +27,7 @@ outputs/**/*-writing
 outputs/**/*-previous
 
 *.html
+!sitio/*.html
 !nahuatl_local/community_web/*.html
 !nahuatl_local/platform_web/*.html
 *.tmp
