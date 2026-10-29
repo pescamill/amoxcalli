@@ -44,3 +44,6 @@ reports/iterations/
 reports/learning-before-*/
 reports/learning-audit*/
 reports/lexicon-candidates.*
+!promo/*.html
+promo/*.mp4
+promo/fotos/

@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Amoxcalli · reel</title>
+<style>
+  /* 1080×1920, ~31 s, rendered frame by frame through window.render(t). Content stays inside y 220–1560.
+     Every word, gloss and figure comes from Amoxcalli itself (lectura «Reconocer una flor», Preguntar, README). */
+  :root {
+    --paper: #f6f0e2; --surface: #fffdf6; --sand: #eee5d2; --ink: #302921; --ink-2: #4f4436; --muted: #685b4b; --line: #d3c5ad;
+    --accent: #812d37; --accent-dark: #64202c; --ochre: #c99538; --gold: #e6c977; --gold-soft: #f0e2b6; --jade: #3d6252;
+    --night: #1d1814; --night-2: #2a231d; --night-line: #44392f; --night-ink: #f6f0e2; --night-muted: #b5a68f; --rose: #e9a0a6;
+    --serif: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+    --sans: "Avenir Next", Avenir, "Segoe UI", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--night); }
+  body { font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+  #stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; }
+  .scene { position: absolute; inset: 0; opacity: 0; padding: 0 84px; display: flex; flex-direction: column; justify-content: center; }
+  .dark { background: var(--night); color: var(--night-ink); }
+  .paper { background: var(--paper); color: var(--ink); }
+  .wine { background: var(--accent); color: #fff; }
+  .greca { position: absolute; left: 0; right: 0; height: 36px; background: url("../sitio/img/borde.svg") repeat-x left center; background-size: 216px 36px; }
+  .greca.top { top: 150px; } .greca.bottom { bottom: 260px; }
+  .kicker { font: 700 30px/1 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--accent); margin-bottom: 30px; }
+  .dark .kicker { color: var(--rose); }
+  .h2 { font: 600 84px/1.06 var(--serif); letter-spacing: -.02em; }
+  .lead { font: 400 40px/1.4 var(--sans); color: var(--ink-2); margin-top: 26px; }
+  .dark .lead { color: var(--night-muted); }
+  .card { background: var(--surface); border: 2px solid var(--line); border-top: 8px solid var(--accent); padding: 44px; box-shadow: 0 30px 80px rgba(48,41,33,.14); }
+
+  /* 1 · hook: the passage */
+  #s1 { align-items: center; text-align: center; }
+  #s1 .src { font: 500 30px/1.3 var(--sans); color: var(--night-muted); margin-bottom: 60px; }
+  #s1 .nah { display: flex; flex-wrap: wrap; justify-content: center; gap: 0 30px; font: 400 112px/1.15 var(--serif); }
+  #s1 .nah span { display: inline-block; padding: 0 12px; }
+  #s1 .q { font: italic 600 92px/1.1 var(--serif); color: var(--rose); margin-top: 90px; }
+
+  /* 2 · word by word */
+  #s2 .words { display: flex; flex-direction: column; gap: 36px; margin-top: 10px; }
+  .w { display: grid; grid-template-columns: 1fr; padding: 34px 40px; background: var(--surface); border: 2px solid var(--line); }
+  .w .form { font: 400 76px/1 var(--serif); }
+  .w .seg { display: flex; gap: 22px; margin-top: 22px; font: 600 54px/1 var(--serif); color: var(--accent); }
+  .w .seg i { font-style: normal; display: inline-block; }
+  .w .seg i.dot { color: var(--line); }
+  .w .gl { display: flex; gap: 22px; margin-top: 16px; font: 500 36px/1.2 var(--sans); color: var(--muted); }
+  #s2 .tr { margin-top: 48px; font: italic 600 80px/1.1 var(--serif); }
+  #s2 .tr small { display: block; font: 500 30px/1.3 var(--sans); font-style: normal; color: var(--muted); margin-top: 16px; }
+
+  /* 3 · name */
+  #s3 { align-items: center; text-align: center; }
+  #s3 .word { font: 600 168px/1 var(--serif); color: var(--accent); letter-spacing: -.03em; }
+  #s3 .mean { font: italic 400 48px/1.3 var(--serif); color: var(--muted); margin-top: 18px; }
+  #s3 .h2 { margin-top: 70px; font-size: 76px; }
+  .tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 18px; margin-top: 56px; }
+  .tag { font: 600 34px/1 var(--sans); padding: 20px 28px; background: var(--sand); color: var(--ink); border: 2px solid var(--line); }
+
+  /* 4 · spelling search */
+  .search { display: flex; border: 3px solid var(--accent); background: var(--surface); margin-top: 20px; }
+  .search .in { flex: 1; padding: 30px 32px; font: 500 52px/1 var(--sans); min-height: 116px; }
+  .search .go { background: var(--accent); color: #fff; font: 700 36px/1 var(--sans); padding: 0 34px; display: grid; place-items: center; }
+  .caret { display: inline-block; width: 4px; height: 52px; background: var(--ink); vertical-align: -6px; margin-left: 4px; }
+  #s4 .card { margin-top: 44px; }
+  #s4 .term { font: 600 104px/1 var(--serif); }
+  #s4 .def { font: 500 44px/1.2 var(--sans); color: var(--accent); margin-top: 14px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 34px; }
+  .chip { font: 700 40px/1 var(--sans); padding: 16px 22px; background: var(--sand); }
+  .chip small { font: 500 26px/1 var(--sans); color: var(--muted); margin-left: 10px; }
+  .chip.hit { background: var(--gold-soft); outline: 3px solid var(--ochre); }
+  #s4 .count { font: 500 36px/1.3 var(--sans); color: var(--muted); margin-top: 30px; }
+  #s4 .count b { color: var(--ink); font-size: 46px; }
+
+  /* 5 · ask with evidence */
+  #s5 .card { background: var(--night-2); border-color: var(--night-line); border-top-color: var(--rose); color: var(--night-ink); box-shadow: 0 30px 80px rgba(0,0,0,.4); margin-top: 40px; }
+  #s5 .askq { font: italic 600 70px/1.1 var(--serif); }
+  #s5 .ans { font: 600 120px/1 var(--serif); color: var(--rose); margin-top: 6px; }
+  #s5 .sent { font: 400 40px/1.45 var(--sans); margin-top: 6px; }
+  .cite { display: inline-block; font: 600 30px/1 var(--sans); padding: 10px 16px; background: #3b3128; border: 2px solid var(--night-line); color: var(--gold); margin: 6px 8px 0 0; vertical-align: 4px; }
+  #s5 .note { font: 500 34px/1.35 var(--sans); color: var(--night-muted); margin-top: 34px; }
+
+  /* 6 · numbers */
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; margin-top: 30px; }
+  .num { background: var(--surface); border: 2px solid var(--line); padding: 36px 34px; }
+  .num b { display: block; font: 600 96px/1 var(--serif); color: var(--accent); }
+  .num span { display: block; font: 500 34px/1.25 var(--sans); color: var(--muted); margin-top: 12px; }
+  #s6 .lead { font-size: 36px; }
+
+  /* 7 · limits */
+  .limit { display: flex; gap: 34px; align-items: flex-start; margin-top: 46px; }
+  .limit .n { flex: none; width: 84px; height: 84px; display: grid; place-items: center; background: var(--rose); color: var(--night); font: 600 46px/1 var(--serif); }
+  .limit b { display: block; font: 600 58px/1.12 var(--serif); }
+  .limit p { font: 400 38px/1.35 var(--sans); color: var(--night-muted); margin-top: 10px; }
+
+  /* 8 · close */
+  #s8 { align-items: center; text-align: center; }
+  #s8 .word { font: 600 168px/1 var(--serif); letter-spacing: -.03em; }
+  #s8 .tagline { font: italic 400 52px/1.3 var(--serif); margin-top: 26px; opacity: .92; }
+  #s8 .url { font: 700 44px/1 var(--sans); margin-top: 80px; padding: 26px 34px; background: #fff; color: var(--accent); }
+  #s8 .bio { font: 600 38px/1 var(--sans); margin-top: 30px; opacity: .9; }
+  #s8 .by { font: 400 34px/1.3 var(--sans); margin-top: 120px; opacity: .85; }
+  #s8 .greca { opacity: .9; }
+</style>
+</head>
+<body>
+<div id="stage">
+
+  <section class="scene dark" id="s1">
+    <p class="src">Náhuatl clásico · <i>La tinta negra y roja</i></p>
+    <div class="nah"><span class="a">NIQUITTA</span><span class="b">IN</span><span class="c">XOCHITL</span></div>
+    <p class="q">¿Lo puedes leer?</p>
+  </section>
+
+  <section class="scene paper" id="s2">
+    <div class="greca top"></div>
+    <p class="kicker">Palabra por palabra</p>
+    <div class="words">
+      <div class="w" id="w1"><span class="form">NIQUITTA</span>
+        <div class="seg"><i>ni</i><i class="dot">·</i><i>qu</i><i class="dot">·</i><i>itta</i></div>
+        <div class="gl"><i>yo</i><i>·</i><i>lo</i><i>·</i><i>veo</i></div></div>
+      <div class="w" id="w2"><span class="form">XOCHITL</span>
+        <div class="seg"><i>xochi</i><i class="dot">·</i><i>tl</i></div>
+        <div class="gl"><i>flor</i></div></div>
+    </div>
+    <p class="tr" id="tr">«Contemplo una flor.»<small>Traducción de la fuente original</small></p>
+  </section>
+
+  <section class="scene paper" id="s3">
+    <div class="greca top"></div>
+    <div class="word">Amoxcalli</div>
+    <p class="mean">«casa de libros»</p>
+    <p class="h2">Aprende a leer náhuatl clásico con pasajes reales.</p>
+    <div class="tags"><span class="tag">Gratis</span><span class="tag">Código abierto</span><span class="tag">Sin internet</span></div>
+    <div class="greca bottom"></div>
+  </section>
+
+  <section class="scene paper" id="s4">
+    <p class="kicker">Busca como escribes</p>
+    <p class="h2">Colonial, moderna o con un error.</p>
+    <div class="search"><div class="in" id="q4"></div><div class="go">Buscar</div></div>
+    <div class="card">
+      <div class="term">cualli</div>
+      <div class="def">bueno</div>
+      <div class="chips">
+        <span class="chip">cualli<small>colonial</small></span>
+        <span class="chip hit">kuali<small>moderna</small></span>
+        <span class="chip">cuali<small>colonial</small></span>
+        <span class="chip">qualli<small>colonial</small></span>
+        <span class="chip">kwalli<small>moderna</small></span>
+      </div>
+      <p class="count"><b id="n4">0</b> pasajes con su fuente</p>
+    </div>
+  </section>
+
+  <section class="scene dark" id="s5">
+    <p class="kicker">Pregunta con evidencia</p>
+    <p class="askq">«¿Cómo se dice mujer?»</p>
+    <div class="card">
+      <div class="ans">cihuatl</div>
+      <p class="sent" id="e1">En el diccionario, «cihuatl» se define como «mujer». <span class="cite">diccionario</span></p>
+      <p class="sent" id="e2">El archivo lo traduce así en 104 pasajes. <span class="cite">#00602</span><span class="cite">#01323</span><span class="cite">#01513</span></p>
+    </div>
+    <p class="note" id="n5">Cada frase cita su fuente. Sin evidencia, Amoxcalli no responde.</p>
+  </section>
+
+  <section class="scene paper" id="s6">
+    <p class="kicker">Qué trae</p>
+    <div class="grid">
+      <div class="num"><b id="c1">0</b><span>pasajes bilingües</span></div>
+      <div class="num"><b id="c2">0</b><span>acepciones de diccionario</span></div>
+      <div class="num"><b id="c3">0</b><span>apariciones de glifos</span></div>
+      <div class="num"><b id="c4">0</b><span>lecturas guiadas</span></div>
+    </div>
+    <p class="lead" id="l6">Más dioses y calendario, unidades de gramática y tu cuaderno de palabras. Todo se queda en tu computadora.</p>
+  </section>
+
+  <section class="scene dark" id="s7">
+    <p class="kicker">Límites, sin letra chica</p>
+    <div class="limit"><span class="n">1</span><div><b>No es un traductor.</b><p>Lo probamos: no superó a buscar el pasaje más parecido. Se retiró.</p></div></div>
+    <div class="limit"><span class="n">2</span><div><b>No inventa.</b><p>Si no hay evidencia, lo dice.</p></div></div>
+    <div class="limit"><span class="n">3</span><div><b>Le falta revisión experta.</b><p>Busco quien lo revise y lo pruebe en un taller.</p></div></div>
+  </section>
+
+  <section class="scene wine" id="s8">
+    <div class="word">Amoxcalli</div>
+    <div class="tagline">Leer náhuatl clásico, palabra por palabra.</div>
+    <div class="url">pescamill.github.io/amoxcalli</div>
+    <div class="bio">Link en la bio</div>
+    <div class="by">Hecho por <b>Pablo Escamilla</b></div>
+  </section>
+</div>
+
+<script>
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const prog = (t, a, b) => clamp((t - a) / (b - a));
+const outCubic = x => 1 - Math.pow(1 - x, 3);
+const outExpo = x => (x >= 1 ? 1 : 1 - Math.pow(2, -10 * x));
+const inOut = x => (x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2);
+const outBack = x => { const c = 1.7, c3 = c + 1; return 1 + c3 * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+const fmt = n => Math.round(n).toLocaleString("es-MX");
+
+function rev(el, t, a, d = .55, dy = 50) {
+  const p = outCubic(prog(t, a, a + d));
+  el.style.opacity = p;
+  el.style.transform = `translateY(${(1 - p) * dy}px)`;
+}
+function pop(el, t, a, d = .5) {
+  const p = prog(t, a, a + d);
+  el.style.opacity = clamp(p * 3);
+  el.style.transform = `scale(${.6 + .4 * outBack(p)})`;
+}
+// The annotated-word highlight from the app: a gold fill that wipes in.
+function mark(el, t, a, color = "#e6c977") {
+  el.style.backgroundImage = `linear-gradient(${color}, ${color})`;
+  el.style.backgroundRepeat = "no-repeat";
+  el.style.backgroundSize = `${outCubic(prog(t, a, a + .4)) * 100}% 100%`;
+  el.style.color = prog(t, a, a + .4) > .5 ? "#302921" : "";
+}
+
+const S = { s1: [0, 3.6], s2: [3.4, 8.6], s3: [8.4, 11.8], s4: [11.6, 16.8], s5: [16.6, 21.8], s6: [21.6, 25.2], s7: [25.0, 28.8], s8: [28.6, 32.0] };
+window.DURATION = 32.0;
+
+function frameScene(id, t) {
+  const [a, b] = S[id], el = $("#" + id);
+  const on = t >= a && t <= b;
+  el.style.opacity = on ? (id === "s1" ? 1 : outCubic(prog(t, a, a + .2))) : 0;
+  el.style.visibility = on ? "visible" : "hidden";
+  el.style.transform = `scale(${1.035 - .035 * outCubic(prog(t, a, a + .6))})`;
+  return on;
+}
+
+const DRAW = {
+  s1(t) {
+    rev($("#s1 .src"), t, .1, .5, 20);
+    ["a", "b", "c"].forEach((c, i) => rev($("#s1 ." + c), t, .3 + i * .3, .6, 70));
+    mark($("#s1 .a"), t, 1.5); mark($("#s1 .c"), t, 1.8, "#f0e2b6");
+    rev($("#s1 .q"), t, 2.2, .6, 40);
+  },
+  s2(t) {
+    rev($("#s2 .kicker"), t, 3.55);
+    [["#w1", 3.7], ["#w2", 5.2]].forEach(([w, a]) => {
+      rev($(w), t, a, .5, 60);
+      $$(w + " .seg i").forEach((el, i) => rev(el, t, a + .35 + i * .14, .35, 24));
+      $$(w + " .gl i").forEach((el, i) => rev(el, t, a + .75 + i * .14, .35, 18));
+    });
+    rev($("#tr"), t, 6.7, .6, 40);
+  },
+  s3(t) {
+    const w = $("#s3 .word"), p = outBack(prog(t, 8.5, 9.2));
+    w.style.opacity = clamp(prog(t, 8.5, 8.8)); w.style.transform = `scale(${.8 + .2 * p})`;
+    rev($("#s3 .mean"), t, 8.95, .5, 20);
+    rev($("#s3 .h2"), t, 9.3, .6);
+    $$("#s3 .tag").forEach((el, i) => pop(el, t, 10.0 + i * .22));
+  },
+  s4(t) {
+    rev($("#s4 .kicker"), t, 11.75); rev($("#s4 .h2"), t, 11.9);
+    const q = "kuali", n = Math.floor(clamp((t - 12.6) * 9, 0, q.length));
+    const caret = n < q.length || Math.floor(t * 2.4) % 2 === 0;
+    $("#q4").innerHTML = q.slice(0, n) + (caret && t < 13.6 ? '<span class="caret"></span>' : "");
+    rev($("#s4 .card"), t, 13.5, .5, 70);
+    $$("#s4 .chip").forEach((el, i) => pop(el, t, 13.9 + i * .16, .45));
+    $("#n4").textContent = fmt(488 * outExpo(prog(t, 14.4, 15.6)));
+  },
+  s5(t) {
+    rev($("#s5 .kicker"), t, 16.75); rev($("#s5 .askq"), t, 16.9);
+    rev($("#s5 .card"), t, 17.5, .5, 70);
+    rev($("#e1"), t, 18.1, .5, 24); rev($("#e2"), t, 18.9, .5, 24);
+    $$("#s5 .cite").forEach((el, i) => pop(el, t, (i === 0 ? 18.4 : 19.2 + (i - 1) * .2), .4));
+    rev($("#n5"), t, 20.1, .5, 24);
+  },
+  s6(t) {
+    rev($("#s6 .kicker"), t, 21.75);
+    $$("#s6 .num").forEach((el, i) => rev(el, t, 21.9 + i * .15, .45, 40));
+    [["#c1", 16111], ["#c2", 3790], ["#c3", 480], ["#c4", 12]].forEach(([id, v], i) =>
+      $(id).textContent = fmt(v * outExpo(prog(t, 22.1 + i * .15, 23.3 + i * .15))));
+    rev($("#l6"), t, 23.4, .5, 24);
+  },
+  s7(t) {
+    rev($("#s7 .kicker"), t, 25.15);
+    $$("#s7 .limit").forEach((el, i) => rev(el, t, 25.35 + i * .75, .5, 50));
+  },
+  s8(t) {
+    const w = $("#s8 .word"), p = outBack(prog(t, 28.7, 29.4));
+    w.style.opacity = clamp(prog(t, 28.7, 29.0)); w.style.transform = `scale(${.8 + .2 * p})`;
+    rev($("#s8 .tagline"), t, 29.2, .55, 40);
+    pop($("#s8 .url"), t, 29.8, .5);
+    rev($("#s8 .bio"), t, 30.3, .5, 30);
+    rev($("#s8 .by"), t, 30.6, .5, 20);
+  },
+};
+
+window.render = t => { for (const id of Object.keys(S)) if (frameScene(id, t)) DRAW[id](t); };
+window.ready = document.fonts.ready.then(() => { window.render(0); return true; });
+
+const fixed = new URLSearchParams(location.search).get("t");
+if (fixed !== null) window.ready.then(() => window.render(Number(fixed)));
+else if (!navigator.webdriver) {
+  const t0 = performance.now();
+  const loop = () => { window.render(((performance.now() - t0) / 1000) % window.DURATION); requestAnimationFrame(loop); };
+  window.ready.then(loop);
+}
+</script>
+</body>
+</html>
