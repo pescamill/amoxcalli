@@ -20,6 +20,7 @@ from .entities import routes as entity_routes
 from .units import Units
 from .explain import ClaudeWriter, explain
 from .updates import Updates, disabled as updates_disabled
+from . import aclaraciones
 from .web import Router, Server, Static, handler
 
 WEB = Path(__file__).with_name('platform_web')
@@ -36,6 +37,8 @@ def make_app(store, word_study=None, explain_writer=None, updates=None):
     """Tabla de rutas de la aplicación: corpus, investigación y Voces."""
     router=Router()
     community_routes(router,store)
+    # Aclaraciones: junto a la base de esta instalación (las pruebas usan una temporal).
+    aclaraciones.routes(router,aclaraciones.Store(Path(store.path).with_name('aclaraciones.jsonl')))
     archive=Archive()
     # Análisis morfológico, concordancia por raíz y pistas de glosa (sin modelo).
     word_study=word_study or WordStudy(records_fn=store.public_records)

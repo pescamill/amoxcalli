@@ -1097,3 +1097,31 @@ body.contributor .empty{border:0;padding:46px 30px}
 .topic-list{list-style:none;padding:0;margin:0}.topic-item{padding:12px 0;border-bottom:1px solid var(--line,#e0e6df)}
 .topic-head{margin:0 0 4px}.topic-head .pill{margin-right:6px}.topic-snippet{margin:4px 0;color:var(--ink,#252f29);line-height:1.55}
 .topic-item .nah-passage{font-size:18px;margin:6px 0}.topic-related{margin-top:30px;padding-top:12px;border-top:2px solid var(--line,#e0e6df)}
+
+/* Aclarar: diálogo de un toque, anuncio en el inicio y página de cuidado de la lengua */
+.aclarar-dialog{max-width:560px;max-height:calc(100dvh - 32px);overflow:auto;width:calc(100% - 32px);border:1px solid var(--line);border-radius:6px;padding:0;background:var(--paper);color:var(--ink)}
+.aclarar-dialog::backdrop{background:rgba(30,20,15,.45)}
+.aclarar-form{padding:20px 22px;display:grid;gap:14px}
+.aclarar-form h2{margin:2px 0 6px}
+.aclarar-quote{margin:0;font-style:italic;color:var(--muted)}
+.aclarar-chips,.aclarar-basis{border:0;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.aclarar-basis legend{font-weight:600;margin-bottom:6px}
+.aclarar-chips label,.aclarar-basis label{cursor:pointer}
+.aclarar-chips input,.aclarar-basis input{position:absolute;opacity:0;pointer-events:none}
+.aclarar-chips span,.aclarar-basis span{display:inline-block;padding:7px 12px;border:1px solid var(--line);border-radius:999px;font-size:14px;line-height:1.3;background:var(--sand)}
+.aclarar-chips input:checked+span,.aclarar-basis input:checked+span{background:var(--accent);border-color:var(--accent);color:#fff}
+.aclarar-chips input:focus-visible+span,.aclarar-basis input:focus-visible+span{outline:2px solid var(--accent);outline-offset:2px}
+.aclarar-more{display:grid;gap:12px}
+.aclarar-more label{display:grid;gap:4px}
+.aclarar-more label[hidden]{display:none}
+.aclarar-more small{color:var(--muted);font-weight:400}
+.aclarar-more textarea,.aclarar-more input:not([type=radio]){width:100%;box-sizing:border-box;font:inherit;padding:8px 10px;border:1px solid var(--line);border-radius:4px;background:var(--surface)}
+.aclarar-done{margin:0}
+.care-announce{display:flex;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:28px 0 8px;padding:18px 22px;background:var(--sand);border-left:3px solid var(--accent)}
+.care-announce h2{margin:2px 0 6px}
+.care-announce p{margin:0;max-width:62ch}
+.care-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin:8px 0 24px}
+.care-grid h2{font-size:18px;margin-top:0}
+.care-flow li{margin-bottom:8px}
+.aclaraciones-list{display:grid;gap:14px;margin-top:14px}
+.aclaracion-item p{margin:6px 0}

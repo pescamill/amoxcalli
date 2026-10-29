@@ -187,7 +187,7 @@ async function open(path,studyData){
    explanation.value='Explicación sintética <script>no ejecutar</script>';
    explanation.dispatchEvent(new w.Event('input',{bubbles:true}));
    assert.equal(compare.querySelector('script'),null);
-   assert.equal(compare.querySelector('button'),null);
+   assert.equal(compare.querySelector('button:not([data-aclarar])'),null);
    assert.equal(w.localStorage.getItem('scriptorium-study-v1'),beforeExplanation);
    assert(compare.textContent.includes('No se califica automáticamente'));
    console.log('PASS: Aves disponible, cuatro pasajes y ocho ejercicios, autoexplicación opcional con originales/citas/retorno, sin calificación ni nueva escritura');
@@ -265,8 +265,24 @@ async function open(path,studyData){
  w.location.hash='#aprender/casas-relatos';await until(()=>$('.reading-card [data-interlinear]'));{const card=$('.reading-card');assert.equal(card.dataset.clozeBlank,'calli');assert(card.querySelectorAll('.plain-word').length>5);assert(!card.querySelector('.guided-passage').textContent.includes('calli'));card.querySelector('[data-interlinear]').click();await until(()=>card.querySelector('.interlinear'));assert(card.querySelector('.interlinear').textContent.includes('_____'));assert(!/cal-li/.test(card.querySelector('.interlinear').textContent));
  [...d.querySelectorAll('[data-answer]')].find(b=>b.textContent.trim()==='calli').click();await until(()=>!$('.reading-card').dataset.clozeBlank);assert($('.reading-card .guided-passage').textContent.includes('calli'));$('.reading-card [data-annotation]').click();await until(()=>$('.reading-help .auto-analysis .word-analysis')&&!$('.reading-help .auto-analysis').textContent.includes('Analizando'));assert($('.reading-help .auto-analysis').textContent.includes('cal'));}
  console.log('PASS: Aprender usa el mismo análisis que Leer: palabras analizables y glosa durante el ejercicio con el hueco oculto, pasaje completo al responder y análisis dentro de la ayuda');
- w.location.hash='#leer/aves';await until(()=>$('.reading-source .report-link'));{const a=$('.reading-source .report-link');const u=new URL(a.href);assert.equal(u.origin+u.pathname,'https://github.com/pescamill/amoxcalli/issues/new');assert.equal(u.searchParams.get('template'),'correccion.yml');assert.match(u.searchParams.get('reference'),/^axolotl-\d{5}$/);assert.equal(a.getAttribute('rel'),'noopener noreferrer');}
- console.log('PASS: «Reportar un error» abre el formulario público de corrección con el ID del pasaje');
+ w.location.hash='#leer/aves';await until(()=>$('.reading-source .report-link'));{
+  const b=$('.reading-source .report-link'),target=b.dataset.aclarar;assert.match(target,/^axolotl-\d{5}$/);b.click();
+  const dlg=await (async()=>{await until(()=>$('#aclarar-dialog[open]'));return $('#aclarar-dialog');})();
+  assert(dlg.querySelector('[data-save]').disabled,'sin elegir qué pasa no se guarda');assert(dlg.querySelector('.aclarar-more').hidden);
+  const pick=dlg.querySelector('input[name=category][value=traduccion]');pick.checked=true;pick.dispatchEvent(new w.Event('change',{bubbles:true}));
+  assert(!dlg.querySelector('[data-save]').disabled);assert(!dlg.querySelector('.aclarar-more').hidden);
+  dlg.querySelector('[name=note]').value='<b>falta</b> «una mujer»';const basis=dlg.querySelector('input[name=basis][value=fuente]');basis.checked=true;basis.dispatchEvent(new w.Event('change',{bubbles:true}));
+  assert(!dlg.querySelector('[data-when=fuente]').hidden);dlg.querySelector('[name=citation]').value='Reyes, f. 3';
+  dlg.querySelector('[data-save]').click();await until(()=>dlg.textContent.includes('Guardado en esta computadora'));
+  const share=new URL(dlg.querySelector('a[href^="https://github.com"]').href);assert.equal(share.origin+share.pathname,'https://github.com/pescamill/amoxcalli/issues/new');
+  assert(share.searchParams.get('body').includes('<!-- amoxcalli:aclaracion -->'));assert(share.searchParams.get('title').includes(target));
+  const saved=(await(await w.fetch('/api/aclaraciones')).json()).items.at(-1);assert.equal(saved.target,target);assert.equal(saved.category,'traduccion');assert.equal(saved.citation,'Reyes, f. 3');assert(saved.context.nah.length>10,'el texto visto se guarda solo');assert.equal(saved.context.route,'#leer/aves');
+  dlg.querySelector('[data-close]').click();
+  w.location.hash='#aclaraciones';await until(()=>$('.aclaracion-item'));assert($('.aclaracion-item').textContent.includes('<b>falta</b>'));assert.equal($('.aclaracion-item b'),null);
+  $('.aclaracion-item [data-remove]').click();await until(()=>!$('.aclaracion-item'));assert.equal((await(await w.fetch('/api/aclaraciones')).json()).items.length,0);
+  w.location.hash='#cuidado';await until(()=>$('.care-grid'));assert.equal(d.title,'Amoxcalli · Cómo cuidamos la lengua');
+ }
+ console.log('PASS: «Aclarar» en un toque: guarda con su contexto, se comparte como issue estructurado, se lista y se borra; página de cuidado de la lengua');
  w.location.hash='#preguntar/'+encodeURIComponent('¿quién fue Quetzalcóatl?');await until(()=>$('.topic-result .topic-item'));assert.equal($('.topic-result .topic-item').dataset.topicId,'entity:quetzalcoatl');assert($('.topic-result').textContent.includes('coincide:'));assert($('.topic-result a[href="#dioses/quetzalcoatl"]'));
  w.location.hash='#preguntar/calendario';await until(()=>$('.topic-related .topic-item'));assert($('.topic-related').textContent.includes('También en lecturas, fichas y obras'));w.location.hash='#aprender';await until(()=>!$('.ask-understood'));
  console.log('PASS: Preguntar acepta frases y temas: lecturas, fichas y obras relacionadas con su motivo; una palabra suma su contenido relacionado');

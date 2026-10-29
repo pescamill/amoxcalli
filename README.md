@@ -81,7 +81,7 @@ Son comprobaciones técnicas sobre conjuntos pequeños escritos por el equipo; n
 
 ## Colaborar
 
-Buscamos personas que revisen lecturas y entradas, docentes que prueben una lectura en un taller acompañado, hablantes de variedades actuales que quieran ver su forma de escribir reconocida, e instituciones que permitan usar sus fuentes. Con hablantes, primero se acuerdan comunidad, variedad, objetivos, reconocimiento y permisos. Una duda concreta también ayuda: ID del pasaje, problema, fuente y propuesta. [Cómo contribuir](CONTRIBUTING.md).
+Buscamos personas que revisen lecturas y entradas, docentes que prueben una lectura en un taller acompañado, hablantes de variedades actuales que quieran ver su forma de escribir reconocida, e instituciones que permitan usar sus fuentes. Con hablantes, primero se acuerdan comunidad, variedad, objetivos, reconocimiento y permisos. Una duda concreta también ayuda: toca **Aclarar o corregir** en el pasaje, elige qué pasa y, si quieres, compártelo; llega etiquetado y junto al registro actual ([cómo funciona](docs/ACLARACIONES.md)). [Cómo contribuir](CONTRIBUTING.md).
 
 ## Desarrollo
 

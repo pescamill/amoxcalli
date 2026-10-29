@@ -123,6 +123,21 @@ section.block { padding: 76px 0; }
 .sources { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; padding: 0; list-style: none; }
 .sources li { padding: 6px 12px; border: 1px solid var(--line); background: var(--surface); font-size: 15px; }
 
+.announce { display: inline-flex; gap: 8px; align-items: center; margin-bottom: 18px; padding: 6px 12px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); font-size: 15px; text-decoration: none; }
+.announce b { color: var(--accent); }
+.flow { list-style: none; padding: 0; margin: 28px 0 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; counter-reset: f; }
+.flow li { counter-increment: f; padding: 18px; border: 1px solid var(--line); background: var(--surface); }
+.flow li::before { content: counter(f); display: grid; place-items: center; width: 28px; height: 28px; background: var(--accent); color: var(--accent-ink); font: 600 15px var(--serif); margin-bottom: 10px; }
+.flow b { display: block; margin-bottom: 4px; }
+.flow span { color: var(--ink-2); font-size: 15px; }
+.flow .auto { border-top: 3px solid var(--ochre); }
+.flow-note { margin-top: 12px; font-size: 15px; color: var(--muted); }
+.care { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; padding: 0; margin: 0; list-style: none; }
+.care li { padding: 22px; border: 1px solid var(--line); background: var(--surface); border-top: 3px solid var(--jade); }
+.care b { display: block; font: 600 20px/1.25 var(--serif); margin-bottom: 8px; }
+.care span { color: var(--ink-2); font-size: 16px; }
+.refs { margin-top: 22px; font-size: 15px; color: var(--muted); }
+.refs a { color: var(--accent); }
 .help { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; padding: 0; margin: 0; list-style: none; }
 .help li { padding: 20px; border: 1px solid var(--line); background: var(--surface); }
 .help b { display: block; font: 600 20px/1.2 var(--serif); margin-bottom: 6px; }
@@ -134,6 +149,8 @@ footer .by { font: 600 23px/1.2 var(--serif); }
 footer nav { display: flex; flex-wrap: wrap; gap: 8px; }
 
 @media (max-width: 860px) {
+  .flow { grid-template-columns: minmax(0, 1fr); }
+  .care { grid-template-columns: minmax(0, 1fr); }
   .feature, .two { grid-template-columns: minmax(0, 1fr); gap: 28px; }
   .feature:nth-of-type(even) .shots { order: 0; }
   .shots.pair { flex-direction: column; align-items: center; }
@@ -177,6 +194,7 @@ footer nav { display: flex; flex-wrap: wrap; gap: 8px; }
     <div class="wrap">
       <div class="hero-grid">
       <div>
+      <a class="announce" href="#aclarar"><b>Nuevo</b> Aclara cualquier pasaje en un toque →</a>
       <p class="eyebrow">Amoxcalli · «casa de libros»</p>
       <h1>Leer náhuatl clásico, <em>palabra por palabra.</em></h1>
       <p class="lede">Pasajes reales de códices y crónicas, con su traducción, el análisis de cada palabra y el diccionario a un clic. Cada respuesta dice de dónde viene; sin evidencia, Amoxcalli se abstiene.</p>
@@ -268,6 +286,52 @@ footer nav { display: flex; flex-wrap: wrap; gap: 8px; }
     </div>
   </section>
 
+  <section class="block get" id="aclarar">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Nuevo · Lee y aclara</p>
+        <h2>¿Algo no cuadra? Un toque y listo.</h2>
+        <p>Una traducción dudosa, una palabra mal escrita, una página que no coincide o una pregunta: todo se aclara igual, desde el mismo botón.</p>
+      </div>
+      <article class="feature">
+        <div class="text">
+          <h3>Tú eliges qué pasa; la app pone el resto</h3>
+          <p>En cualquier pasaje, palabra o ficha toca <b>Aclarar</b> y elige una de seis opciones. Si quieres, agrega una frase, lo que propones y cómo lo sabes: una fuente, tu variante, tu estudio o una simple duda. El ID del pasaje, el texto que veías y la versión se guardan solos.</p>
+          <p>Se queda en tu computadora. Tú decides si lo compartes, por GitHub o copiándolo en un correo. No pedimos nombre, correo ni ubicación.</p>
+          <p class="ask">«¿Por qué aquí dice cihuatzintli y no cihuatl?» · Duda · Estudio náhuatl clásico</p>
+        </div>
+        <div class="shots"><img class="shot" src="img/aclarar.jpg" alt="Ventana «¿Qué no cuadra?» sobre un pasaje: seis opciones (traducción, análisis, grafía, fuente, uso en una variante actual, duda), una frase opcional y «cómo lo sabes»" loading="lazy" width="760" height="1168"></div>
+      </article>
+      <ol class="flow" aria-label="Qué pasa con una aclaración">
+        <li><b>Tocas «Aclarar»</b><span>En el pasaje, la palabra o la ficha.</span></li>
+        <li><b>Eliges qué pasa</b><span>Un toque. Lo demás es opcional.</span></li>
+        <li class="auto"><b>Llega ordenada</b><span>Si la compartes, se etiqueta sola y se comprueba que el pasaje exista.</span></li>
+        <li class="auto"><b>Junto al registro</b><span>Se pone al lado del texto actual y se avisan las repetidas.</span></li>
+        <li><b>Una persona coteja</b><span>Con la fuente. Si se confirma, se corrige y queda en el historial.</span></li>
+      </ol>
+      <p class="flow-note">Los pasos con borde ocre son automáticos. Ninguno corrige nada por su cuenta: ordenan para que revisar tome minutos.</p>
+    </div>
+  </section>
+
+  <section class="block" id="cuidado">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Cómo cuidamos la lengua</p>
+        <h2>No rescatamos: acompañamos.</h2>
+        <p>El náhuatl está vivo: lo hablan más de 1.6 millones de personas en México (INEGI, Censo 2020). Amoxcalli lee el náhuatl clásico de documentos de los siglos XVI y XVII. Leer esos textos y escuchar a quienes hablan hoy pide reglas claras, y están en el código.</p>
+      </div>
+      <ul class="care">
+        <li><b>Primero el permiso</b><span>Quien aporta su voz o su texto elige por separado si se puede revisar, si es de su autoría y si se puede usar para entrenar. Esas casillas empiezan sin marcar.</span></li>
+        <li><b>Lo tuyo sigue siendo tuyo</b><span>Aclaraciones y aportes se guardan en tu computadora. Puedes descargarlos y retirarlos cuando quieras.</span></li>
+        <li><b>Sin datos personales</b><span>No pedimos nombre real, correo ni ubicación. Los perfiles son seudónimos.</span></li>
+        <li><b>Cada fuente con su crédito</b><span>El código es MIT; los textos, imágenes y testimonios conservan sus propias licencias. Lo reservado no se redistribuye.</span></li>
+        <li><b>La comunidad decide sobre su variante</b><span>Tu variante se registra como tú la nombras. Lo que aporta una comunidad no se publica en abierto ni entrena modelos fuera del proyecto sin acuerdo con ella.</span></li>
+        <li><b>Una persona revisa</b><span>Las herramientas ordenan y comparan; no deciden. Nada se aprueba solo ni por mayoría.</span></li>
+      </ul>
+      <p class="refs">En qué nos apoyamos: <a href="https://www.gida-global.org/careprinciples">Principios CARE de datos indígenas</a> · <a href="https://normlex.ilo.org/dyn/nrmlx_es/f?p=NORMLEXPUB:12100:0::NO::P12100_ILO_CODE:C169">Convenio 169 de la OIT</a> · <a href="https://www.diputados.gob.mx/LeyesBiblio/ref/lgdlpi.htm">Ley General de Derechos Lingüísticos de los Pueblos Indígenas</a> · <a href="https://www.inali.gob.mx/sitios/clin-inali/html/l_nahuatl.html">Variantes del náhuatl (INALI)</a>. Son referencias de diseño; no implican aval de ninguna institución.</p>
+    </div>
+  </section>
+
   <section class="block">
     <div class="wrap">
       <div class="section-head">
@@ -282,6 +346,7 @@ footer nav { display: flex; flex-wrap: wrap; gap: 8px; }
             <li>Reúne grafías coloniales, modernas y de cada variedad en una misma búsqueda.</li>
             <li>Muestra glifos, dioses y calendario con la lámina o el documento de donde salen.</li>
             <li>Guarda tus palabras y te las repasa, sin cuenta y sin salir de tu equipo.</li>
+            <li>Te deja aclarar cualquier pasaje en un toque y compartirlo ordenado, si quieres.</li>
           </ul>
         </div>
         <div class="card no">
@@ -305,10 +370,10 @@ footer nav { display: flex; flex-wrap: wrap; gap: 8px; }
       <div class="section-head">
         <p class="eyebrow">Colaborar</p>
         <h2>Buscamos quien lo ponga a prueba.</h2>
-        <p>Una duda concreta también ayuda: el pasaje, qué observas y tu fuente.</p>
+        <p>Una duda concreta también ayuda: toca <b>Aclarar</b> en el pasaje y compártela.</p>
       </div>
       <ul class="help">
-        <li><b>Revisar</b><span>Lecturas y entradas, con la fuente en la mano.</span></li>
+        <li><b>Revisar</b><span>Aclaraciones y entradas, con la fuente en la mano.</span></li>
         <li><b>Enseñar</b><span>Probar una lectura en un taller acompañado.</span></li>
         <li><b>Hablar</b><span>Que tu variedad y tu forma de escribir se reconozcan, con permisos acordados.</span></li>
         <li><b>Abrir fuentes</b><span>Instituciones que permitan usar sus documentos.</span></li>

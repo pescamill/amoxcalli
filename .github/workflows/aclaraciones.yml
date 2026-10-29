@@ -1,0 +1,57 @@
+name: Aclaraciones
+
+# Una aclaración compartida desde la app llega como issue con un bloque JSON. Este flujo la ordena sola:
+# comprueba que el ID exista, la etiqueta, la pone junto al registro actual y señala posibles repetidas.
+# No corrige nada: una persona coteja con la fuente.
+on:
+  issues:
+    types: [opened, edited]
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  triage:
+    if: contains(github.event.issue.body, '<!-- amoxcalli:aclaracion -->')
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Leer la aclaración
+        env:
+          BODY: ${{ github.event.issue.body }}
+        run: |
+          printf '%s' "$BODY" > "$RUNNER_TEMP/body.md"
+          python -m nahuatl_local.aclaraciones triage "$RUNNER_TEMP/body.md" > "$RUNNER_TEMP/triage.json"
+      - name: Etiquetar y comentar
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NUMBER: ${{ github.event.issue.number }}
+          ACTION: ${{ github.event.action }}
+        run: |
+          python - <<'EOF'
+          import json, os, subprocess
+          data = json.load(open(os.path.join(os.environ['RUNNER_TEMP'], 'triage.json')))
+          number = os.environ['NUMBER']
+          def gh(*args, **kw):
+              return subprocess.run(['gh', *args], capture_output=True, text=True, **kw)
+          if not data['items']:
+              gh('issue', 'comment', number, '--body', 'No se pudo leer el bloque de la aclaración: ' + data.get('error', ''))
+              raise SystemExit
+          comments = []
+          for item in data['items']:
+              for label in item['labels']:
+                  gh('label', 'create', label, '--force', '--color', '812d37' if label == 'aclaración' else 'c9a55a')
+                  gh('issue', 'edit', number, '--add-label', label)
+              found = gh('issue', 'list', '--state', 'open', '--label', 'aclaración', '--search', f'"{item["target"]}" in:body',
+                         '--json', 'number', '--jq', '.[].number').stdout.split()
+              dupes = [n for n in found if n != number]
+              note = f"\n\nPosibles repetidas: {', '.join('#' + n for n in dupes)}" if dupes else ''
+              comments.append(item['comment'] + note)
+          if os.environ['ACTION'] == 'opened':
+              gh('issue', 'comment', number, '--body', '\n\n---\n\n'.join(comments))
+          EOF
