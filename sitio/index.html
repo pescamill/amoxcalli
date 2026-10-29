@@ -69,7 +69,11 @@ header.top .wrap { display: flex; align-items: center; justify-content: space-be
 .cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
 .facts { display: flex; flex-wrap: wrap; gap: 6px 20px; margin: 22px 0 0; font-size: 15px; color: var(--muted); padding: 0; list-style: none; }
 .facts li::before { content: "✓"; color: var(--jade); font-weight: 700; margin-right: 6px; }
-.browser { margin-top: 44px; border: 1px solid var(--line); background: var(--surface); box-shadow: 0 30px 60px rgba(48,41,33,.16); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); gap: 48px; align-items: center; }
+.phone { justify-self: center; width: min(100%, 320px); aspect-ratio: 9 / 16; overflow: hidden; background: #000; border-radius: 28px;
+  border: 6px solid var(--ink); box-shadow: 0 30px 60px rgba(48,41,33,.22); }
+.phone video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.browser { margin-top: 56px; border: 1px solid var(--line); background: var(--surface); box-shadow: 0 30px 60px rgba(48,41,33,.16); }
 .browser .bar { display: flex; align-items: center; gap: 6px; padding: 10px 14px; border-bottom: 1px solid var(--line); background: var(--sand); }
 .browser .bar i { width: 10px; height: 10px; border-radius: 50%; background: var(--line); }
 .browser .bar span { margin-left: 10px; font: 13px var(--mono); color: var(--muted); }
@@ -140,6 +144,8 @@ footer nav { display: flex; flex-wrap: wrap; gap: 8px; }
   .steps { grid-template-columns: minmax(0, 1fr); }
   section.block { padding: 54px 0; }
   .hero { padding-top: 28px; }
+  .hero-grid { grid-template-columns: minmax(0, 1fr); gap: 36px; }
+  .phone { width: min(100%, 280px); }
 }
 @media (max-width: 460px) {
   .top .btn span { display: none; }
@@ -169,6 +175,8 @@ footer nav { display: flex; flex-wrap: wrap; gap: 8px; }
 <main>
   <section class="hero">
     <div class="wrap">
+      <div class="hero-grid">
+      <div>
       <p class="eyebrow">Amoxcalli · «casa de libros»</p>
       <h1>Leer náhuatl clásico, <em>palabra por palabra.</em></h1>
       <p class="lede">Pasajes reales de códices y crónicas, con su traducción, el análisis de cada palabra y el diccionario a un clic. Cada respuesta dice de dónde viene; sin evidencia, Amoxcalli se abstiene.</p>
@@ -179,6 +187,11 @@ footer nav { display: flex; flex-wrap: wrap; gap: 8px; }
       <ul class="facts">
         <li>Gratis y de código abierto</li><li>Sin internet ni cuenta</li><li>Lo tuyo se queda en tu computadora</li><li>Funciona sin modelos de lenguaje</li>
       </ul>
+      </div>
+      <div class="phone">
+        <video src="reel.mp4" poster="img/poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Video de presentación de Amoxcalli: el pasaje NIQUITTA IN XOCHITL analizado palabra por palabra"></video>
+      </div>
+      </div>
       <figure class="browser" style="margin-left:0;margin-right:0;margin-bottom:0">
         <div class="bar" aria-hidden="true"><i></i><i></i><i></i><span>127.0.0.1:8766</span></div>
         <img src="img/escritorio.jpg" alt="Amoxcalli abierto en la lectura «Reconocer una flor»: el pasaje NIQUITTA IN XOCHITL con sus palabras resaltadas y, a un lado, las palabras de la lectura con su glifo" width="1600" height="938">
