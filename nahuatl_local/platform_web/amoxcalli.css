@@ -687,7 +687,7 @@ body.contributor .ecosystem-nav [data-app-tools]{display:block;margin:0}
 }
 @media print{
   body.workshop-view{font-size:11pt;background:var(--surface);color:black}
-  body.workshop-view>.masthead,body.workshop-view>.skip,body.workshop-view>.review-notice,body.workshop-view>.app-footer,body.workshop-view #notice,body.workshop-view #content>.page-heading,body.workshop-view .workshop-controls,body.workshop-view .screen-only,body.workshop-view .source-credit-summary{display:none}
+  body.workshop-view>.masthead,body.workshop-view>.skip,body.workshop-view>.review-notice,body.workshop-view>.update-notice,body.workshop-view>.app-footer,body.workshop-view #notice,body.workshop-view #content>.page-heading,body.workshop-view .workshop-controls,body.workshop-view .screen-only,body.workshop-view .source-credit-summary{display:none}
   body.workshop-view .shell,body.workshop-view main{display:block;max-width:none;margin:0;padding:0}
   body.workshop-view .workshop-sheet{border-radius:0;padding:0}
   body.workshop-view .workshop-passage{break-before:page}
@@ -990,6 +990,8 @@ body.contributor .app-install{margin:0;border:0;padding:0}
 body.contributor .app-install[open]{position:absolute;right:24px;max-width:340px;padding:16px;background:var(--surface);border:1px solid var(--line);z-index:20}
 .review-notice{max-width:calc(var(--content) - 2*var(--gutter));margin:16px auto 0;padding:9px 16px;font-size:13px;line-height:1.5;color:var(--muted);background:var(--sand);border-left:3px solid var(--ochre)}
 .review-notice strong{color:var(--ink)}
+.update-notice{max-width:calc(var(--content) - 2*var(--gutter));margin:10px auto 0;padding:10px 16px;display:flex;gap:12px;align-items:flex-start;justify-content:space-between;font-size:14px;line-height:1.5;background:var(--sand);border-left:3px solid var(--accent)}
+.update-notice p{margin:0}.update-notice small{color:var(--muted)}.update-notice button{flex:none}
 .review-notice a{white-space:nowrap}
 main{max-width:var(--content);margin:auto;padding:36px var(--gutter) 64px;min-width:0}
 .app-footer{max-width:1176px;margin:15px auto 0;padding:25px 0;display:flex;justify-content:space-between;gap:14px;border-top:2px solid var(--accent);font-size:12px;color:var(--muted)}

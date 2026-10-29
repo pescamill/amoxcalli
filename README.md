@@ -13,6 +13,8 @@ Amoxcalli reúne lecturas guiadas, unidades de gramática, un analizador de pala
 Presentación y capturas: <https://pescamill.github.io/amoxcalli/>.
 
 Amoxcalli se usa en tu computadora: no necesita internet ni cuenta, y lo que guardes se queda en tu equipo.
+Si hay conexión, una vez al día pregunta a GitHub si hay versión nueva (solo pide el número de versión; no envía
+nada tuyo) y te avisa arriba de la página. Para apagarlo: `serve --no-update-check` o `AMOXCALLI_NO_UPDATE_CHECK=1`.
 
 1. Instala **Python 3.11 o más reciente** desde <https://www.python.org/downloads/> (en Windows, marca «Add python.exe to PATH»).
 2. Descarga la última versión: [**Descargar Amoxcalli (.zip)**](https://github.com/pescamill/amoxcalli/releases/latest) y descomprímela.

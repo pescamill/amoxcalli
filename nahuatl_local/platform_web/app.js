@@ -89,5 +89,13 @@ document.addEventListener('click',e=>{const more=$('more-menu');if(more.open&&!m
 document.addEventListener('keydown',e=>{const more=$('more-menu');if(e.key==='Escape'&&more.open){more.open=false;more.querySelector('summary').focus();}});
 // Hasta que llegan los datos iniciales, un cambio de ruta solo espera: el primer render ya lee la ruta actual.
 window.addEventListener('hashchange',()=>{if(state.booted)render();});
+// Versión nueva: el servidor pregunta a GitHub (una vez al día); aquí solo se avisa, y «Ahora no» calla esa versión.
+async function showUpdate(){let u;try{u=await (await fetch('/api/update')).json();}catch{return;}
+ if(!u.available)return;try{if(localStorage.getItem('amoxcalli-update-dismissed')===u.latest)return;}catch{}
+ const how=u.how==='git'?'Para actualizar, ejecuta <code>git pull</code> en la carpeta de Amoxcalli y vuelve a abrirlo.':`<a href="${esc(u.url)}" target="_blank" rel="noopener">Descarga el .zip nuevo</a>, descomprímelo y ábrelo como siempre. Tus palabras guardadas se conservan.`;
+ const box=document.createElement('aside');box.className='update-notice';box.id='update-notice';box.setAttribute('role','status');
+ box.innerHTML=`<p><strong>Hay una versión nueva de Amoxcalli: ${esc(u.latest)}</strong> <small>(tienes ${esc(u.current)})</small><br>${how}</p><button type="button" class="link-button">Ahora no</button>`;
+ box.querySelector('button').onclick=()=>{try{localStorage.setItem('amoxcalli-update-dismissed',u.latest);}catch{}box.remove();};
+ $('review-notice').after(box);}
 // Todos los módulos (defer) ya se ejecutaron en DOMContentLoaded.
-document.addEventListener('DOMContentLoaded',()=>reloadData().then(()=>{state.booted=true;return render();}).catch(e=>{$('loading').textContent='No se pudo abrir el corpus: '+e.message;}));
+document.addEventListener('DOMContentLoaded',()=>reloadData().then(()=>{state.booted=true;showUpdate();return render();}).catch(e=>{$('loading').textContent='No se pudo abrir el corpus: '+e.message;}));

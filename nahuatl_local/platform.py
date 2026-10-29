@@ -19,6 +19,7 @@ from .spelling import Search as SpellingSearch, routes as spelling_routes
 from .entities import routes as entity_routes
 from .units import Units
 from .explain import ClaudeWriter, explain
+from .updates import Updates, disabled as updates_disabled
 from .web import Router, Server, Static, handler
 
 WEB = Path(__file__).with_name('platform_web')
@@ -31,7 +32,7 @@ STATIC = Static(WEB, {'/': WEB/'index.html', '/corpus.js': WEB/'app.js',
 INSTALL_HEAD = '<meta name="theme-color" content="#812d37"><meta name="apple-mobile-web-app-capable" content="yes">\n<link rel="manifest" href="/manifest.webmanifest"><link rel="apple-touch-icon" href="/icon-192.png"><script src="/install.js" defer></script>\n'
 
 
-def make_app(store, word_study=None, explain_writer=None):
+def make_app(store, word_study=None, explain_writer=None, updates=None):
     """Tabla de rutas de la aplicación: corpus, investigación y Voces."""
     router=Router()
     community_routes(router,store)
@@ -50,6 +51,8 @@ def make_app(store, word_study=None, explain_writer=None):
     units=Units(terms,store.public_records)
     # Fichas de Preguntar (campos citados con su procedencia); se reconstruyen si cambian registros o fuentes.
     cards_cache=dict(value=None,lock=threading.Lock())
+    # Aviso de versión nueva: sin consulta (pruebas, demo o desactivado) responde que no hay.
+    updates=updates or Updates(fetch=lambda:{})
 
     def contribute_page(request):
         # Misma sesión, mismos datos y mismos permisos que el corpus.
@@ -161,7 +164,7 @@ def make_app(store, word_study=None, explain_writer=None):
             ('/api/system',lambda r:r.reply(dict(archive=archive.summary,preparation=preparation()))),
             ('/api/learning',lambda r:r.reply(learning.catalog(store.public_records()))),
             ('/api/units',lambda r:r.reply(units.catalog())),('/api/units/examples',unit_examples),
-            ('/api/research',research),
+            ('/api/research',research),('/api/update',lambda r:r.reply(updates.status())),
             ('/archive.csv',lambda r:r.reply(archive.path.read_bytes(),mime='text/csv; charset=utf-8')),
             ('/api/task',task),('/api/terms',terms_search),
             ('/api/corpus/export',lambda r:r.reply(store.export_data())),
@@ -179,12 +182,15 @@ def make_app(store, word_study=None, explain_writer=None):
     return app
 
 
-def make_server(store,host='127.0.0.1',port=8766,public_origin=None,prewarm=False,explain_model=None,demo=False):
+def make_server(store,host='127.0.0.1',port=8766,public_origin=None,prewarm=False,explain_model=None,demo=False,check_updates=False):
     # El servidor no espera las pistas de glosa: responde sin ellas (y lo indica) mientras se estiman.
     word_study=WordStudy(records_fn=store.public_records,wait_for_hints=False)
     # Claude solo redacta si se pide al arrancar: la explicación envía la pregunta y los pasajes citados a Anthropic.
     writer=ClaudeWriter() if explain_model=='claude' else None
-    app=make_app(store,word_study,writer)
+    updates=None
+    if check_updates and not demo and not updates_disabled():
+        updates=Updates();updates.start()
+    app=make_app(store,word_study,writer,updates)
     if prewarm:
         # Primer arranque: análisis listo en segundos; después se reutiliza data/derived/.
         def warm():
@@ -202,6 +208,7 @@ def main():
     serve.add_argument('--port',type=int,default=8766)
     serve.add_argument('--public-origin',help='Origen HTTPS de un proxy (https://dominio); se acepta como Host y como Origin de escritura.')
     serve.add_argument('--open',action='store_true',help='Abre la aplicación en el navegador al arrancar (lo usan los lanzadores de doble clic).')
+    serve.add_argument('--no-update-check',action='store_true',help='No consulta GitHub para avisar de versiones nuevas (también AMOXCALLI_NO_UPDATE_CHECK=1).')
     serve.add_argument('--demo',action='store_true',help='Demostración pública de solo lectura: rechaza aportaciones, perfiles y grabaciones.')
     # El modelo local se archivó (experiments/llm/); estas opciones se aceptan y no hacen nada, para no romper arranques guardados.
     for retired in ('--enable-model','--disable-model'):serve.add_argument(retired,action='store_true',help=argparse.SUPPRESS)
@@ -215,7 +222,7 @@ def main():
     try:
         store=CorpusStore(args.db)
         if args.command=='serve':
-            httpd=make_server(store,args.host,args.port,args.public_origin,prewarm=True,explain_model=args.explain_model,demo=args.demo)
+            httpd=make_server(store,args.host,args.port,args.public_origin,prewarm=True,explain_model=args.explain_model,demo=args.demo,check_updates=not args.no_update_check)
             url=f'http://127.0.0.1:{httpd.server_address[1]}'
             print(f'Amoxcalli · {url} · Voces en /aportar',flush=True)
             if args.open:

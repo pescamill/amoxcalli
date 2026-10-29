@@ -11,6 +11,8 @@ Amoxcalli brings together guided readings, short grammar units, a word analyzer,
 ## Download and use
 
 Amoxcalli runs on your own computer: no internet or account needed, and whatever you save stays on your machine.
+When online, once a day it asks GitHub whether a newer release exists (only the version number; nothing of yours is
+sent) and shows a notice. Turn it off with `serve --no-update-check` or `AMOXCALLI_NO_UPDATE_CHECK=1`.
 
 1. Install **Python 3.11 or newer** from <https://www.python.org/downloads/> (on Windows, tick "Add python.exe to PATH").
 2. Download the latest release: [**Download Amoxcalli (.zip)**](https://github.com/pescamill/amoxcalli/releases/latest) and unzip it.
