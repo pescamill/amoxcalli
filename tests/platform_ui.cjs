@@ -273,7 +273,7 @@ async function open(path,studyData){
   assert(!dlg.querySelector('[data-save]').disabled);assert(!dlg.querySelector('.aclarar-more').hidden);
   dlg.querySelector('[name=note]').value='<b>falta</b> «una mujer»';const basis=dlg.querySelector('input[name=basis][value=fuente]');basis.checked=true;basis.dispatchEvent(new w.Event('change',{bubbles:true}));
   assert(!dlg.querySelector('[data-when=fuente]').hidden);dlg.querySelector('[name=citation]').value='Reyes, f. 3';
-  dlg.querySelector('[data-save]').click();await until(()=>dlg.textContent.includes('Guardado en esta computadora'));
+  dlg.querySelector('[data-save]').click();await until(()=>dlg.textContent.includes('Guardado en este dispositivo'));
   const share=new URL(dlg.querySelector('a[href^="https://github.com"]').href);assert.equal(share.origin+share.pathname,'https://github.com/pescamill/amoxcalli/issues/new');
   assert(share.searchParams.get('body').includes('<!-- amoxcalli:aclaracion -->'));assert(share.searchParams.get('title').includes(target));
   const saved=(await(await w.fetch('/api/aclaraciones')).json()).items.at(-1);assert.equal(saved.target,target);assert.equal(saved.category,'traduccion');assert.equal(saved.citation,'Reyes, f. 3');assert(saved.context.nah.length>10,'el texto visto se guarda solo');assert.equal(saved.context.route,'#leer/aves');

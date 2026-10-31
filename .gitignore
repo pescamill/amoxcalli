@@ -30,6 +30,7 @@ outputs/**/*-previous
 !sitio/*.html
 !nahuatl_local/community_web/*.html
 !nahuatl_local/platform_web/*.html
+!nahuatl_local/movil_web/*.html
 *.tmp
 *.lock
 *-writing
@@ -47,3 +48,6 @@ reports/lexicon-candidates.*
 !promo/*.html
 promo/*.mp4
 promo/fotos/
+
+# Versión para el teléfono: la construye scripts/build_movil.py (y el flujo Sitio al publicar).
+sitio/app/

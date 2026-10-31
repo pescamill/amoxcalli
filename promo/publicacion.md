@@ -17,7 +17,7 @@ pasajes donde aparece.
 📖 12 lecturas guiadas y 16,111 pasajes bilingües
 🔎 Busca como escribes: kuali, qualli o cuali te llevan a cualli
 ❓ Pregunta «¿cómo se dice mujer?» y cada frase de la respuesta cita su fuente
-💻 Gratis, de código abierto y sin internet: lo que guardes se queda en tu computadora
+📱 En tu teléfono o tu computadora, gratis, de código abierto y sin internet: lo que guardes se queda ahí
 
 Lo que NO hace: no traduce (probé un traductor automático y no superó a buscar el pasaje más parecido), no inventa
 (sin evidencia, no responde) y todavía le falta revisión de especialistas. Si enseñas o hablas náhuatl, me encantaría
@@ -29,7 +29,9 @@ Link en la bio → pescamill.github.io/amoxcalli
 
 ### Comentario fijado
 
-Cómo usarlo: instala Python 3.11 o más reciente, descarga el .zip de
+📱 En el teléfono: abre pescamill.github.io/amoxcalli/app y elige «Añadir a pantalla de inicio» (iPhone) o
+«Instalar aplicación» (Android). La primera vez descarga unos 20 MB; después funciona sin internet.
+💻 En la computadora: instala Python 3.11 o más reciente, descarga el .zip de
 https://github.com/pescamill/amoxcalli/releases/latest, descomprímelo y haz doble clic en
 «Abrir Amoxcalli.command» (Mac) o «Abrir Amoxcalli.bat» (Windows).
 
@@ -57,7 +59,7 @@ Esa duda vale. En Amoxcalli ahora cualquier pasaje, palabra o ficha tiene un bot
 👆 Eliges qué no cuadra con un toque: la traducción, el análisis, la grafía, la fuente, cómo se dice en tu variante
 o una simple duda.
 🧾 La app pone el resto: el pasaje, el texto que veías y la versión.
-🔒 Se queda en tu computadora. Tú decides si lo compartes. No pido nombre, correo ni ubicación.
+🔒 Se queda en tu dispositivo. Tú decides si lo compartes. No pido nombre, correo ni ubicación.
 🗂️ Si lo compartes, llega ordenado: se etiqueta solo, se comprueba que el pasaje exista y se pone junto al registro.
 👤 Y una persona lo coteja con la fuente. Nada se corrige solo.
 

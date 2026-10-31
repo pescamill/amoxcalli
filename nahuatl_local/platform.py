@@ -181,7 +181,9 @@ def make_app(store, word_study=None, explain_writer=None, updates=None):
     router.add('DELETE','/api/proposals/',withdraw_proposal,prefix=True)
     app=handler(store,router,STATIC)
     # Orden de preparación: lo que pide la primera consulta (palabra, Archivo, Preguntar) antes que las pistas.
-    app.warm=lambda:(word_study.core(),terms._build(),spellings._build(),word_study.hints(wait=True),topics._build())
+    # La versión del teléfono (movil.py) las corre una por una para atender peticiones entre etapas.
+    app.warm_stages=(word_study.core,terms._build,spellings._build,lambda:word_study.hints(wait=True),topics._build)
+    app.warm=lambda:[stage() for stage in app.warm_stages]
     return app
 
 

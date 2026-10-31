@@ -2,6 +2,20 @@
 
 Instalación, acceso desde el teléfono, HTTPS y comportamiento sin conexión. Qué ofrece la aplicación: [README](../README.md); operación (revisión, importación, exportación): [PLATAFORMA.md](PLATAFORMA.md). Python 3.11+ y SQLite guardan los datos en tu equipo; el navegador presenta la interfaz adaptable.
 
+## En el teléfono, sin servidor
+
+<https://pescamill.github.io/amoxcalli/app/> es la misma aplicación servida como archivos estáticos: su Python corre
+dentro del navegador con [Pyodide](https://pyodide.org) en un Web Worker, y la página le pasa cada petición a
+`/api/…` en vez de mandarla a la red (`nahuatl_local/movil_web/puente.js`). Del lado de Python,
+`nahuatl_local/movil.py` atiende esas peticiones con el mismo manejador HTTP del servidor, así que rutas, permisos y
+errores son idénticos. Lo que guardas (aclaraciones, perfil) vive en IndexedDB de ese navegador; un service worker
+guarda la app la primera vez (~20 MB) y después abre sin internet. Voces (grabar y aportar voz) queda fuera porque
+las grabaciones necesitan un servidor que las reciba.
+
+Se construye con `python3 scripts/build_movil.py` (sale en `sitio/app/`; usa solo archivos del repositorio y
+calcula ahí `data/derived/`). El flujo «Sitio» la construye y publica con la página de presentación. Para probarla
+en local: `python3 -m http.server 8790 -d sitio` y abre <http://localhost:8790/app/>.
+
 ## Arranque en tu equipo
 
 Desde la carpeta del repositorio, ejecuta `make demo` (prepara los análisis derivados y arranca) o directamente:

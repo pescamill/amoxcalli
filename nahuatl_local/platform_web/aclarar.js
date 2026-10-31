@@ -23,7 +23,7 @@ function aclaracionIssue(a){
 function aclaracionText(a){return `Aclaración para Amoxcalli\n${ACLARAR.categories[a.category]} · ${a.target}\n${a.note||''}\n${a.proposal?'Propone: '+a.proposal+'\n':''}\n${ACLARACION_MARK}\n\`\`\`json\n${JSON.stringify(a)}\n\`\`\``;}
 
 function aclararShare(a,saved){
- return `<p class="aclarar-done">${saved?'<strong>Guardado en esta computadora.</strong> ':''}¿Lo compartes con el proyecto? Llega ordenado: con el pasaje, lo que viste y tu propuesta.</p>
+ return `<p class="aclarar-done">${saved?'<strong>Guardado en este dispositivo.</strong> ':''}¿Lo compartes con el proyecto? Llega ordenado: con el pasaje, lo que viste y tu propuesta.</p>
  <div class="entry-actions"><a class="primary" href="${esc(aclaracionIssue(a))}" target="_blank" rel="noopener noreferrer">Enviar por GitHub ↗</a><button type="button" class="secondary" data-aclarar-copy>Copiar para enviarlo por otro medio</button></div>
  <p class="meta">GitHub pide una cuenta gratuita; tu usuario quedará en el historial de la corrección. Si prefieres no usarla, copia el texto y envíalo por correo o mensaje a quien coordine tu grupo.</p>`;
 }
@@ -40,7 +40,7 @@ function openAclarar(target,context){
   <label data-when="fuente" hidden><span>Obra y página</span><input name="citation" maxlength="300" placeholder="Molina 1571, f. 23v"></label>
   <label data-when="hablante" hidden><span>Tu variante, como tú la nombras</span><input name="variant" maxlength="120" placeholder="Náhuatl de la Huasteca, mexicano de Milpa Alta…"></label>
  </div>
- <p class="meta">Se guarda solo en esta computadora; tú decides si lo compartes. No pedimos nombre, correo ni ubicación. <a href="#cuidado" data-close>Cómo cuidamos la lengua</a></p>
+ <p class="meta">Se guarda solo en este dispositivo; tú decides si lo compartes. No pedimos nombre, correo ni ubicación. <a href="#cuidado" data-close>Cómo cuidamos la lengua</a></p>
  <div class="entry-actions"><button type="button" class="primary" data-save disabled>Guardar aclaración</button><button type="button" class="link-button" data-close>Cancelar</button></div></form>`;
  const form=dialog.querySelector('form'),more=dialog.querySelector('.aclarar-more'),save=form.querySelector('[data-save]');
  const close=()=>dialog.open&&(dialog.close?dialog.close():dialog.removeAttribute('open'));
@@ -62,20 +62,20 @@ function bindAclararCopy(root,a){root.querySelectorAll('[data-aclarar-copy]').fo
 document.addEventListener('click',e=>{const b=e.target.closest?.('[data-aclarar]');if(!b)return;e.preventDefault();openAclarar(b.dataset.aclarar,aclararContext(b));});
 
 async function renderAclaraciones(){
- const head=heading('Mis aclaraciones','Lo que has señalado','Se guardan en esta computadora. Compártelas cuando quieras; nada se corrige solo: una persona coteja cada una con su fuente.');
+ const head=heading('Mis aclaraciones','Lo que has señalado','Se guardan en este dispositivo. Compártelas cuando quieras; nada se corrige solo: una persona coteja cada una con su fuente.');
  let items=[];try{items=(await api('/api/aclaraciones')).items.reverse();}catch(e){$('content').innerHTML=head+`<p class="empty">${esc(e.message)}</p>`;return;}
  $('content').innerHTML=head+(items.length?`<div class="entry-actions"><button class="secondary" id="aclaraciones-download">Descargar todas (.json)</button></div><div class="aclaraciones-list">${items.map(a=>`<article class="card aclaracion-item" data-id="${esc(a.id)}"><p class="eyebrow">${esc(ACLARAR.categories[a.category]||a.category)} · ${esc(a.created.slice(0,10))}</p>${a.context?.nah?`<p lang="nci">${esc(a.context.nah.slice(0,200))}</p>`:''}${a.note?`<p>${esc(a.note)}</p>`:''}${a.proposal?`<p><strong>Propones:</strong> ${esc(a.proposal)}</p>`:''}<p class="meta"><code>${esc(a.target)}</code> · ${esc(ACLARAR.bases[a.basis]||'')}${a.variant?' · '+esc(a.variant):''}${a.citation?' · '+esc(a.citation):''}</p>${aclararShare(a,false)}<button class="link-button" data-remove>Borrar</button></article>`).join('')}</div>`
   :`<p class="empty">Aún no hay aclaraciones. En cualquier pasaje, palabra o ficha toca <strong>Aclarar</strong>.</p>`);
  $('aclaraciones-download')?.addEventListener('click',()=>download('mis-aclaraciones.json',{schema:'amoxcalli.aclaracion/1',items}));
  $('content').querySelectorAll('.aclaracion-item').forEach(card=>{const a=items.find(i=>i.id===card.dataset.id);bindAclararCopy(card,a);
-  card.querySelector('[data-remove]').onclick=async()=>{try{await api('/api/aclaraciones/'+encodeURIComponent(a.id),{method:'DELETE'});card.remove();toast('Aclaración borrada de esta computadora.');}catch(e){toast(e.message);}};});
+  card.querySelector('[data-remove]').onclick=async()=>{try{await api('/api/aclaraciones/'+encodeURIComponent(a.id),{method:'DELETE'});card.remove();toast('Aclaración borrada de este dispositivo.');}catch(e){toast(e.message);}};});
 }
 
 function renderCuidado(){
  $('content').innerHTML=heading('Cómo cuidamos la lengua','No rescatamos: acompañamos.','El náhuatl está vivo: lo hablan más de 1.6 millones de personas en México (INEGI, Censo 2020). Este cuaderno lee el náhuatl clásico de documentos de los siglos XVI y XVII. Leer esos textos y escuchar a quienes hablan hoy pide reglas claras.')+`
  <div class="care-grid">${[
   ['Primero el permiso, después los datos','En Voces, cada envío separa el permiso de revisión, la autoría y el uso para entrenar (texto y voz por separado). Las casillas de entrenamiento empiezan sin marcar.'],
-  ['Lo tuyo sigue siendo tuyo','Aclaraciones y aportes se guardan en tu computadora. Tú decides si los compartes; puedes descargarlos y retirarlos cuando quieras.'],
+  ['Lo tuyo sigue siendo tuyo','Aclaraciones y aportes se guardan en tu dispositivo. Tú decides si los compartes; puedes descargarlos y retirarlos cuando quieras.'],
   ['Sin datos personales','No pedimos nombre real, correo ni ubicación. Los perfiles de Voces son seudónimos.'],
   ['Cada fuente con su crédito y su licencia','El código es MIT; los textos, imágenes y testimonios conservan sus propias condiciones. Lo reservado no se redistribuye. Ver <a href="#fuentes">Fuentes</a>.'],
   ['La comunidad decide sobre su variante','Tu variante se registra como tú la nombras. No se mezcla el náhuatl de hoy con el clásico, y lo que aporta una comunidad no se publica en abierto ni entrena modelos fuera del proyecto sin acuerdo con ella.'],

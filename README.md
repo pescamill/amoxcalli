@@ -12,8 +12,16 @@ Amoxcalli reúne lecturas guiadas, unidades de gramática, un analizador de pala
 
 Presentación y capturas: <https://pescamill.github.io/amoxcalli/>.
 
-Amoxcalli se usa en tu computadora: no necesita internet ni cuenta, y lo que guardes se queda en tu equipo.
-Si hay conexión, una vez al día pregunta a GitHub si hay versión nueva (solo pide el número de versión; no envía
+Amoxcalli se usa en tu teléfono o en tu computadora: no necesita internet ni cuenta, y lo que guardes se queda en tu
+dispositivo.
+
+**En el teléfono** (o en cualquier navegador, sin instalar nada): abre <https://pescamill.github.io/amoxcalli/app/> y
+elige «Añadir a pantalla de inicio» (iPhone) o «Instalar aplicación» (Android). La primera vez descarga unos 20 MB;
+después funciona sin internet. Es la misma aplicación: su Python corre dentro del navegador con
+[Pyodide](https://pyodide.org) (`nahuatl_local/movil.py`, construida con `python3 scripts/build_movil.py`). Voces
+(grabar y aportar tu voz) por ahora solo está en la versión de computadora.
+
+**En la computadora.** Si hay conexión, una vez al día pregunta a GitHub si hay versión nueva (solo pide el número de versión; no envía
 nada tuyo) y te avisa arriba de la página. Para apagarlo: `serve --no-update-check` o `AMOXCALLI_NO_UPDATE_CHECK=1`.
 
 1. Instala **Python 3.11 o más reciente** desde <https://www.python.org/downloads/> (en Windows, marca «Add python.exe to PATH»).

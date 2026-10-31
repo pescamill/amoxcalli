@@ -1,9 +1,11 @@
-# Publishes sitio/ (the presentation page) to GitHub Pages on every push that touches it.
+# Publishes sitio/ (the presentation page) and sitio/app/ (Amoxcalli for the phone, built here with Pyodide)
+# to GitHub Pages on every push that touches either.
 name: Sitio
 on:
   push:
     branches: [main]
-    paths: ["sitio/**", ".github/workflows/sitio.yml"]
+    paths: ["sitio/**", "nahuatl_local/**", "corpus/**", "editorial/**", "configs/**", "docs/**", "CONTRIBUTING.md",
+            "scripts/build_movil.py", ".github/workflows/sitio.yml"]
   workflow_dispatch:
 permissions:
   contents: read
@@ -20,6 +22,11 @@ jobs:
       url: ${{ steps.deploy.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Amoxcalli para el teléfono
+        run: python scripts/build_movil.py
       - uses: actions/upload-pages-artifact@v3
         with:
           path: sitio

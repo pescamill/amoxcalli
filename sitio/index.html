@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Amoxcalli</title>
-<meta name="description" content="Aprende a leer náhuatl clásico con pasajes reales: cada palabra se analiza, cada respuesta cita su fuente y, sin evidencia, Amoxcalli se abstiene. Gratis y en tu computadora.">
+<meta name="description" content="Aprende a leer náhuatl clásico con pasajes reales: cada palabra se analiza, cada respuesta cita su fuente y, sin evidencia, Amoxcalli se abstiene. Gratis, en tu teléfono o en tu computadora.">
 <meta property="og:title" content="Amoxcalli: leer náhuatl clásico, palabra por palabra">
 <meta property="og:description" content="Lecturas guiadas, diccionario, glifos y 16,111 pasajes bilingües. Cada respuesta dice de dónde viene.">
 <meta property="og:image" content="https://pescamill.github.io/amoxcalli/img/og.png">
@@ -200,11 +200,11 @@ footer nav { display: flex; flex-wrap: wrap; gap: 8px; }
       <h1>Leer náhuatl clásico, <em>palabra por palabra.</em></h1>
       <p class="lede">Pasajes reales de códices y crónicas, con su traducción, el análisis de cada palabra y el diccionario a un clic. Cada respuesta dice de dónde viene; sin evidencia, Amoxcalli se abstiene.</p>
       <div class="cta">
-        <a class="btn primary" href="#descargar">Descargar gratis</a>
-        <a class="btn" href="#que-hace">Ver qué hace</a>
+        <a class="btn primary" href="app/">Abrir ahora</a>
+        <a class="btn" href="#descargar">Teléfono o computadora</a>
       </div>
       <ul class="facts">
-        <li>Gratis y de código abierto</li><li>Sin internet ni cuenta</li><li>Lo tuyo se queda en tu computadora</li><li>Funciona sin modelos de lenguaje</li>
+        <li>Gratis y de código abierto</li><li>Sin internet ni cuenta</li><li>En tu teléfono o tu computadora</li><li>Lo tuyo se queda en tu dispositivo</li><li>Funciona sin modelos de lenguaje</li>
       </ul>
       </div>
       <div class="phone">
@@ -272,18 +272,19 @@ footer nav { display: flex; flex-wrap: wrap; gap: 8px; }
   <section class="block get" id="descargar">
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow">Descargar</p>
-        <h2>Descarga, descomprime y abre.</h2>
-        <p>Funciona sin internet: se abre en tu navegador, pero todo corre en tu computadora.</p>
+        <p class="eyebrow">Usarlo</p>
+        <h2>En tu teléfono o en tu computadora.</h2>
+        <p>Funciona sin internet: se abre en tu navegador, pero todo corre en tu dispositivo.</p>
       </div>
 
       <div class="tabs" role="tablist" aria-label="Sistema operativo">
+        <button role="tab" aria-controls="pasos" data-os="movil">Teléfono</button>
         <button role="tab" aria-controls="pasos" data-os="mac">Mac</button>
         <button role="tab" aria-controls="pasos" data-os="win">Windows</button>
         <button role="tab" aria-controls="pasos" data-os="linux">Linux</button>
       </div>
       <ol class="steps" id="pasos" role="tabpanel"></ol>
-      <p class="req">Ocupa unos 20 MB. La primera vez prepara el análisis durante un minuto.</p>
+      <p class="req">Ocupa unos 20 MB. La primera vez prepara el análisis durante un minuto. Voces (grabar y aportar tu voz) solo está en la versión de computadora.</p>
     </div>
   </section>
 
@@ -298,7 +299,7 @@ footer nav { display: flex; flex-wrap: wrap; gap: 8px; }
         <div class="text">
           <h3>Tú eliges qué pasa; la app pone el resto</h3>
           <p>En cualquier pasaje, palabra o ficha toca <b>Aclarar</b> y elige una de seis opciones. Si quieres, agrega una frase, lo que propones y cómo lo sabes: una fuente, tu variante, tu estudio o una simple duda. El ID del pasaje, el texto que veías y la versión se guardan solos.</p>
-          <p>Se queda en tu computadora. Tú decides si lo compartes, por GitHub o copiándolo en un correo. No pedimos nombre, correo ni ubicación.</p>
+          <p>Se queda en tu dispositivo. Tú decides si lo compartes, por GitHub o copiándolo en un correo. No pedimos nombre, correo ni ubicación.</p>
           <p class="ask">«¿Por qué aquí dice cihuatzintli y no cihuatl?» · Duda · Estudio náhuatl clásico</p>
         </div>
         <div class="shots"><img class="shot" src="img/aclarar.jpg" alt="Ventana «¿Qué no cuadra?» sobre un pasaje: seis opciones (traducción, análisis, grafía, fuente, uso en una variante actual, duda), una frase opcional y «cómo lo sabes»" loading="lazy" width="760" height="1168"></div>
@@ -323,7 +324,7 @@ footer nav { display: flex; flex-wrap: wrap; gap: 8px; }
       </div>
       <ul class="care">
         <li><b>Primero el permiso</b><span>Quien aporta su voz o su texto elige por separado si se puede revisar, si es de su autoría y si se puede usar para entrenar. Esas casillas empiezan sin marcar.</span></li>
-        <li><b>Lo tuyo sigue siendo tuyo</b><span>Aclaraciones y aportes se guardan en tu computadora. Puedes descargarlos y retirarlos cuando quieras.</span></li>
+        <li><b>Lo tuyo sigue siendo tuyo</b><span>Aclaraciones y aportes se guardan en tu dispositivo. Puedes descargarlos y retirarlos cuando quieras.</span></li>
         <li><b>Sin datos personales</b><span>No pedimos nombre real, correo ni ubicación. Los perfiles son seudónimos.</span></li>
         <li><b>Cada fuente con su crédito</b><span>El código es MIT; los textos, imágenes y testimonios conservan sus propias licencias. Lo reservado no se redistribuye.</span></li>
         <li><b>La comunidad decide sobre su variante</b><span>Tu variante se registra como tú la nombras. Lo que aporta una comunidad no se publica en abierto ni entrena modelos fuera del proyecto sin acuerdo con ella.</span></li>
@@ -401,6 +402,11 @@ footer nav { display: flex; flex-wrap: wrap; gap: 8px; }
 const ZIP = "https://github.com/pescamill/amoxcalli/releases/latest";
 const PY = '<a href="https://www.python.org/downloads/">Python 3.11 o más reciente</a>';
 const OS = {
+  movil: [
+    ["Ábrelo", 'Entra a <a href="app/">pescamill.github.io/amoxcalli/app</a> desde el navegador del teléfono. No pide cuenta ni datos.'],
+    ["Instálalo", "En iPhone: Compartir → «Añadir a pantalla de inicio». En Android: menú ⋮ → «Instalar aplicación»."],
+    ["Úsalo sin internet", "La primera vez descarga unos 20 MB; después abre desde el teléfono, aunque no tengas señal."],
+  ],
   mac: [
     ["Instala Python", `Descarga ${PY} e instálalo.`],
     ["Descarga Amoxcalli", `Baja el <a href="${ZIP}">.zip de la última versión</a> y descomprímelo.`],
@@ -435,7 +441,7 @@ tabs.forEach((t, i) => {
   };
 });
 const ua = navigator.userAgent;
-pick(/Windows/.test(ua) ? "win" : /Linux/.test(ua) && !/Android/.test(ua) ? "linux" : "mac");
+pick(/Android|iPhone|iPad|Mobile/.test(ua) ? "movil" : /Windows/.test(ua) ? "win" : /Linux/.test(ua) ? "linux" : "mac");
 </script>
 </body>
 </html>
