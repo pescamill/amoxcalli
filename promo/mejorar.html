@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Amoxcalli · reel Ayúdanos a mejorar</title>
+<style>
+  /* 1080×1920, 32 s, rendered frame by frame through window.render(t). Content stays inside y 220–1560.
+     The menu path, the four options and the sharing flow are the ones Amoxcalli really shows
+     («Ayúdanos a mejorar» in aclarar.js, aclaraciones.py triage). */
+  :root {
+    --paper: #f6f0e2; --surface: #fffdf6; --sand: #eee5d2; --ink: #302921; --ink-2: #4f4436; --muted: #685b4b; --line: #d3c5ad;
+    --accent: #812d37; --accent-dark: #64202c; --ochre: #c99538; --gold: #e6c977; --gold-soft: #f0e2b6; --jade: #3d6252; --jade-soft: #8fb8a3;
+    --night: #1d1814; --night-2: #2a231d; --night-line: #44392f; --night-ink: #f6f0e2; --night-muted: #b5a68f; --rose: #e9a0a6;
+    --serif: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+    --sans: "Avenir Next", Avenir, "Segoe UI", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--night); }
+  body { font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+  #stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; }
+  .scene { position: absolute; inset: 0; opacity: 0; padding: 0 84px; display: flex; flex-direction: column; justify-content: center; }
+  .dark { background: var(--night); color: var(--night-ink); }
+  .paper { background: var(--paper); color: var(--ink); }
+  .wine { background: var(--accent); color: #fff; }
+  .greca { position: absolute; left: 0; right: 0; height: 36px; background: url("../sitio/img/borde.svg") repeat-x left center; background-size: 216px 36px; }
+  .greca.top { top: 150px; } .greca.bottom { bottom: 260px; }
+  .kicker { font: 700 30px/1 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--accent); margin-bottom: 30px; }
+  .dark .kicker { color: var(--rose); }
+  .h2 { font: 600 80px/1.06 var(--serif); letter-spacing: -.02em; }
+
+  /* 1 · under construction */
+  #s1 { align-items: center; text-align: center; }
+  #s1 .h1 { font: 600 118px/1.04 var(--serif); letter-spacing: -.02em; }
+  #s1 .bar { width: 760px; height: 34px; margin-top: 70px; background: repeating-linear-gradient(135deg, var(--night-2) 0 26px, #3b3128 26px 52px); border: 2px solid var(--night-line); position: relative; }
+  #s1 .bar i { position: absolute; left: 0; top: 0; bottom: 0; width: 0; background: repeating-linear-gradient(135deg, var(--gold) 0 26px, var(--ochre) 26px 52px); }
+  #s1 .ver { font: 600 30px/1 var(--sans); color: var(--night-muted); margin-top: 22px; letter-spacing: .06em; }
+  #s1 .q { font: italic 600 80px/1.12 var(--serif); color: var(--rose); margin-top: 90px; }
+
+  /* 2 · did you see something wrong? */
+  .list { display: flex; flex-direction: column; gap: 20px; margin-top: 46px; }
+  .list div { display: flex; align-items: center; gap: 26px; padding: 26px 30px; background: var(--surface); border: 2px solid var(--line); font: 500 40px/1.25 var(--sans); }
+  .list b { flex: none; width: 64px; height: 64px; display: grid; place-items: center; color: #fff; font: 700 38px/1 var(--sans); }
+  .list .e { background: var(--accent); } .list .f { background: #8a6a2a; } .list .i { background: var(--jade); }
+
+  /* 3 · how */
+  .menu { margin-top: 40px; background: var(--surface); border: 2px solid var(--line); padding: 26px 34px; font: 600 40px/1 var(--sans); display: flex; gap: 22px; align-items: center; }
+  .menu .arrow { color: var(--muted); }
+  .menu .target { color: var(--accent); border-bottom: 3px solid var(--accent); padding-bottom: 6px; position: relative; }
+  .ripple { position: absolute; left: 50%; top: 50%; width: 40px; height: 40px; margin: -20px 0 0 -20px; border-radius: 50%; background: rgba(129,45,55,.28); opacity: 0; }
+  .dialog { margin-top: 34px; background: var(--surface); border: 2px solid var(--line); border-top: 8px solid var(--accent); padding: 38px 40px 42px; box-shadow: 0 30px 80px rgba(48,41,33,.18); }
+  .dialog .dk { font: 700 26px/1 var(--sans); letter-spacing: .14em; color: var(--accent); }
+  .dialog h3 { font: 600 62px/1.05 var(--serif); margin: 14px 0 26px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 14px; }
+  .chip { font: 500 31px/1.2 var(--sans); padding: 14px 22px; border: 2px solid var(--line); border-radius: 999px; background: var(--sand); color: var(--ink); }
+  .chip.on { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .field { margin-top: 26px; padding: 20px 24px; border: 2px solid var(--line); background: #fff; font: 500 36px/1.3 var(--sans); min-height: 84px; }
+  .caret { display: inline-block; width: 4px; height: 40px; background: var(--ink); vertical-align: -6px; margin-left: 3px; }
+  .also { margin-top: 34px; font: 500 34px/1.35 var(--sans); color: var(--muted); }
+  .also strong { color: var(--accent); }
+
+  /* 4 · you decide */
+  .safe { margin-top: 40px; padding: 30px 34px; background: var(--night-2); border-left: 8px solid var(--jade-soft); font: 500 38px/1.4 var(--sans); color: var(--night-muted); }
+  .safe strong { display: block; font: 600 54px/1.15 var(--serif); color: var(--night-ink); margin-bottom: 8px; }
+  #s4 .human { margin-top: 56px; font: 600 60px/1.12 var(--serif); }
+  #s4 .human small { display: block; font: 500 36px/1.35 var(--sans); color: var(--night-muted); margin-top: 14px; }
+
+  /* 5 · open and for everyone */
+  .why { display: flex; gap: 30px; align-items: flex-start; margin-top: 44px; }
+  .why .n { flex: none; width: 84px; height: 84px; display: grid; place-items: center; background: var(--accent); color: #fff; font: 600 46px/1 var(--serif); }
+  .why b { display: block; font: 600 54px/1.12 var(--serif); }
+  .why p { font: 400 36px/1.35 var(--sans); color: var(--muted); margin-top: 10px; }
+
+  /* 6 · close */
+  #s6 { align-items: center; text-align: center; }
+  #s6 .word { font: 600 168px/1 var(--serif); letter-spacing: -.03em; }
+  #s6 .tagline { font: italic 400 60px/1.3 var(--serif); margin-top: 26px; opacity: .95; }
+  #s6 .url { font: 700 44px/1 var(--sans); margin-top: 80px; padding: 26px 34px; background: #fff; color: var(--accent); }
+  #s6 .bio { font: 600 38px/1.3 var(--sans); margin-top: 30px; opacity: .9; }
+  #s6 .by { font: 400 34px/1.3 var(--sans); margin-top: 110px; opacity: .85; }
+</style>
+</head>
+<body>
+<div id="stage">
+
+  <section class="scene dark" id="s1">
+    <p class="h1">Amoxcalli está<br>en construcción.</p>
+    <div class="bar"><i id="fill"></i></div>
+    <p class="ver">VERSIÓN DE PRUEBA · GRATIS Y DE CÓDIGO ABIERTO</p>
+    <p class="q">Y la queremos<br>construir contigo.</p>
+  </section>
+
+  <section class="scene paper" id="s2">
+    <div class="greca top"></div>
+    <p class="kicker">¿Viste algo mal?</p>
+    <p class="h2">Cuéntanos.</p>
+    <div class="list">
+      <div><b class="e">!</b><span>Una traducción que no corresponde</span></div>
+      <div><b class="e">!</b><span>Una palabra mal escrita</span></div>
+      <div><b class="f">?</b><span>Algo que no funciona o se ve mal</span></div>
+      <div><b class="i">+</b><span>Algo que te gustaría encontrar</span></div>
+      <div><b class="i">+</b><span>Una idea para mejorarla</span></div>
+    </div>
+  </section>
+
+  <section class="scene paper" id="s3">
+    <p class="kicker">Desde cualquier pantalla</p>
+    <div class="menu" id="menu"><span>Más</span><span class="arrow">→</span><span class="target" id="tap">Ayúdanos a mejorar<span class="ripple"></span></span></div>
+    <div class="dialog" id="dlg">
+      <div class="dk">EN CONSTRUCCIÓN</div>
+      <h3>¿Qué quieres contarnos?</h3>
+      <div class="chips">
+        <span class="chip">Algo está mal en el contenido</span><span class="chip">Algo no funciona</span>
+        <span class="chip" id="idea">Una idea o sugerencia</span><span class="chip">Falta algo</span>
+      </div>
+      <div class="field" id="note"></div>
+    </div>
+    <p class="also" id="also">¿Es un pasaje o una palabra? Toca <strong>Aclarar</strong> ahí mismo: llega con el texto exacto que viste.</p>
+  </section>
+
+  <section class="scene dark" id="s4">
+    <p class="kicker">Tú decides</p>
+    <div class="safe" id="safe"><strong>Se queda en tu dispositivo.</strong>Lo compartes si quieres, por GitHub o en un mensaje. No pedimos nombre, correo ni ubicación.</div>
+    <p class="human" id="human">Cada aviso lo lee una persona.<small>Nada se cambia solo: se revisa con la fuente y queda en el historial.</small></p>
+  </section>
+
+  <section class="scene paper" id="s5">
+    <div class="greca top"></div>
+    <p class="kicker">Abierto y para todos</p>
+    <div class="why"><span class="n">1</span><div><b>Tus avisos deciden qué sigue.</b><p>Lo que más se reporta es lo primero que se mejora.</p></div></div>
+    <div class="why"><span class="n">2</span><div><b>El código es abierto.</b><p>Cualquiera puede ver cómo funciona, revisarlo y proponer cambios.</p></div></div>
+    <div class="why"><span class="n">3</span><div><b>Mejora para quien venga después.</b><p>Cada error corregido le ahorra la duda a la siguiente persona.</p></div></div>
+  </section>
+
+  <section class="scene wine" id="s6">
+    <div class="greca top"></div>
+    <div class="word">Amoxcalli</div>
+    <div class="tagline">En construcción, contigo.</div>
+    <div class="url">pescamill.github.io/amoxcalli</div>
+    <div class="bio">Más → Ayúdanos a mejorar<br>Link en la bio</div>
+    <div class="by">Gratis y de código abierto, para México<br>Un proyecto de <b>@pescamill</b></div>
+  </section>
+</div>
+
+<script>
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const prog = (t, a, b) => clamp((t - a) / (b - a));
+const outCubic = x => 1 - Math.pow(1 - x, 3);
+const outBack = x => { const c = 1.7, c3 = c + 1; return 1 + c3 * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+
+function rev(el, t, a, d = .55, dy = 50) {
+  const p = outCubic(prog(t, a, a + d));
+  el.style.opacity = p;
+  el.style.transform = `translateY(${(1 - p) * dy}px)`;
+}
+function pop(el, t, a, d = .5) {
+  const p = prog(t, a, a + d);
+  el.style.opacity = clamp(p * 3);
+  el.style.transform = `scale(${.6 + .4 * outBack(p)})`;
+}
+function type(el, text, t, a, cps = 18, until = 99) {
+  const n = Math.floor(clamp((t - a) * cps, 0, text.length));
+  const caret = t >= a && t < until && (n < text.length || Math.floor(t * 2.4) % 2 === 0);
+  el.innerHTML = text.slice(0, n) + (caret ? '<span class="caret"></span>' : "");
+}
+
+const S = { s1: [0, 4.4], s2: [4.2, 10.6], s3: [10.4, 18.0], s4: [17.8, 23.0], s5: [22.8, 28.8], s6: [28.6, 32.0] };
+window.DURATION = 32.0;
+
+function frameScene(id, t) {
+  const [a, b] = S[id], el = $("#" + id);
+  const on = t >= a && t <= b;
+  el.style.opacity = on ? (id === "s1" ? 1 : outCubic(prog(t, a, a + .2))) : 0;
+  el.style.visibility = on ? "visible" : "hidden";
+  el.style.transform = `scale(${1.035 - .035 * outCubic(prog(t, a, a + .6))})`;
+  return on;
+}
+
+const DRAW = {
+  s1(t) {
+    rev($("#s1 .h1"), t, .1, .6, 40);
+    rev($("#s1 .bar"), t, .7, .4, 20);
+    $("#fill").style.width = `${outCubic(prog(t, .9, 2.4)) * 38}%`;
+    rev($("#s1 .ver"), t, 1.2, .4, 16);
+    rev($("#s1 .q"), t, 2.3, .6, 40);
+  },
+  s2(t) {
+    rev($("#s2 .kicker"), t, 4.35); rev($("#s2 .h2"), t, 4.5);
+    $$("#s2 .list div").forEach((el, i) => rev(el, t, 5.1 + i * .55, .45, 40));
+    $$("#s2 .list b").forEach((el, i) => pop(el, t, 5.3 + i * .55, .4));
+  },
+  s3(t) {
+    rev($("#s3 .kicker"), t, 10.55); rev($("#menu"), t, 10.7, .45, 30);
+    const r = $("#tap .ripple"), p = prog(t, 11.4, 12.0);
+    r.style.opacity = p > 0 && p < 1 ? 1 - p : 0; r.style.transform = `scale(${1 + p * 9})`;
+    rev($("#dlg"), t, 11.8, .5, 80);
+    $$("#s3 .chip").forEach((el, i) => pop(el, t, 12.2 + i * .12, .4));
+    $("#idea").classList.toggle("on", t >= 13.1);
+    rev($("#note"), t, 13.3, .35, 20);
+    type($("#note"), "Que se pueda escuchar cómo se pronuncia cada palabra", t, 13.5, 20, 16.6);
+    rev($("#also"), t, 16.3, .5, 24);
+  },
+  s4(t) {
+    rev($("#s4 .kicker"), t, 17.95);
+    rev($("#safe"), t, 18.2, .55, 50);
+    rev($("#human"), t, 19.8, .6, 40);
+  },
+  s5(t) {
+    rev($("#s5 .kicker"), t, 22.95);
+    $$("#s5 .why").forEach((el, i) => rev(el, t, 23.2 + i * .9, .5, 50));
+  },
+  s6(t) {
+    const w = $("#s6 .word"), p = outBack(prog(t, 28.7, 29.4));
+    w.style.opacity = clamp(prog(t, 28.7, 29.0)); w.style.transform = `scale(${.8 + .2 * p})`;
+    rev($("#s6 .tagline"), t, 29.2, .55, 40);
+    pop($("#s6 .url"), t, 29.8, .5);
+    rev($("#s6 .bio"), t, 30.3, .5, 30);
+    rev($("#s6 .by"), t, 30.6, .5, 20);
+  },
+};
+
+window.render = t => { for (const id of Object.keys(S)) if (frameScene(id, t)) DRAW[id](t); };
+window.ready = document.fonts.ready.then(() => { window.render(0); return true; });
+
+const fixed = new URLSearchParams(location.search).get("t");
+if (fixed !== null) window.ready.then(() => window.render(Number(fixed)));
+else if (!navigator.webdriver) {
+  const t0 = performance.now();
+  const loop = () => { window.render(((performance.now() - t0) / 1000) % window.DURATION); requestAnimationFrame(loop); };
+  window.ready.then(loop);
+}
+</script>
+</body>
+</html>

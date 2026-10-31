@@ -4,7 +4,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from nahuatl_local.aclaraciones import MARK, Store, clean, extract, lookup, triage
+from nahuatl_local.aclaraciones import MARK, PLATFORM, Store, clean, extract, lookup, triage
 from nahuatl_local.community import Problem
 
 
@@ -53,6 +53,16 @@ class AclaracionesTests(unittest.TestCase):
         speaker = triage(clean(item(category='uso', basis='hablante', variant='huasteca')), current)
         self.assertIn('variante-actual', speaker['labels'])
         self.assertIn('id-no-encontrado', triage(clean(item(target='axolotl-99999')), lookup('axolotl-99999'))['labels'])
+
+    def test_platform_notices_need_a_sentence_and_skip_the_record_lookup(self):
+        notice = dict(target=PLATFORM, category='sugerencia', note='Que se escuche la pronunciación',
+                      context=dict(route='#lexico'))
+        out = triage(clean(notice), None)
+        self.assertEqual(out['labels'], ['mejora', 'sugerencia'])
+        self.assertIn('`#lexico`', out['comment'])
+        for bad in (dict(notice, note=''), dict(notice, category='traduccion'), item(category='sugerencia')):
+            with self.subTest(bad=bad), self.assertRaises(Problem):
+                clean(bad)
 
 
 if __name__ == '__main__':

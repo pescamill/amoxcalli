@@ -24,20 +24,25 @@ const ready = (async () => {
  return py;
 })();
 
-function atender({ id, method, path, body, type }) {
+// Lo que se escribe se guarda en IndexedDB antes de responder: «Guardado» significa que sobrevive a cerrar la app.
+// Una sincronización a la vez (IDBFS no admite dos en curso).
+let guardando = Promise.resolve();
+const guardar = () => (guardando = guardando.catch(() => {}).then(() => sync(python, false)));
+
+async function atender({ id, method, path, body, type }) {
  const app = python.globals.get('app');
  const result = app.request(method, path, body ? new Uint8Array(body) : '', type);
  const [status, headers, payload] = result.toJs();
  result.destroy();
  app.destroy();
+ if (method !== 'GET') await guardar();
  postMessage({ id, status, headers, body: payload.buffer }, [payload.buffer]);
- if (method !== 'GET') sync(python, false).catch(() => {});
 }
 
 onmessage = async ({ data }) => {
  try {
   if (!python) await ready;
-  atender(data);
+  await atender(data);
  } catch (error) {
   postMessage({ id: data.id, error: 'Amoxcalli no pudo responder: ' + String(error.message || error).split('\n').slice(-2).join(' ') });
  }

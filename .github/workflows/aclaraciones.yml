@@ -1,6 +1,7 @@
 name: Aclaraciones
 
-# Una aclaración compartida desde la app llega como issue con un bloque JSON. Este flujo la ordena sola:
+# Una aclaración (o un aviso de «Ayúdanos a mejorar») compartida desde la app llega como issue con un bloque JSON.
+# Este flujo la ordena sola:
 # comprueba que el ID exista, la etiqueta, la pone junto al registro actual y señala posibles repetidas.
 # No corrige nada: una persona coteja con la fuente.
 on:
@@ -45,8 +46,11 @@ jobs:
           comments = []
           for item in data['items']:
               for label in item['labels']:
-                  gh('label', 'create', label, '--force', '--color', '812d37' if label == 'aclaración' else 'c9a55a')
+                  gh('label', 'create', label, '--force', '--color', '812d37' if label in ('aclaración', 'mejora') else 'c9a55a')
                   gh('issue', 'edit', number, '--add-label', label)
+              if item['target'] == 'plataforma':
+                  comments.append(item['comment'])  # avisos generales: no hay un ID con el cual buscar repetidas
+                  continue
               found = gh('issue', 'list', '--state', 'open', '--label', 'aclaración', '--search', f'"{item["target"]}" in:body',
                          '--json', 'number', '--jq', '.[].number').stdout.split()
               dupes = [n for n in found if n != number]

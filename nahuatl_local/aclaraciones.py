@@ -1,4 +1,5 @@
-"""Aclaraciones: una sola forma de decir «esto no cuadra» desde cualquier pasaje, palabra o ficha.
+"""Aclaraciones: una sola forma de decir «esto no cuadra» desde cualquier pasaje, palabra o ficha, y de avisar
+sobre la plataforma en general (algo no funciona, falta algo, una sugerencia) desde «Ayúdanos a mejorar».
 
 Quien aclara elige qué pasa (un toque) y, si quiere, escribe una frase, propone algo y dice cómo lo sabe.
 El contexto (ID, texto mostrado, ruta, versión) lo pone la aplicación. Se guarda en esta computadora y
@@ -31,6 +32,15 @@ CATEGORIES = {
     'uso': dict(label='En mi variante o comunidad se dice distinto', field='variant', tag='uso actual'),
     'duda': dict(label='No lo entiendo: tengo una duda', field=None, tag='duda'),
 }
+# Avisos sobre la plataforma: no señalan un registro, así que van con el destino PLATFORM y piden una frase.
+PLATFORM = 'plataforma'
+PLATFORM_CATEGORIES = {
+    'contenido': dict(label='Algo está mal en una lectura, palabra o traducción', field=None, tag='contenido'),
+    'falla': dict(label='Algo no funciona o se ve mal', field=None, tag='falla'),
+    'sugerencia': dict(label='Tengo una idea o sugerencia', field=None, tag='sugerencia'),
+    'falta': dict(label='Me gustaría encontrar algo que no está', field=None, tag='falta'),
+}
+CATEGORIES.update(PLATFORM_CATEGORIES)
 # Cómo lo sabe: no da más o menos valor, orienta quién debe revisar.
 BASES = {
     'fuente': 'Lo leí en una fuente (obra y página)',
@@ -58,6 +68,10 @@ def clean(data):
     target = _text(data.get('target'), 'target')
     if not re.fullmatch(r'[\w.:#-]{1,120}', target):
         raise Problem('Falta el pasaje o la ficha.')
+    if (target == PLATFORM) != (category in PLATFORM_CATEGORIES):
+        raise Problem('Elige qué pasa.')
+    if target == PLATFORM and not _text(data.get('note'), 'note'):
+        raise Problem('Cuéntanos en una frase qué pasa.')
     basis = data.get('basis') or 'intuicion'
     if basis not in BASES:
         raise Problem('«Cómo lo sabes» no es válido.')
@@ -151,6 +165,13 @@ def _cell(text):
 def triage(item, current):
     """Etiquetas y comentario para quien revisa: lo propuesto junto al registro actual."""
     cat = CATEGORIES[item['category']]
+    if item['target'] == PLATFORM:
+        rows = [f"**{cat['label']}**", '', item['note']]
+        if item['proposal']:
+            rows += ['', f"**Propone:** {item['proposal']}"]
+        rows += ['', f"Pantalla: `{item['context']['route'] or 'sin indicar'}` · versión {item['context']['version']}", '',
+                 'Siguiente paso: reproducirlo o valorarlo, responder aquí y, si procede, cerrar con el commit que lo atiende.']
+        return dict(labels=['mejora', cat['tag']], comment='\n'.join(rows))
     labels = ['aclaración', cat['tag']] + ([] if current else ['id-no-encontrado'])
     if item['basis'] == 'hablante':
         labels.append('variante-actual')
@@ -186,7 +207,8 @@ def main():
     except (Problem, ValueError) as error:
         print(json.dumps(dict(items=[], error=str(error)), ensure_ascii=False))
         return
-    print(json.dumps(dict(items=[dict(item, **triage(item, lookup(item['target']))) for item in items]),
+    print(json.dumps(dict(items=[dict(item, **triage(item, None if item['target'] == PLATFORM else lookup(item['target'])))
+                                 for item in items]),
                      ensure_ascii=False, indent=1))
 
 

@@ -79,3 +79,40 @@ Link en la bio → pescamill.github.io/amoxcalli
 ### Comentario fijado
 
 Cómo funciona y cómo cuidamos los datos: https://pescamill.github.io/amoxcalli/#cuidado
+
+---
+
+## Reel 3 · Ayúdanos a mejorar (en construcción)
+
+Archivo: `promo/amoxcalli-mejorar.mp4` (1080×1920, 30 fps, 32 s, sin audio).
+Se genera con `python promo/render.py --pagina mejorar.html --salida promo/amoxcalli-mejorar.mp4`.
+Las cuatro opciones, la ruta «Más → Ayúdanos a mejorar» y el flujo de compartir son los que muestra Amoxcalli.
+
+### Texto
+
+Amoxcalli está en construcción 🚧 y la queremos construir contigo.
+
+¿Viste algo mal? ¿Algo no funciona? ¿Se te ocurre cómo mejorarla? Cuéntanos:
+
+❗ Una traducción que no corresponde o una palabra mal escrita
+🔧 Algo que no funciona o se ve mal, en el teléfono o en la computadora
+➕ Algo que te gustaría encontrar y todavía no está
+💡 Una idea para mejorarla
+
+📍 En un pasaje o una palabra: toca **Aclarar** ahí mismo (llega con el texto exacto que viste).
+📍 Para la app en general: **Más → Ayúdanos a mejorar**.
+
+🔒 Se queda en tu dispositivo y tú decides si lo compartes. No pedimos nombre, correo ni ubicación.
+👤 Cada aviso lo lee una persona. Nada se cambia solo: se revisa con la fuente y queda en el historial.
+
+Es un proyecto abierto, gratuito y para el bien común: tus avisos deciden qué se mejora primero, y cada error corregido
+mejora la lectura de quien venga después.
+
+Link en la bio → pescamill.github.io/amoxcalli
+
+#Náhuatl #LenguasIndígenas #México #CódigoAbierto #CienciaAbierta #Educación #EnConstrucción
+
+### Comentario fijado
+
+¿Cómo envío lo que encontré? Guárdalo en la app y toca «Enviar por GitHub» (pide una cuenta gratuita) o «Copiar»
+para mandarlo por mensaje. También puedes contestar aquí mismo en los comentarios.

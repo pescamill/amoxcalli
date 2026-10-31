@@ -5,6 +5,16 @@ const ACLARAR={categories:{
  fuente:'La obra, la página o la fuente no coincide',uso:'En mi variante o comunidad se dice distinto',duda:'No lo entiendo: tengo una duda'},
  bases:{intuicion:'No estoy seguro; me llamó la atención',fuente:'Lo leí en una fuente',hablante:'Hablo una variante actual',estudio:'Estudio o enseño náhuatl clásico'}};
 const ACLARACION_MARK='<!-- amoxcalli:aclaracion -->';
+// «Ayúdanos a mejorar»: avisos sobre la plataforma en general; se guardan y comparten igual que una aclaración.
+const MEJORAR={target:'plataforma',categories:{
+ contenido:'Algo está mal en una lectura, palabra o traducción',falla:'Algo no funciona o se ve mal',
+ sugerencia:'Tengo una idea o sugerencia',falta:'Me gustaría encontrar algo que no está'}};
+const aclararLabel=c=>ACLARAR.categories[c]||MEJORAR.categories[c]||c;
+// La pantalla desde la que se llega a «Ayúdanos a mejorar»: así el aviso dice dónde pasó.
+// Se actualiza al cambiar de ruta y al pintar la página, en el orden que sea.
+let routeNow=location.hash,mejorarFrom='';
+function trackRoute(){if(location.hash===routeNow)return;if(!routeNow.startsWith('#mejorar'))mejorarFrom=routeNow;routeNow=location.hash;}
+window.addEventListener('hashchange',trackRoute);
 
 // El texto que la persona veía: el pasaje más cercano al botón.
 function aclararContext(button){
@@ -15,15 +25,20 @@ function aclararContext(button){
 }
 
 function aclaracionIssue(a){
+ if(a.target===MEJORAR.target){
+  const body=[`**${aclararLabel(a.category)}**`,a.note,a.proposal?`Propone: ${a.proposal}`:'',`Pantalla: ${a.context?.route||'sin indicar'}`,
+   '',ACLARACION_MARK,'```json',JSON.stringify({target:a.target,category:a.category,basis:a.basis,note:a.note,proposal:a.proposal,citation:'',variant:'',context:a.context}),'```'].filter((l,i)=>l||i>=4).join('\n');
+  return REPORT_URL+'?'+new URLSearchParams({title:`[Mejora] ${aclararLabel(a.category)}: ${(a.note||'').slice(0,60)}`,body,labels:'mejora'});
+ }
  const body=[`**${ACLARAR.categories[a.category]}** en \`${a.target}\``,a.note,a.proposal?`Propone: ${a.proposal}`:'',
   `Cómo lo sabe: ${ACLARAR.bases[a.basis]}${a.variant?' ('+a.variant+')':''}${a.citation?' · '+a.citation:''}`,
   '',ACLARACION_MARK,'```json',JSON.stringify({target:a.target,category:a.category,basis:a.basis,note:a.note,proposal:a.proposal,citation:a.citation,variant:a.variant,context:a.context}),'```'].filter((l,i)=>l||i>=4).join('\n');
  return REPORT_URL+'?'+new URLSearchParams({title:`[Aclaración] ${a.target} · ${ACLARAR.categories[a.category]}`,body,labels:'aclaración'});
 }
-function aclaracionText(a){return `Aclaración para Amoxcalli\n${ACLARAR.categories[a.category]} · ${a.target}\n${a.note||''}\n${a.proposal?'Propone: '+a.proposal+'\n':''}\n${ACLARACION_MARK}\n\`\`\`json\n${JSON.stringify(a)}\n\`\`\``;}
+function aclaracionText(a){return `${a.target===MEJORAR.target?'Aviso':'Aclaración'} para Amoxcalli\n${aclararLabel(a.category)} · ${a.target}\n${a.note||''}\n${a.proposal?'Propone: '+a.proposal+'\n':''}\n${ACLARACION_MARK}\n\`\`\`json\n${JSON.stringify(a)}\n\`\`\``;}
 
 function aclararShare(a,saved){
- return `<p class="aclarar-done">${saved?'<strong>Guardado en este dispositivo.</strong> ':''}¿Lo compartes con el proyecto? Llega ordenado: con el pasaje, lo que viste y tu propuesta.</p>
+ return `<p class="aclarar-done">${saved?'<strong>Guardado en este dispositivo.</strong> ':''}¿Lo compartes con el proyecto? ${a.target===MEJORAR.target?'Llega ordenado: con lo que viste, la pantalla y tu propuesta.':'Llega ordenado: con el pasaje, lo que viste y tu propuesta.'}</p>
  <div class="entry-actions"><a class="primary" href="${esc(aclaracionIssue(a))}" target="_blank" rel="noopener noreferrer">Enviar por GitHub ↗</a><button type="button" class="secondary" data-aclarar-copy>Copiar para enviarlo por otro medio</button></div>
  <p class="meta">GitHub pide una cuenta gratuita; tu usuario quedará en el historial de la corrección. Si prefieres no usarla, copia el texto y envíalo por correo o mensaje a quien coordine tu grupo.</p>`;
 }
@@ -64,11 +79,42 @@ document.addEventListener('click',e=>{const b=e.target.closest?.('[data-aclarar]
 async function renderAclaraciones(){
  const head=heading('Mis aclaraciones','Lo que has señalado','Se guardan en este dispositivo. Compártelas cuando quieras; nada se corrige solo: una persona coteja cada una con su fuente.');
  let items=[];try{items=(await api('/api/aclaraciones')).items.reverse();}catch(e){$('content').innerHTML=head+`<p class="empty">${esc(e.message)}</p>`;return;}
- $('content').innerHTML=head+(items.length?`<div class="entry-actions"><button class="secondary" id="aclaraciones-download">Descargar todas (.json)</button></div><div class="aclaraciones-list">${items.map(a=>`<article class="card aclaracion-item" data-id="${esc(a.id)}"><p class="eyebrow">${esc(ACLARAR.categories[a.category]||a.category)} · ${esc(a.created.slice(0,10))}</p>${a.context?.nah?`<p lang="nci">${esc(a.context.nah.slice(0,200))}</p>`:''}${a.note?`<p>${esc(a.note)}</p>`:''}${a.proposal?`<p><strong>Propones:</strong> ${esc(a.proposal)}</p>`:''}<p class="meta"><code>${esc(a.target)}</code> · ${esc(ACLARAR.bases[a.basis]||'')}${a.variant?' · '+esc(a.variant):''}${a.citation?' · '+esc(a.citation):''}</p>${aclararShare(a,false)}<button class="link-button" data-remove>Borrar</button></article>`).join('')}</div>`
-  :`<p class="empty">Aún no hay aclaraciones. En cualquier pasaje, palabra o ficha toca <strong>Aclarar</strong>.</p>`);
+ $('content').innerHTML=head+(items.length?`<div class="entry-actions"><button class="secondary" id="aclaraciones-download">Descargar todas (.json)</button></div><div class="aclaraciones-list">${items.map(a=>`<article class="card aclaracion-item" data-id="${esc(a.id)}"><p class="eyebrow">${esc(aclararLabel(a.category))} · ${esc(a.created.slice(0,10))}</p>${a.context?.nah?`<p lang="nci">${esc(a.context.nah.slice(0,200))}</p>`:''}${a.note?`<p>${esc(a.note)}</p>`:''}${a.proposal?`<p><strong>Propones:</strong> ${esc(a.proposal)}</p>`:''}<p class="meta">${a.target===MEJORAR.target?`Aviso general${a.context?.route?' · desde <code>'+esc(a.context.route)+'</code>':''}`:`<code>${esc(a.target)}</code> · ${esc(ACLARAR.bases[a.basis]||'')}${a.variant?' · '+esc(a.variant):''}${a.citation?' · '+esc(a.citation):''}`}</p>${aclararShare(a,false)}<button class="link-button" data-remove>Borrar</button></article>`).join('')}</div>`
+  :`<p class="empty">Aún no hay aclaraciones. En cualquier pasaje, palabra o ficha toca <strong>Aclarar</strong>; para la app en general, <a href="#mejorar">Ayúdanos a mejorar</a>.</p>`);
  $('aclaraciones-download')?.addEventListener('click',()=>download('mis-aclaraciones.json',{schema:'amoxcalli.aclaracion/1',items}));
  $('content').querySelectorAll('.aclaracion-item').forEach(card=>{const a=items.find(i=>i.id===card.dataset.id);bindAclararCopy(card,a);
   card.querySelector('[data-remove]').onclick=async()=>{try{await api('/api/aclaraciones/'+encodeURIComponent(a.id),{method:'DELETE'});card.remove();toast('Aclaración borrada de este dispositivo.');}catch(e){toast(e.message);}};});
+}
+
+function renderMejorar(){
+ trackRoute();const from=mejorarFrom;
+ $('content').innerHTML=heading('En construcción','Ayúdanos a mejorar Amoxcalli','Amoxcalli está en construcción y mejora con quien la usa. Si algo está mal, no funciona o se te ocurre cómo hacerla mejor, cuéntanos: cada aviso lo lee una persona.')+`
+ <form class="card aclarar-form mejorar-form" id="mejorar-form">
+  <fieldset class="aclarar-chips"><legend class="sr-only">Qué quieres contarnos</legend>${Object.entries(MEJORAR.categories).map(([k,l])=>`<label><input type="radio" name="category" value="${k}" required><span>${esc(l)}</span></label>`).join('')}</fieldset>
+  <p class="meta" data-when="contenido" hidden>Si es un pasaje, una palabra o una ficha, lo más útil es tocar <strong>Aclarar</strong> ahí mismo: llega con el texto exacto que viste. También puedes contarlo aquí.</p>
+  <div class="aclarar-more">
+   <label><span>Cuéntanos qué pasa</span><textarea name="note" maxlength="1000" rows="3" required placeholder="Qué viste, qué esperabas o qué te gustaría"></textarea></label>
+   <label><span>Qué propones <small>(opcional)</small></span><input name="proposal" maxlength="600"></label>
+  </div>
+  <p class="meta">Se guarda solo en este dispositivo; tú decides si lo compartes. No pedimos nombre, correo ni ubicación.${from?` Se anota la pantalla de donde vienes (<code>${esc(from)}</code>) para encontrarlo más rápido.`:''}</p>
+  <div class="entry-actions"><button type="submit" class="primary" data-save disabled>Guardar aviso</button></div>
+ </form>
+ <section class="project-section"><h2>En qué estamos trabajando</h2><ul>
+  <li><strong>Revisión de especialistas.</strong> Las ayudas de lectura y los análisis automáticos aún no tienen revisión lingüística.</li>
+  <li><strong>Más lecturas guiadas</strong> y más entradas de diccionario con su fuente.</li>
+  <li><strong>Voces en el teléfono:</strong> grabar y aportar tu voz por ahora solo funciona en la versión de computadora.</li>
+ </ul><p>Es un proyecto abierto y gratuito, para el bien común: tus avisos deciden qué se mejora primero. <a href="#aclaraciones">Ver lo que has enviado</a> · <a href="#cuidado">Cómo cuidamos la lengua</a></p></section>`;
+ const form=$('mejorar-form'),save=form.querySelector('[data-save]');
+ form.onchange=form.oninput=()=>{const f=new FormData(form);save.disabled=!f.get('category')||!String(f.get('note')||'').trim();
+  form.querySelectorAll('[data-when]').forEach(p=>p.hidden=p.dataset.when!==f.get('category'));};
+ form.onsubmit=async e=>{
+  e.preventDefault();
+  const f=Object.fromEntries(new FormData(form));
+  const a={target:MEJORAR.target,category:f.category,basis:'intuicion',note:f.note||'',proposal:f.proposal||'',citation:'',variant:'',context:{nah:'',es:'',route:from}};
+  let saved=null;try{saved=await api('/api/aclaraciones',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(a)});}catch(error){toast(error.message);return;}
+  form.innerHTML=`<h2>Gracias: así se construye</h2>${aclararShare(saved,true)}<div class="entry-actions"><a href="#aclaraciones">Ver lo que has enviado</a><a href="#mejorar" data-again>Contar otra cosa</a></div>`;
+  form.querySelector('[data-again]').onclick=e=>{e.preventDefault();renderMejorar();};
+  bindAclararCopy(form,saved);};
 }
 
 function renderCuidado(){

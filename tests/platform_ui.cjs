@@ -283,6 +283,19 @@ async function open(path,studyData){
   w.location.hash='#cuidado';await until(()=>$('.care-grid'));assert.equal(d.title,'Amoxcalli · Cómo cuidamos la lengua');
  }
  console.log('PASS: «Aclarar» en un toque: guarda con su contexto, se comparte como issue estructurado, se lista y se borra; página de cuidado de la lengua');
+ assert.equal($('#review-notice a').getAttribute('href'),'#mejorar');w.location.hash='#lexico';await until(()=>d.title==='Amoxcalli · Diccionario');
+ w.location.hash='#mejorar';await until(()=>$('#mejorar-form'));{
+  const form=$('#mejorar-form'),save=form.querySelector('[data-save]');assert.equal(d.title,'Amoxcalli · Ayúdanos a mejorar');assert(save.disabled,'sin elegir ni escribir no se guarda');
+  const pick=form.querySelector('input[name=category][value=contenido]');pick.checked=true;pick.dispatchEvent(new w.Event('change',{bubbles:true}));
+  assert(!form.querySelector('[data-when=contenido]').hidden,'el contenido sugiere Aclarar en el pasaje');assert(save.disabled,'falta la frase');
+  form.querySelector('[name=note]').value='La glosa de <b>calli</b> no aparece';form.dispatchEvent(new w.Event('input',{bubbles:true}));assert(!save.disabled);
+  save.click();await until(()=>form.textContent.includes('Guardado en este dispositivo'));
+  const share=new URL(form.querySelector('a[href^="https://github.com"]').href);assert(share.searchParams.get('title').startsWith('[Mejora]'));assert(share.searchParams.get('body').includes('<!-- amoxcalli:aclaracion -->'));
+  const saved=(await(await w.fetch('/api/aclaraciones')).json()).items.at(-1);assert.equal(saved.target,'plataforma');assert.equal(saved.category,'contenido');assert.equal(saved.context.route,'#lexico');
+  w.location.hash='#aclaraciones';await until(()=>$('.aclaracion-item'));assert($('.aclaracion-item').textContent.includes('Aviso general'));assert.equal($('.aclaracion-item b'),null);
+  $('.aclaracion-item [data-remove]').click();await until(()=>!$('.aclaracion-item'));
+ }
+ console.log('PASS: «Ayúdanos a mejorar»: aviso general desde el banner de construcción, con la pantalla de origen, se comparte como issue [Mejora], se lista y se borra');
  w.location.hash='#preguntar/'+encodeURIComponent('¿quién fue Quetzalcóatl?');await until(()=>$('.topic-result .topic-item'));assert.equal($('.topic-result .topic-item').dataset.topicId,'entity:quetzalcoatl');assert($('.topic-result').textContent.includes('coincide:'));assert($('.topic-result a[href="#dioses/quetzalcoatl"]'));
  w.location.hash='#preguntar/calendario';await until(()=>$('.topic-related .topic-item'));assert($('.topic-related').textContent.includes('También en lecturas, fichas y obras'));w.location.hash='#aprender';await until(()=>!$('.ask-understood'));
  console.log('PASS: Preguntar acepta frases y temas: lecturas, fichas y obras relacionadas con su motivo; una palabra suma su contenido relacionado');

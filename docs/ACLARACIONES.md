@@ -16,6 +16,14 @@ Una sola forma de decir «esto no cuadra» desde cualquier pasaje, palabra o fic
 No se piden nombre, correo ni ubicación. La variante se guarda solo si dices que hablas una variante actual, y como
 tú la nombras.
 
+## Avisos generales: «Ayúdanos a mejorar»
+
+Lo que no es de un pasaje (algo no funciona o se ve mal, falta algo, una idea, o un error de contenido que no se
+sabe ubicar) se cuenta desde **Más → Ayúdanos a mejorar**, o desde «¿Viste algo mal? Cuéntanos» en el aviso de
+construcción de cada página. Se guarda en el mismo archivo con el destino `plataforma`, una de cuatro categorías
+(`contenido`, `falla`, `sugerencia`, `falta`), la frase (obligatoria) y la pantalla de donde se llegó. Se comparte
+igual (issue `[Mejora]` o texto copiado); el flujo lo etiqueta `mejora` y no busca repetidas por ID.
+
 ## Para quien revisa
 
 Cada aclaración compartida lleva un bloque JSON tras la marca `<!-- amoxcalli:aclaracion -->`. El flujo
